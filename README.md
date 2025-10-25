@@ -5,7 +5,7 @@ It was made to work on Linux systems, which can't use discord hotkeys since they
 
 ### Installation
 
-- You need to [Build Vencord from source](https://docs.vencord.dev/installing/) to use the AutoDeafen plugin (This will not work without Vencord!)
+- You need to [Build Vencord from source](https://docs.vencord.dev/installing/) and add the the AutoDeafen plugin (This will not work without Vencord!)
 - Once you got that, enable the newly added plugin and restart your Discord client
 - You obviously need the [Geode Modloader](https://geode-sdk.org/) 
 - After you got all that done, manually install the geode mod by placing it into the mods directory

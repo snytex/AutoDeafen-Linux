@@ -1,6 +1,6 @@
 ## AutoDeafen-Linux
 
-This repository is forked from https://github.com/Lynxdeer/AutoDeafen
+This repository was forked from https://github.com/Lynxdeer/AutoDeafen.
 It was made to work on Linux systems, which can't use discord hotkeys since they run through Proton in a sandboxed environment.
 
 ### Installation

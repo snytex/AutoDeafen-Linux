@@ -20,7 +20,7 @@ else()
   message(STATUS "Found Geode: $ENV{GEODE_SDK}")
 endif()
 
-# **Add this line:**
+# **Add this line even if on Linux:**
 set(GEODE_TARGET_PLATFORM "Win64")
 
 add_subdirectory($ENV{GEODE_SDK} ${CMAKE_CURRENT_BINARY_DIR}/geode)

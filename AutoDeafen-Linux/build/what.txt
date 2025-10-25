@@ -1,0 +1,47 @@
+{
+  "geode": "4.7.0",
+  "gd": {
+    "win": "2.2074"
+  },
+  "name": "AutoDeafen",
+  "version": "v1.2.2",
+  "developer": "Lynxdeer",
+  "id": "lynxdeer.autodeafen",
+  "description": "A mod that automatically hits a configurable deafen keybind when you reach a certain percentage. Configurable per-level.",
+  "tags": ["enhancement", "utility"],
+  "repository": "https://github.com/Lynxdeer/AutoDeafen",
+  "early-load": true,
+  "settings": {
+	"Enabled by Default": {
+	  "type": "bool",
+	  "default": false,
+		"description": "Whether AutoDeafen is <co>enabled by default</c> when you load into a level for the first time. Basically enables AutoDeafen globally rather than per-level."
+	},
+	"Default Percentage": {
+	  "control": {
+		"input": true
+	  },
+	  "type": "int",
+	  "default": 50,
+	  "min": 0,
+	  "max": 100,
+		"description": "The <co>default percentage to deafen at</c> when you load into a level for the first time."
+	},
+	"Enabled in Practice Mode": {
+		"type": "bool",
+		"default": false,
+		"description": "Whether AutoDeafen should be enabled during practice mode. Dunno why you'd ever want this, but it's there if you do."
+	},
+	"Additional Debugging": {
+	  "type": "bool",
+	  "default": false,
+		"description": "Whether you want additional logging (for debugging) when exiting a level. Unless you're a developer, you probably want this off, since it can cause performance issues when you exit a level."
+	}
+  },
+  "dependencies": {
+    "geode.node-ids": {
+      "version": ">=v1.12.0",
+      "importance": "required"
+    }
+  }
+}

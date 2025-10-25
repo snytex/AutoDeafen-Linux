@@ -1,0 +1,21 @@
+{
+	"geode": "4.6.0",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"version": "v1.21.1", 
+	"id": "geode.node-ids",
+	"name": "Node IDs",
+	"developer": "Geode Team",
+	"description": "Standard node IDs to be used by other mods.",
+	"links": {
+		"source": "https://github.com/geode-sdk/NodeIDs"
+	},
+	"issues": {
+		"url": "https://github.com/geode-sdk/NodeIDs/issues",
+		"info": "If you encounter an issue related to node ID mismatches, please report it to the GitHub issues page."
+	}
+}

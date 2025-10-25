@@ -1,0 +1,13 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/cmake_install.cmake",
+		"/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/geode/cmake_install.cmake",
+		"/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/result-build/cmake_install.cmake",
+		"/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/json-build/cmake_install.cmake",
+		"/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/fmt-build/cmake_install.cmake",
+		"/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-build/cmake_install.cmake",
+		"/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/bindings/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

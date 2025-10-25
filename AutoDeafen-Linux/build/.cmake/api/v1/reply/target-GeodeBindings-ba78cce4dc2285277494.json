@@ -1,0 +1,205 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "bindings/libGeodeBindings.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"target_compile_definitions",
+			"target_include_directories",
+			"target_compile_features"
+		],
+		"files" : 
+		[
+			"build/_deps/bindings-src/CMakeLists.txt",
+			"/home/snytex/Dokumente/Geode/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 159,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 317,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 316,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 160,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 165,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 309,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 171,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=gnu++20 -fvisibility=hidden"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 4,
+					"define" : "GEODE_USE_NEW_DESTRUCTOR_LOCK=1"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/bindings/bindings"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/bindings-src/bindings/include"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "/home/snytex/Dokumente/Geode/loader/include"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "/home/snytex/Dokumente/Geode/loader/include/Geode/cocos/include"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "/home/snytex/Dokumente/Geode/loader/include/Geode/cocos/extensions"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "/home/snytex/Dokumente/Geode/loader/include/Geode/fmod"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/fmt-src/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/result-src/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/json-src/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					8,
+					3
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "fmt::@976f4f0bee90b99ecdb6"
+		}
+	],
+	"id" : "GeodeBindings::@1a45702be1b1dbd02bc1",
+	"name" : "GeodeBindings",
+	"nameOnDisk" : "libGeodeBindings.a",
+	"paths" : 
+	{
+		"build" : "bindings",
+		"source" : "build/_deps/bindings-src"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/bindings/bindings/Geode/GeneratedSource.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/bindings/bindings/Geode/CodegenData.txt.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

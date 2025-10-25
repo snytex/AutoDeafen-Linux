@@ -1,0 +1,2 @@
+/usr/bin/ar qc libGeodeBindings.a CMakeFiles/GeodeBindings.dir/bindings/Geode/GeneratedSource.cpp.o
+/usr/bin/ranlib libGeodeBindings.a

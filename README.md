@@ -19,9 +19,9 @@ It was made to work on Linux systems, which can't use discord hotkeys since they
 
 That should be it and you can now use the Auto-Deafen feature on Linux!
 
-## Video Tutorial:
+## Video Tutorial (OUTDATED):
 
-https://youtu.be/We8-3v6DGK0
+-https://youtu.be/We8-3v6DGK0-
 
 ## Credits
 

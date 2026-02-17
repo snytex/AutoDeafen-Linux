@@ -21,7 +21,7 @@ That should be it and you can now use the Auto-Deafen feature on Linux!
 
 ## Video Tutorial (OUTDATED):
 
--https://youtu.be/We8-3v6DGK0-
+~~https://youtu.be/We8-3v6DGK0~~
 
 ## Credits
 

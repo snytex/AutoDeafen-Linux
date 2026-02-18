@@ -1,0 +1,47 @@
+{
+    "geode": "5.0.0-beta.2",
+    "gd": {
+        "win": "2.2081"
+    },
+    "name": "AutoDeafen-Linux",
+    "version": "v1.2.2-beta.1",
+    "developer": "Snytex",
+    "id": "snytex.autodeafen",
+    "description": "Forked to make it work on Linux. Original credits go to Lynxdeer",
+    "tags": [
+        "enhancement",
+        "utility"
+    ],
+    "repository": "https://github.com/snytex/AutoDeafen-Linux",
+    "early-load": true,
+    "settings": {
+        "Enabled by Default": {
+            "type": "bool",
+            "default": false,
+            "description": "Whether AutoDeafen is <co>enabled by default</c> when you load into a level for the first time. Basically enables AutoDeafen globally rather than per-level."
+        },
+        "Default Percentage": {
+            "control": {
+                "input": true
+            },
+            "type": "int",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "description": "The <co>default percentage to deafen at</c> when you load into a level for the first time."
+        },
+        "Enabled in Practice Mode": {
+            "type": "bool",
+            "default": false,
+            "description": "Whether AutoDeafen should be enabled during practice mode. Dunno why you'd ever want this, but it's there if you do."
+        },
+        "Additional Debugging": {
+            "type": "bool",
+            "default": false,
+            "description": "Whether you want additional logging (for debugging) when exiting a level. Unless you're a developer, you probably want this off, since it can cause performance issues when you exit a level."
+        }
+    },
+    "dependencies": {
+        "geode.node-ids": ">=v1.12.0"
+    }
+}

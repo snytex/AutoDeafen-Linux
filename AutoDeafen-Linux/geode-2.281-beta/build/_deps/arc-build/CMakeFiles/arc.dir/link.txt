@@ -1,0 +1,2 @@
+/usr/bin/ar qc libarc.a CMakeFiles/arc.dir/Unity/unity_0_cxx.cxx.o
+/usr/bin/ranlib libarc.a

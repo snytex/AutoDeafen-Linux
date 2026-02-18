@@ -1,0 +1,2 @@
+/usr/bin/ar qc libasp.a CMakeFiles/asp.dir/Unity/unity_0_cxx.cxx.o
+/usr/bin/ranlib libasp.a

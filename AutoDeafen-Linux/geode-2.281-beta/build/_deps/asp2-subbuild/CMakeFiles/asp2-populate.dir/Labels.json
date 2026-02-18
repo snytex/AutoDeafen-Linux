@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/asp2-subbuild/CMakeFiles/asp2-populate"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/asp2-subbuild/CMakeFiles/asp2-populate.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/asp2-subbuild/CMakeFiles/asp2-populate-complete.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/asp2-subbuild/asp2-populate-prefix/src/asp2-populate-stamp/asp2-populate-build.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/asp2-subbuild/asp2-populate-prefix/src/asp2-populate-stamp/asp2-populate-configure.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/asp2-subbuild/asp2-populate-prefix/src/asp2-populate-stamp/asp2-populate-download.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/asp2-subbuild/asp2-populate-prefix/src/asp2-populate-stamp/asp2-populate-install.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/asp2-subbuild/asp2-populate-prefix/src/asp2-populate-stamp/asp2-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/asp2-subbuild/asp2-populate-prefix/src/asp2-populate-stamp/asp2-populate-patch.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/asp2-subbuild/asp2-populate-prefix/src/asp2-populate-stamp/asp2-populate-test.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/asp2-subbuild/asp2-populate-prefix/src/asp2-populate-stamp/asp2-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"asp2-populate"
+		],
+		"name" : "asp2-populate"
+	}
+}

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/arc-subbuild/CMakeFiles/arc-populate"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/arc-subbuild/CMakeFiles/arc-populate.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/arc-subbuild/CMakeFiles/arc-populate-complete.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/arc-subbuild/arc-populate-prefix/src/arc-populate-stamp/arc-populate-build.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/arc-subbuild/arc-populate-prefix/src/arc-populate-stamp/arc-populate-configure.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/arc-subbuild/arc-populate-prefix/src/arc-populate-stamp/arc-populate-download.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/arc-subbuild/arc-populate-prefix/src/arc-populate-stamp/arc-populate-install.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/arc-subbuild/arc-populate-prefix/src/arc-populate-stamp/arc-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/arc-subbuild/arc-populate-prefix/src/arc-populate-stamp/arc-populate-patch.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/arc-subbuild/arc-populate-prefix/src/arc-populate-stamp/arc-populate-test.rule"
+		},
+		{
+			"file" : "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/arc-subbuild/arc-populate-prefix/src/arc-populate-stamp/arc-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"arc-populate"
+		],
+		"name" : "arc-populate"
+	}
+}

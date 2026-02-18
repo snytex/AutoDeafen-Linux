@@ -24,16 +24,20 @@ public:
      CCContentLayer();
 
     /**
+     * @note[short] MacOS (ARM): 0x6c7efc
+     * @note[short] MacOS (Intel): 0x7c2990
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x18ea14
      * @note[short] Android
      */
-    static CCContentLayer* create(cocos2d::ccColor4B const& p0, float p1, float p2);
+    static CCContentLayer* create(cocos2d::ccColor4B const& color, float width, float height);
 
     /**
-     * @note[short] MacOS (ARM): 0x6bea40
-     * @note[short] MacOS (Intel): 0x7ad2b0
-     * @note[short] Windows: 0x42f70
-     * @note[short] iOS: 0x1921c4
+     * @note[short] MacOS (ARM): 0x6c7fe0
+     * @note[short] MacOS (Intel): 0x7c2a90
+     * @note[short] Windows: 0x42fe0
+     * @note[short] iOS: 0x18eae8
      * @note[short] Android
      */
-    virtual void setPosition(cocos2d::CCPoint const& p0);
+    virtual void setPosition(cocos2d::CCPoint const& position);
 };

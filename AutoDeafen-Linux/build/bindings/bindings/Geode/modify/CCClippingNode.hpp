@@ -40,24 +40,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(visit) 
 	#endif
 
-	#ifndef GEODE_STATICS_getStencil
-		#define GEODE_STATICS_getStencil
-		GEODE_AS_STATIC_FUNCTION(getStencil) 
-	#endif
-
-	#ifndef GEODE_STATICS_setStencil
-		#define GEODE_STATICS_setStencil
-		GEODE_AS_STATIC_FUNCTION(setStencil) 
-	#endif
-
 	#ifndef GEODE_STATICS_getAlphaThreshold
 		#define GEODE_STATICS_getAlphaThreshold
 		GEODE_AS_STATIC_FUNCTION(getAlphaThreshold) 
 	#endif
 
-	#ifndef GEODE_STATICS_setAlphaThreshold
-		#define GEODE_STATICS_setAlphaThreshold
-		GEODE_AS_STATIC_FUNCTION(setAlphaThreshold) 
+	#ifndef GEODE_STATICS_getStencil
+		#define GEODE_STATICS_getStencil
+		GEODE_AS_STATIC_FUNCTION(getStencil) 
 	#endif
 
 	#ifndef GEODE_STATICS_isInverted
@@ -65,9 +55,19 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(isInverted) 
 	#endif
 
+	#ifndef GEODE_STATICS_setAlphaThreshold
+		#define GEODE_STATICS_setAlphaThreshold
+		GEODE_AS_STATIC_FUNCTION(setAlphaThreshold) 
+	#endif
+
 	#ifndef GEODE_STATICS_setInverted
 		#define GEODE_STATICS_setInverted
 		GEODE_AS_STATIC_FUNCTION(setInverted) 
+	#endif
+
+	#ifndef GEODE_STATICS_setStencil
+		#define GEODE_STATICS_setStencil
+		GEODE_AS_STATIC_FUNCTION(setStencil) 
 	#endif
 
     
@@ -106,24 +106,14 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(visit) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_getStencil
-		#define GEODE_CONCEPT_CHECK_getStencil
-		GEODE_CONCEPT_FUNCTION_CHECK(getStencil) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setStencil
-		#define GEODE_CONCEPT_CHECK_setStencil
-		GEODE_CONCEPT_FUNCTION_CHECK(setStencil) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_getAlphaThreshold
 		#define GEODE_CONCEPT_CHECK_getAlphaThreshold
 		GEODE_CONCEPT_FUNCTION_CHECK(getAlphaThreshold) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_setAlphaThreshold
-		#define GEODE_CONCEPT_CHECK_setAlphaThreshold
-		GEODE_CONCEPT_FUNCTION_CHECK(setAlphaThreshold) 
+	#ifndef GEODE_CONCEPT_CHECK_getStencil
+		#define GEODE_CONCEPT_CHECK_getStencil
+		GEODE_CONCEPT_FUNCTION_CHECK(getStencil) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_isInverted
@@ -131,9 +121,19 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(isInverted) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_setAlphaThreshold
+		#define GEODE_CONCEPT_CHECK_setAlphaThreshold
+		GEODE_CONCEPT_FUNCTION_CHECK(setAlphaThreshold) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_setInverted
 		#define GEODE_CONCEPT_CHECK_setInverted
 		GEODE_CONCEPT_FUNCTION_CHECK(setInverted) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setStencil
+		#define GEODE_CONCEPT_CHECK_setStencil
+		GEODE_CONCEPT_FUNCTION_CHECK(setStencil) 
 	#endif
 
 
@@ -145,10 +145,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCClippingNode::create)), Default, cocos2d::CCClippingNode, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCNode*>::func(&cocos2d::CCClippingNode::create)), Default, cocos2d::CCClippingNode, create, cocos2d::CCNode*)
 			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCClippingNode@cocos2d@@IEAA@XZ")), Thiscall, cocos2d::CCClippingNode, )
 			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCClippingNode@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCClippingNode)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCClippingNode::create)), Default, cocos2d::CCClippingNode, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCNode*>::func(&cocos2d::CCClippingNode::create)), Default, cocos2d::CCClippingNode, create, cocos2d::CCNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCClippingNode::init)), Thiscall, cocos2d::CCClippingNode, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCNode*>::func(&cocos2d::CCClippingNode::init)), Thiscall, cocos2d::CCClippingNode, init, cocos2d::CCNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCClippingNode::onEnter)), Thiscall, cocos2d::CCClippingNode, onEnter, )
@@ -156,12 +156,12 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCClippingNode::onExit)), Thiscall, cocos2d::CCClippingNode, onExit, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCClippingNode::onExitTransitionDidStart)), Thiscall, cocos2d::CCClippingNode, onExitTransitionDidStart, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCClippingNode::visit)), Thiscall, cocos2d::CCClippingNode, visit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCClippingNode::getStencil)), Thiscall, cocos2d::CCClippingNode, getStencil, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCNode*>::func(&cocos2d::CCClippingNode::setStencil)), Thiscall, cocos2d::CCClippingNode, setStencil, cocos2d::CCNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCClippingNode::getAlphaThreshold)), Thiscall, cocos2d::CCClippingNode, getAlphaThreshold, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCClippingNode::setAlphaThreshold)), Thiscall, cocos2d::CCClippingNode, setAlphaThreshold, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCClippingNode::getStencil)), Thiscall, cocos2d::CCClippingNode, getStencil, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCClippingNode::isInverted)), Thiscall, cocos2d::CCClippingNode, isInverted, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCClippingNode::setAlphaThreshold)), Thiscall, cocos2d::CCClippingNode, setAlphaThreshold, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCClippingNode::setInverted)), Thiscall, cocos2d::CCClippingNode, setInverted, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCNode*>::func(&cocos2d::CCClippingNode::setStencil)), Thiscall, cocos2d::CCClippingNode, setStencil, cocos2d::CCNode*)
 		}
 	};
 }

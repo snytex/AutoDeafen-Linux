@@ -16,41 +16,58 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(CountTriggerGameObject, EffectGameObject)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static CountTriggerGameObject* create(char const* p0);
+     CountTriggerGameObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x182718
-     * @note[short] MacOS (Intel): 0x1c52f0
-     * @note[short] Windows: 0x4a26c0
-     * @note[short] iOS: 0x389674
+     * @note[short] MacOS (ARM): 0x18afc4
+     * @note[short] MacOS (Intel): 0x1d6a60
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3907c0
+     * @note[short] Android
+     */
+    static CountTriggerGameObject* create(char const* frame);
+
+    /**
+     * @note[short] MacOS (ARM): 0x18b0e0
+     * @note[short] MacOS (Intel): 0x1d6b80
+     * @note[short] Windows: 0x4bb210
+     * @note[short] iOS: 0x390888
      * @note[short] Android: Rebinded
      */
-    virtual void triggerObject(GJBaseGameLayer* p0, int p1, gd::vector<int> const* p2);
+    virtual void triggerObject(GJBaseGameLayer* layer, int uniqueID, gd::vector<int> const* remapKeys);
 
     /**
-     * @note[short] MacOS (ARM): 0x182950
-     * @note[short] MacOS (Intel): 0x1c5570
-     * @note[short] Windows: 0x4a2b30
-     * @note[short] iOS: 0x38981c
+     * @note[short] MacOS (ARM): 0x18b2f4
+     * @note[short] MacOS (Intel): 0x1d6df0
+     * @note[short] Windows: 0x4bb680
+     * @note[short] iOS: 0x390a24
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x182cdc
-     * @note[short] MacOS (Intel): 0x1c59a0
-     * @note[short] Windows: 0x4a2e90
-     * @note[short] iOS: 0x389b1c
+     * @note[short] MacOS (ARM): 0x18b680
+     * @note[short] MacOS (Intel): 0x1d7210
+     * @note[short] Windows: 0x4bb9e0
+     * @note[short] iOS: 0x390d24
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
+     * @note[short] MacOS (ARM): 0x18b098
+     * @note[short] MacOS (Intel): 0x1d6b30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(char const* p0);
+    bool init(char const* frame);
     int m_pickupCount;
     int m_pickupTriggerMode;
     bool m_multiActivate;

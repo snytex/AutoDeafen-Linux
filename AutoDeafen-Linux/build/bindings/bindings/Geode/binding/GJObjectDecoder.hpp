@@ -15,28 +15,29 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJObjectDecoder, cocos2d::CCNode)
 
     /**
-     * @note[short] MacOS (ARM): 0x62d42c
-     * @note[short] MacOS (Intel): 0x70e4e0
-     * @note[short] Windows: 0x27c690
+     * @note[short] MacOS (ARM): 0x636fd0
+     * @note[short] MacOS (Intel): 0x724810
+     * @note[short] Windows: 0x283fc0
+     * @note[short] iOS: 0x216a84
      * @note[short] Android
      */
     static GJObjectDecoder* sharedDecoder();
 
     /**
-     * @note[short] MacOS (ARM): 0x62d4d4
-     * @note[short] MacOS (Intel): 0x70e560
-     * @note[short] Windows: 0x77db0
-     * @note[short] iOS: 0x217784
+     * @note[short] MacOS (ARM): 0x637078
+     * @note[short] MacOS (Intel): 0x724890
+     * @note[short] Windows: 0x77de0
+     * @note[short] iOS: 0x216b20
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x62d4d8
-     * @note[short] MacOS (Intel): 0x70e570
-     * @note[short] Windows: 0x27c730
-     * @note[short] iOS: 0x217788
+     * @note[short] MacOS (ARM): 0x63707c
+     * @note[short] MacOS (Intel): 0x7248a0
+     * @note[short] Windows: 0x284060
+     * @note[short] iOS: 0x216b24
      * @note[short] Android
      */
-    virtual cocos2d::CCObject* getDecodedObject(int p0, DS_Dictionary* p1);
+    virtual cocos2d::CCObject* getDecodedObject(int type, DS_Dictionary* dict);
 };

@@ -25,37 +25,46 @@ public:
      SmartGameObject();
 
     /**
+     * @note[short] MacOS (ARM): 0x16b358
+     * @note[short] MacOS (Intel): 0x1b0bf0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x380728
      * @note[short] Android
      */
     static SmartGameObject* create(char const* frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x1631f0
-     * @note[short] MacOS (Intel): 0x1a0680
-     * @note[short] Windows: 0x4873d0
-     * @note[short] iOS: 0x379920
+     * @note[short] MacOS (ARM): 0x16bb7c
+     * @note[short] MacOS (Intel): 0x1b1510
+     * @note[short] Windows: 0x49fab0
+     * @note[short] iOS: 0x380abc
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x162cf4
-     * @note[short] MacOS (Intel): 0x1a00c0
-     * @note[short] Windows: 0x487260
-     * @note[short] iOS: 0x37978c
+     * @note[short] MacOS (ARM): 0x16b68c
+     * @note[short] MacOS (Intel): 0x1b0f40
+     * @note[short] Windows: 0x49f940
+     * @note[short] iOS: 0x380924
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
+     * @note[short] MacOS (ARM): 0x16b420
+     * @note[short] MacOS (Intel): 0x1b0cc0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3807cc
      * @note[short] Android
      */
     bool init(char const* frame);
 
     /**
-     * @note[short] Windows: 0x487070
+     * @note[short] MacOS (ARM): 0x16b470
+     * @note[short] MacOS (Intel): 0x1b0d10
+     * @note[short] Windows: 0x49f750
+     * @note[short] iOS: 0x38081c
      * @note[short] Android
      */
     void updateSmartFrame();

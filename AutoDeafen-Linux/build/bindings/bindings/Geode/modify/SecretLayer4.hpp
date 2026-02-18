@@ -55,11 +55,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getThreadMessage) 
 	#endif
 
-	#ifndef GEODE_STATICS_nodeWithTag
-		#define GEODE_STATICS_nodeWithTag
-		GEODE_AS_STATIC_FUNCTION(nodeWithTag) 
-	#endif
-
 	#ifndef GEODE_STATICS_onBack
 		#define GEODE_STATICS_onBack
 		GEODE_AS_STATIC_FUNCTION(onBack) 
@@ -78,11 +73,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_playCoinEffect
 		#define GEODE_STATICS_playCoinEffect
 		GEODE_AS_STATIC_FUNCTION(playCoinEffect) 
-	#endif
-
-	#ifndef GEODE_STATICS_selectAThread
-		#define GEODE_STATICS_selectAThread
-		GEODE_AS_STATIC_FUNCTION(selectAThread) 
 	#endif
 
 	#ifndef GEODE_STATICS_showDialog
@@ -237,28 +227,28 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer4, create, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer4, scene, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d87b0, Thiscall, SecretLayer4, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d25a0, Thiscall, SecretLayer4, onExit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dc3b0, Thiscall, SecretLayer4, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cfa10, Thiscall, SecretLayer4, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cfb60, Thiscall, SecretLayer4, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cfb60, Thiscall, SecretLayer4, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3efb20, Thiscall, SecretLayer4, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e9910, Thiscall, SecretLayer4, onExit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f3720, Thiscall, SecretLayer4, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e6d80, Thiscall, SecretLayer4, textInputOpened, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e6ed0, Thiscall, SecretLayer4, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e6ed0, Thiscall, SecretLayer4, textChanged, CCTextInputNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer4, FLAlert_Clicked, FLAlertLayer*, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer4, dialogClosed, DialogLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dba90, Thiscall, SecretLayer4, getBasicMessage, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d13e0, Thiscall, SecretLayer4, getErrorMessage, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3daef0, Thiscall, SecretLayer4, getMessage, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3db0d0, Thiscall, SecretLayer4, getThreadMessage, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer4, nodeWithTag, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dc300, Thiscall, SecretLayer4, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d9870, Thiscall, SecretLayer4, onChest01, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d99e0, Thiscall, SecretLayer4, onSubmit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f2e00, Thiscall, SecretLayer4, getBasicMessage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e8750, Thiscall, SecretLayer4, getErrorMessage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f2260, Thiscall, SecretLayer4, getMessage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f2440, Thiscall, SecretLayer4, getThreadMessage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer4, nodeWithTag, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f3670, Thiscall, SecretLayer4, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f0be0, Thiscall, SecretLayer4, onChest01, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f0d50, Thiscall, SecretLayer4, onSubmit, cocos2d::CCObject*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer4, playCoinEffect, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer4, selectAThread, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer4, selectAThread, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer4, showDialog, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3db4f0, Thiscall, SecretLayer4, showFirstDialog, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cff20, Thiscall, SecretLayer4, updateMessageLabel, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cfc30, Thiscall, SecretLayer4, updateSearchLabel, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f2860, Thiscall, SecretLayer4, showFirstDialog, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e7290, Thiscall, SecretLayer4, updateMessageLabel, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e6fa0, Thiscall, SecretLayer4, updateSearchLabel, char const*)
 		}
 	};
 }

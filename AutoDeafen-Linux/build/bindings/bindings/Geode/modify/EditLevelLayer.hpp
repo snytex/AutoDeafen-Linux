@@ -90,16 +90,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onBack) 
 	#endif
 
-	#ifndef GEODE_STATICS_onClone
-		#define GEODE_STATICS_onClone
-		GEODE_AS_STATIC_FUNCTION(onClone) 
-	#endif
-
-	#ifndef GEODE_STATICS_onDelete
-		#define GEODE_STATICS_onDelete
-		GEODE_AS_STATIC_FUNCTION(onDelete) 
-	#endif
-
 	#ifndef GEODE_STATICS_onEdit
 		#define GEODE_STATICS_onEdit
 		GEODE_AS_STATIC_FUNCTION(onEdit) 
@@ -130,11 +120,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onLevelOptions) 
 	#endif
 
-	#ifndef GEODE_STATICS_onMoveToTop
-		#define GEODE_STATICS_onMoveToTop
-		GEODE_AS_STATIC_FUNCTION(onMoveToTop) 
-	#endif
-
 	#ifndef GEODE_STATICS_onPlay
 		#define GEODE_STATICS_onPlay
 		GEODE_AS_STATIC_FUNCTION(onPlay) 
@@ -148,11 +133,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onShare
 		#define GEODE_STATICS_onShare
 		GEODE_AS_STATIC_FUNCTION(onShare) 
-	#endif
-
-	#ifndef GEODE_STATICS_onTest
-		#define GEODE_STATICS_onTest
-		GEODE_AS_STATIC_FUNCTION(onTest) 
 	#endif
 
 	#ifndef GEODE_STATICS_onUpdateDescription
@@ -173,11 +153,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_setupLevelInfo
 		#define GEODE_STATICS_setupLevelInfo
 		GEODE_AS_STATIC_FUNCTION(setupLevelInfo) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateDescText
-		#define GEODE_STATICS_updateDescText
-		GEODE_AS_STATIC_FUNCTION(updateDescText) 
 	#endif
 
 	#ifndef GEODE_STATICS_verifyLevelName
@@ -381,42 +356,42 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditLevelLayer, create, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd3d80, Default, EditLevelLayer, scene, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd8570, Thiscall, EditLevelLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd8580, Thiscall, EditLevelLayer, keyDown, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd8050, Thiscall, EditLevelLayer, setIDPopupClosed, SetIDPopup*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd7710, Thiscall, EditLevelLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd65c0, Thiscall, EditLevelLayer, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd5fc0, Thiscall, EditLevelLayer, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd6730, Thiscall, EditLevelLayer, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd85f0, Thiscall, EditLevelLayer, uploadActionFinished, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd8730, Thiscall, EditLevelLayer, uploadActionFailed, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd85b0, Thiscall, EditLevelLayer, onClosePopup, UploadActionPopup*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd5f60, Thiscall, EditLevelLayer, closeTextInputs, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditLevelLayer, confirmClone, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd75d0, Thiscall, EditLevelLayer, confirmDelete, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd7e90, Thiscall, EditLevelLayer, confirmMoveToTop, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd3f10, Thiscall, EditLevelLayer, init, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd80e0, Thiscall, EditLevelLayer, onBack, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditLevelLayer, onClone, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditLevelLayer, onDelete, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd6d80, Thiscall, EditLevelLayer, onEdit, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd52e0, Thiscall, EditLevelLayer, onGuidelines, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd7c50, Thiscall, EditLevelLayer, onHelp, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd5500, Thiscall, EditLevelLayer, onLevelInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd5450, Thiscall, EditLevelLayer, onLevelLeaderboard, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd54d0, Thiscall, EditLevelLayer, onLevelOptions, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditLevelLayer, onMoveToTop, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd6920, Thiscall, EditLevelLayer, onPlay, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd7fc0, Thiscall, EditLevelLayer, onSetFolder, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd6f20, Thiscall, EditLevelLayer, onShare, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditLevelLayer, onTest, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditLevelLayer, onUpdateDescription, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd6ae0, Thiscall, EditLevelLayer, playStep2, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd6bc0, Thiscall, EditLevelLayer, playStep3, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd5720, Thiscall, EditLevelLayer, setupLevelInfo, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditLevelLayer, updateDescText, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd8290, Thiscall, EditLevelLayer, verifyLevelName, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd52b0, Default, EditLevelLayer, scene, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd9aa0, Thiscall, EditLevelLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd9ab0, Thiscall, EditLevelLayer, keyDown, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd9580, Thiscall, EditLevelLayer, setIDPopupClosed, SetIDPopup*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd8c40, Thiscall, EditLevelLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd7af0, Thiscall, EditLevelLayer, textInputOpened, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd74f0, Thiscall, EditLevelLayer, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd7c60, Thiscall, EditLevelLayer, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd9b20, Thiscall, EditLevelLayer, uploadActionFinished, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd9c60, Thiscall, EditLevelLayer, uploadActionFailed, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd9ae0, Thiscall, EditLevelLayer, onClosePopup, UploadActionPopup*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd7490, Thiscall, EditLevelLayer, closeTextInputs, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd92a0, Thiscall, EditLevelLayer, confirmClone, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd8b00, Thiscall, EditLevelLayer, confirmDelete, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd93c0, Thiscall, EditLevelLayer, confirmMoveToTop, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd5440, Thiscall, EditLevelLayer, init, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd9610, Thiscall, EditLevelLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditLevelLayer, onClone, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditLevelLayer, onDelete, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd82b0, Thiscall, EditLevelLayer, onEdit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd6810, Thiscall, EditLevelLayer, onGuidelines, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd9180, Thiscall, EditLevelLayer, onHelp, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd6a30, Thiscall, EditLevelLayer, onLevelInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd6980, Thiscall, EditLevelLayer, onLevelLeaderboard, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd6a00, Thiscall, EditLevelLayer, onLevelOptions, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditLevelLayer, onMoveToTop, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd7e50, Thiscall, EditLevelLayer, onPlay, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd94f0, Thiscall, EditLevelLayer, onSetFolder, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd8450, Thiscall, EditLevelLayer, onShare, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditLevelLayer, onTest, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd8180, Thiscall, EditLevelLayer, onUpdateDescription, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd8010, Thiscall, EditLevelLayer, playStep2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd80f0, Thiscall, EditLevelLayer, playStep3, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd6c50, Thiscall, EditLevelLayer, setupLevelInfo, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditLevelLayer, updateDescText, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd97c0, Thiscall, EditLevelLayer, verifyLevelName, )
 		}
 	};
 }

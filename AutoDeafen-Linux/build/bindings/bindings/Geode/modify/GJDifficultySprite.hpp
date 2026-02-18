@@ -15,11 +15,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getDifficultyFrame) 
 	#endif
 
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateDifficultyFrame
 		#define GEODE_STATICS_updateDifficultyFrame
 		GEODE_AS_STATIC_FUNCTION(updateDifficultyFrame) 
@@ -70,11 +65,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29d8d0, Default, GJDifficultySprite, create, int, GJDifficultyName)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29d9b0, Default, GJDifficultySprite, getDifficultyFrame, int, GJDifficultyName)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJDifficultySprite, init, int, GJDifficultyName)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29da90, Thiscall, GJDifficultySprite, updateDifficultyFrame, int, GJDifficultyName)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29dbb0, Thiscall, GJDifficultySprite, updateFeatureState, GJFeatureState)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a4f90, Default, GJDifficultySprite, create, int, GJDifficultyName)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a5070, Default, GJDifficultySprite, getDifficultyFrame, int, GJDifficultyName)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJDifficultySprite, init, int, GJDifficultyName)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a5150, Thiscall, GJDifficultySprite, updateDifficultyFrame, int, GJDifficultyName)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a5270, Thiscall, GJDifficultySprite, updateFeatureState, GJFeatureState)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJDifficultySprite, updateFeatureStateFromLevel, GJGameLevel*)
 		}
 	};

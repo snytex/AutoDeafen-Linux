@@ -15,134 +15,154 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(TextArea, cocos2d::CCSprite)
 
     /**
-     * @note[short] MacOS (ARM): 0x2a4014
-     * @note[short] MacOS (Intel): 0x30d440
-     * @note[short] Windows: 0x76e50
-     * @note[short] iOS: 0xf9894
+     * @note[short] MacOS (ARM): 0x2af598
+     * @note[short] MacOS (Intel): 0x3219a0
+     * @note[short] Windows: 0x76e80
+     * @note[short] iOS: 0xf6784
      * @note[short] Android: Rebinded
      */
     static TextArea* create(gd::string str, char const* font, float scale, float width, cocos2d::CCPoint anchor, float lineHeight, bool disableColor);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a4c5c
-     * @note[short] MacOS (Intel): 0x30e100
-     * @note[short] Windows: 0x776b0
-     * @note[short] iOS: 0xf9ff4
+     * @note[short] MacOS (ARM): 0x2b01e8
+     * @note[short] MacOS (Intel): 0x322660
+     * @note[short] Windows: 0x776e0
+     * @note[short] iOS: 0xf6ee4
      * @note[short] Android
      */
-    virtual void update(float p0);
+    virtual void update(float dt);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a4c58
-     * @note[short] MacOS (Intel): 0x30e0f0
+     * @note[short] MacOS (ARM): 0x2b01e4
+     * @note[short] MacOS (Intel): 0x322650
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0xf9ff0
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0xf6ee0
+     * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a4ab4
-     * @note[short] MacOS (Intel): 0x30df50
-     * @note[short] Windows: 0x775c0
-     * @note[short] iOS: 0xf9e54
+     * @note[short] MacOS (ARM): 0x2b0040
+     * @note[short] MacOS (Intel): 0x3224b0
+     * @note[short] Windows: 0x775f0
+     * @note[short] iOS: 0xf6d44
      * @note[short] Android
      */
-    virtual void setOpacity(unsigned char p0);
+    virtual void setOpacity(unsigned char opacity);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a4b20
-     * @note[short] MacOS (Intel): 0x30dfc0
-     * @note[short] Windows: 0x77600
-     * @note[short] iOS: 0xf9ec0
+     * @note[short] MacOS (ARM): 0x2b00ac
+     * @note[short] MacOS (Intel): 0x322520
+     * @note[short] Windows: 0x77630
+     * @note[short] iOS: 0xf6db0
      * @note[short] Android
      */
-    void colorAllCharactersTo(cocos2d::ccColor3B p0);
+    void colorAllCharactersTo(cocos2d::ccColor3B color);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a4be4
-     * @note[short] MacOS (Intel): 0x30e070
+     * @note[short] MacOS (ARM): 0x2b0170
+     * @note[short] MacOS (Intel): 0x3225d0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xf6e6c
      * @note[short] Android
      */
     void colorAllLabels(cocos2d::ccColor3B color);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a47e4
-     * @note[short] MacOS (Intel): 0x30dc90
+     * @note[short] MacOS (ARM): 0x2afd70
+     * @note[short] MacOS (Intel): 0x3221f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void fadeIn(float p0, bool p1);
+    float fadeIn(float duration, bool unused);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a4db0
-     * @note[short] MacOS (Intel): 0x30e2a0
-     * @note[short] Windows: 0x77890
-     * @note[short] iOS: 0xfa140
+     * @note[short] MacOS (ARM): 0x2b0328
+     * @note[short] MacOS (Intel): 0x322800
+     * @note[short] Windows: 0x778c0
+     * @note[short] iOS: 0xf701c
      * @note[short] Android
      */
-    float fadeInCharacters(float p0, float p1, bool p2, TextFadeInStyle p3);
+    float fadeInCharacters(float duration, float charDuration, bool fadeOut, TextFadeInStyle style);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a49b4
-     * @note[short] MacOS (Intel): 0x30de50
+     * @note[short] MacOS (ARM): 0x2aff40
+     * @note[short] MacOS (Intel): 0x3223b0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void fadeOut(float p0);
+    void fadeOut(float duration);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a4944
-     * @note[short] MacOS (Intel): 0x30ddf0
+     * @note[short] MacOS (ARM): 0x2afed0
+     * @note[short] MacOS (Intel): 0x322350
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void fadeOutAndRemove();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a4920
-     * @note[short] MacOS (Intel): 0x30ddc0
-     * @note[short] Windows: 0x775a0
+     * @note[short] MacOS (ARM): 0x2afeac
+     * @note[short] MacOS (Intel): 0x322320
+     * @note[short] Windows: 0x775d0
+     * @note[short] iOS: 0xf6d20
      * @note[short] Android
      */
     void finishFade();
 
     /**
+     * @note[short] MacOS (ARM): 0x2afb04
+     * @note[short] MacOS (Intel): 0x321f80
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void hideAll();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a41bc
-     * @note[short] MacOS (Intel): 0x30d5f0
+     * @note[short] MacOS (ARM): 0x2af748
+     * @note[short] MacOS (Intel): 0x321b50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xf68b0
      * @note[short] Android: Rebinded
      */
     bool init(gd::string str, char const* font, float scale, float width, cocos2d::CCPoint anchor, float lineHeight, bool disableColor);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a4564
-     * @note[short] MacOS (Intel): 0x30da00
+     * @note[short] MacOS (ARM): 0x2afaf0
+     * @note[short] MacOS (Intel): 0x321f60
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void setIgnoreColorCode(bool p0);
+    void setIgnoreColorCode(bool ignore);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a42b4
-     * @note[short] MacOS (Intel): 0x30d6f0
-     * @note[short] Windows: 0x77090
-     * @note[short] iOS: 0xf9ab8
+     * @note[short] MacOS (ARM): 0x2af840
+     * @note[short] MacOS (Intel): 0x321c50
+     * @note[short] Windows: 0x770c0
+     * @note[short] iOS: 0xf69a8
      * @note[short] Android: Rebinded
      */
-    void setString(gd::string p0);
+    void setString(gd::string text);
 
     /**
+     * @note[short] MacOS (ARM): 0x2afc94
+     * @note[short] MacOS (Intel): 0x322110
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xf6ce4
      * @note[short] Android
      */
     void showAll();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a4648
-     * @note[short] MacOS (Intel): 0x30daf0
-     * @note[short] Windows: 0x774e0
-     * @note[short] iOS: 0xf9d3c
+     * @note[short] MacOS (ARM): 0x2afbd4
+     * @note[short] MacOS (Intel): 0x322050
+     * @note[short] Windows: 0x77510
+     * @note[short] iOS: 0xf6c2c
      * @note[short] Android
      */
     void stopAllCharacterActions();

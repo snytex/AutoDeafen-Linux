@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void animationFinished(char const* p0);
+    virtual void animationFinished(char const* key);
 };

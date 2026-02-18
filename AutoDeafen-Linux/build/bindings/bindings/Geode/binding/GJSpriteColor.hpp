@@ -20,6 +20,15 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
+     GJSpriteColor();
+
+    /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
     int getColorMode();
     int m_colorID;
     int m_defaultColorID;

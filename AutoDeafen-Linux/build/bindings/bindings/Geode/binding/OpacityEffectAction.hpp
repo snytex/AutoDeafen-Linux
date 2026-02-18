@@ -14,6 +14,10 @@ public:
     static constexpr auto CLASS_NAME = "OpacityEffectAction";
 
     /**
+     * @note[short] MacOS (ARM): 0x2739a0
+     * @note[short] MacOS (Intel): 0x2d9340
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xd394
      * @note[short] Android
      */
     void step(float delta);

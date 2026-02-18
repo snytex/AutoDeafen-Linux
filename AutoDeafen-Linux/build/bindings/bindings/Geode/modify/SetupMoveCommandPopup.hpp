@@ -105,15 +105,15 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x278ef0, Default, SetupMoveCommandPopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27a4d0, Thiscall, SetupMoveCommandPopup, updateInputValue, int, float&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27a4a0, Thiscall, SetupMoveCommandPopup, updateInputNode, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27a500, Thiscall, SetupMoveCommandPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27a3e0, Thiscall, SetupMoveCommandPopup, triggerValueFromSliderValue, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27a430, Thiscall, SetupMoveCommandPopup, triggerSliderValueFromValue, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27ab70, Thiscall, SetupMoveCommandPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x279010, Thiscall, SetupMoveCommandPopup, init, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27a9b0, Thiscall, SetupMoveCommandPopup, updateControlVisibility, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x280820, Default, SetupMoveCommandPopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x281e00, Thiscall, SetupMoveCommandPopup, updateInputValue, int, float&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x281dd0, Thiscall, SetupMoveCommandPopup, updateInputNode, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x281e30, Thiscall, SetupMoveCommandPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x281d10, Thiscall, SetupMoveCommandPopup, triggerValueFromSliderValue, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x281d60, Thiscall, SetupMoveCommandPopup, triggerSliderValueFromValue, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2824a0, Thiscall, SetupMoveCommandPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x280940, Thiscall, SetupMoveCommandPopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2822e0, Thiscall, SetupMoveCommandPopup, updateControlVisibility, )
 		}
 	};
 }

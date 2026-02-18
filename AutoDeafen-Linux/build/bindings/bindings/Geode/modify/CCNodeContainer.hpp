@@ -45,9 +45,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x242710, Default, CCNodeContainer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x77db0, Thiscall, CCNodeContainer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2427e0, Thiscall, CCNodeContainer, visit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x248ca0, Default, CCNodeContainer, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x77de0, Thiscall, CCNodeContainer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x248d70, Thiscall, CCNodeContainer, visit, )
 		}
 	};
 }

@@ -35,7 +35,7 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6ac50, Default, GooglePlayManager, sharedState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6ac80, Default, GooglePlayManager, sharedState, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GooglePlayManager, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GooglePlayManager, googlePlaySignedIn, )
 		}

@@ -16,42 +16,49 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(CustomizeObjectSettingsPopup, SetupTriggerPopup)
 
     /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
-     * @note[short] Android: Rebinded
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
      CustomizeObjectSettingsPopup();
 
     /**
+     * @note[short] MacOS (ARM): 0x1a61a8
+     * @note[short] MacOS (Intel): 0x1f8640
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x502fc
      * @note[short] Android
      */
-    static CustomizeObjectSettingsPopup* create(GameObject* p0, cocos2d::CCArray* p1, CustomizeObjectLayer* p2);
+    static CustomizeObjectSettingsPopup* create(GameObject* object, cocos2d::CCArray* objects, CustomizeObjectLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x19f0d4
-     * @note[short] MacOS (Intel): 0x1e7d20
-     * @note[short] Windows: 0xa9e50
-     * @note[short] iOS: 0x54abc
+     * @note[short] MacOS (ARM): 0x1a75c8
+     * @note[short] MacOS (Intel): 0x1f9c70
+     * @note[short] Windows: 0xaa560
+     * @note[short] iOS: 0x51068
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x19f054
-     * @note[short] MacOS (Intel): 0x1e7cb0
-     * @note[short] Windows: 0xa9da0
-     * @note[short] iOS: 0x54a3c
+     * @note[short] MacOS (ARM): 0x1a7548
+     * @note[short] MacOS (Intel): 0x1f9c00
+     * @note[short] Windows: 0xaa4b0
+     * @note[short] iOS: 0x50fe8
      * @note[short] Android
      */
     virtual void onCustomToggleTriggerValue(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x19ec84
-     * @note[short] MacOS (Intel): 0x1e7880
-     * @note[short] Windows: 0xa99f0
+     * @note[short] MacOS (ARM): 0x1a7178
+     * @note[short] MacOS (Intel): 0x1f97e0
+     * @note[short] Windows: 0xaa100
+     * @note[short] iOS: 0x50c9c
      * @note[short] Android
      */
-    bool init(GameObject* p0, cocos2d::CCArray* p1, CustomizeObjectLayer* p2);
+    bool init(GameObject* object, cocos2d::CCArray* objects, CustomizeObjectLayer* layer);
     CustomizeObjectLayer* m_customizeLayer;
     bool m_settingsChanged;
 };

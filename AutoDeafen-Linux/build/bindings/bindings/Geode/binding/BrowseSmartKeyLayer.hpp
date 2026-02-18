@@ -25,63 +25,91 @@ public:
      BrowseSmartKeyLayer();
 
     /**
+     * @note[short] MacOS (ARM): 0x444e68
+     * @note[short] MacOS (Intel): 0x4ea7b0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x72850
      * @note[short] Android: Rebinded
      */
-    static BrowseSmartKeyLayer* create(GJSmartTemplate* p0, gd::string p1);
+    static BrowseSmartKeyLayer* create(GJSmartTemplate* smartTemplate, gd::string prefabKey);
 
     /**
-     * @note[short] MacOS (ARM): 0x43c764
-     * @note[short] MacOS (Intel): 0x4d9020
-     * @note[short] Windows: 0x4441b0
-     * @note[short] iOS: 0x779e0
+     * @note[short] MacOS (ARM): 0x446468
+     * @note[short] MacOS (Intel): 0x4ebf60
+     * @note[short] Windows: 0x45c550
+     * @note[short] iOS: 0x73aec
      * @note[short] Android
      */
     virtual void onBack(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x445fe0
+     * @note[short] MacOS (Intel): 0x4ebad0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x7374c
      * @note[short] Android
      */
-    void addChanceToSelected(int p0, bool p1);
+    void addChanceToSelected(int chance, bool zero);
 
     /**
+     * @note[short] MacOS (ARM): 0x445c2c
+     * @note[short] MacOS (Intel): 0x4eb7a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x7344c
      * @note[short] Android
      */
     void createTemplateObjects();
 
     /**
+     * @note[short] MacOS (ARM): 0x445e5c
+     * @note[short] MacOS (Intel): 0x4eb940
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x735e4
      * @note[short] Android
      */
     void deletedSelectedItems();
 
     /**
-     * @note[short] Windows: 0x443ed0
+     * @note[short] MacOS (ARM): 0x4461c4
+     * @note[short] MacOS (Intel): 0x4ebcb0
+     * @note[short] Windows: 0x45c270
+     * @note[short] iOS: 0x73878
      * @note[short] Android
      */
     cocos2d::CCArray* getAllSelectedBlocks();
 
     /**
-     * @note[short] MacOS (ARM): 0x43b4bc
-     * @note[short] MacOS (Intel): 0x4d7c90
-     * @note[short] Windows: 0x4430d0
+     * @note[short] MacOS (ARM): 0x44519c
+     * @note[short] MacOS (Intel): 0x4eabe0
+     * @note[short] Windows: 0x45b470
+     * @note[short] iOS: 0x72a84
      * @note[short] Android: Rebinded
      */
-    bool init(GJSmartTemplate* p0, gd::string p1);
+    bool init(GJSmartTemplate* smartTemplate, gd::string prefabKey);
 
     /**
-     * @note[short] Windows: 0x443ab0
+     * @note[short] MacOS (ARM): 0x445b88
+     * @note[short] MacOS (Intel): 0x4eb710
+     * @note[short] Windows: 0x45be50
+     * @note[short] iOS: 0x733b0
      * @note[short] Android
      */
     void onButton(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x4440d0
+     * @note[short] MacOS (ARM): 0x445b5c
+     * @note[short] MacOS (Intel): 0x4eb6e0
+     * @note[short] Windows: 0x45c470
+     * @note[short] iOS: 0x73384
      * @note[short] Android
      */
     void onPrefabObject(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x443fa0
+     * @note[short] MacOS (ARM): 0x44628c
+     * @note[short] MacOS (Intel): 0x4ebd80
+     * @note[short] Windows: 0x45c340
+     * @note[short] iOS: 0x73934
      * @note[short] Android
      */
     void updateChanceValues();

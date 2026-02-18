@@ -46,8 +46,8 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCLightStrip, create, float, float, float, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43cb0, Thiscall, CCLightStrip, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43e70, Thiscall, CCLightStrip, updateTweenAction, float, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43d20, Thiscall, CCLightStrip, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43ee0, Thiscall, CCLightStrip, updateTweenAction, float, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCLightStrip, init, float, float, float, float, float)
 		}
 	};

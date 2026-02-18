@@ -15,21 +15,29 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(SecretNumberLayer, cocos2d::CCLayer)
 
     /**
+     * @note[short] MacOS (ARM): 0x404dd4
+     * @note[short] MacOS (Intel): 0x4a1230
+     * @note[short] Windows: 0x3e9960
+     * @note[short] iOS: 0x30c95c
      * @note[short] Android
      */
     static SecretNumberLayer* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x3fcf14
-     * @note[short] MacOS (Intel): 0x4901a0
-     * @note[short] Windows: 0x3ec90
-     * @note[short] iOS: 0x30dd14
+     * @note[short] MacOS (ARM): 0x406eb0
+     * @note[short] MacOS (Intel): 0x4a3240
+     * @note[short] Windows: 0x3ed00
+     * @note[short] iOS: 0x30dc20
      * @note[short] Android
      */
     virtual bool init();
 
     /**
+     * @note[short] MacOS (ARM): 0x404e78
+     * @note[short] MacOS (Intel): 0x4a12e0
+     * @note[short] Windows: 0x3e9a20
+     * @note[short] iOS: 0x30c9f4
      * @note[short] Android
      */
-    TodoReturn playNumberEffect(int p0);
+    void playNumberEffect(int secretNumber);
 };

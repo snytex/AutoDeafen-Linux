@@ -25,11 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(selectArtClosed) 
 	#endif
 
-	#ifndef GEODE_STATICS_determineStartValues
-		#define GEODE_STATICS_determineStartValues
-		GEODE_AS_STATIC_FUNCTION(determineStartValues) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -205,25 +200,25 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43e530, Default, SetupSmartBlockLayer, create, SmartGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4406d0, Thiscall, SetupSmartBlockLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8ba30, Thiscall, SetupSmartBlockLayer, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x440690, Thiscall, SetupSmartBlockLayer, selectArtClosed, SelectArtLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupSmartBlockLayer, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43e670, Thiscall, SetupSmartBlockLayer, init, SmartGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43f750, Thiscall, SetupSmartBlockLayer, onAllowFlipping, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43f6d0, Thiscall, SetupSmartBlockLayer, onAllowRotation, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x440030, Thiscall, SetupSmartBlockLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4400f0, Thiscall, SetupSmartBlockLayer, onCreate, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43fd80, Thiscall, SetupSmartBlockLayer, onCreateAll, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x440520, Thiscall, SetupSmartBlockLayer, onCreateTemplate, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43f890, Thiscall, SetupSmartBlockLayer, onDontDelete, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43f900, Thiscall, SetupSmartBlockLayer, onIgnoreCorners, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43f820, Thiscall, SetupSmartBlockLayer, onNearbyReference, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43f980, Thiscall, SetupSmartBlockLayer, onPasteTemplate, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43f640, Thiscall, SetupSmartBlockLayer, onReferenceOnly, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x440620, Thiscall, SetupSmartBlockLayer, onSelectPremade, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4406a0, Thiscall, SetupSmartBlockLayer, onSelectTemplate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4568d0, Default, SetupSmartBlockLayer, create, SmartGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x458a70, Thiscall, SetupSmartBlockLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8baf0, Thiscall, SetupSmartBlockLayer, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x458a30, Thiscall, SetupSmartBlockLayer, selectArtClosed, SelectArtLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupSmartBlockLayer, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x456a10, Thiscall, SetupSmartBlockLayer, init, SmartGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x457af0, Thiscall, SetupSmartBlockLayer, onAllowFlipping, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x457a70, Thiscall, SetupSmartBlockLayer, onAllowRotation, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4583d0, Thiscall, SetupSmartBlockLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x458490, Thiscall, SetupSmartBlockLayer, onCreate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x458120, Thiscall, SetupSmartBlockLayer, onCreateAll, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4588c0, Thiscall, SetupSmartBlockLayer, onCreateTemplate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x457c30, Thiscall, SetupSmartBlockLayer, onDontDelete, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x457ca0, Thiscall, SetupSmartBlockLayer, onIgnoreCorners, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x457bc0, Thiscall, SetupSmartBlockLayer, onNearbyReference, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x457d20, Thiscall, SetupSmartBlockLayer, onPasteTemplate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4579e0, Thiscall, SetupSmartBlockLayer, onReferenceOnly, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4589c0, Thiscall, SetupSmartBlockLayer, onSelectPremade, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x458a40, Thiscall, SetupSmartBlockLayer, onSelectTemplate, cocos2d::CCObject*)
 		}
 	};
 }

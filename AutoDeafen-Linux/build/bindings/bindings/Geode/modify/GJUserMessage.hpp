@@ -35,9 +35,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x170ec0, Default, GJUserMessage, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x170380, Default, GJUserMessage, create, cocos2d::CCDictionary*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x77db0, Thiscall, GJUserMessage, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x173ed0, Default, GJUserMessage, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x173390, Default, GJUserMessage, create, cocos2d::CCDictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x77de0, Thiscall, GJUserMessage, init, )
 		}
 	};
 }

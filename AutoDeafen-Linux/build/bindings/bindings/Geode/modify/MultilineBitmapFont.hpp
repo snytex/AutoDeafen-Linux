@@ -71,11 +71,11 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MultilineBitmapFont, createWithFont, char const*, gd::string, float, float, cocos2d::CCPoint, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6c750, Thiscall, MultilineBitmapFont, setOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6bea0, Thiscall, MultilineBitmapFont, initWithFont, char const*, gd::string, float, float, cocos2d::CCPoint, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6d0a0, Thiscall, MultilineBitmapFont, moveSpecialDescriptors, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6c7d0, Thiscall, MultilineBitmapFont, readColorInfo, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6d130, Thiscall, MultilineBitmapFont, stringWithMaxWidth, gd::string, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6c780, Thiscall, MultilineBitmapFont, setOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6bed0, Thiscall, MultilineBitmapFont, initWithFont, char const*, gd::string, float, float, cocos2d::CCPoint, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6d0d0, Thiscall, MultilineBitmapFont, moveSpecialDescriptors, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6c800, Thiscall, MultilineBitmapFont, readColorInfo, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6d160, Thiscall, MultilineBitmapFont, stringWithMaxWidth, gd::string, float, float)
 		}
 	};
 }

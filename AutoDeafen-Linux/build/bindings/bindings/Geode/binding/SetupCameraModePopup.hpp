@@ -16,94 +16,109 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupCameraModePopup, SetupTriggerPopup)
 
     /**
-     * @note[short] MacOS (ARM): 0x402158
-     * @note[short] MacOS (Intel): 0x495af0
-     * @note[short] Windows: 0x3fc360
-     * @note[short] iOS: 0x3a2ffc
+     * @note[short] MacOS (ARM): 0x40c0cc
+     * @note[short] MacOS (Intel): 0x4a8b80
+     * @note[short] Windows: 0x414020
+     * @note[short] iOS: 0x3aa340
      * @note[short] Android
      */
-    static SetupCameraModePopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupCameraModePopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x402fc0
-     * @note[short] MacOS (Intel): 0x496b80
-     * @note[short] Windows: 0x3fcf30
-     * @note[short] iOS: 0x3a3b64
+     * @note[short] MacOS (ARM): 0x40cf3c
+     * @note[short] MacOS (Intel): 0x4a9c00
+     * @note[short] Windows: 0x414bf0
+     * @note[short] iOS: 0x3aaeb0
      * @note[short] Android
      */
     virtual void determineStartValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x403274
-     * @note[short] MacOS (Intel): 0x496e70
-     * @note[short] Windows: 0x287920
-     * @note[short] iOS: 0x3a3dec
+     * @note[short] MacOS (ARM): 0x40d1e8
+     * @note[short] MacOS (Intel): 0x4a9f40
+     * @note[short] Windows: 0x28f250
+     * @note[short] iOS: 0x3ab134
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4022e4
-     * @note[short] MacOS (Intel): 0x495d30
-     * @note[short] Windows: 0x3fc480
-     * @note[short] iOS: 0x3a30d8
+     * @note[short] MacOS (ARM): 0x40c258
+     * @note[short] MacOS (Intel): 0x4a8dc0
+     * @note[short] Windows: 0x414140
+     * @note[short] iOS: 0x3aa41c
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] Windows: 0x3fd1a0
+     * @note[short] MacOS (ARM): 0x40cb54
+     * @note[short] MacOS (Intel): 0x4a9780
+     * @note[short] Windows: 0x414e60
+     * @note[short] iOS: 0x3aac28
      * @note[short] Android
      */
     void onEditCameraSettings(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x3fd0f0
+     * @note[short] MacOS (ARM): 0x40cad0
+     * @note[short] MacOS (Intel): 0x4a9700
+     * @note[short] Windows: 0x414db0
+     * @note[short] iOS: 0x3aabb0
      * @note[short] Android
      */
     void onUnboundMode(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x402d08
-     * @note[short] MacOS (Intel): 0x496860
-     * @note[short] Windows: 0x3fd320
-     * @note[short] iOS: 0x3a3970
+     * @note[short] MacOS (ARM): 0x40cc84
+     * @note[short] MacOS (Intel): 0x4a98e0
+     * @note[short] Windows: 0x414fe0
+     * @note[short] iOS: 0x3aacbc
      * @note[short] Android
      */
     void sliderChanged(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x3fd430
+     * @note[short] MacOS (ARM): 0x40d100
+     * @note[short] MacOS (Intel): 0x4a9e40
+     * @note[short] Windows: 0x4150f0
+     * @note[short] iOS: 0x3ab05c
      * @note[short] Android
      */
     void updateCameraEasing();
 
     /**
-     * @note[short] MacOS (ARM): 0x402e88
-     * @note[short] MacOS (Intel): 0x496a30
-     * @note[short] Windows: 0x3fd3d0
-     * @note[short] iOS: 0x3a3a2c
+     * @note[short] MacOS (ARM): 0x40ce04
+     * @note[short] MacOS (Intel): 0x4a9ab0
+     * @note[short] Windows: 0x415090
+     * @note[short] iOS: 0x3aad78
      * @note[short] Android
      */
     void updateCameraEasingLabel();
 
     /**
-     * @note[short] Windows: 0x3fd530
+     * @note[short] MacOS (ARM): 0x40d178
+     * @note[short] MacOS (Intel): 0x4a9ec0
+     * @note[short] Windows: 0x4151f0
+     * @note[short] iOS: 0x3ab0cc
      * @note[short] Android
      */
     void updateCameraPadding();
 
     /**
-     * @note[short] MacOS (ARM): 0x402ed4
-     * @note[short] MacOS (Intel): 0x496a80
-     * @note[short] Windows: 0x3fd4c0
-     * @note[short] iOS: 0x3a3a78
+     * @note[short] MacOS (ARM): 0x40ce50
+     * @note[short] MacOS (Intel): 0x4a9b00
+     * @note[short] Windows: 0x415180
+     * @note[short] iOS: 0x3aadc4
      * @note[short] Android
      */
     void updateCameraPaddingLabel();
 
     /**
-     * @note[short] Windows: 0x3fd250
+     * @note[short] MacOS (ARM): 0x40cea0
+     * @note[short] MacOS (Intel): 0x4a9b50
+     * @note[short] Windows: 0x414f10
+     * @note[short] iOS: 0x3aae14
      * @note[short] Android
      */
     void updateItemVisibility();

@@ -61,10 +61,10 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SelectListIconLayer, create, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f5080, Thiscall, SelectListIconLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f4790, Thiscall, SelectListIconLayer, init, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SelectListIconLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f4f80, Thiscall, SelectListIconLayer, onSelect, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x309ad0, Thiscall, SelectListIconLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3091e0, Thiscall, SelectListIconLayer, init, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x309a90, Thiscall, SelectListIconLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3099d0, Thiscall, SelectListIconLayer, onSelect, cocos2d::CCObject*)
 		}
 	};
 }

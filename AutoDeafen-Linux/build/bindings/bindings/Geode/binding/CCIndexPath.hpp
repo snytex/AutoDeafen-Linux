@@ -27,7 +27,7 @@ public:
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
+     * @note[short] iOS: 0x2feb5c
      * @note[short] Android: Out of line
      */
     static CCIndexPath* CCIndexPathWithSectionRow(int section, int row);

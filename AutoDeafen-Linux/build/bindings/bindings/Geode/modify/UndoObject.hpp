@@ -5,21 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_createWithTransformObjects
-		#define GEODE_STATICS_createWithTransformObjects
-		GEODE_AS_STATIC_FUNCTION(createWithTransformObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_initWithTransformObjects
-		#define GEODE_STATICS_initWithTransformObjects
-		GEODE_AS_STATIC_FUNCTION(initWithTransformObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_setObjects
-		#define GEODE_STATICS_setObjects
-		GEODE_AS_STATIC_FUNCTION(setObjects) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -62,11 +47,11 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UndoObject, create, GameObject*, UndoCommand)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UndoObject, createWithArray, cocos2d::CCArray*, UndoCommand)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(UndoObject, createWithTransformObjects, cocos2d::CCArray*, UndoCommand)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UndoObject, init, cocos2d::CCArray*, UndoCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UndoObject, createWithTransformObjects, cocos2d::CCArray*, UndoCommand)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UndoObject, init, GameObject*, UndoCommand)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(UndoObject, initWithTransformObjects, cocos2d::CCArray*, UndoCommand)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(UndoObject, setObjects, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UndoObject, init, cocos2d::CCArray*, UndoCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UndoObject, initWithTransformObjects, cocos2d::CCArray*, UndoCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UndoObject, setObjects, cocos2d::CCArray*)
 		}
 	};
 }

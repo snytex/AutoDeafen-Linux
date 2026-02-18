@@ -25,11 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(animationFinishedO) 
 	#endif
 
-	#ifndef GEODE_STATICS_cleanupSprite
-		#define GEODE_STATICS_cleanupSprite
-		GEODE_AS_STATIC_FUNCTION(cleanupSprite) 
-	#endif
-
 	#ifndef GEODE_STATICS_initWithType
 		#define GEODE_STATICS_initWithType
 		GEODE_AS_STATIC_FUNCTION(initWithType) 
@@ -45,11 +40,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(runAnimation) 
 	#endif
 
-	#ifndef GEODE_STATICS_stopTween
-		#define GEODE_STATICS_stopTween
-		GEODE_AS_STATIC_FUNCTION(stopTween) 
-	#endif
-
 	#ifndef GEODE_STATICS_switchToMode
 		#define GEODE_STATICS_switchToMode
 		GEODE_AS_STATIC_FUNCTION(switchToMode) 
@@ -63,11 +53,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_tweenToAnimationFinished
 		#define GEODE_STATICS_tweenToAnimationFinished
 		GEODE_AS_STATIC_FUNCTION(tweenToAnimationFinished) 
-	#endif
-
-	#ifndef GEODE_STATICS_willPlayAnimation
-		#define GEODE_STATICS_willPlayAnimation
-		GEODE_AS_STATIC_FUNCTION(willPlayAnimation) 
 	#endif
 
     
@@ -155,23 +140,23 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x3feb0, Thiscall, CCAnimatedSprite, )
-			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x41140, Thiscall, CCAnimatedSprite)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x3ff20, Thiscall, CCAnimatedSprite, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x411b0, Thiscall, CCAnimatedSprite)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCAnimatedSprite, createWithType, char const*, cocos2d::CCTexture2D*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41070, Thiscall, CCAnimatedSprite, setOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x410d0, Thiscall, CCAnimatedSprite, setColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41050, Thiscall, CCAnimatedSprite, animationFinished, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41010, Thiscall, CCAnimatedSprite, animationFinishedO, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCAnimatedSprite, cleanupSprite, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ffc0, Thiscall, CCAnimatedSprite, initWithType, char const*, cocos2d::CCTexture2D*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x401e0, Thiscall, CCAnimatedSprite, loadType, char const*, cocos2d::CCTexture2D*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40c80, Thiscall, CCAnimatedSprite, runAnimation, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x410e0, Thiscall, CCAnimatedSprite, setOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41140, Thiscall, CCAnimatedSprite, setColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x410c0, Thiscall, CCAnimatedSprite, animationFinished, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41080, Thiscall, CCAnimatedSprite, animationFinishedO, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCAnimatedSprite, cleanupSprite, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40030, Thiscall, CCAnimatedSprite, initWithType, char const*, cocos2d::CCTexture2D*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40250, Thiscall, CCAnimatedSprite, loadType, char const*, cocos2d::CCTexture2D*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40cf0, Thiscall, CCAnimatedSprite, runAnimation, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCAnimatedSprite, runAnimationForced, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCAnimatedSprite, stopTween, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40b10, Thiscall, CCAnimatedSprite, switchToMode, spriteMode)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40cf0, Thiscall, CCAnimatedSprite, tweenToAnimation, gd::string, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40fc0, Thiscall, CCAnimatedSprite, tweenToAnimationFinished, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCAnimatedSprite, willPlayAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCAnimatedSprite, stopTween, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40b80, Thiscall, CCAnimatedSprite, switchToMode, spriteMode)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40d60, Thiscall, CCAnimatedSprite, tweenToAnimation, gd::string, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41030, Thiscall, CCAnimatedSprite, tweenToAnimationFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCAnimatedSprite, willPlayAnimation, )
 		}
 	};
 }

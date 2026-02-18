@@ -16,34 +16,47 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(ObjectControlGameObject, EffectGameObject)
 
     /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     ObjectControlGameObject();
+
+    /**
+     * @note[short] MacOS (ARM): 0x19da18
+     * @note[short] MacOS (Intel): 0x1ee860
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3978ec
      * @note[short] Android
      */
     static ObjectControlGameObject* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x19559c
-     * @note[short] MacOS (Intel): 0x1dcad0
-     * @note[short] Windows: 0x4aa210
-     * @note[short] iOS: 0x390708
+     * @note[short] MacOS (ARM): 0x19dad8
+     * @note[short] MacOS (Intel): 0x1ee910
+     * @note[short] Windows: 0x4c2d60
+     * @note[short] iOS: 0x3979a0
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x195a5c
-     * @note[short] MacOS (Intel): 0x1dd030
-     * @note[short] Windows: 0x4aa3f0
-     * @note[short] iOS: 0x3908e8
+     * @note[short] MacOS (ARM): 0x19df8c
+     * @note[short] MacOS (Intel): 0x1eee90
+     * @note[short] Windows: 0x4c2f40
+     * @note[short] iOS: 0x397b80
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x1955ec
-     * @note[short] MacOS (Intel): 0x1dcb20
-     * @note[short] Windows: 0x4aa280
-     * @note[short] iOS: 0x390758
+     * @note[short] MacOS (ARM): 0x19db28
+     * @note[short] MacOS (Intel): 0x1ee960
+     * @note[short] Windows: 0x4c2dd0
+     * @note[short] iOS: 0x3979f0
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 };

@@ -20,6 +20,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(textInputReturn) 
 	#endif
 
+	#ifndef GEODE_STATICS_closeAccInputNodes
+		#define GEODE_STATICS_closeAccInputNodes
+		GEODE_AS_STATIC_FUNCTION(closeAccInputNodes) 
+	#endif
+
 	#ifndef GEODE_STATICS_createToggleButton
 		#define GEODE_STATICS_createToggleButton
 		GEODE_AS_STATIC_FUNCTION(createToggleButton) 
@@ -81,6 +86,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(textInputReturn) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_closeAccInputNodes
+		#define GEODE_CONCEPT_CHECK_closeAccInputNodes
+		GEODE_CONCEPT_FUNCTION_CHECK(closeAccInputNodes) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_createToggleButton
 		#define GEODE_CONCEPT_CHECK_createToggleButton
 		GEODE_CONCEPT_FUNCTION_CHECK(createToggleButton) 
@@ -131,17 +141,18 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJAccountSettingsLayer, create, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28d1f0, Thiscall, GJAccountSettingsLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b5c0, Thiscall, GJAccountSettingsLayer, textInputShouldOffset, CCTextInputNode*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b620, Thiscall, GJAccountSettingsLayer, textInputReturn, CCTextInputNode*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountSettingsLayer, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28a850, Thiscall, GJAccountSettingsLayer, init, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountSettingsLayer, onClose, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountSettingsLayer, onCommentSetting, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountSettingsLayer, onFriendRequests, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountSettingsLayer, onMessageSetting, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountSettingsLayer, onUpdate, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountSettingsLayer, updateScoreValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x294530, Thiscall, GJAccountSettingsLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b600, Thiscall, GJAccountSettingsLayer, textInputShouldOffset, CCTextInputNode*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b660, Thiscall, GJAccountSettingsLayer, textInputReturn, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x293ed0, Thiscall, GJAccountSettingsLayer, closeAccInputNodes, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x293ae0, Thiscall, GJAccountSettingsLayer, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2921e0, Thiscall, GJAccountSettingsLayer, init, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x294030, Thiscall, GJAccountSettingsLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x293e30, Thiscall, GJAccountSettingsLayer, onCommentSetting, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x293d90, Thiscall, GJAccountSettingsLayer, onFriendRequests, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x293cf0, Thiscall, GJAccountSettingsLayer, onMessageSetting, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x294070, Thiscall, GJAccountSettingsLayer, onUpdate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x294250, Thiscall, GJAccountSettingsLayer, updateScoreValues, )
 		}
 	};
 }

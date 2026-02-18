@@ -45,11 +45,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(colorSetupClosed) 
 	#endif
 
-	#ifndef GEODE_STATICS_createToggleButton
-		#define GEODE_STATICS_createToggleButton
-		GEODE_AS_STATIC_FUNCTION(createToggleButton) 
-	#endif
-
 	#ifndef GEODE_STATICS_determineStartValues
 		#define GEODE_STATICS_determineStartValues
 		GEODE_AS_STATIC_FUNCTION(determineStartValues) 
@@ -63,11 +58,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getButtonByTag
 		#define GEODE_STATICS_getButtonByTag
 		GEODE_AS_STATIC_FUNCTION(getButtonByTag) 
-	#endif
-
-	#ifndef GEODE_STATICS_getHSV
-		#define GEODE_STATICS_getHSV
-		GEODE_AS_STATIC_FUNCTION(getHSV) 
 	#endif
 
 	#ifndef GEODE_STATICS_highlightSelected
@@ -148,11 +138,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onUpdateCustomColor
 		#define GEODE_STATICS_onUpdateCustomColor
 		GEODE_AS_STATIC_FUNCTION(onUpdateCustomColor) 
-	#endif
-
-	#ifndef GEODE_STATICS_recreateLayer
-		#define GEODE_STATICS_recreateLayer
-		GEODE_AS_STATIC_FUNCTION(recreateLayer) 
 	#endif
 
 	#ifndef GEODE_STATICS_sliderChanged
@@ -400,45 +385,45 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa4b60, Default, CustomizeObjectLayer, create, GameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa99e0, Thiscall, CustomizeObjectLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8f70, Thiscall, CustomizeObjectLayer, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b790, Thiscall, CustomizeObjectLayer, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9100, Thiscall, CustomizeObjectLayer, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa86a0, Thiscall, CustomizeObjectLayer, hsvPopupClosed, HSVWidgetPopup*, cocos2d::ccHSVValue)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8030, Thiscall, CustomizeObjectLayer, colorSelectClosed, cocos2d::CCNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa7c90, Thiscall, CustomizeObjectLayer, colorSetupClosed, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomizeObjectLayer, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomizeObjectLayer, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8cb0, Thiscall, CustomizeObjectLayer, getActiveMode, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9520, Thiscall, CustomizeObjectLayer, getButtonByTag, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomizeObjectLayer, getHSV, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa97d0, Thiscall, CustomizeObjectLayer, highlightSelected, ButtonSprite*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa4d00, Thiscall, CustomizeObjectLayer, init, GameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9410, Thiscall, CustomizeObjectLayer, onBreakApart, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomizeObjectLayer, onBrowse, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9380, Thiscall, CustomizeObjectLayer, onClear, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9900, Thiscall, CustomizeObjectLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa7900, Thiscall, CustomizeObjectLayer, onCopy, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa7d70, Thiscall, CustomizeObjectLayer, onEditColor, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8470, Thiscall, CustomizeObjectLayer, onHSV, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomizeObjectLayer, onLiveEdit, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa87d0, Thiscall, CustomizeObjectLayer, onNextColorChannel, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa7960, Thiscall, CustomizeObjectLayer, onPaste, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa95a0, Thiscall, CustomizeObjectLayer, onSelectColor, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa88e0, Thiscall, CustomizeObjectLayer, onSelectMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa7ab0, Thiscall, CustomizeObjectLayer, onSettings, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8ea0, Thiscall, CustomizeObjectLayer, onUpdateCustomColor, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomizeObjectLayer, recreateLayer, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomizeObjectLayer, sliderChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8af0, Thiscall, CustomizeObjectLayer, toggleVisible, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa5270, Default, CustomizeObjectLayer, create, GameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xaa0f0, Thiscall, CustomizeObjectLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9680, Thiscall, CustomizeObjectLayer, textInputOpened, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b850, Thiscall, CustomizeObjectLayer, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9810, Thiscall, CustomizeObjectLayer, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8db0, Thiscall, CustomizeObjectLayer, hsvPopupClosed, HSVWidgetPopup*, cocos2d::ccHSVValue)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8740, Thiscall, CustomizeObjectLayer, colorSelectClosed, cocos2d::CCNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa83a0, Thiscall, CustomizeObjectLayer, colorSetupClosed, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomizeObjectLayer, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8750, Thiscall, CustomizeObjectLayer, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa93c0, Thiscall, CustomizeObjectLayer, getActiveMode, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9c30, Thiscall, CustomizeObjectLayer, getButtonByTag, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomizeObjectLayer, getHSV, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9ee0, Thiscall, CustomizeObjectLayer, highlightSelected, ButtonSprite*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa5410, Thiscall, CustomizeObjectLayer, init, GameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9b20, Thiscall, CustomizeObjectLayer, onBreakApart, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8310, Thiscall, CustomizeObjectLayer, onBrowse, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9a90, Thiscall, CustomizeObjectLayer, onClear, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xaa010, Thiscall, CustomizeObjectLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8010, Thiscall, CustomizeObjectLayer, onCopy, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8480, Thiscall, CustomizeObjectLayer, onEditColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8b80, Thiscall, CustomizeObjectLayer, onHSV, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa7f10, Thiscall, CustomizeObjectLayer, onLiveEdit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8ee0, Thiscall, CustomizeObjectLayer, onNextColorChannel, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8070, Thiscall, CustomizeObjectLayer, onPaste, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9cb0, Thiscall, CustomizeObjectLayer, onSelectColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8ff0, Thiscall, CustomizeObjectLayer, onSelectMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa81c0, Thiscall, CustomizeObjectLayer, onSettings, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa95b0, Thiscall, CustomizeObjectLayer, onUpdateCustomColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomizeObjectLayer, recreateLayer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa7ec0, Thiscall, CustomizeObjectLayer, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9200, Thiscall, CustomizeObjectLayer, toggleVisible, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomizeObjectLayer, updateChannelLabel, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa7e20, Thiscall, CustomizeObjectLayer, updateColorSprite, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomizeObjectLayer, updateCurrentSelection, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9490, Thiscall, CustomizeObjectLayer, updateCustomColorLabels, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8270, Thiscall, CustomizeObjectLayer, updateHSVButtons, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomizeObjectLayer, updateKerningLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9660, Thiscall, CustomizeObjectLayer, updateSelected, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8530, Thiscall, CustomizeObjectLayer, updateColorSprite, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9550, Thiscall, CustomizeObjectLayer, updateCurrentSelection, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9ba0, Thiscall, CustomizeObjectLayer, updateCustomColorLabels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa8980, Thiscall, CustomizeObjectLayer, updateHSVButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa7d10, Thiscall, CustomizeObjectLayer, updateKerningLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9d70, Thiscall, CustomizeObjectLayer, updateSelected, int)
 		}
 	};
 }

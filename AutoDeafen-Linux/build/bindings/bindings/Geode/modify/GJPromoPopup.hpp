@@ -81,12 +81,12 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJPromoPopup, create, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29d890, Thiscall, GJPromoPopup, onExit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, GJPromoPopup, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27db20, Thiscall, GJPromoPopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867a0, Thiscall, GJPromoPopup, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29d590, Thiscall, GJPromoPopup, init, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27dac0, Thiscall, GJPromoPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a4f50, Thiscall, GJPromoPopup, onExit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, GJPromoPopup, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x285450, Thiscall, GJPromoPopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867f0, Thiscall, GJPromoPopup, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a4c50, Thiscall, GJPromoPopup, init, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2853f0, Thiscall, GJPromoPopup, onClose, cocos2d::CCObject*)
 		}
 	};
 }

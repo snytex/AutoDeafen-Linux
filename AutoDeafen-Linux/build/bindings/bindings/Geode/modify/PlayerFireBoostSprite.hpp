@@ -55,11 +55,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38cf30, Default, PlayerFireBoostSprite, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38cfd0, Thiscall, PlayerFireBoostSprite, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3d80, Default, PlayerFireBoostSprite, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3e20, Thiscall, PlayerFireBoostSprite, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerFireBoostSprite, animateFireIn, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerFireBoostSprite, animateFireOut, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38d030, Thiscall, PlayerFireBoostSprite, loopFireAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3e80, Thiscall, PlayerFireBoostSprite, loopFireAnimation, )
 		}
 	};
 }

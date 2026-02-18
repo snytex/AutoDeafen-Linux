@@ -175,23 +175,23 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x474930, Default, ShareCommentLayer, create, gd::string, int, CommentType, int, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, ShareCommentLayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x476170, Thiscall, ShareCommentLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48ce10, Default, ShareCommentLayer, create, gd::string, int, CommentType, int, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, ShareCommentLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48e650, Thiscall, ShareCommentLayer, keyBackClicked, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ShareCommentLayer, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4761c0, Thiscall, ShareCommentLayer, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x476300, Thiscall, ShareCommentLayer, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x476550, Thiscall, ShareCommentLayer, uploadActionFinished, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4765e0, Thiscall, ShareCommentLayer, uploadActionFailed, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x476690, Thiscall, ShareCommentLayer, onClosePopup, UploadActionPopup*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x474b40, Thiscall, ShareCommentLayer, init, gd::string, int, CommentType, int, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475c20, Thiscall, ShareCommentLayer, onClear, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x476130, Thiscall, ShareCommentLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475c90, Thiscall, ShareCommentLayer, onPercent, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475d90, Thiscall, ShareCommentLayer, onShare, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48e6a0, Thiscall, ShareCommentLayer, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48e7e0, Thiscall, ShareCommentLayer, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48ea30, Thiscall, ShareCommentLayer, uploadActionFinished, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48eac0, Thiscall, ShareCommentLayer, uploadActionFailed, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48eb70, Thiscall, ShareCommentLayer, onClosePopup, UploadActionPopup*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48d020, Thiscall, ShareCommentLayer, init, gd::string, int, CommentType, int, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48e100, Thiscall, ShareCommentLayer, onClear, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48e610, Thiscall, ShareCommentLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48e170, Thiscall, ShareCommentLayer, onPercent, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48e270, Thiscall, ShareCommentLayer, onShare, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ShareCommentLayer, updateCharCountLabel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ShareCommentLayer, updateDescText, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475cb0, Thiscall, ShareCommentLayer, updatePercentLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48e900, Thiscall, ShareCommentLayer, updateDescText, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48e190, Thiscall, ShareCommentLayer, updatePercentLabel, )
 		}
 	};
 }

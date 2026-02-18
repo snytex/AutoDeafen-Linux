@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_customSetup
 		#define GEODE_STATICS_customSetup
 		GEODE_AS_STATIC_FUNCTION(customSetup) 
@@ -120,39 +115,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_previewAnimateOnTrigger
-		#define GEODE_STATICS_previewAnimateOnTrigger
-		GEODE_AS_STATIC_FUNCTION(previewAnimateOnTrigger) 
-	#endif
-
-	#ifndef GEODE_STATICS_refreshRotateAction
-		#define GEODE_STATICS_refreshRotateAction
-		GEODE_AS_STATIC_FUNCTION(refreshRotateAction) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetSyncedAnimation
-		#define GEODE_STATICS_resetSyncedAnimation
-		GEODE_AS_STATIC_FUNCTION(resetSyncedAnimation) 
-	#endif
-
-	#ifndef GEODE_STATICS_resumeAudio
-		#define GEODE_STATICS_resumeAudio
-		GEODE_AS_STATIC_FUNCTION(resumeAudio) 
-	#endif
-
-	#ifndef GEODE_STATICS_resumeAudioDelayed
-		#define GEODE_STATICS_resumeAudioDelayed
-		GEODE_AS_STATIC_FUNCTION(resumeAudioDelayed) 
-	#endif
-
 	#ifndef GEODE_STATICS_setupAnimationVariables
 		#define GEODE_STATICS_setupAnimationVariables
 		GEODE_AS_STATIC_FUNCTION(setupAnimationVariables) 
-	#endif
-
-	#ifndef GEODE_STATICS_triggerAnimation
-		#define GEODE_STATICS_triggerAnimation
-		GEODE_AS_STATIC_FUNCTION(triggerAnimation) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateRotateAction
@@ -160,19 +125,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateRotateAction) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateState
-		#define GEODE_STATICS_updateState
-		GEODE_AS_STATIC_FUNCTION(updateState) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateUserCoin
 		#define GEODE_STATICS_updateUserCoin
 		GEODE_AS_STATIC_FUNCTION(updateUserCoin) 
-	#endif
-
-	#ifndef GEODE_STATICS_waitForAnimationTrigger
-		#define GEODE_STATICS_waitForAnimationTrigger
-		GEODE_AS_STATIC_FUNCTION(waitForAnimationTrigger) 
 	#endif
 
     
@@ -311,16 +266,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(resetSyncedAnimation) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_resumeAudio
-		#define GEODE_CONCEPT_CHECK_resumeAudio
-		GEODE_CONCEPT_FUNCTION_CHECK(resumeAudio) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_resumeAudioDelayed
-		#define GEODE_CONCEPT_CHECK_resumeAudioDelayed
-		GEODE_CONCEPT_FUNCTION_CHECK(resumeAudioDelayed) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_setupAnimationVariables
 		#define GEODE_CONCEPT_CHECK_setupAnimationVariables
 		GEODE_CONCEPT_FUNCTION_CHECK(setupAnimationVariables) 
@@ -360,42 +305,40 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x188580, Thiscall, EnhancedGameObject, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EnhancedGameObject, create, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1ff0, Thiscall, EnhancedGameObject, customSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a19b0, Thiscall, EnhancedGameObject, resetObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a3af0, Thiscall, EnhancedGameObject, deactivateObject, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1cc0, Thiscall, EnhancedGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a3c50, Thiscall, EnhancedGameObject, getSaveString, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1b00, Thiscall, EnhancedGameObject, triggerActivated, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1a60, Thiscall, EnhancedGameObject, restoreObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1bf0, Thiscall, EnhancedGameObject, animationTriggered, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1b10, Thiscall, EnhancedGameObject, activatedByPlayer, PlayerObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1b70, Thiscall, EnhancedGameObject, hasBeenActivatedByPlayer, PlayerObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1bd0, Thiscall, EnhancedGameObject, hasBeenActivated, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1c50, Thiscall, EnhancedGameObject, saveActiveColors, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1850, Thiscall, EnhancedGameObject, canAllowMultiActivate, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x188660, Thiscall, EnhancedGameObject, getHasSyncedAnimation, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x188670, Thiscall, EnhancedGameObject, getHasRotateAction, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1ae0, Thiscall, EnhancedGameObject, canMultiActivate, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1aa0, Thiscall, EnhancedGameObject, powerOnObject, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1ac0, Thiscall, EnhancedGameObject, powerOffObject, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x18b500, Thiscall, EnhancedGameObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EnhancedGameObject, create, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4f70, Thiscall, EnhancedGameObject, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4930, Thiscall, EnhancedGameObject, resetObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a6a70, Thiscall, EnhancedGameObject, deactivateObject, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4c40, Thiscall, EnhancedGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a6bd0, Thiscall, EnhancedGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4a80, Thiscall, EnhancedGameObject, triggerActivated, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a49e0, Thiscall, EnhancedGameObject, restoreObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4b70, Thiscall, EnhancedGameObject, animationTriggered, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4a90, Thiscall, EnhancedGameObject, activatedByPlayer, PlayerObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4af0, Thiscall, EnhancedGameObject, hasBeenActivatedByPlayer, PlayerObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4b50, Thiscall, EnhancedGameObject, hasBeenActivated, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4bd0, Thiscall, EnhancedGameObject, saveActiveColors, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a47d0, Thiscall, EnhancedGameObject, canAllowMultiActivate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18b5e0, Thiscall, EnhancedGameObject, getHasSyncedAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18b5f0, Thiscall, EnhancedGameObject, getHasRotateAction, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4a60, Thiscall, EnhancedGameObject, canMultiActivate, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4a20, Thiscall, EnhancedGameObject, powerOnObject, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4a40, Thiscall, EnhancedGameObject, powerOffObject, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EnhancedGameObject, stateSensitiveOff, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4e30, Thiscall, EnhancedGameObject, updateSyncedAnimation, float, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a6af0, Thiscall, EnhancedGameObject, updateAnimateOnTrigger, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EnhancedGameObject, createRotateAction, float, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1800, Thiscall, EnhancedGameObject, init, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EnhancedGameObject, previewAnimateOnTrigger, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EnhancedGameObject, refreshRotateAction, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EnhancedGameObject, resetSyncedAnimation, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EnhancedGameObject, resumeAudio, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EnhancedGameObject, resumeAudioDelayed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a6bf0, Thiscall, EnhancedGameObject, setupAnimationVariables, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EnhancedGameObject, triggerAnimation, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EnhancedGameObject, updateRotateAction, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EnhancedGameObject, updateState, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a3970, Thiscall, EnhancedGameObject, updateUserCoin, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EnhancedGameObject, waitForAnimationTrigger, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a7db0, Thiscall, EnhancedGameObject, updateSyncedAnimation, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a9a70, Thiscall, EnhancedGameObject, updateAnimateOnTrigger, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a7280, Thiscall, EnhancedGameObject, createRotateAction, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4780, Thiscall, EnhancedGameObject, init, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EnhancedGameObject, previewAnimateOnTrigger, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EnhancedGameObject, refreshRotateAction, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EnhancedGameObject, resetSyncedAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a9b70, Thiscall, EnhancedGameObject, setupAnimationVariables, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EnhancedGameObject, triggerAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a7310, Thiscall, EnhancedGameObject, updateRotateAction, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EnhancedGameObject, updateState, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a68f0, Thiscall, EnhancedGameObject, updateUserCoin, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EnhancedGameObject, waitForAnimationTrigger, )
 		}
 	};
 }

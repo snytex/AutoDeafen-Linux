@@ -15,55 +15,73 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJGameLoadingLayer, cocos2d::CCLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x1282f4
-     * @note[short] MacOS (Intel): 0x1546e0
-     * @note[short] iOS: 0x20b54c
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     GJGameLoadingLayer();
+
+    /**
+     * @note[short] MacOS (ARM): 0x132b78
+     * @note[short] MacOS (Intel): 0x165320
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x209258
      * @note[short] Android
      */
     static GJGameLoadingLayer* create(GJGameLevel* level, bool editor);
 
     /**
-     * @note[short] Windows: 0x242890
-     * @note[short] iOS: 0x20b4c0
+     * @note[short] MacOS (ARM): 0x132a6c
+     * @note[short] MacOS (Intel): 0x165200
+     * @note[short] Windows: 0x248e20
+     * @note[short] iOS: 0x2091cc
      * @note[short] Android
      */
     static GJGameLoadingLayer* transitionToLoadingLayer(GJGameLevel* level, bool editor);
 
     /**
-     * @note[short] MacOS (ARM): 0x1286f4
-     * @note[short] MacOS (Intel): 0x154bb0
-     * @note[short] Windows: 0x52db0
-     * @note[short] iOS: 0x20b7f4
+     * @note[short] MacOS (ARM): 0x132f80
+     * @note[short] MacOS (Intel): 0x1657f0
+     * @note[short] Windows: 0x52e20
+     * @note[short] iOS: 0x209508
      * @note[short] Android
      */
     virtual void onEnter();
 
     /**
-     * @note[short] MacOS (ARM): 0x1286f0
-     * @note[short] MacOS (Intel): 0x154ba0
-     * @note[short] Windows: 0x242b20
-     * @note[short] iOS: 0x20b7f0
+     * @note[short] MacOS (ARM): 0x132f7c
+     * @note[short] MacOS (Intel): 0x1657e0
+     * @note[short] Windows: 0x2490b0
+     * @note[short] iOS: 0x209504
      * @note[short] Android
      */
     virtual void onEnterTransitionDidFinish();
 
     /**
+     * @note[short] MacOS (ARM): 0xeb304
+     * @note[short] MacOS (Intel): 0x10faf0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1da984
      * @note[short] Android
      */
     void gameLayerDidUnload();
 
     /**
-     * @note[short] MacOS (ARM): 0x128590
-     * @note[short] MacOS (Intel): 0x154a40
-     * @note[short] iOS: 0x20b698
+     * @note[short] MacOS (ARM): 0x132e14
+     * @note[short] MacOS (Intel): 0x165680
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2093a4
      * @note[short] Android
      */
     bool init(GJGameLevel* level, bool editor);
 
     /**
-     * @note[short] MacOS (ARM): 0x12868c
-     * @note[short] MacOS (Intel): 0x154b40
-     * @note[short] Windows: 0x242a80
+     * @note[short] MacOS (ARM): 0x132f10
+     * @note[short] MacOS (Intel): 0x165780
+     * @note[short] Windows: 0x249010
+     * @note[short] iOS: 0x20949c
      * @note[short] Android
      */
     void loadLevel();

@@ -15,33 +15,39 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(CCCountdown, cocos2d::CCSprite)
 
     /**
+     * @note[short] MacOS (ARM): 0x6cb4e4
+     * @note[short] MacOS (Intel): 0x7c64c0
      * @note[short] Android
      */
     static CCCountdown* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x6c2084
-     * @note[short] MacOS (Intel): 0x7b0e20
+     * @note[short] MacOS (ARM): 0x6cb588
+     * @note[short] MacOS (Intel): 0x7c6560
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x6c2434
-     * @note[short] MacOS (Intel): 0x7b11e0
+     * @note[short] MacOS (ARM): 0x6cb93c
+     * @note[short] MacOS (Intel): 0x7c6920
      * @note[short] Android
      */
-    virtual void setOpacity(unsigned char p0);
+    virtual void setOpacity(unsigned char opacity);
 
     /**
+     * @note[short] MacOS (ARM): 0x6cb814
+     * @note[short] MacOS (Intel): 0x7c6810
      * @note[short] Android
      */
     void lapFinished();
 
     /**
+     * @note[short] MacOS (ARM): 0x6cb7a8
+     * @note[short] MacOS (Intel): 0x7c6790
      * @note[short] Android
      */
-    void startTimerWithSeconds(float p0, cocos2d::SEL_CallFunc p1, cocos2d::CCNode* p2);
+    void startTimerWithSeconds(float seconds, cocos2d::SEL_CallFunc selector, cocos2d::CCNode* target);
     cocos2d::CCProgressTimer* m_progressTimer;
     float m_unk260;
     int m_seconds;

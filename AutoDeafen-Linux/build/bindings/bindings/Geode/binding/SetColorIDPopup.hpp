@@ -17,27 +17,46 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetColorIDPopup, SetIDPopup)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2e67b0
+     * @note[short] Android: Out of line
      */
-    static SetColorIDPopup* create(int p0);
+     SetColorIDPopup();
 
     /**
-     * @note[short] MacOS (ARM): 0x24164c
-     * @note[short] MacOS (Intel): 0x299980
-     * @note[short] Windows: 0x294cf0
-     * @note[short] iOS: 0x2de844
+     * @note[short] MacOS (ARM): 0x24b390
+     * @note[short] MacOS (Intel): 0x2accd0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2de8a0
      * @note[short] Android
      */
-    virtual void colorSelectClosed(GJSpecialColorSelect* p0, int p1);
+    static SetColorIDPopup* create(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x241384
-     * @note[short] MacOS (Intel): 0x2996b0
+     * @note[short] MacOS (ARM): 0x24b774
+     * @note[short] MacOS (Intel): 0x2ad110
+     * @note[short] Windows: 0x29c350
+     * @note[short] iOS: 0x2deb58
      * @note[short] Android
      */
-    bool init(int p0);
+    virtual void colorSelectClosed(GJSpecialColorSelect* select, int id);
 
     /**
+     * @note[short] MacOS (ARM): 0x24b4b8
+     * @note[short] MacOS (Intel): 0x2ace50
+     * @note[short] Windows: 0x29c100
+     * @note[short] iOS: 0x2de914
+     * @note[short] Android
+     */
+    bool init(int id);
+
+    /**
+     * @note[short] MacOS (ARM): 0x24b710
+     * @note[short] MacOS (Intel): 0x2ad0c0
+     * @note[short] Windows: 0x29c2e0
+     * @note[short] iOS: 0x2deaf4
      * @note[short] Android
      */
     void onSelectSpecialColor(cocos2d::CCObject* sender);

@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_resetObject
 		#define GEODE_STATICS_resetObject
 		GEODE_AS_STATIC_FUNCTION(resetObject) 
@@ -38,11 +33,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateSyncedAnimation
 		#define GEODE_STATICS_updateSyncedAnimation
 		GEODE_AS_STATIC_FUNCTION(updateSyncedAnimation) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
     
@@ -95,14 +85,14 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SpecialAnimGameObject, create, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x489380, Thiscall, SpecialAnimGameObject, resetObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x489390, Thiscall, SpecialAnimGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x489400, Thiscall, SpecialAnimGameObject, getSaveString, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x489340, Thiscall, SpecialAnimGameObject, updateMainColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x489360, Thiscall, SpecialAnimGameObject, updateSecondaryColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a69c0, Thiscall, SpecialAnimGameObject, updateSyncedAnimation, float, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SpecialAnimGameObject, init, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpecialAnimGameObject, create, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1a60, Thiscall, SpecialAnimGameObject, resetObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1a70, Thiscall, SpecialAnimGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1ae0, Thiscall, SpecialAnimGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1a20, Thiscall, SpecialAnimGameObject, updateMainColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1a40, Thiscall, SpecialAnimGameObject, updateSecondaryColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a9940, Thiscall, SpecialAnimGameObject, updateSyncedAnimation, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpecialAnimGameObject, init, char const*)
 		}
 	};
 }

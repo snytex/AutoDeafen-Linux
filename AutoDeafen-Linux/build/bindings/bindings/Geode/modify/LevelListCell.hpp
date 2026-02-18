@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_draw
 		#define GEODE_STATICS_draw
 		GEODE_AS_STATIC_FUNCTION(draw) 
@@ -33,11 +28,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onViewProfile
 		#define GEODE_STATICS_onViewProfile
 		GEODE_AS_STATIC_FUNCTION(onViewProfile) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateBGColor
-		#define GEODE_STATICS_updateBGColor
-		GEODE_AS_STATIC_FUNCTION(updateBGColor) 
 	#endif
 
     
@@ -90,15 +80,15 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0xbdf10, Thiscall, LevelListCell, char const*, float, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelListCell, create, float, float)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0xbec30, Thiscall, LevelListCell, char const*, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelListCell, create, float, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelListCell, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xad710, Thiscall, LevelListCell, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbdf90, Thiscall, LevelListCell, loadFromList, GJLevelList*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbf3c0, Thiscall, LevelListCell, onClick, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelListCell, onListInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbf4f0, Thiscall, LevelListCell, onViewProfile, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelListCell, updateBGColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xade20, Thiscall, LevelListCell, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbecb0, Thiscall, LevelListCell, loadFromList, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc00e0, Thiscall, LevelListCell, onClick, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc01f0, Thiscall, LevelListCell, onListInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc0210, Thiscall, LevelListCell, onViewProfile, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelListCell, updateBGColor, int)
 		}
 	};
 }

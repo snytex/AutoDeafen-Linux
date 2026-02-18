@@ -12,7 +12,25 @@
 class DynamicObjectAction {
 public:
     static constexpr auto CLASS_NAME = "DynamicObjectAction";
-    GameObject* m_gameObject1;
+
+    /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     DynamicObjectAction();
+
+    /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     DynamicObjectAction(EffectGameObject* object, GameObject* targetObject, GameObject* centerObject);
+    EffectGameObject* m_gameObject1;
     GameObject* m_gameObject2;
     GameObject* m_gameObject3;
     GameObject* m_gameObject4;
@@ -27,7 +45,7 @@ public:
     bool m_unkBool2;
     bool m_unkBool3;
     bool m_unkBool4;
-    float m_unkFloat4;
-    float m_unkFloat5;
-    float m_unkFloat6;
+    int m_controlID;
+    int m_targetGroupID;
+    int m_centerGroupID;
 };

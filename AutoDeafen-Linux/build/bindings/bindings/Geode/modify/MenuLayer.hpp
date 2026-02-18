@@ -80,19 +80,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onFullVersion) 
 	#endif
 
-	#ifndef GEODE_STATICS_onGameCenter
-		#define GEODE_STATICS_onGameCenter
-		GEODE_AS_STATIC_FUNCTION(onGameCenter) 
-	#endif
-
 	#ifndef GEODE_STATICS_onGarage
 		#define GEODE_STATICS_onGarage
 		GEODE_AS_STATIC_FUNCTION(onGarage) 
-	#endif
-
-	#ifndef GEODE_STATICS_onGooglePlayGames
-		#define GEODE_STATICS_onGooglePlayGames
-		GEODE_AS_STATIC_FUNCTION(onGooglePlayGames) 
 	#endif
 
 	#ifndef GEODE_STATICS_onMoreGames
@@ -140,11 +130,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onStats) 
 	#endif
 
-	#ifndef GEODE_STATICS_onTrailer
-		#define GEODE_STATICS_onTrailer
-		GEODE_AS_STATIC_FUNCTION(onTrailer) 
-	#endif
-
 	#ifndef GEODE_STATICS_onTwitch
 		#define GEODE_STATICS_onTwitch
 		GEODE_AS_STATIC_FUNCTION(onTwitch) 
@@ -165,24 +150,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(openOptions) 
 	#endif
 
-	#ifndef GEODE_STATICS_showGCQuestion
-		#define GEODE_STATICS_showGCQuestion
-		GEODE_AS_STATIC_FUNCTION(showGCQuestion) 
-	#endif
-
 	#ifndef GEODE_STATICS_showTOS
 		#define GEODE_STATICS_showTOS
 		GEODE_AS_STATIC_FUNCTION(showTOS) 
-	#endif
-
-	#ifndef GEODE_STATICS_syncPlatformAchievements
-		#define GEODE_STATICS_syncPlatformAchievements
-		GEODE_AS_STATIC_FUNCTION(syncPlatformAchievements) 
-	#endif
-
-	#ifndef GEODE_STATICS_tryShowAd
-		#define GEODE_STATICS_tryShowAd
-		GEODE_AS_STATIC_FUNCTION(tryShowAd) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateUserProfileButton
@@ -421,48 +391,48 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MenuLayer, get, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31ea40, Default, MenuLayer, scene, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31ebd0, Thiscall, MenuLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3210c0, Thiscall, MenuLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3214a0, Thiscall, MenuLayer, keyDown, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320ac0, Thiscall, MenuLayer, googlePlaySignedIn, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321290, Thiscall, MenuLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321510, Thiscall, MenuLayer, endGame, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320430, Thiscall, MenuLayer, firstNetworkTest, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320960, Thiscall, MenuLayer, onAchievements, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320e70, Thiscall, MenuLayer, onCreator, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3201e0, Thiscall, MenuLayer, onDaily, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320860, Thiscall, MenuLayer, onDiscord, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x333900, Default, MenuLayer, scene, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x333a90, Thiscall, MenuLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x335f80, Thiscall, MenuLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x336360, Thiscall, MenuLayer, keyDown, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x335980, Thiscall, MenuLayer, googlePlaySignedIn, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x336150, Thiscall, MenuLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3363d0, Thiscall, MenuLayer, endGame, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3352f0, Thiscall, MenuLayer, firstNetworkTest, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x335820, Thiscall, MenuLayer, onAchievements, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x335d30, Thiscall, MenuLayer, onCreator, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3350a0, Thiscall, MenuLayer, onDaily, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x335720, Thiscall, MenuLayer, onDiscord, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MenuLayer, onEveryplay, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3207e0, Thiscall, MenuLayer, onFacebook, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3356a0, Thiscall, MenuLayer, onFacebook, cocos2d::CCObject*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MenuLayer, onFreeLevels, cocos2d::CCObject*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MenuLayer, onFullVersion, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MenuLayer, onGameCenter, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320f00, Thiscall, MenuLayer, onGarage, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MenuLayer, onGooglePlayGames, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320880, Thiscall, MenuLayer, onMoreGames, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320720, Thiscall, MenuLayer, onMyProfile, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320f90, Thiscall, MenuLayer, onNewgrounds, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320bb0, Thiscall, MenuLayer, onOptions, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320bc0, Thiscall, MenuLayer, onOptionsInstant, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320b10, Thiscall, MenuLayer, onPlay, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3210d0, Thiscall, MenuLayer, onQuit, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3207c0, Thiscall, MenuLayer, onRobTop, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320d50, Thiscall, MenuLayer, onStats, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MenuLayer, onTrailer, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320840, Thiscall, MenuLayer, onTwitch, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320800, Thiscall, MenuLayer, onTwitter, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320820, Thiscall, MenuLayer, onYouTube, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320bd0, Thiscall, MenuLayer, openOptions, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MenuLayer, showGCQuestion, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MenuLayer, onGameCenter, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x335dc0, Thiscall, MenuLayer, onGarage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MenuLayer, onGooglePlayGames, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x335740, Thiscall, MenuLayer, onMoreGames, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3355e0, Thiscall, MenuLayer, onMyProfile, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x335e50, Thiscall, MenuLayer, onNewgrounds, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x335a70, Thiscall, MenuLayer, onOptions, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x335a80, Thiscall, MenuLayer, onOptionsInstant, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3359d0, Thiscall, MenuLayer, onPlay, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x335f90, Thiscall, MenuLayer, onQuit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x335680, Thiscall, MenuLayer, onRobTop, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x335c10, Thiscall, MenuLayer, onStats, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MenuLayer, onTrailer, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x335700, Thiscall, MenuLayer, onTwitch, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3356c0, Thiscall, MenuLayer, onTwitter, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3356e0, Thiscall, MenuLayer, onYouTube, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x335a90, Thiscall, MenuLayer, openOptions, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MenuLayer, showGCQuestion, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MenuLayer, showMeltdownPromo, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320600, Thiscall, MenuLayer, showTOS, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MenuLayer, syncPlatformAchievements, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MenuLayer, tryShowAd, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320330, Thiscall, MenuLayer, updateUserProfileButton, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3354c0, Thiscall, MenuLayer, showTOS, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MenuLayer, syncPlatformAchievements, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MenuLayer, tryShowAd, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3351f0, Thiscall, MenuLayer, updateUserProfileButton, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MenuLayer, videoOptionsClosed, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MenuLayer, videoOptionsOpened, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3211f0, Thiscall, MenuLayer, willClose, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3360b0, Thiscall, MenuLayer, willClose, )
 		}
 	};
 }

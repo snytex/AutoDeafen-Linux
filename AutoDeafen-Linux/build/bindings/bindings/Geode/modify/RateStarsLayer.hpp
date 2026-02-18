@@ -30,11 +30,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onClosePopup) 
 	#endif
 
-	#ifndef GEODE_STATICS_getStarsButton
-		#define GEODE_STATICS_getStarsButton
-		GEODE_AS_STATIC_FUNCTION(getStarsButton) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -53,11 +48,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onRate
 		#define GEODE_STATICS_onRate
 		GEODE_AS_STATIC_FUNCTION(onRate) 
-	#endif
-
-	#ifndef GEODE_STATICS_onToggleCoins
-		#define GEODE_STATICS_onToggleCoins
-		GEODE_AS_STATIC_FUNCTION(onToggleCoins) 
 	#endif
 
 	#ifndef GEODE_STATICS_selectRating
@@ -135,18 +125,18 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b2c40, Default, RateStarsLayer, create, int, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b3b90, Thiscall, RateStarsLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b3990, Thiscall, RateStarsLayer, uploadActionFinished, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b3a10, Thiscall, RateStarsLayer, uploadActionFailed, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b3ad0, Thiscall, RateStarsLayer, onClosePopup, UploadActionPopup*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b3470, Thiscall, RateStarsLayer, getStarsButton, int, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b2d90, Thiscall, RateStarsLayer, init, int, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b3b50, Thiscall, RateStarsLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b3440, Thiscall, RateStarsLayer, onFeature, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b37a0, Thiscall, RateStarsLayer, onRate, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(RateStarsLayer, onToggleCoins, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b35b0, Thiscall, RateStarsLayer, selectRating, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ca000, Default, RateStarsLayer, create, int, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3caef0, Thiscall, RateStarsLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cacf0, Thiscall, RateStarsLayer, uploadActionFinished, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cad70, Thiscall, RateStarsLayer, uploadActionFailed, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cae30, Thiscall, RateStarsLayer, onClosePopup, UploadActionPopup*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RateStarsLayer, getStarsButton, int, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ca150, Thiscall, RateStarsLayer, init, int, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3caeb0, Thiscall, RateStarsLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ca8e0, Thiscall, RateStarsLayer, onFeature, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cab00, Thiscall, RateStarsLayer, onRate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RateStarsLayer, onToggleCoins, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ca910, Thiscall, RateStarsLayer, selectRating, cocos2d::CCObject*)
 		}
 	};
 }

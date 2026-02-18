@@ -1,4 +1,3 @@
-#define WIN32_LEAN_AND_MEAN
 #include <cstring>
 #include <fstream>
 #include <iostream>
@@ -72,7 +71,7 @@ void saveFile() {
 
   log::info("{}", "Saving .autodeafen file to " + path.string());
 
-  std::ofstream file(path);
+  std::ofstream file(path, std::ios::binary);
   if (file.is_open()) {
     file.write("ad1", sizeof("ad1")); // File Header - autodeafen file version 1
 
@@ -114,25 +113,23 @@ void loadFile() {
 
   std::ifstream file(path, std::ios::binary);
   if (file.is_open()) {
+    loadedAutoDeafenLevels.clear();
 
     char header[4];
     file.read(header, sizeof("ad1"));
 
     if (strncmp(header, "ad1", 4) == 0) {
       log::info("Loading autodeafen file version 1.");
-      // Skip old keybind data (4 uint32_t values)
-      for (int i = 0; i < 4; i++) {
-        uint32_t r;
-        file.read(reinterpret_cast<char *>(&r), sizeof(uint32_t));
-        if (r == 0xFFFFFFFF)
-          continue;
-      }
-      while (file.good()) {
+      while (true) {
         AutoDeafenLevel level;
-        file.read(reinterpret_cast<char *>(&level.enabled), sizeof(bool));
-        file.read(reinterpret_cast<char *>(&level.levelType), sizeof(short));
-        file.read(reinterpret_cast<char *>(&level.id), sizeof(int));
-        file.read(reinterpret_cast<char *>(&level.percentage), sizeof(short));
+        if (!file.read(reinterpret_cast<char *>(&level.enabled), sizeof(bool)))
+          break;
+        if (!file.read(reinterpret_cast<char *>(&level.levelType), sizeof(short)))
+          break;
+        if (!file.read(reinterpret_cast<char *>(&level.id), sizeof(int)))
+          break;
+        if (!file.read(reinterpret_cast<char *>(&level.percentage), sizeof(short)))
+          break;
         loadedAutoDeafenLevels.push_back(level);
       }
     }
@@ -217,19 +214,16 @@ void triggerDeafenKeybind() {
 
 class $modify(PlayerObject) {
   void playerDestroyed(bool p0) {
-    if (this != nullptr) {
-      if (auto playLayer = PlayLayer::get()) {
-        if (auto level = playLayer->m_level) {
-          if (playLayer->m_player1 != nullptr &&
-              this == (playLayer->m_player1) && !(level->isPlatformer())) {
-            if (!playLayer->m_isPracticeMode ||
-                (playLayer->m_isPracticeMode &&
-                 Mod::get()->getSettingValue<bool>(
-                     "Enabled in Practice Mode"))) {
-              if (hasDeafenedThisAttempt && !hasDied) {
-                hasDied = true;
-                triggerDeafenKeybind();
-              }
+    if (auto playLayer = PlayLayer::get()) {
+      if (auto level = playLayer->m_level) {
+        if (playLayer->m_player1 != nullptr &&
+            this == (playLayer->m_player1) && !(level->isPlatformer())) {
+          if (!playLayer->m_isPracticeMode ||
+              (playLayer->m_isPracticeMode &&
+               Mod::get()->getSettingValue<bool>("Enabled in Practice Mode"))) {
+            if (hasDeafenedThisAttempt && !hasDied) {
+              hasDied = true;
+              triggerDeafenKeybind();
             }
           }
         }
@@ -242,7 +236,24 @@ class $modify(PlayerObject) {
 class $modify(GManager) {
   void save() {
     GManager::save();
+    // Persist current level settings even if the game closes while in-level.
+    if (currentlyLoadedLevel.id != 0 || currentlyLoadedLevel.levelType != 0)
+      saveLevel(currentlyLoadedLevel);
     saveFile();
+  }
+};
+
+class $modify(LoadingLayer) {
+  bool init(bool p0) {
+    if (!LoadingLayer::init(p0)) {
+      return false;
+    }
+    static bool s_loaded = false;
+    if (!s_loaded) {
+      loadFile();
+      s_loaded = true;
+    }
+    return true;
   }
 };
 
@@ -316,12 +327,16 @@ class $modify(PlayLayer) {
 
 bool currentlyInMenu = false;
 
-class ConfigLayer : public geode::Popup<std::string const &> {
+class ConfigLayer : public geode::Popup {
 protected:
   CCMenuItemToggler *enabledButton = nullptr;
   TextInput *percentageInput = nullptr;
 
-  bool setup(std::string const &value) override {
+  bool init() override {
+    if (!Popup::init(300.f, 200.f, "GJ_square02.png")) {
+      return false;
+    }
+
     this->setKeyboardEnabled(true);
     currentlyInMenu = true;
 
@@ -386,12 +401,14 @@ protected:
     Popup::onClose(a);
     if (percentageInput != nullptr)
       currentlyLoadedLevel.percentage = stoi(percentageInput->getString());
+    saveLevel(currentlyLoadedLevel);
+    saveFile();
     currentlyInMenu = false;
   }
 
   static ConfigLayer *create() {
     auto ret = new ConfigLayer();
-    if (ret && ret->initAnchored(300, 200, "", "GJ_square02.png")) {
+    if (ret && ret->init()) {
       ret->autorelease();
       return ret;
     }

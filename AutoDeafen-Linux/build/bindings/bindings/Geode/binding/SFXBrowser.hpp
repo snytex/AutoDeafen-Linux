@@ -23,209 +23,232 @@ public:
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
+     * @note[short] iOS: 0x16b0e4
      * @note[short] Android: Out of line
      */
      SFXBrowser();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x3afdac
+     * @note[short] MacOS (Intel): 0x43e310
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x168724
+     * @note[short] Android: Rebinded
      */
      ~SFXBrowser();
 
     /**
-     * @note[short] MacOS (ARM): 0x3a5570
-     * @note[short] MacOS (Intel): 0x42a4d0
+     * @note[short] MacOS (ARM): 0x3afe88
+     * @note[short] MacOS (Intel): 0x43e490
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x16bec0
+     * @note[short] iOS: 0x168800
      * @note[short] Android
      */
     static SFXBrowser* create(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a7c5c
-     * @note[short] MacOS (Intel): 0x42cf30
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x16df88
+     * @note[short] MacOS (ARM): 0x3b251c
+     * @note[short] MacOS (Intel): 0x440e90
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x16a890
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x3a7bac
-     * @note[short] MacOS (Intel): 0x42ce90
-     * @note[short] Windows: 0x4687f0
-     * @note[short] iOS: 0x16df7c
+     * @note[short] MacOS (ARM): 0x3b246c
+     * @note[short] MacOS (Intel): 0x440df0
+     * @note[short] Windows: 0x480cd0
+     * @note[short] iOS: 0x16a884
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x3a72fc
-     * @note[short] MacOS (Intel): 0x42c4e0
-     * @note[short] Windows: 0x467360
-     * @note[short] iOS: 0x16d9b0
+     * @note[short] MacOS (ARM): 0x3b1bc8
+     * @note[short] MacOS (Intel): 0x440450
+     * @note[short] Windows: 0x47f840
+     * @note[short] iOS: 0x16a2b8
      * @note[short] Android
      */
-    virtual void musicActionFinished(GJMusicAction p0);
+    virtual void musicActionFinished(GJMusicAction action);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a73cc
-     * @note[short] MacOS (Intel): 0x42c5e0
-     * @note[short] Windows: 0x467400
-     * @note[short] iOS: 0x16d9d4
+     * @note[short] MacOS (ARM): 0x3b1c90
+     * @note[short] MacOS (Intel): 0x440550
+     * @note[short] Windows: 0x47f8e0
+     * @note[short] iOS: 0x16a2e0
      * @note[short] Android
      */
-    virtual void musicActionFailed(GJMusicAction p0);
+    virtual void musicActionFailed(GJMusicAction action);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a7740
-     * @note[short] MacOS (Intel): 0x42c9b0
-     * @note[short] Windows: 0x467f20
-     * @note[short] iOS: 0x16dcc4
+     * @note[short] MacOS (ARM): 0x3b2000
+     * @note[short] MacOS (Intel): 0x440920
+     * @note[short] Windows: 0x480400
+     * @note[short] iOS: 0x16a5d0
      * @note[short] Android
      */
-    virtual void sortSelectClosed(SelectSFXSortLayer* p0);
+    virtual void sortSelectClosed(SelectSFXSortLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a7970
-     * @note[short] MacOS (Intel): 0x42cc20
-     * @note[short] Windows: 0x468200
-     * @note[short] iOS: 0x16de50
+     * @note[short] MacOS (ARM): 0x3b2230
+     * @note[short] MacOS (Intel): 0x440b80
+     * @note[short] Windows: 0x4806e0
+     * @note[short] iOS: 0x16a75c
      * @note[short] Android: Rebinded
      */
-    virtual void setTextPopupClosed(SetTextPopup* p0, gd::string p1);
+    virtual void setTextPopupClosed(SetTextPopup* popup, gd::string text);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a7a2c
-     * @note[short] MacOS (Intel): 0x42cce0
-     * @note[short] Windows: 0x4682a0
-     * @note[short] iOS: 0x16deb4
+     * @note[short] MacOS (ARM): 0x3b22dc
+     * @note[short] MacOS (Intel): 0x440c40
+     * @note[short] Windows: 0x480780
+     * @note[short] iOS: 0x16a7b8
      * @note[short] Android
      */
-    virtual bool cellPerformedAction(TableViewCell* p0, int p1, CellAction p2, cocos2d::CCNode* p3);
+    virtual bool cellPerformedAction(TableViewCell* cell, int listType, CellAction action, cocos2d::CCNode* parent);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a7b8c
-     * @note[short] MacOS (Intel): 0x42ce50
-     * @note[short] Windows: 0x4683a0
-     * @note[short] iOS: 0x16df5c
+     * @note[short] MacOS (ARM): 0x3b244c
+     * @note[short] MacOS (Intel): 0x440db0
+     * @note[short] Windows: 0x480880
+     * @note[short] iOS: 0x16a864
      * @note[short] Android
      */
     virtual int getSelectedCellIdx();
 
     /**
-     * @note[short] MacOS (ARM): 0x3a7b9c
-     * @note[short] MacOS (Intel): 0x42ce70
-     * @note[short] Windows: 0x4683b0
-     * @note[short] iOS: 0x16df6c
+     * @note[short] MacOS (ARM): 0x3b245c
+     * @note[short] MacOS (Intel): 0x440dd0
+     * @note[short] Windows: 0x480890
+     * @note[short] iOS: 0x16a874
      * @note[short] Android
      */
     virtual bool shouldSnapToSelected();
 
     /**
-     * @note[short] MacOS (ARM): 0x3a56b4
-     * @note[short] MacOS (Intel): 0x42a690
-     * @note[short] Windows: 0x4661b0
-     * @note[short] iOS: 0x16bf34
+     * @note[short] MacOS (ARM): 0x3affcc
+     * @note[short] MacOS (Intel): 0x43e650
+     * @note[short] Windows: 0x47e690
+     * @note[short] iOS: 0x168874
      * @note[short] Android
      */
-    bool init(int p0);
+    bool init(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a68c8
-     * @note[short] MacOS (Intel): 0x42b9a0
+     * @note[short] MacOS (ARM): 0x3b11cc
+     * @note[short] MacOS (Intel): 0x43f940
+     * @note[short] Windows: 0x480500
+     * @note[short] iOS: 0x169a24
      * @note[short] Android
      */
     void onClearSearch(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x3b0d80
+     * @note[short] MacOS (Intel): 0x43f510
+     * @note[short] Windows: 0x480c90
+     * @note[short] iOS: 0x1695f4
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a6740
-     * @note[short] MacOS (Intel): 0x42b840
+     * @note[short] MacOS (ARM): 0x3b1044
+     * @note[short] MacOS (Intel): 0x43f7e0
+     * @note[short] Windows: 0x480200
+     * @note[short] iOS: 0x1698b4
      * @note[short] Android
      */
     void onCredits(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a64c4
-     * @note[short] MacOS (Intel): 0x42b5b0
-     * @note[short] Windows: 0x468660
+     * @note[short] MacOS (ARM): 0x3b0dd8
+     * @note[short] MacOS (Intel): 0x43f560
+     * @note[short] Windows: 0x480b40
+     * @note[short] iOS: 0x16964c
      * @note[short] Android
      */
     void onExitFolder(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a656c
-     * @note[short] MacOS (Intel): 0x42b670
-     * @note[short] Windows: 0x4683c0
+     * @note[short] MacOS (ARM): 0x3b0e80
+     * @note[short] MacOS (Intel): 0x43f620
+     * @note[short] Windows: 0x4808a0
+     * @note[short] iOS: 0x1696f4
      * @note[short] Android
      */
     void onPage(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x468090
+     * @note[short] MacOS (ARM): 0x3b1110
+     * @note[short] MacOS (Intel): 0x43f890
+     * @note[short] Windows: 0x480570
+     * @note[short] iOS: 0x169968
      * @note[short] Android
      */
     void onSearch(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a6694
-     * @note[short] MacOS (Intel): 0x42b780
-     * @note[short] Windows: 0x467de0
+     * @note[short] MacOS (ARM): 0x3b0fa4
+     * @note[short] MacOS (Intel): 0x43f730
+     * @note[short] Windows: 0x4802c0
+     * @note[short] iOS: 0x169818
      * @note[short] Android
      */
     void onSorting(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a66dc
-     * @note[short] MacOS (Intel): 0x42b7d0
-     * @note[short] Windows: 0x467f80
+     * @note[short] MacOS (ARM): 0x3b0fe8
+     * @note[short] MacOS (Intel): 0x43f780
+     * @note[short] Windows: 0x480460
+     * @note[short] iOS: 0x169858
      * @note[short] Android
      */
     void onToggleCompactMode(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a6630
-     * @note[short] MacOS (Intel): 0x42b710
+     * @note[short] MacOS (ARM): 0x3b0f44
+     * @note[short] MacOS (Intel): 0x43f6c0
+     * @note[short] Windows: 0x47f590
+     * @note[short] iOS: 0x1697b8
      * @note[short] Android
      */
     void onUpdateLibrary(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a6ab4
-     * @note[short] MacOS (Intel): 0x42bba0
-     * @note[short] Windows: 0x467540
+     * @note[short] MacOS (ARM): 0x3b13a4
+     * @note[short] MacOS (Intel): 0x43fb40
+     * @note[short] Windows: 0x47fa20
+     * @note[short] iOS: 0x169bb0
      * @note[short] Android
      */
-    void setupList(SFXSearchResult* p0);
+    void setupList(SFXSearchResult* result);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a6990
-     * @note[short] MacOS (Intel): 0x42ba70
+     * @note[short] MacOS (ARM): 0x3b1288
+     * @note[short] MacOS (Intel): 0x43fa10
+     * @note[short] Windows: 0x47f650
+     * @note[short] iOS: 0x169ad8
      * @note[short] Android
      */
     void setupSFXBrowser();
 
     /**
-     * @note[short] MacOS (ARM): 0x3a6928
-     * @note[short] MacOS (Intel): 0x42ba00
+     * @note[short] MacOS (ARM): 0x3b1224
+     * @note[short] MacOS (Intel): 0x43f9a0
+     * @note[short] Windows: 0x47f5f0
+     * @note[short] iOS: 0x169a7c
      * @note[short] Android
      */
     void trySetupSFXBrowser();
 
     /**
-     * @note[short] MacOS (ARM): 0x3a74e0
-     * @note[short] MacOS (Intel): 0x42c710
-     * @note[short] Windows: 0x468490
+     * @note[short] MacOS (ARM): 0x3b1da0
+     * @note[short] MacOS (Intel): 0x440680
+     * @note[short] Windows: 0x480970
+     * @note[short] iOS: 0x16a3cc
      * @note[short] Android
      */
     void updatePageLabel();

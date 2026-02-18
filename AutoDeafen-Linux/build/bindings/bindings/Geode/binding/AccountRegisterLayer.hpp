@@ -19,199 +19,274 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(AccountRegisterLayer, FLAlertLayer)
 
     /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x8463c
+     * @note[short] Android: Out of line
+     */
+     AccountRegisterLayer();
+
+    /**
+     * @note[short] MacOS (ARM): 0x3f9a48
+     * @note[short] MacOS (Intel): 0x494fb0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x80ea8
+     * @note[short] Android: Rebinded
+     */
+     ~AccountRegisterLayer();
+
+    /**
+     * @note[short] MacOS (ARM): 0x3f9d04
+     * @note[short] MacOS (Intel): 0x4953d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x80f80
      * @note[short] Android
      */
     static AccountRegisterLayer* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x3eff58
-     * @note[short] MacOS (Intel): 0x482340
-     * @note[short] Windows: 0x78a70
-     * @note[short] iOS: 0x84fd8
+     * @note[short] MacOS (ARM): 0x3f9e24
+     * @note[short] MacOS (Intel): 0x495550
+     * @note[short] Windows: 0x78aa0
+     * @note[short] iOS: 0x80ff4
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x3f2690
-     * @note[short] MacOS (Intel): 0x484e70
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x868d0
+     * @note[short] MacOS (ARM): 0x3fc564
+     * @note[short] MacOS (Intel): 0x497fc0
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x8288c
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x3f248c
-     * @note[short] MacOS (Intel): 0x484ca0
-     * @note[short] Windows: 0x7abf0
-     * @note[short] iOS: 0x8678c
+     * @note[short] MacOS (ARM): 0x3fc360
+     * @note[short] MacOS (Intel): 0x497df0
+     * @note[short] Windows: 0x7ac30
+     * @note[short] iOS: 0x82748
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x3f2048
-     * @note[short] MacOS (Intel): 0x4847f0
-     * @note[short] Windows: 0x7a200
-     * @note[short] iOS: 0x8665c
+     * @note[short] MacOS (ARM): 0x3fbf18
+     * @note[short] MacOS (Intel): 0x497920
+     * @note[short] Windows: 0x7a240
+     * @note[short] iOS: 0x82618
      * @note[short] Android
      */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x3f2e68
-     * @note[short] MacOS (Intel): 0x485780
+     * @note[short] MacOS (ARM): 0x3fcd24
+     * @note[short] MacOS (Intel): 0x498890
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x86e74
-     * @note[short] Android: Out of line
-     */
-    virtual void textInputOpened(CCTextInputNode* p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x3f26c8
-     * @note[short] MacOS (Intel): 0x484eb0
-     * @note[short] Windows: 0x7ad50
-     * @note[short] iOS: 0x86908
+     * @note[short] iOS: 0x82e3c
      * @note[short] Android
      */
-    virtual void textInputClosed(CCTextInputNode* p0);
+    virtual void textInputOpened(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x3f2e70
-     * @note[short] MacOS (Intel): 0x4857a0
+     * @note[short] MacOS (ARM): 0x3fc59c
+     * @note[short] MacOS (Intel): 0x498000
+     * @note[short] Windows: 0x7ad90
+     * @note[short] iOS: 0x828c4
+     * @note[short] Android
+     */
+    virtual void textInputClosed(CCTextInputNode* node);
+
+    /**
+     * @note[short] MacOS (ARM): 0x3fcd2c
+     * @note[short] MacOS (Intel): 0x4988b0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x86e7c
-     * @note[short] Android: Out of line
-     */
-    virtual void textChanged(CCTextInputNode* p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x3f2e78
-     * @note[short] MacOS (Intel): 0x4857c0
-     * @note[short] Windows: 0x7b5c0
-     * @note[short] iOS: 0x86e84
+     * @note[short] iOS: 0x82e44
      * @note[short] Android
      */
-    virtual void textInputShouldOffset(CCTextInputNode* p0, float p1);
+    virtual void textChanged(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x3f2f48
-     * @note[short] MacOS (Intel): 0x485880
-     * @note[short] Windows: 0x7b620
-     * @note[short] iOS: 0x86ef0
+     * @note[short] MacOS (ARM): 0x3fcd34
+     * @note[short] MacOS (Intel): 0x4988d0
+     * @note[short] Windows: 0x7b600
+     * @note[short] iOS: 0x82e4c
      * @note[short] Android
      */
-    virtual void textInputReturn(CCTextInputNode* p0);
+    virtual void textInputShouldOffset(CCTextInputNode* node, float yOffset);
 
     /**
-     * @note[short] MacOS (ARM): 0x3f3000
-     * @note[short] MacOS (Intel): 0x485930
-     * @note[short] Windows: 0x7b670
-     * @note[short] iOS: 0x86f50
+     * @note[short] MacOS (ARM): 0x3fce04
+     * @note[short] MacOS (Intel): 0x498990
+     * @note[short] Windows: 0x7b660
+     * @note[short] iOS: 0x82eb8
      * @note[short] Android
      */
-    virtual bool allowTextInput(CCTextInputNode* p0);
+    virtual void textInputReturn(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x3f1894
-     * @note[short] MacOS (Intel): 0x484040
-     * @note[short] Windows: 0x79c90
-     * @note[short] iOS: 0x86168
+     * @note[short] MacOS (ARM): 0x3fcebc
+     * @note[short] MacOS (Intel): 0x498a40
+     * @note[short] Windows: 0x7b6b0
+     * @note[short] iOS: 0x82f18
+     * @note[short] Android
+     */
+    virtual bool allowTextInput(CCTextInputNode* node);
+
+    /**
+     * @note[short] MacOS (ARM): 0x3fb77c
+     * @note[short] MacOS (Intel): 0x4971e0
+     * @note[short] Windows: 0x79cd0
+     * @note[short] iOS: 0x82184
      * @note[short] Android
      */
     virtual void registerAccountFinished();
 
     /**
-     * @note[short] MacOS (ARM): 0x3f1a3c
-     * @note[short] MacOS (Intel): 0x4841f0
-     * @note[short] Windows: 0x79eb0
-     * @note[short] iOS: 0x86298
+     * @note[short] MacOS (ARM): 0x3fb914
+     * @note[short] MacOS (Intel): 0x497390
+     * @note[short] Windows: 0x79ef0
+     * @note[short] iOS: 0x822a8
      * @note[short] Android
      */
-    virtual void registerAccountFailed(AccountError p0);
+    virtual void registerAccountFailed(AccountError errorType);
 
     /**
+     * @note[short] MacOS (ARM): 0x3fb4c4
+     * @note[short] MacOS (Intel): 0x496f40
+     * @note[short] Windows: 0x799d0
+     * @note[short] iOS: 0x81ed4
      * @note[short] Android
      */
-    cocos2d::extension::CCScale9Sprite* createTextBackground(cocos2d::CCPoint p0, cocos2d::CCSize p1);
+    cocos2d::extension::CCScale9Sprite* createTextBackground(cocos2d::CCPoint position, cocos2d::CCSize size);
 
     /**
+     * @note[short] MacOS (ARM): 0x3fb67c
+     * @note[short] MacOS (Intel): 0x4970f0
+     * @note[short] Windows: 0x79ba0
+     * @note[short] iOS: 0x82088
      * @note[short] Android: Rebinded
      */
-    CCTextInputNode* createTextInput(cocos2d::CCPoint p0, cocos2d::CCSize p1, gd::string p2, int p3);
+    CCTextInputNode* createTextInput(cocos2d::CCPoint position, cocos2d::CCSize size, gd::string text, int tag);
 
     /**
+     * @note[short] MacOS (ARM): 0x3fb588
+     * @note[short] MacOS (Intel): 0x497000
+     * @note[short] Windows: 0x79a90
+     * @note[short] iOS: 0x81f98
      * @note[short] Android: Rebinded
      */
-    cocos2d::CCLabelBMFont* createTextLabel(cocos2d::CCPoint p0, gd::string p1, cocos2d::CCSize p2);
+    cocos2d::CCLabelBMFont* createTextLabel(cocos2d::CCPoint position, gd::string text, cocos2d::CCSize size);
 
     /**
+     * @note[short] MacOS (ARM): 0x3fc0ac
+     * @note[short] MacOS (Intel): 0x497a80
+     * @note[short] Windows: 0x7ac70
+     * @note[short] iOS: 0x82690
      * @note[short] Android
      */
     void disableNodes();
 
     /**
+     * @note[short] MacOS (ARM): 0x3fbc28
+     * @note[short] MacOS (Intel): 0x497640
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void hideLoadingUI();
 
     /**
+     * @note[short] MacOS (ARM): 0x3facc8
+     * @note[short] MacOS (Intel): 0x496610
+     * @note[short] Windows: 0x7ac00
+     * @note[short] iOS: 0x81a70
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x3fad6c
+     * @note[short] MacOS (Intel): 0x4966a0
+     * @note[short] Windows: 0x7a290
+     * @note[short] iOS: 0x81ab4
      * @note[short] Android
      */
     void onSubmit(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3f1f50
-     * @note[short] MacOS (Intel): 0x484700
+     * @note[short] MacOS (ARM): 0x3fbe2c
+     * @note[short] MacOS (Intel): 0x497850
+     * @note[short] Windows: 0x7a130
+     * @note[short] iOS: 0x8252c
      * @note[short] Android
      */
-    void resetLabel(int p0);
+    void resetLabel(int tag);
 
     /**
-     * @note[short] MacOS (ARM): 0x3f1e20
-     * @note[short] MacOS (Intel): 0x4845e0
+     * @note[short] MacOS (ARM): 0x3fbcfc
+     * @note[short] MacOS (Intel): 0x497730
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x82450
      * @note[short] Android
      */
     void resetLabels();
 
     /**
+     * @note[short] MacOS (ARM): 0x3fc230
+     * @note[short] MacOS (Intel): 0x497ce0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x8270c
      * @note[short] Android
      */
     void showLoadingUI();
 
     /**
+     * @note[short] MacOS (ARM): 0x3fc4ac
+     * @note[short] MacOS (Intel): 0x497f20
+     * @note[short] Windows: 0x7ace0
+     * @note[short] iOS: 0x827d4
      * @note[short] Android
      */
-    void toggleUI(bool p0);
+    void toggleUI(bool enable);
 
     /**
-     * @note[short] MacOS (ARM): 0x3f1b0c
-     * @note[short] MacOS (Intel): 0x4842c0
-     * @note[short] iOS: 0x862d4
+     * @note[short] MacOS (ARM): 0x3fbaf8
+     * @note[short] MacOS (Intel): 0x497540
+     * @note[short] Windows: 0x79f30
+     * @note[short] iOS: 0x822e4
      * @note[short] Android
      */
-    void updateLabel(AccountError p0);
+    void updateLabel(AccountError type);
 
     /**
+     * @note[short] MacOS (ARM): 0x3fc170
+     * @note[short] MacOS (Intel): 0x497b50
+     * @note[short] Windows: 0x7b6c0
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-    bool validEmail(gd::string p0);
+    bool validEmail(gd::string email);
 
     /**
+     * @note[short] MacOS (ARM): 0x3fc14c
+     * @note[short] MacOS (Intel): 0x497b20
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-    bool validPassword(gd::string p0);
+    bool validPassword(gd::string password);
 
     /**
+     * @note[short] MacOS (ARM): 0x3fc128
+     * @note[short] MacOS (Intel): 0x497af0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-    bool validUser(gd::string p0);
+    bool validUser(gd::string username);
     CCTextInputNode* m_usernameField;
     CCTextInputNode* m_passwordField;
     CCTextInputNode* m_confirmPasswordField;

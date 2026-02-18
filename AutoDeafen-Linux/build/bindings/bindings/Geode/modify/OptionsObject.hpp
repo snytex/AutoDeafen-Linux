@@ -10,11 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -40,8 +35,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x297040, Default, OptionsObject, create, int, bool, gd::string, OptionsObjectDelegate*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(OptionsObject, init, int, bool, gd::string, OptionsObjectDelegate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29e6a0, Default, OptionsObject, create, int, bool, gd::string, OptionsObjectDelegate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(OptionsObject, init, int, bool, gd::string, OptionsObjectDelegate*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(OptionsObject, toggleState, )
 		}
 	};

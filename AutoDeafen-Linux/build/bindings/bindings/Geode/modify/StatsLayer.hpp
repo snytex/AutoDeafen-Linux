@@ -31,7 +31,7 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(StatsLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4af100, Thiscall, StatsLayer, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c7c50, Thiscall, StatsLayer, customSetup, )
 		}
 	};
 }

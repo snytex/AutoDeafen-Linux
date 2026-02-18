@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void sliderBegan(Slider* p0);
+    virtual void sliderBegan(Slider* slider);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,5 +29,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void sliderEnded(Slider* p0);
+    virtual void sliderEnded(Slider* slider);
 };

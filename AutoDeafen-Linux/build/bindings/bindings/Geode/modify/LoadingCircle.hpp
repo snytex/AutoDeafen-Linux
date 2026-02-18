@@ -86,6 +86,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(setFade) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_setParentLayer
+		#define GEODE_CONCEPT_CHECK_setParentLayer
+		GEODE_CONCEPT_FUNCTION_CHECK(setParentLayer) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_show
 		#define GEODE_CONCEPT_CHECK_show
 		GEODE_CONCEPT_FUNCTION_CHECK(show) 
@@ -100,17 +105,18 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6b840, Default, LoadingCircle, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6b940, Thiscall, LoadingCircle, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6bbc0, Thiscall, LoadingCircle, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6b870, Default, LoadingCircle, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6b970, Thiscall, LoadingCircle, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6bbf0, Thiscall, LoadingCircle, draw, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LoadingCircle, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LoadingCircle, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LoadingCircle, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LoadingCircle, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6bbe0, Thiscall, LoadingCircle, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6bb20, Thiscall, LoadingCircle, fadeAndRemove, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6bc10, Thiscall, LoadingCircle, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6bb50, Thiscall, LoadingCircle, fadeAndRemove, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LoadingCircle, setFade, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6ba20, Thiscall, LoadingCircle, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LoadingCircle, setParentLayer, cocos2d::CCLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6ba50, Thiscall, LoadingCircle, show, )
 		}
 	};
 }

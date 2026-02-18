@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void likedItem(LikeItemType p0, int p1, bool p2);
+    virtual void likedItem(LikeItemType type, int id, bool liked);
 };

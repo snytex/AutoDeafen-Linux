@@ -31,7 +31,7 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupCoinLayer, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x457000, Thiscall, SetupCoinLayer, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46f570, Thiscall, SetupCoinLayer, init, EffectGameObject*, cocos2d::CCArray*)
 		}
 	};
 }

@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_closePopup
 		#define GEODE_STATICS_closePopup
 		GEODE_AS_STATIC_FUNCTION(closePopup) 
@@ -60,11 +55,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJPathRewardPopup, create, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJPathRewardPopup, create, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJPathRewardPopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27dac0, Thiscall, GJPathRewardPopup, closePopup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2825f0, Thiscall, GJPathRewardPopup, init, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x282ad0, Thiscall, GJPathRewardPopup, onClaim, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2853f0, Thiscall, GJPathRewardPopup, closePopup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x289f20, Thiscall, GJPathRewardPopup, init, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28a400, Thiscall, GJPathRewardPopup, onClaim, cocos2d::CCObject*)
 		}
 	};
 }

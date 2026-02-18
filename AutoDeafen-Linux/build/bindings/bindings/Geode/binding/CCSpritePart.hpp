@@ -16,58 +16,103 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(CCSpritePart, CCSpritePlus)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: 0x45890
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static CCSpritePart* create(cocos2d::CCTexture2D* p0);
+     CCSpritePart();
 
     /**
-     * @note[short] MacOS (ARM): 0x2f51d8
-     * @note[short] MacOS (Intel): 0x362320
-     * @note[short] Windows: 0x46a30
-     * @note[short] iOS: 0x8375c
+     * @note[short] MacOS (ARM): 0x2fde84
+     * @note[short] MacOS (Intel): 0x3745c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x7ebc0
      * @note[short] Android
      */
-    virtual void setVisible(bool p0);
+    static CCSpritePart* create(cocos2d::CCTexture2D* texture);
 
     /**
+     * @note[short] MacOS (ARM): 0x2fdd24
+     * @note[short] MacOS (Intel): 0x374440
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x7ead4
      * @note[short] Android
      */
-    static CCSpritePart* createWithSpriteFrameName(char const* p0);
+    static CCSpritePart* createWithSpriteFrameName(char const* frame);
 
     /**
+     * @note[short] MacOS (ARM): 0x2ff220
+     * @note[short] MacOS (Intel): 0x375900
+     * @note[short] Windows: 0x46aa0
+     * @note[short] iOS: 0x7f788
+     * @note[short] Android
+     */
+    virtual void setVisible(bool visible);
+
+    /**
+     * @note[short] MacOS (ARM): 0x2fe0bc
+     * @note[short] MacOS (Intel): 0x3747f0
+     * @note[short] Windows: 0x469f0
+     * @note[short] iOS: 0x7edec
      * @note[short] Android: Rebinded
      */
-    TodoReturn frameChanged(gd::string p0);
+    void frameChanged(gd::string frame);
 
     /**
+     * @note[short] MacOS (ARM): 0x2ff218
+     * @note[short] MacOS (Intel): 0x3758f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn getBeingUsed();
+    bool getBeingUsed();
 
     /**
+     * @note[short] MacOS (ARM): 0x2fe84c
+     * @note[short] MacOS (Intel): 0x374f80
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn hideInactive();
+    void hideInactive();
 
     /**
+     * @note[short] MacOS (ARM): 0x2fe844
+     * @note[short] MacOS (Intel): 0x374f70
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn markAsNotBeingUsed();
+    void markAsNotBeingUsed();
 
     /**
+     * @note[short] MacOS (ARM): 0x2fe534
+     * @note[short] MacOS (Intel): 0x374c80
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn resetTextureRect();
+    void resetTextureRect();
 
     /**
+     * @note[short] MacOS (ARM): 0x2fe1cc
+     * @note[short] MacOS (Intel): 0x374910
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void setBeingUsed(bool p0);
+    void setBeingUsed(bool beingUsed);
 
     /**
+     * @note[short] MacOS (ARM): 0x2fe548
+     * @note[short] MacOS (Intel): 0x374ca0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-    TodoReturn updateDisplayFrame(gd::string p0);
+    void updateDisplayFrame(gd::string frame);
     bool m_isBeingUsed;
     gd::string m_spriteFrameName;
     SpritePartDelegate* m_delegate;

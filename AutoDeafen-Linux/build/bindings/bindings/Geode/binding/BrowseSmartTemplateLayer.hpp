@@ -19,106 +19,143 @@ public:
     /**
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
-     * @note[short] Windows: 0x43e390
+     * @note[short] Windows: 0x456730
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
      BrowseSmartTemplateLayer();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
-     * @note[short] Windows: 0x441980
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] MacOS (ARM): 0x443464
+     * @note[short] MacOS (Intel): 0x4e8b20
+     * @note[short] Windows: 0x459d20
+     * @note[short] iOS: 0x71394
+     * @note[short] Android: Rebinded
      */
      ~BrowseSmartTemplateLayer();
 
     /**
+     * @note[short] MacOS (ARM): 0x442ed4
+     * @note[short] MacOS (Intel): 0x4e8590
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x70f04
      * @note[short] Android
      */
-    static BrowseSmartTemplateLayer* create(GJSmartTemplate* p0, SmartBrowseFilter p1);
+    static BrowseSmartTemplateLayer* create(GJSmartTemplate* smartTemplate, SmartBrowseFilter browseFilter);
 
     /**
-     * @note[short] MacOS (ARM): 0x43b324
-     * @note[short] MacOS (Intel): 0x4d7a20
-     * @note[short] Windows: 0x443040
-     * @note[short] iOS: 0x76884
+     * @note[short] MacOS (ARM): 0x445004
+     * @note[short] MacOS (Intel): 0x4ea970
+     * @note[short] Windows: 0x45b3e0
+     * @note[short] iOS: 0x72988
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x43b348
-     * @note[short] MacOS (Intel): 0x4d7a60
-     * @note[short] Windows: 0x443060
-     * @note[short] iOS: 0x768a8
+     * @note[short] MacOS (ARM): 0x445028
+     * @note[short] MacOS (Intel): 0x4ea9b0
+     * @note[short] Windows: 0x45b400
+     * @note[short] iOS: 0x729ac
      * @note[short] Android
      */
     virtual void onBack(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x4424b0
+     * @note[short] MacOS (ARM): 0x444a0c
+     * @note[short] MacOS (Intel): 0x4ea380
+     * @note[short] Windows: 0x45a850
+     * @note[short] iOS: 0x72428
      * @note[short] Android
      */
-    void addObjectToPage(cocos2d::CCObject* p0, int p1);
+    void addObjectToPage(cocos2d::CCObject* object, int page);
 
     /**
-     * @note[short] Windows: 0x4420b0
+     * @note[short] MacOS (ARM): 0x44406c
+     * @note[short] MacOS (Intel): 0x4e99d0
+     * @note[short] Windows: 0x45a450
+     * @note[short] iOS: 0x71c94
      * @note[short] Android
      */
-    void addPrefabMenuItem(SmartPrefabResult p0, int p1);
+    void addPrefabMenuItem(SmartPrefabResult result, int index);
 
     /**
-     * @note[short] Windows: 0x442540
+     * @note[short] MacOS (ARM): 0x443d4c
+     * @note[short] MacOS (Intel): 0x4e9690
+     * @note[short] Windows: 0x45a8e0
+     * @note[short] iOS: 0x7196c
      * @note[short] Android
      */
     void baseSetup();
 
     /**
+     * @note[short] MacOS (ARM): 0x444afc
+     * @note[short] MacOS (Intel): 0x4ea450
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x72500
      * @note[short] Android
      */
     void createDots();
 
     /**
-     * @note[short] Windows: 0x442c60
+     * @note[short] MacOS (ARM): 0x444d50
+     * @note[short] MacOS (Intel): 0x4ea6b0
+     * @note[short] Windows: 0x45b000
+     * @note[short] iOS: 0x7274c
      * @note[short] Android: Rebinded
      */
-    void createPrefab(gd::string p0, int p1);
+    void createPrefab(gd::string key, int id);
 
     /**
-     * @note[short] Windows: 0x442af0
+     * @note[short] MacOS (ARM): 0x444510
+     * @note[short] MacOS (Intel): 0x4e9ef0
+     * @note[short] Windows: 0x45ae90
+     * @note[short] iOS: 0x720a4
      * @note[short] Android
      */
-    void goToPage(int p0);
+    void goToPage(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x439948
-     * @note[short] MacOS (Intel): 0x4d5f10
-     * @note[short] Windows: 0x441a40
+     * @note[short] MacOS (ARM): 0x443684
+     * @note[short] MacOS (Intel): 0x4e8e50
+     * @note[short] Windows: 0x459de0
+     * @note[short] iOS: 0x71450
      * @note[short] Android
      */
-    bool init(GJSmartTemplate* p0, SmartBrowseFilter p1);
+    bool init(GJSmartTemplate* smartTemplate, SmartBrowseFilter browseFilter);
 
     /**
-     * @note[short] Windows: 0x442ff0
+     * @note[short] MacOS (ARM): 0x444a88
+     * @note[short] MacOS (Intel): 0x4ea400
+     * @note[short] Windows: 0x45b390
+     * @note[short] iOS: 0x724a0
      * @note[short] Android
      */
     void onClick(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x444e10
+     * @note[short] MacOS (Intel): 0x4ea760
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x727f8
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x442d30
+     * @note[short] MacOS (ARM): 0x4446e4
+     * @note[short] MacOS (Intel): 0x4ea0e0
+     * @note[short] Windows: 0x45b0d0
+     * @note[short] iOS: 0x721e4
      * @note[short] Android
      */
     void onTemplateObject(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x444bdc
+     * @note[short] MacOS (Intel): 0x4ea520
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x725dc
      * @note[short] Android
      */
     void updateDots();

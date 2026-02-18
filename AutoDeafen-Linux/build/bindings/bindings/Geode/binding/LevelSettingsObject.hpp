@@ -15,54 +15,64 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(LevelSettingsObject, cocos2d::CCNode)
 
     /**
-     * @note[short] Windows: 0x2dd1f0
-     * @note[short] iOS: 0x357b18
+     * @note[short] MacOS (ARM): 0xc35d0
+     * @note[short] MacOS (Intel): 0xdd490
+     * @note[short] Windows: 0x2eab20
+     * @note[short] iOS: 0x3581dc
      * @note[short] Android
      */
     static LevelSettingsObject* create();
 
     /**
-     * @note[short] MacOS (ARM): 0xdb500
-     * @note[short] MacOS (Intel): 0xf7bf0
-     * @note[short] Windows: 0x2deff0
+     * @note[short] MacOS (ARM): 0xe17cc
+     * @note[short] MacOS (Intel): 0x102fe0
+     * @note[short] Windows: 0x2eca40
+     * @note[short] iOS: 0x36ad20
      * @note[short] Android
      */
-    static LevelSettingsObject* objectFromDict(cocos2d::CCDictionary* p0);
+    static LevelSettingsObject* objectFromDict(cocos2d::CCDictionary* dict);
 
     /**
+     * @note[short] MacOS (ARM): 0xc4fc0
+     * @note[short] MacOS (Intel): 0xdf2c0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x359674
      * @note[short] Android: Rebinded
      */
     static LevelSettingsObject* objectFromString(gd::string const& str);
 
     /**
-     * @note[short] MacOS (ARM): 0xdb388
-     * @note[short] MacOS (Intel): 0xf7a30
-     * @note[short] Windows: 0x2dd320
-     * @note[short] iOS: 0x366b34
+     * @note[short] MacOS (ARM): 0xe1654
+     * @note[short] MacOS (Intel): 0x102e30
+     * @note[short] Windows: 0x2eac60
+     * @note[short] iOS: 0x36abcc
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0xcacc0
-     * @note[short] MacOS (Intel): 0xe3e10
-     * @note[short] Windows: 0x2dd630
-     * @note[short] iOS: 0x35bf4c
+     * @note[short] MacOS (ARM): 0xc8fa8
+     * @note[short] MacOS (Intel): 0xe3820
+     * @note[short] Windows: 0x2eaf70
+     * @note[short] iOS: 0x35c604
      * @note[short] Android
      */
     gd::string getSaveString();
 
     /**
-     * @note[short] MacOS (ARM): 0xdcba8
-     * @note[short] MacOS (Intel): 0xf93f0
-     * @note[short] Windows: 0x2e0840
+     * @note[short] MacOS (ARM): 0xe2e84
+     * @note[short] MacOS (Intel): 0x1047e0
+     * @note[short] Windows: 0x2ee2f0
+     * @note[short] iOS: 0x36bd38
      * @note[short] Android
      */
-    void setupColorsFromLegacyMode(cocos2d::CCDictionary* p0);
+    void setupColorsFromLegacyMode(cocos2d::CCDictionary* dict);
 
     /**
+     * @note[short] MacOS (ARM): 0xe17ac
+     * @note[short] MacOS (Intel): 0x102fc0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x36ad04
      * @note[short] Android
      */
     bool shouldUseYSection();
@@ -91,13 +101,14 @@ public:
     int m_targetChannel;
     GJGameLevel* m_level;
     gd::string m_guidelineString;
-    bool m_unkBool;
+    bool m_guidelinesUpdated;
     int m_colorPage;
     int m_groundLineIndex;
     bool m_propertykA23;
     bool m_propertykA24;
     bool m_noTimePenalty;
     int m_propertykA44;
+    int m_nextFreeID;
     bool m_resetCamera;
     int m_spawnGroup;
     bool m_allowMultiRotation;
@@ -111,5 +122,5 @@ public:
     bool m_enable22Changes;
     bool m_allowStaticRotate;
     bool m_reverseSync;
-    bool m_propertykA45;
+    bool m_decreaseBoostSlide;
 };

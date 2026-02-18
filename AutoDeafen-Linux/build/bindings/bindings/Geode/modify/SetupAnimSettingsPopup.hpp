@@ -20,11 +20,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateAnimSettings
-		#define GEODE_STATICS_updateAnimSettings
-		GEODE_AS_STATIC_FUNCTION(updateAnimSettings) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -55,10 +50,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f2500, Default, SetupAnimSettingsPopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f2e90, Thiscall, SetupAnimSettingsPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f2610, Thiscall, SetupAnimSettingsPopup, init, EffectGameObject*, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupAnimSettingsPopup, updateAnimSettings, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40a180, Default, SetupAnimSettingsPopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40ab10, Thiscall, SetupAnimSettingsPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40a290, Thiscall, SetupAnimSettingsPopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupAnimSettingsPopup, updateAnimSettings, )
 		}
 	};
 }

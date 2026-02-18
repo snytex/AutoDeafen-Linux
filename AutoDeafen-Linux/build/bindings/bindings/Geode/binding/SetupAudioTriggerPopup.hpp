@@ -16,36 +16,46 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupAudioTriggerPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] MacOS (ARM): 0x40e62c
-     * @note[short] MacOS (Intel): 0x4a4700
-     * @note[short] Windows: 0x42e390
-     * @note[short] iOS: 0x182804
+     * @note[short] MacOS (ARM): 0x4187c0
+     * @note[short] MacOS (Intel): 0x4b7a60
+     * @note[short] Windows: 0x4466a0
+     * @note[short] iOS: 0x17f1a0
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x40d928
-     * @note[short] MacOS (Intel): 0x4a3830
-     * @note[short] Windows: 0x42d3b0
+     * @note[short] MacOS (ARM): 0x417ab0
+     * @note[short] MacOS (Intel): 0x4b6b90
+     * @note[short] Windows: 0x4456c0
+     * @note[short] iOS: 0x17e5d8
      * @note[short] Android
      */
-    void addProxVolControls(int p0);
+    void addProxVolControls(int page);
 
     /**
-     * @note[short] Windows: 0x42cff0
+     * @note[short] MacOS (ARM): 0x417740
+     * @note[short] MacOS (Intel): 0x4b67f0
+     * @note[short] Windows: 0x445300
+     * @note[short] iOS: 0x17e2d0
      * @note[short] Android
      */
-    void addTimeControls(int p0, float p1);
+    void addTimeControls(int page, float yOffset);
 
     /**
-     * @note[short] Windows: 0x42e240
+     * @note[short] MacOS (ARM): 0x418670
+     * @note[short] MacOS (Intel): 0x4b7920
+     * @note[short] Windows: 0x446550
+     * @note[short] iOS: 0x17f050
      * @note[short] Android
      */
     void onProxMode(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x42e310
+     * @note[short] MacOS (ARM): 0x41873c
+     * @note[short] MacOS (Intel): 0x4b79e0
+     * @note[short] Windows: 0x446620
+     * @note[short] iOS: 0x17f11c
      * @note[short] Android
      */
     void updateSpecialGroup();

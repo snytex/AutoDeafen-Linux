@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -50,19 +45,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onViewProfile) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateBGColor
-		#define GEODE_STATICS_updateBGColor
-		GEODE_AS_STATIC_FUNCTION(updateBGColor) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateCellMode
 		#define GEODE_STATICS_updateCellMode
 		GEODE_AS_STATIC_FUNCTION(updateCellMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateToggle
-		#define GEODE_STATICS_updateToggle
-		GEODE_AS_STATIC_FUNCTION(updateToggle) 
 	#endif
 
     
@@ -135,19 +120,19 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0xad870, Thiscall, LevelCell, char const*, float, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelCell, create, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xad920, Thiscall, LevelCell, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb12e0, Thiscall, LevelCell, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xadb20, Thiscall, LevelCell, loadCustomLevelCell, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xad940, Thiscall, LevelCell, loadFromLevel, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb05f0, Thiscall, LevelCell, loadLocalLevelCell, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb1080, Thiscall, LevelCell, onClick, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelCell, onToggle, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb12a0, Thiscall, LevelCell, onViewProfile, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelCell, updateBGColor, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb0df0, Thiscall, LevelCell, updateCellMode, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelCell, updateToggle, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0xadf80, Thiscall, LevelCell, char const*, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelCell, create, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xae030, Thiscall, LevelCell, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb1a60, Thiscall, LevelCell, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xae230, Thiscall, LevelCell, loadCustomLevelCell, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xae050, Thiscall, LevelCell, loadFromLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb0d70, Thiscall, LevelCell, loadLocalLevelCell, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb1800, Thiscall, LevelCell, onClick, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xae210, Thiscall, LevelCell, onToggle, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb1a20, Thiscall, LevelCell, onViewProfile, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelCell, updateBGColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb1570, Thiscall, LevelCell, updateCellMode, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelCell, updateToggle, )
 		}
 	};
 }

@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void scrollLayerScrollingStarted(BoomScrollLayer* p0);
+    virtual void scrollLayerScrollingStarted(BoomScrollLayer* layer);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,7 +29,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void scrollLayerScrolledToPage(BoomScrollLayer* p0, int p1);
+    virtual void scrollLayerScrolledToPage(BoomScrollLayer* layer, int page);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -38,7 +38,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void scrollLayerMoved(cocos2d::CCPoint p0);
+    virtual void scrollLayerMoved(cocos2d::CCPoint position);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -47,5 +47,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void scrollLayerWillScrollToPage(BoomScrollLayer* p0, int p1);
+    virtual void scrollLayerWillScrollToPage(BoomScrollLayer* layer, int page);
 };

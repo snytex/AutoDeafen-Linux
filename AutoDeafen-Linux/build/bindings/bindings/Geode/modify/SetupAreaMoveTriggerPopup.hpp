@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateInputValue
 		#define GEODE_STATICS_updateInputValue
 		GEODE_AS_STATIC_FUNCTION(updateInputValue) 
@@ -43,11 +38,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_addAreaDefaultControls
 		#define GEODE_STATICS_addAreaDefaultControls
 		GEODE_AS_STATIC_FUNCTION(addAreaDefaultControls) 
-	#endif
-
-	#ifndef GEODE_STATICS_getModeValues
-		#define GEODE_STATICS_getModeValues
-		GEODE_AS_STATIC_FUNCTION(getModeValues) 
 	#endif
 
 	#ifndef GEODE_STATICS_init
@@ -155,20 +145,22 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupAreaMoveTriggerPopup, create, EnterEffectObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f63f0, Thiscall, SetupAreaMoveTriggerPopup, updateInputValue, int, float&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f5d20, Thiscall, SetupAreaMoveTriggerPopup, updateDefaultTriggerValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f63c0, Thiscall, SetupAreaMoveTriggerPopup, updateInputNode, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f6240, Thiscall, SetupAreaMoveTriggerPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f6360, Thiscall, SetupAreaMoveTriggerPopup, triggerValueFromSliderValue, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f6390, Thiscall, SetupAreaMoveTriggerPopup, triggerSliderValueFromValue, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f46f0, Thiscall, SetupAreaMoveTriggerPopup, addAreaDefaultControls, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupAreaMoveTriggerPopup, getModeValues, int, int&, bool&, bool&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f3850, Thiscall, SetupAreaMoveTriggerPopup, init, EnterEffectObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f60e0, Thiscall, SetupAreaMoveTriggerPopup, onMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f5d70, Thiscall, SetupAreaMoveTriggerPopup, onNextFreeEffectID, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f5de0, Thiscall, SetupAreaMoveTriggerPopup, onSpecialTarget, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f5e80, Thiscall, SetupAreaMoveTriggerPopup, updateEnterTargetIDState, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x40aba0, Thiscall, SetupAreaMoveTriggerPopup, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x40b400, Thiscall, SetupAreaMoveTriggerPopup)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupAreaMoveTriggerPopup, create, EnterEffectObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40e0b0, Thiscall, SetupAreaMoveTriggerPopup, updateInputValue, int, float&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40d9a0, Thiscall, SetupAreaMoveTriggerPopup, updateDefaultTriggerValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40e080, Thiscall, SetupAreaMoveTriggerPopup, updateInputNode, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40df00, Thiscall, SetupAreaMoveTriggerPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40e020, Thiscall, SetupAreaMoveTriggerPopup, triggerValueFromSliderValue, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40e050, Thiscall, SetupAreaMoveTriggerPopup, triggerSliderValueFromValue, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40c370, Thiscall, SetupAreaMoveTriggerPopup, addAreaDefaultControls, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupAreaMoveTriggerPopup, getModeValues, int, int&, bool&, bool&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40b4d0, Thiscall, SetupAreaMoveTriggerPopup, init, EnterEffectObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40dda0, Thiscall, SetupAreaMoveTriggerPopup, onMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40d9f0, Thiscall, SetupAreaMoveTriggerPopup, onNextFreeEffectID, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40daa0, Thiscall, SetupAreaMoveTriggerPopup, onSpecialTarget, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40db40, Thiscall, SetupAreaMoveTriggerPopup, updateEnterTargetIDState, )
 		}
 	};
 }

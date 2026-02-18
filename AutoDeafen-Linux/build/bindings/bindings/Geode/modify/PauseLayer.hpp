@@ -25,11 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(FLAlert_Clicked) 
 	#endif
 
-	#ifndef GEODE_STATICS_createToggleButton
-		#define GEODE_STATICS_createToggleButton
-		GEODE_AS_STATIC_FUNCTION(createToggleButton) 
-	#endif
-
 	#ifndef GEODE_STATICS_goEdit
 		#define GEODE_STATICS_goEdit
 		GEODE_AS_STATIC_FUNCTION(goEdit) 
@@ -271,31 +266,31 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PauseLayer, create, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x369070, Thiscall, PauseLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x368fa0, Thiscall, PauseLayer, keyDown, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x366b00, Thiscall, PauseLayer, customSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x368de0, Thiscall, PauseLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PauseLayer, keyUp, cocos2d::enumKeyCodes)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PauseLayer, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x368b80, Thiscall, PauseLayer, goEdit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37ede0, Thiscall, PauseLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37ed10, Thiscall, PauseLayer, keyDown, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37c870, Thiscall, PauseLayer, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37eb50, Thiscall, PauseLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PauseLayer, keyUp, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PauseLayer, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37e8f0, Thiscall, PauseLayer, goEdit, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PauseLayer, init, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3683c0, Thiscall, PauseLayer, musicSliderChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x368990, Thiscall, PauseLayer, onEdit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37e130, Thiscall, PauseLayer, musicSliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37e700, Thiscall, PauseLayer, onEdit, cocos2d::CCObject*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PauseLayer, onHelp, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x368530, Thiscall, PauseLayer, onNormalMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x368450, Thiscall, PauseLayer, onPracticeMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x368e50, Thiscall, PauseLayer, onQuit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37e2a0, Thiscall, PauseLayer, onNormalMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37e1c0, Thiscall, PauseLayer, onPracticeMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37ebc0, Thiscall, PauseLayer, onQuit, cocos2d::CCObject*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PauseLayer, onRecordReplays, cocos2d::CCObject*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PauseLayer, onReplay, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3686a0, Thiscall, PauseLayer, onRestart, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x368740, Thiscall, PauseLayer, onRestartFull, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x368610, Thiscall, PauseLayer, onResume, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3677d0, Thiscall, PauseLayer, onSettings, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37e410, Thiscall, PauseLayer, onRestart, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37e4b0, Thiscall, PauseLayer, onRestartFull, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37e380, Thiscall, PauseLayer, onResume, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37d540, Thiscall, PauseLayer, onSettings, cocos2d::CCObject*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PauseLayer, onTime, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3687e0, Thiscall, PauseLayer, onTryEdit, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PauseLayer, setupProgressBars, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35cd70, Thiscall, PauseLayer, sfxSliderChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x368c50, Thiscall, PauseLayer, tryQuit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37e550, Thiscall, PauseLayer, onTryEdit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37d6f0, Thiscall, PauseLayer, setupProgressBars, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x372a90, Thiscall, PauseLayer, sfxSliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37e9c0, Thiscall, PauseLayer, tryQuit, cocos2d::CCObject*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PauseLayer, tryShowBanner, float)
 		}
 	};

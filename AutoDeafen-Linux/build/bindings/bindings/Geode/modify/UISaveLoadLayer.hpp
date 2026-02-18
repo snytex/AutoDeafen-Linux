@@ -51,9 +51,9 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UISaveLoadLayer, create, UIOptionsLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29c940, Thiscall, UISaveLoadLayer, init, UIOptionsLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29d120, Thiscall, UISaveLoadLayer, onLoad, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29ce90, Thiscall, UISaveLoadLayer, onSave, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a4000, Thiscall, UISaveLoadLayer, init, UIOptionsLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a47e0, Thiscall, UISaveLoadLayer, onLoad, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a4550, Thiscall, UISaveLoadLayer, onSave, cocos2d::CCObject*)
 		}
 	};
 }

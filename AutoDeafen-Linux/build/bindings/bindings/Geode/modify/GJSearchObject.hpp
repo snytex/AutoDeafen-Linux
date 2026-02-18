@@ -15,39 +15,19 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createFromKey) 
 	#endif
 
-	#ifndef GEODE_STATICS_getKey
-		#define GEODE_STATICS_getKey
-		GEODE_AS_STATIC_FUNCTION(getKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getNextPageKey
-		#define GEODE_STATICS_getNextPageKey
-		GEODE_AS_STATIC_FUNCTION(getNextPageKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getNextPageObject
-		#define GEODE_STATICS_getNextPageObject
-		GEODE_AS_STATIC_FUNCTION(getNextPageObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_getPageObject
-		#define GEODE_STATICS_getPageObject
-		GEODE_AS_STATIC_FUNCTION(getPageObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_getPrevPageObject
-		#define GEODE_STATICS_getPrevPageObject
-		GEODE_AS_STATIC_FUNCTION(getPrevPageObject) 
-	#endif
-
 	#ifndef GEODE_STATICS_getSearchKey
 		#define GEODE_STATICS_getSearchKey
 		GEODE_AS_STATIC_FUNCTION(getSearchKey) 
 	#endif
 
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
+	#ifndef GEODE_STATICS_getKey
+		#define GEODE_STATICS_getKey
+		GEODE_AS_STATIC_FUNCTION(getKey) 
+	#endif
+
+	#ifndef GEODE_STATICS_getPageObject
+		#define GEODE_STATICS_getPageObject
+		GEODE_AS_STATIC_FUNCTION(getPageObject) 
 	#endif
 
 	#ifndef GEODE_STATICS_isLevelSearchObject
@@ -64,6 +44,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_createFromKey
 		#define GEODE_CONCEPT_CHECK_createFromKey
 		GEODE_CONCEPT_FUNCTION_CHECK(createFromKey) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getSearchKey
+		#define GEODE_CONCEPT_CHECK_getSearchKey
+		GEODE_CONCEPT_FUNCTION_CHECK(getSearchKey) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_getKey
@@ -91,11 +76,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(getPrevPageObject) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_getSearchKey
-		#define GEODE_CONCEPT_CHECK_getSearchKey
-		GEODE_CONCEPT_FUNCTION_CHECK(getSearchKey) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_init
 		#define GEODE_CONCEPT_CHECK_init
 		GEODE_CONCEPT_FUNCTION_CHECK(init) 
@@ -115,18 +95,18 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x171900, Default, GJSearchObject, create, SearchType, gd::string, gd::string, gd::string, int, bool, bool, bool, int, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, int, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1717d0, Default, GJSearchObject, create, SearchType, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1716f0, Default, GJSearchObject, create, SearchType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x170ff0, Default, GJSearchObject, createFromKey, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x171c40, Thiscall, GJSearchObject, getKey, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJSearchObject, getNextPageKey, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJSearchObject, getNextPageObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x171d90, Thiscall, GJSearchObject, getPageObject, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJSearchObject, getPrevPageObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x171f00, Default, GJSearchObject, getSearchKey, SearchType, gd::string, gd::string, gd::string, int, bool, bool, bool, int, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, int, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJSearchObject, init, SearchType, gd::string, gd::string, gd::string, int, bool, bool, bool, int, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, int, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1721e0, Thiscall, GJSearchObject, isLevelSearchObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x174700, Default, GJSearchObject, create, SearchType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1747e0, Default, GJSearchObject, create, SearchType, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x174910, Default, GJSearchObject, create, SearchType, gd::string, gd::string, gd::string, int, bool, bool, bool, int, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x174000, Default, GJSearchObject, createFromKey, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x174f10, Default, GJSearchObject, getSearchKey, SearchType, gd::string, gd::string, gd::string, int, bool, bool, bool, int, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x174c50, Thiscall, GJSearchObject, getKey, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSearchObject, getNextPageKey, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSearchObject, getNextPageObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x174da0, Thiscall, GJSearchObject, getPageObject, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSearchObject, getPrevPageObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSearchObject, init, SearchType, gd::string, gd::string, gd::string, int, bool, bool, bool, int, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1751f0, Thiscall, GJSearchObject, isLevelSearchObject, )
 		}
 	};
 }

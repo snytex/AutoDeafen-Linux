@@ -45,19 +45,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onEasingRate) 
 	#endif
 
-	#ifndef GEODE_STATICS_posFromSliderValue
-		#define GEODE_STATICS_posFromSliderValue
-		GEODE_AS_STATIC_FUNCTION(posFromSliderValue) 
-	#endif
-
 	#ifndef GEODE_STATICS_sliderChanged
 		#define GEODE_STATICS_sliderChanged
 		GEODE_AS_STATIC_FUNCTION(sliderChanged) 
-	#endif
-
-	#ifndef GEODE_STATICS_sliderValueFromPos
-		#define GEODE_STATICS_sliderValueFromPos
-		GEODE_AS_STATIC_FUNCTION(sliderValueFromPos) 
 	#endif
 
 	#ifndef GEODE_STATICS_sliderYChanged
@@ -88,16 +78,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateEasingRateLabel
 		#define GEODE_STATICS_updateEasingRateLabel
 		GEODE_AS_STATIC_FUNCTION(updateEasingRateLabel) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateMoveCommandEasing
-		#define GEODE_STATICS_updateMoveCommandEasing
-		GEODE_AS_STATIC_FUNCTION(updateMoveCommandEasing) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateMoveCommandEasingRate
-		#define GEODE_STATICS_updateMoveCommandEasingRate
-		GEODE_AS_STATIC_FUNCTION(updateMoveCommandEasingRate) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateMoveCommandPosY
@@ -225,27 +205,27 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40f3e0, Default, SetupMGTrigger, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4104d0, Thiscall, SetupMGTrigger, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x410bc0, Thiscall, SetupMGTrigger, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x410830, Thiscall, SetupMGTrigger, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fedf0, Thiscall, SetupMGTrigger, valuePopupClosed, ConfigureValuePopup*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40f500, Thiscall, SetupMGTrigger, init, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ff1b0, Thiscall, SetupMGTrigger, onEasing, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fed30, Thiscall, SetupMGTrigger, onEasingRate, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupMGTrigger, posFromSliderValue, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26a440, Thiscall, SetupMGTrigger, sliderChanged, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupMGTrigger, sliderValueFromPos, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x410730, Thiscall, SetupMGTrigger, sliderYChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ff0a0, Thiscall, SetupMGTrigger, toggleEasingRateVisibility, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26b120, Thiscall, SetupMGTrigger, updateDuration, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26a500, Thiscall, SetupMGTrigger, updateDurLabel, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ff270, Thiscall, SetupMGTrigger, updateEasingLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3feec0, Thiscall, SetupMGTrigger, updateEasingRateLabel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupMGTrigger, updateMoveCommandEasing, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupMGTrigger, updateMoveCommandEasingRate, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x410ad0, Thiscall, SetupMGTrigger, updateMoveCommandPosY, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x410780, Thiscall, SetupMGTrigger, updateValueYLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x427160, Default, SetupMGTrigger, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x428250, Thiscall, SetupMGTrigger, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x428940, Thiscall, SetupMGTrigger, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4285b0, Thiscall, SetupMGTrigger, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x416ac0, Thiscall, SetupMGTrigger, valuePopupClosed, ConfigureValuePopup*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x427280, Thiscall, SetupMGTrigger, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x416e80, Thiscall, SetupMGTrigger, onEasing, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4169f0, Thiscall, SetupMGTrigger, onEasingRate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupMGTrigger, posFromSliderValue, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x271d20, Thiscall, SetupMGTrigger, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupMGTrigger, sliderValueFromPos, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4284b0, Thiscall, SetupMGTrigger, sliderYChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x416d70, Thiscall, SetupMGTrigger, toggleEasingRateVisibility, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x272a00, Thiscall, SetupMGTrigger, updateDuration, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x271de0, Thiscall, SetupMGTrigger, updateDurLabel, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x416f40, Thiscall, SetupMGTrigger, updateEasingLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x416b90, Thiscall, SetupMGTrigger, updateEasingRateLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupMGTrigger, updateMoveCommandEasing, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupMGTrigger, updateMoveCommandEasingRate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x428850, Thiscall, SetupMGTrigger, updateMoveCommandPosY, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x428500, Thiscall, SetupMGTrigger, updateValueYLabel, )
 		}
 	};
 }

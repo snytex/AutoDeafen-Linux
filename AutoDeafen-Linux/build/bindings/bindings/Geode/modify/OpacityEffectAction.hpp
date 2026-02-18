@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_step
-		#define GEODE_STATICS_step
-		GEODE_AS_STATIC_FUNCTION(step) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_step
 		#define GEODE_CONCEPT_CHECK_step
@@ -25,7 +20,7 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(OpacityEffectAction, step, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(OpacityEffectAction, step, float)
 		}
 	};
 }

@@ -15,94 +15,109 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJSearchObject, cocos2d::CCNode)
 
     /**
-     * @note[short] MacOS (ARM): 0x4a2868
-     * @note[short] MacOS (Intel): 0x54a1a0
-     * @note[short] Windows: 0x171900
-     * @note[short] Android: Rebinded
-     */
-    static GJSearchObject* create(SearchType searchType, gd::string searchQuery, gd::string difficulty, gd::string length, int page, bool star, bool uncompleted, bool featured, int songID, bool original, bool twoPlayer, bool customSong, bool songFilter, bool noStar, bool coins, bool epic, bool legendary, bool mythic, bool onlyCompleted, int demonFilter, int folder, int searchMode);
-
-    /**
-     * @note[short] MacOS (ARM): 0x4a2b7c
-     * @note[short] MacOS (Intel): 0x54a530
-     * @note[short] Windows: 0x1717d0
-     * @note[short] iOS: 0xb39a4
-     * @note[short] Android: Rebinded
-     */
-    static GJSearchObject* create(SearchType searchType, gd::string searchQuery);
-
-    /**
-     * @note[short] MacOS (ARM): 0x4a2b10
-     * @note[short] MacOS (Intel): 0x54a4c0
-     * @note[short] Windows: 0x1716f0
-     * @note[short] iOS: 0xb3894
+     * @note[short] MacOS (ARM): 0x4b00a4
+     * @note[short] MacOS (Intel): 0x560d30
+     * @note[short] Windows: 0x174700
+     * @note[short] iOS: 0xb04a0
      * @note[short] Android
      */
     static GJSearchObject* create(SearchType searchType);
 
     /**
-     * @note[short] MacOS (ARM): 0x47eddc
-     * @note[short] MacOS (Intel): 0x522e20
-     * @note[short] Windows: 0x170ff0
-     * @note[short] iOS: 0x9d57c
+     * @note[short] MacOS (ARM): 0x4b0110
+     * @note[short] MacOS (Intel): 0x560da0
+     * @note[short] Windows: 0x1747e0
+     * @note[short] iOS: 0xb05b0
+     * @note[short] Android: Rebinded
+     */
+    static GJSearchObject* create(SearchType searchType, gd::string searchQuery);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4afdfc
+     * @note[short] MacOS (Intel): 0x560a00
+     * @note[short] Windows: 0x174910
+     * @note[short] iOS: 0xb0254
+     * @note[short] Android: Rebinded
+     */
+    static GJSearchObject* create(SearchType searchType, gd::string searchQuery, gd::string difficulty, gd::string length, int page, bool star, bool uncompleted, bool featured, int songID, bool original, bool twoPlayer, bool customSong, bool songFilter, bool noStar, bool coins, bool epic, bool legendary, bool mythic, bool onlyCompleted, int demonFilter, int folder, int searchMode);
+
+    /**
+     * @note[short] MacOS (ARM): 0x48bd08
+     * @note[short] MacOS (Intel): 0x538f00
+     * @note[short] Windows: 0x174000
+     * @note[short] iOS: 0x999c8
      * @note[short] Android
      */
     static GJSearchObject* createFromKey(char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x4857e8
-     * @note[short] MacOS (Intel): 0x52a470
-     * @note[short] Windows: 0x171c40
-     * @note[short] iOS: 0xa1778
-     * @note[short] Android
-     */
-    char const* getKey();
-
-    /**
-     * @note[short] Android
-     */
-    char const* getNextPageKey();
-
-    /**
-     * @note[short] MacOS (ARM): 0x4a3120
-     * @note[short] MacOS (Intel): 0x54ac80
-     * @note[short] Android
-     */
-    GJSearchObject* getNextPageObject();
-
-    /**
-     * @note[short] MacOS (ARM): 0x4a312c
-     * @note[short] MacOS (Intel): 0x54aca0
-     * @note[short] Windows: 0x171d90
-     * @note[short] Android
-     */
-    GJSearchObject* getPageObject(int page);
-
-    /**
-     * @note[short] MacOS (ARM): 0x4a331c
-     * @note[short] MacOS (Intel): 0x54af60
-     * @note[short] Android
-     */
-    GJSearchObject* getPrevPageObject();
-
-    /**
-     * @note[short] MacOS (ARM): 0x4a2da8
-     * @note[short] MacOS (Intel): 0x54a780
-     * @note[short] Windows: 0x171f00
+     * @note[short] MacOS (ARM): 0x4b0338
+     * @note[short] MacOS (Intel): 0x560fe0
+     * @note[short] Windows: 0x174f10
+     * @note[short] iOS: 0xb081c
      * @note[short] Android: Rebinded
      */
     static char const* getSearchKey(SearchType searchType, gd::string searchQuery, gd::string difficulty, gd::string length, int page, bool star, bool uncompleted, bool featured, int songID, bool original, bool twoPlayer, bool customSong, bool songFilter, bool noStar, bool coins, bool epic, bool legendary, bool mythic, bool onlyCompleted, int demonFilter, int folder, int searchMode);
 
     /**
+     * @note[short] MacOS (ARM): 0x49286c
+     * @note[short] MacOS (Intel): 0x5407b0
+     * @note[short] Windows: 0x174c50
+     * @note[short] iOS: 0x9dcac
+     * @note[short] Android
+     */
+    char const* getKey();
+
+    /**
+     * @note[short] MacOS (ARM): 0x4b0430
+     * @note[short] MacOS (Intel): 0x561190
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xb0908
+     * @note[short] Android
+     */
+    char const* getNextPageKey();
+
+    /**
+     * @note[short] MacOS (ARM): 0x4b06a0
+     * @note[short] MacOS (Intel): 0x5614f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xb0aac
+     * @note[short] Android
+     */
+    GJSearchObject* getNextPageObject();
+
+    /**
+     * @note[short] MacOS (ARM): 0x4b06ac
+     * @note[short] MacOS (Intel): 0x561510
+     * @note[short] Windows: 0x174da0
+     * @note[short] iOS: 0xb0ab8
+     * @note[short] Android
+     */
+    GJSearchObject* getPageObject(int page);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4b08a0
+     * @note[short] MacOS (Intel): 0x5617d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xb0c6c
+     * @note[short] Android
+     */
+    GJSearchObject* getPrevPageObject();
+
+    /**
+     * @note[short] MacOS (ARM): 0x4b01f8
+     * @note[short] MacOS (Intel): 0x560ec0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xb06dc
      * @note[short] Android: Rebinded
      */
     bool init(SearchType searchType, gd::string searchQuery, gd::string difficulty, gd::string length, int page, bool star, bool uncompleted, bool featured, int songID, bool original, bool twoPlayer, bool customSong, bool songFilter, bool noStar, bool coins, bool epic, bool legendary, bool mythic, bool onlyCompleted, int demonFilter, int folder, int searchMode);
 
     /**
-     * @note[short] MacOS (ARM): 0x4a3330
-     * @note[short] MacOS (Intel): 0x54af80
-     * @note[short] Windows: 0x1721e0
-     * @note[short] iOS: 0xb4078
+     * @note[short] MacOS (ARM): 0x4b08b4
+     * @note[short] MacOS (Intel): 0x5617f0
+     * @note[short] Windows: 0x1751f0
+     * @note[short] iOS: 0xb0c80
      * @note[short] Android
      */
     bool isLevelSearchObject();

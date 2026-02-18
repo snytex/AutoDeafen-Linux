@@ -24,22 +24,13 @@ public:
      CCTextInputNode();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x8e6b8
+     * @note[short] MacOS (Intel): 0x9ddc0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x16c6d4
+     * @note[short] Android: Rebinded
      */
      ~CCTextInputNode();
-
-    /**
-     * @note[short] MacOS (ARM): 0x90610
-     * @note[short] MacOS (Intel): 0x9dbd0
-     * @note[short] Windows: 0x4f0f0
-     * @note[short] iOS: 0x16fe38
-     * @note[short] Android
-     */
-    static CCTextInputNode* create(float p0, float p1, char const* p2, char const* p3, int p4, char const* p5);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -60,135 +51,157 @@ public:
     static CCTextInputNode* create(float width, float height, char const* placeholder, int fontSize, char const* fontPath);
 
     /**
-     * @note[short] MacOS (ARM): 0x90fec
-     * @note[short] MacOS (Intel): 0x9e670
-     * @note[short] Windows: 0x4f730
-     * @note[short] iOS: 0x1704bc
+     * @note[short] MacOS (ARM): 0x8e7d0
+     * @note[short] MacOS (Intel): 0x9df70
+     * @note[short] Windows: 0x4f160
+     * @note[short] iOS: 0x16c7cc
+     * @note[short] Android
+     */
+    static CCTextInputNode* create(float width, float height, char const* placeholder, char const* textFont, int fontSize, char const* labelFont);
+
+    /**
+     * @note[short] MacOS (ARM): 0x8f198
+     * @note[short] MacOS (Intel): 0x9e9f0
+     * @note[short] Windows: 0x4f7a0
+     * @note[short] iOS: 0x16ce4c
      * @note[short] Android
      */
     virtual void visit();
 
     /**
-     * @note[short] MacOS (ARM): 0x92fac
-     * @note[short] MacOS (Intel): 0xa0a80
-     * @note[short] Windows: 0x512c0
-     * @note[short] iOS: 0x171dbc
+     * @note[short] MacOS (ARM): 0x91170
+     * @note[short] MacOS (Intel): 0xa0dd0
+     * @note[short] Windows: 0x51330
+     * @note[short] iOS: 0x16e770
      * @note[short] Android
      */
-    virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual bool ccTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x931a8
-     * @note[short] MacOS (Intel): 0xa0ca0
+     * @note[short] MacOS (ARM): 0x91350
+     * @note[short] MacOS (Intel): 0xa0ff0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x171f64
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x16e918
+     * @note[short] Android
      */
-    virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchMoved(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x93198
-     * @note[short] MacOS (Intel): 0xa0c60
+     * @note[short] MacOS (ARM): 0x91340
+     * @note[short] MacOS (Intel): 0xa0fb0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x171f54
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x16e908
+     * @note[short] Android
      */
-    virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchEnded(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x931a0
-     * @note[short] MacOS (Intel): 0xa0c80
+     * @note[short] MacOS (ARM): 0x91348
+     * @note[short] MacOS (Intel): 0xa0fd0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x171f5c
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x16e910
+     * @note[short] Android
      */
-    virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchCancelled(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x931b0
-     * @note[short] MacOS (Intel): 0xa0cc0
-     * @note[short] Windows: 0x514d0
-     * @note[short] iOS: 0x171f6c
+     * @note[short] MacOS (ARM): 0x91358
+     * @note[short] MacOS (Intel): 0xa1010
+     * @note[short] Windows: 0x51540
+     * @note[short] iOS: 0x16e920
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x91a6c
-     * @note[short] MacOS (Intel): 0x9f220
-     * @note[short] Windows: 0x50410
-     * @note[short] iOS: 0x170d68
+     * @note[short] MacOS (ARM): 0x8fc28
+     * @note[short] MacOS (Intel): 0x9f570
+     * @note[short] Windows: 0x50480
+     * @note[short] iOS: 0x16d708
      * @note[short] Android
      */
     virtual void textChanged();
 
     /**
-     * @note[short] MacOS (ARM): 0x91a4c
-     * @note[short] MacOS (Intel): 0x9f200
-     * @note[short] Windows: 0x503f0
-     * @note[short] iOS: 0x170d48
+     * @note[short] MacOS (ARM): 0x8fc08
+     * @note[short] MacOS (Intel): 0x9f550
+     * @note[short] Windows: 0x50460
+     * @note[short] iOS: 0x16d6e8
      * @note[short] Android
      */
-    virtual void onClickTrackNode(bool p0);
+    virtual void onClickTrackNode(bool selected);
 
     /**
-     * @note[short] MacOS (ARM): 0x91808
-     * @note[short] MacOS (Intel): 0x9efa0
-     * @note[short] Windows: 0x50210
-     * @note[short] iOS: 0x170b64
+     * @note[short] MacOS (ARM): 0x8f9bc
+     * @note[short] MacOS (Intel): 0x9f2f0
+     * @note[short] Windows: 0x50280
+     * @note[short] iOS: 0x16d4fc
      * @note[short] Android
      */
-    virtual void keyboardWillShow(cocos2d::CCIMEKeyboardNotificationInfo& p0);
+    virtual void keyboardWillShow(cocos2d::CCIMEKeyboardNotificationInfo& info);
 
     /**
-     * @note[short] MacOS (ARM): 0x91940
-     * @note[short] MacOS (Intel): 0x9f0f0
-     * @note[short] Windows: 0x50370
-     * @note[short] iOS: 0x170cb8
+     * @note[short] MacOS (ARM): 0x8fae0
+     * @note[short] MacOS (Intel): 0x9f440
+     * @note[short] Windows: 0x503e0
+     * @note[short] iOS: 0x16d64c
      * @note[short] Android
      */
-    virtual void keyboardWillHide(cocos2d::CCIMEKeyboardNotificationInfo& p0);
+    virtual void keyboardWillHide(cocos2d::CCIMEKeyboardNotificationInfo& info);
 
     /**
-     * @note[short] MacOS (ARM): 0x91b84
-     * @note[short] MacOS (Intel): 0x9f340
-     * @note[short] Windows: 0x504a0
-     * @note[short] iOS: 0x170e00
+     * @note[short] MacOS (ARM): 0x8fd34
+     * @note[short] MacOS (Intel): 0x9f690
+     * @note[short] Windows: 0x50510
+     * @note[short] iOS: 0x16d7a0
      * @note[short] Android
      */
     virtual bool onTextFieldInsertText(cocos2d::CCTextFieldTTF* pSender, char const* text, int nLen, cocos2d::enumKeyCodes keyCodes);
 
     /**
-     * @note[short] MacOS (ARM): 0x92124
-     * @note[short] MacOS (Intel): 0x9fa00
-     * @note[short] Windows: 0x50880
-     * @note[short] iOS: 0x1711fc
+     * @note[short] MacOS (ARM): 0x9028c
+     * @note[short] MacOS (Intel): 0x9fcd0
+     * @note[short] Windows: 0x508f0
+     * @note[short] iOS: 0x16db84
      * @note[short] Android
      */
     virtual bool onTextFieldAttachWithIME(cocos2d::CCTextFieldTTF* tField);
 
     /**
-     * @note[short] MacOS (ARM): 0x92420
-     * @note[short] MacOS (Intel): 0x9fd40
-     * @note[short] Windows: 0x50bb0
-     * @note[short] iOS: 0x171468
+     * @note[short] MacOS (ARM): 0x90594
+     * @note[short] MacOS (Intel): 0xa0000
+     * @note[short] Windows: 0x50c20
+     * @note[short] iOS: 0x16ddf8
      * @note[short] Android
      */
     virtual bool onTextFieldDetachWithIME(cocos2d::CCTextFieldTTF* tField);
 
     /**
-     * @note[short] MacOS (ARM): 0x90ac8
-     * @note[short] MacOS (Intel): 0x9e100
-     * @note[short] Windows: 0x4f540
-     * @note[short] iOS: 0x170150
+     * @note[short] MacOS (ARM): 0x8ec78
+     * @note[short] MacOS (Intel): 0x9e4a0
+     * @note[short] Windows: 0x4f5b0
+     * @note[short] iOS: 0x16cae4
      * @note[short] Android
      */
-    void addTextArea(TextArea* p0);
+    void addTextArea(TextArea* textArea);
 
     /**
+     * @note[short] MacOS (ARM): 0x90c44
+     * @note[short] MacOS (Intel): 0xa0790
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x16e2f8
      * @note[short] Android
      */
     void forceOffset();
+
+    /**
+     * @note[short] MacOS (ARM): 0x8f2c4
+     * @note[short] MacOS (Intel): 0x9eb10
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x16cf64
+     * @note[short] Android
+     */
+    gd::string getString();
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -200,37 +213,28 @@ public:
     cocos2d::CCLabelBMFont* getTextLabel();
 
     /**
-     * @note[short] MacOS (ARM): 0x91118
-     * @note[short] MacOS (Intel): 0x9e790
-     * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1705d4
+     * @note[short] MacOS (ARM): 0x8e930
+     * @note[short] MacOS (Intel): 0x9e130
+     * @note[short] Windows: 0x4f370
+     * @note[short] iOS: 0x16c880
      * @note[short] Android
      */
-    gd::string getString();
+    bool init(float width, float height, char const* placeholder, char const* textFont, int fontSize, char const* labelFont);
 
     /**
-     * @note[short] MacOS (ARM): 0x90770
-     * @note[short] MacOS (Intel): 0x9dd90
-     * @note[short] Windows: 0x4f300
-     * @note[short] iOS: 0x16feec
-     * @note[short] Android
-     */
-    bool init(float p0, float p1, char const* p2, char const* p3, int p4, char const* p5);
-
-    /**
-     * @note[short] MacOS (ARM): 0x911d4
-     * @note[short] MacOS (Intel): 0x9e850
-     * @note[short] Windows: 0x4fb40
-     * @note[short] iOS: 0x170608
+     * @note[short] MacOS (ARM): 0x8f374
+     * @note[short] MacOS (Intel): 0x9ebc0
+     * @note[short] Windows: 0x4fbb0
+     * @note[short] iOS: 0x16cf98
      * @note[short] Android
      */
     void refreshLabel();
 
     /**
-     * @note[short] MacOS (ARM): 0x90fe4
-     * @note[short] MacOS (Intel): 0x9e650
+     * @note[short] MacOS (ARM): 0x8f190
+     * @note[short] MacOS (Intel): 0x9e9d0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1704b4
+     * @note[short] iOS: 0x16ce44
      * @note[short] Android: Rebinded
      */
     void setAllowedChars(gd::string filter);
@@ -245,8 +249,8 @@ public:
     void setDelegate(TextInputDelegate* delegate);
 
     /**
-     * @note[short] MacOS (ARM): 0x91408
-     * @note[short] MacOS (Intel): 0x9eb20
+     * @note[short] MacOS (ARM): 0x8f5b4
+     * @note[short] MacOS (Intel): 0x9ee80
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
@@ -254,19 +258,19 @@ public:
     void setLabelNormalColor(cocos2d::ccColor3B color);
 
     /**
-     * @note[short] MacOS (ARM): 0x913f8
-     * @note[short] MacOS (Intel): 0x9eb00
+     * @note[short] MacOS (ARM): 0x8f5a4
+     * @note[short] MacOS (Intel): 0x9ee60
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1707b0
+     * @note[short] iOS: 0x16d148
      * @note[short] Android
      */
     void setLabelPlaceholderColor(cocos2d::ccColor3B color);
 
     /**
-     * @note[short] MacOS (ARM): 0x913f0
-     * @note[short] MacOS (Intel): 0x9eae0
+     * @note[short] MacOS (ARM): 0x8f59c
+     * @note[short] MacOS (Intel): 0x9ee40
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1707a8
+     * @note[short] iOS: 0x16d140
      * @note[short] Android
      */
     void setLabelPlaceholderScale(float v);
@@ -281,74 +285,76 @@ public:
     void setMaxLabelLength(int v);
 
     /**
-     * @note[short] MacOS (ARM): 0x913e0
-     * @note[short] MacOS (Intel): 0x9eaa0
+     * @note[short] MacOS (ARM): 0x8f58c
+     * @note[short] MacOS (Intel): 0x9ee00
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x170798
+     * @note[short] iOS: 0x16d130
      * @note[short] Android
      */
     void setMaxLabelScale(float v);
 
     /**
-     * @note[short] MacOS (ARM): 0x913e8
-     * @note[short] MacOS (Intel): 0x9eac0
+     * @note[short] MacOS (ARM): 0x8f594
+     * @note[short] MacOS (Intel): 0x9ee20
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1707a0
+     * @note[short] iOS: 0x16d138
      * @note[short] Android
      */
     void setMaxLabelWidth(float v);
 
     /**
-     * @note[short] MacOS (ARM): 0x91048
-     * @note[short] MacOS (Intel): 0x9e6d0
-     * @note[short] Windows: 0x4f7a0
-     * @note[short] iOS: 0x170518
+     * @note[short] MacOS (ARM): 0x8f1f4
+     * @note[short] MacOS (Intel): 0x9ea50
+     * @note[short] Windows: 0x4f810
+     * @note[short] iOS: 0x16cea8
      * @note[short] Android: Rebinded
      */
-    void setString(gd::string p0);
+    void setString(gd::string text);
 
     /**
-     * @note[short] MacOS (ARM): 0x913d4
-     * @note[short] MacOS (Intel): 0x9ea80
+     * @note[short] MacOS (ARM): 0x8f580
+     * @note[short] MacOS (Intel): 0x9ede0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void updateBlinkLabel();
 
     /**
-     * @note[short] MacOS (ARM): 0x9141c
-     * @note[short] MacOS (Intel): 0x9eb40
-     * @note[short] Windows: 0x4fe20
-     * @note[short] iOS: 0x1707c0
+     * @note[short] MacOS (ARM): 0x8f5c8
+     * @note[short] MacOS (Intel): 0x9eea0
+     * @note[short] Windows: 0x4fe90
+     * @note[short] iOS: 0x16d158
      * @note[short] Android
      */
-    void updateBlinkLabelToChar(int p0);
+    void updateBlinkLabelToChar(int index);
 
     /**
-     * @note[short] MacOS (ARM): 0x92afc
-     * @note[short] MacOS (Intel): 0xa0500
-     * @note[short] Windows: 0x50d60
-     * @note[short] iOS: 0x17197c
+     * @note[short] MacOS (ARM): 0x90c48
+     * @note[short] MacOS (Intel): 0xa07a0
+     * @note[short] Windows: 0x50dd0
+     * @note[short] iOS: 0x16e2fc
      * @note[short] Android
      */
-    void updateCursorPosition(cocos2d::CCPoint p0, cocos2d::CCRect p1);
+    void updateCursorPosition(cocos2d::CCPoint position, cocos2d::CCRect rect);
 
     /**
-     * @note[short] MacOS (ARM): 0x90a20
-     * @note[short] MacOS (Intel): 0x9e060
-     * @note[short] Windows: 0x4f630
+     * @note[short] MacOS (ARM): 0x8ebd0
+     * @note[short] MacOS (Intel): 0x9e400
+     * @note[short] Windows: 0x4f6a0
+     * @note[short] iOS: 0x16ca64
      * @note[short] Android: Rebinded
      */
-    void updateDefaultFontValues(gd::string p0);
+    void updateDefaultFontValues(gd::string font);
 
     /**
-     * @note[short] MacOS (ARM): 0x90d00
-     * @note[short] MacOS (Intel): 0x9e320
-     * @note[short] Windows: 0x4f840
-     * @note[short] iOS: 0x170284
+     * @note[short] MacOS (ARM): 0x8eea0
+     * @note[short] MacOS (Intel): 0x9e6b0
+     * @note[short] Windows: 0x4f8b0
+     * @note[short] iOS: 0x16cc18
      * @note[short] Android: Rebinded
      */
-    void updateLabel(gd::string p0);
+    void updateLabel(gd::string text);
     bool m_numberInput;
     gd::string m_caption;
     int m_unknown1;

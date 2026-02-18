@@ -16,23 +16,29 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupGravityTriggerPopup, SetupTriggerPopup)
 
     /**
+     * @note[short] MacOS (ARM): 0x4244d0
+     * @note[short] MacOS (Intel): 0x4c4f00
+     * @note[short] Windows: 0x429140
+     * @note[short] iOS: 0x4217a8
      * @note[short] Android
      */
-    static SetupGravityTriggerPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupGravityTriggerPopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x41a934
-     * @note[short] MacOS (Intel): 0x4b22c0
-     * @note[short] Windows: 0x411950
-     * @note[short] iOS: 0x419a94
+     * @note[short] MacOS (ARM): 0x424ab8
+     * @note[short] MacOS (Intel): 0x4c55d0
+     * @note[short] Windows: 0x4296d0
+     * @note[short] iOS: 0x421c4c
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x41a4d4
-     * @note[short] MacOS (Intel): 0x4b1e10
+     * @note[short] MacOS (ARM): 0x424658
+     * @note[short] MacOS (Intel): 0x4c5130
+     * @note[short] Windows: 0x429250
+     * @note[short] iOS: 0x421880
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 };

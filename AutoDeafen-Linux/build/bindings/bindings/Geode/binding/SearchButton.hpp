@@ -15,22 +15,22 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(SearchButton, cocos2d::CCSprite)
 
     /**
-     * @note[short] MacOS (ARM): 0x540198
-     * @note[short] MacOS (Intel): 0x613e90
-     * @note[short] Windows: 0x2fdcd0
-     * @note[short] iOS: 0x56f84
+     * @note[short] MacOS (ARM): 0x54dbac
+     * @note[short] MacOS (Intel): 0x62a8e0
+     * @note[short] Windows: 0x312880
+     * @note[short] iOS: 0x53794
      * @note[short] Android
      */
-    static SearchButton* create(char const* p0, char const* p1, float p2, char const* p3);
+    static SearchButton* create(char const* background, char const* label, float scale, char const* icon);
 
     /**
-     * @note[short] MacOS (ARM): 0x542340
-     * @note[short] MacOS (Intel): 0x616050
-     * @note[short] Windows: 0x2fdda0
-     * @note[short] iOS: 0x588f0
+     * @note[short] MacOS (ARM): 0x54fd2c
+     * @note[short] MacOS (Intel): 0x62ca60
+     * @note[short] Windows: 0x312950
+     * @note[short] iOS: 0x55198
      * @note[short] Android
      */
-    bool init(char const* p0, char const* p1, float p2, char const* p3);
+    bool init(char const* background, char const* label, float scale, char const* icon);
     cocos2d::CCLabelBMFont* m_label;
     cocos2d::CCSprite* m_icon;
 };

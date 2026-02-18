@@ -16,25 +16,38 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(LevelOptionsLayer2, LevelOptionsLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x20ba34
-     * @note[short] MacOS (Intel): 0x25f960
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static LevelOptionsLayer2* create(LevelSettingsObject* p0);
+     LevelOptionsLayer2();
 
     /**
-     * @note[short] MacOS (ARM): 0x20beb4
-     * @note[short] MacOS (Intel): 0x25fec0
-     * @note[short] Windows: 0x30fe20
-     * @note[short] iOS: 0x1814e4
+     * @note[short] MacOS (ARM): 0x2144d4
+     * @note[short] MacOS (Intel): 0x271930
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x17da9c
+     * @note[short] Android
+     */
+    static LevelOptionsLayer2* create(LevelSettingsObject* object);
+
+    /**
+     * @note[short] MacOS (ARM): 0x214968
+     * @note[short] MacOS (Intel): 0x271ea0
+     * @note[short] Windows: 0x3249d0
+     * @note[short] iOS: 0x17de30
      * @note[short] Android
      */
     virtual void setupOptions();
 
     /**
-     * @note[short] MacOS (ARM): 0x20bdb8
-     * @note[short] MacOS (Intel): 0x25fdc0
+     * @note[short] MacOS (ARM): 0x21486c
+     * @note[short] MacOS (Intel): 0x271da0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x17dd64
      * @note[short] Android
      */
-    bool init(LevelSettingsObject* p0);
+    bool init(LevelSettingsObject* object);
 };

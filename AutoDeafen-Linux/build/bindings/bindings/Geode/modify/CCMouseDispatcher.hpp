@@ -65,6 +65,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCMouseDispatcher@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCMouseDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCMouseDispatcher@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCMouseDispatcher)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCMouseDelegate*>::func(&cocos2d::CCMouseDispatcher::addDelegate)), Thiscall, cocos2d::CCMouseDispatcher, addDelegate, cocos2d::CCMouseDelegate*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, float>::func(&cocos2d::CCMouseDispatcher::dispatchScrollMSG)), Thiscall, cocos2d::CCMouseDispatcher, dispatchScrollMSG, float, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCMouseDelegate*>::func(&cocos2d::CCMouseDispatcher::forceAddDelegate)), Thiscall, cocos2d::CCMouseDispatcher, forceAddDelegate, cocos2d::CCMouseDelegate*)

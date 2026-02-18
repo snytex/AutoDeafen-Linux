@@ -25,97 +25,100 @@ public:
      GauntletLayer();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x318880
+     * @note[short] MacOS (Intel): 0x3924c0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x232178
+     * @note[short] Android: Rebinded
      */
      ~GauntletLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x30fc28
-     * @note[short] MacOS (Intel): 0x37f700
+     * @note[short] MacOS (ARM): 0x318c44
+     * @note[short] MacOS (Intel): 0x3929c0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x23227c
      * @note[short] Android
      */
-    static GauntletLayer* create(GauntletType gauntletType);
+    static GauntletLayer* create(GauntletType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x30fb40
-     * @note[short] MacOS (Intel): 0x37f5f0
-     * @note[short] Windows: 0x1f2920
+     * @note[short] MacOS (ARM): 0x318b5c
+     * @note[short] MacOS (Intel): 0x3928b0
+     * @note[short] Windows: 0x1f5df0
+     * @note[short] iOS: 0x232230
      * @note[short] Android
      */
-    static cocos2d::CCScene* scene(GauntletType p0);
+    static cocos2d::CCScene* scene(GauntletType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x311db0
-     * @note[short] MacOS (Intel): 0x381960
-     * @note[short] Windows: 0x1f4f50
-     * @note[short] iOS: 0x233c90
+     * @note[short] MacOS (ARM): 0x31ad94
+     * @note[short] MacOS (Intel): 0x394c20
+     * @note[short] Windows: 0x1f8460
+     * @note[short] iOS: 0x233edc
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x311274
-     * @note[short] MacOS (Intel): 0x380f10
-     * @note[short] Windows: 0x1f3440
-     * @note[short] iOS: 0x2335f0
+     * @note[short] MacOS (ARM): 0x31a27c
+     * @note[short] MacOS (Intel): 0x3941d0
+     * @note[short] Windows: 0x1f6930
+     * @note[short] iOS: 0x23383c
      * @note[short] Android
      */
-    virtual void loadLevelsFinished(cocos2d::CCArray* p0, char const* p1, int p2);
+    virtual void loadLevelsFinished(cocos2d::CCArray* levels, char const* key, int type);
 
     /**
-     * @note[short] MacOS (ARM): 0x31141c
-     * @note[short] MacOS (Intel): 0x3810b0
-     * @note[short] Windows: 0x1f3650
-     * @note[short] iOS: 0x2336c4
+     * @note[short] MacOS (ARM): 0x31a410
+     * @note[short] MacOS (Intel): 0x394370
+     * @note[short] Windows: 0x1f6b40
+     * @note[short] iOS: 0x233910
      * @note[short] Android
      */
-    virtual void loadLevelsFailed(char const* p0, int p1);
+    virtual void loadLevelsFailed(char const* key, int type);
 
     /**
-     * @note[short] MacOS (ARM): 0x30fcf0
-     * @note[short] MacOS (Intel): 0x37f7e0
-     * @note[short] Windows: 0x1f2c50
-     * @note[short] iOS: 0x2320d4
+     * @note[short] MacOS (ARM): 0x318d0c
+     * @note[short] MacOS (Intel): 0x392aa0
+     * @note[short] Windows: 0x1f6140
+     * @note[short] iOS: 0x232338
      * @note[short] Android
      */
-    bool init(GauntletType p0);
+    bool init(GauntletType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x31034c
-     * @note[short] MacOS (Intel): 0x37fe50
-     * @note[short] Windows: 0x1f4f00
+     * @note[short] MacOS (ARM): 0x319368
+     * @note[short] MacOS (Intel): 0x393100
+     * @note[short] Windows: 0x1f8410
+     * @note[short] iOS: 0x232958
      * @note[short] Android
      */
     void onBack(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3116ec
-     * @note[short] MacOS (Intel): 0x381320
-     * @note[short] Windows: 0x1f4880
-     * @note[short] iOS: 0x233854
+     * @note[short] MacOS (ARM): 0x31a6cc
+     * @note[short] MacOS (Intel): 0x3945e0
+     * @note[short] Windows: 0x1f7d90
+     * @note[short] iOS: 0x233aa0
      * @note[short] Android
      */
     void onLevel(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x310394
-     * @note[short] MacOS (Intel): 0x37fea0
-     * @note[short] Windows: 0x1f3850
-     * @note[short] iOS: 0x23273c
+     * @note[short] MacOS (ARM): 0x3193b0
+     * @note[short] MacOS (Intel): 0x393150
+     * @note[short] Windows: 0x1f6d40
+     * @note[short] iOS: 0x2329a0
      * @note[short] Android
      */
-    void setupGauntlet(cocos2d::CCArray* p0);
+    void setupGauntlet(cocos2d::CCArray* levels);
 
     /**
-     * @note[short] MacOS (ARM): 0x311730
-     * @note[short] MacOS (Intel): 0x381360
-     * @note[short] Windows: 0x1f48f0
-     * @note[short] iOS: 0x233898
+     * @note[short] MacOS (ARM): 0x31a710
+     * @note[short] MacOS (Intel): 0x394620
+     * @note[short] Windows: 0x1f7e00
+     * @note[short] iOS: 0x233ae4
      * @note[short] Android
      */
     void unlockActiveItem();

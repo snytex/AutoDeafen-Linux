@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_setPosition
 		#define GEODE_STATICS_setPosition
 		GEODE_AS_STATIC_FUNCTION(setPosition) 
@@ -35,8 +30,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCContentLayer, create, cocos2d::ccColor4B const&, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42f70, Thiscall, CCContentLayer, setPosition, cocos2d::CCPoint const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCContentLayer, create, cocos2d::ccColor4B const&, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42fe0, Thiscall, CCContentLayer, setPosition, cocos2d::CCPoint const&)
 		}
 	};
 }

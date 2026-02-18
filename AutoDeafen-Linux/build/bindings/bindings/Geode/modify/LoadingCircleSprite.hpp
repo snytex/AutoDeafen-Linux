@@ -45,8 +45,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6bc30, Default, LoadingCircleSprite, create, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6bd30, Thiscall, LoadingCircleSprite, fadeInCircle, bool, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6bc60, Default, LoadingCircleSprite, create, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6bd60, Thiscall, LoadingCircleSprite, fadeInCircle, bool, float, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LoadingCircleSprite, hideCircle, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LoadingCircleSprite, init, float)
 		}

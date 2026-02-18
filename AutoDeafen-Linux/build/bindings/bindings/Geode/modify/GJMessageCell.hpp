@@ -65,16 +65,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onViewProfile) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateBGColor
-		#define GEODE_STATICS_updateBGColor
-		GEODE_AS_STATIC_FUNCTION(updateBGColor) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateToggle
-		#define GEODE_STATICS_updateToggle
-		GEODE_AS_STATIC_FUNCTION(updateToggle) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_init
 		#define GEODE_CONCEPT_CHECK_init
@@ -155,20 +145,20 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbb620, Thiscall, GJMessageCell, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xad710, Thiscall, GJMessageCell, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbd440, Thiscall, GJMessageCell, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbd5e0, Thiscall, GJMessageCell, uploadActionFinished, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbd760, Thiscall, GJMessageCell, uploadActionFailed, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbb4b0, Thiscall, GJMessageCell, onClosePopup, UploadActionPopup*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbc7e0, Thiscall, GJMessageCell, loadFromMessage, GJUserMessage*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMessageCell, markAsRead, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMessageCell, onDeleteMessage, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMessageCell, onToggle, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMessageCell, onViewMessage, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMessageCell, onViewProfile, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMessageCell, updateBGColor, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMessageCell, updateToggle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbc320, Thiscall, GJMessageCell, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xade20, Thiscall, GJMessageCell, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbe160, Thiscall, GJMessageCell, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbe300, Thiscall, GJMessageCell, uploadActionFinished, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbe480, Thiscall, GJMessageCell, uploadActionFailed, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbc1b0, Thiscall, GJMessageCell, onClosePopup, UploadActionPopup*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbd500, Thiscall, GJMessageCell, loadFromMessage, GJUserMessage*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbde90, Thiscall, GJMessageCell, markAsRead, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbdfa0, Thiscall, GJMessageCell, onDeleteMessage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbe140, Thiscall, GJMessageCell, onToggle, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbddf0, Thiscall, GJMessageCell, onViewMessage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbdf60, Thiscall, GJMessageCell, onViewProfile, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMessageCell, updateBGColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMessageCell, updateToggle, )
 		}
 	};
 }

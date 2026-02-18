@@ -16,34 +16,38 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupStopTriggerPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x459f80
+     * @note[short] MacOS (ARM): 0x4d1b50
+     * @note[short] MacOS (Intel): 0x585ff0
+     * @note[short] Windows: 0x4724f0
+     * @note[short] iOS: 0x4113b0
      * @note[short] Android
      */
-    static SetupStopTriggerPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupStopTriggerPopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c4118
-     * @note[short] MacOS (Intel): 0x56f820
-     * @note[short] Windows: 0x45a820
-     * @note[short] iOS: 0x409a2c
+     * @note[short] MacOS (ARM): 0x4d22b4
+     * @note[short] MacOS (Intel): 0x5868a0
+     * @note[short] Windows: 0x472d90
+     * @note[short] iOS: 0x411a44
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c40a0
-     * @note[short] MacOS (Intel): 0x56f7b0
-     * @note[short] Windows: 0x45a770
-     * @note[short] iOS: 0x4099b4
+     * @note[short] MacOS (ARM): 0x4d223c
+     * @note[short] MacOS (Intel): 0x586830
+     * @note[short] Windows: 0x472ce0
+     * @note[short] iOS: 0x4119cc
      * @note[short] Android
      */
     virtual void onCustomToggleTriggerValue(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c3b3c
-     * @note[short] MacOS (Intel): 0x56f190
-     * @note[short] Windows: 0x45a090
+     * @note[short] MacOS (ARM): 0x4d1cd8
+     * @note[short] MacOS (Intel): 0x586220
+     * @note[short] Windows: 0x472600
+     * @note[short] iOS: 0x411488
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 };

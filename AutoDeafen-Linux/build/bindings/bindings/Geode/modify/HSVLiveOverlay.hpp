@@ -45,11 +45,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onSelectTab) 
 	#endif
 
-	#ifndef GEODE_STATICS_toggleControls
-		#define GEODE_STATICS_toggleControls
-		GEODE_AS_STATIC_FUNCTION(toggleControls) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -111,15 +106,15 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(HSVLiveOverlay, create, GameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b2bb0, Thiscall, HSVLiveOverlay, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8ba30, Thiscall, HSVLiveOverlay, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b2c00, Thiscall, HSVLiveOverlay, hsvChanged, ConfigureHSVWidget*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(HSVLiveOverlay, closeColorSelect, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b2a10, Thiscall, HSVLiveOverlay, createHSVWidget, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b2790, Thiscall, HSVLiveOverlay, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b22f0, Thiscall, HSVLiveOverlay, init, GameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b29e0, Thiscall, HSVLiveOverlay, onSelectTab, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(HSVLiveOverlay, toggleControls, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ba280, Thiscall, HSVLiveOverlay, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8baf0, Thiscall, HSVLiveOverlay, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ba2d0, Thiscall, HSVLiveOverlay, hsvChanged, ConfigureHSVWidget*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ba060, Thiscall, HSVLiveOverlay, closeColorSelect, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ba0e0, Thiscall, HSVLiveOverlay, createHSVWidget, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b9e60, Thiscall, HSVLiveOverlay, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b99c0, Thiscall, HSVLiveOverlay, init, GameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ba0b0, Thiscall, HSVLiveOverlay, onSelectTab, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(HSVLiveOverlay, toggleControls, bool)
 		}
 	};
 }

@@ -75,12 +75,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupInteractObjectPopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40c730, Thiscall, SetupInteractObjectPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40c610, Thiscall, SetupInteractObjectPopup, onPlusButton, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40c700, Thiscall, SetupInteractObjectPopup, valueDidChange, int, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupInteractObjectPopup, init, EffectGameObject*, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupInteractObjectPopup, updateItems, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423990, Default, SetupInteractObjectPopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4244b0, Thiscall, SetupInteractObjectPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x424360, Thiscall, SetupInteractObjectPopup, onPlusButton, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x424480, Thiscall, SetupInteractObjectPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423aa0, Thiscall, SetupInteractObjectPopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x424400, Thiscall, SetupInteractObjectPopup, updateItems, )
 		}
 	};
 }

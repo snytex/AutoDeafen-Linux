@@ -25,46 +25,46 @@ public:
      AnimatedShopKeeper();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a6b1c
-     * @note[short] MacOS (Intel): 0x3101f0
+     * @note[short] MacOS (ARM): 0x2b2084
+     * @note[short] MacOS (Intel): 0x324770
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x14f124
+     * @note[short] iOS: 0x14ba2c
      * @note[short] Android
      */
     static AnimatedShopKeeper* create(ShopType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x2aa490
-     * @note[short] MacOS (Intel): 0x314230
-     * @note[short] Windows: 0x2a8840
-     * @note[short] iOS: 0x151d58
+     * @note[short] MacOS (ARM): 0x2b59a4
+     * @note[short] MacOS (Intel): 0x328770
+     * @note[short] Windows: 0x2aff00
+     * @note[short] iOS: 0x14e69c
      * @note[short] Android
      */
-    virtual void animationFinished(char const* p0);
+    virtual void animationFinished(char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x2aa3c4
-     * @note[short] MacOS (Intel): 0x314180
+     * @note[short] MacOS (ARM): 0x2b58f0
+     * @note[short] MacOS (Intel): 0x3286c0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x151ca4
+     * @note[short] iOS: 0x14e5fc
      * @note[short] Android
      */
     bool init(ShopType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a936c
-     * @note[short] MacOS (Intel): 0x312ec0
-     * @note[short] Windows: 0x2a8520
-     * @note[short] iOS: 0x150fc4
+     * @note[short] MacOS (ARM): 0x2b48b0
+     * @note[short] MacOS (Intel): 0x327410
+     * @note[short] Windows: 0x2afbe0
+     * @note[short] iOS: 0x14d918
      * @note[short] Android
      */
     void playReactAnimation();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a6c78
-     * @note[short] MacOS (Intel): 0x310360
-     * @note[short] Windows: 0x2a87b0
-     * @note[short] iOS: 0x14f1e0
+     * @note[short] MacOS (ARM): 0x2b21c8
+     * @note[short] MacOS (Intel): 0x3248e0
+     * @note[short] Windows: 0x2afe70
+     * @note[short] iOS: 0x14bae8
      * @note[short] Android
      */
     void startAnimating();

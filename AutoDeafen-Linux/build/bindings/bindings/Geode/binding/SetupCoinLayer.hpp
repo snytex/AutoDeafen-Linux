@@ -25,20 +25,20 @@ public:
      SetupCoinLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x4c0ddc
-     * @note[short] MacOS (Intel): 0x56bbf0
+     * @note[short] MacOS (ARM): 0x4cef90
+     * @note[short] MacOS (Intel): 0x582ce0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x4070c0
+     * @note[short] iOS: 0x40f0d8
      * @note[short] Android
      */
-    static SetupCoinLayer* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupCoinLayer* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c0f68
-     * @note[short] MacOS (Intel): 0x56be20
-     * @note[short] Windows: 0x457000
-     * @note[short] iOS: 0x40719c
+     * @note[short] MacOS (ARM): 0x4cf11c
+     * @note[short] MacOS (Intel): 0x582f10
+     * @note[short] Windows: 0x46f570
+     * @note[short] iOS: 0x40f1b4
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 };

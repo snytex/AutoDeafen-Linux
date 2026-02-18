@@ -24,26 +24,31 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(EditorUI, cocos2d::CCLayer)
 
     /**
-     * @note[short] Windows: 0xdd4b0
+     * @note[short] MacOS (ARM): 0x48dac
+     * @note[short] MacOS (Intel): 0x54440
+     * @note[short] Windows: 0xde9e0
+     * @note[short] iOS: 0x3fc538
      * @note[short] Android: Rebinded
      */
      EditorUI();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x7b30
+     * @note[short] MacOS (Intel): 0x8d40
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x3c4c9c
+     * @note[short] Android: Rebinded
      */
      ~EditorUI();
 
     /**
-     * @note[short] MacOS (ARM): 0xaccc
-     * @note[short] MacOS (Intel): 0x96b0
+     * @note[short] MacOS (ARM): 0x7cfc
+     * @note[short] MacOS (Intel): 0x9010
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3c4e00
      * @note[short] Android
      */
-    static EditorUI* create(LevelEditorLayer* p0);
+    static EditorUI* create(LevelEditorLayer* editorLayer);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -55,1041 +60,1241 @@ public:
     static EditorUI* get();
 
     /**
-     * @note[short] MacOS (ARM): 0x463fc
-     * @note[short] MacOS (Intel): 0x4e7d0
-     * @note[short] Windows: 0x121120
-     * @note[short] iOS: 0x3f0124
+     * @note[short] MacOS (ARM): 0x538324
+     * @note[short] MacOS (Intel): 0x613120
+     * @note[short] Windows: 0x12d520
+     * @note[short] iOS: 0x7759c
+     * @note[short] Android
+     */
+    static int getRandomStartKey(int specialTemplate);
+
+    /**
+     * @note[short] MacOS (ARM): 0x538560
+     * @note[short] MacOS (Intel): 0x613350
+     * @note[short] Windows: 0x12d7c0
+     * @note[short] iOS: 0x777bc
+     * @note[short] Android
+     */
+    static int getSmartObjectKey(int key, GJSmartDirection direction);
+
+    /**
+     * @note[short] MacOS (ARM): 0x538304
+     * @note[short] MacOS (Intel): 0x613100
+     * @note[short] Windows: 0x12d480
+     * @note[short] iOS: 0x7757c
+     * @note[short] Android
+     */
+    static int smartTypeForKey(int key);
+
+    /**
+     * @note[short] MacOS (ARM): 0x438e0
+     * @note[short] MacOS (Intel): 0x4e420
+     * @note[short] Windows: 0x122cd0
+     * @note[short] iOS: 0x3f8034
      * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): 0x46de4
-     * @note[short] MacOS (Intel): 0x4f290
-     * @note[short] Windows: 0x121c60
-     * @note[short] iOS: 0x3f07a0
+     * @note[short] MacOS (ARM): 0x442c8
+     * @note[short] MacOS (Intel): 0x4eeb0
+     * @note[short] Windows: 0x123810
+     * @note[short] iOS: 0x3f86b4
      * @note[short] Android
      */
-    virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual bool ccTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x473c0
-     * @note[short] MacOS (Intel): 0x4f8b0
-     * @note[short] Windows: 0x1222e0
-     * @note[short] iOS: 0x3f0ce4
+     * @note[short] MacOS (ARM): 0x448f0
+     * @note[short] MacOS (Intel): 0x4f4c0
+     * @note[short] Windows: 0x123e90
+     * @note[short] iOS: 0x3f8be4
      * @note[short] Android
      */
-    virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchMoved(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x478e8
-     * @note[short] MacOS (Intel): 0x4fe60
-     * @note[short] Windows: 0x122a30
-     * @note[short] iOS: 0x3f11c8
+     * @note[short] MacOS (ARM): 0x44e10
+     * @note[short] MacOS (Intel): 0x4fa50
+     * @note[short] Windows: 0x1245e0
+     * @note[short] iOS: 0x3f90c0
      * @note[short] Android
      */
-    virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchEnded(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x48094
-     * @note[short] MacOS (Intel): 0x50780
-     * @note[short] Windows: 0x71210
-     * @note[short] iOS: 0x3f1938
+     * @note[short] MacOS (ARM): 0x455c8
+     * @note[short] MacOS (Intel): 0x50320
+     * @note[short] Windows: 0x71240
+     * @note[short] iOS: 0x3f982c
      * @note[short] Android
      */
-    virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchCancelled(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x480b0
-     * @note[short] MacOS (Intel): 0x507c0
-     * @note[short] Windows: 0x9b1a0
-     * @note[short] iOS: 0x3f1954
+     * @note[short] MacOS (ARM): 0x455e4
+     * @note[short] MacOS (Intel): 0x50360
+     * @note[short] Windows: 0x9b7d0
+     * @note[short] iOS: 0x3f9848
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x39b48
-     * @note[short] MacOS (Intel): 0x3f0f0
-     * @note[short] Windows: 0x1130e0
-     * @note[short] iOS: 0x3e7358
+     * @note[short] MacOS (ARM): 0x36d6c
+     * @note[short] MacOS (Intel): 0x3ea00
+     * @note[short] Windows: 0x114980
+     * @note[short] iOS: 0x3ef050
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x480e8
-     * @note[short] MacOS (Intel): 0x50800
-     * @note[short] Windows: 0x123770
-     * @note[short] iOS: 0x3f198c
+     * @note[short] MacOS (ARM): 0x4561c
+     * @note[short] MacOS (Intel): 0x503a0
+     * @note[short] Windows: 0x125320
+     * @note[short] iOS: 0x3f9880
      * @note[short] Android
      */
-    virtual void keyDown(cocos2d::enumKeyCodes p0);
+    virtual void keyDown(cocos2d::enumKeyCodes key, double timestamp);
 
     /**
      * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): 0x546c0
-     * @note[short] Windows: 0xdd8f0
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: 0xdee20
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
     virtual EditorUI* getUI();
 
     /**
-     * @note[short] MacOS (ARM): 0x32e34
-     * @note[short] MacOS (Intel): 0x337d0
-     * @note[short] Windows: 0xe5580
-     * @note[short] iOS: 0x3e213c
+     * @note[short] MacOS (ARM): 0x300f4
+     * @note[short] MacOS (Intel): 0x33270
+     * @note[short] Windows: 0xe6c50
+     * @note[short] iOS: 0x3e9e84
      * @note[short] Android
      */
-    virtual void setIDPopupClosed(SetIDPopup* p0, int p1);
+    virtual void setIDPopupClosed(SetIDPopup* popup, int value);
 
     /**
-     * @note[short] MacOS (ARM): 0x32c64
-     * @note[short] MacOS (Intel): 0x33640
-     * @note[short] Windows: 0xe5390
-     * @note[short] iOS: 0x3e2060
+     * @note[short] MacOS (ARM): 0x2ff24
+     * @note[short] MacOS (Intel): 0x330f0
+     * @note[short] Windows: 0xe6a50
+     * @note[short] iOS: 0x3e9dac
      * @note[short] Android
      */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x3b2bc
-     * @note[short] MacOS (Intel): 0x40b50
-     * @note[short] Windows: 0x113b60
-     * @note[short] iOS: 0x3e8214
+     * @note[short] MacOS (ARM): 0x38498
+     * @note[short] MacOS (Intel): 0x40470
+     * @note[short] Windows: 0x115400
+     * @note[short] iOS: 0x3eff48
      * @note[short] Android
      */
     virtual void updateTransformControl();
 
     /**
-     * @note[short] MacOS (ARM): 0x3bb74
-     * @note[short] MacOS (Intel): 0x414f0
-     * @note[short] Windows: 0x114050
-     * @note[short] iOS: 0x3e89b4
+     * @note[short] MacOS (ARM): 0x38d3c
+     * @note[short] MacOS (Intel): 0x40e10
+     * @note[short] Windows: 0x1158f0
+     * @note[short] iOS: 0x3f06e8
      * @note[short] Android
      */
     virtual void transformChangeBegin();
 
     /**
-     * @note[short] MacOS (ARM): 0x3bc20
-     * @note[short] MacOS (Intel): 0x415d0
+     * @note[short] MacOS (ARM): 0x38de8
+     * @note[short] MacOS (Intel): 0x40ef0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3e8a60
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x3f0794
+     * @note[short] Android
      */
     virtual void transformChangeEnded();
 
     /**
-     * @note[short] MacOS (ARM): 0x4b658
-     * @note[short] MacOS (Intel): 0x546d0
-     * @note[short] Windows: 0xdd900
-     * @note[short] iOS: 0x3f4498
+     * @note[short] MacOS (ARM): 0x48d5c
+     * @note[short] MacOS (Intel): 0x54390
+     * @note[short] Windows: 0xdee30
+     * @note[short] iOS: 0x3fc520
      * @note[short] Android
      */
     virtual cocos2d::CCNode* getTransformNode();
 
     /**
-     * @note[short] MacOS (ARM): 0x44ec0
-     * @note[short] MacOS (Intel): 0x4d000
-     * @note[short] Windows: 0x11fca0
-     * @note[short] iOS: 0x3ef7c8
+     * @note[short] MacOS (ARM): 0x42348
+     * @note[short] MacOS (Intel): 0x4cbd0
+     * @note[short] Windows: 0x121820
+     * @note[short] iOS: 0x3f76d8
      * @note[short] Android
      */
-    virtual void transformScaleXChanged(float p0);
+    virtual void transformScaleXChanged(float scaleX);
 
     /**
-     * @note[short] MacOS (ARM): 0x45088
+     * @note[short] MacOS (ARM): 0x42510
+     * @note[short] MacOS (Intel): 0x4cde0
+     * @note[short] Windows: 0x121840
+     * @note[short] iOS: 0x3f7778
+     * @note[short] Android
+     */
+    virtual void transformScaleYChanged(float scaleY);
+
+    /**
+     * @note[short] MacOS (ARM): 0x42644
+     * @note[short] MacOS (Intel): 0x4cf40
+     * @note[short] Windows: 0x121860
+     * @note[short] iOS: 0x3f7790
+     * @note[short] Android
+     */
+    virtual void transformScaleXYChanged(float scaleX, float scaleY);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4277c
+     * @note[short] MacOS (Intel): 0x4d0b0
+     * @note[short] Windows: 0x121880
+     * @note[short] iOS: 0x3f77ac
+     * @note[short] Android
+     */
+    virtual void transformSkewXChanged(float skewX);
+
+    /**
+     * @note[short] MacOS (ARM): 0x428b0
      * @note[short] MacOS (Intel): 0x4d210
-     * @note[short] Windows: 0x11fcc0
-     * @note[short] iOS: 0x3ef868
+     * @note[short] Windows: 0x1218a0
+     * @note[short] iOS: 0x3f77c4
      * @note[short] Android
      */
-    virtual void transformScaleYChanged(float p0);
+    virtual void transformSkewYChanged(float skewY);
 
     /**
-     * @note[short] MacOS (ARM): 0x451bc
+     * @note[short] MacOS (ARM): 0x429e4
      * @note[short] MacOS (Intel): 0x4d370
-     * @note[short] Windows: 0x11fce0
-     * @note[short] iOS: 0x3ef880
+     * @note[short] Windows: 0x1218c0
+     * @note[short] iOS: 0x3f77dc
      * @note[short] Android
      */
-    virtual void transformScaleXYChanged(float p0, float p1);
+    virtual void transformRotationXChanged(float rotationX);
 
     /**
-     * @note[short] MacOS (ARM): 0x452f4
-     * @note[short] MacOS (Intel): 0x4d4e0
-     * @note[short] Windows: 0x11fd00
-     * @note[short] iOS: 0x3ef89c
+     * @note[short] MacOS (ARM): 0x42b18
+     * @note[short] MacOS (Intel): 0x4d4d0
+     * @note[short] Windows: 0x1218e0
+     * @note[short] iOS: 0x3f77f4
      * @note[short] Android
      */
-    virtual void transformSkewXChanged(float p0);
+    virtual void transformRotationYChanged(float rotationY);
 
     /**
-     * @note[short] MacOS (ARM): 0x45428
-     * @note[short] MacOS (Intel): 0x4d640
-     * @note[short] Windows: 0x11fd20
-     * @note[short] iOS: 0x3ef8b4
+     * @note[short] MacOS (ARM): 0x42c4c
+     * @note[short] MacOS (Intel): 0x4d630
+     * @note[short] Windows: 0x121900
+     * @note[short] iOS: 0x3f780c
      * @note[short] Android
      */
-    virtual void transformSkewYChanged(float p0);
+    virtual void transformRotationChanged(float rotation);
 
     /**
-     * @note[short] MacOS (ARM): 0x4555c
+     * @note[short] MacOS (ARM): 0x42d84
      * @note[short] MacOS (Intel): 0x4d7a0
-     * @note[short] Windows: 0x11fd40
-     * @note[short] iOS: 0x3ef8cc
-     * @note[short] Android
-     */
-    virtual void transformRotationXChanged(float p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x45690
-     * @note[short] MacOS (Intel): 0x4d900
-     * @note[short] Windows: 0x11fd60
-     * @note[short] iOS: 0x3ef8e4
-     * @note[short] Android
-     */
-    virtual void transformRotationYChanged(float p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x457c4
-     * @note[short] MacOS (Intel): 0x4da60
-     * @note[short] Windows: 0x11fd80
-     * @note[short] iOS: 0x3ef8fc
-     * @note[short] Android
-     */
-    virtual void transformRotationChanged(float p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x458fc
-     * @note[short] MacOS (Intel): 0x4dbd0
-     * @note[short] Windows: 0x11fda0
-     * @note[short] iOS: 0x3ef918
+     * @note[short] Windows: 0x121920
+     * @note[short] iOS: 0x3f7828
      * @note[short] Android
      */
     virtual void transformResetRotation();
 
     /**
-     * @note[short] MacOS (ARM): 0x459b4
-     * @note[short] MacOS (Intel): 0x4dcc0
-     * @note[short] Windows: 0x11fdd0
-     * @note[short] iOS: 0x3ef95c
+     * @note[short] MacOS (ARM): 0x42e3c
+     * @note[short] MacOS (Intel): 0x4d890
+     * @note[short] Windows: 0x121950
+     * @note[short] iOS: 0x3f786c
      * @note[short] Android
      */
     virtual void transformRestoreRotation();
 
     /**
-     * @note[short] MacOS (ARM): 0x38a48
-     * @note[short] MacOS (Intel): 0x3df50
-     * @note[short] Windows: 0x110990
-     * @note[short] iOS: 0x3e68b4
+     * @note[short] MacOS (ARM): 0x35be0
+     * @note[short] MacOS (Intel): 0x3d8a0
+     * @note[short] Windows: 0x1120a0
+     * @note[short] iOS: 0x3ee5fc
      * @note[short] Android
      */
     virtual void songStateChanged();
 
     /**
-     * @note[short] MacOS (ARM): 0x4342c
-     * @note[short] MacOS (Intel): 0x4a5a0
-     * @note[short] Windows: 0x11dcd0
-     * @note[short] iOS: 0x3edf18
+     * @note[short] MacOS (ARM): 0x40720
+     * @note[short] MacOS (Intel): 0x4a070
+     * @note[short] Windows: 0x11f6f0
+     * @note[short] iOS: 0x3f5c98
      * @note[short] Android
      */
-    virtual void colorSelectClosed(cocos2d::CCNode* p0);
+    virtual void colorSelectClosed(cocos2d::CCNode* popup);
 
     /**
-     * @note[short] MacOS (ARM): 0x48dcc
-     * @note[short] MacOS (Intel): 0x51920
-     * @note[short] Windows: 0x124a00
-     * @note[short] iOS: 0x3f2630
+     * @note[short] MacOS (ARM): 0x464f0
+     * @note[short] MacOS (Intel): 0x51620
+     * @note[short] Windows: 0x1267b0
+     * @note[short] iOS: 0x3fa6a0
      * @note[short] Android
      */
-    virtual void keyUp(cocos2d::enumKeyCodes p0);
+    virtual void keyUp(cocos2d::enumKeyCodes key, double timestamp);
 
     /**
-     * @note[short] MacOS (ARM): 0x48e44
-     * @note[short] MacOS (Intel): 0x519c0
-     * @note[short] Windows: 0x124a40
-     * @note[short] iOS: 0x3f26a8
+     * @note[short] MacOS (ARM): 0x46568
+     * @note[short] MacOS (Intel): 0x516c0
+     * @note[short] Windows: 0x1267f0
+     * @note[short] iOS: 0x3fa718
      * @note[short] Android
      */
-    virtual void scrollWheel(float p0, float p1);
+    virtual void scrollWheel(float y, float x);
 
     /**
-     * @note[short] MacOS (ARM): 0x464d4
-     * @note[short] MacOS (Intel): 0x4e8b0
-     * @note[short] Windows: 0x121560
-     * @note[short] iOS: 0x3f01fc
+     * @note[short] MacOS (ARM): 0x439bc
+     * @note[short] MacOS (Intel): 0x4e500
+     * @note[short] Windows: 0x123110
+     * @note[short] iOS: 0x3f8110
      * @note[short] Android
      */
     virtual void angleChangeBegin();
 
     /**
-     * @note[short] MacOS (ARM): 0x464f0
-     * @note[short] MacOS (Intel): 0x4e8f0
+     * @note[short] MacOS (ARM): 0x439d8
+     * @note[short] MacOS (Intel): 0x4e540
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3f0218
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x3f812c
+     * @note[short] Android
      */
     virtual void angleChangeEnded();
 
     /**
-     * @note[short] MacOS (ARM): 0x464f8
-     * @note[short] MacOS (Intel): 0x4e910
-     * @note[short] Windows: 0x121570
-     * @note[short] iOS: 0x3f0220
+     * @note[short] MacOS (ARM): 0x439e0
+     * @note[short] MacOS (Intel): 0x4e560
+     * @note[short] Windows: 0x123120
+     * @note[short] iOS: 0x3f8134
      * @note[short] Android
      */
-    virtual void angleChanged(float p0);
+    virtual void angleChanged(float rotation);
 
     /**
-     * @note[short] MacOS (ARM): 0x39f48
-     * @note[short] MacOS (Intel): 0x3f540
-     * @note[short] Windows: 0x113550
-     * @note[short] iOS: 0x3e75c4
+     * @note[short] MacOS (ARM): 0x37164
+     * @note[short] MacOS (Intel): 0x3ee40
+     * @note[short] Windows: 0x114df0
+     * @note[short] iOS: 0x3ef2bc
      * @note[short] Android
      */
     virtual void updateScaleControl();
 
     /**
-     * @note[short] MacOS (ARM): 0x3bc28
-     * @note[short] MacOS (Intel): 0x415f0
-     * @note[short] Windows: 0x114060
-     * @note[short] iOS: 0x3e8a68
+     * @note[short] MacOS (ARM): 0x38df0
+     * @note[short] MacOS (Intel): 0x40f10
+     * @note[short] Windows: 0x115900
+     * @note[short] iOS: 0x3f079c
      * @note[short] Android
      */
-    virtual void anchorPointMoved(cocos2d::CCPoint p0);
+    virtual void anchorPointMoved(cocos2d::CCPoint anchorPoint);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a590
-     * @note[short] MacOS (Intel): 0x3fc70
-     * @note[short] Windows: 0x1136b0
-     * @note[short] iOS: 0x3e7aac
+     * @note[short] MacOS (ARM): 0x377a8
+     * @note[short] MacOS (Intel): 0x3f5e0
+     * @note[short] Windows: 0x114f50
+     * @note[short] iOS: 0x3ef7f0
      * @note[short] Android
      */
     virtual void scaleChangeBegin();
 
     /**
-     * @note[short] MacOS (ARM): 0x3a5ac
-     * @note[short] MacOS (Intel): 0x3fcb0
+     * @note[short] MacOS (ARM): 0x377c4
+     * @note[short] MacOS (Intel): 0x3f620
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3e7ac8
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x3ef80c
+     * @note[short] Android
      */
     virtual void scaleChangeEnded();
 
     /**
-     * @note[short] MacOS (ARM): 0x3a5b4
-     * @note[short] MacOS (Intel): 0x3fcd0
-     * @note[short] Windows: 0x1136c0
-     * @note[short] iOS: 0x3e7ad0
+     * @note[short] MacOS (ARM): 0x377cc
+     * @note[short] MacOS (Intel): 0x3f640
+     * @note[short] Windows: 0x114f60
+     * @note[short] iOS: 0x3ef814
      * @note[short] Android
      */
-    virtual void scaleXChanged(float p0, bool p1);
+    virtual void scaleXChanged(float scaleX, bool lock);
 
     /**
-     * @note[short] MacOS (ARM): 0x3abec
-     * @note[short] MacOS (Intel): 0x40440
-     * @note[short] Windows: 0x113770
-     * @note[short] iOS: 0x3e7ec4
+     * @note[short] MacOS (ARM): 0x37dec
+     * @note[short] MacOS (Intel): 0x3fd70
+     * @note[short] Windows: 0x115010
+     * @note[short] iOS: 0x3efc04
      * @note[short] Android
      */
-    virtual void scaleYChanged(float p0, bool p1);
+    virtual void scaleYChanged(float scaleY, bool lock);
 
     /**
-     * @note[short] MacOS (ARM): 0x3ad30
-     * @note[short] MacOS (Intel): 0x40590
-     * @note[short] Windows: 0x113820
-     * @note[short] iOS: 0x3e7f6c
+     * @note[short] MacOS (ARM): 0x37f20
+     * @note[short] MacOS (Intel): 0x3feb0
+     * @note[short] Windows: 0x1150c0
+     * @note[short] iOS: 0x3efcac
      * @note[short] Android
      */
-    virtual void scaleXYChanged(float p0, float p1, bool p2);
+    virtual void scaleXYChanged(float scaleX, float scaleY, bool lock);
 
     /**
-     * @note[short] MacOS (ARM): 0x3878c
-     * @note[short] MacOS (Intel): 0x3dc70
-     * @note[short] Windows: 0x121420
-     * @note[short] iOS: 0x3e6664
+     * @note[short] MacOS (ARM): 0x35910
+     * @note[short] MacOS (Intel): 0x3d5b0
+     * @note[short] Windows: 0x122fd0
+     * @note[short] iOS: 0x3ee398
      * @note[short] Android
      */
-    void activateRotationControl(cocos2d::CCObject* p0);
+    void activateRotationControl(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x39c78
-     * @note[short] MacOS (Intel): 0x3f250
-     * @note[short] Windows: 0x113280
-     * @note[short] iOS: 0x3e7408
+     * @note[short] MacOS (ARM): 0x36e94
+     * @note[short] MacOS (Intel): 0x3eb50
+     * @note[short] Windows: 0x114b20
+     * @note[short] iOS: 0x3ef100
      * @note[short] Android
      */
-    void activateScaleControl(cocos2d::CCObject* p0);
+    void activateScaleControl(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3aec4
-     * @note[short] MacOS (Intel): 0x40720
-     * @note[short] Windows: 0x1138d0
-     * @note[short] iOS: 0x3e803c
+     * @note[short] MacOS (ARM): 0x380ac
+     * @note[short] MacOS (Intel): 0x40040
+     * @note[short] Windows: 0x115170
+     * @note[short] iOS: 0x3efd7c
      * @note[short] Android
      */
-    void activateTransformControl(cocos2d::CCObject* p0);
+    void activateTransformControl(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x114390
+     * @note[short] MacOS (ARM): 0x39190
+     * @note[short] MacOS (Intel): 0x41320
+     * @note[short] Windows: 0x115c30
+     * @note[short] iOS: 0x3f0a84
      * @note[short] Android
      */
-    void addObjectsToSmartTemplate(GJSmartTemplate* p0, cocos2d::CCArray* p1);
+    void addObjectsToSmartTemplate(GJSmartTemplate* smartTemplate, cocos2d::CCArray* objects);
 
     /**
+     * @note[short] MacOS (ARM): 0x32f6c
+     * @note[short] MacOS (Intel): 0x3a490
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn addSnapPosition(cocos2d::CCPoint p0);
+    void addSnapPosition(cocos2d::CCPoint position);
 
     /**
-     * @note[short] MacOS (ARM): 0x45afc
-     * @note[short] MacOS (Intel): 0x4de50
-     * @note[short] Windows: 0x1203a0
-     * @note[short] iOS: 0x3efa20
+     * @note[short] MacOS (ARM): 0x42f84
+     * @note[short] MacOS (Intel): 0x4da20
+     * @note[short] Windows: 0x121f20
+     * @note[short] iOS: 0x3f7930
      * @note[short] Android
      */
     void alignObjects(cocos2d::CCArray* objects, bool axisY);
 
     /**
-     * @note[short] Windows: 0x120d40
-     * @note[short] iOS: 0x3e4a18
+     * @note[short] MacOS (ARM): 0x330b8
+     * @note[short] MacOS (Intel): 0x3a5e0
+     * @note[short] Windows: 0x1228f0
+     * @note[short] iOS: 0x3ec7ec
      * @note[short] Android
      */
-    void applyOffset(GameObject* p0);
+    void applyOffset(GameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0x43704
+     * @note[short] MacOS (Intel): 0x4e210
+     * @note[short] Windows: 0x122660
+     * @note[short] iOS: 0x3f7ef8
      * @note[short] Android
      */
-    TodoReturn applySpecialOffset(cocos2d::CCPoint p0, GameObject* p1, cocos2d::CCPoint p2);
+    cocos2d::CCPoint applySpecialOffset(cocos2d::CCPoint position, GameObject* object, cocos2d::CCPoint offset);
 
     /**
+     * @note[short] MacOS (ARM): 0x3fa38
+     * @note[short] MacOS (Intel): 0x49130
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3f51fc
      * @note[short] Android
      */
-    TodoReturn arrayContainsClass(cocos2d::CCArray* p0, int p1);
+    bool arrayContainsClass(cocos2d::CCArray* objects, int classType);
 
     /**
-     * @note[short] MacOS (ARM): 0x3f6a0
-     * @note[short] MacOS (Intel): 0x45970
-     * @note[short] Windows: 0x1178c0
-     * @note[short] iOS: 0x3eb650
+     * @note[short] MacOS (ARM): 0x3c8a0
+     * @note[short] MacOS (Intel): 0x45310
+     * @note[short] Windows: 0x119220
+     * @note[short] iOS: 0x3f338c
      * @note[short] Android
      */
     void assignNewGroups(bool groupY);
 
     /**
+     * @note[short] MacOS (ARM): 0x3fab0
+     * @note[short] MacOS (Intel): 0x491a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3f5274
      * @note[short] Android
      */
-    TodoReturn canAllowMultiActivate(GameObject* p0, cocos2d::CCArray* p1);
+    bool canAllowMultiActivate(GameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x373c8
-     * @note[short] MacOS (Intel): 0x3c770
-     * @note[short] Windows: 0x10ec30
-     * @note[short] iOS: 0x3e57f8
+     * @note[short] MacOS (ARM): 0x3453c
+     * @note[short] MacOS (Intel): 0x3c090
+     * @note[short] Windows: 0x110310
+     * @note[short] iOS: 0x3ed510
      * @note[short] Android
      */
     bool canSelectObject(GameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0x30454
+     * @note[short] MacOS (Intel): 0x335b0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3ea128
      * @note[short] Android
      */
-    TodoReturn centerCameraOnObject(GameObject* p0);
+    void centerCameraOnObject(GameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0x34ec4
+     * @note[short] MacOS (Intel): 0x3cb00
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3edde4
      * @note[short] Android
      */
-    TodoReturn changeSelectedObjects(cocos2d::CCArray* p0, bool p1);
+    void changeSelectedObjects(cocos2d::CCArray* objects, bool ignoreFilter);
 
     /**
-     * @note[short] Windows: 0x1140e0
+     * @note[short] MacOS (ARM): 0x38f1c
+     * @note[short] MacOS (Intel): 0x41060
+     * @note[short] Windows: 0x115980
+     * @note[short] iOS: 0x3f0810
      * @note[short] Android
      */
-    TodoReturn checkDiffAfterTransformAnchor(cocos2d::CCPoint p0, cocos2d::CCArray* p1);
+    void checkDiffAfterTransformAnchor(cocos2d::CCPoint diff, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] Windows: 0x10ef50
+     * @note[short] MacOS (ARM): 0x34ad0
+     * @note[short] MacOS (Intel): 0x3c660
+     * @note[short] Windows: 0x110630
+     * @note[short] iOS: 0x3eda58
      * @note[short] Android
      */
     void checkLiveColorSelect();
 
     /**
-     * @note[short] MacOS (ARM): 0x2d9d4
-     * @note[short] MacOS (Intel): 0x2dfa0
-     * @note[short] Windows: 0xe1040
-     * @note[short] iOS: 0x3dea18
+     * @note[short] MacOS (ARM): 0x2ac2c
+     * @note[short] MacOS (Intel): 0x2da70
+     * @note[short] Windows: 0xe26e0
+     * @note[short] iOS: 0x3e66f8
      * @note[short] Android
      */
-    void clickOnPosition(cocos2d::CCPoint p0);
+    void clickOnPosition(cocos2d::CCPoint position);
 
     /**
+     * @note[short] MacOS (ARM): 0x34c08
+     * @note[short] MacOS (Intel): 0x3c7c0
+     * @note[short] Windows: 0x11efa0
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn closeLiveColorSelect();
+    void closeLiveColorSelect();
 
     /**
+     * @note[short] MacOS (ARM): 0x34d5c
+     * @note[short] MacOS (Intel): 0x3c960
+     * @note[short] Windows: 0x11f1f0
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn closeLiveHSVSelect();
+    void closeLiveHSVSelect();
 
     /**
+     * @note[short] MacOS (ARM): 0x4071c
+     * @note[short] MacOS (Intel): 0x4a060
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void colorSelectClosed(cocos2d::ccColor3B p0);
+    void colorSelectClosed(cocos2d::ccColor3B color);
 
     /**
+     * @note[short] MacOS (ARM): 0x2c0f8
+     * @note[short] MacOS (Intel): 0x2ef90
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void constrainGameLayerPosition();
 
     /**
-     * @note[short] MacOS (ARM): 0x2b208
-     * @note[short] MacOS (Intel): 0x2afb0
-     * @note[short] Windows: 0x120dd0
-     * @note[short] iOS: 0x3dc880
+     * @note[short] MacOS (ARM): 0x2822c
+     * @note[short] MacOS (Intel): 0x2a910
+     * @note[short] Windows: 0x122980
+     * @note[short] iOS: 0x3e4400
      * @note[short] Android
      */
-    void constrainGameLayerPosition(float p0, float p1);
+    void constrainGameLayerPosition(float x, float y);
 
     /**
+     * @note[short] MacOS (ARM): 0x538bfc
+     * @note[short] MacOS (Intel): 0x613a10
+     * @note[short] Windows: 0x12deb0
+     * @note[short] iOS: 0x77dd8
      * @note[short] Android
      */
-    TodoReturn convertKeyBasedOnNeighbors(int p0, int p1, cocos2d::CCPoint p2, cocos2d::CCArray* p3);
+    int convertKeyBasedOnNeighbors(int smartKey, int objectID, cocos2d::CCPoint position, cocos2d::CCArray* objects);
 
     /**
+     * @note[short] MacOS (ARM): 0x538b20
+     * @note[short] MacOS (Intel): 0x613900
+     * @note[short] Windows: 0x12ddb0
+     * @note[short] iOS: 0x77cfc
      * @note[short] Android
      */
-    TodoReturn convertToBaseKey(int p0);
+    int convertToBaseKey(int objectID);
 
     /**
-     * @note[short] MacOS (ARM): 0x309d4
-     * @note[short] MacOS (Intel): 0x31280
-     * @note[short] Windows: 0x111560
-     * @note[short] iOS: 0x3e0a08
+     * @note[short] MacOS (ARM): 0x2dccc
+     * @note[short] MacOS (Intel): 0x30d50
+     * @note[short] Windows: 0x112e00
+     * @note[short] iOS: 0x3e8768
      * @note[short] Android
      */
     gd::string copyObjects(cocos2d::CCArray* objects, bool copyColors, bool sort);
 
     /**
+     * @note[short] MacOS (ARM): 0x36180
+     * @note[short] MacOS (Intel): 0x3de90
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3ee8f8
      * @note[short] Android
      */
-    TodoReturn copyObjectsDetailed(cocos2d::CCArray* p0);
+    gd::string copyObjectsDetailed(cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x3122c
-     * @note[short] MacOS (Intel): 0x31b80
-     * @note[short] Windows: 0xe30e0
-     * @note[short] iOS: 0x3e0ec8
+     * @note[short] MacOS (ARM): 0x2e518
+     * @note[short] MacOS (Intel): 0x31690
+     * @note[short] Windows: 0xe4780
+     * @note[short] iOS: 0x3e8c20
      * @note[short] Android
      */
     cocos2d::CCArray* createCustomItems();
 
     /**
+     * @note[short] MacOS (ARM): 0x5394dc
+     * @note[short] MacOS (Intel): 0x6144b0
+     * @note[short] Windows: 0x12e690
+     * @note[short] iOS: 0x786a0
      * @note[short] Android
      */
-    TodoReturn createEdgeForObject(GameObject* p0, int p1);
+    GameObject* createEdgeForObject(GameObject* object, int type);
 
     /**
+     * @note[short] MacOS (ARM): 0x53cd88
+     * @note[short] MacOS (Intel): 0x618a40
+     * @note[short] Windows: 0x132c80
+     * @note[short] iOS: 0x7c008
      * @note[short] Android
      */
-    TodoReturn createExtraObject(int p0, cocos2d::CCPoint p1, GameObject* p2, cocos2d::CCArray* p3, int p4, int p5);
+    void createExtraObject(int id, cocos2d::CCPoint position, GameObject* object, cocos2d::CCArray* objects, int zOrder, int editorLayer);
 
     /**
+     * @note[short] MacOS (ARM): 0x53a938
+     * @note[short] MacOS (Intel): 0x616090
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x79bd4
      * @note[short] Android
      */
-    TodoReturn createExtras(cocos2d::CCArray* p0);
+    cocos2d::CCArray* createExtras(cocos2d::CCArray* objects);
 
     /**
+     * @note[short] MacOS (ARM): 0x53a9f4
+     * @note[short] MacOS (Intel): 0x616120
+     * @note[short] Windows: 0x12ff20
+     * @note[short] iOS: 0x79c74
      * @note[short] Android
      */
-    TodoReturn createExtrasForObject(int p0, GameObject* p1, cocos2d::CCArray* p2);
+    void createExtrasForObject(int id, GameObject* object, cocos2d::CCArray* objects);
 
     /**
+     * @note[short] MacOS (ARM): 0x3be60
+     * @note[short] MacOS (Intel): 0x44660
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn createGlow();
+    void createGlow();
 
     /**
-     * @note[short] MacOS (ARM): 0x3fa34
-     * @note[short] MacOS (Intel): 0x45d70
-     * @note[short] Windows: 0x117c90
-     * @note[short] iOS: 0x3eb930
+     * @note[short] MacOS (ARM): 0x3cc84
+     * @note[short] MacOS (Intel): 0x45780
+     * @note[short] Windows: 0x119630
+     * @note[short] iOS: 0x3f3694
      * @note[short] Android
      */
     void createLoop();
 
     /**
-     * @note[short] MacOS (ARM): 0x400a8
-     * @note[short] MacOS (Intel): 0x464d0
-     * @note[short] Windows: 0x119350
-     * @note[short] iOS: 0x3ebe14
+     * @note[short] MacOS (ARM): 0x3d388
+     * @note[short] MacOS (Intel): 0x45f90
+     * @note[short] Windows: 0x11ad30
+     * @note[short] iOS: 0x3f3bac
      * @note[short] Android
      */
     void createMoveMenu();
 
     /**
-     * @note[short] Windows: 0x1179f0
+     * @note[short] MacOS (ARM): 0x3ca68
+     * @note[short] MacOS (Intel): 0x454f0
+     * @note[short] Windows: 0x119390
+     * @note[short] iOS: 0x3f34d4
      * @note[short] Android
      */
     void createNewKeyframeAnim();
 
     /**
-     * @note[short] MacOS (ARM): 0x35d7c
-     * @note[short] MacOS (Intel): 0x3aa80
-     * @note[short] Windows: 0x10e840
-     * @note[short] iOS: 0x3e4914
+     * @note[short] MacOS (ARM): 0x32fb4
+     * @note[short] MacOS (Intel): 0x3a4d0
+     * @note[short] Windows: 0x10ff20
+     * @note[short] iOS: 0x3ec6e8
      * @note[short] Android
      */
-    GameObject* createObject(int p0, cocos2d::CCPoint p1);
+    GameObject* createObject(int objectID, cocos2d::CCPoint position);
 
     /**
+     * @note[short] MacOS (ARM): 0x53980c
+     * @note[short] MacOS (Intel): 0x614820
+     * @note[short] Windows: 0x12ecf0
+     * @note[short] iOS: 0x789a0
      * @note[short] Android
      */
-    TodoReturn createOutlines(cocos2d::CCArray* p0);
+    cocos2d::CCArray* createOutlines(cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x3dfc0
-     * @note[short] MacOS (Intel): 0x43f80
-     * @note[short] Windows: 0x1160f0
-     * @note[short] iOS: 0x3ea55c
+     * @note[short] MacOS (ARM): 0x3b104
+     * @note[short] MacOS (Intel): 0x43800
+     * @note[short] Windows: 0x1179a0
+     * @note[short] iOS: 0x3f2244
      * @note[short] Android: Rebinded
      */
-    void createPrefab(GJSmartTemplate* p0, gd::string p1, int p2);
+    void createPrefab(GJSmartTemplate* smartTemplate, gd::string key, int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x52bf0c
-     * @note[short] MacOS (Intel): 0x5fd600
-     * @note[short] Windows: 0x12da00
+     * @note[short] MacOS (ARM): 0x53a178
+     * @note[short] MacOS (Intel): 0x6154b0
+     * @note[short] Windows: 0x12f5f0
+     * @note[short] iOS: 0x79380
      * @note[short] Android
      */
-    cocos2d::CCArray* createRockBases(cocos2d::CCArray* p0);
+    cocos2d::CCArray* createRockBases(cocos2d::CCArray* objects);
 
     /**
+     * @note[short] MacOS (ARM): 0x5391a4
+     * @note[short] MacOS (Intel): 0x614110
+     * @note[short] Windows: 0x12e320
+     * @note[short] iOS: 0x78378
      * @note[short] Android
      */
-    TodoReturn createRockEdges(cocos2d::CCArray* p0);
+    cocos2d::CCArray* createRockEdges(cocos2d::CCArray* objects);
 
     /**
-     * @note[short] Windows: 0x115580
+     * @note[short] MacOS (ARM): 0x3a480
+     * @note[short] MacOS (Intel): 0x42a20
+     * @note[short] Windows: 0x116e20
+     * @note[short] iOS: 0x3f16fc
      * @note[short] Android
      */
-    void createSmartObjectsFromTemplate(GJSmartTemplate* p0, cocos2d::CCArray* p1, bool p2, bool p3, bool p4, bool p5);
+    void createSmartObjectsFromTemplate(GJSmartTemplate* smartTemplate, cocos2d::CCArray* objects, bool useNearby, bool dontDelete, bool referenceOnly, bool dontPaste);
 
     /**
-     * @note[short] Windows: 0x116660
+     * @note[short] MacOS (ARM): 0x3b5e4
+     * @note[short] MacOS (Intel): 0x43d70
+     * @note[short] Windows: 0x117f10
+     * @note[short] iOS: 0x3f25a8
      * @note[short] Android
      */
-    void createSmartObjectsFromType(int p0, cocos2d::CCArray* p1, bool p2, bool p3);
+    void createSmartObjectsFromType(int type, cocos2d::CCArray* objects, bool extras, bool dontDelete);
 
     /**
-     * @note[short] MacOS (ARM): 0x37f50
-     * @note[short] MacOS (Intel): 0x3d3e0
-     * @note[short] Windows: 0x10f830
-     * @note[short] iOS: 0x3e62ac
+     * @note[short] MacOS (ARM): 0x350dc
+     * @note[short] MacOS (Intel): 0x3cd20
+     * @note[short] Windows: 0x110f30
+     * @note[short] iOS: 0x3edfdc
      * @note[short] Android
      */
-    UndoObject* createUndoObject(UndoCommand p0, bool p1);
+    UndoObject* createUndoObject(UndoCommand command, bool addToList);
 
     /**
-     * @note[short] MacOS (ARM): 0x2e58c
-     * @note[short] MacOS (Intel): 0x2ebf0
-     * @note[short] Windows: 0x10fb50
-     * @note[short] iOS: 0x3df104
+     * @note[short] MacOS (ARM): 0x2b814
+     * @note[short] MacOS (Intel): 0x2e740
+     * @note[short] Windows: 0x111250
+     * @note[short] iOS: 0x3e6e0c
      * @note[short] Android
      */
-    void createUndoSelectObject(bool p0);
+    void createUndoSelectObject(bool redo);
 
     /**
-     * @note[short] MacOS (ARM): 0xd338
-     * @note[short] MacOS (Intel): 0xbf40
+     * @note[short] MacOS (ARM): 0xa3c4
+     * @note[short] MacOS (Intel): 0xb8e0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3bf430
+     * @note[short] iOS: 0x3c6f98
      * @note[short] Android
      */
     void deactivateRotationControl();
 
     /**
-     * @note[short] Windows: 0x113480
+     * @note[short] MacOS (ARM): 0xa548
+     * @note[short] MacOS (Intel): 0xbab0
+     * @note[short] Windows: 0x114d20
+     * @note[short] iOS: 0x3c7068
      * @note[short] Android
      */
     void deactivateScaleControl();
 
     /**
-     * @note[short] MacOS (ARM): 0xd5dc
-     * @note[short] MacOS (Intel): 0xc200
-     * @note[short] Windows: 0x113ad0
-     * @note[short] iOS: 0x3bf614
+     * @note[short] MacOS (ARM): 0xa668
+     * @note[short] MacOS (Intel): 0xbbb0
+     * @note[short] Windows: 0x115370
+     * @note[short] iOS: 0x3c717c
      * @note[short] Android
      */
     void deactivateTransformControl();
 
     /**
-     * @note[short] MacOS (ARM): 0x325f8
-     * @note[short] MacOS (Intel): 0x32f70
+     * @note[short] MacOS (ARM): 0x2f8b4
+     * @note[short] MacOS (Intel): 0x32a20
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3e1e9c
+     * @note[short] iOS: 0x3e9be8
      * @note[short] Android
      */
     void deleteObject(GameObject* object, bool noUndo);
 
     /**
-     * @note[short] Windows: 0x116500
+     * @note[short] MacOS (ARM): 0x313d8
+     * @note[short] MacOS (Intel): 0x34650
+     * @note[short] Windows: 0x117db0
+     * @note[short] iOS: 0x3eaea0
      * @note[short] Android
      */
-    void deleteSmartBlocksFromObjects(cocos2d::CCArray* p0);
+    void deleteSmartBlocksFromObjects(cocos2d::CCArray* objects);
 
     /**
+     * @note[short] MacOS (ARM): 0x31498
+     * @note[short] MacOS (Intel): 0x34710
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3eaf50
      * @note[short] Android
      */
     void deleteTypeFromObjects(int id, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x328b0
-     * @note[short] MacOS (Intel): 0x33240
-     * @note[short] Windows: 0x10fd80
-     * @note[short] iOS: 0x3e1f84
+     * @note[short] MacOS (ARM): 0x2fb6c
+     * @note[short] MacOS (Intel): 0x32cf0
+     * @note[short] Windows: 0x111480
+     * @note[short] iOS: 0x3e9cd0
      * @note[short] Android
      */
     void deselectAll();
 
     /**
-     * @note[short] MacOS (ARM): 0x32a98
-     * @note[short] MacOS (Intel): 0x33450
+     * @note[short] MacOS (ARM): 0x2fd54
+     * @note[short] MacOS (Intel): 0x32f00
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3e2010
+     * @note[short] iOS: 0x3e9d5c
      * @note[short] Android
      */
     void deselectObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x32808
-     * @note[short] MacOS (Intel): 0x331a0
-     * @note[short] Windows: 0x10fc60
-     * @note[short] iOS: 0x3e1f00
+     * @note[short] MacOS (ARM): 0x2fac4
+     * @note[short] MacOS (Intel): 0x32c50
+     * @note[short] Windows: 0x111360
+     * @note[short] iOS: 0x3e9c4c
      * @note[short] Android
      */
-    void deselectObject(GameObject* p0);
+    void deselectObject(GameObject* object);
 
     /**
-     * @note[short] Windows: 0x10f0b0
+     * @note[short] MacOS (ARM): 0x34e54
+     * @note[short] MacOS (Intel): 0x3ca80
+     * @note[short] Windows: 0x110790
+     * @note[short] iOS: 0x3edd74
      * @note[short] Android
      */
     void deselectObjectsColor();
 
     /**
-     * @note[short] MacOS (ARM): 0x324a8
-     * @note[short] MacOS (Intel): 0x32e10
-     * @note[short] Windows: 0xe51b0
+     * @note[short] MacOS (ARM): 0x2f764
+     * @note[short] MacOS (Intel): 0x328c0
+     * @note[short] Windows: 0xe6870
+     * @note[short] iOS: 0x3e9afc
      * @note[short] Android
      */
     void deselectTargetPortals();
 
     /**
+     * @note[short] MacOS (ARM): 0x2bab4
+     * @note[short] MacOS (Intel): 0x2e9b0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3e7064
      * @note[short] Android
      */
-    TodoReturn disableButton(CreateMenuItem* p0);
+    void disableButton(CreateMenuItem* button);
 
     /**
-     * @note[short] MacOS (ARM): 0x391d4
-     * @note[short] MacOS (Intel): 0x3e700
-     * @note[short] Windows: 0x111900
-     * @note[short] iOS: 0x3e6d64
+     * @note[short] MacOS (ARM): 0x36364
+     * @note[short] MacOS (Intel): 0x3e050
+     * @note[short] Windows: 0x1131a0
+     * @note[short] iOS: 0x3eeaac
      * @note[short] Android
      */
-    void doCopyObjects(bool p0);
+    void doCopyObjects(bool withColor);
 
     /**
+     * @note[short] MacOS (ARM): 0x3671c
+     * @note[short] MacOS (Intel): 0x3e450
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn doPasteInPlace(bool p0);
+    void doPasteInPlace(bool withColor);
 
     /**
-     * @note[short] MacOS (ARM): 0x392cc
-     * @note[short] MacOS (Intel): 0x3e820
-     * @note[short] Windows: 0x111a90
-     * @note[short] iOS: 0x3e6e5c
+     * @note[short] MacOS (ARM): 0x3645c
+     * @note[short] MacOS (Intel): 0x3e170
+     * @note[short] Windows: 0x113330
+     * @note[short] iOS: 0x3eeba4
      * @note[short] Android
      */
-    void doPasteObjects(bool p0);
+    void doPasteObjects(bool withColor);
 
     /**
-     * @note[short] MacOS (ARM): 0x3ed20
-     * @note[short] MacOS (Intel): 0x44e10
-     * @note[short] Windows: 0x117000
-     * @note[short] iOS: 0x3eafa8
+     * @note[short] MacOS (ARM): 0x3be64
+     * @note[short] MacOS (Intel): 0x44670
+     * @note[short] Windows: 0x1188b0
+     * @note[short] iOS: 0x3f2c64
      * @note[short] Android
      */
-    void dynamicGroupUpdate(bool p0);
+    void dynamicGroupUpdate(bool reGroup);
 
     /**
+     * @note[short] MacOS (ARM): 0x5396a4
+     * @note[short] MacOS (Intel): 0x614670
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x78850
      * @note[short] Android
      */
-    TodoReturn edgeForObject(int p0, int p1);
+    int edgeForObject(int id, int type);
 
     /**
-     * @note[short] MacOS (ARM): 0x4238c
-     * @note[short] MacOS (Intel): 0x492e0
+     * @note[short] MacOS (ARM): 0x3f6bc
+     * @note[short] MacOS (Intel): 0x48d80
+     * @note[short] Windows: 0x11a520
+     * @note[short] iOS: 0x3f4fb8
      * @note[short] Android
      */
     bool editButton2Usable();
 
     /**
-     * @note[short] MacOS (ARM): 0x41e60
-     * @note[short] MacOS (Intel): 0x48580
-     * @note[short] Windows: 0x1182f0
-     * @note[short] iOS: 0x3eccac
+     * @note[short] MacOS (ARM): 0x3f108
+     * @note[short] MacOS (Intel): 0x48020
+     * @note[short] Windows: 0x119cd0
+     * @note[short] iOS: 0x3f4a44
      * @note[short] Android
      */
     bool editButtonUsable();
 
     /**
+     * @note[short] MacOS (ARM): 0x34c38
+     * @note[short] MacOS (Intel): 0x3c7f0
+     * @note[short] Windows: 0x11ed90
+     * @note[short] iOS: 0x3edb88
      * @note[short] Android
      */
-    TodoReturn editColor();
+    void editColor();
 
     /**
+     * @note[short] MacOS (ARM): 0x40374
+     * @note[short] MacOS (Intel): 0x49bb0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn editColorButtonUsable();
+    bool editColorButtonUsable();
 
     /**
-     * @note[short] MacOS (ARM): 0x2c4d0
-     * @note[short] MacOS (Intel): 0x2c8f0
-     * @note[short] Windows: 0x11d880
+     * @note[short] MacOS (ARM): 0x295e8
+     * @note[short] MacOS (Intel): 0x2c240
+     * @note[short] Windows: 0x11f260
+     * @note[short] iOS: 0x3e56ac
      * @note[short] Android
      */
-    void editGroup(cocos2d::CCObject* p0);
+    void editGroup(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x34d8c
+     * @note[short] MacOS (Intel): 0x3c990
+     * @note[short] Windows: 0x11f010
+     * @note[short] iOS: 0x3edcac
      * @note[short] Android
      */
-    TodoReturn editHSV();
+    void editHSV();
 
     /**
-     * @note[short] MacOS (ARM): 0x2b750
-     * @note[short] MacOS (Intel): 0x2b550
-     * @note[short] Windows: 0x11a510
-     * @note[short] iOS: 0x3dcd18
+     * @note[short] MacOS (ARM): 0x28764
+     * @note[short] MacOS (Intel): 0x2ae90
+     * @note[short] Windows: 0x11bef0
+     * @note[short] iOS: 0x3e4898
      * @note[short] Android
      */
-    void editObject(cocos2d::CCObject* p0);
+    void editObject(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2b748
-     * @note[short] MacOS (Intel): 0x2b540
-     * @note[short] Windows: 0x11c4a0
-     * @note[short] iOS: 0x3dcd10
+     * @note[short] MacOS (ARM): 0x2875c
+     * @note[short] MacOS (Intel): 0x2ae80
+     * @note[short] Windows: 0x11de80
+     * @note[short] iOS: 0x3e4890
      * @note[short] Android
      */
-    void editObject2(cocos2d::CCObject* p0);
+    void editObject2(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4304c
-     * @note[short] MacOS (Intel): 0x4a0e0
+     * @note[short] MacOS (ARM): 0x4036c
+     * @note[short] MacOS (Intel): 0x49ba0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void editObject3(cocos2d::CCObject* p0);
+    void editObject3(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x42aa0
-     * @note[short] MacOS (Intel): 0x499d0
-     * @note[short] Windows: 0x11c4b0
-     * @note[short] iOS: 0x3ed75c
+     * @note[short] MacOS (ARM): 0x3fdc0
+     * @note[short] MacOS (Intel): 0x49460
+     * @note[short] Windows: 0x11de90
+     * @note[short] iOS: 0x3f54e8
      * @note[short] Android
      */
-    void editObjectSpecial(int p0);
+    void editObjectSpecial(int type);
 
     /**
+     * @note[short] MacOS (ARM): 0x2ab40
+     * @note[short] MacOS (Intel): 0x2d9a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3e665c
      * @note[short] Android
      */
-    TodoReturn editorLayerForArray(cocos2d::CCArray* p0, bool p1);
+    int editorLayerForArray(cocos2d::CCArray* objects, bool layer2);
 
     /**
+     * @note[short] MacOS (ARM): 0x2b980
+     * @note[short] MacOS (Intel): 0x2e8a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3e6f30
      * @note[short] Android
      */
-    TodoReturn enableButton(CreateMenuItem* p0);
+    void enableButton(CreateMenuItem* button);
 
     /**
+     * @note[short] MacOS (ARM): 0x302a0
+     * @note[short] MacOS (Intel): 0x333e0
+     * @note[short] Windows: 0xe6ee0
+     * @note[short] iOS: 0x3ea024
      * @note[short] Android
      */
-    TodoReturn findAndSelectObject(int p0, bool p1);
+    void findAndSelectObject(int id, bool useUniqueID);
 
     /**
-     * @note[short] MacOS (ARM): 0x46738
-     * @note[short] MacOS (Intel): 0x4eb50
-     * @note[short] Windows: 0x121790
-     * @note[short] iOS: 0x3f0448
+     * @note[short] MacOS (ARM): 0x43c20
+     * @note[short] MacOS (Intel): 0x4e7a0
+     * @note[short] Windows: 0x123340
+     * @note[short] iOS: 0x3f835c
      * @note[short] Android
      */
-    void findSnapObject(cocos2d::CCArray* p0, float p1);
+    void findSnapObject(cocos2d::CCArray* objects, float offset);
 
     /**
-     * @note[short] MacOS (ARM): 0x46620
-     * @note[short] MacOS (Intel): 0x4ea40
-     * @note[short] Windows: 0x121690
-     * @note[short] iOS: 0x3f0338
+     * @note[short] MacOS (ARM): 0x43b08
+     * @note[short] MacOS (Intel): 0x4e690
+     * @note[short] Windows: 0x123240
+     * @note[short] iOS: 0x3f824c
      * @note[short] Android
      */
-    void findSnapObject(cocos2d::CCPoint p0, float p1);
+    void findSnapObject(cocos2d::CCPoint position, float offset);
 
     /**
+     * @note[short] MacOS (ARM): 0x3ca18
+     * @note[short] MacOS (Intel): 0x454a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn findTriggerTest();
+    void findTriggerTest();
 
     /**
-     * @note[short] MacOS (ARM): 0x3ddc0
-     * @note[short] MacOS (Intel): 0x43d70
-     * @note[short] Windows: 0x11f0f0
-     * @note[short] iOS: 0x3ea3d4
+     * @note[short] MacOS (ARM): 0x3af0c
+     * @note[short] MacOS (Intel): 0x435f0
+     * @note[short] Windows: 0x120c70
+     * @note[short] iOS: 0x3f20bc
      * @note[short] Android
      */
-    void flipObjectsX(cocos2d::CCArray* p0);
+    void flipObjectsX(cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x3dc18
-     * @note[short] MacOS (Intel): 0x43ba0
-     * @note[short] Windows: 0x11f2d0
-     * @note[short] iOS: 0x3ea24c
+     * @note[short] MacOS (ARM): 0x3ad6c
+     * @note[short] MacOS (Intel): 0x43420
+     * @note[short] Windows: 0x120e50
+     * @note[short] iOS: 0x3f1f34
      * @note[short] Android
      */
-    void flipObjectsY(cocos2d::CCArray* p0);
+    void flipObjectsY(cocos2d::CCArray* objects);
 
     /**
+     * @note[short] MacOS (ARM): 0x2bbc0
+     * @note[short] MacOS (Intel): 0x2ea90
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn getButton(char const* p0, int p1, cocos2d::SEL_MenuHandler p2, cocos2d::CCMenu* p3);
+    CCMenuItemSpriteExtra* getButton(char const* text, int width, cocos2d::SEL_MenuHandler selector, cocos2d::CCMenu* menu);
 
     /**
-     * @note[short] MacOS (ARM): 0x332f0
-     * @note[short] MacOS (Intel): 0x33c60
-     * @note[short] Windows: 0x10d2a0
-     * @note[short] iOS: 0x3e24b8
+     * @note[short] MacOS (ARM): 0x305b0
+     * @note[short] MacOS (Intel): 0x33700
+     * @note[short] Windows: 0x10e980
+     * @note[short] iOS: 0x3ea200
      * @note[short] Android
      */
     CreateMenuItem* getCreateBtn(int id, int bg);
 
     /**
-     * @note[short] MacOS (ARM): 0x2eb94
-     * @note[short] MacOS (Intel): 0x2f190
-     * @note[short] iOS: 0x3df54c
-     * @note[short] Android
-     */
-    CreateMenuItem* getCreateMenuItemButton(cocos2d::CCSprite* p0, cocos2d::SEL_MenuHandler p1, cocos2d::CCMenu* p2, float p3, int p4, cocos2d::CCPoint p5);
-
-    /**
-     * @note[short] Android
-     */
-    TodoReturn getCycledObject(cocos2d::CCArray* p0, bool p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x43088
-     * @note[short] MacOS (Intel): 0x4a120
-     * @note[short] Android
-     */
-    void getEditColorTargets(ColorAction*& p0, ColorAction*& p1, EffectGameObject*& p2);
-
-    /**
-     * @note[short] MacOS (ARM): 0x35130
-     * @note[short] MacOS (Intel): 0x35c40
+     * @note[short] MacOS (ARM): 0x2be24
+     * @note[short] MacOS (Intel): 0x2ecd0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3e3cc8
+     * @note[short] iOS: 0x3e7268
+     * @note[short] Android
+     */
+    CreateMenuItem* getCreateMenuItemButton(cocos2d::CCSprite* sprite, cocos2d::SEL_MenuHandler selector, cocos2d::CCMenu* menu, float scale, int background, cocos2d::CCPoint offset);
+
+    /**
+     * @note[short] MacOS (ARM): 0x2f53c
+     * @note[short] MacOS (Intel): 0x326f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3e9974
+     * @note[short] Android
+     */
+    GameObject* getCycledObject(cocos2d::CCArray* objects, bool dontSkipSelected);
+
+    /**
+     * @note[short] MacOS (ARM): 0x403a4
+     * @note[short] MacOS (Intel): 0x49be0
+     * @note[short] Windows: 0x11eb00
+     * @note[short] iOS: 0x3f59a0
+     * @note[short] Android
+     */
+    void getEditColorTargets(ColorAction*& mainColor, ColorAction*& detailColor, EffectGameObject*& object);
+
+    /**
+     * @note[short] MacOS (ARM): 0x32358
+     * @note[short] MacOS (Intel): 0x35690
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3eb9e0
      * @note[short] Android
      */
     cocos2d::CCPoint getGridSnappedPos(cocos2d::CCPoint pos);
 
     /**
-     * @note[short] MacOS (ARM): 0x36e28
-     * @note[short] MacOS (Intel): 0x3c1b0
-     * @note[short] Windows: 0x121190
-     * @note[short] iOS: 0x3e5280
+     * @note[short] MacOS (ARM): 0x33fa4
+     * @note[short] MacOS (Intel): 0x3baf0
+     * @note[short] Windows: 0x122d40
+     * @note[short] iOS: 0x3ecf98
      * @note[short] Android
      */
-    cocos2d::CCPoint getGroupCenter(cocos2d::CCArray* objs, bool p1);
+    cocos2d::CCPoint getGroupCenter(cocos2d::CCArray* objects, bool absolute);
 
     /**
+     * @note[short] MacOS (ARM): 0x3f5a4
+     * @note[short] MacOS (Intel): 0x48c30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3f4ea0
      * @note[short] Android
      */
-    TodoReturn getGroupInfo(GameObject* p0, cocos2d::CCArray* p1, int& p2, int& p3, int& p4);
+    void getGroupInfo(GameObject* selectedObject, cocos2d::CCArray* selectedObjects, int& objectID, int& classType, int& objectType);
 
     /**
-     * @note[short] Windows: 0x11e6f0
-     * @note[short] iOS: 0x3ee478
+     * @note[short] MacOS (ARM): 0x40d98
+     * @note[short] MacOS (Intel): 0x4a790
+     * @note[short] Windows: 0x120110
+     * @note[short] iOS: 0x3f6204
      * @note[short] Android
      */
-    cocos2d::CCPoint getLimitedPosition(cocos2d::CCPoint p0);
+    cocos2d::CCPoint getLimitedPosition(cocos2d::CCPoint position);
 
     /**
+     * @note[short] MacOS (ARM): 0xa6e4
+     * @note[short] MacOS (Intel): 0xbc30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    CCMenuItemSpriteExtra* getModeBtn(char const* p0, int p1);
+    CCMenuItemSpriteExtra* getModeBtn(char const* frameName, int tag);
 
     /**
-     * @note[short] Windows: 0x116f30
+     * @note[short] MacOS (ARM): 0x3bd78
+     * @note[short] MacOS (Intel): 0x44590
+     * @note[short] Windows: 0x1187e0
+     * @note[short] iOS: 0x3f2b84
      * @note[short] Android
      */
-    cocos2d::CCNode* getNeighbor(int p0, cocos2d::CCPoint p1, GJSmartDirection p2, cocos2d::CCArray* p3);
+    cocos2d::CCNode* getNeighbor(int smartKey, cocos2d::CCPoint position, GJSmartDirection direction, cocos2d::CCArray* objects);
 
     /**
+     * @note[short] MacOS (ARM): 0x32e74
+     * @note[short] MacOS (Intel): 0x3a3b0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3ec600
      * @note[short] Android
      */
-    TodoReturn getRandomStartKey(int p0);
+    cocos2d::CCPoint getRelativeOffset(GameObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x35c3c
-     * @note[short] MacOS (Intel): 0x3a960
-     * @note[short] Android
-     */
-    cocos2d::CCPoint getRelativeOffset(GameObject* p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x37eac
-     * @note[short] MacOS (Intel): 0x3d330
-     * @note[short] Windows: 0x10f780
-     * @note[short] iOS: 0x3e6210
+     * @note[short] MacOS (ARM): 0x35038
+     * @note[short] MacOS (Intel): 0x3cc70
+     * @note[short] Windows: 0x110e80
+     * @note[short] iOS: 0x3edf40
      * @note[short] Android
      */
     cocos2d::CCArray* getSelectedObjects();
 
     /**
+     * @note[short] MacOS (ARM): 0x2bd34
+     * @note[short] MacOS (Intel): 0x2ebf0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-    TodoReturn getSimpleButton(gd::string p0, cocos2d::SEL_MenuHandler p1, cocos2d::CCMenu* p2);
+    CCMenuItemSpriteExtra* getSimpleButton(gd::string frameName, cocos2d::SEL_MenuHandler selector, cocos2d::CCMenu* menu);
 
     /**
-     * @note[short] Windows: 0x116e10
+     * @note[short] MacOS (ARM): 0x3a380
+     * @note[short] MacOS (Intel): 0x42920
+     * @note[short] Windows: 0x1186c0
+     * @note[short] iOS: 0x3f15fc
      * @note[short] Android
      */
-    SmartGameObject* getSmartNeighbor(SmartGameObject* p0, cocos2d::CCPoint p1, GJSmartDirection p2, cocos2d::CCArray* p3);
+    SmartGameObject* getSmartNeighbor(SmartGameObject* object, cocos2d::CCPoint position, GJSmartDirection direction, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] Android
-     */
-    static int getSmartObjectKey(int p0, GJSmartDirection p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x43b14
-     * @note[short] MacOS (Intel): 0x4ad60
+     * @note[short] MacOS (ARM): 0x40e08
+     * @note[short] MacOS (Intel): 0x4a800
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3ee4e4
+     * @note[short] iOS: 0x3f6270
      * @note[short] Android
      */
-    float getSnapAngle(GameObject* p0, cocos2d::CCArray* p1);
+    float getSnapAngle(GameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0xd81c
-     * @note[short] MacOS (Intel): 0xc440
-     * @note[short] Windows: 0xe11d0
-     * @note[short] iOS: 0x3bf6f8
-     * @note[short] Android
-     */
-    CCMenuItemSpriteExtra* getSpriteButton(char const* spriteFrameName, cocos2d::SEL_MenuHandler selector, cocos2d::CCMenu* menu, float scale, int buttonKind, cocos2d::CCPoint offset);
-
-    /**
-     * @note[short] MacOS (ARM): 0xd6b0
-     * @note[short] MacOS (Intel): 0xc2d0
+     * @note[short] MacOS (ARM): 0xa73c
+     * @note[short] MacOS (Intel): 0xbc80
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
@@ -1097,683 +1302,836 @@ public:
     CCMenuItemSpriteExtra* getSpriteButton(char const* spriteFrameName, cocos2d::SEL_MenuHandler selector, cocos2d::CCMenu* menu, float scale);
 
     /**
-     * @note[short] MacOS (ARM): 0x2e9a0
-     * @note[short] MacOS (Intel): 0x2efb0
-     * @note[short] Windows: 0xe1260
-     * @note[short] iOS: 0x3df454
+     * @note[short] MacOS (ARM): 0xa8a8
+     * @note[short] MacOS (Intel): 0xbdf0
+     * @note[short] Windows: 0xe2870
+     * @note[short] iOS: 0x3c7260
+     * @note[short] Android
+     */
+    CCMenuItemSpriteExtra* getSpriteButton(char const* spriteFrameName, cocos2d::SEL_MenuHandler selector, cocos2d::CCMenu* menu, float scale, int buttonKind, cocos2d::CCPoint offset);
+
+    /**
+     * @note[short] MacOS (ARM): 0x2bc3c
+     * @note[short] MacOS (Intel): 0x2eb00
+     * @note[short] Windows: 0xe2900
+     * @note[short] iOS: 0x3e7170
      * @note[short] Android
      */
     CCMenuItemSpriteExtra* getSpriteButton(cocos2d::CCSprite* sprite, cocos2d::SEL_MenuHandler selector, cocos2d::CCMenu* menu, float scale, int buttonKind, cocos2d::CCPoint offset);
 
     /**
+     * @note[short] MacOS (ARM): 0x44118
+     * @note[short] MacOS (Intel): 0x4ecd0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3f864c
      * @note[short] Android
      */
-    TodoReturn getTouchPoint(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    cocos2d::CCPoint getTouchPoint(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
+     * @note[short] MacOS (ARM): 0x35260
+     * @note[short] MacOS (Intel): 0x3cec0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn getTransformState();
+    GJTransformState& getTransformState();
 
     /**
-     * @note[short] MacOS (ARM): 0x2ee78
-     * @note[short] MacOS (Intel): 0x2f470
+     * @note[short] MacOS (ARM): 0x2c108
+     * @note[short] MacOS (Intel): 0x2efb0
+     * @note[short] Windows: 0x122bc0
+     * @note[short] iOS: 0x3e74a8
      * @note[short] Android
      */
-    float getXMin(int p0);
+    float getXMin(int offset);
 
     /**
-     * @note[short] MacOS (ARM): 0xad4c
-     * @note[short] MacOS (Intel): 0x9710
-     * @note[short] Windows: 0xdde60
-     * @note[short] iOS: 0x3bd3d4
+     * @note[short] MacOS (ARM): 0x7d7c
+     * @note[short] MacOS (Intel): 0x9070
+     * @note[short] Windows: 0xdf390
+     * @note[short] iOS: 0x3c4e74
      * @note[short] Android
      */
     bool init(LevelEditorLayer* editorLayer);
 
     /**
+     * @note[short] MacOS (ARM): 0x3fb78
+     * @note[short] MacOS (Intel): 0x49250
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool isLiveColorSelectTrigger(GameObject* p0);
+    bool isLiveColorSelectTrigger(GameObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x44de8
-     * @note[short] MacOS (Intel): 0x4c2f0
-     * @note[short] Windows: 0x1272b0
+     * @note[short] MacOS (ARM): 0x42270
+     * @note[short] MacOS (Intel): 0x4bec0
+     * @note[short] Windows: 0x129060
+     * @note[short] iOS: 0x3f7500
      * @note[short] Android
      */
-    bool isSpecialSnapObject(int p0);
+    bool isSpecialSnapObject(int id);
 
     /**
+     * @note[short] MacOS (ARM): 0x3fb48
+     * @note[short] MacOS (Intel): 0x49220
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn liveEditColorUsable();
+    bool liveEditColorUsable();
 
     /**
-     * @note[short] MacOS (ARM): 0x315a4
-     * @note[short] MacOS (Intel): 0x31f10
-     * @note[short] Windows: 0x10d090
-     * @note[short] iOS: 0x3e1170
+     * @note[short] MacOS (ARM): 0x2e884
+     * @note[short] MacOS (Intel): 0x31a00
+     * @note[short] Windows: 0x10e770
+     * @note[short] iOS: 0x3e8ec8
      * @note[short] Android: Rebinded
      */
-    CreateMenuItem* menuItemFromObjectString(gd::string p0, int p1);
+    CreateMenuItem* menuItemFromObjectString(gd::string str, int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x435fc
-     * @note[short] MacOS (Intel): 0x4a7d0
-     * @note[short] Windows: 0x11de20
-     * @note[short] iOS: 0x3ee010
+     * @note[short] MacOS (ARM): 0x408f0
+     * @note[short] MacOS (Intel): 0x4a270
+     * @note[short] Windows: 0x11f840
+     * @note[short] iOS: 0x3f5d9c
      * @note[short] Android
      */
     cocos2d::CCPoint moveForCommand(EditCommand command);
 
     /**
-     * @note[short] MacOS (ARM): 0x2f18c
-     * @note[short] MacOS (Intel): 0x2f800
-     * @note[short] Windows: 0xe16b0
-     * @note[short] iOS: 0x3dfa64
+     * @note[short] MacOS (ARM): 0x2c46c
+     * @note[short] MacOS (Intel): 0x2f3a0
+     * @note[short] Windows: 0xe2d50
+     * @note[short] iOS: 0x3e77d0
      * @note[short] Android
      */
-    void moveGamelayer(cocos2d::CCPoint p0);
+    void moveGamelayer(cocos2d::CCPoint offset);
 
     /**
-     * @note[short] MacOS (ARM): 0x399d4
-     * @note[short] MacOS (Intel): 0x3ef90
-     * @note[short] Windows: 0x11e290
-     * @note[short] iOS: 0x3e7270
+     * @note[short] MacOS (ARM): 0x36bfc
+     * @note[short] MacOS (Intel): 0x3e8a0
+     * @note[short] Windows: 0x11fcb0
+     * @note[short] iOS: 0x3eef68
      * @note[short] Android
      */
-    void moveObject(GameObject* p0, cocos2d::CCPoint p1);
+    void moveObject(GameObject* object, cocos2d::CCPoint offset);
 
     /**
-     * @note[short] MacOS (ARM): 0x42a38
-     * @note[short] MacOS (Intel): 0x49970
-     * @note[short] Windows: 0x11dfd0
-     * @note[short] iOS: 0x3ed6f4
+     * @note[short] MacOS (ARM): 0x40a9c
+     * @note[short] MacOS (Intel): 0x4a470
+     * @note[short] Windows: 0x11fa20
+     * @note[short] iOS: 0x3f5f1c
      * @note[short] Android
      */
-    void moveObjectCall(cocos2d::CCObject* p0);
+    void moveObjectCall(EditCommand command);
 
     /**
-     * @note[short] MacOS (ARM): 0x437a8
-     * @note[short] MacOS (Intel): 0x4a9d0
-     * @note[short] Windows: 0x11e000
-     * @note[short] iOS: 0x3ee190
+     * @note[short] MacOS (ARM): 0x3fd58
+     * @note[short] MacOS (Intel): 0x49400
+     * @note[short] Windows: 0x11f9f0
+     * @note[short] iOS: 0x3f5480
      * @note[short] Android
      */
-    void moveObjectCall(EditCommand p0);
+    void moveObjectCall(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x35208
-     * @note[short] MacOS (Intel): 0x35d10
-     * @note[short] Windows: 0x124bf0
-     * @note[short] iOS: 0x3e3d3c
+     * @note[short] MacOS (ARM): 0x32430
+     * @note[short] MacOS (Intel): 0x35760
+     * @note[short] Windows: 0x1269a0
+     * @note[short] iOS: 0x3eba54
      * @note[short] Android
      */
-    cocos2d::CCPoint offsetForKey(int p0);
+    cocos2d::CCPoint offsetForKey(int id);
 
     /**
+     * @note[short] MacOS (ARM): 0x4355c
+     * @note[short] MacOS (Intel): 0x4e060
+     * @note[short] Windows: 0x122550
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn onAssignNewGroupID();
+    void onAssignNewGroupID();
 
     /**
-     * @note[short] MacOS (ARM): 0x31b94
-     * @note[short] MacOS (Intel): 0x324d0
-     * @note[short] Windows: 0xe5bd0
+     * @note[short] MacOS (ARM): 0x2ee6c
+     * @note[short] MacOS (Intel): 0x31fa0
+     * @note[short] Windows: 0xe72a0
+     * @note[short] iOS: 0x3e93dc
      * @note[short] Android
      */
     void onColorFilter(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x286d4
+     * @note[short] MacOS (Intel): 0x2ae00
+     * @note[short] Windows: 0x113190
+     * @note[short] iOS: 0x3e4814
      * @note[short] Android
      */
     void onCopy(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2c538
-     * @note[short] MacOS (Intel): 0x2c960
-     * @note[short] Windows: 0x112ac0
-     * @note[short] iOS: 0x3ddb38
+     * @note[short] MacOS (ARM): 0x296a8
+     * @note[short] MacOS (Intel): 0x2c310
+     * @note[short] Windows: 0x114360
+     * @note[short] iOS: 0x3e5744
      * @note[short] Android
      */
     void onCopyState(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2dfac
-     * @note[short] MacOS (Intel): 0x2e600
-     * @note[short] Windows: 0x10dd10
-     * @note[short] iOS: 0x3dee84
+     * @note[short] MacOS (ARM): 0x2b220
+     * @note[short] MacOS (Intel): 0x2e160
+     * @note[short] Windows: 0x10f3f0
+     * @note[short] iOS: 0x3e6b84
      * @note[short] Android
      */
     bool onCreate();
 
     /**
-     * @note[short] MacOS (ARM): 0x342c0
-     * @note[short] MacOS (Intel): 0x34d30
-     * @note[short] Windows: 0x10d880
-     * @note[short] iOS: 0x3e32f0
+     * @note[short] MacOS (ARM): 0x31564
+     * @note[short] MacOS (Intel): 0x347d0
+     * @note[short] Windows: 0x10ef60
+     * @note[short] iOS: 0x3eb00c
      * @note[short] Android
      */
     void onCreateButton(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x34758
-     * @note[short] MacOS (Intel): 0x35170
-     * @note[short] Windows: 0x10df10
-     * @note[short] iOS: 0x3e35c0
+     * @note[short] MacOS (ARM): 0x31984
+     * @note[short] MacOS (Intel): 0x34bf0
+     * @note[short] Windows: 0x10f5f0
+     * @note[short] iOS: 0x3eb2d0
      * @note[short] Android
      */
-    void onCreateObject(int p0);
+    void onCreateObject(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x2db50
-     * @note[short] MacOS (Intel): 0x2e140
-     * @note[short] Windows: 0xe4760
-     * @note[short] iOS: 0x3deb7c
+     * @note[short] MacOS (ARM): 0x2ad9c
+     * @note[short] MacOS (Intel): 0x2dc20
+     * @note[short] Windows: 0xe5e00
+     * @note[short] iOS: 0x3e6850
      * @note[short] Android
      */
     void onDelete(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x2fb48
+     * @note[short] MacOS (Intel): 0x32cd0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void onDeleteAll(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x31018
-     * @note[short] MacOS (Intel): 0x31960
-     * @note[short] Windows: 0xe2e80
-     * @note[short] iOS: 0x3e0dbc
+     * @note[short] MacOS (ARM): 0x2e310
+     * @note[short] MacOS (Intel): 0x31470
+     * @note[short] Windows: 0xe4520
+     * @note[short] iOS: 0x3e8b1c
      * @note[short] Android
      */
     void onDeleteCustomItem(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3198c
-     * @note[short] MacOS (Intel): 0x32320
+     * @note[short] MacOS (ARM): 0x2ec60
+     * @note[short] MacOS (Intel): 0x31df0
+     * @note[short] Windows: 0xe5cb0
+     * @note[short] iOS: 0x3e923c
      * @note[short] Android
      */
     void onDeleteInfo(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0xdb78
-     * @note[short] MacOS (Intel): 0xc7a0
-     * @note[short] Windows: 0xe4d80
-     * @note[short] iOS: 0x3bf9c8
+     * @note[short] MacOS (ARM): 0xac00
+     * @note[short] MacOS (Intel): 0xc150
+     * @note[short] Windows: 0xe6430
+     * @note[short] iOS: 0x3c752c
      * @note[short] Android
      */
     void onDeleteSelected(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x318b8
-     * @note[short] MacOS (Intel): 0x32240
-     * @note[short] Windows: 0xe5310
+     * @note[short] MacOS (ARM): 0x2eb94
+     * @note[short] MacOS (Intel): 0x31d20
+     * @note[short] Windows: 0xe69d0
+     * @note[short] iOS: 0x3e9170
      * @note[short] Android
      */
     void onDeleteSelectedType(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x31890
-     * @note[short] MacOS (Intel): 0x32210
-     * @note[short] Windows: 0xe5360
-     * @note[short] iOS: 0x3e13f4
+     * @note[short] MacOS (ARM): 0x2eb6c
+     * @note[short] MacOS (Intel): 0x31cf0
+     * @note[short] Windows: 0xe6a20
+     * @note[short] iOS: 0x3e9148
      * @note[short] Android
      */
     void onDeleteStartPos(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2c478
-     * @note[short] MacOS (Intel): 0x2c890
-     * @note[short] Windows: 0x10fd40
-     * @note[short] iOS: 0x3dda90
+     * @note[short] MacOS (ARM): 0x29590
+     * @note[short] MacOS (Intel): 0x2c1e0
+     * @note[short] Windows: 0x111440
+     * @note[short] iOS: 0x3e566c
      * @note[short] Android
      */
     void onDeselectAll(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2b4dc
-     * @note[short] MacOS (Intel): 0x2b2e0
-     * @note[short] Windows: 0x1113e0
-     * @note[short] iOS: 0x3dcae4
+     * @note[short] MacOS (ARM): 0x284fc
+     * @note[short] MacOS (Intel): 0x2ac40
+     * @note[short] Windows: 0x112c80
+     * @note[short] iOS: 0x3e4664
      * @note[short] Android
      */
     void onDuplicate(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x11d0b0
+     * @note[short] MacOS (ARM): 0x286e4
+     * @note[short] MacOS (Intel): 0x2ae20
+     * @note[short] Windows: 0x11ea90
+     * @note[short] iOS: 0x3e4824
      * @note[short] Android
      */
     void onEditColor(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x2ef24
+     * @note[short] MacOS (Intel): 0x32060
+     * @note[short] Windows: 0xe7e90
+     * @note[short] iOS: 0x3e9494
      * @note[short] Android
      */
     void onFindObject(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x112f40
-     * @note[short] iOS: 0x3ddd20
+     * @note[short] MacOS (ARM): 0x2995c
+     * @note[short] MacOS (Intel): 0x2c610
+     * @note[short] Windows: 0x1147e0
+     * @note[short] iOS: 0x3e591c
      * @note[short] Android
      */
     void onGoToBaseLayer(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2c624
-     * @note[short] MacOS (Intel): 0x2ca60
-     * @note[short] Windows: 0x112de0
+     * @note[short] MacOS (ARM): 0x2978c
+     * @note[short] MacOS (Intel): 0x2c410
+     * @note[short] Windows: 0x114680
+     * @note[short] iOS: 0x3e5828
      * @note[short] Android
      */
     void onGoToLayer(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x11da90
-     * @note[short] iOS: 0x3ddd04
+     * @note[short] MacOS (ARM): 0x29940
+     * @note[short] MacOS (Intel): 0x2c5e0
+     * @note[short] Windows: 0x11f4b0
+     * @note[short] iOS: 0x3e5900
      * @note[short] Android
      */
     void onGroupDown(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x31a68
-     * @note[short] MacOS (Intel): 0x323d0
-     * @note[short] Windows: 0xe5a80
+     * @note[short] MacOS (ARM): 0x2ed40
+     * @note[short] MacOS (Intel): 0x31ea0
+     * @note[short] Windows: 0xe7150
+     * @note[short] iOS: 0x3e92d4
      * @note[short] Android
      */
     void onGroupIDFilter(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0xe2d4
-     * @note[short] MacOS (Intel): 0xcf70
-     * @note[short] Windows: 0x1110f0
-     * @note[short] iOS: 0x3bff98
+     * @note[short] MacOS (ARM): 0xb30c
+     * @note[short] MacOS (Intel): 0xc8d0
+     * @note[short] Windows: 0x1128e0
+     * @note[short] iOS: 0x3c7b50
      * @note[short] Android
      */
     void onGroupSticky(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x11da70
-     * @note[short] iOS: 0x3ddcec
+     * @note[short] MacOS (ARM): 0x29928
+     * @note[short] MacOS (Intel): 0x2c5c0
+     * @note[short] Windows: 0x11f490
+     * @note[short] iOS: 0x3e58e8
      * @note[short] Android
      */
     void onGroupUp(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2c7fc
-     * @note[short] MacOS (Intel): 0x2cc80
-     * @note[short] Windows: 0x11dc00
-     * @note[short] iOS: 0x3e16e8
+     * @note[short] MacOS (ARM): 0x29970
+     * @note[short] MacOS (Intel): 0x2c630
+     * @note[short] Windows: 0x11f620
+     * @note[short] iOS: 0x3e5930
      * @note[short] Android
      */
     void onLockLayer(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x304d0
-     * @note[short] MacOS (Intel): 0x30d30
-     * @note[short] Windows: 0xe2990
-     * @note[short] iOS: 0x3e073c
+     * @note[short] MacOS (ARM): 0x2d7ec
+     * @note[short] MacOS (Intel): 0x30820
+     * @note[short] Windows: 0xe4030
+     * @note[short] iOS: 0x3e849c
      * @note[short] Android
      */
     void onNewCustomItem(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x286dc
+     * @note[short] MacOS (Intel): 0x2ae10
+     * @note[short] Windows: 0x113320
+     * @note[short] iOS: 0x3e481c
      * @note[short] Android
      */
     void onPaste(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2c5d0
-     * @note[short] MacOS (Intel): 0x2ca00
-     * @note[short] Windows: 0x112cd0
-     * @note[short] iOS: 0x3ddbd0
+     * @note[short] MacOS (ARM): 0x29738
+     * @note[short] MacOS (Intel): 0x2c3b0
+     * @note[short] Windows: 0x114570
+     * @note[short] iOS: 0x3e57d4
      * @note[short] Android
      */
     void onPasteColor(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x36714
+     * @note[short] MacOS (Intel): 0x3e440
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void onPasteInPlace(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2c57c
-     * @note[short] MacOS (Intel): 0x2c9a0
-     * @note[short] Windows: 0x112b40
-     * @note[short] iOS: 0x3ddb7c
+     * @note[short] MacOS (ARM): 0x296e4
+     * @note[short] MacOS (Intel): 0x2c350
+     * @note[short] Windows: 0x1143e0
+     * @note[short] iOS: 0x3e5780
      * @note[short] Android
      */
     void onPasteState(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2afc0
-     * @note[short] MacOS (Intel): 0x2ad50
-     * @note[short] Windows: 0xe03d0
-     * @note[short] iOS: 0x3dc64c
+     * @note[short] MacOS (ARM): 0x2801c
+     * @note[short] MacOS (Intel): 0x2a6d0
+     * @note[short] Windows: 0xe19c0
+     * @note[short] iOS: 0x3e41f0
      * @note[short] Android
      */
     void onPause(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0xdce0
-     * @note[short] MacOS (Intel): 0xc930
-     * @note[short] Windows: 0x110390
-     * @note[short] iOS: 0x3bfb28
+     * @note[short] MacOS (ARM): 0xad68
+     * @note[short] MacOS (Intel): 0xc2d0
+     * @note[short] Windows: 0x111aa0
+     * @note[short] iOS: 0x3c768c
      * @note[short] Android
      */
     void onPlayback(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0xdef4
-     * @note[short] MacOS (Intel): 0xcb90
-     * @note[short] Windows: 0x1109a0
-     * @note[short] iOS: 0x3bfd14
+     * @note[short] MacOS (ARM): 0xaf5c
+     * @note[short] MacOS (Intel): 0xc510
+     * @note[short] Windows: 0x1120b0
+     * @note[short] iOS: 0x3c7880
      * @note[short] Android
      */
     void onPlaytest(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x31bec
-     * @note[short] MacOS (Intel): 0x32530
+     * @note[short] MacOS (ARM): 0x2eec4
+     * @note[short] MacOS (Intel): 0x32000
+     * @note[short] Windows: 0xe7430
+     * @note[short] iOS: 0x3e9434
      * @note[short] Android
      */
     void onResetSpecialFilter(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x33940
-     * @note[short] MacOS (Intel): 0x34310
-     * @note[short] Windows: 0x112f60
-     * @note[short] iOS: 0x3e298c
+     * @note[short] MacOS (ARM): 0x30bec
+     * @note[short] MacOS (Intel): 0x33da0
+     * @note[short] Windows: 0x114800
+     * @note[short] iOS: 0x3ea6d8
      * @note[short] Android
      */
     void onSelectBuildTab(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2b46c
-     * @note[short] MacOS (Intel): 0x2b270
-     * @note[short] Windows: 0xe0350
-     * @note[short] iOS: 0x3dca74
+     * @note[short] MacOS (ARM): 0x28490
+     * @note[short] MacOS (Intel): 0x2abc0
+     * @note[short] Windows: 0xe1940
+     * @note[short] iOS: 0x3e45f4
      * @note[short] Android
      */
     void onSettings(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0xe134
-     * @note[short] MacOS (Intel): 0xcdd0
-     * @note[short] Windows: 0x110d40
-     * @note[short] iOS: 0x3bfea8
+     * @note[short] MacOS (ARM): 0xb394
+     * @note[short] MacOS (Intel): 0xc970
+     * @note[short] Windows: 0x112960
+     * @note[short] iOS: 0x3c7b0c
+     * @note[short] Android
+     */
+    void onStickyToggle(cocos2d::CCObject* sender);
+
+    /**
+     * @note[short] MacOS (ARM): 0xb168
+     * @note[short] MacOS (Intel): 0xc730
+     * @note[short] Windows: 0x112530
+     * @note[short] iOS: 0x3c7a18
      * @note[short] Android
      */
     void onStopPlaytest(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x45f90
-     * @note[short] MacOS (Intel): 0x4e330
-     * @note[short] Windows: 0x120860
-     * @note[short] iOS: 0x3efe54
+     * @note[short] MacOS (ARM): 0x43418
+     * @note[short] MacOS (Intel): 0x4df20
+     * @note[short] Windows: 0x1223e0
+     * @note[short] iOS: 0x3f7d64
      * @note[short] Android
      */
-    void onTargetIDChange(int p0);
+    void onTargetIDChange(int change);
 
     /**
+     * @note[short] MacOS (ARM): 0x2c3b0
+     * @note[short] MacOS (Intel): 0x2f2d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3e7718
      * @note[short] Android
      */
-    void onToggleGuide(EffectGameObject* p0);
+    void onToggleGuide(EffectGameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0x2c3f4
+     * @note[short] MacOS (Intel): 0x2f310
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3e7758
      * @note[short] Android
      */
-    TodoReturn onToggleSelectedOrder(EffectGameObject* p0);
+    void onToggleSelectedOrder(EffectGameObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0xe318
-     * @note[short] MacOS (Intel): 0xcfc0
-     * @note[short] Windows: 0x111130
-     * @note[short] iOS: 0x3bffdc
+     * @note[short] MacOS (ARM): 0x2c41c
+     * @note[short] MacOS (Intel): 0x2f340
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3e7780
+     * @note[short] Android
+     */
+    void onToggleTraceIn(GameObject* object);
+
+    /**
+     * @note[short] MacOS (ARM): 0x2c444
+     * @note[short] MacOS (Intel): 0x2f370
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3e77a8
+     * @note[short] Android
+     */
+    void onToggleTraceOut(EffectGameObject* object);
+
+    /**
+     * @note[short] MacOS (ARM): 0xb350
+     * @note[short] MacOS (Intel): 0xc920
+     * @note[short] Windows: 0x112920
+     * @note[short] iOS: 0x3c7b94
      * @note[short] Android
      */
     void onUngroupSticky(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x31900
-     * @note[short] MacOS (Intel): 0x32290
-     * @note[short] Windows: 0xe5e30
-     * @note[short] iOS: 0x3e1464
+     * @note[short] MacOS (ARM): 0x2ebd4
+     * @note[short] MacOS (Intel): 0x31d60
+     * @note[short] Windows: 0xe7500
+     * @note[short] iOS: 0x3e91b0
      * @note[short] Android
      */
     void onUpdateDeleteFilter(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0xe3050
+     * @note[short] MacOS (ARM): 0x2e458
+     * @note[short] MacOS (Intel): 0x315d0
+     * @note[short] Windows: 0xe46f0
+     * @note[short] iOS: 0x3e8bbc
      * @note[short] Android
      */
-    void orderDownCustomItem(cocos2d::CCObject* p0);
+    void orderDownCustomItem(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0xe2fc0
+     * @note[short] MacOS (ARM): 0x2e398
+     * @note[short] MacOS (Intel): 0x31510
+     * @note[short] Windows: 0xe4660
+     * @note[short] iOS: 0x3e8b58
      * @note[short] Android
      */
-    void orderUpCustomItem(cocos2d::CCObject* p0);
+    void orderUpCustomItem(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x35f00
-     * @note[short] MacOS (Intel): 0x3ac10
-     * @note[short] Windows: 0x111d10
-     * @note[short] iOS: 0x3e4a98
+     * @note[short] MacOS (ARM): 0x33138
+     * @note[short] MacOS (Intel): 0x3a660
+     * @note[short] Windows: 0x1135b0
+     * @note[short] iOS: 0x3ec86c
      * @note[short] Android: Rebinded
      */
-    cocos2d::CCArray* pasteObjects(gd::string p0, bool p1, bool p2);
+    cocos2d::CCArray* pasteObjects(gd::string str, bool withColor, bool noUndo);
 
     /**
+     * @note[short] MacOS (ARM): 0x3052c
+     * @note[short] MacOS (Intel): 0x33690
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn playCircleAnim(cocos2d::CCPoint p0, float p1, float p2);
+    void playCircleAnim(cocos2d::CCPoint position, float radius, float duration);
 
     /**
+     * @note[short] MacOS (ARM): 0x44180
+     * @note[short] MacOS (Intel): 0x4ed40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn playerTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    void playerTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
+     * @note[short] MacOS (ARM): 0x44278
+     * @note[short] MacOS (Intel): 0x4ee50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn playerTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    void playerTouchEnded(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x38a54
-     * @note[short] MacOS (Intel): 0x3df80
-     * @note[short] Windows: 0x110d80
-     * @note[short] iOS: 0x3e68c0
+     * @note[short] MacOS (ARM): 0x35bec
+     * @note[short] MacOS (Intel): 0x3d8d0
+     * @note[short] Windows: 0x112570
+     * @note[short] iOS: 0x3ee608
      * @note[short] Android
      */
     void playtestStopped();
 
     /**
+     * @note[short] MacOS (ARM): 0x32eb8
+     * @note[short] MacOS (Intel): 0x3a3f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3ec644
      * @note[short] Android
      */
-    TodoReturn positionIsInSnapped(cocos2d::CCPoint p0);
+    bool positionIsInSnapped(cocos2d::CCPoint position);
 
     /**
+     * @note[short] MacOS (ARM): 0x436a4
+     * @note[short] MacOS (Intel): 0x4e1a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3f7e98
      * @note[short] Android
      */
-    TodoReturn positionWithoutOffset(GameObject* p0);
+    cocos2d::CCPoint positionWithoutOffset(GameObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x38398
-     * @note[short] MacOS (Intel): 0x3d880
-     * @note[short] Windows: 0x110060
+     * @note[short] MacOS (ARM): 0x3551c
+     * @note[short] MacOS (Intel): 0x3d1c0
+     * @note[short] Windows: 0x111760
+     * @note[short] iOS: 0x3ee17c
      * @note[short] Android
      */
-    void processSelectObjects(cocos2d::CCArray* p0);
+    void processSelectObjects(cocos2d::CCArray* objects);
 
     /**
-     * @note[short] Windows: 0x116b80
+     * @note[short] MacOS (ARM): 0x3ba64
+     * @note[short] MacOS (Intel): 0x44200
+     * @note[short] Windows: 0x118430
+     * @note[short] iOS: 0x3f2918
      * @note[short] Android
      */
-    void processSmartObjectsFromType(int p0, cocos2d::CCArray* p1, cocos2d::CCArray* p2, cocos2d::CCArray* p3, cocos2d::CCArray* p4);
+    void processSmartObjectsFromType(int type, cocos2d::CCArray* objects, cocos2d::CCArray* objects2, cocos2d::CCArray* objects3, cocos2d::CCArray* objects4);
 
     /**
+     * @note[short] MacOS (ARM): 0x2ead4
+     * @note[short] MacOS (Intel): 0x31c40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3e90b0
      * @note[short] Android
      */
     void recreateButtonTabs();
 
     /**
-     * @note[short] MacOS (ARM): 0xdb14
-     * @note[short] MacOS (Intel): 0xc740
-     * @note[short] Windows: 0x110190
-     * @note[short] iOS: 0x3bf964
+     * @note[short] MacOS (ARM): 0xab9c
+     * @note[short] MacOS (Intel): 0xc0f0
+     * @note[short] Windows: 0x111890
+     * @note[short] iOS: 0x3c74c8
      * @note[short] Android
      */
-    void redoLastAction(cocos2d::CCObject* p0);
+    void redoLastAction(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x30fac
-     * @note[short] MacOS (Intel): 0x318f0
-     * @note[short] Windows: 0xe35f0
-     * @note[short] iOS: 0x3e0d50
+     * @note[short] MacOS (ARM): 0x2e2a4
+     * @note[short] MacOS (Intel): 0x31400
+     * @note[short] Windows: 0xe4c90
+     * @note[short] iOS: 0x3e8ab0
      * @note[short] Android
      */
     void reloadCustomItems();
 
     /**
-     * @note[short] Windows: 0x120cb0
-     * @note[short] iOS: 0x3e4998
+     * @note[short] MacOS (ARM): 0x33038
+     * @note[short] MacOS (Intel): 0x3a560
+     * @note[short] Windows: 0x122860
+     * @note[short] iOS: 0x3ec76c
      * @note[short] Android
      */
-    void removeOffset(GameObject* p0);
+    void removeOffset(GameObject* object);
 
     /**
-     * @note[short] Windows: 0x117680
+     * @note[short] MacOS (ARM): 0x3c5c0
+     * @note[short] MacOS (Intel): 0x45080
+     * @note[short] Windows: 0x118fe0
+     * @note[short] iOS: 0x3f3138
      * @note[short] Android
      */
-    void replaceGroupID(GameObject* p0, int p1, int p2);
+    void replaceGroupID(GameObject* object, int oldID, int newID);
 
     /**
-     * @note[short] Windows: 0x112a20
-     * @note[short] iOS: 0x3e30e4
+     * @note[short] MacOS (ARM): 0x31338
+     * @note[short] MacOS (Intel): 0x345b0
+     * @note[short] Windows: 0x1142c0
+     * @note[short] iOS: 0x3eae00
      * @note[short] Android
      */
-    void repositionObjectsToCenter(cocos2d::CCArray* p0, cocos2d::CCPoint p1, bool p2);
+    void repositionObjectsToCenter(cocos2d::CCArray* objects, cocos2d::CCPoint position, bool absolute);
 
     /**
+     * @note[short] MacOS (ARM): 0x3869c
+     * @note[short] MacOS (Intel): 0x406c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3f00f0
      * @note[short] Android
      */
-    void resetObjectEditorValues(cocos2d::CCArray* p0);
+    void resetObjectEditorValues(cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x43568
-     * @note[short] MacOS (Intel): 0x4a720
-     * @note[short] Windows: 0x11dd50
-     * @note[short] iOS: 0x3edf7c
+     * @note[short] MacOS (ARM): 0x40860
+     * @note[short] MacOS (Intel): 0x4a1c0
+     * @note[short] Windows: 0x11f770
+     * @note[short] iOS: 0x3f5d08
      * @note[short] Android
      */
     void resetSelectedObjectsColor();
 
     /**
-     * @note[short] MacOS (ARM): 0x2aeac
-     * @note[short] MacOS (Intel): 0x2ac40
-     * @note[short] Windows: 0xe36d0
-     * @note[short] iOS: 0x3dc538
+     * @note[short] MacOS (ARM): 0x27f08
+     * @note[short] MacOS (Intel): 0x2a5c0
+     * @note[short] Windows: 0xe4d70
+     * @note[short] iOS: 0x3e40dc
      * @note[short] Android
      */
     void resetUI();
 
     /**
-     * @note[short] MacOS (ARM): 0x37044
-     * @note[short] MacOS (Intel): 0x3c3d0
-     * @note[short] Windows: 0x11f4b0
-     * @note[short] iOS: 0x3e5484
+     * @note[short] MacOS (ARM): 0x341c0
+     * @note[short] MacOS (Intel): 0x3bd00
+     * @note[short] Windows: 0x121030
+     * @note[short] iOS: 0x3ed19c
      * @note[short] Android
      */
-    void rotateObjects(cocos2d::CCArray* p0, float p1, cocos2d::CCPoint p2);
+    void rotateObjects(cocos2d::CCArray* objects, float rotation, cocos2d::CCPoint pivotPoint);
 
     /**
-     * @note[short] MacOS (ARM): 0x43788
-     * @note[short] MacOS (Intel): 0x4a9b0
+     * @note[short] MacOS (ARM): 0x40a7c
+     * @note[short] MacOS (Intel): 0x4a450
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    float rotationforCommand(EditCommand p0);
+    float rotationforCommand(EditCommand command);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a654
-     * @note[short] MacOS (Intel): 0x3fd70
-     * @note[short] Windows: 0x11f8d0
-     * @note[short] iOS: 0x3e7b70
+     * @note[short] MacOS (ARM): 0x3785c
+     * @note[short] MacOS (Intel): 0x3f6d0
+     * @note[short] Windows: 0x121450
+     * @note[short] iOS: 0x3ef8b4
      * @note[short] Android
      */
-    void scaleObjects(cocos2d::CCArray* p0, float p1, float p2, cocos2d::CCPoint p3, ObjectScaleType p4, bool p5);
+    void scaleObjects(cocos2d::CCArray* objects, float scaleX, float scaleY, cocos2d::CCPoint pivotPoint, ObjectScaleType type, bool move);
 
     /**
-     * @note[short] iOS: 0x3e6388
+     * @note[short] MacOS (ARM): 0x352fc
+     * @note[short] MacOS (Intel): 0x3cf90
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3ee0b8
      * @note[short] Android
      */
     void selectAll();
 
     /**
-     * @note[short] MacOS (ARM): 0x38480
-     * @note[short] MacOS (Intel): 0x3d960
-     * @note[short] iOS: 0x3e651c
+     * @note[short] MacOS (ARM): 0x35604
+     * @note[short] MacOS (Intel): 0x3d2a0
+     * @note[short] Windows: 0x1115b0
+     * @note[short] iOS: 0x3ee24c
      * @note[short] Android
      */
-    void selectAllWithDirection(bool p0);
+    void selectAllWithDirection(bool left);
 
     /**
-     * @note[short] MacOS (ARM): 0x33974
-     * @note[short] MacOS (Intel): 0x34340
-     * @note[short] Windows: 0x112f90
-     * @note[short] iOS: 0x3e29c0
+     * @note[short] MacOS (ARM): 0x30c20
+     * @note[short] MacOS (Intel): 0x33dd0
+     * @note[short] Windows: 0x114830
+     * @note[short] iOS: 0x3ea70c
      * @note[short] Android
      */
-    void selectBuildTab(int p0);
+    void selectBuildTab(int tab);
 
     /**
-     * @note[short] MacOS (ARM): 0x2e5c8
-     * @note[short] MacOS (Intel): 0x2ec30
-     * @note[short] Windows: 0x10ee50
-     * @note[short] iOS: 0x3df140
+     * @note[short] MacOS (ARM): 0x2b850
+     * @note[short] MacOS (Intel): 0x2e780
+     * @note[short] Windows: 0x110530
+     * @note[short] iOS: 0x3e6e48
      * @note[short] Android
      */
-    void selectObject(GameObject* p0, bool p1);
+    void selectObject(GameObject* object, bool ignoreFilter);
 
     /**
-     * @note[short] MacOS (ARM): 0x3749c
-     * @note[short] MacOS (Intel): 0x3c830
-     * @note[short] Windows: 0x10f140
-     * @note[short] iOS: 0x3e58c4
+     * @note[short] MacOS (ARM): 0x34610
+     * @note[short] MacOS (Intel): 0x3c150
+     * @note[short] Windows: 0x110820
+     * @note[short] iOS: 0x3ed5dc
      * @note[short] Android
      */
-    void selectObjects(cocos2d::CCArray* p0, bool p1);
+    void selectObjects(cocos2d::CCArray* objects, bool ignoreFilter);
 
     /**
-     * @note[short] MacOS (ARM): 0x37db0
-     * @note[short] MacOS (Intel): 0x3d230
+     * @note[short] MacOS (ARM): 0x34f3c
+     * @note[short] MacOS (Intel): 0x3cb70
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3e612c
+     * @note[short] iOS: 0x3ede5c
      * @note[short] Android
      */
-    void selectObjectsInRect(cocos2d::CCRect p0);
+    void selectObjectsInRect(cocos2d::CCRect rect);
 
     /**
-     * @note[short] MacOS (ARM): 0xf170
-     * @note[short] MacOS (Intel): 0xdf10
-     * @note[short] Windows: 0xe6910
-     * @note[short] iOS: 0x3c09dc
+     * @note[short] MacOS (ARM): 0xc1e4
+     * @note[short] MacOS (Intel): 0xd8b0
+     * @note[short] Windows: 0xe7fe0
+     * @note[short] iOS: 0x3c858c
      * @note[short] Android
      */
     void setupCreateMenu();
 
     /**
-     * @note[short] MacOS (ARM): 0xe35c
-     * @note[short] MacOS (Intel): 0xd010
-     * @note[short] Windows: 0xe38d0
-     * @note[short] iOS: 0x3c0020
+     * @note[short] MacOS (ARM): 0xb3d8
+     * @note[short] MacOS (Intel): 0xc9c0
+     * @note[short] Windows: 0xe4f70
+     * @note[short] iOS: 0x3c7bd8
      * @note[short] Android
      */
     void setupDeleteMenu();
 
     /**
-     * @note[short] MacOS (ARM): 0x2ae74
-     * @note[short] MacOS (Intel): 0x2ac00
+     * @note[short] MacOS (ARM): 0x27ed0
+     * @note[short] MacOS (Intel): 0x2a580
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
@@ -1781,367 +2139,413 @@ public:
     void setupEditMenu();
 
     /**
+     * @note[short] MacOS (ARM): 0x2a238
+     * @note[short] MacOS (Intel): 0x2cfe0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn setupTransformControl();
+    void setupTransformControl();
 
     /**
-     * @note[short] MacOS (ARM): 0x323a8
-     * @note[short] MacOS (Intel): 0x32d40
-     * @note[short] Windows: 0xe4c50
+     * @note[short] MacOS (ARM): 0x2f664
+     * @note[short] MacOS (Intel): 0x32800
+     * @note[short] Windows: 0xe6300
+     * @note[short] iOS: 0x3e9a24
      * @note[short] Android
      */
-    bool shouldDeleteObject(GameObject* p0);
+    bool shouldDeleteObject(GameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0x44014
+     * @note[short] MacOS (Intel): 0x4ebe0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn shouldSnap(GameObject* p0);
+    bool shouldSnap(GameObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x32b90
-     * @note[short] MacOS (Intel): 0x33560
+     * @note[short] MacOS (ARM): 0x2fe4c
+     * @note[short] MacOS (Intel): 0x33010
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void showDeleteConfirmation();
 
     /**
+     * @note[short] MacOS (ARM): 0x4069c
+     * @note[short] MacOS (Intel): 0x49fb0
+     * @note[short] Windows: 0x11eee0
+     * @note[short] iOS: 0x3f5c18
      * @note[short] Android
      */
-    void showLiveColorSelectForMode(int p0);
+    void showLiveColorSelectForMode(int colorID);
 
     /**
+     * @note[short] MacOS (ARM): 0x405c0
+     * @note[short] MacOS (Intel): 0x49e90
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3f5b94
      * @note[short] Android
      */
-    void showLiveColorSelectForModeSpecial(int p0);
+    void showLiveColorSelectForModeSpecial(int colorID);
 
     /**
-     * @note[short] MacOS (ARM): 0x34474
-     * @note[short] MacOS (Intel): 0x34ec0
+     * @note[short] MacOS (ARM): 0x316f0
+     * @note[short] MacOS (Intel): 0x34960
+     * @note[short] Windows: 0x112b40
+     * @note[short] iOS: 0x3eb124
      * @note[short] Android
      */
     void showMaxBasicError();
 
     /**
-     * @note[short] MacOS (ARM): 0x345f0
-     * @note[short] MacOS (Intel): 0x35020
+     * @note[short] MacOS (ARM): 0x31844
+     * @note[short] MacOS (Intel): 0x34ab0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3eb204
      * @note[short] Android
      */
     void showMaxCoinError();
 
     /**
-     * @note[short] MacOS (ARM): 0x342fc
-     * @note[short] MacOS (Intel): 0x34d70
-     * @note[short] Windows: 0x111170
+     * @note[short] MacOS (ARM): 0x315a0
+     * @note[short] MacOS (Intel): 0x34810
+     * @note[short] Windows: 0x112a10
+     * @note[short] iOS: 0x3eb048
      * @note[short] Android
      */
     void showMaxError();
 
     /**
-     * @note[short] MacOS (ARM): 0x388f4
-     * @note[short] MacOS (Intel): 0x3de00
-     * @note[short] Windows: 0x110200
-     * @note[short] iOS: 0x3e6770
+     * @note[short] MacOS (ARM): 0x35a78
+     * @note[short] MacOS (Intel): 0x3d740
+     * @note[short] Windows: 0x111900
+     * @note[short] iOS: 0x3ee4a4
      * @note[short] Android
      */
-    void showUI(bool p0);
+    void showUI(bool show);
 
     /**
-     * @note[short] MacOS (ARM): 0xd16c
-     * @note[short] MacOS (Intel): 0xbd50
-     * @note[short] Windows: 0xe13a0
-     * @note[short] iOS: 0x3bf328
+     * @note[short] MacOS (ARM): 0xa1f8
+     * @note[short] MacOS (Intel): 0xb6f0
+     * @note[short] Windows: 0xe2a40
+     * @note[short] iOS: 0x3c6e90
      * @note[short] Android
      */
-    void sliderChanged(cocos2d::CCObject* p0);
+    void sliderChanged(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x12b890
-     * @note[short] Android
-     */
-    static int smartTypeForKey(int p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x33ab0
-     * @note[short] MacOS (Intel): 0x344a0
-     * @note[short] Windows: 0x10c790
-     * @note[short] iOS: 0x3e2af4
+     * @note[short] MacOS (ARM): 0x30d5c
+     * @note[short] MacOS (Intel): 0x33f30
+     * @note[short] Windows: 0x10de60
+     * @note[short] iOS: 0x3ea840
      * @note[short] Android: Rebinded
      */
-    cocos2d::CCSprite* spriteFromObjectString(gd::string str, bool p1, bool p2, int objLimit, cocos2d::CCArray* p4, cocos2d::CCArray* p5, GameObject* p6);
+    cocos2d::CCSprite* spriteFromObjectString(gd::string str, bool absoluteCenter, bool useGroup, int objLimit, cocos2d::CCArray* objects, cocos2d::CCArray* group, GameObject* groupParent);
 
     /**
+     * @note[short] MacOS (ARM): 0x2a4e0
+     * @note[short] MacOS (Intel): 0x2d2b0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3e6358
      * @note[short] Android
      */
-    TodoReturn toggleDuplicateButton();
+    void toggleDuplicateButton();
 
     /**
-     * @note[short] Windows: 0x118f10
+     * @note[short] MacOS (ARM): 0x2a41c
+     * @note[short] MacOS (Intel): 0x2d1e0
+     * @note[short] Windows: 0x11a8f0
+     * @note[short] iOS: 0x3e6294
      * @note[short] Android
      */
     void toggleEditObjectButton();
 
     /**
-     * @note[short] MacOS (ARM): 0xd994
-     * @note[short] MacOS (Intel): 0xc5b0
-     * @note[short] Windows: 0x10eb00
-     * @note[short] iOS: 0x3bf870
+     * @note[short] MacOS (ARM): 0xaa1c
+     * @note[short] MacOS (Intel): 0xbf60
+     * @note[short] Windows: 0x1101e0
+     * @note[short] iOS: 0x3c73d4
      * @note[short] Android
      */
-    void toggleEnableRotate(cocos2d::CCObject* p0);
+    void toggleEnableRotate(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0xd8b4
-     * @note[short] MacOS (Intel): 0xc4c0
-     * @note[short] Windows: 0x10e980
-     * @note[short] iOS: 0x3bf790
+     * @note[short] MacOS (ARM): 0xa940
+     * @note[short] MacOS (Intel): 0xbe70
+     * @note[short] Windows: 0x110060
+     * @note[short] iOS: 0x3c72f8
      * @note[short] Android
      */
-    void toggleFreeMove(cocos2d::CCObject* p0);
+    void toggleFreeMove(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Android
-     */
-    TodoReturn toggleLockUI(bool p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x2b140
-     * @note[short] MacOS (Intel): 0x2af00
-     * @note[short] Windows: 0xe37f0
-     * @note[short] iOS: 0x3dc7b8
-     * @note[short] Android
-     */
-    void toggleMode(cocos2d::CCObject* p0);
-
-    /**
-     * @note[short] Windows: 0xe1730
-     * @note[short] Android
-     */
-    TodoReturn toggleObjectInfoLabel();
-
-    /**
-     * @note[short] MacOS (ARM): 0xd91c
-     * @note[short] MacOS (Intel): 0xc530
-     * @note[short] Windows: 0x10ea20
-     * @note[short] iOS: 0x3bf7f8
-     * @note[short] Android
-     */
-    void toggleSnap(cocos2d::CCObject* p0);
-
-    /**
-     * @note[short] Android
-     */
-    TodoReturn toggleSpecialEditButtons();
-
-    /**
-     * @note[short] MacOS (ARM): 0x2d020
-     * @note[short] MacOS (Intel): 0x2d590
+     * @note[short] MacOS (ARM): 0x2a414
+     * @note[short] MacOS (Intel): 0x2d1d0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3de424
+     * @note[short] iOS: 0x3e628c
      * @note[short] Android
      */
-    void toggleStickyControls(bool enable);
+    void toggleLockUI(bool lockUI);
 
     /**
-     * @note[short] MacOS (ARM): 0xd7b4
-     * @note[short] MacOS (Intel): 0xc3d0
-     * @note[short] Windows: 0x10e8e0
-     * @note[short] iOS: 0x3bf690
+     * @note[short] MacOS (ARM): 0x28188
+     * @note[short] MacOS (Intel): 0x2a880
+     * @note[short] Windows: 0xe4e90
+     * @note[short] iOS: 0x3e435c
      * @note[short] Android
      */
-    void toggleSwipe(cocos2d::CCObject* p0);
+    void toggleMode(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x44924
-     * @note[short] MacOS (Intel): 0x4be30
-     * @note[short] Windows: 0x11ed00
-     * @note[short] iOS: 0x3ef1e0
+     * @note[short] MacOS (ARM): 0x2a1e0
+     * @note[short] MacOS (Intel): 0x2cf90
+     * @note[short] Windows: 0xe2dd0
+     * @note[short] iOS: 0x3e6070
      * @note[short] Android
      */
-    void transformObject(GameObject* p0, EditCommand p1, bool p2);
+    void toggleObjectInfoLabel();
 
     /**
-     * @note[short] Windows: 0x11e780
+     * @note[short] MacOS (ARM): 0xa9a8
+     * @note[short] MacOS (Intel): 0xbee0
+     * @note[short] Windows: 0x110100
+     * @note[short] iOS: 0x3c7360
      * @note[short] Android
      */
-    void transformObjectCall(cocos2d::CCObject* p0);
+    void toggleSnap(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x43bc8
-     * @note[short] MacOS (Intel): 0x4ae10
-     * @note[short] Windows: 0x11e7b0
-     * @note[short] iOS: 0x3ee598
+     * @note[short] MacOS (ARM): 0x2a648
+     * @note[short] MacOS (Intel): 0x2d420
+     * @note[short] Windows: 0x11a9f0
+     * @note[short] iOS: 0x3e6484
      * @note[short] Android
      */
-    void transformObjectCall(EditCommand p0);
+    void toggleSpecialEditButtons();
 
     /**
-     * @note[short] MacOS (ARM): 0x3b5d4
-     * @note[short] MacOS (Intel): 0x40ec0
-     * @note[short] Windows: 0x11fec0
-     * @note[short] iOS: 0x3e8474
+     * @note[short] MacOS (ARM): 0xa840
+     * @note[short] MacOS (Intel): 0xbd80
+     * @note[short] Windows: 0x10ffc0
+     * @note[short] iOS: 0x3c71f8
+     * @note[short] Android
+     */
+    void toggleSwipe(cocos2d::CCObject* sender);
+
+    /**
+     * @note[short] MacOS (ARM): 0x41c0c
+     * @note[short] MacOS (Intel): 0x4b8d0
+     * @note[short] Windows: 0x120720
+     * @note[short] iOS: 0x3f6f48
+     * @note[short] Android
+     */
+    void transformObject(GameObject* object, EditCommand command, bool noOffset);
+
+    /**
+     * @note[short] MacOS (ARM): 0x40ebc
+     * @note[short] MacOS (Intel): 0x4a8b0
+     * @note[short] Windows: 0x1201d0
+     * @note[short] iOS: 0x3f6324
+     * @note[short] Android
+     */
+    void transformObjectCall(EditCommand command);
+
+    /**
+     * @note[short] MacOS (ARM): 0x3fd8c
+     * @note[short] MacOS (Intel): 0x49430
+     * @note[short] Windows: 0x1201a0
+     * @note[short] iOS: 0x3f54b4
+     * @note[short] Android
+     */
+    void transformObjectCall(cocos2d::CCObject* sender);
+
+    /**
+     * @note[short] MacOS (ARM): 0x387ac
+     * @note[short] MacOS (Intel): 0x407e0
+     * @note[short] Windows: 0x121a40
+     * @note[short] iOS: 0x3f01ac
      * @note[short] Android
      */
     void transformObjects(cocos2d::CCArray* objs, cocos2d::CCPoint anchor, float scaleX, float scaleY, float rotateX, float rotateY, float warpX, float warpY);
 
     /**
-     * @note[short] MacOS (ARM): 0x44f58
-     * @note[short] MacOS (Intel): 0x4d0b0
-     * @note[short] Windows: 0x11fe00
-     * @note[short] iOS: 0x3ef7d0
+     * @note[short] MacOS (ARM): 0x423e0
+     * @note[short] MacOS (Intel): 0x4cc80
+     * @note[short] Windows: 0x121980
+     * @note[short] iOS: 0x3f76e0
      * @note[short] Android
      */
     void transformObjectsActive();
 
     /**
-     * @note[short] MacOS (ARM): 0x45a68
-     * @note[short] MacOS (Intel): 0x4ddb0
+     * @note[short] MacOS (ARM): 0x42ef0
+     * @note[short] MacOS (Intel): 0x4d980
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3ef998
+     * @note[short] iOS: 0x3f78a8
      * @note[short] Android
      */
     void transformObjectsReset();
 
     /**
-     * @note[short] MacOS (ARM): 0x46b70
-     * @note[short] MacOS (Intel): 0x4f010
-     * @note[short] Windows: 0x121b80
-     * @note[short] iOS: 0x3f0680
+     * @note[short] MacOS (ARM): 0x44060
+     * @note[short] MacOS (Intel): 0x4ec10
+     * @note[short] Windows: 0x123730
+     * @note[short] iOS: 0x3f8594
      * @note[short] Android
      */
     void triggerSwipeMode();
 
     /**
+     * @note[short] MacOS (ARM): 0x2c3f0
+     * @note[short] MacOS (Intel): 0x2f300
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn tryUpdateTimeMarkers();
+    void tryUpdateTimeMarkers();
 
     /**
-     * @note[short] MacOS (ARM): 0xdab0
-     * @note[short] MacOS (Intel): 0xc6e0
-     * @note[short] Windows: 0x110120
-     * @note[short] iOS: 0x3bf900
+     * @note[short] MacOS (ARM): 0xab38
+     * @note[short] MacOS (Intel): 0xc090
+     * @note[short] Windows: 0x111820
+     * @note[short] iOS: 0x3c7464
      * @note[short] Android
      */
-    void undoLastAction(cocos2d::CCObject* p0);
+    void undoLastAction(cocos2d::CCObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x2c954
-     * @note[short] MacOS (Intel): 0x2cdd0
-     * @note[short] Windows: 0xe07e0
-     * @note[short] iOS: 0x3dde88
+     * @note[short] MacOS (ARM): 0x29ac4
+     * @note[short] MacOS (Intel): 0x2c780
+     * @note[short] Windows: 0xe1dd0
+     * @note[short] iOS: 0x3e5a80
      * @note[short] Android
      */
     void updateButtons();
 
     /**
-     * @note[short] MacOS (ARM): 0x2e0e4
-     * @note[short] MacOS (Intel): 0x2e710
-     * @note[short] Windows: 0x10d8c0
-     * @note[short] iOS: 0x3def70
+     * @note[short] MacOS (ARM): 0x2b358
+     * @note[short] MacOS (Intel): 0x2e270
+     * @note[short] Windows: 0x10efa0
+     * @note[short] iOS: 0x3e6c70
      * @note[short] Android
      */
-    void updateCreateMenu(bool p0);
+    void updateCreateMenu(bool selectTab);
 
     /**
-     * @note[short] MacOS (ARM): 0x31c94
-     * @note[short] MacOS (Intel): 0x325d0
-     * @note[short] Windows: 0xe5fb0
-     * @note[short] iOS: 0x3e1790
+     * @note[short] MacOS (ARM): 0x2ef6c
+     * @note[short] MacOS (Intel): 0x320a0
+     * @note[short] Windows: 0xe7680
+     * @note[short] iOS: 0x3e94dc
      * @note[short] Android
      */
     void updateDeleteButtons();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x2a60c
+     * @note[short] MacOS (Intel): 0x2d3e0
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] Android
      */
     void updateDeleteMenu();
 
     /**
-     * @note[short] MacOS (ARM): 0x39b54
-     * @note[short] MacOS (Intel): 0x3f120
+     * @note[short] MacOS (ARM): 0x36d78
+     * @note[short] MacOS (Intel): 0x3ea30
+     * @note[short] Windows: 0x114990
+     * @note[short] iOS: 0x3ef05c
      * @note[short] Android
      */
-    void updateEditButtonColor(int p0, cocos2d::ccColor3B p1);
+    void updateEditButtonColor(int tag, cocos2d::ccColor3B color);
 
     /**
-     * @note[short] MacOS (ARM): 0x42894
-     * @note[short] MacOS (Intel): 0x497f0
+     * @note[short] MacOS (ARM): 0x3fbb4
+     * @note[short] MacOS (Intel): 0x49280
+     * @note[short] Windows: 0x11e920
+     * @note[short] iOS: 0x3f52fc
      * @note[short] Android
      */
     void updateEditColorButton();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x2b938
+     * @note[short] MacOS (Intel): 0x2e850
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] Android
      */
     void updateEditMenu();
 
     /**
-     * @note[short] MacOS (ARM): 0x2f000
-     * @note[short] MacOS (Intel): 0x2f620
-     * @note[short] Windows: 0xe1560
-     * @note[short] iOS: 0x3df914
+     * @note[short] MacOS (ARM): 0x2c290
+     * @note[short] MacOS (Intel): 0x2f160
+     * @note[short] Windows: 0xe2c00
+     * @note[short] iOS: 0x3e7630
      * @note[short] Android
      */
     void updateGridNodeSize();
 
     /**
+     * @note[short] MacOS (ARM): 0x2c374
+     * @note[short] MacOS (Intel): 0x2f290
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn updateGridNodeSize(int p0);
+    void updateGridNodeSize(int objectID);
 
     /**
+     * @note[short] MacOS (ARM): 0x36d48
+     * @note[short] MacOS (Intel): 0x3e9d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn updateGroupIDBtn2();
+    void updateGroupIDBtn2();
 
     /**
-     * @note[short] MacOS (ARM): 0x2c844
-     * @note[short] MacOS (Intel): 0x2ccd0
-     * @note[short] Windows: 0x11dac0
-     * @note[short] iOS: 0x3ddd7c
+     * @note[short] MacOS (ARM): 0x299b8
+     * @note[short] MacOS (Intel): 0x2c680
+     * @note[short] Windows: 0x11f4e0
+     * @note[short] iOS: 0x3e5978
      * @note[short] Android
      */
     void updateGroupIDLabel();
 
     /**
-     * @note[short] MacOS (ARM): 0x2f208
-     * @note[short] MacOS (Intel): 0x2f870
-     * @note[short] Windows: 0xe17c0
-     * @note[short] iOS: 0x3dfae0
+     * @note[short] MacOS (ARM): 0x2c4e8
+     * @note[short] MacOS (Intel): 0x2f410
+     * @note[short] Windows: 0xe2e60
+     * @note[short] iOS: 0x3e784c
      * @note[short] Android
      */
     void updateObjectInfoLabel();
 
     /**
-     * @note[short] MacOS (ARM): 0x2d08c
-     * @note[short] MacOS (Intel): 0x2d5f0
-     * @note[short] Windows: 0x110850
-     * @note[short] iOS: 0x3de490
+     * @note[short] MacOS (ARM): 0x2a2f4
+     * @note[short] MacOS (Intel): 0x2d0c0
+     * @note[short] Windows: 0x111f60
+     * @note[short] iOS: 0x3e6180
      * @note[short] Android
      */
     void updatePlaybackBtn();
 
     /**
-     * @note[short] MacOS (ARM): 0x2b3c0
-     * @note[short] MacOS (Intel): 0x2b1b0
-     * @note[short] Windows: 0xe14a0
-     * @note[short] iOS: 0x3dca34
+     * @note[short] MacOS (ARM): 0x283e4
+     * @note[short] MacOS (Intel): 0x2ab00
+     * @note[short] Windows: 0xe2b40
+     * @note[short] iOS: 0x3e45b4
      * @note[short] Android
      */
     void updateSlider();
 
     /**
-     * @note[short] MacOS (ARM): 0x2e6c0
-     * @note[short] MacOS (Intel): 0x2ed30
+     * @note[short] MacOS (ARM): 0x2b954
+     * @note[short] MacOS (Intel): 0x2e880
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
@@ -2149,51 +2553,67 @@ public:
     void updateSpecialUIElements();
 
     /**
-     * @note[short] MacOS (ARM): 0x38b14
-     * @note[short] MacOS (Intel): 0x3e050
-     * @note[short] Windows: 0x110ef0
-     * @note[short] iOS: 0x3e6980
+     * @note[short] MacOS (ARM): 0x2a23c
+     * @note[short] MacOS (Intel): 0x2cff0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3e60c8
      * @note[short] Android
      */
-    void updateZoom(float p0);
+    void updateStickyControls();
 
     /**
+     * @note[short] MacOS (ARM): 0x35cac
+     * @note[short] MacOS (Intel): 0x3d9a0
+     * @note[short] Windows: 0x1126e0
+     * @note[short] iOS: 0x3ee6c8
      * @note[short] Android
      */
-    float valueFromXPos(float p0);
+    void updateZoom(float zoom);
 
     /**
-     * @note[short] Windows: 0x121010
+     * @note[short] MacOS (ARM): 0x2c200
+     * @note[short] MacOS (Intel): 0x2f0d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3e75a0
      * @note[short] Android
      */
-    float xPosFromValue(float p0);
+    float valueFromXPos(float xPos);
 
     /**
-     * @note[short] MacOS (ARM): 0x38d98
-     * @note[short] MacOS (Intel): 0x3e320
+     * @note[short] MacOS (ARM): 0x2c07c
+     * @note[short] MacOS (Intel): 0x2ef10
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3e742c
+     * @note[short] Android
+     */
+    float xPosFromValue(float value);
+
+    /**
+     * @note[short] MacOS (ARM): 0x35f30
+     * @note[short] MacOS (Intel): 0x3dc70
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void zoomGameLayer(bool p0);
+    void zoomGameLayer(bool zoomingIn);
 
     /**
-     * @note[short] MacOS (ARM): 0xe218
-     * @note[short] MacOS (Intel): 0xced0
-     * @note[short] Windows: 0x110e50
-     * @note[short] iOS: 0x3bfee8
+     * @note[short] MacOS (ARM): 0xb250
+     * @note[short] MacOS (Intel): 0xc830
+     * @note[short] Windows: 0x112640
+     * @note[short] iOS: 0x3c7a5c
      * @note[short] Android
      */
-    void zoomIn(cocos2d::CCObject* p0);
+    void zoomIn(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0xe270
-     * @note[short] MacOS (Intel): 0xcf20
-     * @note[short] Windows: 0x110ea0
-     * @note[short] iOS: 0x3bff3c
+     * @note[short] MacOS (ARM): 0xb2a8
+     * @note[short] MacOS (Intel): 0xc880
+     * @note[short] Windows: 0x112690
+     * @note[short] iOS: 0x3c7ab0
      * @note[short] Android
      */
-    void zoomOut(cocos2d::CCObject* p0);
+    void zoomOut(cocos2d::CCObject* sender);
     gd::unordered_map<int, GameObjectEditorState> m_objectEditorStates;
     GJTransformState m_transformState;
     bool m_isPlayingMusic;
@@ -2239,6 +2659,7 @@ public:
     bool m_snapObjectExists;
     bool m_snapSelected;
     bool m_stickyControlsEnabled;
+    bool m_linkControlsDisabled;
     bool m_speedObjectsUpdated;
     cocos2d::CCPoint m_createPosition;
     cocos2d::CCArray* m_snapPositions;
@@ -2260,6 +2681,7 @@ public:
     CCMenuItemSpriteExtra* m_trashBtn;
     CCMenuItemSpriteExtra* m_linkBtn;
     CCMenuItemSpriteExtra* m_unlinkBtn;
+    CCMenuItemSpriteExtra* m_enableLinkBtn;
     CCMenuItemSpriteExtra* m_undoBtn;
     CCMenuItemSpriteExtra* m_redoBtn;
     CCMenuItemSpriteExtra* m_editObjectBtn;

@@ -15,103 +15,144 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(SongInfoObject, cocos2d::CCNode)
 
     /**
-     * @note[short] MacOS (ARM): 0x4c8ddc
-     * @note[short] MacOS (Intel): 0x574cd0
-     * @note[short] Windows: 0x32f0d0
-     * @note[short] iOS: 0x158280
+     * @note[short] MacOS (ARM): 0x4d740c
+     * @note[short] MacOS (Intel): 0x58c1e0
+     * @note[short] Windows: 0x3448b0
+     * @note[short] iOS: 0x154920
      * @note[short] Android
      */
-    static SongInfoObject* create(cocos2d::CCDictionary* p0);
+    static SongInfoObject* create(cocos2d::CCDictionary* dict);
 
     /**
-     * @note[short] MacOS (ARM): 0x4cf4f4
-     * @note[short] MacOS (Intel): 0x57c260
-     * @note[short] Windows: 0x3300c0
-     * @note[short] iOS: 0x15c574
+     * @note[short] MacOS (ARM): 0x4e0cc0
+     * @note[short] MacOS (Intel): 0x596ea0
+     * @note[short] Windows: 0x344730
+     * @note[short] iOS: 0x15b164
+     * @note[short] Android
+     */
+    static SongInfoObject* create(int songID);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4ddfe4
+     * @note[short] MacOS (Intel): 0x593d00
+     * @note[short] Windows: 0x345bf0
+     * @note[short] iOS: 0x158f48
      * @note[short] Android: Rebinded
      */
-    static SongInfoObject* create(int songID, gd::string songName, gd::string artistName, int artistID, float filesize, gd::string youtubeVideo, gd::string youtubeChannel, gd::string url, int nongType, gd::string extraArtistIDs, bool isNew, int libraryOrder, int priority);
+    static SongInfoObject* create(int songID, gd::string songName, gd::string artistName, int artistID, float filesize, gd::string youtubeVideo, gd::string youtubeChannel, gd::string url, gd::string p8, int nongType, gd::string extraArtistIDs, bool isNew, int libraryOrder, int priority);
 
     /**
-     * @note[short] MacOS (ARM): 0x4d21ac
-     * @note[short] MacOS (Intel): 0x57f2e0
-     * @note[short] Windows: 0x32ef70
-     * @note[short] iOS: 0x15e750
+     * @note[short] MacOS (ARM): 0x4e1260
+     * @note[short] MacOS (Intel): 0x5974f0
+     * @note[short] Windows: 0x346250
+     * @note[short] iOS: 0x15b644
      * @note[short] Android
      */
-    static SongInfoObject* create(int p0);
+    static SongInfoObject* createWithCoder(DS_Dictionary* dict);
 
     /**
-     * @note[short] MacOS (ARM): 0x4d2d3c
-     * @note[short] MacOS (Intel): 0x5800d0
-     * @note[short] Windows: 0x3309a0
-     * @note[short] iOS: 0x15f0b0
+     * @note[short] MacOS (ARM): 0x4e1920
+     * @note[short] MacOS (Intel): 0x597d60
+     * @note[short] Windows: 0x3465b0
+     * @note[short] iOS: 0x15bb98
      * @note[short] Android
      */
-    virtual void encodeWithCoder(DS_Dictionary* p0);
+    virtual void encodeWithCoder(DS_Dictionary* dict);
 
     /**
-     * @note[short] MacOS (ARM): 0x4d2ed0
-     * @note[short] MacOS (Intel): 0x580290
+     * @note[short] MacOS (ARM): 0x4e1ac0
+     * @note[short] MacOS (Intel): 0x597f60
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x15f244
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x15bd38
+     * @note[short] Android
      */
     virtual bool canEncode();
 
     /**
+     * @note[short] MacOS (ARM): 0x4de440
+     * @note[short] MacOS (Intel): 0x594240
+     * @note[short] Windows: 0x346c70
+     * @note[short] iOS: 0x159300
      * @note[short] Android: Rebinded
      */
-    void addTags(gd::string p0);
+    void addTags(gd::string tags);
 
     /**
+     * @note[short] MacOS (ARM): 0x4deb74
+     * @note[short] MacOS (Intel): 0x594aa0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn containsTag(int p0);
+    bool containsTag(int tag);
 
     /**
-     * @note[short] MacOS (ARM): 0x4d2740
-     * @note[short] MacOS (Intel): 0x57f980
-     * @note[short] Windows: 0x330690
-     * @note[short] iOS: 0x15ebf0
+     * @note[short] MacOS (ARM): 0x4d8128
+     * @note[short] MacOS (Intel): 0x58d270
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1551e8
      * @note[short] Android
      */
-    static SongInfoObject* createWithCoder(DS_Dictionary* p0);
+    void copyValues(SongInfoObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0x4e1ac8
+     * @note[short] MacOS (Intel): 0x597f70
+     * @note[short] Windows: 0x3467b0
+     * @note[short] iOS: 0x15bd40
      * @note[short] Android
      */
-    TodoReturn getArtistNames(int p0);
+    gd::string getArtistNames(int unused);
 
     /**
+     * @note[short] MacOS (ARM): 0x4e20a0
+     * @note[short] MacOS (Intel): 0x598730
+     * @note[short] Windows: 0x346c00
+     * @note[short] iOS: 0x15c0b4
      * @note[short] Android
      */
-    TodoReturn getTagsString(bool p0);
+    int getExtraArtistCount();
 
     /**
-     * @note[short] Windows: 0x3302f0
-     * @note[short] iOS: 0x15e928
+     * @note[short] MacOS (ARM): 0x4e21ac
+     * @note[short] MacOS (Intel): 0x5988a0
+     * @note[short] Windows: 0x346e60
+     * @note[short] iOS: 0x15c100
+     * @note[short] Android
+     */
+    gd::string getTagsString(bool shortTags);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4e0e50
+     * @note[short] MacOS (Intel): 0x5970a0
+     * @note[short] Windows: 0x345e60
+     * @note[short] iOS: 0x15b378
      * @note[short] Android: Rebinded
      */
-    bool init(int songID, gd::string songName, gd::string artistName, int artistID, float filesize, gd::string youtubeVideo, gd::string youtubeChannel, gd::string url, int nongType, gd::string extraArtistIDs, bool isNew, int libraryOrder, int priority);
+    bool init(int songID, gd::string songName, gd::string artistName, int artistID, float filesize, gd::string youtubeVideo, gd::string youtubeChannel, gd::string url, gd::string p8, int nongType, gd::string extraArtistIDs, bool isNew, int libraryOrder, int priority);
 
     /**
+     * @note[short] MacOS (ARM): 0x4e1090
+     * @note[short] MacOS (Intel): 0x597310
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x15b510
      * @note[short] Android: Rebinded
      */
-    TodoReturn updateArtists(gd::string p0);
+    void updateArtists(gd::string artists);
     int m_songID;
     gd::string m_songName;
     gd::string m_artistName;
     gd::string m_youtubeVideo;
     gd::string m_youtubeChannel;
     gd::string m_songUrl;
+    gd::string m_unkString;
     int m_artistID;
     float m_fileSize;
     int m_nongType;
     gd::string m_extraArtists;
-    bool m_isUnknownSong;
-    bool m_autoDownload;
-    bool m_unk21a;
+    bool m_unloaded;
+    bool m_verified;
+    bool m_isBlocked;
     int m_priority;
     int m_unkInt;
     int m_BPM;

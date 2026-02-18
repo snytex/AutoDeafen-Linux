@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void getUserListFinished(cocos2d::CCArray* p0, UserListType p1);
+    virtual void getUserListFinished(cocos2d::CCArray* scores, UserListType type);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,7 +29,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void getUserListFailed(UserListType p0, GJErrorCode p1);
+    virtual void getUserListFailed(UserListType type, GJErrorCode errorType);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -38,7 +38,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void userListChanged(cocos2d::CCArray* p0, UserListType p1);
+    virtual void userListChanged(cocos2d::CCArray* scores, UserListType type);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -47,5 +47,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void forceReloadList(UserListType p0);
+    virtual void forceReloadList(UserListType type);
 };

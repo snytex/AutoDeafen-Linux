@@ -20,11 +20,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(loadFromScore) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateBGColor
-		#define GEODE_STATICS_updateBGColor
-		GEODE_AS_STATIC_FUNCTION(updateBGColor) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_init
 		#define GEODE_CONCEPT_CHECK_init
@@ -55,10 +50,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c7f0, Thiscall, GJLocalLevelScoreCell, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xad710, Thiscall, GJLocalLevelScoreCell, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb8fd0, Thiscall, GJLocalLevelScoreCell, loadFromScore, GJLocalScore*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJLocalLevelScoreCell, updateBGColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c830, Thiscall, GJLocalLevelScoreCell, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xade20, Thiscall, GJLocalLevelScoreCell, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb9ca0, Thiscall, GJLocalLevelScoreCell, loadFromScore, GJLocalScore*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJLocalLevelScoreCell, updateBGColor, int)
 		}
 	};
 }

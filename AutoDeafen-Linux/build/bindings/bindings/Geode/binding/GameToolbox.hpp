@@ -14,94 +14,116 @@ public:
     static constexpr auto CLASS_NAME = "GameToolbox";
 
     /**
-     * @note[short] MacOS (ARM): 0x43f944
-     * @note[short] MacOS (Intel): 0x4dc890
-     * @note[short] Windows: 0x65010
-     * @note[short] iOS: 0x4829c
+     * @note[short] MacOS (ARM): 0x4495cc
+     * @note[short] MacOS (Intel): 0x4ef7d0
+     * @note[short] Windows: 0x65040
+     * @note[short] iOS: 0x44a80
      * @note[short] Android
      */
-    static void addBackButton(cocos2d::CCLayer* p0, cocos2d::CCMenuItem* p1);
+    static void addBackButton(cocos2d::CCLayer* parent, cocos2d::CCMenuItem* menuItem);
 
     /**
-     * @note[short] MacOS (ARM): 0x43fa2c
-     * @note[short] MacOS (Intel): 0x4dc960
-     * @note[short] Windows: 0x650f0
-     * @note[short] iOS: 0x48380
+     * @note[short] MacOS (ARM): 0x4496b4
+     * @note[short] MacOS (Intel): 0x4ef8a0
+     * @note[short] Windows: 0x65120
+     * @note[short] iOS: 0x44b64
      * @note[short] Android
      */
-    static void addRThumbScrollButton(cocos2d::CCLayer* p0);
+    static void addRThumbScrollButton(cocos2d::CCLayer* parent);
 
     /**
-     * @note[short] MacOS (ARM): 0x43e460
-     * @note[short] MacOS (Intel): 0x4db280
-     * @note[short] Windows: 0x64110
-     * @note[short] iOS: 0x47414
+     * @note[short] MacOS (ARM): 0x4481a0
+     * @note[short] MacOS (Intel): 0x4ee2d0
+     * @note[short] Windows: 0x64140
+     * @note[short] iOS: 0x43c0c
      * @note[short] Android
      */
-    static void alignItemsHorisontally(cocos2d::CCArray* p0, float p1, cocos2d::CCPoint p2, bool p3);
+    static void alignItemsHorisontally(cocos2d::CCArray* items, float gap, cocos2d::CCPoint position, bool skipSize);
 
     /**
+     * @note[short] MacOS (ARM): 0x448458
+     * @note[short] MacOS (Intel): 0x4ee600
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x43dd4
      * @note[short] Android
      */
-    static void alignItemsVertically(cocos2d::CCArray* p0, float p1, cocos2d::CCPoint p2);
+    static void alignItemsVertically(cocos2d::CCArray* items, float gap, cocos2d::CCPoint position);
 
     /**
+     * @note[short] MacOS (ARM): 0x44f8a8
+     * @note[short] MacOS (Intel): 0x4f67e0
+     * @note[short] Windows: 0x68ac0
+     * @note[short] iOS: 0x47ec8
      * @note[short] Android
      */
-    static TodoReturn bounceTime(float p0);
+    static float bounceTime(float time);
 
     /**
+     * @note[short] MacOS (ARM): 0x449b14
+     * @note[short] MacOS (Intel): 0x4efd30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    static TodoReturn colorToSepia(cocos2d::ccColor3B p0, float p1);
+    static cocos2d::ccColor3B colorToSepia(cocos2d::ccColor3B color, float factor);
 
     /**
+     * @note[short] MacOS (ARM): 0x448a9c
+     * @note[short] MacOS (Intel): 0x4eec50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    static TodoReturn contentScaleClipRect(cocos2d::CCRect& p0);
+    static void contentScaleClipRect(cocos2d::CCRect& rect);
 
     /**
+     * @note[short] MacOS (ARM): 0x44b1ec
+     * @note[short] MacOS (Intel): 0x4f1460
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-    static TodoReturn createHashString(gd::string const& p0, int p1);
+    static gd::string createHashString(gd::string const& str, int length);
 
     /**
-     * @note[short] MacOS (ARM): 0x43ee18
-     * @note[short] MacOS (Intel): 0x4dbd60
+     * @note[short] MacOS (ARM): 0x448ae0
+     * @note[short] MacOS (Intel): 0x4eecb0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x47a98
+     * @note[short] iOS: 0x4427c
      * @note[short] Android: Rebinded
      */
     static CCMenuItemToggler* createToggleButton(gd::string label, cocos2d::SEL_MenuHandler selector, bool state, cocos2d::CCMenu* menu, cocos2d::CCPoint position, cocos2d::CCNode* parent, cocos2d::CCNode* labelParent, cocos2d::CCArray* container);
 
     /**
-     * @note[short] MacOS (ARM): 0x43ef50
-     * @note[short] MacOS (Intel): 0x4dbe90
-     * @note[short] Windows: 0x64670
-     * @note[short] iOS: 0x47bcc
+     * @note[short] MacOS (ARM): 0x448c1c
+     * @note[short] MacOS (Intel): 0x4eede0
+     * @note[short] Windows: 0x646a0
+     * @note[short] iOS: 0x443b0
      * @note[short] Android: Rebinded
      */
     static CCMenuItemToggler* createToggleButton(gd::string label, cocos2d::SEL_MenuHandler selector, bool state, cocos2d::CCMenu* menu, cocos2d::CCPoint position, cocos2d::CCNode* parent, cocos2d::CCNode* labelParent, float buttonScale, float maxLabelScale, float maxLabelWidth, cocos2d::CCPoint labelOffset, char const* font, bool labelTop, int labelTag, cocos2d::CCArray* container);
 
     /**
-     * @note[short] MacOS (ARM): 0x43e8a8
-     * @note[short] MacOS (Intel): 0x4db770
+     * @note[short] MacOS (ARM): 0x4485e8
+     * @note[short] MacOS (Intel): 0x4ee7c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x43f64
      * @note[short] Android
      */
     static bool doWeHaveInternet();
 
     /**
-     * @note[short] MacOS (ARM): 0x445748
-     * @note[short] MacOS (Intel): 0x4e34f0
-     * @note[short] Windows: 0x68570
-     * @note[short] iOS: 0x4b720
+     * @note[short] MacOS (ARM): 0x44f594
+     * @note[short] MacOS (Intel): 0x4f6540
+     * @note[short] Windows: 0x685a0
+     * @note[short] iOS: 0x47e98
      * @note[short] Android
      */
     static gd::string easeToText(int easingType);
 
     /**
-     * @note[short] MacOS (ARM): 0x441848
-     * @note[short] MacOS (Intel): 0x4dea50
+     * @note[short] MacOS (ARM): 0x44b6ec
+     * @note[short] MacOS (Intel): 0x4f1950
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
@@ -109,65 +131,80 @@ public:
     static uint64_t fast_rand();
 
     /**
-     * @note[short] MacOS (ARM): 0x441870
-     * @note[short] MacOS (Intel): 0x4dea80
+     * @note[short] MacOS (ARM): 0x44b714
+     * @note[short] MacOS (Intel): 0x4f1980
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x49540
+     * @note[short] iOS: 0x45ce8
      * @note[short] Android
      */
     static float fast_rand_0_1();
 
     /**
-     * @note[short] MacOS (ARM): 0x4418ac
-     * @note[short] MacOS (Intel): 0x4deac0
+     * @note[short] MacOS (ARM): 0x44b750
+     * @note[short] MacOS (Intel): 0x4f19c0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x49578
+     * @note[short] iOS: 0x45d20
      * @note[short] Android
      */
     static float fast_rand_minus1_1();
 
     /**
-     * @note[short] MacOS (ARM): 0x441830
-     * @note[short] MacOS (Intel): 0x4dea30
+     * @note[short] MacOS (ARM): 0x44b6d4
+     * @note[short] MacOS (Intel): 0x4f1930
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x49534
+     * @note[short] iOS: 0x45cdc
      * @note[short] Android
      */
-    static void fast_srand(uint64_t p0);
+    static void fast_srand(uint64_t seed);
 
     /**
-     * @note[short] MacOS (ARM): 0x464058
-     * @note[short] MacOS (Intel): 0x504920
+     * @note[short] MacOS (ARM): 0x44b554
+     * @note[short] MacOS (Intel): 0x4f17e0
+     * @note[short] Windows: 0x66070
+     * @note[short] iOS: 0x45bf8
      * @note[short] Android
      */
-    static gd::string gen_random(int p0);
+    static gd::string gen_random(int length);
 
     /**
+     * @note[short] MacOS (ARM): 0x448044
+     * @note[short] MacOS (Intel): 0x4ee170
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    static TodoReturn getDropActionWDelay(float p0, float p1, float p2, cocos2d::CCNode* p3, cocos2d::SEL_CallFunc p4);
+    static cocos2d::CCSequence* getDropActionWDelay(float delay, float duration, float scale, cocos2d::CCNode* target, cocos2d::SEL_CallFunc selector);
 
     /**
+     * @note[short] MacOS (ARM): 0x448100
+     * @note[short] MacOS (Intel): 0x4ee230
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    static TodoReturn getDropActionWEnd(float p0, float p1, float p2, cocos2d::CCAction* p3, float p4);
+    static cocos2d::CCSequence* getDropActionWEnd(float delay, float duration, float scale, cocos2d::CCAction* action, float actionDelay);
 
     /**
-     * @note[short] MacOS (ARM): 0x4415e8
-     * @note[short] MacOS (Intel): 0x4de7b0
+     * @note[short] MacOS (ARM): 0x44b498
+     * @note[short] MacOS (Intel): 0x4f16a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    static cocos2d::CCActionEase* getEasedAction(cocos2d::CCActionInterval* p0, int p1, float p2);
+    static cocos2d::CCActionInterval* getEasedAction(cocos2d::CCActionInterval* action, int easingType, float easingRate);
 
     /**
-     * @note[short] Windows: 0x68b40
+     * @note[short] MacOS (ARM): 0x44f990
+     * @note[short] MacOS (Intel): 0x4f68a0
+     * @note[short] Windows: 0x68b70
+     * @note[short] iOS: 0x47f78
      * @note[short] Android
      */
-    static float getEasedValue(float p0, int p1, float p2);
+    static float getEasedValue(float value, int easingType, float easingRate);
 
     /**
-     * @note[short] MacOS (ARM): 0x44183c
-     * @note[short] MacOS (Intel): 0x4dea40
+     * @note[short] MacOS (ARM): 0x44b6e0
+     * @note[short] MacOS (Intel): 0x4f1940
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
@@ -175,234 +212,297 @@ public:
     static uint64_t getfast_srand();
 
     /**
+     * @note[short] MacOS (ARM): 0x44b518
+     * @note[short] MacOS (Intel): 0x4f17a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    static TodoReturn getInvertedEasing(int p0);
+    static int getInvertedEasing(int easingType);
 
     /**
+     * @note[short] MacOS (ARM): 0x4490b8
+     * @note[short] MacOS (Intel): 0x4ef270
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    static TodoReturn getLargestMergedIntDicts(cocos2d::CCDictionary* p0, cocos2d::CCDictionary* p1);
+    static cocos2d::CCDictionary* getLargestMergedIntDicts(cocos2d::CCDictionary* dict1, cocos2d::CCDictionary* dict2);
 
     /**
+     * @note[short] MacOS (ARM): 0x449ca0
+     * @note[short] MacOS (Intel): 0x4efec0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x44f84
      * @note[short] Android
      */
-    static TodoReturn getMultipliedHSV(cocos2d::ccHSVValue const& p0, float p1);
+    static cocos2d::ccHSVValue getMultipliedHSV(cocos2d::ccHSVValue const& value, float factor);
 
     /**
-     * @note[short] MacOS (ARM): 0x43f1f4
-     * @note[short] MacOS (Intel): 0x4dc100
-     * @note[short] Windows: 0x64970
-     * @note[short] iOS: 0x47e70
+     * @note[short] MacOS (ARM): 0x448ec0
+     * @note[short] MacOS (Intel): 0x4ef040
+     * @note[short] Windows: 0x649a0
+     * @note[short] iOS: 0x44654
      * @note[short] Android
      */
-    static cocos2d::CCPoint getRelativeOffset(GameObject* p0, cocos2d::CCPoint p1);
+    static cocos2d::CCPoint getRelativeOffset(GameObject* object, cocos2d::CCPoint offset);
 
     /**
-     * @note[short] MacOS (ARM): 0x43eb40
-     * @note[short] MacOS (Intel): 0x4dba00
-     * @note[short] Windows: 0x64310
+     * @note[short] MacOS (ARM): 0x44886c
+     * @note[short] MacOS (Intel): 0x4eea40
+     * @note[short] Windows: 0x64340
+     * @note[short] iOS: 0x4404c
      * @note[short] Android
      */
-    static gd::string getResponse(cocos2d::extension::CCHttpResponse* p0);
+    static gd::string getResponse(cocos2d::extension::CCHttpResponse* response);
 
     /**
-     * @note[short] MacOS (ARM): 0x44145c
-     * @note[short] MacOS (Intel): 0x4de620
-     * @note[short] Windows: 0x65e20
-     * @note[short] iOS: 0x49338
+     * @note[short] MacOS (ARM): 0x44b2bc
+     * @note[short] MacOS (Intel): 0x4f1520
+     * @note[short] Windows: 0x65e50
+     * @note[short] iOS: 0x45ae0
      * @note[short] Android
      */
-    static gd::string getTimeString(int p0, bool p1);
+    static gd::string getTimeString(int seconds, bool noSeconds);
 
     /**
-     * @note[short] MacOS (ARM): 0x44007c
-     * @note[short] MacOS (Intel): 0x4dd030
-     * @note[short] Windows: 0x654e0
-     * @note[short] iOS: 0x487fc
+     * @note[short] MacOS (ARM): 0x449d0c
+     * @note[short] MacOS (Intel): 0x4eff60
+     * @note[short] Windows: 0x65510
+     * @note[short] iOS: 0x44ff0
      * @note[short] Android: Rebinded
      */
     static cocos2d::ccHSVValue hsvFromString(gd::string const& str, char const* delim);
 
     /**
-     * @note[short] MacOS (ARM): 0x4465bc
-     * @note[short] MacOS (Intel): 0x4e4250
-     * @note[short] Windows: 0x69120
-     * @note[short] iOS: 0x4bd08
+     * @note[short] MacOS (ARM): 0x4503e8
+     * @note[short] MacOS (Intel): 0x4f72e0
+     * @note[short] Windows: 0x69150
+     * @note[short] iOS: 0x48470
      * @note[short] Android
      */
-    static gd::string intToShortString(int p0);
+    static gd::string intToShortString(int value);
 
     /**
-     * @note[short] MacOS (ARM): 0x446284
-     * @note[short] MacOS (Intel): 0x4e3f30
-     * @note[short] Windows: 0x69060
+     * @note[short] MacOS (ARM): 0x4500bc
+     * @note[short] MacOS (Intel): 0x4f6fb0
+     * @note[short] Windows: 0x69090
+     * @note[short] iOS: 0x4838c
      * @note[short] Android
      */
-    static gd::string intToString(int p0);
+    static gd::string intToString(int value);
 
     /**
+     * @note[short] MacOS (ARM): 0x448748
+     * @note[short] MacOS (Intel): 0x4ee910
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     static bool isIOS();
 
     /**
+     * @note[short] MacOS (ARM): 0x44b544
+     * @note[short] MacOS (Intel): 0x4f17d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x45be8
      * @note[short] Android
      */
-    static bool isRateEasing(int p0);
+    static bool isRateEasing(int easingType);
 
     /**
+     * @note[short] MacOS (ARM): 0x44910c
+     * @note[short] MacOS (Intel): 0x4ef2c0
+     * @note[short] Windows: 0x64ba0
+     * @note[short] iOS: 0x44834
      * @note[short] Android
      */
-    static TodoReturn mergeDictsSaveLargestInt(cocos2d::CCDictionary* p0, cocos2d::CCDictionary* p1);
+    static void mergeDictsSaveLargestInt(cocos2d::CCDictionary* toDict, cocos2d::CCDictionary* fromDict);
 
     /**
-     * @note[short] MacOS (ARM): 0x43f6d0
-     * @note[short] MacOS (Intel): 0x4dc610
+     * @note[short] MacOS (ARM): 0x449378
+     * @note[short] MacOS (Intel): 0x4ef550
+     * @note[short] Windows: 0x64e00
+     * @note[short] iOS: 0x4496c
      * @note[short] Android
      */
-    static void mergeDictsSkipConflict(cocos2d::CCDictionary* p0, cocos2d::CCDictionary* p1);
+    static void mergeDictsSkipConflict(cocos2d::CCDictionary* toDict, cocos2d::CCDictionary* fromDict);
 
     /**
-     * @note[short] MacOS (ARM): 0x446c04
-     * @note[short] MacOS (Intel): 0x4e48b0
-     * @note[short] Windows: 0x69630
-     * @note[short] iOS: 0x4c158
+     * @note[short] MacOS (ARM): 0x450a1c
+     * @note[short] MacOS (Intel): 0x4f7960
+     * @note[short] Windows: 0x69660
+     * @note[short] iOS: 0x488c0
      * @note[short] Android
      */
     static gd::string msToTimeString(int milliseconds, int formattingMode);
 
     /**
-     * @note[short] Android
-     */
-    static TodoReturn multipliedColorValue(cocos2d::ccColor3B p0, cocos2d::ccColor3B p1, float p2);
-
-    /**
-     * @note[short] Android
-     */
-    static TodoReturn openAppPage();
-
-    /**
-     * @note[short] MacOS (ARM): 0x43ea18
-     * @note[short] MacOS (Intel): 0x4db8e0
-     * @note[short] Android: Rebinded
-     */
-    static TodoReturn openRateURL(gd::string p0, gd::string p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x4451a0
-     * @note[short] MacOS (Intel): 0x4e2ed0
+     * @note[short] MacOS (ARM): 0x449a40
+     * @note[short] MacOS (Intel): 0x4efc60
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x4b190
-     * @note[short] Android: Rebinded
-     */
-    static cocos2d::CCParticleSystemQuad* particleFromString(gd::string const& str, cocos2d::CCParticleSystemQuad* system, bool p2);
-
-    /**
-     * @note[short] MacOS (ARM): 0x44528c
-     * @note[short] MacOS (Intel): 0x4e2fe0
-     * @note[short] Windows: 0x68000
-     * @note[short] iOS: 0x4b264
+     * @note[short] iOS: 0x44ec8
      * @note[short] Android
      */
-    static cocos2d::CCParticleSystemQuad* particleFromStruct(cocos2d::ParticleStruct const& p0, cocos2d::CCParticleSystemQuad* p1, bool p2);
+    static cocos2d::ccColor3B multipliedColorValue(cocos2d::ccColor3B minColor, cocos2d::ccColor3B maxColor, float factor);
 
     /**
-     * @note[short] MacOS (ARM): 0x444354
-     * @note[short] MacOS (Intel): 0x4e1f80
-     * @note[short] Windows: 0x67540
-     * @note[short] iOS: 0x4a7fc
-     * @note[short] Android: Rebinded
-     */
-    static void particleStringToStruct(gd::string const& p0, cocos2d::ParticleStruct& p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x446d4c
-     * @note[short] MacOS (Intel): 0x4e49f0
-     * @note[short] Windows: 0x69760
+     * @note[short] MacOS (ARM): 0x448848
+     * @note[short] MacOS (Intel): 0x4eea20
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x44048
      * @note[short] Android
      */
-    static gd::string pointsToString(int p0);
+    static void openAppPage();
 
     /**
-     * @note[short] iOS: 0x47a90
+     * @note[short] MacOS (ARM): 0x448750
+     * @note[short] MacOS (Intel): 0x4ee920
+     * @note[short] Android: Rebinded
+     */
+    static void openRateURL(gd::string str1, gd::string str2);
+
+    /**
+     * @note[short] MacOS (ARM): 0x44efec
+     * @note[short] MacOS (Intel): 0x4f5f20
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x47908
+     * @note[short] Android: Rebinded
+     */
+    static cocos2d::CCParticleSystemQuad* particleFromString(gd::string const& str, cocos2d::CCParticleSystemQuad* system, bool dontUpdate);
+
+    /**
+     * @note[short] MacOS (ARM): 0x44f0d8
+     * @note[short] MacOS (Intel): 0x4f6030
+     * @note[short] Windows: 0x68030
+     * @note[short] iOS: 0x479dc
+     * @note[short] Android
+     */
+    static cocos2d::CCParticleSystemQuad* particleFromStruct(cocos2d::ParticleStruct const& particleStruct, cocos2d::CCParticleSystemQuad* system, bool dontUpdate);
+
+    /**
+     * @note[short] MacOS (ARM): 0x44e1b4
+     * @note[short] MacOS (Intel): 0x4f4fd0
+     * @note[short] Windows: 0x67570
+     * @note[short] iOS: 0x46f68
+     * @note[short] Android: Rebinded
+     */
+    static void particleStringToStruct(gd::string const& str, cocos2d::ParticleStruct& particleStruct);
+
+    /**
+     * @note[short] MacOS (ARM): 0x450b70
+     * @note[short] MacOS (Intel): 0x4f7ab0
+     * @note[short] Windows: 0x69790
+     * @note[short] iOS: 0x48a14
+     * @note[short] Android
+     */
+    static gd::string pointsToString(int points);
+
+    /**
+     * @note[short] MacOS (ARM): 0x448ad8
+     * @note[short] MacOS (Intel): 0x4eeca0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x44274
      * @note[short] Android
      */
     static void postClipVisit();
 
     /**
-     * @note[short] MacOS (ARM): 0x43ed28
-     * @note[short] MacOS (Intel): 0x4dbc50
-     * @note[short] Windows: 0x645c0
-     * @note[short] iOS: 0x479ac
+     * @note[short] MacOS (ARM): 0x4489f0
+     * @note[short] MacOS (Intel): 0x4eeba0
+     * @note[short] Windows: 0x645f0
+     * @note[short] iOS: 0x44190
      * @note[short] Android
      */
-    static void preVisitWithClippingRect(cocos2d::CCNode* p0, cocos2d::CCRect p1);
+    static void preVisitWithClippingRect(cocos2d::CCNode* node, cocos2d::CCRect rect);
 
     /**
+     * @note[short] MacOS (ARM): 0x448aa0
+     * @note[short] MacOS (Intel): 0x4eec60
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x4423c
      * @note[short] Android
      */
-    static TodoReturn preVisitWithClipRect(cocos2d::CCRect p0);
+    static void preVisitWithClipRect(cocos2d::CCRect rect);
 
     /**
-     * @note[short] MacOS (ARM): 0x4418f4
-     * @note[short] MacOS (Intel): 0x4deb00
-     * @note[short] Windows: 0x662d0
-     * @note[short] iOS: 0x495bc
+     * @note[short] MacOS (ARM): 0x44b798
+     * @note[short] MacOS (Intel): 0x4f1a00
+     * @note[short] Windows: 0x66300
+     * @note[short] iOS: 0x45d64
      * @note[short] Android
      */
-    static gd::string saveParticleToString(cocos2d::CCParticleSystemQuad* p0);
+    static gd::string saveParticleToString(cocos2d::CCParticleSystemQuad* system);
 
     /**
+     * @note[short] MacOS (ARM): 0x45025c
+     * @note[short] MacOS (Intel): 0x4f7190
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-    static TodoReturn saveStringToFile(gd::string const& p0, gd::string const& p1);
+    static bool saveStringToFile(gd::string const& path, gd::string const& content);
 
     /**
-     * @note[short] Windows: 0x656f0
+     * @note[short] MacOS (ARM): 0x44a2a4
+     * @note[short] MacOS (Intel): 0x4f0480
+     * @note[short] Windows: 0x65720
+     * @note[short] iOS: 0x4532c
      * @note[short] Android
      */
-    static gd::string stringFromHSV(cocos2d::ccHSVValue p0, char const* p1);
+    static gd::string stringFromHSV(cocos2d::ccHSVValue value, char const* separator);
 
     /**
-     * @note[short] MacOS (ARM): 0x440d54
-     * @note[short] MacOS (Intel): 0x4dded0
-     * @note[short] Windows: 0x65c30
+     * @note[short] MacOS (ARM): 0x44ab30
+     * @note[short] MacOS (Intel): 0x4f0df0
+     * @note[short] Windows: 0x65c60
+     * @note[short] iOS: 0x4572c
      * @note[short] Android: Rebinded
      */
-    static cocos2d::CCDictionary* stringSetupToDict(gd::string const& p0, char const* p1);
+    static cocos2d::CCDictionary* stringSetupToDict(gd::string const& str, char const* separator);
 
     /**
-     * @note[short] Windows: 0x65890
+     * @note[short] MacOS (ARM): 0x44a790
+     * @note[short] MacOS (Intel): 0x4f0aa0
+     * @note[short] Windows: 0x658c0
+     * @note[short] iOS: 0x454f8
      * @note[short] Android: Rebinded
      */
-    static void stringSetupToMap(gd::string const& p0, char const* p1, gd::map<gd::string, gd::string>& p2);
+    static void stringSetupToMap(gd::string const& str, char const* separator, gd::map<gd::string, gd::string>& setup);
 
     /**
+     * @note[short] MacOS (ARM): 0x44b154
+     * @note[short] MacOS (Intel): 0x4f13c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x45a48
      * @note[short] Android
      */
-    static TodoReturn strongColor(cocos2d::ccColor3B p0);
+    static cocos2d::ccColor3B strongColor(cocos2d::ccColor3B color);
 
     /**
-     * @note[short] MacOS (ARM): 0x4469a4
-     * @note[short] MacOS (Intel): 0x4e4690
+     * @note[short] MacOS (ARM): 0x4507bc
+     * @note[short] MacOS (Intel): 0x4f7740
+     * @note[short] Windows: 0x692f0
+     * @note[short] iOS: 0x486ac
      * @note[short] Android
      */
-    static TodoReturn timestampToHumanReadable(long p0);
+    static gd::string timestampToHumanReadable(time_t timestamp);
 
     /**
-     * @note[short] MacOS (ARM): 0x43fbfc
-     * @note[short] MacOS (Intel): 0x4dcb20
-     * @note[short] Windows: 0x65290
-     * @note[short] iOS: 0x4854c
+     * @note[short] MacOS (ARM): 0x449884
+     * @note[short] MacOS (Intel): 0x4efa60
+     * @note[short] Windows: 0x652c0
+     * @note[short] iOS: 0x44d30
      * @note[short] Android
      */
-    static cocos2d::ccColor3B transformColor(cocos2d::ccColor3B const& p0, cocos2d::ccHSVValue p1);
+    static cocos2d::ccColor3B transformColor(cocos2d::ccColor3B const& color, cocos2d::ccHSVValue hsv);
 
     /**
-     * @note[short] MacOS (ARM): 0x43fbe0
-     * @note[short] MacOS (Intel): 0x4dcaf0
+     * @note[short] MacOS (ARM): 0x449868
+     * @note[short] MacOS (Intel): 0x4efa30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x44d14
      * @note[short] Android
      */
-    static cocos2d::ccColor3B transformColor(cocos2d::ccColor3B const& p0, float p1, float p2, float p3);
+    static cocos2d::ccColor3B transformColor(cocos2d::ccColor3B const& color, float h, float s, float v);
 };

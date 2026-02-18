@@ -24,61 +24,91 @@ public:
      CCCounterLabel();
 
     /**
-     * @note[short] MacOS (ARM): 0x45b328
-     * @note[short] MacOS (Intel): 0x4fb550
+     * @note[short] MacOS (ARM): 0x46813c
+     * @note[short] MacOS (Intel): 0x5115e0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3ec2c
+     * @note[short] iOS: 0x3aa20
      * @note[short] Android
      */
     static CCCounterLabel* create(int count, char const* font, FormatterType type);
 
     /**
+     * @note[short] MacOS (ARM): 0x468434
+     * @note[short] MacOS (Intel): 0x511910
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void calculateStepSize(int p0);
+    void calculateStepSize(int steps);
 
     /**
+     * @note[short] MacOS (ARM): 0x4683a0
+     * @note[short] MacOS (Intel): 0x511860
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void disableCounter();
 
     /**
+     * @note[short] MacOS (ARM): 0x4682e4
+     * @note[short] MacOS (Intel): 0x5117a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void enableCounter();
 
     /**
+     * @note[short] MacOS (ARM): 0x4682d8
+     * @note[short] MacOS (Intel): 0x511780
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void fastUpdateCounter();
 
     /**
+     * @note[short] MacOS (ARM): 0x468470
+     * @note[short] MacOS (Intel): 0x511960
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     int getTargetCount();
 
     /**
+     * @note[short] MacOS (ARM): 0x468250
+     * @note[short] MacOS (Intel): 0x511700
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3aae8
      * @note[short] Android
      */
     bool init(int count, char const* font, FormatterType type);
 
     /**
-     * @note[short] Windows: 0x43130
+     * @note[short] MacOS (ARM): 0x4683c0
+     * @note[short] MacOS (Intel): 0x511890
+     * @note[short] Windows: 0x431a0
+     * @note[short] iOS: 0x3abe4
      * @note[short] Android
      */
-    void setTargetCount(int p0);
+    void setTargetCount(int count);
 
     /**
-     * @note[short] Windows: 0x431c0
+     * @note[short] MacOS (ARM): 0x46831c
+     * @note[short] MacOS (Intel): 0x5117e0
+     * @note[short] Windows: 0x43230
+     * @note[short] iOS: 0x3ab70
      * @note[short] Android
      */
-    void updateCounter(float p0);
+    void updateCounter(float dt);
 
     /**
-     * @note[short] Windows: 0x43240
+     * @note[short] MacOS (ARM): 0x468478
+     * @note[short] MacOS (Intel): 0x511970
+     * @note[short] Windows: 0x432b0
+     * @note[short] iOS: 0x3ac54
      * @note[short] Android
      */
     void updateString();

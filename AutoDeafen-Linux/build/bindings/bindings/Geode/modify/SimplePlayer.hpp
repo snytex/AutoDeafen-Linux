@@ -45,6 +45,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(setFrames) 
 	#endif
 
+	#ifndef GEODE_STATICS_tryEnableCustomGlowColor
+		#define GEODE_STATICS_tryEnableCustomGlowColor
+		GEODE_AS_STATIC_FUNCTION(tryEnableCustomGlowColor) 
+	#endif
+
 	#ifndef GEODE_STATICS_updateColors
 		#define GEODE_STATICS_updateColors
 		GEODE_AS_STATIC_FUNCTION(updateColors) 
@@ -91,6 +96,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(disableCustomGlowColor) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_disableGlowOutline
+		#define GEODE_CONCEPT_CHECK_disableGlowOutline
+		GEODE_CONCEPT_FUNCTION_CHECK(disableGlowOutline) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_enableCustomGlowColor
 		#define GEODE_CONCEPT_CHECK_enableCustomGlowColor
 		GEODE_CONCEPT_FUNCTION_CHECK(enableCustomGlowColor) 
@@ -126,9 +136,19 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(setFrames) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_setGlowOutline
+		#define GEODE_CONCEPT_CHECK_setGlowOutline
+		GEODE_CONCEPT_FUNCTION_CHECK(setGlowOutline) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_setSecondColor
 		#define GEODE_CONCEPT_CHECK_setSecondColor
 		GEODE_CONCEPT_FUNCTION_CHECK(setSecondColor) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_tryEnableCustomGlowColor
+		#define GEODE_CONCEPT_CHECK_tryEnableCustomGlowColor
+		GEODE_CONCEPT_FUNCTION_CHECK(tryEnableCustomGlowColor) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_updateColors
@@ -150,23 +170,27 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x271ac0, Default, SimplePlayer, create, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x272e70, Thiscall, SimplePlayer, setOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x272320, Thiscall, SimplePlayer, setColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x2791e0, Thiscall, SimplePlayer)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2793a0, Default, SimplePlayer, create, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27a7f0, Thiscall, SimplePlayer, setOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x279c00, Thiscall, SimplePlayer, setColor, cocos2d::ccColor3B const&)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SimplePlayer, asyncLoadIcon, int, IconType)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SimplePlayer, createRobotSprite, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x272290, Thiscall, SimplePlayer, createSpiderSprite, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x279b70, Thiscall, SimplePlayer, createSpiderSprite, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SimplePlayer, disableCustomGlowColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SimplePlayer, disableGlowOutline, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SimplePlayer, enableCustomGlowColor, cocos2d::ccColor3B const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SimplePlayer, hideAll, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SimplePlayer, hideSecondary, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SimplePlayer, iconFinishedLoading, int, IconType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x271bb0, Thiscall, SimplePlayer, init, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x279490, Thiscall, SimplePlayer, init, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SimplePlayer, setColors, cocos2d::ccColor3B const&, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x272c40, Thiscall, SimplePlayer, setFrames, char const*, char const*, char const*, char const*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27a5c0, Thiscall, SimplePlayer, setFrames, char const*, char const*, char const*, char const*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SimplePlayer, setGlowOutline, cocos2d::ccColor3B)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SimplePlayer, setSecondColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x272350, Thiscall, SimplePlayer, updateColors, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x272710, Thiscall, SimplePlayer, updatePlayerFrame, int, IconType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x279c30, Thiscall, SimplePlayer, tryEnableCustomGlowColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x279cd0, Thiscall, SimplePlayer, updateColors, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27a090, Thiscall, SimplePlayer, updatePlayerFrame, int, IconType)
 		}
 	};
 }

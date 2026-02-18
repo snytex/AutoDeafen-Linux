@@ -96,14 +96,14 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ShareLevelLayer, create, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, ShareLevelLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, ShareLevelLayer, keyBackClicked, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ShareLevelLayer, getStarsButton, int, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4769e0, Thiscall, ShareLevelLayer, init, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84620, Thiscall, ShareLevelLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x477c40, Thiscall, ShareLevelLayer, onSettings, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x477d90, Thiscall, ShareLevelLayer, onShare, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x477ab0, Thiscall, ShareLevelLayer, selectRating, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4776a0, Thiscall, ShareLevelLayer, setupStars, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48eec0, Thiscall, ShareLevelLayer, init, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, ShareLevelLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x490120, Thiscall, ShareLevelLayer, onSettings, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x490270, Thiscall, ShareLevelLayer, onShare, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48ff90, Thiscall, ShareLevelLayer, selectRating, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48fb80, Thiscall, ShareLevelLayer, setupStars, )
 		}
 	};
 }

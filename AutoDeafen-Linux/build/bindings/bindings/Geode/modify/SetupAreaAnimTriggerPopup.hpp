@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateDefaultTriggerValues
 		#define GEODE_STATICS_updateDefaultTriggerValues
 		GEODE_AS_STATIC_FUNCTION(updateDefaultTriggerValues) 
@@ -85,13 +80,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupAreaAnimTriggerPopup, create, EnterEffectObject*, cocos2d::CCArray*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fab00, Thiscall, SetupAreaAnimTriggerPopup, updateDefaultTriggerValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3facd0, Thiscall, SetupAreaAnimTriggerPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fa910, Thiscall, SetupAreaAnimTriggerPopup, createValueControlAdvancedAnim, int, gd::string, cocos2d::CCPoint, float, bool, InputValueType, int, bool, float, float, int, int, GJInputStyle)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f91a0, Thiscall, SetupAreaAnimTriggerPopup, init, EnterEffectObject*, cocos2d::CCArray*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fac60, Thiscall, SetupAreaAnimTriggerPopup, onDeactivateAnimValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fabe0, Thiscall, SetupAreaAnimTriggerPopup, updateTargetIDLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupAreaAnimTriggerPopup, create, EnterEffectObject*, cocos2d::CCArray*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4127c0, Thiscall, SetupAreaAnimTriggerPopup, updateDefaultTriggerValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x412990, Thiscall, SetupAreaAnimTriggerPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4125d0, Thiscall, SetupAreaAnimTriggerPopup, createValueControlAdvancedAnim, int, gd::string, cocos2d::CCPoint, float, bool, InputValueType, int, bool, float, float, int, int, GJInputStyle)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x410e60, Thiscall, SetupAreaAnimTriggerPopup, init, EnterEffectObject*, cocos2d::CCArray*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x412920, Thiscall, SetupAreaAnimTriggerPopup, onDeactivateAnimValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4128a0, Thiscall, SetupAreaAnimTriggerPopup, updateTargetIDLabel, )
 		}
 	};
 }

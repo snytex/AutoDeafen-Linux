@@ -15,6 +15,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onClose) 
 	#endif
 
+	#ifndef GEODE_STATICS_addRemap
+		#define GEODE_STATICS_addRemap
+		GEODE_AS_STATIC_FUNCTION(addRemap) 
+	#endif
+
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -28,6 +33,11 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onDeleteRemap
 		#define GEODE_STATICS_onDeleteRemap
 		GEODE_AS_STATIC_FUNCTION(onDeleteRemap) 
+	#endif
+
+	#ifndef GEODE_STATICS_onPasteRemap
+		#define GEODE_STATICS_onPasteRemap
+		GEODE_AS_STATIC_FUNCTION(onPasteRemap) 
 	#endif
 
 	#ifndef GEODE_STATICS_onSelectRemap
@@ -56,6 +66,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(onClose) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_addRemap
+		#define GEODE_CONCEPT_CHECK_addRemap
+		GEODE_CONCEPT_FUNCTION_CHECK(addRemap) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_init
 		#define GEODE_CONCEPT_CHECK_init
 		GEODE_CONCEPT_FUNCTION_CHECK(init) 
@@ -69,6 +84,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_onDeleteRemap
 		#define GEODE_CONCEPT_CHECK_onDeleteRemap
 		GEODE_CONCEPT_FUNCTION_CHECK(onDeleteRemap) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_onPasteRemap
+		#define GEODE_CONCEPT_CHECK_onPasteRemap
+		GEODE_CONCEPT_FUNCTION_CHECK(onPasteRemap) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_onSelectRemap
@@ -95,14 +115,16 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x445be0, Default, SetupSpawnPopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40c730, Thiscall, SetupSpawnPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x445d20, Thiscall, SetupSpawnPopup, init, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x446910, Thiscall, SetupSpawnPopup, onAddRemap, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x446a80, Thiscall, SetupSpawnPopup, onDeleteRemap, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x447440, Thiscall, SetupSpawnPopup, onSelectRemap, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x447510, Thiscall, SetupSpawnPopup, queueUpdateButtons, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x446c20, Thiscall, SetupSpawnPopup, updateRemapButtons, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45df80, Default, SetupSpawnPopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4244b0, Thiscall, SetupSpawnPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45eeb0, Thiscall, SetupSpawnPopup, addRemap, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45e0c0, Thiscall, SetupSpawnPopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45ee50, Thiscall, SetupSpawnPopup, onAddRemap, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45eff0, Thiscall, SetupSpawnPopup, onDeleteRemap, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45f190, Thiscall, SetupSpawnPopup, onPasteRemap, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45fa50, Thiscall, SetupSpawnPopup, onSelectRemap, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45fb20, Thiscall, SetupSpawnPopup, queueUpdateButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45f230, Thiscall, SetupSpawnPopup, updateRemapButtons, float)
 		}
 	};
 }

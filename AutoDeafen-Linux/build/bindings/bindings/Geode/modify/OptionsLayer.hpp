@@ -15,16 +15,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(layerHidden) 
 	#endif
 
-	#ifndef GEODE_STATICS_createToggleButton
-		#define GEODE_STATICS_createToggleButton
-		GEODE_AS_STATIC_FUNCTION(createToggleButton) 
-	#endif
-
-	#ifndef GEODE_STATICS_exitLayer
-		#define GEODE_STATICS_exitLayer
-		GEODE_AS_STATIC_FUNCTION(exitLayer) 
-	#endif
-
 	#ifndef GEODE_STATICS_musicSliderChanged
 		#define GEODE_STATICS_musicSliderChanged
 		GEODE_AS_STATIC_FUNCTION(musicSliderChanged) 
@@ -50,19 +40,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onOptions) 
 	#endif
 
-	#ifndef GEODE_STATICS_onProgressBar
-		#define GEODE_STATICS_onProgressBar
-		GEODE_AS_STATIC_FUNCTION(onProgressBar) 
-	#endif
-
 	#ifndef GEODE_STATICS_onRate
 		#define GEODE_STATICS_onRate
 		GEODE_AS_STATIC_FUNCTION(onRate) 
-	#endif
-
-	#ifndef GEODE_STATICS_onRecordReplays
-		#define GEODE_STATICS_onRecordReplays
-		GEODE_AS_STATIC_FUNCTION(onRecordReplays) 
 	#endif
 
 	#ifndef GEODE_STATICS_onSecretVault
@@ -88,11 +68,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_sfxSliderChanged
 		#define GEODE_STATICS_sfxSliderChanged
 		GEODE_AS_STATIC_FUNCTION(sfxSliderChanged) 
-	#endif
-
-	#ifndef GEODE_STATICS_tryEnableRecord
-		#define GEODE_STATICS_tryEnableRecord
-		GEODE_AS_STATIC_FUNCTION(tryEnableRecord) 
 	#endif
 
     
@@ -206,25 +181,25 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(OptionsLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35bff0, Thiscall, OptionsLayer, customSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35d840, Thiscall, OptionsLayer, layerHidden, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x371d10, Thiscall, OptionsLayer, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x373560, Thiscall, OptionsLayer, layerHidden, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(OptionsLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(OptionsLayer, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(OptionsLayer, exitLayer, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35cc70, Thiscall, OptionsLayer, musicSliderChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35d760, Thiscall, OptionsLayer, onAccount, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35d710, Thiscall, OptionsLayer, onHelp, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(OptionsLayer, onMenuMusic, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35ce50, Thiscall, OptionsLayer, onOptions, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(OptionsLayer, onProgressBar, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35d7b0, Thiscall, OptionsLayer, onRate, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(OptionsLayer, onRecordReplays, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35cfb0, Thiscall, OptionsLayer, onSecretVault, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35ce00, Thiscall, OptionsLayer, onSoundtracks, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35d820, Thiscall, OptionsLayer, onSupport, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35d6f0, Thiscall, OptionsLayer, onVideo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35cd70, Thiscall, OptionsLayer, sfxSliderChanged, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(OptionsLayer, tryEnableRecord, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(OptionsLayer, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(OptionsLayer, exitLayer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x372990, Thiscall, OptionsLayer, musicSliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x373480, Thiscall, OptionsLayer, onAccount, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x373540, Thiscall, OptionsLayer, onHelp, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x372880, Thiscall, OptionsLayer, onMenuMusic, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x372b70, Thiscall, OptionsLayer, onOptions, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(OptionsLayer, onProgressBar, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3734d0, Thiscall, OptionsLayer, onRate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(OptionsLayer, onRecordReplays, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x372cd0, Thiscall, OptionsLayer, onSecretVault, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x372b20, Thiscall, OptionsLayer, onSoundtracks, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x373430, Thiscall, OptionsLayer, onSupport, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x373410, Thiscall, OptionsLayer, onVideo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x372a90, Thiscall, OptionsLayer, sfxSliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(OptionsLayer, tryEnableRecord, )
 		}
 	};
 }

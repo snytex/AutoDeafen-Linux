@@ -65,16 +65,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onViewProfile) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateBGColor
-		#define GEODE_STATICS_updateBGColor
-		GEODE_AS_STATIC_FUNCTION(updateBGColor) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateToggle
-		#define GEODE_STATICS_updateToggle
-		GEODE_AS_STATIC_FUNCTION(updateToggle) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_init
 		#define GEODE_CONCEPT_CHECK_init
@@ -155,20 +145,20 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbb620, Thiscall, GJRequestCell, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xad710, Thiscall, GJRequestCell, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbc1f0, Thiscall, GJRequestCell, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbc3a0, Thiscall, GJRequestCell, uploadActionFinished, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbc580, Thiscall, GJRequestCell, uploadActionFailed, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbb4b0, Thiscall, GJRequestCell, onClosePopup, UploadActionPopup*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbb640, Thiscall, GJRequestCell, loadFromScore, GJUserScore*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbbf50, Thiscall, GJRequestCell, markAsRead, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbc030, Thiscall, GJRequestCell, onDeleteRequest, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJRequestCell, onToggle, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbbea0, Thiscall, GJRequestCell, onViewFriendRequest, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJRequestCell, onViewProfile, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJRequestCell, updateBGColor, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJRequestCell, updateToggle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbc320, Thiscall, GJRequestCell, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xade20, Thiscall, GJRequestCell, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbcf10, Thiscall, GJRequestCell, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbd0c0, Thiscall, GJRequestCell, uploadActionFinished, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbd2a0, Thiscall, GJRequestCell, uploadActionFailed, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbc1b0, Thiscall, GJRequestCell, onClosePopup, UploadActionPopup*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbc340, Thiscall, GJRequestCell, loadFromScore, GJUserScore*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbcc70, Thiscall, GJRequestCell, markAsRead, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbcd50, Thiscall, GJRequestCell, onDeleteRequest, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbcef0, Thiscall, GJRequestCell, onToggle, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbcbc0, Thiscall, GJRequestCell, onViewFriendRequest, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbb500, Thiscall, GJRequestCell, onViewProfile, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRequestCell, updateBGColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRequestCell, updateToggle, )
 		}
 	};
 }

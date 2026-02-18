@@ -15,19 +15,34 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createWithTexture) 
 	#endif
 
-	#ifndef GEODE_STATICS_initWithFile
-		#define GEODE_STATICS_initWithFile
-		GEODE_AS_STATIC_FUNCTION(initWithFile) 
+	#ifndef GEODE_STATICS_getTotalQuads
+		#define GEODE_STATICS_getTotalQuads
+		GEODE_AS_STATIC_FUNCTION(getTotalQuads) 
 	#endif
 
-	#ifndef GEODE_STATICS_initWithTexture
-		#define GEODE_STATICS_initWithTexture
-		GEODE_AS_STATIC_FUNCTION(initWithTexture) 
+	#ifndef GEODE_STATICS_getCapacity
+		#define GEODE_STATICS_getCapacity
+		GEODE_AS_STATIC_FUNCTION(getCapacity) 
 	#endif
 
-	#ifndef GEODE_STATICS_setDirty
-		#define GEODE_STATICS_setDirty
-		GEODE_AS_STATIC_FUNCTION(setDirty) 
+	#ifndef GEODE_STATICS_getTexture
+		#define GEODE_STATICS_getTexture
+		GEODE_AS_STATIC_FUNCTION(getTexture) 
+	#endif
+
+	#ifndef GEODE_STATICS_setTexture
+		#define GEODE_STATICS_setTexture
+		GEODE_AS_STATIC_FUNCTION(setTexture) 
+	#endif
+
+	#ifndef GEODE_STATICS_getQuads
+		#define GEODE_STATICS_getQuads
+		GEODE_AS_STATIC_FUNCTION(getQuads) 
+	#endif
+
+	#ifndef GEODE_STATICS_setQuads
+		#define GEODE_STATICS_setQuads
+		GEODE_AS_STATIC_FUNCTION(setQuads) 
 	#endif
 
 	#ifndef GEODE_STATICS_description
@@ -55,6 +70,16 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(increaseTotalQuadsWith) 
 	#endif
 
+	#ifndef GEODE_STATICS_initWithFile
+		#define GEODE_STATICS_initWithFile
+		GEODE_AS_STATIC_FUNCTION(initWithFile) 
+	#endif
+
+	#ifndef GEODE_STATICS_initWithTexture
+		#define GEODE_STATICS_initWithTexture
+		GEODE_AS_STATIC_FUNCTION(initWithTexture) 
+	#endif
+
 	#ifndef GEODE_STATICS_insertQuad
 		#define GEODE_STATICS_insertQuad
 		GEODE_AS_STATIC_FUNCTION(insertQuad) 
@@ -68,11 +93,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_insertQuads
 		#define GEODE_STATICS_insertQuads
 		GEODE_AS_STATIC_FUNCTION(insertQuads) 
-	#endif
-
-	#ifndef GEODE_STATICS_isDirty
-		#define GEODE_STATICS_isDirty
-		GEODE_AS_STATIC_FUNCTION(isDirty) 
 	#endif
 
 	#ifndef GEODE_STATICS_listenBackToForeground
@@ -125,36 +145,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateQuad) 
 	#endif
 
-	#ifndef GEODE_STATICS_getTotalQuads
-		#define GEODE_STATICS_getTotalQuads
-		GEODE_AS_STATIC_FUNCTION(getTotalQuads) 
-	#endif
-
-	#ifndef GEODE_STATICS_getCapacity
-		#define GEODE_STATICS_getCapacity
-		GEODE_AS_STATIC_FUNCTION(getCapacity) 
-	#endif
-
-	#ifndef GEODE_STATICS_getTexture
-		#define GEODE_STATICS_getTexture
-		GEODE_AS_STATIC_FUNCTION(getTexture) 
-	#endif
-
-	#ifndef GEODE_STATICS_setTexture
-		#define GEODE_STATICS_setTexture
-		GEODE_AS_STATIC_FUNCTION(setTexture) 
-	#endif
-
-	#ifndef GEODE_STATICS_getQuads
-		#define GEODE_STATICS_getQuads
-		GEODE_AS_STATIC_FUNCTION(getQuads) 
-	#endif
-
-	#ifndef GEODE_STATICS_setQuads
-		#define GEODE_STATICS_setQuads
-		GEODE_AS_STATIC_FUNCTION(setQuads) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -166,19 +156,34 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(createWithTexture) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_initWithFile
-		#define GEODE_CONCEPT_CHECK_initWithFile
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithFile) 
+	#ifndef GEODE_CONCEPT_CHECK_getTotalQuads
+		#define GEODE_CONCEPT_CHECK_getTotalQuads
+		GEODE_CONCEPT_FUNCTION_CHECK(getTotalQuads) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_initWithTexture
-		#define GEODE_CONCEPT_CHECK_initWithTexture
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithTexture) 
+	#ifndef GEODE_CONCEPT_CHECK_getCapacity
+		#define GEODE_CONCEPT_CHECK_getCapacity
+		GEODE_CONCEPT_FUNCTION_CHECK(getCapacity) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_setDirty
-		#define GEODE_CONCEPT_CHECK_setDirty
-		GEODE_CONCEPT_FUNCTION_CHECK(setDirty) 
+	#ifndef GEODE_CONCEPT_CHECK_getTexture
+		#define GEODE_CONCEPT_CHECK_getTexture
+		GEODE_CONCEPT_FUNCTION_CHECK(getTexture) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setTexture
+		#define GEODE_CONCEPT_CHECK_setTexture
+		GEODE_CONCEPT_FUNCTION_CHECK(setTexture) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getQuads
+		#define GEODE_CONCEPT_CHECK_getQuads
+		GEODE_CONCEPT_FUNCTION_CHECK(getQuads) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setQuads
+		#define GEODE_CONCEPT_CHECK_setQuads
+		GEODE_CONCEPT_FUNCTION_CHECK(setQuads) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_description
@@ -206,6 +211,16 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(increaseTotalQuadsWith) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_initWithFile
+		#define GEODE_CONCEPT_CHECK_initWithFile
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithFile) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_initWithTexture
+		#define GEODE_CONCEPT_CHECK_initWithTexture
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithTexture) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_insertQuad
 		#define GEODE_CONCEPT_CHECK_insertQuad
 		GEODE_CONCEPT_FUNCTION_CHECK(insertQuad) 
@@ -219,11 +234,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_insertQuads
 		#define GEODE_CONCEPT_CHECK_insertQuads
 		GEODE_CONCEPT_FUNCTION_CHECK(insertQuads) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_isDirty
-		#define GEODE_CONCEPT_CHECK_isDirty
-		GEODE_CONCEPT_FUNCTION_CHECK(isDirty) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_listenBackToForeground
@@ -271,39 +281,14 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(setupVBO) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_setupVBOandVAO
+		#define GEODE_CONCEPT_CHECK_setupVBOandVAO
+		GEODE_CONCEPT_FUNCTION_CHECK(setupVBOandVAO) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_updateQuad
 		#define GEODE_CONCEPT_CHECK_updateQuad
 		GEODE_CONCEPT_FUNCTION_CHECK(updateQuad) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getTotalQuads
-		#define GEODE_CONCEPT_CHECK_getTotalQuads
-		GEODE_CONCEPT_FUNCTION_CHECK(getTotalQuads) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getCapacity
-		#define GEODE_CONCEPT_CHECK_getCapacity
-		GEODE_CONCEPT_FUNCTION_CHECK(getCapacity) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getTexture
-		#define GEODE_CONCEPT_CHECK_getTexture
-		GEODE_CONCEPT_FUNCTION_CHECK(getTexture) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setTexture
-		#define GEODE_CONCEPT_CHECK_setTexture
-		GEODE_CONCEPT_FUNCTION_CHECK(setTexture) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getQuads
-		#define GEODE_CONCEPT_CHECK_getQuads
-		GEODE_CONCEPT_FUNCTION_CHECK(getQuads) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setQuads
-		#define GEODE_CONCEPT_CHECK_setQuads
-		GEODE_CONCEPT_FUNCTION_CHECK(setQuads) 
 	#endif
 
 
@@ -315,21 +300,27 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCTextureAtlas@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCTextureAtlas, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCTextureAtlas@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCTextureAtlas)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, unsigned int>::func(&cocos2d::CCTextureAtlas::create)), Default, cocos2d::CCTextureAtlas, create, char const*, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTexture2D*, unsigned int>::func(&cocos2d::CCTextureAtlas::createWithTexture)), Default, cocos2d::CCTextureAtlas, createWithTexture, cocos2d::CCTexture2D*, unsigned int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, unsigned int>::func(&cocos2d::CCTextureAtlas::initWithFile)), Thiscall, cocos2d::CCTextureAtlas, initWithFile, char const*, unsigned int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTexture2D*, unsigned int>::func(&cocos2d::CCTextureAtlas::initWithTexture)), Thiscall, cocos2d::CCTextureAtlas, initWithTexture, cocos2d::CCTexture2D*, unsigned int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCTextureAtlas::setDirty)), Thiscall, cocos2d::CCTextureAtlas, setDirty, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTextureAtlas::getTotalQuads)), Thiscall, cocos2d::CCTextureAtlas, getTotalQuads, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTextureAtlas::getCapacity)), Thiscall, cocos2d::CCTextureAtlas, getCapacity, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTextureAtlas::getTexture)), Thiscall, cocos2d::CCTextureAtlas, getTexture, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCTexture2D*>::func(&cocos2d::CCTextureAtlas::setTexture)), Thiscall, cocos2d::CCTextureAtlas, setTexture, cocos2d::CCTexture2D*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTextureAtlas::getQuads)), Thiscall, cocos2d::CCTextureAtlas, getQuads, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccV3F_C4B_T2F_Quad*>::func(&cocos2d::CCTextureAtlas::setQuads)), Thiscall, cocos2d::CCTextureAtlas, setQuads, cocos2d::ccV3F_C4B_T2F_Quad*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCTextureAtlas::description)), Thiscall, cocos2d::CCTextureAtlas, description, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int>::func(&cocos2d::CCTextureAtlas::drawNumberOfQuads)), Thiscall, cocos2d::CCTextureAtlas, drawNumberOfQuads, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int, unsigned int>::func(&cocos2d::CCTextureAtlas::drawNumberOfQuads)), Thiscall, cocos2d::CCTextureAtlas, drawNumberOfQuads, unsigned int, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCTextureAtlas::drawQuads)), Thiscall, cocos2d::CCTextureAtlas, drawQuads, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int, unsigned int>::func(&cocos2d::CCTextureAtlas::fillWithEmptyQuadsFromIndex)), Thiscall, cocos2d::CCTextureAtlas, fillWithEmptyQuadsFromIndex, unsigned int, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int>::func(&cocos2d::CCTextureAtlas::increaseTotalQuadsWith)), Thiscall, cocos2d::CCTextureAtlas, increaseTotalQuadsWith, unsigned int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::_ccV3F_C4B_T2F_Quad*, unsigned int>::func(&cocos2d::CCTextureAtlas::insertQuad)), Thiscall, cocos2d::CCTextureAtlas, insertQuad, cocos2d::_ccV3F_C4B_T2F_Quad*, unsigned int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, unsigned int>::func(&cocos2d::CCTextureAtlas::initWithFile)), Thiscall, cocos2d::CCTextureAtlas, initWithFile, char const*, unsigned int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTexture2D*, unsigned int>::func(&cocos2d::CCTextureAtlas::initWithTexture)), Thiscall, cocos2d::CCTextureAtlas, initWithTexture, cocos2d::CCTexture2D*, unsigned int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::ccV3F_C4B_T2F_Quad*, unsigned int>::func(&cocos2d::CCTextureAtlas::insertQuad)), Thiscall, cocos2d::CCTextureAtlas, insertQuad, cocos2d::ccV3F_C4B_T2F_Quad*, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int, unsigned int>::func(&cocos2d::CCTextureAtlas::insertQuadFromIndex)), Thiscall, cocos2d::CCTextureAtlas, insertQuadFromIndex, unsigned int, unsigned int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::_ccV3F_C4B_T2F_Quad*, unsigned int, unsigned int>::func(&cocos2d::CCTextureAtlas::insertQuads)), Thiscall, cocos2d::CCTextureAtlas, insertQuads, cocos2d::_ccV3F_C4B_T2F_Quad*, unsigned int, unsigned int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCTextureAtlas::isDirty)), Thiscall, cocos2d::CCTextureAtlas, isDirty, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::ccV3F_C4B_T2F_Quad*, unsigned int, unsigned int>::func(&cocos2d::CCTextureAtlas::insertQuads)), Thiscall, cocos2d::CCTextureAtlas, insertQuads, cocos2d::ccV3F_C4B_T2F_Quad*, unsigned int, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*>::func(&cocos2d::CCTextureAtlas::listenBackToForeground)), Thiscall, cocos2d::CCTextureAtlas, listenBackToForeground, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCTextureAtlas::mapBuffers)), Thiscall, cocos2d::CCTextureAtlas, mapBuffers, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int, unsigned int>::func(&cocos2d::CCTextureAtlas::moveQuadsFromIndex)), Thiscall, cocos2d::CCTextureAtlas, moveQuadsFromIndex, unsigned int, unsigned int)
@@ -340,13 +331,7 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int>::func(&cocos2d::CCTextureAtlas::resizeCapacity)), Thiscall, cocos2d::CCTextureAtlas, resizeCapacity, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCTextureAtlas::setupIndices)), Thiscall, cocos2d::CCTextureAtlas, setupIndices, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCTextureAtlas::setupVBO)), Thiscall, cocos2d::CCTextureAtlas, setupVBO, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::_ccV3F_C4B_T2F_Quad*, unsigned int>::func(&cocos2d::CCTextureAtlas::updateQuad)), Thiscall, cocos2d::CCTextureAtlas, updateQuad, cocos2d::_ccV3F_C4B_T2F_Quad*, unsigned int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTextureAtlas::getTotalQuads)), Thiscall, cocos2d::CCTextureAtlas, getTotalQuads, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTextureAtlas::getCapacity)), Thiscall, cocos2d::CCTextureAtlas, getCapacity, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTextureAtlas::getTexture)), Thiscall, cocos2d::CCTextureAtlas, getTexture, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCTexture2D*>::func(&cocos2d::CCTextureAtlas::setTexture)), Thiscall, cocos2d::CCTextureAtlas, setTexture, cocos2d::CCTexture2D*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTextureAtlas::getQuads)), Thiscall, cocos2d::CCTextureAtlas, getQuads, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccV3F_C4B_T2F_Quad*>::func(&cocos2d::CCTextureAtlas::setQuads)), Thiscall, cocos2d::CCTextureAtlas, setQuads, cocos2d::_ccV3F_C4B_T2F_Quad*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::ccV3F_C4B_T2F_Quad*, unsigned int>::func(&cocos2d::CCTextureAtlas::updateQuad)), Thiscall, cocos2d::CCTextureAtlas, updateQuad, cocos2d::ccV3F_C4B_T2F_Quad*, unsigned int)
 		}
 	};
 }

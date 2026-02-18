@@ -70,11 +70,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(tryResumeTowerMusic) 
 	#endif
 
-	#ifndef GEODE_STATICS_tryShowAd
-		#define GEODE_STATICS_tryShowAd
-		GEODE_AS_STATIC_FUNCTION(tryShowAd) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -161,20 +156,20 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelAreaInnerLayer, create, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2be1d0, Default, LevelAreaInnerLayer, scene, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c0550, Thiscall, LevelAreaInnerLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bf9a0, Thiscall, LevelAreaInnerLayer, dialogClosed, DialogLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c0500, Thiscall, LevelAreaInnerLayer, onExit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2be2e0, Thiscall, LevelAreaInnerLayer, init, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c04a0, Thiscall, LevelAreaInnerLayer, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bffd0, Thiscall, LevelAreaInnerLayer, onDoor, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bfa30, Thiscall, LevelAreaInnerLayer, onInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bf2c0, Thiscall, LevelAreaInnerLayer, onNextFloor, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c02c0, Thiscall, LevelAreaInnerLayer, onOnlineVault, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c0190, Thiscall, LevelAreaInnerLayer, playStep1, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bf3c0, Thiscall, LevelAreaInnerLayer, showFloor1CompleteDialog, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bff30, Thiscall, LevelAreaInnerLayer, tryResumeTowerMusic, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelAreaInnerLayer, tryShowAd, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c63d0, Default, LevelAreaInnerLayer, scene, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c8750, Thiscall, LevelAreaInnerLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c7ba0, Thiscall, LevelAreaInnerLayer, dialogClosed, DialogLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c8700, Thiscall, LevelAreaInnerLayer, onExit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c64e0, Thiscall, LevelAreaInnerLayer, init, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c86a0, Thiscall, LevelAreaInnerLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c81d0, Thiscall, LevelAreaInnerLayer, onDoor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c7c30, Thiscall, LevelAreaInnerLayer, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c74c0, Thiscall, LevelAreaInnerLayer, onNextFloor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c84c0, Thiscall, LevelAreaInnerLayer, onOnlineVault, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c8390, Thiscall, LevelAreaInnerLayer, playStep1, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c75c0, Thiscall, LevelAreaInnerLayer, showFloor1CompleteDialog, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c8130, Thiscall, LevelAreaInnerLayer, tryResumeTowerMusic, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelAreaInnerLayer, tryShowAd, )
 		}
 	};
 }

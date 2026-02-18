@@ -15,74 +15,82 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(CCLightFlash, cocos2d::CCNode)
 
     /**
-     * @note[short] Windows: Out of line
-     * @note[short] Android: Rebinded
-     */
-     CCLightFlash();
-
-    /**
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
+     CCLightFlash();
+
+    /**
+     * @note[short] MacOS (ARM): 0x45be74
+     * @note[short] MacOS (Intel): 0x504440
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x314f0
+     * @note[short] Android: Rebinded
+     */
      ~CCLightFlash();
 
     /**
-     * @note[short] MacOS (ARM): 0x451614
-     * @note[short] MacOS (Intel): 0x4f0560
+     * @note[short] MacOS (ARM): 0x45b6ac
+     * @note[short] MacOS (Intel): 0x503b20
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x34fb8
+     * @note[short] iOS: 0x30da8
      * @note[short] Android
      */
     static CCLightFlash* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x451678
-     * @note[short] MacOS (Intel): 0x4f05d0
+     * @note[short] MacOS (ARM): 0x45b710
+     * @note[short] MacOS (Intel): 0x503b90
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3501c
+     * @note[short] iOS: 0x30e0c
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x451df8
-     * @note[short] MacOS (Intel): 0x4f0e50
-     * @note[short] Windows: 0x43c80
+     * @note[short] MacOS (ARM): 0x45be34
+     * @note[short] MacOS (Intel): 0x504400
+     * @note[short] Windows: 0x43cf0
+     * @note[short] iOS: 0x314b0
      * @note[short] Android
      */
     void cleanupFlash();
 
     /**
-     * @note[short] MacOS (ARM): 0x451c20
-     * @note[short] MacOS (Intel): 0x4f0c70
+     * @note[short] MacOS (ARM): 0x45bc70
+     * @note[short] MacOS (Intel): 0x504220
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x312f4
      * @note[short] Android
      */
     void fadeAndRemove();
 
     /**
-     * @note[short] MacOS (ARM): 0x451680
-     * @note[short] MacOS (Intel): 0x4f05e0
-     * @note[short] Windows: 0x433a0
-     * @note[short] iOS: 0x35024
+     * @note[short] MacOS (ARM): 0x45b718
+     * @note[short] MacOS (Intel): 0x503ba0
+     * @note[short] Windows: 0x43410
+     * @note[short] iOS: 0x30e14
      * @note[short] Android
      */
     void playEffect(cocos2d::CCPoint pos, cocos2d::ccColor3B col, float startWidth, float startWidthVariation, float endWidth, float endWidthVariation, float endHeight, float stripDuration, float stripDurationVariance, float stripInterval, float stripStartDelay, float stripStartDelayVariation, float stripRotation, float stripRotationVariation, float stripOpacity, float stripOpacityVariation, int stripCount, bool circleRotation, bool fadeIn, float delay);
 
     /**
-     * @note[short] MacOS (ARM): 0x451d9c
-     * @note[short] MacOS (Intel): 0x4f0df0
-     * @note[short] Windows: 0x43c20
+     * @note[short] MacOS (ARM): 0x45bdd8
+     * @note[short] MacOS (Intel): 0x5043a0
+     * @note[short] Windows: 0x43c90
+     * @note[short] iOS: 0x31454
      * @note[short] Android
      */
     void removeLights();
 
     /**
-     * @note[short] MacOS (ARM): 0x451af4
-     * @note[short] MacOS (Intel): 0x4f0b30
-     * @note[short] Windows: 0x438e0
+     * @note[short] MacOS (ARM): 0x45bb5c
+     * @note[short] MacOS (Intel): 0x5040f0
+     * @note[short] Windows: 0x43950
+     * @note[short] iOS: 0x311cc
      * @note[short] Android
      */
     void showFlash();

@@ -15,13 +15,15 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJBigSpriteNode, cocos2d::CCNode)
 
     /**
+     * @note[short] MacOS (ARM): 0x20d458
+     * @note[short] MacOS (Intel): 0x269d60
      * @note[short] Android
      */
     static GJBigSpriteNode* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x204a00
-     * @note[short] MacOS (Intel): 0x257eb0
+     * @note[short] MacOS (ARM): 0x20d520
+     * @note[short] MacOS (Intel): 0x269e30
      * @note[short] Android
      */
     virtual bool init();

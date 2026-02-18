@@ -16,7 +16,7 @@ function(do_fetch)
   message(VERBOSE "Fetching latest from the remote origin")
   execute_process(
     COMMAND "/usr/bin/git" --git-dir=.git fetch --tags --force "origin"
-    WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+    WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
     COMMAND_ERROR_IS_FATAL LAST
     ${maybe_show_command}
   )
@@ -25,7 +25,7 @@ endfunction()
 function(get_hash_for_ref ref out_var err_var)
   execute_process(
     COMMAND "/usr/bin/git" --git-dir=.git rev-parse "${ref}^0"
-    WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+    WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
     RESULT_VARIABLE error_code
     OUTPUT_VARIABLE ref_hash
     ERROR_VARIABLE error_msg
@@ -49,8 +49,8 @@ if("${can_fetch}" STREQUAL "")
 endif()
 
 execute_process(
-  COMMAND "/usr/bin/git" --git-dir=.git show-ref "v3.1.4"
-  WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+  COMMAND "/usr/bin/git" --git-dir=.git show-ref "v3.1.7"
+  WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
   OUTPUT_VARIABLE show_ref_output
 )
 if(show_ref_output MATCHES "^[a-z0-9]+[ \\t]+refs/remotes/")
@@ -59,7 +59,7 @@ if(show_ref_output MATCHES "^[a-z0-9]+[ \\t]+refs/remotes/")
   if(can_fetch)
     do_fetch()
   endif()
-  set(checkout_name "v3.1.4")
+  set(checkout_name "v3.1.7")
 
 elseif(show_ref_output MATCHES "^[a-z0-9]+[ \\t]+refs/tags/")
   # Given a tag name that we already know about. We don't know if the tag we
@@ -68,16 +68,16 @@ elseif(show_ref_output MATCHES "^[a-z0-9]+[ \\t]+refs/tags/")
   # same commit as the tag we hold locally, don't do a fetch and assume the tag
   # hasn't moved on the remote.
   # FIXME: We should provide an option to always fetch for this case
-  get_hash_for_ref("v3.1.4" tag_sha error_msg)
+  get_hash_for_ref("v3.1.7" tag_sha error_msg)
   if(tag_sha STREQUAL head_sha)
-    message(VERBOSE "Already at requested tag: v3.1.4")
+    message(VERBOSE "Already at requested tag: v3.1.7")
     return()
   endif()
 
   if(can_fetch)
     do_fetch()
   endif()
-  set(checkout_name "v3.1.4")
+  set(checkout_name "v3.1.7")
 
 elseif(show_ref_output MATCHES "^[a-z0-9]+[ \\t]+refs/heads/")
   # Given a branch name without any remote and we already have a branch by that
@@ -88,10 +88,10 @@ elseif(show_ref_output MATCHES "^[a-z0-9]+[ \\t]+refs/heads/")
   if(can_fetch)
     do_fetch()
   endif()
-  set(checkout_name "origin/v3.1.4")
+  set(checkout_name "origin/v3.1.7")
 
 else()
-  get_hash_for_ref("v3.1.4" tag_sha error_msg)
+  get_hash_for_ref("v3.1.7" tag_sha error_msg)
   if(tag_sha STREQUAL head_sha)
     # Have the right commit checked out already
     message(VERBOSE "Already at requested ref: ${tag_sha}")
@@ -101,7 +101,7 @@ else()
     # We don't know about this ref yet, so we have no choice but to fetch.
     if(NOT can_fetch)
       message(FATAL_ERROR
-        "Requested git ref \"v3.1.4\" is not present locally, and not "
+        "Requested git ref \"v3.1.7\" is not present locally, and not "
         "allowed to contact remote due to UPDATE_DISCONNECTED setting."
       )
     endif()
@@ -113,13 +113,13 @@ else()
       message(DEBUG "${error_msg}")
     endif()
     do_fetch()
-    set(checkout_name "v3.1.4")
+    set(checkout_name "v3.1.7")
 
   else()
     # We have the commit, so we know we were asked to find a commit hash
     # (otherwise it would have been handled further above), but we don't
     # have that commit checked out yet. We don't need to fetch from the remote.
-    set(checkout_name "v3.1.4")
+    set(checkout_name "v3.1.7")
     if(NOT error_msg STREQUAL "")
       message(WARNING "${error_msg}")
     endif()
@@ -139,7 +139,7 @@ if(git_update_strategy MATCHES "^REBASE(_CHECKOUT)?$")
   # branch isn't tracking the one we want to checkout.
   execute_process(
     COMMAND "/usr/bin/git" --git-dir=.git symbolic-ref -q HEAD
-    WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+    WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
     OUTPUT_VARIABLE current_branch
     OUTPUT_STRIP_TRAILING_WHITESPACE
     # Don't test for an error. If this isn't a branch, we get a non-zero error
@@ -155,7 +155,7 @@ if(git_update_strategy MATCHES "^REBASE(_CHECKOUT)?$")
   else()
     execute_process(
       COMMAND "/usr/bin/git" --git-dir=.git for-each-ref "--format=%(upstream:short)" "${current_branch}"
-      WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+      WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
       OUTPUT_VARIABLE upstream_branch
       OUTPUT_STRIP_TRAILING_WHITESPACE
       COMMAND_ERROR_IS_FATAL ANY  # There is no error if no upstream is set
@@ -178,7 +178,7 @@ endif()
 # Check if stash is needed
 execute_process(
   COMMAND "/usr/bin/git" --git-dir=.git status --porcelain
-  WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+  WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
   RESULT_VARIABLE error_code
   OUTPUT_VARIABLE repo_status
 )
@@ -192,7 +192,7 @@ string(LENGTH "${repo_status}" need_stash)
 if(need_stash)
   execute_process(
     COMMAND "/usr/bin/git" --git-dir=.git stash save --quiet;--include-untracked
-    WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+    WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
     COMMAND_ERROR_IS_FATAL ANY
     ${maybe_show_command}
   )
@@ -201,14 +201,14 @@ endif()
 if(git_update_strategy STREQUAL "CHECKOUT")
   execute_process(
     COMMAND "/usr/bin/git" --git-dir=.git checkout "${checkout_name}"
-    WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+    WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
     COMMAND_ERROR_IS_FATAL ANY
     ${maybe_show_command}
   )
 else()
   execute_process(
     COMMAND "/usr/bin/git" --git-dir=.git rebase "${checkout_name}"
-    WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+    WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
     RESULT_VARIABLE error_code
     OUTPUT_VARIABLE rebase_output
     ERROR_VARIABLE  rebase_output
@@ -217,7 +217,7 @@ else()
     # Rebase failed, undo the rebase attempt before continuing
     execute_process(
       COMMAND "/usr/bin/git" --git-dir=.git rebase --abort
-      WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+      WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
       ${maybe_show_command}
     )
 
@@ -226,11 +226,11 @@ else()
       if(need_stash)
         execute_process(
           COMMAND "/usr/bin/git" --git-dir=.git stash pop --index --quiet
-          WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+          WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
           ${maybe_show_command}
           )
       endif()
-      message(FATAL_ERROR "\nFailed to rebase in: '/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src'."
+      message(FATAL_ERROR "\nFailed to rebase in: '/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src'."
                           "\nOutput from the attempted rebase follows:"
                           "\n${rebase_output}"
                           "\n\nYou will have to resolve the conflicts manually")
@@ -251,14 +251,14 @@ else()
       COMMAND "/usr/bin/git" --git-dir=.git tag -a
               -m "ExternalProject attempting to move from here to ${checkout_name}"
               ${tag_name}
-      WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+      WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
       COMMAND_ERROR_IS_FATAL ANY
       ${maybe_show_command}
     )
 
     execute_process(
       COMMAND "/usr/bin/git" --git-dir=.git checkout "${checkout_name}"
-      WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+      WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
       COMMAND_ERROR_IS_FATAL ANY
       ${maybe_show_command}
     )
@@ -269,7 +269,7 @@ if(need_stash)
   # Put back the stashed changes
   execute_process(
     COMMAND "/usr/bin/git" --git-dir=.git stash pop --index --quiet
-    WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+    WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
     RESULT_VARIABLE error_code
     ${maybe_show_command}
     )
@@ -277,12 +277,12 @@ if(need_stash)
     # Stash pop --index failed: Try again dropping the index
     execute_process(
       COMMAND "/usr/bin/git" --git-dir=.git reset --hard --quiet
-      WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+      WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
       ${maybe_show_command}
     )
     execute_process(
       COMMAND "/usr/bin/git" --git-dir=.git stash pop --quiet
-      WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+      WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
       RESULT_VARIABLE error_code
       ${maybe_show_command}
     )
@@ -290,15 +290,15 @@ if(need_stash)
       # Stash pop failed: Restore previous state.
       execute_process(
         COMMAND "/usr/bin/git" --git-dir=.git reset --hard --quiet ${head_sha}
-        WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+        WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
         ${maybe_show_command}
       )
       execute_process(
         COMMAND "/usr/bin/git" --git-dir=.git stash pop --index --quiet
-        WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+        WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
         ${maybe_show_command}
       )
-      message(FATAL_ERROR "\nFailed to unstash changes in: '/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src'."
+      message(FATAL_ERROR "\nFailed to unstash changes in: '/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src'."
                           "\nYou will have to resolve the conflicts manually")
     endif()
   endif()
@@ -310,7 +310,7 @@ if(init_submodules)
     COMMAND "/usr/bin/git"
             --git-dir=.git 
             submodule update --recursive --init 
-    WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/tuliphook-src"
+    WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/tuliphook-src"
     COMMAND_ERROR_IS_FATAL ANY
     ${maybe_show_command}
   )

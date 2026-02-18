@@ -15,6 +15,7 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::getCocos() + 0x724f0, Thiscall, pugi::xml_node, )
 		}
 	};
 }

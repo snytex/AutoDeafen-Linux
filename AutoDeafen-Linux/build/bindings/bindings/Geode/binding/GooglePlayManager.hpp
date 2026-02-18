@@ -15,25 +15,28 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GooglePlayManager, cocos2d::CCNode)
 
     /**
-     * @note[short] MacOS (ARM): 0x3d5188
-     * @note[short] MacOS (Intel): 0x4651e0
-     * @note[short] Windows: 0x6ac50
-     * @note[short] iOS: 0x458d8
+     * @note[short] MacOS (ARM): 0x3decd8
+     * @note[short] MacOS (Intel): 0x477e40
+     * @note[short] Windows: 0x6ac80
+     * @note[short] iOS: 0x41c68
      * @note[short] Android
      */
     static GooglePlayManager* sharedState();
 
     /**
-     * @note[short] MacOS (ARM): 0x3d51f8
-     * @note[short] MacOS (Intel): 0x465240
+     * @note[short] MacOS (ARM): 0x3ded44
+     * @note[short] MacOS (Intel): 0x477eb0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x45938
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x41cc8
+     * @note[short] Android
      */
     virtual bool init();
 
     /**
+     * @note[short] MacOS (ARM): 0x3ded4c
+     * @note[short] MacOS (Intel): 0x477ec0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void googlePlaySignedIn();

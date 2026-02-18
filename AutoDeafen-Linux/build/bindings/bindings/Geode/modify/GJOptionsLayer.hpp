@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_didToggleGV
 		#define GEODE_STATICS_didToggleGV
 		GEODE_AS_STATIC_FUNCTION(didToggleGV) 
@@ -40,11 +35,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(incrementCountForPage) 
 	#endif
 
-	#ifndef GEODE_STATICS_infoKey
-		#define GEODE_STATICS_infoKey
-		GEODE_AS_STATIC_FUNCTION(infoKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -53,21 +43,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_layerForPage
 		#define GEODE_STATICS_layerForPage
 		GEODE_AS_STATIC_FUNCTION(layerForPage) 
-	#endif
-
-	#ifndef GEODE_STATICS_layerKey
-		#define GEODE_STATICS_layerKey
-		GEODE_AS_STATIC_FUNCTION(layerKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_nextPosition
-		#define GEODE_STATICS_nextPosition
-		GEODE_AS_STATIC_FUNCTION(nextPosition) 
-	#endif
-
-	#ifndef GEODE_STATICS_objectKey
-		#define GEODE_STATICS_objectKey
-		GEODE_AS_STATIC_FUNCTION(objectKey) 
 	#endif
 
 	#ifndef GEODE_STATICS_objectsForPage
@@ -93,11 +68,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onToggle
 		#define GEODE_STATICS_onToggle
 		GEODE_AS_STATIC_FUNCTION(onToggle) 
-	#endif
-
-	#ifndef GEODE_STATICS_pageKey
-		#define GEODE_STATICS_pageKey
-		GEODE_AS_STATIC_FUNCTION(pageKey) 
 	#endif
 
     
@@ -139,6 +109,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_countForPage
 		#define GEODE_CONCEPT_CHECK_countForPage
 		GEODE_CONCEPT_FUNCTION_CHECK(countForPage) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getToggleButton
+		#define GEODE_CONCEPT_CHECK_getToggleButton
+		GEODE_CONCEPT_FUNCTION_CHECK(getToggleButton) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_goToPage
@@ -225,30 +200,31 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x285940, Thiscall, GJOptionsLayer, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJOptionsLayer, create, int)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x28d270, Thiscall, GJOptionsLayer, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x28f990, Thiscall, GJOptionsLayer)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJOptionsLayer, create, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJOptionsLayer, setupOptions, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f2810, Thiscall, GJOptionsLayer, didToggleGV, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f5ce0, Thiscall, GJOptionsLayer, didToggleGV, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJOptionsLayer, didToggle, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x288470, Thiscall, GJOptionsLayer, addGVToggle, char const*, char const*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28fda0, Thiscall, GJOptionsLayer, addGVToggle, char const*, char const*, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJOptionsLayer, addToggle, char const*, int, bool, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2885b0, Thiscall, GJOptionsLayer, addToggleInternal, char const*, int, bool, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJOptionsLayer, countForPage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJOptionsLayer, goToPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x288b80, Thiscall, GJOptionsLayer, incrementCountForPage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJOptionsLayer, infoKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x288130, Thiscall, GJOptionsLayer, init, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x288e10, Thiscall, GJOptionsLayer, layerForPage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJOptionsLayer, layerKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJOptionsLayer, nextPosition, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJOptionsLayer, objectKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJOptionsLayer, objectsForPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28fee0, Thiscall, GJOptionsLayer, addToggleInternal, char const*, int, bool, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x290420, Thiscall, GJOptionsLayer, countForPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x290940, Thiscall, GJOptionsLayer, goToPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2904f0, Thiscall, GJOptionsLayer, incrementCountForPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJOptionsLayer, infoKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28fa60, Thiscall, GJOptionsLayer, init, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x290780, Thiscall, GJOptionsLayer, layerForPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJOptionsLayer, layerKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJOptionsLayer, nextPosition, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJOptionsLayer, objectKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2905f0, Thiscall, GJOptionsLayer, objectsForPage, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJOptionsLayer, offsetToNextPage, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJOptionsLayer, onInfo, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJOptionsLayer, onNextPage, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJOptionsLayer, onPrevPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2893e0, Thiscall, GJOptionsLayer, onToggle, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJOptionsLayer, pageKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x290e60, Thiscall, GJOptionsLayer, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x290920, Thiscall, GJOptionsLayer, onNextPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x290930, Thiscall, GJOptionsLayer, onPrevPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x290d50, Thiscall, GJOptionsLayer, onToggle, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJOptionsLayer, pageKey, int)
 		}
 	};
 }

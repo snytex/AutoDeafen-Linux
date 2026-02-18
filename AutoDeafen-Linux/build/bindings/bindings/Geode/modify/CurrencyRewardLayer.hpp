@@ -105,10 +105,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9f500, Default, CurrencyRewardLayer, create, int, int, int, int, CurrencySpriteType, int, CurrencySpriteType, int, cocos2d::CCPoint, CurrencyRewardType, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa2230, Thiscall, CurrencyRewardLayer, update, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9fc10, Default, CurrencyRewardLayer, create, int, int, int, int, CurrencySpriteType, int, CurrencySpriteType, int, cocos2d::CCPoint, CurrencyRewardType, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa2940, Thiscall, CurrencyRewardLayer, update, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CurrencyRewardLayer, createObjects, CurrencySpriteType, int, cocos2d::CCPoint, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa1520, Thiscall, CurrencyRewardLayer, createObjectsFull, CurrencySpriteType, int, cocos2d::CCSprite*, cocos2d::CCPoint, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa1c30, Thiscall, CurrencyRewardLayer, createObjectsFull, CurrencySpriteType, int, cocos2d::CCSprite*, cocos2d::CCPoint, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CurrencyRewardLayer, createUnlockObject, cocos2d::CCSprite*, cocos2d::CCPoint, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CurrencyRewardLayer, incrementCount, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CurrencyRewardLayer, incrementDiamondsCount, int)
@@ -116,8 +116,8 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CurrencyRewardLayer, incrementSpecialCount1, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CurrencyRewardLayer, incrementSpecialCount2, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CurrencyRewardLayer, incrementStarsCount, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9f750, Thiscall, CurrencyRewardLayer, init, int, int, int, int, CurrencySpriteType, int, CurrencySpriteType, int, cocos2d::CCPoint, CurrencyRewardType, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa2c00, Thiscall, CurrencyRewardLayer, pulseSprite, cocos2d::CCSprite*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9fe60, Thiscall, CurrencyRewardLayer, init, int, int, int, int, CurrencySpriteType, int, CurrencySpriteType, int, cocos2d::CCPoint, CurrencyRewardType, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa3310, Thiscall, CurrencyRewardLayer, pulseSprite, cocos2d::CCSprite*)
 		}
 	};
 }

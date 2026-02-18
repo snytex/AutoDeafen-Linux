@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void listUploadFinished(GJLevelList* p0);
+    virtual void listUploadFinished(GJLevelList* list);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,5 +29,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void listUploadFailed(GJLevelList* p0, int p1);
+    virtual void listUploadFailed(GJLevelList* list, int response);
 };

@@ -130,23 +130,23 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f0980, Default, GJRewardItem, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f0cc0, Default, GJRewardItem, create, int, int, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f0ad0, Default, GJRewardItem, createSpecial, GJRewardType, int, int, SpecialRewardItem, int, SpecialRewardItem, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f3e50, Default, GJRewardItem, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f4190, Default, GJRewardItem, create, int, int, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f3fa0, Default, GJRewardItem, createSpecial, GJRewardType, int, int, SpecialRewardItem, int, SpecialRewardItem, int, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRewardItem, createWithCoder, DS_Dictionary*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f09c0, Default, GJRewardItem, createWithObject, GJRewardType, GJRewardObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f0a50, Default, GJRewardItem, createWithObjects, GJRewardType, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f3e90, Default, GJRewardItem, createWithObject, GJRewardType, GJRewardObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f3f20, Default, GJRewardItem, createWithObjects, GJRewardType, cocos2d::CCArray*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRewardItem, getNextShardType, SpecialRewardItem)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRewardItem, getRandomNonMaxShardType, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRewardItem, getRandomShardType, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRewardItem, isShardType, SpecialRewardItem)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f0ff0, Default, GJRewardItem, rewardItemToStat, SpecialRewardItem)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f1250, Thiscall, GJRewardItem, encodeWithCoder, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f44c0, Default, GJRewardItem, rewardItemToStat, SpecialRewardItem)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f4720, Thiscall, GJRewardItem, encodeWithCoder, DS_Dictionary*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRewardItem, canEncode, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRewardItem, dataLoaded, DS_Dictionary*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRewardItem, getRewardCount, SpecialRewardItem)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRewardItem, getRewardObjectForType, SpecialRewardItem)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f0d90, Thiscall, GJRewardItem, init, int, int, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f4260, Thiscall, GJRewardItem, init, int, int, gd::string)
 		}
 	};
 }

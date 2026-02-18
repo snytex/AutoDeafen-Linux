@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -28,11 +23,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getSaveString
 		#define GEODE_STATICS_getSaveString
 		GEODE_AS_STATIC_FUNCTION(getSaveString) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateGameplayRotation
-		#define GEODE_STATICS_updateGameplayRotation
-		GEODE_AS_STATIC_FUNCTION(updateGameplayRotation) 
 	#endif
 
     
@@ -75,12 +65,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(RotateGameplayGameObject, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ab3a0, Thiscall, RotateGameplayGameObject, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4abcc0, Thiscall, RotateGameplayGameObject, updateStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4aba30, Thiscall, RotateGameplayGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ab410, Thiscall, RotateGameplayGameObject, getSaveString, GJBaseGameLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(RotateGameplayGameObject, updateGameplayRotation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RotateGameplayGameObject, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c3ef0, Thiscall, RotateGameplayGameObject, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c4810, Thiscall, RotateGameplayGameObject, updateStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c4580, Thiscall, RotateGameplayGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c3f60, Thiscall, RotateGameplayGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RotateGameplayGameObject, updateGameplayRotation, )
 		}
 	};
 }

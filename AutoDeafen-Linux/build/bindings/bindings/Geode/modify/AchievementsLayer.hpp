@@ -30,11 +30,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onPrevPage) 
 	#endif
 
-	#ifndef GEODE_STATICS_setupPageInfo
-		#define GEODE_STATICS_setupPageInfo
-		GEODE_AS_STATIC_FUNCTION(setupPageInfo) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -86,13 +81,13 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementsLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82260, Thiscall, AchievementsLayer, keyDown, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x81fb0, Thiscall, AchievementsLayer, customSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82300, Thiscall, AchievementsLayer, loadPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x824e0, Thiscall, AchievementsLayer, onNextPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x824f0, Thiscall, AchievementsLayer, onPrevPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x822b0, Thiscall, AchievementsLayer, keyDown, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82000, Thiscall, AchievementsLayer, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82350, Thiscall, AchievementsLayer, loadPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82530, Thiscall, AchievementsLayer, onNextPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82540, Thiscall, AchievementsLayer, onPrevPage, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementsLayer, setupLevelBrowser, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementsLayer, setupPageInfo, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementsLayer, setupPageInfo, int, int, int)
 		}
 	};
 }

@@ -14,24 +14,32 @@ public:
     static constexpr auto CLASS_NAME = "ColorAction2";
 
     /**
+     * @note[short] MacOS (ARM): 0x447864
+     * @note[short] MacOS (Intel): 0x4ed610
      * @note[short] Android: Rebinded
      */
-     ColorAction2(cocos2d::ccColor3B p0, cocos2d::ccColor3B p1, float p2, double p3, bool p4, int p5, float p6, float p7);
+     ColorAction2(cocos2d::ccColor3B fromColor, cocos2d::ccColor3B toColor, float duration, double unused, bool blending, int playerColor, float fromOpacity, float toOpacity);
 
     /**
+     * @note[short] MacOS (ARM): 0x447a1c
+     * @note[short] MacOS (Intel): 0x4ed810
      * @note[short] Android
      */
-    TodoReturn resetAction();
+    void resetAction();
 
     /**
+     * @note[short] MacOS (ARM): 0x44791c
+     * @note[short] MacOS (Intel): 0x4ed710
      * @note[short] Android
      */
-    TodoReturn step(float p0);
+    void step(float dt);
 
     /**
+     * @note[short] MacOS (ARM): 0x447a28
+     * @note[short] MacOS (Intel): 0x4ed830
      * @note[short] Android
      */
-    TodoReturn updateCustomColor(cocos2d::ccColor3B p0, cocos2d::ccColor3B p1);
+    void updateCustomColor(cocos2d::ccColor3B color1, cocos2d::ccColor3B color2);
     bool m_stepFinished;
     bool m_paused;
     cocos2d::ccColor3B m_color;

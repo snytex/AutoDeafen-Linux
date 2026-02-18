@@ -30,34 +30,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(goToPage) 
 	#endif
 
-	#ifndef GEODE_STATICS_incrementCountForPage
-		#define GEODE_STATICS_incrementCountForPage
-		GEODE_AS_STATIC_FUNCTION(incrementCountForPage) 
-	#endif
-
-	#ifndef GEODE_STATICS_infoKey
-		#define GEODE_STATICS_infoKey
-		GEODE_AS_STATIC_FUNCTION(infoKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_layerForPage
 		#define GEODE_STATICS_layerForPage
 		GEODE_AS_STATIC_FUNCTION(layerForPage) 
-	#endif
-
-	#ifndef GEODE_STATICS_layerKey
-		#define GEODE_STATICS_layerKey
-		GEODE_AS_STATIC_FUNCTION(layerKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_nextPosition
-		#define GEODE_STATICS_nextPosition
-		GEODE_AS_STATIC_FUNCTION(nextPosition) 
-	#endif
-
-	#ifndef GEODE_STATICS_objectKey
-		#define GEODE_STATICS_objectKey
-		GEODE_AS_STATIC_FUNCTION(objectKey) 
 	#endif
 
 	#ifndef GEODE_STATICS_objectsForPage
@@ -93,11 +68,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onToggle
 		#define GEODE_STATICS_onToggle
 		GEODE_AS_STATIC_FUNCTION(onToggle) 
-	#endif
-
-	#ifndef GEODE_STATICS_pageKey
-		#define GEODE_STATICS_pageKey
-		GEODE_AS_STATIC_FUNCTION(pageKey) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateFPSButtons
@@ -221,26 +191,26 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreVideoOptionsLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x362eb0, Thiscall, MoreVideoOptionsLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3657d0, Thiscall, MoreVideoOptionsLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3639b0, Thiscall, MoreVideoOptionsLayer, addToggle, char const*, char const*, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x364010, Thiscall, MoreVideoOptionsLayer, countForPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x364430, Thiscall, MoreVideoOptionsLayer, goToPage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreVideoOptionsLayer, incrementCountForPage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreVideoOptionsLayer, infoKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x364270, Thiscall, MoreVideoOptionsLayer, layerForPage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreVideoOptionsLayer, layerKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreVideoOptionsLayer, nextPosition, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreVideoOptionsLayer, objectKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3640e0, Thiscall, MoreVideoOptionsLayer, objectsForPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3652b0, Thiscall, MoreVideoOptionsLayer, onApplyFPS, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x365780, Thiscall, MoreVideoOptionsLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3655a0, Thiscall, MoreVideoOptionsLayer, onInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x364410, Thiscall, MoreVideoOptionsLayer, onNextPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x364420, Thiscall, MoreVideoOptionsLayer, onPrevPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x364840, Thiscall, MoreVideoOptionsLayer, onToggle, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreVideoOptionsLayer, pageKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3651e0, Thiscall, MoreVideoOptionsLayer, updateFPSButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x378c20, Thiscall, MoreVideoOptionsLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37b540, Thiscall, MoreVideoOptionsLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x379720, Thiscall, MoreVideoOptionsLayer, addToggle, char const*, char const*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x379d80, Thiscall, MoreVideoOptionsLayer, countForPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37a1a0, Thiscall, MoreVideoOptionsLayer, goToPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreVideoOptionsLayer, incrementCountForPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreVideoOptionsLayer, infoKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x379fe0, Thiscall, MoreVideoOptionsLayer, layerForPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreVideoOptionsLayer, layerKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreVideoOptionsLayer, nextPosition, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreVideoOptionsLayer, objectKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x379e50, Thiscall, MoreVideoOptionsLayer, objectsForPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37b020, Thiscall, MoreVideoOptionsLayer, onApplyFPS, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37b4f0, Thiscall, MoreVideoOptionsLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37b310, Thiscall, MoreVideoOptionsLayer, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37a180, Thiscall, MoreVideoOptionsLayer, onNextPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37a190, Thiscall, MoreVideoOptionsLayer, onPrevPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37a5b0, Thiscall, MoreVideoOptionsLayer, onToggle, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreVideoOptionsLayer, pageKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37af50, Thiscall, MoreVideoOptionsLayer, updateFPSButtons, )
 		}
 	};
 }

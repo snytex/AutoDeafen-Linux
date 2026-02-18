@@ -65,16 +65,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(confirmReport) 
 	#endif
 
-	#ifndef GEODE_STATICS_getAccountID
-		#define GEODE_STATICS_getAccountID
-		GEODE_AS_STATIC_FUNCTION(getAccountID) 
-	#endif
-
-	#ifndef GEODE_STATICS_getRealID
-		#define GEODE_STATICS_getRealID
-		GEODE_AS_STATIC_FUNCTION(getRealID) 
-	#endif
-
 	#ifndef GEODE_STATICS_getSpriteButton
 		#define GEODE_STATICS_getSpriteButton
 		GEODE_AS_STATIC_FUNCTION(getSpriteButton) 
@@ -145,11 +135,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onRefreshComments) 
 	#endif
 
-	#ifndef GEODE_STATICS_onSimilar
-		#define GEODE_STATICS_onSimilar
-		GEODE_AS_STATIC_FUNCTION(onSimilar) 
-	#endif
-
 	#ifndef GEODE_STATICS_reloadWindow
 		#define GEODE_STATICS_reloadWindow
 		GEODE_AS_STATIC_FUNCTION(reloadWindow) 
@@ -183,11 +168,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateCommentModeButtons
 		#define GEODE_STATICS_updateCommentModeButtons
 		GEODE_AS_STATIC_FUNCTION(updateCommentModeButtons) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateLevelsLabel
-		#define GEODE_STATICS_updateLevelsLabel
-		GEODE_AS_STATIC_FUNCTION(updateLevelsLabel) 
 	#endif
 
     
@@ -390,44 +370,44 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b3200, Default, InfoLayer, create, GJGameLevel*, GJUserScore*, GJLevelList*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, InfoLayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b6b40, Thiscall, InfoLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7fd0, Thiscall, InfoLayer, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7480, Thiscall, InfoLayer, loadCommentsFinished, cocos2d::CCArray*, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b74f0, Thiscall, InfoLayer, loadCommentsFailed, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7540, Thiscall, InfoLayer, setupPageInfo, gd::string, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7880, Thiscall, InfoLayer, commentUploadFinished, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7950, Thiscall, InfoLayer, commentUploadFailed, int, CommentError)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7730, Thiscall, InfoLayer, updateUserScoreFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b5ce0, Thiscall, InfoLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b5780, Thiscall, InfoLayer, confirmReport, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(InfoLayer, getAccountID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ba8d0, Default, InfoLayer, create, GJGameLevel*, GJUserScore*, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, InfoLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2be210, Thiscall, InfoLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bf6a0, Thiscall, InfoLayer, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2beb50, Thiscall, InfoLayer, loadCommentsFinished, cocos2d::CCArray*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bebc0, Thiscall, InfoLayer, loadCommentsFailed, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bec10, Thiscall, InfoLayer, setupPageInfo, gd::string, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bef50, Thiscall, InfoLayer, commentUploadFinished, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bf020, Thiscall, InfoLayer, commentUploadFailed, int, CommentError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bee00, Thiscall, InfoLayer, updateUserScoreFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bd3b0, Thiscall, InfoLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bce50, Thiscall, InfoLayer, confirmReport, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(InfoLayer, getAccountID, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(InfoLayer, getID, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(InfoLayer, getRealID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b52e0, Thiscall, InfoLayer, getSpriteButton, char const*, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*, float, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b33a0, Thiscall, InfoLayer, init, GJGameLevel*, GJUserScore*, GJLevelList*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(InfoLayer, isCorrect, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b6c80, Thiscall, InfoLayer, loadPage, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b6ac0, Thiscall, InfoLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b5f20, Thiscall, InfoLayer, onComment, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b5ba0, Thiscall, InfoLayer, onCopyLevelID, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b64d0, Thiscall, InfoLayer, onGetComments, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b64e0, Thiscall, InfoLayer, onLevelInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b5e00, Thiscall, InfoLayer, onMore, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7860, Thiscall, InfoLayer, onNextPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b5e60, Thiscall, InfoLayer, onOriginal, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7870, Thiscall, InfoLayer, onPrevPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b5620, Thiscall, InfoLayer, onRefreshComments, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(InfoLayer, onSimilar, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7bf0, Thiscall, InfoLayer, reloadWindow, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b71f0, Thiscall, InfoLayer, setupCommentsBrowser, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b5420, Thiscall, InfoLayer, setupLevelInfo, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7e10, Thiscall, InfoLayer, toggleCommentMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7aa0, Thiscall, InfoLayer, toggleExtendedMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7b00, Thiscall, InfoLayer, toggleSmallCommentMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7ed0, Thiscall, InfoLayer, updateCommentModeButtons, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(InfoLayer, updateLevelsLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(InfoLayer, getRealID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bc9b0, Thiscall, InfoLayer, getSpriteButton, char const*, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*, float, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2baa70, Thiscall, InfoLayer, init, GJGameLevel*, GJUserScore*, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2be220, Thiscall, InfoLayer, isCorrect, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2be350, Thiscall, InfoLayer, loadPage, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2be190, Thiscall, InfoLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bd5f0, Thiscall, InfoLayer, onComment, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bd270, Thiscall, InfoLayer, onCopyLevelID, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bdba0, Thiscall, InfoLayer, onGetComments, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bdbb0, Thiscall, InfoLayer, onLevelInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bd4d0, Thiscall, InfoLayer, onMore, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bef30, Thiscall, InfoLayer, onNextPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bd530, Thiscall, InfoLayer, onOriginal, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bef40, Thiscall, InfoLayer, onPrevPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bccf0, Thiscall, InfoLayer, onRefreshComments, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(InfoLayer, onSimilar, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bf2c0, Thiscall, InfoLayer, reloadWindow, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2be8c0, Thiscall, InfoLayer, setupCommentsBrowser, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bcaf0, Thiscall, InfoLayer, setupLevelInfo, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bf4e0, Thiscall, InfoLayer, toggleCommentMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bf170, Thiscall, InfoLayer, toggleExtendedMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bf1d0, Thiscall, InfoLayer, toggleSmallCommentMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bf5a0, Thiscall, InfoLayer, updateCommentModeButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(InfoLayer, updateLevelsLabel, )
 		}
 	};
 }

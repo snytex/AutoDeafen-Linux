@@ -16,36 +16,49 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SpawnParticleGameObject, EffectGameObject)
 
     /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x399bf4
+     * @note[short] Android: Out of line
+     */
+     SpawnParticleGameObject();
+
+    /**
+     * @note[short] MacOS (ARM): 0x19eb3c
+     * @note[short] MacOS (Intel): 0x1efc00
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x398114
      * @note[short] Android
      */
     static SpawnParticleGameObject* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x1966f0
-     * @note[short] MacOS (Intel): 0x1dde40
-     * @note[short] Windows: 0x4aa9e0
-     * @note[short] iOS: 0x390ee8
+     * @note[short] MacOS (ARM): 0x19ec10
+     * @note[short] MacOS (Intel): 0x1efcd0
+     * @note[short] Windows: 0x4c3530
+     * @note[short] iOS: 0x398188
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x197cb4
-     * @note[short] MacOS (Intel): 0x1df8e0
-     * @note[short] Windows: 0x4ab0b0
-     * @note[short] iOS: 0x391524
+     * @note[short] MacOS (ARM): 0x1a0170
+     * @note[short] MacOS (Intel): 0x1f1810
+     * @note[short] Windows: 0x4c3c00
+     * @note[short] iOS: 0x3987c8
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x196740
-     * @note[short] MacOS (Intel): 0x1dde90
-     * @note[short] Windows: 0x4aaa50
-     * @note[short] iOS: 0x390f38
+     * @note[short] MacOS (ARM): 0x19ec60
+     * @note[short] MacOS (Intel): 0x1efd20
+     * @note[short] Windows: 0x4c35a0
+     * @note[short] iOS: 0x3981d8
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
     cocos2d::CCPoint m_offset;
     cocos2d::CCPoint m_offsetVariance;
     bool m_matchRotation;

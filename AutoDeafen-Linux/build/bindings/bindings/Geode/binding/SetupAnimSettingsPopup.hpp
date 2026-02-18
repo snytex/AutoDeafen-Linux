@@ -16,29 +16,37 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupAnimSettingsPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x3f2500
+     * @note[short] MacOS (ARM): 0x8b934
+     * @note[short] MacOS (Intel): 0x9a9a0
+     * @note[short] Windows: 0x40a180
+     * @note[short] iOS: 0x2e75c8
      * @note[short] Android
      */
-    static SetupAnimSettingsPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupAnimSettingsPopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x8e0ac
-     * @note[short] MacOS (Intel): 0x9b140
-     * @note[short] Windows: 0x3f2e90
-     * @note[short] iOS: 0x2e797c
+     * @note[short] MacOS (ARM): 0x8c298
+     * @note[short] MacOS (Intel): 0x9b4f0
+     * @note[short] Windows: 0x40ab10
+     * @note[short] iOS: 0x2e7d64
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x8d8d0
-     * @note[short] MacOS (Intel): 0x9a7f0
-     * @note[short] Windows: 0x3f2610
+     * @note[short] MacOS (ARM): 0x8babc
+     * @note[short] MacOS (Intel): 0x9abd0
+     * @note[short] Windows: 0x40a290
+     * @note[short] iOS: 0x2e76a0
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
+     * @note[short] MacOS (ARM): 0x8c234
+     * @note[short] MacOS (Intel): 0x9b480
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2e7d00
      * @note[short] Android
      */
     void updateAnimSettings();

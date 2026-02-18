@@ -10,6 +10,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
+	#ifndef GEODE_STATICS_acceptVisitor
+		#define GEODE_STATICS_acceptVisitor
+		GEODE_AS_STATIC_FUNCTION(acceptVisitor) 
+	#endif
+
 	#ifndef GEODE_STATICS_addObject
 		#define GEODE_STATICS_addObject
 		GEODE_AS_STATIC_FUNCTION(addObject) 
@@ -60,15 +65,15 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(removeObject) 
 	#endif
 
-	#ifndef GEODE_STATICS_acceptVisitor
-		#define GEODE_STATICS_acceptVisitor
-		GEODE_AS_STATIC_FUNCTION(acceptVisitor) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_acceptVisitor
+		#define GEODE_CONCEPT_CHECK_acceptVisitor
+		GEODE_CONCEPT_FUNCTION_CHECK(acceptVisitor) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_addObject
@@ -121,11 +126,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(removeObject) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_acceptVisitor
-		#define GEODE_CONCEPT_CHECK_acceptVisitor
-		GEODE_CONCEPT_FUNCTION_CHECK(acceptVisitor) 
-	#endif
-
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::CCSet> : ModifyBase<ModifyDerive<Der, cocos2d::CCSet>> {
@@ -135,9 +135,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSet::create)), Default, cocos2d::CCSet, create, )
 			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCSet@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCSet, )
 			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCSet@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCSet)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSet::create)), Default, cocos2d::CCSet, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCDataVisitor&>::func(&cocos2d::CCSet::acceptVisitor)), Thiscall, cocos2d::CCSet, acceptVisitor, cocos2d::CCDataVisitor&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*>::func(&cocos2d::CCSet::addObject)), Thiscall, cocos2d::CCSet, addObject, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSet::anyObject)), Thiscall, cocos2d::CCSet, anyObject, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSet::begin)), Thiscall, cocos2d::CCSet, begin, )
@@ -148,7 +149,6 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSet::mutableCopy)), Thiscall, cocos2d::CCSet, mutableCopy, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSet::removeAllObjects)), Thiscall, cocos2d::CCSet, removeAllObjects, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*>::func(&cocos2d::CCSet::removeObject)), Thiscall, cocos2d::CCSet, removeObject, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCDataVisitor&>::func(&cocos2d::CCSet::acceptVisitor)), Thiscall, cocos2d::CCSet, acceptVisitor, cocos2d::CCDataVisitor&)
 		}
 	};
 }

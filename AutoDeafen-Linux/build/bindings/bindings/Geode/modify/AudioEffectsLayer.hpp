@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateTweenAction
 		#define GEODE_STATICS_updateTweenAction
 		GEODE_AS_STATIC_FUNCTION(updateTweenAction) 
@@ -38,11 +33,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_resetAudioVars
 		#define GEODE_STATICS_resetAudioVars
 		GEODE_AS_STATIC_FUNCTION(resetAudioVars) 
-	#endif
-
-	#ifndef GEODE_STATICS_triggerEffect
-		#define GEODE_STATICS_triggerEffect
-		GEODE_AS_STATIC_FUNCTION(triggerEffect) 
 	#endif
 
     
@@ -100,15 +90,15 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AudioEffectsLayer, create, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AudioEffectsLayer, create, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AudioEffectsLayer, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84fb0, Thiscall, AudioEffectsLayer, updateTweenAction, float, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84d80, Thiscall, AudioEffectsLayer, audioStep, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x85000, Thiscall, AudioEffectsLayer, updateTweenAction, float, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84dd0, Thiscall, AudioEffectsLayer, audioStep, float)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AudioEffectsLayer, getBGSquare, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AudioEffectsLayer, goingDown, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84b90, Thiscall, AudioEffectsLayer, init, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84d20, Thiscall, AudioEffectsLayer, resetAudioVars, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AudioEffectsLayer, triggerEffect, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x85170, Thiscall, AudioEffectsLayer, goingDown, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84be0, Thiscall, AudioEffectsLayer, init, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84d70, Thiscall, AudioEffectsLayer, resetAudioVars, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AudioEffectsLayer, triggerEffect, float)
 		}
 	};
 }

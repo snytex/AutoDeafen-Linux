@@ -15,290 +15,316 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(BoomScrollLayer, cocos2d::CCLayer)
 
     /**
-     * @note[short] iOS: 0x12fca0
+     * @note[short] MacOS (ARM): 0x32bce4
+     * @note[short] MacOS (Intel): 0x3a7590
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x12ca08
      * @note[short] Android: Rebinded
      */
      BoomScrollLayer();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x32a7dc
+     * @note[short] MacOS (Intel): 0x3a5eb0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x12bcc0
+     * @note[short] Android: Rebinded
      */
      ~BoomScrollLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x3204b4
-     * @note[short] MacOS (Intel): 0x391a10
-     * @note[short] Windows: 0x3d060
-     * @note[short] iOS: 0x12e27c
-     * @note[short] Android
-     */
-    static BoomScrollLayer* create(cocos2d::CCArray* pages, int unk1, bool unk2, cocos2d::CCArray* unk3, DynamicScrollDelegate* delegate);
-
-    /**
-     * @note[short] MacOS (ARM): 0x320880
-     * @note[short] MacOS (Intel): 0x391e00
+     * @note[short] MacOS (ARM): 0x3298e8
+     * @note[short] MacOS (Intel): 0x3a4f60
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x12e5b4
+     * @note[short] iOS: 0x12b2ec
      * @note[short] Android
      */
-    static BoomScrollLayer* create(cocos2d::CCArray* pages, int unk1, bool unk2);
+    static BoomScrollLayer* create(cocos2d::CCArray* pages, int offset, bool looped);
 
     /**
-     * @note[short] MacOS (ARM): 0x321ae4
-     * @note[short] MacOS (Intel): 0x393220
-     * @note[short] Windows: 0x3dbd0
-     * @note[short] iOS: 0x12f1dc
+     * @note[short] MacOS (ARM): 0x32951c
+     * @note[short] MacOS (Intel): 0x3a4b80
+     * @note[short] Windows: 0x3d0a0
+     * @note[short] iOS: 0x12afb4
+     * @note[short] Android
+     */
+    static BoomScrollLayer* create(cocos2d::CCArray* pages, int offset, bool looped, cocos2d::CCArray* dynamicObjects, DynamicScrollDelegate* delegate);
+
+    /**
+     * @note[short] MacOS (ARM): 0x32ab78
+     * @note[short] MacOS (Intel): 0x3a6340
+     * @note[short] Windows: 0x3dc20
+     * @note[short] iOS: 0x12bf1c
      * @note[short] Android
      */
     virtual void visit();
 
     /**
-     * @note[short] MacOS (ARM): 0x3225ec
-     * @note[short] MacOS (Intel): 0x393d50
-     * @note[short] Windows: 0x3e710
-     * @note[short] iOS: 0x12f7d0
+     * @note[short] MacOS (ARM): 0x32b680
+     * @note[short] MacOS (Intel): 0x3a6e70
+     * @note[short] Windows: 0x3e760
+     * @note[short] iOS: 0x12c510
      * @note[short] Android
      */
-    virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual bool ccTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x3226b8
-     * @note[short] MacOS (Intel): 0x393e40
-     * @note[short] Windows: 0x3e7c0
-     * @note[short] iOS: 0x12f88c
+     * @note[short] MacOS (ARM): 0x32b75c
+     * @note[short] MacOS (Intel): 0x3a6f70
+     * @note[short] Windows: 0x3e820
+     * @note[short] iOS: 0x12c5dc
      * @note[short] Android
      */
-    virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchMoved(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x322974
-     * @note[short] MacOS (Intel): 0x394160
-     * @note[short] Windows: 0x3eaf0
-     * @note[short] iOS: 0x12faa4
+     * @note[short] MacOS (ARM): 0x32ba28
+     * @note[short] MacOS (Intel): 0x3a7290
+     * @note[short] Windows: 0x3eb60
+     * @note[short] iOS: 0x12c804
      * @note[short] Android
      */
-    virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchEnded(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x32241c
-     * @note[short] MacOS (Intel): 0x393b90
-     * @note[short] Windows: 0x3e630
-     * @note[short] iOS: 0x12f780
+     * @note[short] MacOS (ARM): 0x32b4c4
+     * @note[short] MacOS (Intel): 0x3a6ca0
+     * @note[short] Windows: 0x3e680
+     * @note[short] iOS: 0x12c4c0
      * @note[short] Android
      */
-    virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchCancelled(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x3222a4
-     * @note[short] MacOS (Intel): 0x393a00
-     * @note[short] Windows: 0x3e5a0
-     * @note[short] iOS: 0x12f648
+     * @note[short] MacOS (ARM): 0x32b34c
+     * @note[short] MacOS (Intel): 0x3a6b10
+     * @note[short] Windows: 0x3e5f0
+     * @note[short] iOS: 0x12c388
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x3220e0
-     * @note[short] MacOS (Intel): 0x393840
-     * @note[short] Android
-     */
-    void addPage(cocos2d::CCLayer* p0, int p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x322070
-     * @note[short] MacOS (Intel): 0x3937c0
-     * @note[short] Android
-     */
-    void addPage(cocos2d::CCLayer* p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x322340
-     * @note[short] MacOS (Intel): 0x393ab0
-     * @note[short] Android
-     */
-    void cancelAndStoleTouch(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
-
-    /**
-     * @note[short] Android
-     */
-    void claimTouch(cocos2d::CCTouch* p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x3216c0
-     * @note[short] MacOS (Intel): 0x392d00
+     * @note[short] MacOS (ARM): 0x32b118
+     * @note[short] MacOS (Intel): 0x3a68d0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    cocos2d::CCLayer* getPage(int p0);
+    void addPage(cocos2d::CCLayer* page);
 
     /**
-     * @note[short] MacOS (ARM): 0x321a10
-     * @note[short] MacOS (Intel): 0x393150
+     * @note[short] MacOS (ARM): 0x32b188
+     * @note[short] MacOS (Intel): 0x3a6950
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    void addPage(cocos2d::CCLayer* page, int index);
+
+    /**
+     * @note[short] MacOS (ARM): 0x32b3e8
+     * @note[short] MacOS (Intel): 0x3a6bc0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x12c424
+     * @note[short] Android
+     */
+    void cancelAndStoleTouch(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
+
+    /**
+     * @note[short] MacOS (ARM): 0x32b384
+     * @note[short] MacOS (Intel): 0x3a6b50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x12c3c0
+     * @note[short] Android
+     */
+    void claimTouch(cocos2d::CCTouch* touch);
+
+    /**
+     * @note[short] MacOS (ARM): 0x32a774
+     * @note[short] MacOS (Intel): 0x3a5e30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x12bc50
+     * @note[short] Android
+     */
+    cocos2d::CCLayer* getPage(int page);
+
+    /**
+     * @note[short] MacOS (ARM): 0x32aaa4
+     * @note[short] MacOS (Intel): 0x3a6270
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x12be48
      * @note[short] Android
      */
     int getRelativePageForNum(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x321670
-     * @note[short] MacOS (Intel): 0x392cb0
+     * @note[short] MacOS (ARM): 0x32a724
+     * @note[short] MacOS (Intel): 0x3a5de0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     cocos2d::CCPoint getRelativePosForPage(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x32136c
-     * @note[short] MacOS (Intel): 0x392960
+     * @note[short] MacOS (ARM): 0x32a414
+     * @note[short] MacOS (Intel): 0x3a5ab0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
+     * @note[short] iOS: 0x12ba2c
      * @note[short] Android
      */
     int getTotalPages();
 
     /**
-     * @note[short] MacOS (ARM): 0x32056c
-     * @note[short] MacOS (Intel): 0x391aa0
-     * @note[short] Windows: 0x3d230
-     * @note[short] iOS: 0x12e320
+     * @note[short] MacOS (ARM): 0x3295d4
+     * @note[short] MacOS (Intel): 0x3a4c10
+     * @note[short] Windows: 0x3d280
+     * @note[short] iOS: 0x12b058
      * @note[short] Android
      */
-    bool init(cocos2d::CCArray* p0, int p1, bool p2, cocos2d::CCArray* p3, DynamicScrollDelegate* p4);
+    bool init(cocos2d::CCArray* pages, int offset, bool looped, cocos2d::CCArray* dynamicObjects, DynamicScrollDelegate* delegate);
 
     /**
-     * @note[short] MacOS (ARM): 0x321ccc
-     * @note[short] MacOS (Intel): 0x393410
-     * @note[short] Windows: 0x3ddc0
-     * @note[short] iOS: 0x12f2c0
+     * @note[short] MacOS (ARM): 0x32ad8c
+     * @note[short] MacOS (Intel): 0x3a6530
+     * @note[short] Windows: 0x3de10
+     * @note[short] iOS: 0x12c008
      * @note[short] Android
      */
-    void instantMoveToPage(int p0);
+    void instantMoveToPage(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x321da4
-     * @note[short] MacOS (Intel): 0x3934f0
-     * @note[short] Windows: 0x3dea0
-     * @note[short] iOS: 0x12f398
+     * @note[short] MacOS (ARM): 0x32ae64
+     * @note[short] MacOS (Intel): 0x3a6610
+     * @note[short] Windows: 0x3def0
+     * @note[short] iOS: 0x12c0e0
      * @note[short] Android
      */
-    void moveToPage(int p0);
+    void moveToPage(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x321b3c
-     * @note[short] MacOS (Intel): 0x393280
-     * @note[short] Windows: 0x3dc30
-     * @note[short] iOS: 0x12f234
+     * @note[short] MacOS (ARM): 0x32abfc
+     * @note[short] MacOS (Intel): 0x3a63a0
+     * @note[short] Windows: 0x3dc80
+     * @note[short] iOS: 0x12bf7c
      * @note[short] Android
      */
     void moveToPageEnded();
 
     /**
-     * @note[short] MacOS (ARM): 0x321924
-     * @note[short] MacOS (Intel): 0x393070
-     * @note[short] Windows: 0x3dcc0
-     * @note[short] iOS: 0x12f030
+     * @note[short] MacOS (ARM): 0x32a9cc
+     * @note[short] MacOS (Intel): 0x3a61a0
+     * @note[short] Windows: 0x3dd10
+     * @note[short] iOS: 0x12bd70
      * @note[short] Android
      */
-    int pageNumberForPosition(cocos2d::CCPoint p0);
+    int pageNumberForPosition(cocos2d::CCPoint position);
 
     /**
-     * @note[short] MacOS (ARM): 0x321c78
-     * @note[short] MacOS (Intel): 0x3933c0
+     * @note[short] MacOS (ARM): 0x32ad38
+     * @note[short] MacOS (Intel): 0x3a64e0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     cocos2d::CCPoint positionForPageWithNumber(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x322018
-     * @note[short] MacOS (Intel): 0x393760
+     * @note[short] MacOS (ARM): 0x32b0c0
+     * @note[short] MacOS (Intel): 0x3a6870
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x12f5f0
+     * @note[short] iOS: 0x12c334
      * @note[short] Android
      */
     void quickUpdate();
 
     /**
-     * @note[short] MacOS (ARM): 0x322148
-     * @note[short] MacOS (Intel): 0x3938b0
+     * @note[short] MacOS (ARM): 0x32b1f0
+     * @note[short] MacOS (Intel): 0x3a69c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void removePage(cocos2d::CCLayer* p0);
+    void removePage(cocos2d::CCLayer* page);
 
     /**
-     * @note[short] MacOS (ARM): 0x3221dc
-     * @note[short] MacOS (Intel): 0x393940
+     * @note[short] MacOS (ARM): 0x32b284
+     * @note[short] MacOS (Intel): 0x3a6a50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void removePageWithNumber(int p0);
+    void removePageWithNumber(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x320b14
-     * @note[short] MacOS (Intel): 0x392090
-     * @note[short] Windows: 0x3e060
-     * @note[short] iOS: 0x12e79c
+     * @note[short] MacOS (ARM): 0x329b7c
+     * @note[short] MacOS (Intel): 0x3a51f0
+     * @note[short] Windows: 0x3e0b0
+     * @note[short] iOS: 0x12b4d4
      * @note[short] Android
      */
     void repositionPagesLooped();
 
     /**
+     * @note[short] MacOS (ARM): 0x32b008
+     * @note[short] MacOS (Intel): 0x3a67c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x12c27c
      * @note[short] Android
      */
-    void selectPage(int p0);
+    void selectPage(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x321608
-     * @note[short] MacOS (Intel): 0x392c40
+     * @note[short] MacOS (ARM): 0x32a6bc
+     * @note[short] MacOS (Intel): 0x3a5d70
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x12bbe8
      * @note[short] Android
      */
     void setDotScale(float scale);
 
     /**
-     * @note[short] MacOS (ARM): 0x3209cc
-     * @note[short] MacOS (Intel): 0x391f40
+     * @note[short] MacOS (ARM): 0x329a34
+     * @note[short] MacOS (Intel): 0x3a50a0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x12e65c
+     * @note[short] iOS: 0x12b394
      * @note[short] Android
      */
     void setPagesIndicatorPosition(cocos2d::CCPoint pos);
 
     /**
-     * @note[short] MacOS (ARM): 0x321124
-     * @note[short] MacOS (Intel): 0x392710
-     * @note[short] Windows: 0x3d5a0
-     * @note[short] iOS: 0x12eaac
+     * @note[short] MacOS (ARM): 0x32a1cc
+     * @note[short] MacOS (Intel): 0x3a5860
+     * @note[short] Windows: 0x3d5f0
+     * @note[short] iOS: 0x12b7e4
      * @note[short] Android
      */
-    void setupDynamicScrolling(cocos2d::CCArray* p0, DynamicScrollDelegate* p1);
+    void setupDynamicScrolling(cocos2d::CCArray* dynamicObjects, DynamicScrollDelegate* delegate);
 
     /**
-     * @note[short] MacOS (ARM): 0x321a78
-     * @note[short] MacOS (Intel): 0x3931b0
-     * @note[short] Windows: 0x3db60
-     * @note[short] iOS: 0x12f170
+     * @note[short] MacOS (ARM): 0x32ab0c
+     * @note[short] MacOS (Intel): 0x3a62d0
+     * @note[short] Windows: 0x3dbb0
+     * @note[short] iOS: 0x12beb0
      * @note[short] Android
      */
-    void togglePageIndicators(bool p0);
+    void togglePageIndicators(bool visible);
 
     /**
-     * @note[short] MacOS (ARM): 0x321388
-     * @note[short] MacOS (Intel): 0x392990
-     * @note[short] Windows: 0x3d960
-     * @note[short] iOS: 0x12ed10
+     * @note[short] MacOS (ARM): 0x32a430
+     * @note[short] MacOS (Intel): 0x3a5ad0
+     * @note[short] Windows: 0x3d9b0
+     * @note[short] iOS: 0x12ba48
      * @note[short] Android
      */
-    void updateDots(float p0);
+    void updateDots(float dt);
 
     /**
-     * @note[short] MacOS (ARM): 0x3209f4
-     * @note[short] MacOS (Intel): 0x391f70
-     * @note[short] Windows: 0x3d840
-     * @note[short] iOS: 0x12e684
+     * @note[short] MacOS (ARM): 0x329a5c
+     * @note[short] MacOS (Intel): 0x3a50d0
+     * @note[short] Windows: 0x3d890
+     * @note[short] iOS: 0x12b3bc
      * @note[short] Android
      */
     void updatePages();
@@ -325,14 +351,14 @@ public:
     BoomScrollLayerDelegate* m_delegate;
     bool m_pageMoving;
     bool m_pagesInvisible;
-    float m_unkFloat3;
-    float m_unkFloat4;
+    float m_minimumTouchLengthToSlide;
+    float m_minimumTouchLengthToChangePage;
     float m_width;
     bool m_cancelAndStealTouch;
     bool m_dotsVisible;
     cocos2d::CCPoint m_dotPosition;
-    cocos2d::ccColor4B m_unkColor1;
-    cocos2d::ccColor4B m_unkColor2;
+    cocos2d::ccColor4B m_selectedPageColor;
+    cocos2d::ccColor4B m_normalPageColor;
     int m_page;
     float m_pageOffset;
     void* m_unkPtr;

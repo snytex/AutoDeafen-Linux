@@ -16,226 +16,281 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(EndLevelLayer, GJDropDownLayer)
 
     /**
+     * @note[short] MacOS (ARM): 0x4234c8
+     * @note[short] MacOS (Intel): 0x4c3a00
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2f8bcc
+     * @note[short] Android: Rebinded
+     */
+     EndLevelLayer();
+
+    /**
+     * @note[short] MacOS (ARM): 0x41fbe8
+     * @note[short] MacOS (Intel): 0x4bfce0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2f57f8
+     * @note[short] Android: Rebinded
+     */
+     ~EndLevelLayer();
+
+    /**
+     * @note[short] MacOS (ARM): 0x41fb38
+     * @note[short] MacOS (Intel): 0x4bfc30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2f5770
      * @note[short] Android
      */
     static EndLevelLayer* create(PlayLayer* playLayer);
 
     /**
-     * @note[short] MacOS (ARM): 0x418b0c
-     * @note[short] MacOS (Intel): 0x4afe70
-     * @note[short] Windows: 0x133aa0
-     * @note[short] iOS: 0x2f81f4
+     * @note[short] MacOS (ARM): 0x422ca8
+     * @note[short] MacOS (Intel): 0x4c31b0
+     * @note[short] Windows: 0x1356d0
+     * @note[short] iOS: 0x2f8438
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x4192a4
-     * @note[short] MacOS (Intel): 0x4b0620
-     * @note[short] Windows: 0x135140
-     * @note[short] iOS: 0x2f893c
+     * @note[short] MacOS (ARM): 0x423444
+     * @note[short] MacOS (Intel): 0x4c3950
+     * @note[short] Windows: 0x136d70
+     * @note[short] iOS: 0x2f8b80
      * @note[short] Android
      */
-    virtual void keyDown(cocos2d::enumKeyCodes p0);
+    virtual void keyDown(cocos2d::enumKeyCodes key, double timestamp);
 
     /**
-     * @note[short] MacOS (ARM): 0x415c30
-     * @note[short] MacOS (Intel): 0x4acc80
-     * @note[short] Windows: 0x131260
-     * @note[short] iOS: 0x2f5654
+     * @note[short] MacOS (ARM): 0x41fe0c
+     * @note[short] MacOS (Intel): 0x4c0010
+     * @note[short] Windows: 0x132e50
+     * @note[short] iOS: 0x2f589c
      * @note[short] Android
      */
     virtual void customSetup();
 
     /**
-     * @note[short] MacOS (ARM): 0x417d7c
-     * @note[short] MacOS (Intel): 0x4af060
-     * @note[short] Windows: 0x133070
-     * @note[short] iOS: 0x2f74d8
+     * @note[short] MacOS (ARM): 0x421f14
+     * @note[short] MacOS (Intel): 0x4c2380
+     * @note[short] Windows: 0x134ca0
+     * @note[short] iOS: 0x2f7714
      * @note[short] Android
      */
-    virtual void showLayer(bool p0);
+    virtual void showLayer(bool instant);
 
     /**
-     * @note[short] MacOS (ARM): 0x418a60
-     * @note[short] MacOS (Intel): 0x4afd90
+     * @note[short] MacOS (ARM): 0x422bfc
+     * @note[short] MacOS (Intel): 0x4c30d0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x2f8174
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x2f83b8
+     * @note[short] Android
      */
     virtual void enterAnimFinished();
 
     /**
-     * @note[short] MacOS (ARM): 0x419320
-     * @note[short] MacOS (Intel): 0x4b06b0
+     * @note[short] MacOS (ARM): 0x4234c0
+     * @note[short] MacOS (Intel): 0x4c39e0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x2f8980
-     * @note[short] Android: Out of line
-     */
-    virtual void keyUp(cocos2d::enumKeyCodes p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x418e98
-     * @note[short] MacOS (Intel): 0x4b0230
-     * @note[short] Windows: 0x134230
-     * @note[short] iOS: 0x2f8550
+     * @note[short] iOS: 0x2f8bc4
      * @note[short] Android
      */
-    void coinEnterFinished(cocos2d::CCPoint p0);
+    virtual void keyUp(cocos2d::enumKeyCodes key, double timestamp);
 
     /**
-     * @note[short] MacOS (ARM): 0x418e4c
-     * @note[short] MacOS (Intel): 0x4b01f0
-     * @note[short] Windows: 0x1341f0
+     * @note[short] MacOS (ARM): 0x423038
+     * @note[short] MacOS (Intel): 0x4c3560
+     * @note[short] Windows: 0x135e60
+     * @note[short] iOS: 0x2f8794
      * @note[short] Android
      */
-    void coinEnterFinishedO(cocos2d::CCObject* p0);
+    void coinEnterFinished(cocos2d::CCPoint position);
 
     /**
+     * @note[short] MacOS (ARM): 0x422fec
+     * @note[short] MacOS (Intel): 0x4c3520
+     * @note[short] Windows: 0x135e20
+     * @note[short] iOS: 0x2f8748
+     * @note[short] Android
+     */
+    void coinEnterFinishedO(cocos2d::CCObject* sender);
+
+    /**
+     * @note[short] MacOS (ARM): 0x423258
+     * @note[short] MacOS (Intel): 0x4c3750
+     * @note[short] Windows: 0x136510
+     * @note[short] iOS: 0x2f899c
      * @note[short] Android
      */
     void currencyEnterFinished();
 
     /**
+     * @note[short] MacOS (ARM): 0x42334c
+     * @note[short] MacOS (Intel): 0x4c3850
+     * @note[short] Windows: 0x1369a0
+     * @note[short] iOS: 0x2f8a8c
      * @note[short] Android
      */
     void diamondEnterFinished();
 
     /**
-     * @note[short] MacOS (ARM): 0x4174b8
-     * @note[short] MacOS (Intel): 0x4ae840
-     * @note[short] Windows: 0x132d30
+     * @note[short] MacOS (ARM): 0x421690
+     * @note[short] MacOS (Intel): 0x4c1b80
+     * @note[short] Windows: 0x134960
+     * @note[short] iOS: 0x2f6f8c
      * @note[short] Android
      */
     gd::string getCoinString();
 
     /**
-     * @note[short] MacOS (ARM): 0x41770c
-     * @note[short] MacOS (Intel): 0x4aea80
-     * @note[short] Windows: 0x135190
+     * @note[short] MacOS (ARM): 0x4218d8
+     * @note[short] MacOS (Intel): 0x4c1db0
+     * @note[short] Windows: 0x136dc0
+     * @note[short] iOS: 0x2f7154
      * @note[short] Android
      */
     const char* getEndText();
 
     /**
-     * @note[short] Windows: 0x1336e0
+     * @note[short] MacOS (ARM): 0x422c04
+     * @note[short] MacOS (Intel): 0x4c30f0
+     * @note[short] Windows: 0x135310
+     * @note[short] iOS: 0x2f83bc
      * @note[short] Android
      */
     void goEdit();
 
     /**
+     * @note[short] MacOS (ARM): 0x41fbcc
+     * @note[short] MacOS (Intel): 0x4bfcb0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     bool init(PlayLayer* playLayer);
 
     /**
-     * @note[short] MacOS (ARM): 0x417a1c
-     * @note[short] MacOS (Intel): 0x4aed20
-     * @note[short] Windows: 0x1335e0
-     * @note[short] iOS: 0x2f71c0
+     * @note[short] MacOS (ARM): 0x421bd4
+     * @note[short] MacOS (Intel): 0x4c2050
+     * @note[short] Windows: 0x135210
+     * @note[short] iOS: 0x2f7410
      * @note[short] Android
      */
     void onEdit(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x422c00
+     * @note[short] MacOS (Intel): 0x4c30e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void onEveryplay(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x417c94
-     * @note[short] MacOS (Intel): 0x4aef70
-     * @note[short] Windows: 0x1337b0
-     * @note[short] iOS: 0x2f7420
+     * @note[short] MacOS (ARM): 0x421e28
+     * @note[short] MacOS (Intel): 0x4c2290
+     * @note[short] Windows: 0x1353e0
+     * @note[short] iOS: 0x2f7658
      * @note[short] Android
      */
     void onHideLayer(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x417c20
-     * @note[short] MacOS (Intel): 0x4aef00
-     * @note[short] Windows: 0x132c30
-     * @note[short] iOS: 0x2f73ac
+     * @note[short] MacOS (ARM): 0x421dbc
+     * @note[short] MacOS (Intel): 0x4c2220
+     * @note[short] Windows: 0x134860
+     * @note[short] iOS: 0x2f75ec
      * @note[short] Android
      */
     void onLevelLeaderboard(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x417918
-     * @note[short] MacOS (Intel): 0x4aec30
-     * @note[short] Windows: 0x133460
-     * @note[short] iOS: 0x2f70d4
+     * @note[short] MacOS (ARM): 0x421ad0
+     * @note[short] MacOS (Intel): 0x4c1f60
+     * @note[short] Windows: 0x135090
+     * @note[short] iOS: 0x2f7324
      * @note[short] Android
      */
     void onMenu(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4177f4
-     * @note[short] MacOS (Intel): 0x4aeb30
-     * @note[short] Windows: 0x133250
-     * @note[short] iOS: 0x2f6fc8
+     * @note[short] MacOS (ARM): 0x4219bc
+     * @note[short] MacOS (Intel): 0x4c1e60
+     * @note[short] Windows: 0x134e80
+     * @note[short] iOS: 0x2f7218
      * @note[short] Android
      */
     void onReplay(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x417ab8
-     * @note[short] MacOS (Intel): 0x4aedb0
-     * @note[short] Windows: 0x133890
-     * @note[short] iOS: 0x2f725c
+     * @note[short] MacOS (ARM): 0x421c68
+     * @note[short] MacOS (Intel): 0x4c20e0
+     * @note[short] Windows: 0x1354c0
+     * @note[short] iOS: 0x2f74a0
      * @note[short] Android
      */
     void onRestartCheckpoint(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x41825c
-     * @note[short] MacOS (Intel): 0x4af550
-     * @note[short] Windows: 0x133fb0
-     * @note[short] iOS: 0x2f7998
+     * @note[short] MacOS (ARM): 0x4223fc
+     * @note[short] MacOS (Intel): 0x4c2870
+     * @note[short] Windows: 0x135be0
+     * @note[short] iOS: 0x2f7bdc
      * @note[short] Android
      */
-    void playCoinEffect(float p0);
+    void playCoinEffect(float duration);
 
     /**
-     * @note[short] Windows: 0x134560
+     * @note[short] MacOS (ARM): 0x42258c
+     * @note[short] MacOS (Intel): 0x4c2a10
+     * @note[short] Windows: 0x136190
+     * @note[short] iOS: 0x2f7d60
      * @note[short] Android
      */
-    void playCurrencyEffect(float p0);
+    void playCurrencyEffect(float duration);
 
     /**
-     * @note[short] MacOS (ARM): 0x418728
-     * @note[short] MacOS (Intel): 0x4afa40
-     * @note[short] Windows: 0x1349f0
-     * @note[short] iOS: 0x2f7e48
+     * @note[short] MacOS (ARM): 0x4228c4
+     * @note[short] MacOS (Intel): 0x4c2d70
+     * @note[short] Windows: 0x136620
+     * @note[short] iOS: 0x2f808c
      * @note[short] Android
      */
-    void playDiamondEffect(float p0);
+    void playDiamondEffect(float duration);
 
     /**
-     * @note[short] MacOS (ARM): 0x418c38
-     * @note[short] MacOS (Intel): 0x4affd0
-     * @note[short] Windows: 0x134e80
-     * @note[short] iOS: 0x2f831c
+     * @note[short] MacOS (ARM): 0x422dd0
+     * @note[short] MacOS (Intel): 0x4c3310
+     * @note[short] Windows: 0x136ab0
+     * @note[short] iOS: 0x2f855c
      * @note[short] Android
      */
     void playEndEffect();
 
     /**
-     * @note[short] Windows: 0x133ab0
+     * @note[short] MacOS (ARM): 0x4220a4
+     * @note[short] MacOS (Intel): 0x4c2510
+     * @note[short] Windows: 0x1356e0
+     * @note[short] iOS: 0x2f7894
      * @note[short] Android
      */
-    void playStarEffect(float p0);
+    void playStarEffect(float duration);
 
     /**
-     * @note[short] Windows: 0x133e50
+     * @note[short] MacOS (ARM): 0x422cb4
+     * @note[short] MacOS (Intel): 0x4c31e0
+     * @note[short] Windows: 0x135a80
+     * @note[short] iOS: 0x2f8444
      * @note[short] Android
      */
     void starEnterFinished();
 
     /**
+     * @note[short] MacOS (ARM): 0x421ee4
+     * @note[short] MacOS (Intel): 0x4c2350
      * @note[short] Android
      */
-    void tryShowBanner(float p0);
+    void tryShowBanner(float dt);
     PlayLayer* m_playLayer;
     bool m_notLocal;
     bool m_coinsVerified;

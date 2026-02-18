@@ -45,11 +45,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onInfo) 
 	#endif
 
-	#ifndef GEODE_STATICS_onMoreGames
-		#define GEODE_STATICS_onMoreGames
-		GEODE_AS_STATIC_FUNCTION(onMoreGames) 
-	#endif
-
 	#ifndef GEODE_STATICS_onPlay
 		#define GEODE_STATICS_onPlay
 		GEODE_AS_STATIC_FUNCTION(onPlay) 
@@ -191,24 +186,24 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelPage, create, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x309700, Thiscall, LevelPage, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31e290, Thiscall, LevelPage, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelPage, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelPage, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71210, Thiscall, LevelPage, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b1a0, Thiscall, LevelPage, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x308c10, Thiscall, LevelPage, dialogClosed, DialogLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307810, Thiscall, LevelPage, addSecretCoin, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307f20, Thiscall, LevelPage, addSecretDoor, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x305070, Thiscall, LevelPage, init, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x309260, Thiscall, LevelPage, onInfo, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelPage, onMoreGames, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x308cf0, Thiscall, LevelPage, onPlay, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x308130, Thiscall, LevelPage, onSecretDoor, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307150, Thiscall, LevelPage, onTheTower, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307a50, Thiscall, LevelPage, playCoinEffect, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelPage, playStep2, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x309160, Thiscall, LevelPage, playStep3, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x305d00, Thiscall, LevelPage, updateDynamicPage, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71240, Thiscall, LevelPage, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b7d0, Thiscall, LevelPage, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31d7a0, Thiscall, LevelPage, dialogClosed, DialogLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31c3a0, Thiscall, LevelPage, addSecretCoin, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31cab0, Thiscall, LevelPage, addSecretDoor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x319c20, Thiscall, LevelPage, init, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31ddf0, Thiscall, LevelPage, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelPage, onMoreGames, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31d880, Thiscall, LevelPage, onPlay, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31ccc0, Thiscall, LevelPage, onSecretDoor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31bce0, Thiscall, LevelPage, onTheTower, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31c5e0, Thiscall, LevelPage, playCoinEffect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31dc10, Thiscall, LevelPage, playStep2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31dcf0, Thiscall, LevelPage, playStep3, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31a8b0, Thiscall, LevelPage, updateDynamicPage, GJGameLevel*)
 		}
 	};
 }

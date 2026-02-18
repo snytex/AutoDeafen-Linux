@@ -50,11 +50,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(scaleGround) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateGroundWidth
-		#define GEODE_STATICS_updateGroundWidth
-		GEODE_AS_STATIC_FUNCTION(updateGroundWidth) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateShadows
 		#define GEODE_STATICS_updateShadows
 		GEODE_AS_STATIC_FUNCTION(updateShadows) 
@@ -190,29 +185,29 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x276870, Default, GJGroundLayer, create, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27e1a0, Default, GJGroundLayer, create, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGroundLayer, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2774c0, Thiscall, GJGroundLayer, showGround, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2774d0, Thiscall, GJGroundLayer, fadeInGround, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2776c0, Thiscall, GJGroundLayer, fadeOutGround, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x277120, Thiscall, GJGroundLayer, createLine, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27edf0, Thiscall, GJGroundLayer, showGround, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27ee00, Thiscall, GJGroundLayer, fadeInGround, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27eff0, Thiscall, GJGroundLayer, fadeOutGround, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27ea50, Thiscall, GJGroundLayer, createLine, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGroundLayer, deactivateGround, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2774c0, Thiscall, GJGroundLayer, fadeInFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27edf0, Thiscall, GJGroundLayer, fadeInFinished, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGroundLayer, getGroundY, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGroundLayer, hideShadows, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2768f0, Thiscall, GJGroundLayer, init, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x276e60, Thiscall, GJGroundLayer, loadGroundSprites, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27e220, Thiscall, GJGroundLayer, init, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27e790, Thiscall, GJGroundLayer, loadGroundSprites, int, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGroundLayer, positionGround, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x277310, Thiscall, GJGroundLayer, scaleGround, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27ec40, Thiscall, GJGroundLayer, scaleGround, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGroundLayer, toggleVisible01, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGroundLayer, toggleVisible02, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGroundLayer, updateGround01Color, cocos2d::ccColor3B)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGroundLayer, updateGround02Color, cocos2d::ccColor3B)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGroundLayer, updateGroundPos, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGroundLayer, updateGroundWidth, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGroundLayer, updateGroundWidth, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGroundLayer, updateLineBlend, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x277550, Thiscall, GJGroundLayer, updateShadows, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2775f0, Thiscall, GJGroundLayer, updateShadowXPos, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27ee80, Thiscall, GJGroundLayer, updateShadows, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27ef20, Thiscall, GJGroundLayer, updateShadowXPos, float, float)
 		}
 	};
 }

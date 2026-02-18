@@ -91,13 +91,13 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ShareListLayer, create, GJLevelList*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, ShareListLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f50d0, Thiscall, ShareListLayer, init, GJLevelList*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ShareListLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f6270, Thiscall, ShareListLayer, onInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f6530, Thiscall, ShareListLayer, onShare, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f63e0, Thiscall, ShareListLayer, onUnlisted, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f6450, Thiscall, ShareListLayer, updateUnlistedF, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, ShareListLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x309b20, Thiscall, ShareListLayer, init, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, ShareListLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30acc0, Thiscall, ShareListLayer, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30af80, Thiscall, ShareListLayer, onShare, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30ae30, Thiscall, ShareListLayer, onUnlisted, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30aea0, Thiscall, ShareListLayer, updateUnlistedF, )
 		}
 	};
 }

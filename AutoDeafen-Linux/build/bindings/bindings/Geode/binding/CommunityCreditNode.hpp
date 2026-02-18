@@ -15,15 +15,19 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(CommunityCreditNode, cocos2d::CCNode)
 
     /**
-     * @note[short] Windows: 0x93ec0
+     * @note[short] MacOS (ARM): 0x2ac5bc
+     * @note[short] MacOS (Intel): 0x31e450
+     * @note[short] Windows: 0x93f80
+     * @note[short] iOS: 0x1a02b0
      * @note[short] Android: Rebinded
      */
-    static CommunityCreditNode* create(int p0, int p1, int p2, gd::string p3);
+    static CommunityCreditNode* create(int unlockType, int iconID, int unknown, gd::string author);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a1170
-     * @note[short] MacOS (Intel): 0x30a010
+     * @note[short] MacOS (ARM): 0x2ac6dc
+     * @note[short] MacOS (Intel): 0x31e570
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
     bool init(int unlockType, int iconID, int unknown, gd::string author);

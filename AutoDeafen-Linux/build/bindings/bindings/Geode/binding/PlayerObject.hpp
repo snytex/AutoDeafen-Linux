@@ -18,992 +18,1205 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(PlayerObject, GameObject)
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
-     * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
+     * @note[short] MacOS (ARM): 0x39215c
+     * @note[short] MacOS (Intel): 0x41dbe0
+     * @note[short] Windows: 0x385350
+     * @note[short] iOS: 0x22eb48
      * @note[short] Android: Out of line
      */
      PlayerObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x36a89c
-     * @note[short] MacOS (Intel): 0x3e88e0
-     * @note[short] Windows: 0x370960
-     * @note[short] iOS: 0x21836c
+     * @note[short] MacOS (ARM): 0x372f0c
+     * @note[short] MacOS (Intel): 0x3fa360
+     * @note[short] Windows: 0x3864a0
+     * @note[short] iOS: 0x2175f8
+     * @note[short] Android: Rebinded
+     */
+     ~PlayerObject();
+
+    /**
+     * @note[short] MacOS (ARM): 0x373100
+     * @note[short] MacOS (Intel): 0x3fa640
+     * @note[short] Windows: 0x3866d0
+     * @note[short] iOS: 0x21776c
      * @note[short] Android
      */
     static PlayerObject* create(int player, int ship, GJBaseGameLayer* gameLayer, cocos2d::CCLayer* layer, bool playLayer);
 
     /**
-     * @note[short] MacOS (ARM): 0x36cf1c
-     * @note[short] MacOS (Intel): 0x3eb270
-     * @note[short] Windows: 0x373010
-     * @note[short] iOS: 0x21a2d0
+     * @note[short] MacOS (ARM): 0x375754
+     * @note[short] MacOS (Intel): 0x3fcf50
+     * @note[short] Windows: 0x388d80
+     * @note[short] iOS: 0x2196c8
      * @note[short] Android
      */
-    virtual void update(float p0);
+    virtual void update(float dt);
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
-     * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] MacOS (ARM): 0x391b90
+     * @note[short] MacOS (Intel): 0x41d570
+     * @note[short] Windows: 0x3a3910
+     * @note[short] iOS: 0x22e79c
+     * @note[short] Android
      */
     virtual void setScaleX(float scale);
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
-     * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] MacOS (ARM): 0x391b94
+     * @note[short] MacOS (Intel): 0x41d580
+     * @note[short] Windows: 0x3a3920
+     * @note[short] iOS: 0x22e7a0
+     * @note[short] Android
      */
     virtual void setScaleY(float scale);
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
-     * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] MacOS (ARM): 0x391b98
+     * @note[short] MacOS (Intel): 0x41d590
+     * @note[short] Windows: 0x3a3930
+     * @note[short] iOS: 0x22e7a4
+     * @note[short] Android
      */
     virtual void setScale(float scale);
 
     /**
-     * @note[short] MacOS (ARM): 0x3856d8
-     * @note[short] MacOS (Intel): 0x407b70
-     * @note[short] Windows: 0x3868b0
-     * @note[short] iOS: 0x22bf7c
+     * @note[short] MacOS (ARM): 0x38e200
+     * @note[short] MacOS (Intel): 0x419200
+     * @note[short] Windows: 0x39c640
+     * @note[short] iOS: 0x22b6d0
      * @note[short] Android
      */
-    virtual void setPosition(cocos2d::CCPoint const& p0);
+    virtual void setPosition(cocos2d::CCPoint const& position);
 
     /**
-     * @note[short] MacOS (ARM): 0x388728
-     * @note[short] MacOS (Intel): 0x40b0f0
-     * @note[short] Windows: 0x38caf0
-     * @note[short] iOS: 0x22e710
+     * @note[short] MacOS (ARM): 0x391b9c
+     * @note[short] MacOS (Intel): 0x41d5a0
+     * @note[short] Windows: 0x3a3940
+     * @note[short] iOS: 0x22e7a8
      * @note[short] Android
      */
-    virtual void setVisible(bool p0);
+    virtual void setVisible(bool visible);
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
-     * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
-     */
-    virtual void setRotation(float angle);
-
-    /**
-     * @note[short] MacOS (ARM): 0x386714
-     * @note[short] MacOS (Intel): 0x408d60
-     * @note[short] Windows: 0x387d60
-     * @note[short] iOS: 0x22cf10
+     * @note[short] MacOS (ARM): 0x391b20
+     * @note[short] MacOS (Intel): 0x41d4e0
+     * @note[short] Windows: 0x3a3840
+     * @note[short] iOS: 0x22e72c
      * @note[short] Android
      */
-    virtual void setOpacity(unsigned char p0);
+    virtual void setRotation(float rotation);
 
     /**
-     * @note[short] MacOS (ARM): 0x38612c
-     * @note[short] MacOS (Intel): 0x408740
-     * @note[short] Windows: 0x387580
-     * @note[short] iOS: 0x22c9d0
+     * @note[short] MacOS (ARM): 0x38f294
+     * @note[short] MacOS (Intel): 0x41a400
+     * @note[short] Windows: 0x39daf0
+     * @note[short] iOS: 0x22c6b4
      * @note[short] Android
      */
-    virtual void setColor(cocos2d::ccColor3B const& p0);
+    virtual void setOpacity(unsigned char opacity);
 
     /**
-     * @note[short] MacOS (ARM): 0x3886b0
-     * @note[short] MacOS (Intel): 0x40b040
-     * @note[short] Windows: 0x38ca00
-     * @note[short] iOS: 0x22e698
+     * @note[short] MacOS (ARM): 0x38ecb8
+     * @note[short] MacOS (Intel): 0x419de0
+     * @note[short] Windows: 0x39d310
+     * @note[short] iOS: 0x22c170
      * @note[short] Android
      */
-    virtual void setFlipX(bool p0);
+    virtual void setColor(cocos2d::ccColor3B const& color);
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
-     * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] MacOS (ARM): 0x391b24
+     * @note[short] MacOS (Intel): 0x41d4f0
+     * @note[short] Windows: 0x3a3850
+     * @note[short] iOS: 0x22e730
+     * @note[short] Android
      */
-    virtual void setFlipY(bool flip);
+    virtual void setFlipX(bool flipX);
 
     /**
-     * @note[short] MacOS (ARM): 0x37ed44
-     * @note[short] MacOS (Intel): 0x400590
-     * @note[short] Windows: 0x3810b0
-     * @note[short] iOS: 0x227340
+     * @note[short] MacOS (ARM): 0x391b8c
+     * @note[short] MacOS (Intel): 0x41d560
+     * @note[short] Windows: 0x198200
+     * @note[short] iOS: 0x22e798
+     * @note[short] Android
+     */
+    virtual void setFlipY(bool flipY);
+
+    /**
+     * @note[short] MacOS (ARM): 0x387858
+     * @note[short] MacOS (Intel): 0x411f00
+     * @note[short] Windows: 0x396ee0
+     * @note[short] iOS: 0x22692c
      * @note[short] Android
      */
     virtual void resetObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x386910
-     * @note[short] MacOS (Intel): 0x408f30
-     * @note[short] Windows: 0x387e90
-     * @note[short] iOS: 0x22d014
+     * @note[short] MacOS (ARM): 0x38f490
+     * @note[short] MacOS (Intel): 0x41a5d0
+     * @note[short] Windows: 0x39dc20
+     * @note[short] iOS: 0x22c7b8
      * @note[short] Android
      */
     virtual cocos2d::CCPoint getRealPosition();
 
     /**
-     * @note[short] MacOS (ARM): 0x387ab4
-     * @note[short] MacOS (Intel): 0x40a260
-     * @note[short] Windows: 0x38a8c0
-     * @note[short] iOS: 0x22dcc0
+     * @note[short] MacOS (ARM): 0x390668
+     * @note[short] MacOS (Intel): 0x41b8f0
+     * @note[short] Windows: 0x3a0650
+     * @note[short] iOS: 0x22d4e0
      * @note[short] Android
      */
     virtual OBB2D* getOrientedBox();
 
     /**
-     * @note[short] MacOS (ARM): 0x387ae0
-     * @note[short] MacOS (Intel): 0x40a280
-     * @note[short] Windows: 0x38a8e0
-     * @note[short] iOS: 0x22dcec
+     * @note[short] MacOS (ARM): 0x390694
+     * @note[short] MacOS (Intel): 0x41b910
+     * @note[short] Windows: 0x3a0670
+     * @note[short] iOS: 0x22d50c
      * @note[short] Android
      */
     virtual float getObjectRotation();
 
     /**
-     * @note[short] MacOS (ARM): 0x3887fc
-     * @note[short] MacOS (Intel): 0x40b1e0
-     * @note[short] Windows: 0x38cb10
-     * @note[short] iOS: 0x22e720
+     * @note[short] MacOS (ARM): 0x391c6c
+     * @note[short] MacOS (Intel): 0x41d690
+     * @note[short] Windows: 0x3a3960
+     * @note[short] iOS: 0x22e7b4
      * @note[short] Android
      */
-    virtual void animationFinished(char const* p0);
+    virtual void animationFinished(char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x3724d8
-     * @note[short] MacOS (Intel): 0x3f17c0
-     * @note[short] Windows: 0x38a300
-     * @note[short] iOS: 0x21e810
+     * @note[short] MacOS (ARM): 0x37afbc
+     * @note[short] MacOS (Intel): 0x4033f0
+     * @note[short] Windows: 0x3a0090
+     * @note[short] iOS: 0x21ddc8
      * @note[short] Android
      */
     void activateStreak();
 
     /**
-     * @note[short] MacOS (ARM): 0x36cbc8
-     * @note[short] MacOS (Intel): 0x3eaed0
-     * @note[short] Windows: 0x372900
-     * @note[short] iOS: 0x21a044
+     * @note[short] MacOS (ARM): 0x3753fc
+     * @note[short] MacOS (Intel): 0x3fcbc0
+     * @note[short] Windows: 0x388670
+     * @note[short] iOS: 0x219434
      * @note[short] Android
      */
     void addAllParticles();
 
     /**
-     * @note[short] MacOS (ARM): 0x381fec
-     * @note[short] MacOS (Intel): 0x404180
+     * @note[short] MacOS (ARM): 0x38aaec
+     * @note[short] MacOS (Intel): 0x415800
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x228e24
      * @note[short] Android
      */
-    TodoReturn addToTouchedRings(RingObject* p0);
+    void addToTouchedRings(RingObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0x37570c
+     * @note[short] MacOS (Intel): 0x3fcee0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn addToYVelocity(double p0, int p1);
+    void addToYVelocity(double yVelocity, int type);
 
     /**
-     * @note[short] MacOS (ARM): 0x372c98
-     * @note[short] MacOS (Intel): 0x3f2020
-     * @note[short] Windows: 0x376ef0
-     * @note[short] iOS: 0x21ecec
+     * @note[short] MacOS (ARM): 0x37b780
+     * @note[short] MacOS (Intel): 0x403c30
+     * @note[short] Windows: 0x38cc80
+     * @note[short] iOS: 0x21e30c
      * @note[short] Android
      */
-    void animatePlatformerJump(float p0);
+    void animatePlatformerJump(float scale);
 
     /**
-     * @note[short] MacOS (ARM): 0x374f48
-     * @note[short] MacOS (Intel): 0x3f49e0
-     * @note[short] Windows: 0x38a150
-     * @note[short] iOS: 0x2208a8
+     * @note[short] MacOS (ARM): 0x37da2c
+     * @note[short] MacOS (Intel): 0x406530
+     * @note[short] Windows: 0x39fee0
+     * @note[short] iOS: 0x21ff64
      * @note[short] Android
      */
-    void boostPlayer(float p0);
+    void boostPlayer(float yVelocity);
 
     /**
-     * @note[short] MacOS (ARM): 0x386e2c
-     * @note[short] MacOS (Intel): 0x409440
-     * @note[short] Windows: 0x389910
-     * @note[short] iOS: 0x22d2f8
+     * @note[short] MacOS (ARM): 0x38f9d0
+     * @note[short] MacOS (Intel): 0x41aae0
+     * @note[short] Windows: 0x39f6a0
+     * @note[short] iOS: 0x22cab0
      * @note[short] Android
      */
-    void bumpPlayer(float p0, int p1, bool p2, GameObject* p3);
+    void bumpPlayer(float bumpMod, int objectType, bool noEffects, GameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0x38aad0
+     * @note[short] MacOS (Intel): 0x4157e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn buttonDown(PlayerButton p0);
+    bool buttonDown(PlayerButton button);
 
     /**
+     * @note[short] MacOS (ARM): 0x38b440
+     * @note[short] MacOS (Intel): 0x4161c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2295fc
      * @note[short] Android
      */
-    TodoReturn canStickToGround();
+    bool canStickToGround();
 
     /**
+     * @note[short] MacOS (ARM): 0x382fbc
+     * @note[short] MacOS (Intel): 0x40ce20
+     * @note[short] Windows: 0x393cb0
+     * @note[short] iOS: 0x2244b8
      * @note[short] Android
      */
-    TodoReturn checkSnapJumpToObject(GameObject* p0);
+    void checkSnapJumpToObject(GameObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x3751b8
-     * @note[short] MacOS (Intel): 0x3f4c90
-     * @note[short] Windows: 0x37bb80
-     * @note[short] iOS: 0x220ae4
+     * @note[short] MacOS (ARM): 0x382efc
+     * @note[short] MacOS (Intel): 0x40cd70
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x22445c
      * @note[short] Android
      */
-    void collidedWithObject(float p0, GameObject* p1, cocos2d::CCRect p2, bool p3);
+    bool collidedWithObject(float dt, GameObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x37a504
-     * @note[short] MacOS (Intel): 0x3fb520
-     * @note[short] iOS: 0x224e30
+     * @note[short] MacOS (ARM): 0x37dca0
+     * @note[short] MacOS (Intel): 0x4067d0
+     * @note[short] Windows: 0x3919b0
+     * @note[short] iOS: 0x2201a4
      * @note[short] Android
      */
-    void collidedWithObject(float p0, GameObject* p1);
+    bool collidedWithObject(float dt, GameObject* object, cocos2d::CCRect rect, bool skipCheck);
 
     /**
-     * @note[short] MacOS (ARM): 0x376dd8
-     * @note[short] MacOS (Intel): 0x3f6de0
-     * @note[short] Windows: 0x37bc40
+     * @note[short] MacOS (ARM): 0x37f8e4
+     * @note[short] MacOS (Intel): 0x4089c0
+     * @note[short] Windows: 0x391a70
+     * @note[short] iOS: 0x221800
      * @note[short] Android
      */
-    int collidedWithObjectInternal(float p0, GameObject* p1, cocos2d::CCRect p2, bool p3);
+    bool collidedWithObjectInternal(float dt, GameObject* object, cocos2d::CCRect rect, bool skipCheck);
 
     /**
-     * @note[short] MacOS (ARM): 0x375274
-     * @note[short] MacOS (Intel): 0x3f4d30
-     * @note[short] iOS: 0x220b8c
+     * @note[short] MacOS (ARM): 0x37dd60
+     * @note[short] MacOS (Intel): 0x406870
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x220250
      * @note[short] Android
      */
-    void collidedWithSlope(float dt, GameObject* object, bool forced);
+    void collidedWithSlope(float dt, GameObject* object, bool skipPre);
 
     /**
-     * @note[short] MacOS (ARM): 0x375914
-     * @note[short] MacOS (Intel): 0x3f5410
-     * @note[short] Windows: 0x3799e0
+     * @note[short] MacOS (ARM): 0x37e3e4
+     * @note[short] MacOS (Intel): 0x406f50
+     * @note[short] Windows: 0x38f810
+     * @note[short] iOS: 0x2206f4
      * @note[short] Android
      */
     void collidedWithSlopeInternal(float dt, GameObject* object, bool forced);
 
     /**
+     * @note[short] MacOS (ARM): 0x37a6dc
+     * @note[short] MacOS (Intel): 0x402a70
+     * @note[short] Windows: 0x38d100
+     * @note[short] iOS: 0x21d5d8
      * @note[short] Android
      */
-    TodoReturn convertToClosestRotation(float p0);
+    float convertToClosestRotation(float rotation);
 
     /**
-     * @note[short] MacOS (ARM): 0x3877bc
-     * @note[short] MacOS (Intel): 0x409ed0
-     * @note[short] Windows: 0x38a710
-     * @note[short] iOS: 0x22da24
+     * @note[short] MacOS (ARM): 0x39036c
+     * @note[short] MacOS (Intel): 0x41b570
+     * @note[short] Windows: 0x3a04a0
+     * @note[short] iOS: 0x22d248
      * @note[short] Android
      */
-    void copyAttributes(PlayerObject* p0);
+    void copyAttributes(PlayerObject* player);
 
     /**
-     * @note[short] MacOS (ARM): 0x382128
-     * @note[short] MacOS (Intel): 0x4042d0
-     * @note[short] Windows: 0x382830
-     * @note[short] iOS: 0x229880
+     * @note[short] MacOS (ARM): 0x38ac1c
+     * @note[short] MacOS (Intel): 0x415950
+     * @note[short] Windows: 0x398660
+     * @note[short] iOS: 0x228f54
      * @note[short] Android
      */
     void createFadeOutDartStreak();
 
     /**
-     * @note[short] MacOS (ARM): 0x36c034
-     * @note[short] MacOS (Intel): 0x3ea2a0
-     * @note[short] Windows: 0x372180
-     * @note[short] iOS: 0x2195f4
+     * @note[short] MacOS (ARM): 0x374834
+     * @note[short] MacOS (Intel): 0x3fbfb0
+     * @note[short] Windows: 0x387ef0
+     * @note[short] iOS: 0x2189ec
      * @note[short] Android
      */
-    void createRobot(int p0);
+    void createRobot(int frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x36c378
-     * @note[short] MacOS (Intel): 0x3ea650
-     * @note[short] Windows: 0x372540
-     * @note[short] iOS: 0x2198e4
+     * @note[short] MacOS (ARM): 0x374b78
+     * @note[short] MacOS (Intel): 0x3fc360
+     * @note[short] Windows: 0x3882b0
+     * @note[short] iOS: 0x218cdc
      * @note[short] Android
      */
-    void createSpider(int p0);
+    void createSpider(int frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x3709e8
-     * @note[short] MacOS (Intel): 0x3efb60
-     * @note[short] iOS: 0x21d328
+     * @note[short] MacOS (ARM): 0x379454
+     * @note[short] MacOS (Intel): 0x4017b0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x21c824
      * @note[short] Android
      */
     void deactivateParticle();
 
     /**
-     * @note[short] MacOS (ARM): 0x36cd60
-     * @note[short] MacOS (Intel): 0x3eb090
+     * @note[short] MacOS (ARM): 0x375594
+     * @note[short] MacOS (Intel): 0x3fcd80
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x21a1dc
+     * @note[short] iOS: 0x2195cc
      * @note[short] Android
      */
     void deactivateStreak(bool stop);
 
     /**
-     * @note[short] iOS: 0x22bf34
+     * @note[short] MacOS (ARM): 0x38e190
+     * @note[short] MacOS (Intel): 0x4191a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x22b688
      * @note[short] Android
      */
-    TodoReturn destroyFromHitHead();
+    bool destroyFromHitHead();
 
     /**
-     * @note[short] MacOS (ARM): 0x37aabc
-     * @note[short] MacOS (Intel): 0x3fbb50
-     * @note[short] Windows: 0x37de00
-     * @note[short] iOS: 0x2252b8
+     * @note[short] MacOS (ARM): 0x3834bc
+     * @note[short] MacOS (Intel): 0x40d390
+     * @note[short] Windows: 0x393c30
+     * @note[short] iOS: 0x2248e0
      * @note[short] Android
      */
     void didHitHead();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x38ede8
+     * @note[short] MacOS (Intel): 0x419f30
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] Android
      */
     void disableCustomGlowColor();
 
     /**
-     * @note[short] MacOS (ARM): 0x386af4
-     * @note[short] MacOS (Intel): 0x409140
-     * @note[short] Windows: 0x389620
+     * @note[short] MacOS (ARM): 0x38f688
+     * @note[short] MacOS (Intel): 0x41a7e0
+     * @note[short] Windows: 0x39f3b0
+     * @note[short] iOS: 0x22c8ec
      * @note[short] Android
      */
     void disablePlayerControls();
 
     /**
-     * @note[short] MacOS (ARM): 0x3807b8
-     * @note[short] MacOS (Intel): 0x402500
-     * @note[short] Windows: 0x385170
-     * @note[short] iOS: 0x2286b8
+     * @note[short] MacOS (ARM): 0x3892fc
+     * @note[short] MacOS (Intel): 0x413cf0
+     * @note[short] Windows: 0x39af00
+     * @note[short] iOS: 0x227cfc
      * @note[short] Android
      */
     void disableSwingFire();
 
     /**
-     * @note[short] MacOS (ARM): 0x371620
-     * @note[short] MacOS (Intel): 0x3f0850
-     * @note[short] Windows: 0x3826e0
-     * @note[short] iOS: 0x21dd68
+     * @note[short] MacOS (ARM): 0x37a070
+     * @note[short] MacOS (Intel): 0x402460
+     * @note[short] Windows: 0x398510
+     * @note[short] iOS: 0x21d290
      * @note[short] Android
      */
-    void doReversePlayer(bool p0);
-	inline void enableCustomGlowColor(cocos2d::ccColor3B const& color) {
-        m_hasCustomGlowColor = true;
-        m_glowColor = color;
-    }
+    void doReversePlayer(bool reverse);
 
     /**
-     * @note[short] MacOS (ARM): 0x386b50
-     * @note[short] MacOS (Intel): 0x4091a0
-     * @note[short] Windows: 0x389770
+     * @note[short] MacOS (ARM): 0x38edc8
+     * @note[short] MacOS (Intel): 0x419f00
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x22c214
+     * @note[short] Android
+     */
+    void enableCustomGlowColor(cocos2d::ccColor3B const& color);
+
+    /**
+     * @note[short] MacOS (ARM): 0x38f6e4
+     * @note[short] MacOS (Intel): 0x41a840
+     * @note[short] Windows: 0x39f500
+     * @note[short] iOS: 0x22c948
      * @note[short] Android
      */
     void enablePlayerControls();
 
     /**
+     * @note[short] MacOS (ARM): 0x37a298
+     * @note[short] MacOS (Intel): 0x402600
+     * @note[short] Windows: 0x38cf30
+     * @note[short] iOS: 0x21d3a0
      * @note[short] Android
      */
     void exitPlatformerAnimateJump();
 
     /**
-     * @note[short] MacOS (ARM): 0x38071c
-     * @note[short] MacOS (Intel): 0x402470
-     * @note[short] Windows: 0x38a400
-     * @note[short] iOS: 0x22861c
+     * @note[short] MacOS (ARM): 0x389260
+     * @note[short] MacOS (Intel): 0x413c60
+     * @note[short] Windows: 0x3a0190
+     * @note[short] iOS: 0x227c60
      * @note[short] Android
      */
-    void fadeOutStreak2(float p0);
+    void fadeOutStreak2(float duration);
 
     /**
-     * @note[short] MacOS (ARM): 0x37c04c
-     * @note[short] MacOS (Intel): 0x3fd3f0
+     * @note[short] MacOS (ARM): 0x384aa8
+     * @note[short] MacOS (Intel): 0x40ec70
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void flashPlayer(float p0, float p1, cocos2d::ccColor3B mainColor, cocos2d::ccColor3B secondColor);
+    void flashPlayer(float flashDuration, float flashDelay, cocos2d::ccColor3B mainColor, cocos2d::ccColor3B secondColor);
 
     /**
-     * @note[short] MacOS (ARM): 0x372910
-     * @note[short] MacOS (Intel): 0x3f1c30
-     * @note[short] Windows: 0x384440
-     * @note[short] iOS: 0x21eb30
+     * @note[short] MacOS (ARM): 0x37b40c
+     * @note[short] MacOS (Intel): 0x403880
+     * @note[short] Windows: 0x39a1d0
+     * @note[short] iOS: 0x21e14c
      * @note[short] Android
      */
-    void flipGravity(bool p0, bool p1);
+    void flipGravity(bool flip, bool noEffects);
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x3793cc
+     * @note[short] MacOS (Intel): 0x401730
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
-     */
-    float flipMod();
-
-    /**
-     * @note[short] MacOS (ARM): 0x372c80
-     * @note[short] MacOS (Intel): 0x3f1ff0
-     * @note[short] Windows: Out of line
      * @note[short] Android
      */
-    void gameEventTriggered(int p0, int p1);
+    int flipMod();
 
     /**
-     * @note[short] MacOS (ARM): 0x38294c
-     * @note[short] MacOS (Intel): 0x404b10
+     * @note[short] MacOS (ARM): 0x37b768
+     * @note[short] MacOS (Intel): 0x403c00
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x229efc
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    void gameEventTriggered(int gameEvent, int material);
+
+    /**
+     * @note[short] MacOS (ARM): 0x38b470
+     * @note[short] MacOS (Intel): 0x4161f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x229628
      * @note[short] Android
      */
     GameObjectType getActiveMode();
 
     /**
+     * @note[short] MacOS (ARM): 0x3793a4
+     * @note[short] MacOS (Intel): 0x401700
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x21c7d0
      * @note[short] Android
      */
-    TodoReturn getCurrentXVelocity();
+    double getCurrentXVelocity();
 
     /**
+     * @note[short] MacOS (ARM): 0x37b378
+     * @note[short] MacOS (Intel): 0x4037e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn getModifiedSlopeYVel();
+    float getModifiedSlopeYVel();
 
     /**
+     * @note[short] MacOS (ARM): 0x37a85c
+     * @note[short] MacOS (Intel): 0x402c30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x21d74c
      * @note[short] Android
      */
-    TodoReturn getOldPosition(float p0);
+    float getOldPosition(float dt);
 
     /**
+     * @note[short] MacOS (ARM): 0x38ed9c
+     * @note[short] MacOS (Intel): 0x419ed0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x22c1e8
      * @note[short] Android
      */
     cocos2d::ccColor3B getSecondColor();
 
     /**
-     * @note[short] iOS: 0x21a2c8
-     * @note[short] Android
-     */
-    TodoReturn getYVelocity();
-
-    /**
-     * @note[short] Android
-     */
-    TodoReturn gravityDown();
-
-    /**
-     * @note[short] Android
-     */
-    TodoReturn gravityUp();
-
-    /**
-     * @note[short] Android
-     */
-    TodoReturn handlePlayerCommand(int p0);
-
-    /**
-     * @note[short] Windows: 0x379310
-     * @note[short] Android
-     */
-    TodoReturn handleRotatedCollisionInternal(float p0, GameObject* p1, cocos2d::CCRect p2, bool p3, bool p4, bool p5);
-
-    /**
+     * @note[short] MacOS (ARM): 0x375704
+     * @note[short] MacOS (Intel): 0x3fced0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2196c0
      * @note[short] Android
      */
-    TodoReturn handleRotatedObjectCollision(float p0, GameObject* p1, cocos2d::CCRect p2, bool p3);
+    double getYVelocity();
 
     /**
+     * @note[short] MacOS (ARM): 0x391bcc
+     * @note[short] MacOS (Intel): 0x41d5f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn handleRotatedSlopeCollision(float p0, GameObject* p1, bool p2);
+    void gravityDown();
 
     /**
+     * @note[short] MacOS (ARM): 0x391ba8
+     * @note[short] MacOS (Intel): 0x41d5c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn hardFlipGravity();
+    void gravityUp();
 
     /**
-     * @note[short] MacOS (ARM): 0x37951c
-     * @note[short] MacOS (Intel): 0x3fa390
-     * @note[short] Windows: 0x3861a0
-     * @note[short] iOS: 0x224188
+     * @note[short] MacOS (ARM): 0x37bfd8
+     * @note[short] MacOS (Intel): 0x404510
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x21e8e4
      * @note[short] Android
      */
-    void hitGround(GameObject* p0, bool p1);
+    void handlePlayerCommand(int command);
 
     /**
+     * @note[short] MacOS (ARM): 0x37df88
+     * @note[short] MacOS (Intel): 0x406a60
+     * @note[short] Windows: 0x38f140
+     * @note[short] iOS: 0x220400
      * @note[short] Android
      */
-    TodoReturn hitGroundNoJump(GameObject* p0, bool p1);
+    bool handleRotatedCollisionInternal(float dt, GameObject* object, cocos2d::CCRect rect, bool skipCheck, bool skipPre, bool slope);
 
     /**
-     * @note[short] MacOS (ARM): 0x3728d8
-     * @note[short] MacOS (Intel): 0x3f1bf0
-     * @note[short] Windows: 0x376e10
-     * @note[short] iOS: 0x21eaf8
+     * @note[short] MacOS (ARM): 0x37df1c
+     * @note[short] MacOS (Intel): 0x406a00
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    bool handleRotatedObjectCollision(float dt, GameObject* object, cocos2d::CCRect rect, bool skipCheck);
+
+    /**
+     * @note[short] MacOS (ARM): 0x37e0e8
+     * @note[short] MacOS (Intel): 0x406bc0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    void handleRotatedSlopeCollision(float dt, GameObject* object, bool skipPre);
+
+    /**
+     * @note[short] MacOS (ARM): 0x3836a4
+     * @note[short] MacOS (Intel): 0x40d5e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x224a28
+     * @note[short] Android
+     */
+    void hardFlipGravity();
+
+    /**
+     * @note[short] MacOS (ARM): 0x381ea0
+     * @note[short] MacOS (Intel): 0x40bbc0
+     * @note[short] Windows: 0x39bf30
+     * @note[short] iOS: 0x223730
+     * @note[short] Android
+     */
+    void hitGround(GameObject* object, bool notFlipped);
+
+    /**
+     * @note[short] MacOS (ARM): 0x383324
+     * @note[short] MacOS (Intel): 0x40d1d0
+     * @note[short] Windows: 0x39bed0
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    void hitGroundNoJump(GameObject* object, bool notFlipped);
+
+    /**
+     * @note[short] MacOS (ARM): 0x37b3d0
+     * @note[short] MacOS (Intel): 0x403840
+     * @note[short] Windows: 0x38cba0
+     * @note[short] iOS: 0x21e110
      * @note[short] Android
      */
     void incrementJumps();
 
     /**
-     * @note[short] MacOS (ARM): 0x36a954
-     * @note[short] MacOS (Intel): 0x3e8970
-     * @note[short] Windows: 0x370a00
-     * @note[short] iOS: 0x218410
+     * @note[short] MacOS (ARM): 0x3731b8
+     * @note[short] MacOS (Intel): 0x3fa6d0
+     * @note[short] Windows: 0x386770
+     * @note[short] iOS: 0x217810
      * @note[short] Android
      */
     bool init(int player, int ship, GJBaseGameLayer* gameLayer, cocos2d::CCLayer* layer, bool playLayer);
 
     /**
+     * @note[short] MacOS (ARM): 0x37d9d4
+     * @note[short] MacOS (Intel): 0x4064d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x21ff0c
      * @note[short] Android
      */
-    bool isBoostValid(float p0);
+    bool isBoostValid(float yVelocity);
 
     /**
-     * @note[short] MacOS (ARM): 0x37097c
-     * @note[short] MacOS (Intel): 0x3efb00
+     * @note[short] MacOS (ARM): 0x3793e0
+     * @note[short] MacOS (Intel): 0x401750
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x21d2cc
+     * @note[short] iOS: 0x21c7f8
      * @note[short] Android
      */
     bool isFlying();
 
     /**
-     * @note[short] MacOS (ARM): 0x37b8c8
-     * @note[short] MacOS (Intel): 0x3fcbc0
+     * @note[short] MacOS (ARM): 0x384318
+     * @note[short] MacOS (Intel): 0x40e440
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x225fa0
+     * @note[short] iOS: 0x22559c
      * @note[short] Android
      */
     bool isInBasicMode();
 
     /**
-     * @note[short] MacOS (ARM): 0x36f5a8
-     * @note[short] MacOS (Intel): 0x3ee1c0
+     * @note[short] MacOS (ARM): 0x377ef8
+     * @note[short] MacOS (Intel): 0x3ffe50
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x21c1bc
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     bool isInNormalMode();
 
     /**
-     * @note[short] iOS: 0x22415c
+     * @note[short] MacOS (ARM): 0x381e74
+     * @note[short] MacOS (Intel): 0x40bb80
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x223704
      * @note[short] Android
      */
-    bool isSafeFlip(float p0);
+    bool isSafeFlip(float flipTime);
 
     /**
-     * @note[short] iOS: 0x22d9b8
+     * @note[short] MacOS (ARM): 0x390244
+     * @note[short] MacOS (Intel): 0x41b400
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x22d1dc
      * @note[short] Android
      */
     bool isSafeHeadTest();
 
     /**
+     * @note[short] MacOS (ARM): 0x381e48
+     * @note[short] MacOS (Intel): 0x40bb40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool isSafeMode(float p0);
+    bool isSafeMode(float changeTime);
 
     /**
+     * @note[short] MacOS (ARM): 0x383678
+     * @note[short] MacOS (Intel): 0x40d5a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool isSafeSpiderFlip(float p0);
+    bool isSafeSpiderFlip(float flipTime);
 
     /**
-     * @note[short] Windows: 0x3759e0
+     * @note[short] MacOS (ARM): 0x37b168
+     * @note[short] MacOS (Intel): 0x4035b0
+     * @note[short] Windows: 0x38b750
+     * @note[short] iOS: 0x21df64
      * @note[short] Android
      */
-    TodoReturn levelFlipFinished();
+    void levelFlipFinished();
 
     /**
-     * @note[short] MacOS (ARM): 0x3709bc
-     * @note[short] MacOS (Intel): 0x3efb30
-     * @note[short] Windows: 0x385760
-     * @note[short] iOS: 0x21d2fc
+     * @note[short] MacOS (ARM): 0x379428
+     * @note[short] MacOS (Intel): 0x401780
+     * @note[short] Windows: 0x39b4f0
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     bool levelFlipping();
 
     /**
-     * @note[short] MacOS (ARM): 0x372640
-     * @note[short] MacOS (Intel): 0x3f1930
+     * @note[short] MacOS (ARM): 0x37b120
+     * @note[short] MacOS (Intel): 0x403570
+     * @note[short] Windows: 0x38b6d0
+     * @note[short] iOS: 0x21df20
      * @note[short] Android
      */
     void levelWillFlip();
 
     /**
+     * @note[short] MacOS (ARM): 0x386c4c
+     * @note[short] MacOS (Intel): 0x4111d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x22614c
      * @note[short] Android
      */
-    TodoReturn limitDashRotation(float& p0);
+    void limitDashRotation(float& rotation);
 
     /**
-     * @note[short] MacOS (ARM): 0x3880ac
-     * @note[short] MacOS (Intel): 0x40a910
-     * @note[short] Windows: 0x38bc30
-     * @note[short] iOS: 0x22e1c0
+     * @note[short] MacOS (ARM): 0x39107c
+     * @note[short] MacOS (Intel): 0x41c670
+     * @note[short] Windows: 0x3a21b0
+     * @note[short] iOS: 0x22dde4
      * @note[short] Android
      */
-    void loadFromCheckpoint(PlayerCheckpoint* p0);
+    void loadFromCheckpoint(PlayerCheckpoint* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x3869b4
-     * @note[short] MacOS (Intel): 0x408fe0
-     * @note[short] Windows: 0x389540
-     * @note[short] iOS: 0x22d0b8
+     * @note[short] MacOS (ARM): 0x38f534
+     * @note[short] MacOS (Intel): 0x41a680
+     * @note[short] Windows: 0x39f2d0
+     * @note[short] iOS: 0x22c85c
      * @note[short] Android
      */
     void lockPlayer();
 
     /**
+     * @note[short] MacOS (ARM): 0x391bc8
+     * @note[short] MacOS (Intel): 0x41d5e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn logValues();
+    void logValues();
 
     /**
+     * @note[short] MacOS (ARM): 0x38bf2c
+     * @note[short] MacOS (Intel): 0x416d30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x229df4
      * @note[short] Android
      */
     void modeDidChange();
 
     /**
+     * @note[short] MacOS (ARM): 0x37dbd8
+     * @note[short] MacOS (Intel): 0x406700
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2200e0
      * @note[short] Android
      */
-    TodoReturn performSlideCheck();
+    void performSlideCheck();
 
     /**
-     * @note[short] MacOS (ARM): 0x3725a0
-     * @note[short] MacOS (Intel): 0x3f18a0
-     * @note[short] Windows: 0x38a8f0
-     * @note[short] iOS: 0x21e8b8
+     * @note[short] MacOS (ARM): 0x37b07c
+     * @note[short] MacOS (Intel): 0x4034d0
+     * @note[short] Windows: 0x3a0680
+     * @note[short] iOS: 0x21de88
      * @note[short] Android
      */
     void placeStreakPoint();
 
     /**
-     * @note[short] Windows: 0x389cc0
+     * @note[short] MacOS (ARM): 0x38fb88
+     * @note[short] MacOS (Intel): 0x41acb0
+     * @note[short] Windows: 0x39fa50
+     * @note[short] iOS: 0x22cbe0
      * @note[short] Android
      */
-    void playBumpEffect(int p0, GameObject* p1);
+    void playBumpEffect(int objectType, GameObject* player);
 
     /**
+     * @note[short] MacOS (ARM): 0x37bb60
+     * @note[short] MacOS (Intel): 0x404070
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x21e5a4
      * @note[short] Android
      */
-    TodoReturn playBurstEffect();
+    void playBurstEffect();
 
     /**
-     * @note[short] MacOS (ARM): 0x1b7870
-     * @note[short] MacOS (Intel): 0x2024c0
-     * @note[short] Windows: 0x36e2b0
-     * @note[short] iOS: 0x60a60
+     * @note[short] MacOS (ARM): 0x1bf7f0
+     * @note[short] MacOS (Intel): 0x214020
+     * @note[short] Windows: 0x384020
+     * @note[short] iOS: 0x5cda8
      * @note[short] Android
      */
-    void playCompleteEffect(bool p0, bool p1);
+    void playCompleteEffect(bool noEffects, bool instant);
 
     /**
-     * @note[short] MacOS (ARM): 0x1af8ac
-     * @note[short] MacOS (Intel): 0x1fa350
-     * @note[short] Windows: 0x3691a0
-     * @note[short] iOS: 0x5b138
+     * @note[short] MacOS (ARM): 0x1b7e94
+     * @note[short] MacOS (Intel): 0x20c210
+     * @note[short] Windows: 0x37ef10
+     * @note[short] iOS: 0x579ec
      * @note[short] Android
      */
     void playDeathEffect();
 
     /**
-     * @note[short] Windows: 0x38b740
+     * @note[short] MacOS (ARM): 0x379dac
+     * @note[short] MacOS (Intel): 0x4021a0
+     * @note[short] Windows: 0x3a14d0
+     * @note[short] iOS: 0x21d040
      * @note[short] Android
      */
     void playDynamicSpiderRun();
 
     /**
-     * @note[short] MacOS (ARM): 0x380548
-     * @note[short] MacOS (Intel): 0x402270
-     * @note[short] Windows: 0x381f10
-     * @note[short] iOS: 0x22853c
+     * @note[short] MacOS (ARM): 0x38907c
+     * @note[short] MacOS (Intel): 0x413a60
+     * @note[short] Windows: 0x397d40
+     * @note[short] iOS: 0x227b74
      * @note[short] Android
      */
-    void playerDestroyed(bool p0);
+    void playerDestroyed(bool noEffects);
 
     /**
+     * @note[short] MacOS (ARM): 0x37bb30
+     * @note[short] MacOS (Intel): 0x404030
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool playerIsFalling(float p0);
+    bool playerIsFalling(float yVelocity);
 
     /**
-     * @note[short] Windows: 0x3846a0
+     * @note[short] MacOS (ARM): 0x37ba64
+     * @note[short] MacOS (Intel): 0x403f40
+     * @note[short] Windows: 0x39a430
+     * @note[short] iOS: 0x21e4f8
      * @note[short] Android
      */
     bool playerIsFallingBugged();
 
     /**
+     * @note[short] MacOS (ARM): 0x37bb10
+     * @note[short] MacOS (Intel): 0x404000
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn playerIsMovingUp();
+    bool playerIsMovingUp();
 
     /**
+     * @note[short] MacOS (ARM): 0x38b238
+     * @note[short] MacOS (Intel): 0x415fd0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x229550
      * @note[short] Android
      */
-    TodoReturn playerTeleported();
+    void playerTeleported();
 
     /**
-     * @note[short] MacOS (ARM): 0x386d90
-     * @note[short] MacOS (Intel): 0x4093c0
-     * @note[short] iOS: 0x22d27c
+     * @note[short] MacOS (ARM): 0x38f930
+     * @note[short] MacOS (Intel): 0x41aa60
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x22ca30
      * @note[short] Android
      */
-    TodoReturn playingEndEffect();
+    void playingEndEffect();
 
     /**
-     * @note[short] MacOS (ARM): 0x37fe98
-     * @note[short] MacOS (Intel): 0x401bb0
-     * @note[short] Windows: 0x381650
-     * @note[short] iOS: 0x227ff8
+     * @note[short] MacOS (ARM): 0x3889d8
+     * @note[short] MacOS (Intel): 0x4133a0
+     * @note[short] Windows: 0x397480
+     * @note[short] iOS: 0x22762c
      * @note[short] Android
      */
     void playSpawnEffect();
 
     /**
-     * @note[short] MacOS (ARM): 0x37b928
-     * @note[short] MacOS (Intel): 0x3fcc20
-     * @note[short] Windows: 0x37f340
-     * @note[short] iOS: 0x225fe0
+     * @note[short] MacOS (ARM): 0x384378
+     * @note[short] MacOS (Intel): 0x40e490
+     * @note[short] Windows: 0x395170
+     * @note[short] iOS: 0x2255dc
      * @note[short] Android
      */
     void playSpiderDashEffect(cocos2d::CCPoint from, cocos2d::CCPoint to);
 
     /**
-     * @note[short] MacOS (ARM): 0x373790
-     * @note[short] MacOS (Intel): 0x3f2c40
-     * @note[short] Windows: 0x3777f0
-     * @note[short] iOS: 0x21f410
+     * @note[short] MacOS (ARM): 0x37c258
+     * @note[short] MacOS (Intel): 0x4047f0
+     * @note[short] Windows: 0x38d580
+     * @note[short] iOS: 0x21ea64
      * @note[short] Android
      */
-    void postCollision(float p0);
+    void postCollision(float dt, bool betweenSteps);
 
     /**
-     * @note[short] MacOS (ARM): 0x373634
-     * @note[short] MacOS (Intel): 0x3f2a40
-     * @note[short] iOS: 0x21f300
+     * @note[short] MacOS (ARM): 0x37c100
+     * @note[short] MacOS (Intel): 0x404660
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x21e958
      * @note[short] Android
      */
     void preCollision();
 
     /**
-     * @note[short] MacOS (ARM): 0x379014
-     * @note[short] MacOS (Intel): 0x3f9dd0
-     * @note[short] Windows: 0x3794b0
-     * @note[short] iOS: 0x223cb4
+     * @note[short] MacOS (ARM): 0x3819b0
+     * @note[short] MacOS (Intel): 0x40b650
+     * @note[short] Windows: 0x38f2e0
+     * @note[short] iOS: 0x223278
      * @note[short] Android
      */
-    bool preSlopeCollision(float p0, GameObject* p1);
+    bool preSlopeCollision(float dt, GameObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x387134
-     * @note[short] MacOS (Intel): 0x409750
-     * @note[short] Windows: 0x389ac0
-     * @note[short] iOS: 0x22d548
+     * @note[short] MacOS (ARM): 0x38fcac
+     * @note[short] MacOS (Intel): 0x41adf0
+     * @note[short] Windows: 0x39f850
+     * @note[short] iOS: 0x22cd04
      * @note[short] Android
      */
-    void propellPlayer(float p0, bool p1, int p2);
+    void propellPlayer(float yVelocity, bool noEffects, int objectType);
 
     /**
-     * @note[short] MacOS (ARM): 0x380a44
-     * @note[short] MacOS (Intel): 0x4027d0
-     * @note[short] Windows: 0x382110
-     * @note[short] iOS: 0x228864
+     * @note[short] MacOS (ARM): 0x38957c
+     * @note[short] MacOS (Intel): 0x413fb0
+     * @note[short] Windows: 0x397f40
+     * @note[short] iOS: 0x227eac
      * @note[short] Android
      */
-    bool pushButton(PlayerButton p0);
+    bool pushButton(PlayerButton button);
 
     /**
+     * @note[short] MacOS (ARM): 0x3902bc
+     * @note[short] MacOS (Intel): 0x41b470
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x22d238
      * @note[short] Android
      */
-    TodoReturn pushDown();
+    void pushDown();
 
     /**
+     * @note[short] MacOS (ARM): 0x38fed4
+     * @note[short] MacOS (Intel): 0x41aff0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void pushPlayer(float p0);
+    void pushPlayer(float yVelocity);
 
     /**
+     * @note[short] MacOS (ARM): 0x386598
+     * @note[short] MacOS (Intel): 0x410ac0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x225b50
      * @note[short] Android
      */
-    TodoReturn redirectDash(float p0);
+    void redirectDash(float rotation);
 
     /**
-     * @note[short] Windows: 0x389ed0
+     * @note[short] MacOS (ARM): 0x39005c
+     * @note[short] MacOS (Intel): 0x41b1c0
+     * @note[short] Windows: 0x39fc60
+     * @note[short] iOS: 0x22cffc
      * @note[short] Android
      */
-    TodoReturn redirectPlayerForce(float p0, float p1, float p2, float p3);
+    void redirectPlayerForce(float rotation, float modifier, float minimum, float maximum);
 
     /**
-     * @note[short] MacOS (ARM): 0x386970
-     * @note[short] MacOS (Intel): 0x408fa0
-     * @note[short] Windows: 0x389370
-     * @note[short] iOS: 0x22d074
+     * @note[short] MacOS (ARM): 0x38f4f0
+     * @note[short] MacOS (Intel): 0x41a640
+     * @note[short] Windows: 0x39f100
+     * @note[short] iOS: 0x22c818
      * @note[short] Android
      */
     void releaseAllButtons();
 
     /**
-     * @note[short] MacOS (ARM): 0x381b48
-     * @note[short] MacOS (Intel): 0x403c40
-     * @note[short] Windows: 0x3823a0
-     * @note[short] iOS: 0x229640
+     * @note[short] MacOS (ARM): 0x38a678
+     * @note[short] MacOS (Intel): 0x415330
+     * @note[short] Windows: 0x3981d0
+     * @note[short] iOS: 0x228d08
      * @note[short] Android
      */
-    bool releaseButton(PlayerButton p0);
+    bool releaseButton(PlayerButton button);
 
     /**
+     * @note[short] MacOS (ARM): 0x37551c
+     * @note[short] MacOS (Intel): 0x3fcd10
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x219554
      * @note[short] Android
      */
-    TodoReturn removeAllParticles();
+    void removeAllParticles();
 
     /**
-     * @note[short] MacOS (ARM): 0x37f7d8
-     * @note[short] MacOS (Intel): 0x4013f0
-     * @note[short] Windows: 0x38c400
-     * @note[short] iOS: 0x227a2c
+     * @note[short] MacOS (ARM): 0x3882ec
+     * @note[short] MacOS (Intel): 0x412be0
+     * @note[short] Windows: 0x3a3250
+     * @note[short] iOS: 0x22703c
      * @note[short] Android
      */
     void removePendingCheckpoint();
 
     /**
-     * @note[short] MacOS (ARM): 0x380510
-     * @note[short] MacOS (Intel): 0x402230
+     * @note[short] MacOS (ARM): 0x389040
+     * @note[short] MacOS (Intel): 0x413a20
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x227b38
      * @note[short] Android
      */
     void removePlacedCheckpoint();
 
     /**
-     * @note[short] MacOS (ARM): 0x372390
-     * @note[short] MacOS (Intel): 0x3f1660
-     * @note[short] Windows: 0x375a70
-     * @note[short] iOS: 0x21e6d8
+     * @note[short] MacOS (ARM): 0x37ae70
+     * @note[short] MacOS (Intel): 0x403290
+     * @note[short] Windows: 0x38b7e0
+     * @note[short] iOS: 0x21dc7c
      * @note[short] Android
      */
     void resetAllParticles();
 
     /**
-     * @note[short] MacOS (ARM): 0x373520
-     * @note[short] MacOS (Intel): 0x3f2900
-     * @note[short] iOS: 0x21f2a0
+     * @note[short] MacOS (ARM): 0x37bfec
+     * @note[short] MacOS (Intel): 0x404530
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x21e8f8
      * @note[short] Android
      */
-    void resetCollisionLog(bool p0);
+    void resetCollisionLog(bool full);
 
     /**
+     * @note[short] MacOS (ARM): 0x38372c
+     * @note[short] MacOS (Intel): 0x40d670
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn resetCollisionValues();
+    void resetCollisionValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x383208
-     * @note[short] MacOS (Intel): 0x405460
-     * @note[short] Windows: 0x385550
-     * @note[short] iOS: 0x22a544
+     * @note[short] MacOS (ARM): 0x38bd44
+     * @note[short] MacOS (Intel): 0x416b30
+     * @note[short] Windows: 0x39b2e0
+     * @note[short] iOS: 0x229c74
      * @note[short] Android
      */
     void resetPlayerIcon();
 
     /**
+     * @note[short] MacOS (ARM): 0x388100
+     * @note[short] MacOS (Intel): 0x4128c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x226f44
      * @note[short] Android
      */
-    TodoReturn resetStateVariables();
+    void resetStateVariables();
 
     /**
-     * @note[short] MacOS (ARM): 0x3723f4
-     * @note[short] MacOS (Intel): 0x3f16d0
-     * @note[short] Windows: 0x375870
-     * @note[short] iOS: 0x21e73c
+     * @note[short] MacOS (ARM): 0x37aed4
+     * @note[short] MacOS (Intel): 0x403300
+     * @note[short] Windows: 0x38b5e0
+     * @note[short] iOS: 0x21dce0
      * @note[short] Android
      */
     void resetStreak();
 
     /**
-     * @note[short] MacOS (ARM): 0x37f644
-     * @note[short] MacOS (Intel): 0x4010d0
-     * @note[short] Windows: 0x3824b0
-     * @note[short] iOS: 0x22798c
+     * @note[short] MacOS (ARM): 0x388164
+     * @note[short] MacOS (Intel): 0x412940
+     * @note[short] Windows: 0x3982e0
+     * @note[short] iOS: 0x226fa8
      * @note[short] Android
      */
-    void resetTouchedRings(bool p0);
+    void resetTouchedRings(bool removeAll);
 
     /**
-     * @note[short] Android
-     */
-    TodoReturn reverseMod();
-
-    /**
-     * @note[short] MacOS (ARM): 0x382044
-     * @note[short] MacOS (Intel): 0x4041e0
-     * @note[short] Windows: 0x382600
-     * @note[short] iOS: 0x2297ac
-     * @note[short] Android
-     */
-    void reversePlayer(EffectGameObject* p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x380dec
-     * @note[short] MacOS (Intel): 0x402c50
-     * @note[short] Windows: 0x382dd0
-     * @note[short] iOS: 0x228ac0
-     * @note[short] Android
-     */
-    void ringJump(RingObject* p0, bool p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x37f1a8
-     * @note[short] MacOS (Intel): 0x400c30
-     * @note[short] Windows: 0x383fc0
-     * @note[short] iOS: 0x227648
-     * @note[short] Android
-     */
-    void rotateGameplay(int p0, int p1, bool p2, float p3, float p4, bool p5, bool p6);
-
-    /**
-     * @note[short] Windows: 0x37b5c0
-     * @note[short] Android
-     */
-    TodoReturn rotateGameplayObject(GameObject* p0);
-
-    /**
+     * @note[short] MacOS (ARM): 0x37bea8
+     * @note[short] MacOS (Intel): 0x4043f0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void rotateGameplayOnly(bool param);
+    int reverseMod();
 
     /**
+     * @note[short] MacOS (ARM): 0x38ab44
+     * @note[short] MacOS (Intel): 0x415860
+     * @note[short] Windows: 0x398430
+     * @note[short] iOS: 0x228e7c
      * @note[short] Android
      */
-    TodoReturn rotatePreSlopeObjects();
+    void reversePlayer(EffectGameObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x3732c0
-     * @note[short] MacOS (Intel): 0x3f26a0
-     * @note[short] Windows: 0x3775c0
-     * @note[short] iOS: 0x21f098
+     * @note[short] MacOS (ARM): 0x38991c
+     * @note[short] MacOS (Intel): 0x4143a0
+     * @note[short] Windows: 0x398c00
+     * @note[short] iOS: 0x228110
      * @note[short] Android
      */
-    void runBallRotation(float p0);
+    void ringJump(RingObject* object, bool skipCheck);
 
     /**
-     * @note[short] Windows: 0x3776f0
+     * @note[short] MacOS (ARM): 0x387c94
+     * @note[short] MacOS (Intel): 0x4124b0
+     * @note[short] Windows: 0x399d50
+     * @note[short] iOS: 0x226c2c
+     * @note[short] Android
+     */
+    void rotateGameplay(int moveDirection, int groundDirection, bool editVelocity, float velocityModX, float velocityModY, bool overrideVelocity, bool dontSlide);
+
+    /**
+     * @note[short] MacOS (ARM): 0x37e158
+     * @note[short] MacOS (Intel): 0x406c20
+     * @note[short] Windows: 0x3913f0
+     * @note[short] iOS: 0x220560
+     * @note[short] Android
+     */
+    void rotateGameplayObject(GameObject* object);
+
+    /**
+     * @note[short] MacOS (ARM): 0x38b230
+     * @note[short] MacOS (Intel): 0x415fb0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x229548
+     * @note[short] Android
+     */
+    void rotateGameplayOnly(bool sideways);
+
+    /**
+     * @note[short] MacOS (ARM): 0x37e3ac
+     * @note[short] MacOS (Intel): 0x406f10
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    void rotatePreSlopeObjects();
+
+    /**
+     * @note[short] MacOS (ARM): 0x37bd90
+     * @note[short] MacOS (Intel): 0x4042d0
+     * @note[short] Windows: 0x38d350
+     * @note[short] iOS: 0x21e6f4
+     * @note[short] Android
+     */
+    void runBallRotation(float speed);
+
+    /**
+     * @note[short] MacOS (ARM): 0x37bebc
+     * @note[short] MacOS (Intel): 0x404410
+     * @note[short] Windows: 0x38d480
+     * @note[short] iOS: 0x21e7f4
      * @note[short] Android
      */
     void runBallRotation2();
 
     /**
-     * @note[short] MacOS (ARM): 0x3731e8
-     * @note[short] MacOS (Intel): 0x3f25b0
+     * @note[short] MacOS (ARM): 0x37bcb4
+     * @note[short] MacOS (Intel): 0x4041c0
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
@@ -1011,691 +1224,828 @@ public:
     void runNormalRotation();
 
     /**
-     * @note[short] MacOS (ARM): 0x36f618
-     * @note[short] MacOS (Intel): 0x3ee220
-     * @note[short] Windows: 0x377490
-     * @note[short] iOS: 0x21c204
+     * @note[short] MacOS (ARM): 0x377f68
+     * @note[short] MacOS (Intel): 0x3ffeb0
+     * @note[short] Windows: 0x38d220
+     * @note[short] iOS: 0x21b6a0
      * @note[short] Android
      */
-    void runNormalRotation(bool p0, float p1);
+    void runNormalRotation(bool notNormalMode, float speed);
 
     /**
-     * @note[short] MacOS (ARM): 0x371934
-     * @note[short] MacOS (Intel): 0x3f0b00
+     * @note[short] MacOS (ARM): 0x37a398
+     * @note[short] MacOS (Intel): 0x402710
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x21df28
+     * @note[short] iOS: 0x21d45c
      * @note[short] Android
      */
-    void runRotateAction(bool p0, int p1);
+    void runRotateAction(bool ground, int type);
 
     /**
-     * @note[short] MacOS (ARM): 0x387f00
-     * @note[short] MacOS (Intel): 0x40a6b0
-     * @note[short] Windows: 0x38b980
+     * @note[short] MacOS (ARM): 0x390ad0
+     * @note[short] MacOS (Intel): 0x41bd30
+     * @note[short] Windows: 0x3a1710
+     * @note[short] iOS: 0x22d83c
      * @note[short] Android
      */
-    void saveToCheckpoint(PlayerCheckpoint* p0);
+    void saveToCheckpoint(PlayerCheckpoint* checkpoint);
 
     /**
-     * @note[short] MacOS (ARM): 0x36dd8c
-     * @note[short] MacOS (Intel): 0x3ec3a0
-     * @note[short] Windows: 0x387610
-     * @note[short] iOS: 0x21af40
+     * @note[short] MacOS (ARM): 0x376680
+     * @note[short] MacOS (Intel): 0x3fe080
+     * @note[short] Windows: 0x39d3a0
+     * @note[short] iOS: 0x21a40c
      * @note[short] Android
      */
-    void setSecondColor(cocos2d::ccColor3B const& p0);
+    void setSecondColor(cocos2d::ccColor3B const& color);
 
     /**
-     * @note[short] MacOS (ARM): 0x36c84c
-     * @note[short] MacOS (Intel): 0x3eab20
-     * @note[short] Windows: 0x372a50
-     * @note[short] iOS: 0x219cd4
+     * @note[short] MacOS (ARM): 0x375058
+     * @note[short] MacOS (Intel): 0x3fc810
+     * @note[short] Windows: 0x3887c0
+     * @note[short] iOS: 0x2190ac
      * @note[short] Android
      */
     void setupStreak();
 
     /**
-     * @note[short] MacOS (ARM): 0x36c5dc
-     * @note[short] MacOS (Intel): 0x3ea920
-     * @note[short] Windows: 0x372fa0
-     * @note[short] iOS: 0x219b38
+     * @note[short] MacOS (ARM): 0x374ddc
+     * @note[short] MacOS (Intel): 0x3fc630
+     * @note[short] Windows: 0x388d10
+     * @note[short] iOS: 0x218f30
      * @note[short] Android
      */
-    void setYVelocity(double velocity, int p1);
+    void setYVelocity(double velocity, int type);
 
     /**
+     * @note[short] MacOS (ARM): 0x388b68
+     * @note[short] MacOS (Intel): 0x413510
+     * @note[short] Windows: 0x3975b0
+     * @note[short] iOS: 0x227718
      * @note[short] Android
      */
-    TodoReturn spawnCircle();
+    void spawnCircle();
 
     /**
+     * @note[short] MacOS (ARM): 0x388c4c
+     * @note[short] MacOS (Intel): 0x413600
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn spawnCircle2();
+    void spawnCircle2();
 
     /**
+     * @note[short] MacOS (ARM): 0x388f50
+     * @note[short] MacOS (Intel): 0x413920
+     * @note[short] Windows: 0x397b70
+     * @note[short] iOS: 0x227a48
      * @note[short] Android
      */
-    TodoReturn spawnDualCircle();
+    void spawnDualCircle();
 
     /**
+     * @note[short] MacOS (ARM): 0x3904fc
+     * @note[short] MacOS (Intel): 0x41b760
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x22d3d4
      * @note[short] Android
      */
-    TodoReturn spawnFromPlayer(PlayerObject* p0, bool p1);
+    void spawnFromPlayer(PlayerObject* player, bool flip);
 
     /**
-     * @note[short] Windows: 0x381930
+     * @note[short] MacOS (ARM): 0x388cf0
+     * @note[short] MacOS (Intel): 0x4136a0
+     * @note[short] Windows: 0x397760
+     * @note[short] iOS: 0x2277f8
      * @note[short] Android
      */
-    void spawnPortalCircle(cocos2d::ccColor3B p0, float p1);
+    void spawnPortalCircle(cocos2d::ccColor3B color, float startRadius);
 
     /**
-     * @note[short] MacOS (ARM): 0x3802e0
-     * @note[short] MacOS (Intel): 0x401fe0
+     * @note[short] MacOS (ARM): 0x388e10
+     * @note[short] MacOS (Intel): 0x4137d0
+     * @note[short] Windows: 0x397970
+     * @note[short] iOS: 0x227914
      * @note[short] Android
      */
     void spawnScaleCircle();
 
     /**
+     * @note[short] MacOS (ARM): 0x3902cc
+     * @note[short] MacOS (Intel): 0x41b490
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn specialGroundHit();
+    void specialGroundHit();
 
     /**
+     * @note[short] MacOS (ARM): 0x391c0c
+     * @note[short] MacOS (Intel): 0x41d630
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn speedDown();
+    void speedDown();
 
     /**
+     * @note[short] MacOS (ARM): 0x391bec
+     * @note[short] MacOS (Intel): 0x41d610
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn speedUp();
+    void speedUp();
 
     /**
-     * @note[short] MacOS (ARM): 0x3727c8
-     * @note[short] MacOS (Intel): 0x3f1ae0
-     * @note[short] Windows: 0x37e510
-     * @note[short] iOS: 0x21ea64
+     * @note[short] MacOS (ARM): 0x37b2c0
+     * @note[short] MacOS (Intel): 0x403720
+     * @note[short] Windows: 0x394340
+     * @note[short] iOS: 0x21e058
      * @note[short] Android
      */
-    void spiderTestJump(bool p0);
+    void spiderTestJump(bool dynamic);
 
     /**
-     * @note[short] MacOS (ARM): 0x37ad3c
-     * @note[short] MacOS (Intel): 0x3fbe50
-     * @note[short] Windows: 0x37e5c0
-     * @note[short] iOS: 0x225474
+     * @note[short] MacOS (ARM): 0x38373c
+     * @note[short] MacOS (Intel): 0x40d690
+     * @note[short] Windows: 0x3943f0
+     * @note[short] iOS: 0x224a9c
      * @note[short] Android
      */
-    void spiderTestJumpInternal(bool p0);
+    void spiderTestJumpInternal(bool dynamic);
 
     /**
+     * @note[short] MacOS (ARM): 0x384b64
+     * @note[short] MacOS (Intel): 0x40ed60
      * @note[short] Android
      */
-    void spiderTestJumpX(bool p0);
+    void spiderTestJumpX(bool dynamic);
 
     /**
+     * @note[short] MacOS (ARM): 0x38587c
+     * @note[short] MacOS (Intel): 0x40fc20
      * @note[short] Android
      */
-    void spiderTestJumpY(bool p0);
+    void spiderTestJumpY(bool dynamic);
 
     /**
-     * @note[short] MacOS (ARM): 0x37e290
-     * @note[short] MacOS (Intel): 0x3ffa00
-     * @note[short] Windows: 0x37fae0
-     * @note[short] iOS: 0x226cc0
+     * @note[short] MacOS (ARM): 0x386de8
+     * @note[short] MacOS (Intel): 0x411380
+     * @note[short] Windows: 0x395910
+     * @note[short] iOS: 0x2262e8
      * @note[short] Android
      */
-    void startDashing(DashRingObject* p0);
+    void startDashing(DashRingObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0x38d598
+     * @note[short] MacOS (Intel): 0x4184f0
+     * @note[short] Windows: 0x39b4e0
+     * @note[short] iOS: 0x22addc
      * @note[short] Android
      */
-    TodoReturn stopBurstEffect();
+    void stopBurstEffect();
 
     /**
-     * @note[short] MacOS (ARM): 0x370c60
-     * @note[short] MacOS (Intel): 0x3efe00
-     * @note[short] Windows: 0x380820
-     * @note[short] iOS: 0x21d57c
+     * @note[short] MacOS (ARM): 0x3796d0
+     * @note[short] MacOS (Intel): 0x401a50
+     * @note[short] Windows: 0x396650
+     * @note[short] iOS: 0x21ca7c
      * @note[short] Android
      */
     void stopDashing();
 
     /**
-     * @note[short] Windows: 0x375af0
-     * @note[short] iOS: 0x21ea18
+     * @note[short] MacOS (ARM): 0x37b270
+     * @note[short] MacOS (Intel): 0x4036c0
+     * @note[short] Windows: 0x38b860
+     * @note[short] iOS: 0x21e008
      * @note[short] Android
      */
     void stopParticles();
 
     /**
-     * @note[short] MacOS (ARM): 0x37314c
-     * @note[short] MacOS (Intel): 0x3f2500
-     * @note[short] Windows: 0x3772d0
-     * @note[short] iOS: 0x21effc
+     * @note[short] MacOS (ARM): 0x37bc1c
+     * @note[short] MacOS (Intel): 0x404110
+     * @note[short] Windows: 0x38d060
+     * @note[short] iOS: 0x21e65c
      * @note[short] Android
      */
     void stopPlatformerJumpAnimation();
 
     /**
-     * @note[short] MacOS (ARM): 0x3731d8
-     * @note[short] MacOS (Intel): 0x3f2590
+     * @note[short] MacOS (ARM): 0x37bca4
+     * @note[short] MacOS (Intel): 0x4041a0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x21f088
+     * @note[short] iOS: 0x21e6e4
      * @note[short] Android
      */
-    void stopRotation(bool p0, int p1);
+    void stopRotation(bool ground, int type);
 
     /**
-     * @note[short] MacOS (ARM): 0x387654
-     * @note[short] MacOS (Intel): 0x409d20
-     * @note[short] iOS: 0x22d978
+     * @note[short] MacOS (ARM): 0x390204
+     * @note[short] MacOS (Intel): 0x41b3c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x22d19c
      * @note[short] Android
      */
     void stopStreak2();
 
     /**
-     * @note[short] Android
-     */
-    void storeCollision(PlayerCollisionDirection p0, int p1);
-
-    /**
-     * @note[short] Windows: 0x382000
-     * @note[short] Android
-     */
-    bool switchedDirTo(PlayerButton p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x37f824
-     * @note[short] MacOS (Intel): 0x401440
-     * @note[short] Windows: 0x3860a0
-     * @note[short] iOS: 0x227a78
-     * @note[short] Android
-     */
-    void switchedToMode(GameObjectType p0);
-
-    /**
-     * @note[short] Android
-     */
-    TodoReturn testForMoving(float p0, GameObject* p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x383410
-     * @note[short] MacOS (Intel): 0x405680
-     * @note[short] Windows: 0x384a90
-     * @note[short] iOS: 0x22a6e8
-     * @note[short] Android
-     */
-    void toggleBirdMode(bool p0, bool p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x384438
-     * @note[short] MacOS (Intel): 0x406780
-     * @note[short] Windows: 0x385200
-     * @note[short] iOS: 0x22b254
-     * @note[short] Android
-     */
-    void toggleDartMode(bool p0, bool p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x3829b4
-     * @note[short] MacOS (Intel): 0x404b70
-     * @note[short] Windows: 0x384760
-     * @note[short] iOS: 0x229f4c
-     * @note[short] Android
-     */
-    void toggleFlyMode(bool p0, bool p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x37fd54
-     * @note[short] MacOS (Intel): 0x401a30
-     * @note[short] Windows: 0x3890a0
-     * @note[short] iOS: 0x227ec0
-     * @note[short] Android
-     */
-    void toggleGhostEffect(GhostType p0);
-
-    /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x37c04c
+     * @note[short] MacOS (Intel): 0x4045a0
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] Android
+     */
+    void storeCollision(PlayerCollisionDirection direction, int id);
+
+    /**
+     * @note[short] MacOS (ARM): 0x389378
+     * @note[short] MacOS (Intel): 0x413d80
+     * @note[short] Windows: 0x397e30
+     * @note[short] iOS: 0x227d78
+     * @note[short] Android
+     */
+    bool switchedDirTo(PlayerButton button);
+
+    /**
+     * @note[short] MacOS (ARM): 0x388338
+     * @note[short] MacOS (Intel): 0x412c30
+     * @note[short] Windows: 0x39be30
+     * @note[short] iOS: 0x227088
+     * @note[short] Android
+     */
+    void switchedToMode(GameObjectType type);
+
+    /**
+     * @note[short] MacOS (ARM): 0x37dde4
+     * @note[short] MacOS (Intel): 0x4068f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2202f4
+     * @note[short] Android
+     */
+    bool testForMoving(float dt, GameObject* object);
+
+    /**
+     * @note[short] MacOS (ARM): 0x38bf50
+     * @note[short] MacOS (Intel): 0x416d50
+     * @note[short] Windows: 0x39a820
+     * @note[short] iOS: 0x229e18
+     * @note[short] Android
+     */
+    void toggleBirdMode(bool enable, bool noEffects);
+
+    /**
+     * @note[short] MacOS (ARM): 0x38cf84
+     * @note[short] MacOS (Intel): 0x417e60
+     * @note[short] Windows: 0x39af90
+     * @note[short] iOS: 0x22a994
+     * @note[short] Android
+     */
+    void toggleDartMode(bool enable, bool noEffects);
+
+    /**
+     * @note[short] MacOS (ARM): 0x38b4d8
+     * @note[short] MacOS (Intel): 0x416250
+     * @note[short] Windows: 0x39a4f0
+     * @note[short] iOS: 0x229678
+     * @note[short] Android
+     */
+    void toggleFlyMode(bool enable, bool noEffects);
+
+    /**
+     * @note[short] MacOS (ARM): 0x388894
+     * @note[short] MacOS (Intel): 0x413220
+     * @note[short] Windows: 0x39ee30
+     * @note[short] iOS: 0x2274f4
+     * @note[short] Android
+     */
+    void toggleGhostEffect(GhostType type);
+
+    /**
+     * @note[short] MacOS (ARM): 0x3753f4
+     * @note[short] MacOS (Intel): 0x3fcbb0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x21942c
+     * @note[short] Android
      */
     void togglePlatformerMode(bool val);
 
     /**
-     * @note[short] MacOS (ARM): 0x37f99c
-     * @note[short] MacOS (Intel): 0x401590
-     * @note[short] Windows: 0x38a970
-     * @note[short] iOS: 0x227b9c
+     * @note[short] MacOS (ARM): 0x3884b0
+     * @note[short] MacOS (Intel): 0x412d80
+     * @note[short] Windows: 0x3a0700
+     * @note[short] iOS: 0x2271ac
      * @note[short] Android
      */
-    void togglePlayerScale(bool p0, bool p1);
+    void togglePlayerScale(bool enable, bool noEffects);
 
     /**
-     * @note[short] MacOS (ARM): 0x384e24
-     * @note[short] MacOS (Intel): 0x407240
-     * @note[short] Windows: 0x385960
-     * @note[short] iOS: 0x22b984
+     * @note[short] MacOS (ARM): 0x38d95c
+     * @note[short] MacOS (Intel): 0x4188e0
+     * @note[short] Windows: 0x39b6f0
+     * @note[short] iOS: 0x22b0d0
      * @note[short] Android
      */
-    void toggleRobotMode(bool p0, bool p1);
+    void toggleRobotMode(bool enable, bool noEffects);
 
     /**
-     * @note[short] MacOS (ARM): 0x384a4c
-     * @note[short] MacOS (Intel): 0x406e60
-     * @note[short] Windows: 0x3857e0
-     * @note[short] iOS: 0x22b698
+     * @note[short] MacOS (ARM): 0x38d5a0
+     * @note[short] MacOS (Intel): 0x418510
+     * @note[short] Windows: 0x39b570
+     * @note[short] iOS: 0x22ade4
      * @note[short] Android
      */
-    void toggleRollMode(bool p0, bool p1);
+    void toggleRollMode(bool enable, bool noEffects);
 
     /**
-     * @note[short] MacOS (ARM): 0x38525c
-     * @note[short] MacOS (Intel): 0x4076c0
-     * @note[short] Windows: 0x385ce0
-     * @note[short] iOS: 0x22bc7c
+     * @note[short] MacOS (ARM): 0x38dd8c
+     * @note[short] MacOS (Intel): 0x418d50
+     * @note[short] Windows: 0x39ba70
+     * @note[short] iOS: 0x22b3cc
      * @note[short] Android
      */
-    void toggleSpiderMode(bool p0, bool p1);
+    void toggleSpiderMode(bool enable, bool noEffects);
 
     /**
-     * @note[short] MacOS (ARM): 0x383a5c
-     * @note[short] MacOS (Intel): 0x405d60
-     * @note[short] Windows: 0x384d90
-     * @note[short] iOS: 0x22ab80
+     * @note[short] MacOS (ARM): 0x38c5b4
+     * @note[short] MacOS (Intel): 0x417450
+     * @note[short] Windows: 0x39ab20
+     * @note[short] iOS: 0x22a2b8
      * @note[short] Android
      */
-    void toggleSwingMode(bool p0, bool p1);
+    void toggleSwingMode(bool enable, bool noEffects);
 
     /**
-     * @note[short] MacOS (ARM): 0x37219c
-     * @note[short] MacOS (Intel): 0x3f1460
-     * @note[short] Windows: 0x3756d0
-     * @note[short] iOS: 0x21e598
+     * @note[short] MacOS (ARM): 0x37ac64
+     * @note[short] MacOS (Intel): 0x403080
+     * @note[short] Windows: 0x38b440
+     * @note[short] iOS: 0x21db2c
      * @note[short] Android
      */
-    void toggleVisibility(bool p0);
+    void toggleVisibility(bool visible);
 
     /**
-     * @note[short] MacOS (ARM): 0x388410
-     * @note[short] MacOS (Intel): 0x40ad70
-     * @note[short] iOS: 0x22e4ec
+     * @note[short] MacOS (ARM): 0x391880
+     * @note[short] MacOS (Intel): 0x41d220
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x22e588
      * @note[short] Android
      */
-    void touchedObject(GameObject* p0);
+    void touchedObject(GameObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x371f50
-     * @note[short] MacOS (Intel): 0x3f1170
-     * @note[short] Windows: 0x38c480
-     * @note[short] iOS: 0x21e35c
+     * @note[short] MacOS (ARM): 0x37a9c0
+     * @note[short] MacOS (Intel): 0x402d90
+     * @note[short] Windows: 0x3a32d0
+     * @note[short] iOS: 0x21d89c
      * @note[short] Android
      */
     void tryPlaceCheckpoint();
 
     /**
-     * @note[short] Windows: 0x37b8b0
+     * @note[short] MacOS (ARM): 0x381774
+     * @note[short] MacOS (Intel): 0x40b370
+     * @note[short] Windows: 0x3916e0
+     * @note[short] iOS: 0x223134
      * @note[short] Android
      */
-    void unrotateGameplayObject(GameObject* p0);
+    void unrotateGameplayObject(GameObject* object);
 
     /**
-     * @note[short] Android
-     */
-    TodoReturn unrotatePreSlopeObjects();
-
-    /**
-     * @note[short] MacOS (ARM): 0x36cbb8
-     * @note[short] MacOS (Intel): 0x3eaeb0
+     * @note[short] MacOS (ARM): 0x381978
+     * @note[short] MacOS (Intel): 0x40b610
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x21a034
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void updateCheckpointMode(bool p0);
+    void unrotatePreSlopeObjects();
 
     /**
-     * @note[short] MacOS (ARM): 0x371e70
-     * @note[short] MacOS (Intel): 0x3f10a0
-     * @note[short] iOS: 0x21e288
+     * @note[short] MacOS (ARM): 0x3753ec
+     * @note[short] MacOS (Intel): 0x3fcba0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x219424
+     * @note[short] Android
+     */
+    void updateCheckpointMode(bool enable);
+
+    /**
+     * @note[short] MacOS (ARM): 0x37a8d4
+     * @note[short] MacOS (Intel): 0x402cc0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x21d7bc
      * @note[short] Android
      */
     void updateCheckpointTest();
 
     /**
-     * @note[short] MacOS (ARM): 0x379b88
-     * @note[short] MacOS (Intel): 0x3faae0
-     * @note[short] Windows: 0x37e1c0
-     * @note[short] iOS: 0x224768
+     * @note[short] MacOS (ARM): 0x382520
+     * @note[short] MacOS (Intel): 0x40c300
+     * @note[short] Windows: 0x393ff0
+     * @note[short] iOS: 0x223d3c
      * @note[short] Android
      */
-    void updateCollide(PlayerCollisionDirection p0, GameObject* p1);
+    void updateCollide(PlayerCollisionDirection direction, GameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0x3833fc
+     * @note[short] MacOS (Intel): 0x40d2c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x22486c
      * @note[short] Android
      */
-    void updateCollideBottom(float p0, GameObject* p1);
+    void updateCollideBottom(float y, GameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0x3835ec
+     * @note[short] MacOS (Intel): 0x40d500
+     * @note[short] Windows: 0x394200
+     * @note[short] iOS: 0x2249ac
      * @note[short] Android
      */
-    void updateCollideLeft(float p0, GameObject* p1);
+    void updateCollideLeft(float x, GameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0x383560
+     * @note[short] MacOS (Intel): 0x40d460
+     * @note[short] Windows: 0x3942a0
+     * @note[short] iOS: 0x224930
      * @note[short] Android
      */
-    void updateCollideRight(float p0, GameObject* p1);
+    void updateCollideRight(float x, GameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0x383370
+     * @note[short] MacOS (Intel): 0x40d230
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2247f8
      * @note[short] Android
      */
-    void updateCollideTop(float p0, GameObject* p1);
+    void updateCollideTop(float y, GameObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x370a18
-     * @note[short] MacOS (Intel): 0x3efb90
-     * @note[short] Windows: 0x380ef0
+     * @note[short] MacOS (ARM): 0x379488
+     * @note[short] MacOS (Intel): 0x4017e0
+     * @note[short] Windows: 0x396d20
+     * @note[short] iOS: 0x21c858
      * @note[short] Android
      */
     void updateDashAnimation();
 
     /**
-     * @note[short] MacOS (ARM): 0x37dbd0
-     * @note[short] MacOS (Intel): 0x3ff300
-     * @note[short] Windows: 0x380390
-     * @note[short] iOS: 0x2266ac
+     * @note[short] MacOS (ARM): 0x386724
+     * @note[short] MacOS (Intel): 0x410c80
+     * @note[short] Windows: 0x3961c0
+     * @note[short] iOS: 0x225cbc
      * @note[short] Android
      */
     void updateDashArt();
 
     /**
-     * @note[short] MacOS (ARM): 0x371df0
-     * @note[short] MacOS (Intel): 0x3f0ff0
+     * @note[short] MacOS (ARM): 0x37a854
+     * @note[short] MacOS (Intel): 0x402c10
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x21e210
+     * @note[short] iOS: 0x21d744
      * @note[short] Android
      */
     void updateEffects(float param);
 
     /**
-     * @note[short] MacOS (ARM): 0x386264
-     * @note[short] MacOS (Intel): 0x4088a0
-     * @note[short] Windows: 0x3876a0
-     * @note[short] iOS: 0x22ca94
+     * @note[short] MacOS (ARM): 0x38edf0
+     * @note[short] MacOS (Intel): 0x419f40
+     * @note[short] Windows: 0x39d430
+     * @note[short] iOS: 0x22c234
      * @note[short] Android
      */
     void updateGlowColor();
 
     /**
-     * @note[short] MacOS (ARM): 0x388d0c
-     * @note[short] MacOS (Intel): 0x40b720
-     * @note[short] Windows: 0x38d0c0
-     * @note[short] iOS: 0x22ea40
+     * @note[short] MacOS (ARM): 0x392150
+     * @note[short] MacOS (Intel): 0x41dbc0
+     * @note[short] Windows: 0x3a3f10
+     * @note[short] iOS: 0x22eae0
      * @note[short] Android
      */
-    void updateInternalActions(float p0);
+    void updateInternalActions(float dt);
 
     /**
-     * @note[short] MacOS (ARM): 0x36ddf4
-     * @note[short] MacOS (Intel): 0x3ec410
-     * @note[short] Windows: 0x375b90
-     * @note[short] iOS: 0x21afa8
+     * @note[short] MacOS (ARM): 0x3766e8
+     * @note[short] MacOS (Intel): 0x3fe0f0
+     * @note[short] Windows: 0x38b900
+     * @note[short] iOS: 0x21a474
      * @note[short] Android
      */
-    void updateJump(float p0);
+    void updateJump(float dt);
 
     /**
+     * @note[short] MacOS (ARM): 0x379634
+     * @note[short] MacOS (Intel): 0x4019a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn updateJumpVariables();
+    void updateJumpVariables();
 
     /**
+     * @note[short] MacOS (ARM): 0x383488
+     * @note[short] MacOS (Intel): 0x40d350
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn updateLastGroundObject(GameObject* p0);
+    void updateLastGroundObject(GameObject* object);
 
     /**
-     * @note[short] Windows: 0x374350
+     * @note[short] MacOS (ARM): 0x378054
+     * @note[short] MacOS (Intel): 0x3fffc0
+     * @note[short] Windows: 0x38a0c0
+     * @note[short] iOS: 0x21b780
      * @note[short] Android
      */
-    void updateMove(float p0);
+    void updateMove(float dt);
 
     /**
-     * @note[short] MacOS (ARM): 0x3823c4
-     * @note[short] MacOS (Intel): 0x404530
-     * @note[short] Windows: 0x382a30
-     * @note[short] iOS: 0x229afc
+     * @note[short] MacOS (ARM): 0x38aeb8
+     * @note[short] MacOS (Intel): 0x415bb0
+     * @note[short] Windows: 0x398860
+     * @note[short] iOS: 0x2291d0
      * @note[short] Android
      */
     void updatePlayerArt();
 
     /**
-     * @note[short] MacOS (ARM): 0x3837cc
-     * @note[short] MacOS (Intel): 0x405aa0
-     * @note[short] Windows: 0x388550
-     * @note[short] iOS: 0x22a960
+     * @note[short] MacOS (ARM): 0x38c330
+     * @note[short] MacOS (Intel): 0x4171a0
+     * @note[short] Windows: 0x39e2e0
+     * @note[short] iOS: 0x22a098
      * @note[short] Android
      */
-    void updatePlayerBirdFrame(int p0);
+    void updatePlayerBirdFrame(int frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x384808
-     * @note[short] MacOS (Intel): 0x406bf0
-     * @note[short] Windows: 0x388c50
-     * @note[short] iOS: 0x22b4dc
+     * @note[short] MacOS (ARM): 0x38d368
+     * @note[short] MacOS (Intel): 0x4182b0
+     * @note[short] Windows: 0x39e9e0
+     * @note[short] iOS: 0x22ac28
      * @note[short] Android
      */
-    void updatePlayerDartFrame(int p0);
+    void updatePlayerDartFrame(int frame);
 
     /**
+     * @note[short] MacOS (ARM): 0x3877f8
+     * @note[short] MacOS (Intel): 0x411e90
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void updatePlayerForce(cocos2d::CCPoint p0, bool p1);
+    void updatePlayerForce(cocos2d::CCPoint velocity, bool additive);
 
     /**
-     * @note[short] MacOS (ARM): 0x38412c
-     * @note[short] MacOS (Intel): 0x406480
-     * @note[short] Windows: 0x387ec0
-     * @note[short] iOS: 0x22afe0
+     * @note[short] MacOS (ARM): 0x38cc84
+     * @note[short] MacOS (Intel): 0x417b60
+     * @note[short] Windows: 0x39dc50
+     * @note[short] iOS: 0x22a720
      * @note[short] Android
      */
-    void updatePlayerFrame(int p0);
+    void updatePlayerFrame(int frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x382204
-     * @note[short] MacOS (Intel): 0x4043a0
-     * @note[short] Windows: 0x38a510
-     * @note[short] iOS: 0x22995c
+     * @note[short] MacOS (ARM): 0x38acf8
+     * @note[short] MacOS (Intel): 0x415a20
+     * @note[short] Windows: 0x3a02a0
+     * @note[short] iOS: 0x229030
      * @note[short] Android
      */
     void updatePlayerGlow();
 
     /**
-     * @note[short] MacOS (ARM): 0x382fcc
-     * @note[short] MacOS (Intel): 0x405210
-     * @note[short] Windows: 0x388320
-     * @note[short] iOS: 0x22a390
+     * @note[short] MacOS (ARM): 0x38bb14
+     * @note[short] MacOS (Intel): 0x4168f0
+     * @note[short] Windows: 0x39e0b0
+     * @note[short] iOS: 0x229ac0
      * @note[short] Android
      */
-    void updatePlayerJetpackFrame(int p0);
+    void updatePlayerJetpackFrame(int frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x386940
-     * @note[short] MacOS (Intel): 0x408f60
+     * @note[short] MacOS (ARM): 0x38f4c0
+     * @note[short] MacOS (Intel): 0x41a600
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x22d044
+     * @note[short] iOS: 0x22c7e8
      * @note[short] Android
      */
-    void updatePlayerRobotFrame(int id);
+    void updatePlayerRobotFrame(int frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x384bec
-     * @note[short] MacOS (Intel): 0x406ff0
-     * @note[short] Windows: 0x3887f0
-     * @note[short] iOS: 0x22b7d4
+     * @note[short] MacOS (ARM): 0x38d730
+     * @note[short] MacOS (Intel): 0x4186a0
+     * @note[short] Windows: 0x39e580
+     * @note[short] iOS: 0x22af20
      * @note[short] Android
      */
-    void updatePlayerRollFrame(int p0);
+    void updatePlayerRollFrame(int frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x3827c8
-     * @note[short] MacOS (Intel): 0x4049a0
-     * @note[short] Windows: 0x38a490
-     * @note[short] iOS: 0x2fe6a8
+     * @note[short] MacOS (ARM): 0x38b2e4
+     * @note[short] MacOS (Intel): 0x416080
+     * @note[short] Windows: 0x3a0220
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void updatePlayerScale();
 
     /**
-     * @note[short] MacOS (ARM): 0x382d90
-     * @note[short] MacOS (Intel): 0x404fc0
-     * @note[short] Windows: 0x3880f0
-     * @note[short] iOS: 0x22a1dc
+     * @note[short] MacOS (ARM): 0x38b8e4
+     * @note[short] MacOS (Intel): 0x4166a0
+     * @note[short] Windows: 0x39de80
+     * @note[short] iOS: 0x22990c
      * @note[short] Android
      */
-    void updatePlayerShipFrame(int p0);
+    void updatePlayerShipFrame(int frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x386958
-     * @note[short] MacOS (Intel): 0x408f80
+     * @note[short] MacOS (ARM): 0x38f4d8
+     * @note[short] MacOS (Intel): 0x41a620
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x22d05c
+     * @note[short] iOS: 0x22c800
      * @note[short] Android
      */
-    void updatePlayerSpiderFrame(int id);
+    void updatePlayerSpiderFrame(int frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x36be6c
-     * @note[short] MacOS (Intel): 0x3ea100
-     * @note[short] Windows: 0x388e80
-     * @note[short] iOS: 0x21945c
+     * @note[short] MacOS (ARM): 0x37466c
+     * @note[short] MacOS (Intel): 0x3fbe10
+     * @note[short] Windows: 0x39ec10
+     * @note[short] iOS: 0x218854
      * @note[short] Android: Rebinded
      */
-    void updatePlayerSpriteExtra(gd::string p0);
+    void updatePlayerSpriteExtra(gd::string frameName);
 
     /**
-     * @note[short] MacOS (ARM): 0x383e58
-     * @note[short] MacOS (Intel): 0x4061a0
-     * @note[short] Windows: 0x388a20
-     * @note[short] iOS: 0x22ada0
+     * @note[short] MacOS (ARM): 0x38c9bc
+     * @note[short] MacOS (Intel): 0x417890
+     * @note[short] Windows: 0x39e7b0
+     * @note[short] iOS: 0x22a4e0
      * @note[short] Android
      */
-    void updatePlayerSwingFrame(int p0);
+    void updatePlayerSwingFrame(int frame);
 
     /**
-     * @note[short] Windows: 0x38b350
+     * @note[short] MacOS (ARM): 0x390710
+     * @note[short] MacOS (Intel): 0x41b960
+     * @note[short] Windows: 0x3a10e0
+     * @note[short] iOS: 0x22d518
      * @note[short] Android
      */
     void updateRobotAnimationSpeed();
 
     /**
-     * @note[short] MacOS (ARM): 0x371b20
-     * @note[short] MacOS (Intel): 0x3f0d20
-     * @note[short] Windows: 0x377370
+     * @note[short] MacOS (ARM): 0x382d40
+     * @note[short] MacOS (Intel): 0x40cbb0
+     * @note[short] Windows: 0x391020
+     * @note[short] iOS: 0x2242b0
      * @note[short] Android
      */
-    void updateRotation(float p0, float p1);
+    void updateRotation(float dt);
 
     /**
-     * @note[short] MacOS (ARM): 0x37a378
-     * @note[short] MacOS (Intel): 0x3fb360
-     * @note[short] Windows: 0x37b1f0
-     * @note[short] iOS: 0x224ca4
+     * @note[short] MacOS (ARM): 0x37a590
+     * @note[short] MacOS (Intel): 0x402940
+     * @note[short] Windows: 0x391260
+     * @note[short] iOS: 0x21d498
      * @note[short] Android
      */
-    void updateRotation(float p0);
+    void updateRotation(float dt, float rotation);
 
     /**
-     * @note[short] Windows: 0x37ae10
+     * @note[short] MacOS (ARM): 0x382970
+     * @note[short] MacOS (Intel): 0x40c7f0
+     * @note[short] Windows: 0x390c40
+     * @note[short] iOS: 0x223f40
      * @note[short] Android
      */
-    void updateShipRotation(float p0);
+    void updateShipRotation(float dt);
 
     /**
-     * @note[short] MacOS (ARM): 0x36bf50
-     * @note[short] MacOS (Intel): 0x3ea1d0
-     * @note[short] Windows: 0x388f90
-     * @note[short] iOS: 0x219528
+     * @note[short] MacOS (ARM): 0x374750
+     * @note[short] MacOS (Intel): 0x3fbee0
+     * @note[short] Windows: 0x39ed20
+     * @note[short] iOS: 0x218920
      * @note[short] Android: Rebinded
      */
-    void updateShipSpriteExtra(gd::string p0);
+    void updateShipSpriteExtra(gd::string frameName);
 
     /**
+     * @note[short] MacOS (ARM): 0x3827f4
+     * @note[short] MacOS (Intel): 0x40c660
+     * @note[short] Windows: 0x390bc0
+     * @note[short] iOS: 0x223ebc
      * @note[short] Android
      */
-    void updateSlopeRotation(float p0);
+    void updateSlopeRotation(float dt);
 
     /**
+     * @note[short] MacOS (ARM): 0x38296c
+     * @note[short] MacOS (Intel): 0x40c7e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn updateSlopeYVelocity(float p0);
+    void updateSlopeYVelocity(float yVelocity);
 
     /**
-     * @note[short] MacOS (ARM): 0x371d78
-     * @note[short] MacOS (Intel): 0x3f0f70
-     * @note[short] iOS: 0x21e1a0
+     * @note[short] MacOS (ARM): 0x37a7dc
+     * @note[short] MacOS (Intel): 0x402b90
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x21d6d4
      * @note[short] Android
      */
-    void updateSpecial(float p0);
+    void updateSpecial(float dt);
 
     /**
+     * @note[short] MacOS (ARM): 0x379650
+     * @note[short] MacOS (Intel): 0x4019c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x21c9fc
      * @note[short] Android
      */
-    TodoReturn updateStateVariables();
+    void updateStateVariables();
 
     /**
+     * @note[short] MacOS (ARM): 0x38ff20
+     * @note[short] MacOS (Intel): 0x41b060
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x22ced4
      * @note[short] Android
      */
-    TodoReturn updateStaticForce(float p0, float p1, bool p2);
+    void updateStaticForce(float rotation, float staticForce, bool additive);
 
     /**
-     * @note[short] MacOS (ARM): 0x36ce30
-     * @note[short] MacOS (Intel): 0x3eb160
-     * @note[short] Windows: 0x372f30
-     * @note[short] iOS: 0x21a244
+     * @note[short] MacOS (ARM): 0x375668
+     * @note[short] MacOS (Intel): 0x3fce40
+     * @note[short] Windows: 0x388ca0
+     * @note[short] iOS: 0x21963c
      * @note[short] Android
      */
-    void updateStreakBlend(bool p0);
+    void updateStreakBlend(bool blend);
 
     /**
+     * @note[short] MacOS (ARM): 0x3756ec
+     * @note[short] MacOS (Intel): 0x3fceb0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn updateStreaks(float p0);
+    void updateStreaks(float dt);
 
     /**
-     * @note[short] MacOS (ARM): 0x382814
-     * @note[short] MacOS (Intel): 0x4049f0
-     * @note[short] Windows: 0x385040
-     * @note[short] iOS: 0x229e5c
+     * @note[short] MacOS (ARM): 0x38b330
+     * @note[short] MacOS (Intel): 0x4160d0
+     * @note[short] Windows: 0x39add0
+     * @note[short] iOS: 0x229584
      * @note[short] Android
      */
     void updateSwingFire();
 
     /**
-     * @note[short] MacOS (ARM): 0x36c61c
-     * @note[short] MacOS (Intel): 0x3ea990
-     * @note[short] Windows: 0x38afc0
-     * @note[short] iOS: 0x219b6c
+     * @note[short] MacOS (ARM): 0x374e1c
+     * @note[short] MacOS (Intel): 0x3fc690
+     * @note[short] Windows: 0x3a0d50
+     * @note[short] iOS: 0x218f64
      * @note[short] Android
      */
-    void updateTimeMod(float p0, bool p1);
+    void updateTimeMod(float speed, bool noEffects);
 
     /**
+     * @note[short] MacOS (ARM): 0x3906a0
+     * @note[short] MacOS (Intel): 0x41b920
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn usingWallLimitedMode();
+    bool usingWallLimitedMode();
 
     /**
+     * @note[short] MacOS (ARM): 0x391c4c
+     * @note[short] MacOS (Intel): 0x41d670
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn yStartDown();
+    void yStartDown();
 
     /**
+     * @note[short] MacOS (ARM): 0x391c2c
+     * @note[short] MacOS (Intel): 0x41d650
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn yStartUp();
+    void yStartUp();
     cocos2d::CCNode* m_mainLayer;
     bool m_wasTeleported;
     bool m_fixGravityBug;
@@ -1708,7 +2058,7 @@ public:
     DashRingObject* m_dashRing;
     double m_slopeStartTime;
     bool m_justPlacedStreak;
-    cocos2d::CCNode* m_maybeLastGroundObject;
+    GameObject* m_maybeLastGroundObject;
     cocos2d::CCDictionary* m_collisionLogTop;
     cocos2d::CCDictionary* m_collisionLogBottom;
     cocos2d::CCDictionary* m_collisionLogLeft;
@@ -1739,7 +2089,7 @@ public:
     cocos2d::CCSprite* m_dashFireSprite;
     bool m_isBallRotating;
     bool m_unk669;
-    GameObject* m_currentSlope3;
+    GameObject* m_currentPotentialSlope;
     GameObject* m_currentSlope;
     double unk_584;
     int m_collidingWithSlopeId;
@@ -1747,7 +2097,7 @@ public:
     cocos2d::CCArray* m_particleSystems;
     float m_slopeAngleRadians;
     gd::unordered_map<int, GJPointDouble> m_rotateObjectsRelated;
-    gd::unordered_map<int, GameObject*> m_maybeRotatedObjectsMap;
+    gd::unordered_map<int, GameObject*> m_potentialSlopeMap;
     float m_rotationSpeed;
     float m_rotateSpeed;
     bool m_isRotating;
@@ -1792,10 +2142,10 @@ public:
     double m_lastJumpTime;
     double m_lastFlipTime;
     double m_flashTime;
-    float m_flashRelated;
-    float m_flashRelated1;
-    cocos2d::ccColor3B m_colorRelated2;
-    cocos2d::ccColor3B m_flashRelated3;
+    float m_flashDuration;
+    float m_flashDelay;
+    cocos2d::ccColor3B m_flashMainColor;
+    cocos2d::ccColor3B m_flashSecondColor;
     double m_lastSpiderFlipTime;
     bool m_unkBool5;
     bool m_maybeIsVehicleGlowing;
@@ -1844,8 +2194,8 @@ public:
     double m_collidedRightMinX;
     bool m_fadeOutStreak;
     bool m_canPlaceCheckpoint;
-    cocos2d::ccColor3B m_colorRelated;
-    cocos2d::ccColor3B m_secondColorRelated;
+    cocos2d::ccColor3B m_originalMainColor;
+    cocos2d::ccColor3B m_originalSecondColor;
     bool m_hasCustomGlowColor;
     cocos2d::ccColor3B m_glowColor;
     bool m_maybeIsColliding;
@@ -1913,7 +2263,7 @@ public:
     bool m_unkA99;
     double m_totalTime;
     bool m_isBeingSpawnedByDualPortal;
-    float m_unkAAC;
+    float m_audioScale;
     float m_unkAngle1;
     float m_yVelocityRelated3;
     bool m_defaultMiniIcon;

@@ -15,11 +15,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_accountIDForIcon
-		#define GEODE_STATICS_accountIDForIcon
-		GEODE_AS_STATIC_FUNCTION(accountIDForIcon) 
-	#endif
-
 	#ifndef GEODE_STATICS_addSimpleSpecialChestReward
 		#define GEODE_STATICS_addSimpleSpecialChestReward
 		GEODE_AS_STATIC_FUNCTION(addSimpleSpecialChestReward) 
@@ -33,11 +28,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_addStoreItem
 		#define GEODE_STATICS_addStoreItem
 		GEODE_AS_STATIC_FUNCTION(addStoreItem) 
-	#endif
-
-	#ifndef GEODE_STATICS_areChallengesLoaded
-		#define GEODE_STATICS_areChallengesLoaded
-		GEODE_AS_STATIC_FUNCTION(areChallengesLoaded) 
 	#endif
 
 	#ifndef GEODE_STATICS_awardCurrencyForLevel
@@ -55,11 +45,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(awardSecretKey) 
 	#endif
 
-	#ifndef GEODE_STATICS_canItemBeUnlocked
-		#define GEODE_STATICS_canItemBeUnlocked
-		GEODE_AS_STATIC_FUNCTION(canItemBeUnlocked) 
-	#endif
-
 	#ifndef GEODE_STATICS_checkAchievement
 		#define GEODE_STATICS_checkAchievement
 		GEODE_AS_STATIC_FUNCTION(checkAchievement) 
@@ -70,29 +55,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(checkCoinAchievement) 
 	#endif
 
-	#ifndef GEODE_STATICS_checkCoinsForLevel
-		#define GEODE_STATICS_checkCoinsForLevel
-		GEODE_AS_STATIC_FUNCTION(checkCoinsForLevel) 
-	#endif
-
-	#ifndef GEODE_STATICS_claimListReward
-		#define GEODE_STATICS_claimListReward
-		GEODE_AS_STATIC_FUNCTION(claimListReward) 
-	#endif
-
-	#ifndef GEODE_STATICS_collectReward
-		#define GEODE_STATICS_collectReward
-		GEODE_AS_STATIC_FUNCTION(collectReward) 
-	#endif
-
 	#ifndef GEODE_STATICS_collectVideoReward
 		#define GEODE_STATICS_collectVideoReward
 		GEODE_AS_STATIC_FUNCTION(collectVideoReward) 
-	#endif
-
-	#ifndef GEODE_STATICS_completedChallenge
-		#define GEODE_STATICS_completedChallenge
-		GEODE_AS_STATIC_FUNCTION(completedChallenge) 
 	#endif
 
 	#ifndef GEODE_STATICS_completedDailyLevel
@@ -123,11 +88,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_createReward
 		#define GEODE_STATICS_createReward
 		GEODE_AS_STATIC_FUNCTION(createReward) 
-	#endif
-
-	#ifndef GEODE_STATICS_createSecretChestItems
-		#define GEODE_STATICS_createSecretChestItems
-		GEODE_AS_STATIC_FUNCTION(createSecretChestItems) 
 	#endif
 
 	#ifndef GEODE_STATICS_createSecretChestRewards
@@ -175,34 +135,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getAwardedDiamondsForLevel) 
 	#endif
 
-	#ifndef GEODE_STATICS_getBaseCurrency
-		#define GEODE_STATICS_getBaseCurrency
-		GEODE_AS_STATIC_FUNCTION(getBaseCurrency) 
-	#endif
-
 	#ifndef GEODE_STATICS_getBaseCurrencyForLevel
 		#define GEODE_STATICS_getBaseCurrencyForLevel
 		GEODE_AS_STATIC_FUNCTION(getBaseCurrencyForLevel) 
 	#endif
 
-	#ifndef GEODE_STATICS_getBaseDiamonds
-		#define GEODE_STATICS_getBaseDiamonds
-		GEODE_AS_STATIC_FUNCTION(getBaseDiamonds) 
-	#endif
-
-	#ifndef GEODE_STATICS_getBonusDiamonds
-		#define GEODE_STATICS_getBonusDiamonds
-		GEODE_AS_STATIC_FUNCTION(getBonusDiamonds) 
-	#endif
-
 	#ifndef GEODE_STATICS_getChallenge
 		#define GEODE_STATICS_getChallenge
 		GEODE_AS_STATIC_FUNCTION(getChallenge) 
-	#endif
-
-	#ifndef GEODE_STATICS_getChallengeKey
-		#define GEODE_STATICS_getChallengeKey
-		GEODE_AS_STATIC_FUNCTION(getChallengeKey) 
 	#endif
 
 	#ifndef GEODE_STATICS_getCollectedCoinsForLevel
@@ -213,21 +153,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getCompletedMapPacks
 		#define GEODE_STATICS_getCompletedMapPacks
 		GEODE_AS_STATIC_FUNCTION(getCompletedMapPacks) 
-	#endif
-
-	#ifndef GEODE_STATICS_getDailyLevelKey
-		#define GEODE_STATICS_getDailyLevelKey
-		GEODE_AS_STATIC_FUNCTION(getDailyLevelKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getDemonLevelKey
-		#define GEODE_STATICS_getDemonLevelKey
-		GEODE_AS_STATIC_FUNCTION(getDemonLevelKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getEventRewardKey
-		#define GEODE_STATICS_getEventRewardKey
-		GEODE_AS_STATIC_FUNCTION(getEventRewardKey) 
 	#endif
 
 	#ifndef GEODE_STATICS_getGauntletRewardKey
@@ -255,21 +180,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getLevelKey) 
 	#endif
 
-	#ifndef GEODE_STATICS_getListRewardKey
-		#define GEODE_STATICS_getListRewardKey
-		GEODE_AS_STATIC_FUNCTION(getListRewardKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getMapPackKey
-		#define GEODE_STATICS_getMapPackKey
-		GEODE_AS_STATIC_FUNCTION(getMapPackKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getNextGoldChestID
-		#define GEODE_STATICS_getNextGoldChestID
-		GEODE_AS_STATIC_FUNCTION(getNextGoldChestID) 
-	#endif
-
 	#ifndef GEODE_STATICS_getNextVideoAdReward
 		#define GEODE_STATICS_getNextVideoAdReward
 		GEODE_AS_STATIC_FUNCTION(getNextVideoAdReward) 
@@ -285,21 +195,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getQueuedChallenge) 
 	#endif
 
-	#ifndef GEODE_STATICS_getRewardForSecretChest
-		#define GEODE_STATICS_getRewardForSecretChest
-		GEODE_AS_STATIC_FUNCTION(getRewardForSecretChest) 
-	#endif
-
-	#ifndef GEODE_STATICS_getRewardForSpecialChest
-		#define GEODE_STATICS_getRewardForSpecialChest
-		GEODE_AS_STATIC_FUNCTION(getRewardForSpecialChest) 
-	#endif
-
-	#ifndef GEODE_STATICS_getRewardItem
-		#define GEODE_STATICS_getRewardItem
-		GEODE_AS_STATIC_FUNCTION(getRewardItem) 
-	#endif
-
 	#ifndef GEODE_STATICS_getRewardKey
 		#define GEODE_STATICS_getRewardKey
 		GEODE_AS_STATIC_FUNCTION(getRewardKey) 
@@ -310,31 +205,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getSecondaryQueuedChallenge) 
 	#endif
 
-	#ifndef GEODE_STATICS_getSecretChestForItem
-		#define GEODE_STATICS_getSecretChestForItem
-		GEODE_AS_STATIC_FUNCTION(getSecretChestForItem) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSecretCoinKey
-		#define GEODE_STATICS_getSecretCoinKey
-		GEODE_AS_STATIC_FUNCTION(getSecretCoinKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSecretOnlineRewardKey
-		#define GEODE_STATICS_getSecretOnlineRewardKey
-		GEODE_AS_STATIC_FUNCTION(getSecretOnlineRewardKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSpecialChestKeyForItem
-		#define GEODE_STATICS_getSpecialChestKeyForItem
-		GEODE_AS_STATIC_FUNCTION(getSpecialChestKeyForItem) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSpecialRewardDescription
-		#define GEODE_STATICS_getSpecialRewardDescription
-		GEODE_AS_STATIC_FUNCTION(getSpecialRewardDescription) 
-	#endif
-
 	#ifndef GEODE_STATICS_getSpecialUnlockDescription
 		#define GEODE_STATICS_getSpecialUnlockDescription
 		GEODE_AS_STATIC_FUNCTION(getSpecialUnlockDescription) 
@@ -343,11 +213,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getStat
 		#define GEODE_STATICS_getStat
 		GEODE_AS_STATIC_FUNCTION(getStat) 
-	#endif
-
-	#ifndef GEODE_STATICS_getStoreItem
-		#define GEODE_STATICS_getStoreItem
-		GEODE_AS_STATIC_FUNCTION(getStoreItem) 
 	#endif
 
 	#ifndef GEODE_STATICS_getTotalCollectedCurrency
@@ -375,11 +240,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(hasCompletedDailyLevel) 
 	#endif
 
-	#ifndef GEODE_STATICS_hasCompletedDemonLevel
-		#define GEODE_STATICS_hasCompletedDemonLevel
-		GEODE_AS_STATIC_FUNCTION(hasCompletedDemonLevel) 
-	#endif
-
 	#ifndef GEODE_STATICS_hasCompletedGauntletLevel
 		#define GEODE_STATICS_hasCompletedGauntletLevel
 		GEODE_AS_STATIC_FUNCTION(hasCompletedGauntletLevel) 
@@ -388,6 +248,11 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_hasCompletedLevel
 		#define GEODE_STATICS_hasCompletedLevel
 		GEODE_AS_STATIC_FUNCTION(hasCompletedLevel) 
+	#endif
+
+	#ifndef GEODE_STATICS_hasCompletedMainLevel
+		#define GEODE_STATICS_hasCompletedMainLevel
+		GEODE_AS_STATIC_FUNCTION(hasCompletedMainLevel) 
 	#endif
 
 	#ifndef GEODE_STATICS_hasCompletedMapPack
@@ -425,11 +290,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(hasUserCoin) 
 	#endif
 
-	#ifndef GEODE_STATICS_incrementActivePath
-		#define GEODE_STATICS_incrementActivePath
-		GEODE_AS_STATIC_FUNCTION(incrementActivePath) 
-	#endif
-
 	#ifndef GEODE_STATICS_incrementChallenge
 		#define GEODE_STATICS_incrementChallenge
 		GEODE_AS_STATIC_FUNCTION(incrementChallenge) 
@@ -440,24 +300,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(incrementStat) 
 	#endif
 
-	#ifndef GEODE_STATICS_isGauntletChestUnlocked
-		#define GEODE_STATICS_isGauntletChestUnlocked
-		GEODE_AS_STATIC_FUNCTION(isGauntletChestUnlocked) 
-	#endif
-
 	#ifndef GEODE_STATICS_isItemUnlocked
 		#define GEODE_STATICS_isItemUnlocked
 		GEODE_AS_STATIC_FUNCTION(isItemUnlocked) 
-	#endif
-
-	#ifndef GEODE_STATICS_isPathChestUnlocked
-		#define GEODE_STATICS_isPathChestUnlocked
-		GEODE_AS_STATIC_FUNCTION(isPathChestUnlocked) 
-	#endif
-
-	#ifndef GEODE_STATICS_isPathUnlocked
-		#define GEODE_STATICS_isPathUnlocked
-		GEODE_AS_STATIC_FUNCTION(isPathUnlocked) 
 	#endif
 
 	#ifndef GEODE_STATICS_isSecretChestUnlocked
@@ -465,19 +310,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(isSecretChestUnlocked) 
 	#endif
 
-	#ifndef GEODE_STATICS_isSecretCoin
-		#define GEODE_STATICS_isSecretCoin
-		GEODE_AS_STATIC_FUNCTION(isSecretCoin) 
-	#endif
-
 	#ifndef GEODE_STATICS_isSecretCoinValid
 		#define GEODE_STATICS_isSecretCoinValid
 		GEODE_AS_STATIC_FUNCTION(isSecretCoinValid) 
-	#endif
-
-	#ifndef GEODE_STATICS_isSpecialChestLiteUnlockable
-		#define GEODE_STATICS_isSpecialChestLiteUnlockable
-		GEODE_AS_STATIC_FUNCTION(isSpecialChestLiteUnlockable) 
 	#endif
 
 	#ifndef GEODE_STATICS_isSpecialChestUnlocked
@@ -488,11 +323,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_isStoreItemUnlocked
 		#define GEODE_STATICS_isStoreItemUnlocked
 		GEODE_AS_STATIC_FUNCTION(isStoreItemUnlocked) 
-	#endif
-
-	#ifndef GEODE_STATICS_keyCostForSecretChest
-		#define GEODE_STATICS_keyCostForSecretChest
-		GEODE_AS_STATIC_FUNCTION(keyCostForSecretChest) 
 	#endif
 
 	#ifndef GEODE_STATICS_linkSpecialChestUnlocks
@@ -555,59 +385,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(registerRewardsFromItem) 
 	#endif
 
-	#ifndef GEODE_STATICS_removeChallenge
-		#define GEODE_STATICS_removeChallenge
-		GEODE_AS_STATIC_FUNCTION(removeChallenge) 
-	#endif
-
 	#ifndef GEODE_STATICS_removeErrorFromSpecialChests
 		#define GEODE_STATICS_removeErrorFromSpecialChests
 		GEODE_AS_STATIC_FUNCTION(removeErrorFromSpecialChests) 
 	#endif
 
-	#ifndef GEODE_STATICS_removeQueuedChallenge
-		#define GEODE_STATICS_removeQueuedChallenge
-		GEODE_AS_STATIC_FUNCTION(removeQueuedChallenge) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeQueuedSecondaryChallenge
-		#define GEODE_STATICS_removeQueuedSecondaryChallenge
-		GEODE_AS_STATIC_FUNCTION(removeQueuedSecondaryChallenge) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetChallengeTimer
-		#define GEODE_STATICS_resetChallengeTimer
-		GEODE_AS_STATIC_FUNCTION(resetChallengeTimer) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetPreSync
-		#define GEODE_STATICS_resetPreSync
-		GEODE_AS_STATIC_FUNCTION(resetPreSync) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetSpecialChest
-		#define GEODE_STATICS_resetSpecialChest
-		GEODE_AS_STATIC_FUNCTION(resetSpecialChest) 
-	#endif
-
 	#ifndef GEODE_STATICS_resetSpecialStatAchievements
 		#define GEODE_STATICS_resetSpecialStatAchievements
 		GEODE_AS_STATIC_FUNCTION(resetSpecialStatAchievements) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetUserCoins
-		#define GEODE_STATICS_resetUserCoins
-		GEODE_AS_STATIC_FUNCTION(resetUserCoins) 
-	#endif
-
-	#ifndef GEODE_STATICS_restorePostSync
-		#define GEODE_STATICS_restorePostSync
-		GEODE_AS_STATIC_FUNCTION(restorePostSync) 
-	#endif
-
-	#ifndef GEODE_STATICS_setAwardedBonusKeys
-		#define GEODE_STATICS_setAwardedBonusKeys
-		GEODE_AS_STATIC_FUNCTION(setAwardedBonusKeys) 
 	#endif
 
 	#ifndef GEODE_STATICS_setStarsForMapPack
@@ -620,54 +405,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(setStat) 
 	#endif
 
-	#ifndef GEODE_STATICS_setStatIfHigher
-		#define GEODE_STATICS_setStatIfHigher
-		GEODE_AS_STATIC_FUNCTION(setStatIfHigher) 
-	#endif
-
 	#ifndef GEODE_STATICS_setupIconCredits
 		#define GEODE_STATICS_setupIconCredits
 		GEODE_AS_STATIC_FUNCTION(setupIconCredits) 
-	#endif
-
-	#ifndef GEODE_STATICS_shopTypeForItemID
-		#define GEODE_STATICS_shopTypeForItemID
-		GEODE_AS_STATIC_FUNCTION(shopTypeForItemID) 
-	#endif
-
-	#ifndef GEODE_STATICS_shouldAwardSecretKey
-		#define GEODE_STATICS_shouldAwardSecretKey
-		GEODE_AS_STATIC_FUNCTION(shouldAwardSecretKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_starsForMapPack
-		#define GEODE_STATICS_starsForMapPack
-		GEODE_AS_STATIC_FUNCTION(starsForMapPack) 
-	#endif
-
-	#ifndef GEODE_STATICS_storeChallenge
-		#define GEODE_STATICS_storeChallenge
-		GEODE_AS_STATIC_FUNCTION(storeChallenge) 
-	#endif
-
-	#ifndef GEODE_STATICS_storeChallengeTime
-		#define GEODE_STATICS_storeChallengeTime
-		GEODE_AS_STATIC_FUNCTION(storeChallengeTime) 
-	#endif
-
-	#ifndef GEODE_STATICS_storeEventChest
-		#define GEODE_STATICS_storeEventChest
-		GEODE_AS_STATIC_FUNCTION(storeEventChest) 
-	#endif
-
-	#ifndef GEODE_STATICS_storeOnlineChest
-		#define GEODE_STATICS_storeOnlineChest
-		GEODE_AS_STATIC_FUNCTION(storeOnlineChest) 
-	#endif
-
-	#ifndef GEODE_STATICS_storePendingUserCoin
-		#define GEODE_STATICS_storePendingUserCoin
-		GEODE_AS_STATIC_FUNCTION(storePendingUserCoin) 
 	#endif
 
 	#ifndef GEODE_STATICS_storeQueuedChallenge
@@ -680,11 +420,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(storeRewardState) 
 	#endif
 
-	#ifndef GEODE_STATICS_storeSecondaryQueuedChallenge
-		#define GEODE_STATICS_storeSecondaryQueuedChallenge
-		GEODE_AS_STATIC_FUNCTION(storeSecondaryQueuedChallenge) 
-	#endif
-
 	#ifndef GEODE_STATICS_storeSecretCoin
 		#define GEODE_STATICS_storeSecretCoin
 		GEODE_AS_STATIC_FUNCTION(storeSecretCoin) 
@@ -693,11 +428,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_storeUserCoin
 		#define GEODE_STATICS_storeUserCoin
 		GEODE_AS_STATIC_FUNCTION(storeUserCoin) 
-	#endif
-
-	#ifndef GEODE_STATICS_tempClear
-		#define GEODE_STATICS_tempClear
-		GEODE_AS_STATIC_FUNCTION(tempClear) 
 	#endif
 
 	#ifndef GEODE_STATICS_toggleEnableItem
@@ -720,24 +450,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(uncompleteLevel) 
 	#endif
 
-	#ifndef GEODE_STATICS_unlockGauntletChest
-		#define GEODE_STATICS_unlockGauntletChest
-		GEODE_AS_STATIC_FUNCTION(unlockGauntletChest) 
-	#endif
-
-	#ifndef GEODE_STATICS_unlockGoldChest
-		#define GEODE_STATICS_unlockGoldChest
-		GEODE_AS_STATIC_FUNCTION(unlockGoldChest) 
-	#endif
-
 	#ifndef GEODE_STATICS_unlockOnlineChest
 		#define GEODE_STATICS_unlockOnlineChest
 		GEODE_AS_STATIC_FUNCTION(unlockOnlineChest) 
-	#endif
-
-	#ifndef GEODE_STATICS_unlockPathChest
-		#define GEODE_STATICS_unlockPathChest
-		GEODE_AS_STATIC_FUNCTION(unlockPathChest) 
 	#endif
 
 	#ifndef GEODE_STATICS_unlockSecretChest
@@ -748,16 +463,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_unlockSpecialChest
 		#define GEODE_STATICS_unlockSpecialChest
 		GEODE_AS_STATIC_FUNCTION(unlockSpecialChest) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateActivePath
-		#define GEODE_STATICS_updateActivePath
-		GEODE_AS_STATIC_FUNCTION(updateActivePath) 
-	#endif
-
-	#ifndef GEODE_STATICS_usernameForAccountID
-		#define GEODE_STATICS_usernameForAccountID
-		GEODE_AS_STATIC_FUNCTION(usernameForAccountID) 
 	#endif
 
 	#ifndef GEODE_STATICS_verifyPathAchievements
@@ -824,6 +529,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_awardDiamondsForLevel
 		#define GEODE_CONCEPT_CHECK_awardDiamondsForLevel
 		GEODE_CONCEPT_FUNCTION_CHECK(awardDiamondsForLevel) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_awardOldSpecialStats
+		#define GEODE_CONCEPT_CHECK_awardOldSpecialStats
+		GEODE_CONCEPT_FUNCTION_CHECK(awardOldSpecialStats) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_awardSecretKey
@@ -1251,6 +961,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(isGauntletChestUnlocked) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_isGauntletUnlocked
+		#define GEODE_CONCEPT_CHECK_isGauntletUnlocked
+		GEODE_CONCEPT_FUNCTION_CHECK(isGauntletUnlocked) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_isItemEnabled
 		#define GEODE_CONCEPT_CHECK_isItemEnabled
 		GEODE_CONCEPT_FUNCTION_CHECK(isItemEnabled) 
@@ -1531,6 +1246,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(uncompleteLevel) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_unlockGauntlet
+		#define GEODE_CONCEPT_CHECK_unlockGauntlet
+		GEODE_CONCEPT_FUNCTION_CHECK(unlockGauntlet) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_unlockGauntletChest
 		#define GEODE_CONCEPT_CHECK_unlockGauntletChest
 		GEODE_CONCEPT_FUNCTION_CHECK(unlockGauntletChest) 
@@ -1591,170 +1311,173 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, get, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1cdf20, Default, GameStatsManager, sharedState, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ce140, Thiscall, GameStatsManager, init, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, accountIDForIcon, int, UnlockType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e6d10, Thiscall, GameStatsManager, addSimpleSpecialChestReward, gd::string, UnlockType, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, addSpecialRewardDescription, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d1000, Thiscall, GameStatsManager, addStoreItem, int, int, int, int, ShopType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, areChallengesLoaded, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d0ef0, Default, GameStatsManager, sharedState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d1110, Thiscall, GameStatsManager, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, accountIDForIcon, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ea0a0, Thiscall, GameStatsManager, addSimpleSpecialChestReward, gd::string, UnlockType, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ea2b0, Thiscall, GameStatsManager, addSpecialRewardDescription, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d3fd0, Thiscall, GameStatsManager, addStoreItem, int, int, int, int, ShopType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, areChallengesLoaded, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, areRewardsLoaded, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dd990, Thiscall, GameStatsManager, awardCurrencyForLevel, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1de170, Thiscall, GameStatsManager, awardDiamondsForLevel, GJGameLevel*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, awardSecretKey, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, canItemBeUnlocked, int, UnlockType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d2470, Thiscall, GameStatsManager, checkAchievement, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1da830, Thiscall, GameStatsManager, checkCoinAchievement, GJGameLevel*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, checkCoinsForLevel, GJGameLevel*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, claimListReward, GJLevelList*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, collectReward, GJRewardType, GJRewardItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e0960, Thiscall, GameStatsManager, awardCurrencyForLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e1140, Thiscall, GameStatsManager, awardDiamondsForLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, awardOldSpecialStats, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f19f0, Thiscall, GameStatsManager, awardSecretKey, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, canItemBeUnlocked, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d5440, Thiscall, GameStatsManager, checkAchievement, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dd800, Thiscall, GameStatsManager, checkCoinAchievement, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, checkCoinsForLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, claimListReward, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, collectReward, GJRewardType, GJRewardItem*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, collectVideoReward, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, completedChallenge, GJChallengeItem*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dfe10, Thiscall, GameStatsManager, completedDailyLevel, GJGameLevel*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, completedDemonLevel, GJGameLevel*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, completedLevel, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dbe30, Thiscall, GameStatsManager, completedMapPack, GJMapPack*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, completedStarLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, completedChallenge, GJChallengeItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e2de0, Thiscall, GameStatsManager, completedDailyLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1de500, Thiscall, GameStatsManager, completedDemonLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1de3b0, Thiscall, GameStatsManager, completedLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dee00, Thiscall, GameStatsManager, completedMapPack, GJMapPack*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1de770, Thiscall, GameStatsManager, completedStarLevel, GJGameLevel*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, countSecretChests, GJRewardType)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, countUnlockedSecretChests, GJRewardType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, createReward, GJRewardType, int, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, createSecretChestItems, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e7760, Thiscall, GameStatsManager, createSecretChestRewards, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e2c90, Thiscall, GameStatsManager, createSpecialChestItems, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ce830, Thiscall, GameStatsManager, createStoreItems, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ef0b0, Thiscall, GameStatsManager, dataLoaded, DS_Dictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, encodeDataTo, DS_Dictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, firstSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ce340, Thiscall, GameStatsManager, generateItemUnlockableData, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dd750, Thiscall, GameStatsManager, getAwardedCurrencyForLevel, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ddf40, Thiscall, GameStatsManager, getAwardedDiamondsForLevel, GJGameLevel*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getBaseCurrency, int, bool, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dd4b0, Thiscall, GameStatsManager, getBaseCurrencyForLevel, GJGameLevel*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getBaseDiamonds, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getBonusDiamonds, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dee70, Thiscall, GameStatsManager, getChallenge, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getChallengeKey, GJChallengeItem*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dabd0, Thiscall, GameStatsManager, getCollectedCoinsForLevel, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dc180, Thiscall, GameStatsManager, getCompletedMapPacks, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e15f0, Thiscall, GameStatsManager, createReward, GJRewardType, int, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, createSecretChestItems, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1eaaf0, Thiscall, GameStatsManager, createSecretChestRewards, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e5c60, Thiscall, GameStatsManager, createSpecialChestItems, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d1800, Thiscall, GameStatsManager, createStoreItems, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f24a0, Thiscall, GameStatsManager, dataLoaded, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f21a0, Thiscall, GameStatsManager, encodeDataTo, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f1ab0, Thiscall, GameStatsManager, firstSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d1310, Thiscall, GameStatsManager, generateItemUnlockableData, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e0720, Thiscall, GameStatsManager, getAwardedCurrencyForLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e0f10, Thiscall, GameStatsManager, getAwardedDiamondsForLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getBaseCurrency, int, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e0480, Thiscall, GameStatsManager, getBaseCurrencyForLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getBaseDiamonds, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getBonusDiamonds, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e1e40, Thiscall, GameStatsManager, getChallenge, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getChallengeKey, GJChallengeItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ddba0, Thiscall, GameStatsManager, getCollectedCoinsForLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1df150, Thiscall, GameStatsManager, getCompletedMapPacks, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getCurrencyKey, GJGameLevel*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getDailyLevelKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getDemonLevelKey, GJGameLevel*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getEventRewardKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e6e40, Thiscall, GameStatsManager, getGauntletRewardKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1de9b0, Thiscall, GameStatsManager, getItemKey, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e2b30, Thiscall, GameStatsManager, getItemUnlockState, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getDailyLevelKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getDemonLevelKey, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getEventRewardKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ea1d0, Thiscall, GameStatsManager, getGauntletRewardKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e1980, Thiscall, GameStatsManager, getItemKey, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e5b00, Thiscall, GameStatsManager, getItemUnlockState, int, UnlockType)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getItemUnlockStateLite, int, UnlockType)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getLevelKey, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dad50, Thiscall, GameStatsManager, getLevelKey, int, bool, bool, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getListRewardKey, GJLevelList*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getMapPackKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getNextGoldChestID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ddd20, Thiscall, GameStatsManager, getLevelKey, int, bool, bool, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getListRewardKey, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getMapPackKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getNextGoldChestID, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getNextVideoAdReward, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e7330, Thiscall, GameStatsManager, getPathRewardKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1def40, Thiscall, GameStatsManager, getQueuedChallenge, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getRewardForSecretChest, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getRewardForSpecialChest, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getRewardItem, GJRewardType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getRewardKey, GJRewardType, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getSecondaryQueuedChallenge, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getSecretChestForItem, int, UnlockType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getSecretCoinKey, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getSecretOnlineRewardKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getSpecialChestKeyForItem, int, UnlockType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getSpecialRewardDescription, gd::string, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e6fb0, Thiscall, GameStatsManager, getSpecialUnlockDescription, int, UnlockType, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ea6c0, Thiscall, GameStatsManager, getPathRewardKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e1f10, Thiscall, GameStatsManager, getQueuedChallenge, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getRewardForSecretChest, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getRewardForSpecialChest, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getRewardItem, GJRewardType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e1980, Thiscall, GameStatsManager, getRewardKey, GJRewardType, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e1fe0, Thiscall, GameStatsManager, getSecondaryQueuedChallenge, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getSecretChestForItem, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getSecretCoinKey, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getSecretOnlineRewardKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getSpecialChestKeyForItem, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getSpecialRewardDescription, gd::string, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ea340, Thiscall, GameStatsManager, getSpecialUnlockDescription, int, UnlockType, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getStarLevelKey, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d21e0, Thiscall, GameStatsManager, getStat, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d51b0, Thiscall, GameStatsManager, getStat, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getStatFromKey, StatKey)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getStoreItem, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, getStoreItem, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e08b0, Thiscall, GameStatsManager, getTotalCollectedCurrency, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e1180, Thiscall, GameStatsManager, getTotalCollectedDiamonds, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dfc30, Thiscall, GameStatsManager, hasClaimedListReward, GJLevelList*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, hasCompletedChallenge, GJChallengeItem*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dfd10, Thiscall, GameStatsManager, hasCompletedDailyLevel, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, hasCompletedDemonLevel, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1db1a0, Thiscall, GameStatsManager, hasCompletedGauntletLevel, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dafb0, Thiscall, GameStatsManager, hasCompletedLevel, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, hasCompletedMainLevel, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, hasCompletedMapPack, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1db070, Thiscall, GameStatsManager, hasCompletedOnlineLevel, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, hasCompletedStarLevel, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dce90, Thiscall, GameStatsManager, hasPendingUserCoin, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, hasRewardBeenCollected, GJRewardType, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dcf50, Thiscall, GameStatsManager, hasSecretCoin, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dcd10, Thiscall, GameStatsManager, hasUserCoin, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, incrementActivePath, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1df0f0, Thiscall, GameStatsManager, incrementChallenge, GJChallengeType, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d1500, Thiscall, GameStatsManager, incrementStat, char const*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, incrementStat, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, isGauntletChestUnlocked, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getStoreItem, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, getStoreItem, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e3880, Thiscall, GameStatsManager, getTotalCollectedCurrency, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e4150, Thiscall, GameStatsManager, getTotalCollectedDiamonds, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e2c00, Thiscall, GameStatsManager, hasClaimedListReward, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e2840, Thiscall, GameStatsManager, hasCompletedChallenge, GJChallengeItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e2ce0, Thiscall, GameStatsManager, hasCompletedDailyLevel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, hasCompletedDemonLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1de170, Thiscall, GameStatsManager, hasCompletedGauntletLevel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ddf80, Thiscall, GameStatsManager, hasCompletedLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dde50, Thiscall, GameStatsManager, hasCompletedMainLevel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1def90, Thiscall, GameStatsManager, hasCompletedMapPack, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1de040, Thiscall, GameStatsManager, hasCompletedOnlineLevel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1de2a0, Thiscall, GameStatsManager, hasCompletedStarLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dfe60, Thiscall, GameStatsManager, hasPendingUserCoin, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e1a70, Thiscall, GameStatsManager, hasRewardBeenCollected, GJRewardType, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dff20, Thiscall, GameStatsManager, hasSecretCoin, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dfce0, Thiscall, GameStatsManager, hasUserCoin, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, incrementActivePath, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e20c0, Thiscall, GameStatsManager, incrementChallenge, GJChallengeType, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, incrementStat, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d44d0, Thiscall, GameStatsManager, incrementStat, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, isGauntletChestUnlocked, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, isGauntletUnlocked, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, isItemEnabled, UnlockType, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e2850, Thiscall, GameStatsManager, isItemUnlocked, UnlockType, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, isPathChestUnlocked, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, isPathUnlocked, StatKey)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e74d0, Thiscall, GameStatsManager, isSecretChestUnlocked, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, isSecretCoin, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, isSecretCoinValid, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, isSpecialChestLiteUnlockable, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e7160, Thiscall, GameStatsManager, isSpecialChestUnlocked, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d1210, Thiscall, GameStatsManager, isStoreItemUnlocked, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, keyCostForSecretChest, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, linkSpecialChestUnlocks, GJRewardItem*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e5820, Thiscall, GameStatsManager, isItemUnlocked, UnlockType, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, isPathChestUnlocked, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, isPathUnlocked, StatKey)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ea860, Thiscall, GameStatsManager, isSecretChestUnlocked, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, isSecretCoin, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e00c0, Thiscall, GameStatsManager, isSecretCoinValid, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, isSpecialChestLiteUnlockable, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ea4f0, Thiscall, GameStatsManager, isSpecialChestUnlocked, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d41e0, Thiscall, GameStatsManager, isStoreItemUnlocked, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, keyCostForSecretChest, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e9f90, Thiscall, GameStatsManager, linkSpecialChestUnlocks, GJRewardItem*, gd::string)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, logCoins, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, markLevelAsCompletedAndClaimed, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f0460, Thiscall, GameStatsManager, postLoadGameStats, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1deb00, Thiscall, GameStatsManager, preProcessReward, GJRewardItem*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f0630, Thiscall, GameStatsManager, preSaveGameStats, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1df950, Thiscall, GameStatsManager, processChallengeQueue, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, processOnlineChests, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d12e0, Thiscall, GameStatsManager, purchaseItem, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, recountSpecialStats, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, recountUserCoins, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ee170, Thiscall, GameStatsManager, registerRewardsFromItem, GJRewardItem*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, removeChallenge, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f0310, Thiscall, GameStatsManager, removeErrorFromSpecialChests, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, removeQueuedChallenge, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, removeQueuedSecondaryChallenge, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, resetChallengeTimer, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, resetPreSync, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, resetSpecialChest, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, resetSpecialStatAchievements, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, resetUserCoins, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, restorePostSync, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, setAwardedBonusKeys, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dc090, Thiscall, GameStatsManager, setStarsForMapPack, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d2300, Thiscall, GameStatsManager, setStat, char const*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, setStatIfHigher, char const*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1c1190, Thiscall, GameStatsManager, setupIconCredits, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, shopTypeForItemID, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, shouldAwardSecretKey, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, starsForMapPack, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, storeChallenge, int, GJChallengeItem*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, storeChallengeTime, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, storeEventChest, int, GJRewardItem*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, storeOnlineChest, gd::string, GJRewardItem*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, storePendingUserCoin, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ded90, Thiscall, GameStatsManager, storeQueuedChallenge, int, GJChallengeItem*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, storeRewardState, GJRewardType, int, int, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, storeSecondaryQueuedChallenge, int, GJChallengeItem*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, storeSecretCoin, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dcdd0, Thiscall, GameStatsManager, storeUserCoin, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, tempClear, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e2c00, Thiscall, GameStatsManager, toggleEnableItem, UnlockType, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d1810, Thiscall, GameStatsManager, tryFixPathBug, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, trySelectActivePath, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dbbc0, Thiscall, GameStatsManager, uncompleteLevel, GJGameLevel*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, unlockGauntletChest, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, unlockGoldChest, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e7410, Thiscall, GameStatsManager, unlockOnlineChest, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, unlockPathChest, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e75a0, Thiscall, GameStatsManager, unlockSecretChest, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e7250, Thiscall, GameStatsManager, unlockSpecialChest, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, updateActivePath, StatKey)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameStatsManager, usernameForAccountID, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d1f80, Thiscall, GameStatsManager, verifyPathAchievements, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dcc30, Thiscall, GameStatsManager, verifyUserCoins, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1de910, Thiscall, GameStatsManager, markLevelAsCompletedAndClaimed, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f3930, Thiscall, GameStatsManager, postLoadGameStats, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e1ad0, Thiscall, GameStatsManager, preProcessReward, GJRewardItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f3b00, Thiscall, GameStatsManager, preSaveGameStats, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e2920, Thiscall, GameStatsManager, processChallengeQueue, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f35f0, Thiscall, GameStatsManager, processOnlineChests, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d42b0, Thiscall, GameStatsManager, purchaseItem, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e4450, Thiscall, GameStatsManager, recountSpecialStats, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1df3c0, Thiscall, GameStatsManager, recountUserCoins, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f1500, Thiscall, GameStatsManager, registerRewardsFromItem, GJRewardItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, removeChallenge, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f37e0, Thiscall, GameStatsManager, removeErrorFromSpecialChests, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, removeQueuedChallenge, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, removeQueuedSecondaryChallenge, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, resetChallengeTimer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, resetPreSync, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, resetSpecialChest, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e52b0, Thiscall, GameStatsManager, resetSpecialStatAchievements, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, resetUserCoins, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, restorePostSync, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, setAwardedBonusKeys, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1df060, Thiscall, GameStatsManager, setStarsForMapPack, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d52d0, Thiscall, GameStatsManager, setStat, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, setStatIfHigher, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1c4110, Thiscall, GameStatsManager, setupIconCredits, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, shopTypeForItemID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, shouldAwardSecretKey, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, starsForMapPack, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, storeChallenge, int, GJChallengeItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, storeChallengeTime, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, storeEventChest, int, GJRewardItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, storeOnlineChest, gd::string, GJRewardItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, storePendingUserCoin, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e1d60, Thiscall, GameStatsManager, storeQueuedChallenge, int, GJChallengeItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e18e0, Thiscall, GameStatsManager, storeRewardState, GJRewardType, int, int, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, storeSecondaryQueuedChallenge, int, GJChallengeItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dfff0, Thiscall, GameStatsManager, storeSecretCoin, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dfda0, Thiscall, GameStatsManager, storeUserCoin, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, tempClear, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1e5bd0, Thiscall, GameStatsManager, toggleEnableItem, UnlockType, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d47e0, Thiscall, GameStatsManager, tryFixPathBug, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d4660, Thiscall, GameStatsManager, trySelectActivePath, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1deb90, Thiscall, GameStatsManager, uncompleteLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, unlockGauntlet, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, unlockGauntletChest, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, unlockGoldChest, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ea7a0, Thiscall, GameStatsManager, unlockOnlineChest, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, unlockPathChest, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ea930, Thiscall, GameStatsManager, unlockSecretChest, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ea5e0, Thiscall, GameStatsManager, unlockSpecialChest, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, updateActivePath, StatKey)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameStatsManager, usernameForAccountID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1d4f50, Thiscall, GameStatsManager, verifyPathAchievements, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1dfc00, Thiscall, GameStatsManager, verifyUserCoins, )
 		}
 	};
 }

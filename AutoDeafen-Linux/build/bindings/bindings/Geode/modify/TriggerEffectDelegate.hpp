@@ -21,6 +21,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(spawnObject) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_checkSpawnAbuse
+		#define GEODE_CONCEPT_CHECK_checkSpawnAbuse
+		GEODE_CONCEPT_FUNCTION_CHECK(checkSpawnAbuse) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, TriggerEffectDelegate> : ModifyBase<ModifyDerive<Der, TriggerEffectDelegate>> {

@@ -5,24 +5,24 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
+	#ifndef GEODE_STATICS_touchesBegan
+		#define GEODE_STATICS_touchesBegan
+		GEODE_AS_STATIC_FUNCTION(touchesBegan) 
 	#endif
 
-	#ifndef GEODE_STATICS_getTargetPrio
-		#define GEODE_STATICS_getTargetPrio
-		GEODE_AS_STATIC_FUNCTION(getTargetPrio) 
+	#ifndef GEODE_STATICS_touchesMoved
+		#define GEODE_STATICS_touchesMoved
+		GEODE_AS_STATIC_FUNCTION(touchesMoved) 
 	#endif
 
-	#ifndef GEODE_STATICS_setDispatchEvents
-		#define GEODE_STATICS_setDispatchEvents
-		GEODE_AS_STATIC_FUNCTION(setDispatchEvents) 
+	#ifndef GEODE_STATICS_touchesEnded
+		#define GEODE_STATICS_touchesEnded
+		GEODE_AS_STATIC_FUNCTION(touchesEnded) 
 	#endif
 
-	#ifndef GEODE_STATICS_setPriority
-		#define GEODE_STATICS_setPriority
-		GEODE_AS_STATIC_FUNCTION(setPriority) 
+	#ifndef GEODE_STATICS_touchesCancelled
+		#define GEODE_STATICS_touchesCancelled
+		GEODE_AS_STATIC_FUNCTION(touchesCancelled) 
 	#endif
 
 	#ifndef GEODE_STATICS_addPrioTargetedDelegate
@@ -70,6 +70,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(incrementForcePrio) 
 	#endif
 
+	#ifndef GEODE_STATICS_init
+		#define GEODE_STATICS_init
+		GEODE_AS_STATIC_FUNCTION(init) 
+	#endif
+
 	#ifndef GEODE_STATICS_isDispatchEvents
 		#define GEODE_STATICS_isDispatchEvents
 		GEODE_AS_STATIC_FUNCTION(isDispatchEvents) 
@@ -100,6 +105,16 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(removeDelegate) 
 	#endif
 
+	#ifndef GEODE_STATICS_setDispatchEvents
+		#define GEODE_STATICS_setDispatchEvents
+		GEODE_AS_STATIC_FUNCTION(setDispatchEvents) 
+	#endif
+
+	#ifndef GEODE_STATICS_setPriority
+		#define GEODE_STATICS_setPriority
+		GEODE_AS_STATIC_FUNCTION(setPriority) 
+	#endif
+
 	#ifndef GEODE_STATICS_touches
 		#define GEODE_STATICS_touches
 		GEODE_AS_STATIC_FUNCTION(touches) 
@@ -110,45 +125,25 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(unregisterForcePrio) 
 	#endif
 
-	#ifndef GEODE_STATICS_touchesBegan
-		#define GEODE_STATICS_touchesBegan
-		GEODE_AS_STATIC_FUNCTION(touchesBegan) 
-	#endif
-
-	#ifndef GEODE_STATICS_touchesMoved
-		#define GEODE_STATICS_touchesMoved
-		GEODE_AS_STATIC_FUNCTION(touchesMoved) 
-	#endif
-
-	#ifndef GEODE_STATICS_touchesEnded
-		#define GEODE_STATICS_touchesEnded
-		GEODE_AS_STATIC_FUNCTION(touchesEnded) 
-	#endif
-
-	#ifndef GEODE_STATICS_touchesCancelled
-		#define GEODE_STATICS_touchesCancelled
-		GEODE_AS_STATIC_FUNCTION(touchesCancelled) 
-	#endif
-
     
-	#ifndef GEODE_CONCEPT_CHECK_init
-		#define GEODE_CONCEPT_CHECK_init
-		GEODE_CONCEPT_FUNCTION_CHECK(init) 
+	#ifndef GEODE_CONCEPT_CHECK_touchesBegan
+		#define GEODE_CONCEPT_CHECK_touchesBegan
+		GEODE_CONCEPT_FUNCTION_CHECK(touchesBegan) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_getTargetPrio
-		#define GEODE_CONCEPT_CHECK_getTargetPrio
-		GEODE_CONCEPT_FUNCTION_CHECK(getTargetPrio) 
+	#ifndef GEODE_CONCEPT_CHECK_touchesMoved
+		#define GEODE_CONCEPT_CHECK_touchesMoved
+		GEODE_CONCEPT_FUNCTION_CHECK(touchesMoved) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_setDispatchEvents
-		#define GEODE_CONCEPT_CHECK_setDispatchEvents
-		GEODE_CONCEPT_FUNCTION_CHECK(setDispatchEvents) 
+	#ifndef GEODE_CONCEPT_CHECK_touchesEnded
+		#define GEODE_CONCEPT_CHECK_touchesEnded
+		GEODE_CONCEPT_FUNCTION_CHECK(touchesEnded) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_setPriority
-		#define GEODE_CONCEPT_CHECK_setPriority
-		GEODE_CONCEPT_FUNCTION_CHECK(setPriority) 
+	#ifndef GEODE_CONCEPT_CHECK_touchesCancelled
+		#define GEODE_CONCEPT_CHECK_touchesCancelled
+		GEODE_CONCEPT_FUNCTION_CHECK(touchesCancelled) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_addPrioTargetedDelegate
@@ -196,6 +191,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(incrementForcePrio) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_init
+		#define GEODE_CONCEPT_CHECK_init
+		GEODE_CONCEPT_FUNCTION_CHECK(init) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_isDispatchEvents
 		#define GEODE_CONCEPT_CHECK_isDispatchEvents
 		GEODE_CONCEPT_FUNCTION_CHECK(isDispatchEvents) 
@@ -226,6 +226,16 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(removeDelegate) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_setDispatchEvents
+		#define GEODE_CONCEPT_CHECK_setDispatchEvents
+		GEODE_CONCEPT_FUNCTION_CHECK(setDispatchEvents) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setPriority
+		#define GEODE_CONCEPT_CHECK_setPriority
+		GEODE_CONCEPT_FUNCTION_CHECK(setPriority) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_touches
 		#define GEODE_CONCEPT_CHECK_touches
 		GEODE_CONCEPT_FUNCTION_CHECK(touches) 
@@ -234,26 +244,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_unregisterForcePrio
 		#define GEODE_CONCEPT_CHECK_unregisterForcePrio
 		GEODE_CONCEPT_FUNCTION_CHECK(unregisterForcePrio) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_touchesBegan
-		#define GEODE_CONCEPT_CHECK_touchesBegan
-		GEODE_CONCEPT_FUNCTION_CHECK(touchesBegan) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_touchesMoved
-		#define GEODE_CONCEPT_CHECK_touchesMoved
-		GEODE_CONCEPT_FUNCTION_CHECK(touchesMoved) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_touchesEnded
-		#define GEODE_CONCEPT_CHECK_touchesEnded
-		GEODE_CONCEPT_FUNCTION_CHECK(touchesEnded) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_touchesCancelled
-		#define GEODE_CONCEPT_CHECK_touchesCancelled
-		GEODE_CONCEPT_FUNCTION_CHECK(touchesCancelled) 
 	#endif
 
 
@@ -265,32 +255,32 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCTouchDispatcher::init)), Thiscall, cocos2d::CCTouchDispatcher, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCTouchDispatcher::getTargetPrio)), Thiscall, cocos2d::CCTouchDispatcher, getTargetPrio, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCTouchDispatcher::setDispatchEvents)), Thiscall, cocos2d::CCTouchDispatcher, setDispatchEvents, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int, cocos2d::CCTouchDelegate*>::func(&cocos2d::CCTouchDispatcher::setPriority)), Thiscall, cocos2d::CCTouchDispatcher, setPriority, int, cocos2d::CCTouchDelegate*)
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCTouchDispatcher@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCTouchDispatcher)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCSet*, cocos2d::CCEvent*>::func(&cocos2d::CCTouchDispatcher::touchesBegan)), Thiscall, cocos2d::CCTouchDispatcher, touchesBegan, cocos2d::CCSet*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCSet*, cocos2d::CCEvent*>::func(&cocos2d::CCTouchDispatcher::touchesMoved)), Thiscall, cocos2d::CCTouchDispatcher, touchesMoved, cocos2d::CCSet*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCSet*, cocos2d::CCEvent*>::func(&cocos2d::CCTouchDispatcher::touchesEnded)), Thiscall, cocos2d::CCTouchDispatcher, touchesEnded, cocos2d::CCSet*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCSet*, cocos2d::CCEvent*>::func(&cocos2d::CCTouchDispatcher::touchesCancelled)), Thiscall, cocos2d::CCTouchDispatcher, touchesCancelled, cocos2d::CCSet*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTouchDelegate*, int, bool>::func(&cocos2d::CCTouchDispatcher::addPrioTargetedDelegate)), Thiscall, cocos2d::CCTouchDispatcher, addPrioTargetedDelegate, cocos2d::CCTouchDelegate*, int, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTouchDelegate*, int>::func(&cocos2d::CCTouchDispatcher::addStandardDelegate)), Thiscall, cocos2d::CCTouchDispatcher, addStandardDelegate, cocos2d::CCTouchDelegate*, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTouchDelegate*, int, bool>::func(&cocos2d::CCTouchDispatcher::addTargetedDelegate)), Thiscall, cocos2d::CCTouchDispatcher, addTargetedDelegate, cocos2d::CCTouchDelegate*, int, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int>::func(&cocos2d::CCTouchDispatcher::decrementForcePrio)), Thiscall, cocos2d::CCTouchDispatcher, decrementForcePrio, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCArray*, cocos2d::CCTouchDelegate*>::func(&cocos2d::CCTouchDispatcher::findHandler)), Thiscall, cocos2d::CCTouchDispatcher, findHandler, cocos2d::CCArray*, cocos2d::CCTouchDelegate*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTouchDelegate*>::func(&cocos2d::CCTouchDispatcher::findHandler)), Thiscall, cocos2d::CCTouchDispatcher, findHandler, cocos2d::CCTouchDelegate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCArray*, cocos2d::CCTouchDelegate*>::func(&cocos2d::CCTouchDispatcher::findHandler)), Thiscall, cocos2d::CCTouchDispatcher, findHandler, cocos2d::CCArray*, cocos2d::CCTouchDelegate*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTouchHandler*, cocos2d::CCArray*>::func(&cocos2d::CCTouchDispatcher::forceAddHandler)), Thiscall, cocos2d::CCTouchDispatcher, forceAddHandler, cocos2d::CCTouchHandler*, cocos2d::CCArray*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCTouchDispatcher::forceRemoveAllDelegates)), Thiscall, cocos2d::CCTouchDispatcher, forceRemoveAllDelegates, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTouchDelegate*>::func(&cocos2d::CCTouchDispatcher::forceRemoveDelegate)), Thiscall, cocos2d::CCTouchDispatcher, forceRemoveDelegate, cocos2d::CCTouchDelegate*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int>::func(&cocos2d::CCTouchDispatcher::incrementForcePrio)), Thiscall, cocos2d::CCTouchDispatcher, incrementForcePrio, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCTouchDispatcher::init)), Thiscall, cocos2d::CCTouchDispatcher, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCTouchDispatcher::isDispatchEvents)), Thiscall, cocos2d::CCTouchDispatcher, isDispatchEvents, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCTouchDispatcher::isUsingForcePrio)), Thiscall, cocos2d::CCTouchDispatcher, isUsingForcePrio, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCArray*>::func(&cocos2d::CCTouchDispatcher::rearrangeHandlers)), Thiscall, cocos2d::CCTouchDispatcher, rearrangeHandlers, cocos2d::CCArray*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*, int>::func(&cocos2d::CCTouchDispatcher::registerForcePrio)), Thiscall, cocos2d::CCTouchDispatcher, registerForcePrio, cocos2d::CCObject*, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCTouchDispatcher::removeAllDelegates)), Thiscall, cocos2d::CCTouchDispatcher, removeAllDelegates, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTouchDelegate*>::func(&cocos2d::CCTouchDispatcher::removeDelegate)), Thiscall, cocos2d::CCTouchDispatcher, removeDelegate, cocos2d::CCTouchDelegate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCTouchDispatcher::setDispatchEvents)), Thiscall, cocos2d::CCTouchDispatcher, setDispatchEvents, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int, cocos2d::CCTouchDelegate*>::func(&cocos2d::CCTouchDispatcher::setPriority)), Thiscall, cocos2d::CCTouchDispatcher, setPriority, int, cocos2d::CCTouchDelegate*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCSet*, cocos2d::CCEvent*, unsigned int>::func(&cocos2d::CCTouchDispatcher::touches)), Thiscall, cocos2d::CCTouchDispatcher, touches, cocos2d::CCSet*, cocos2d::CCEvent*, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*>::func(&cocos2d::CCTouchDispatcher::unregisterForcePrio)), Thiscall, cocos2d::CCTouchDispatcher, unregisterForcePrio, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCSet*, cocos2d::CCEvent*>::func(&cocos2d::CCTouchDispatcher::touchesBegan)), Thiscall, cocos2d::CCTouchDispatcher, touchesBegan, cocos2d::CCSet*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCSet*, cocos2d::CCEvent*>::func(&cocos2d::CCTouchDispatcher::touchesMoved)), Thiscall, cocos2d::CCTouchDispatcher, touchesMoved, cocos2d::CCSet*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCSet*, cocos2d::CCEvent*>::func(&cocos2d::CCTouchDispatcher::touchesEnded)), Thiscall, cocos2d::CCTouchDispatcher, touchesEnded, cocos2d::CCSet*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCSet*, cocos2d::CCEvent*>::func(&cocos2d::CCTouchDispatcher::touchesCancelled)), Thiscall, cocos2d::CCTouchDispatcher, touchesCancelled, cocos2d::CCSet*, cocos2d::CCEvent*)
 		}
 	};
 }

@@ -15,6 +15,21 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(update) 
 	#endif
 
+	#ifndef GEODE_STATICS_setScaleX
+		#define GEODE_STATICS_setScaleX
+		GEODE_AS_STATIC_FUNCTION(setScaleX) 
+	#endif
+
+	#ifndef GEODE_STATICS_setScaleY
+		#define GEODE_STATICS_setScaleY
+		GEODE_AS_STATIC_FUNCTION(setScaleY) 
+	#endif
+
+	#ifndef GEODE_STATICS_setScale
+		#define GEODE_STATICS_setScale
+		GEODE_AS_STATIC_FUNCTION(setScale) 
+	#endif
+
 	#ifndef GEODE_STATICS_setPosition
 		#define GEODE_STATICS_setPosition
 		GEODE_AS_STATIC_FUNCTION(setPosition) 
@@ -23,6 +38,11 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_setVisible
 		#define GEODE_STATICS_setVisible
 		GEODE_AS_STATIC_FUNCTION(setVisible) 
+	#endif
+
+	#ifndef GEODE_STATICS_setRotation
+		#define GEODE_STATICS_setRotation
+		GEODE_AS_STATIC_FUNCTION(setRotation) 
 	#endif
 
 	#ifndef GEODE_STATICS_setOpacity
@@ -38,6 +58,11 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_setFlipX
 		#define GEODE_STATICS_setFlipX
 		GEODE_AS_STATIC_FUNCTION(setFlipX) 
+	#endif
+
+	#ifndef GEODE_STATICS_setFlipY
+		#define GEODE_STATICS_setFlipY
+		GEODE_AS_STATIC_FUNCTION(setFlipY) 
 	#endif
 
 	#ifndef GEODE_STATICS_resetObject
@@ -75,16 +100,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addAllParticles) 
 	#endif
 
-	#ifndef GEODE_STATICS_addToTouchedRings
-		#define GEODE_STATICS_addToTouchedRings
-		GEODE_AS_STATIC_FUNCTION(addToTouchedRings) 
-	#endif
-
-	#ifndef GEODE_STATICS_addToYVelocity
-		#define GEODE_STATICS_addToYVelocity
-		GEODE_AS_STATIC_FUNCTION(addToYVelocity) 
-	#endif
-
 	#ifndef GEODE_STATICS_animatePlatformerJump
 		#define GEODE_STATICS_animatePlatformerJump
 		GEODE_AS_STATIC_FUNCTION(animatePlatformerJump) 
@@ -100,16 +115,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(bumpPlayer) 
 	#endif
 
-	#ifndef GEODE_STATICS_buttonDown
-		#define GEODE_STATICS_buttonDown
-		GEODE_AS_STATIC_FUNCTION(buttonDown) 
-	#endif
-
-	#ifndef GEODE_STATICS_canStickToGround
-		#define GEODE_STATICS_canStickToGround
-		GEODE_AS_STATIC_FUNCTION(canStickToGround) 
-	#endif
-
 	#ifndef GEODE_STATICS_checkSnapJumpToObject
 		#define GEODE_STATICS_checkSnapJumpToObject
 		GEODE_AS_STATIC_FUNCTION(checkSnapJumpToObject) 
@@ -123,11 +128,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_collidedWithObjectInternal
 		#define GEODE_STATICS_collidedWithObjectInternal
 		GEODE_AS_STATIC_FUNCTION(collidedWithObjectInternal) 
-	#endif
-
-	#ifndef GEODE_STATICS_collidedWithSlope
-		#define GEODE_STATICS_collidedWithSlope
-		GEODE_AS_STATIC_FUNCTION(collidedWithSlope) 
 	#endif
 
 	#ifndef GEODE_STATICS_collidedWithSlopeInternal
@@ -158,16 +158,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_createSpider
 		#define GEODE_STATICS_createSpider
 		GEODE_AS_STATIC_FUNCTION(createSpider) 
-	#endif
-
-	#ifndef GEODE_STATICS_deactivateParticle
-		#define GEODE_STATICS_deactivateParticle
-		GEODE_AS_STATIC_FUNCTION(deactivateParticle) 
-	#endif
-
-	#ifndef GEODE_STATICS_destroyFromHitHead
-		#define GEODE_STATICS_destroyFromHitHead
-		GEODE_AS_STATIC_FUNCTION(destroyFromHitHead) 
 	#endif
 
 	#ifndef GEODE_STATICS_didHitHead
@@ -210,59 +200,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(flipGravity) 
 	#endif
 
-	#ifndef GEODE_STATICS_getCurrentXVelocity
-		#define GEODE_STATICS_getCurrentXVelocity
-		GEODE_AS_STATIC_FUNCTION(getCurrentXVelocity) 
-	#endif
-
-	#ifndef GEODE_STATICS_getModifiedSlopeYVel
-		#define GEODE_STATICS_getModifiedSlopeYVel
-		GEODE_AS_STATIC_FUNCTION(getModifiedSlopeYVel) 
-	#endif
-
-	#ifndef GEODE_STATICS_getOldPosition
-		#define GEODE_STATICS_getOldPosition
-		GEODE_AS_STATIC_FUNCTION(getOldPosition) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSecondColor
-		#define GEODE_STATICS_getSecondColor
-		GEODE_AS_STATIC_FUNCTION(getSecondColor) 
-	#endif
-
-	#ifndef GEODE_STATICS_getYVelocity
-		#define GEODE_STATICS_getYVelocity
-		GEODE_AS_STATIC_FUNCTION(getYVelocity) 
-	#endif
-
-	#ifndef GEODE_STATICS_gravityDown
-		#define GEODE_STATICS_gravityDown
-		GEODE_AS_STATIC_FUNCTION(gravityDown) 
-	#endif
-
-	#ifndef GEODE_STATICS_gravityUp
-		#define GEODE_STATICS_gravityUp
-		GEODE_AS_STATIC_FUNCTION(gravityUp) 
-	#endif
-
-	#ifndef GEODE_STATICS_handlePlayerCommand
-		#define GEODE_STATICS_handlePlayerCommand
-		GEODE_AS_STATIC_FUNCTION(handlePlayerCommand) 
-	#endif
-
 	#ifndef GEODE_STATICS_handleRotatedCollisionInternal
 		#define GEODE_STATICS_handleRotatedCollisionInternal
 		GEODE_AS_STATIC_FUNCTION(handleRotatedCollisionInternal) 
-	#endif
-
-	#ifndef GEODE_STATICS_handleRotatedSlopeCollision
-		#define GEODE_STATICS_handleRotatedSlopeCollision
-		GEODE_AS_STATIC_FUNCTION(handleRotatedSlopeCollision) 
-	#endif
-
-	#ifndef GEODE_STATICS_hardFlipGravity
-		#define GEODE_STATICS_hardFlipGravity
-		GEODE_AS_STATIC_FUNCTION(hardFlipGravity) 
 	#endif
 
 	#ifndef GEODE_STATICS_hitGround
@@ -285,31 +225,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_isBoostValid
-		#define GEODE_STATICS_isBoostValid
-		GEODE_AS_STATIC_FUNCTION(isBoostValid) 
-	#endif
-
-	#ifndef GEODE_STATICS_isSafeFlip
-		#define GEODE_STATICS_isSafeFlip
-		GEODE_AS_STATIC_FUNCTION(isSafeFlip) 
-	#endif
-
-	#ifndef GEODE_STATICS_isSafeHeadTest
-		#define GEODE_STATICS_isSafeHeadTest
-		GEODE_AS_STATIC_FUNCTION(isSafeHeadTest) 
-	#endif
-
-	#ifndef GEODE_STATICS_isSafeMode
-		#define GEODE_STATICS_isSafeMode
-		GEODE_AS_STATIC_FUNCTION(isSafeMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_isSafeSpiderFlip
-		#define GEODE_STATICS_isSafeSpiderFlip
-		GEODE_AS_STATIC_FUNCTION(isSafeSpiderFlip) 
-	#endif
-
 	#ifndef GEODE_STATICS_levelFlipFinished
 		#define GEODE_STATICS_levelFlipFinished
 		GEODE_AS_STATIC_FUNCTION(levelFlipFinished) 
@@ -325,11 +240,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(levelWillFlip) 
 	#endif
 
-	#ifndef GEODE_STATICS_limitDashRotation
-		#define GEODE_STATICS_limitDashRotation
-		GEODE_AS_STATIC_FUNCTION(limitDashRotation) 
-	#endif
-
 	#ifndef GEODE_STATICS_loadFromCheckpoint
 		#define GEODE_STATICS_loadFromCheckpoint
 		GEODE_AS_STATIC_FUNCTION(loadFromCheckpoint) 
@@ -340,21 +250,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(lockPlayer) 
 	#endif
 
-	#ifndef GEODE_STATICS_logValues
-		#define GEODE_STATICS_logValues
-		GEODE_AS_STATIC_FUNCTION(logValues) 
-	#endif
-
-	#ifndef GEODE_STATICS_modeDidChange
-		#define GEODE_STATICS_modeDidChange
-		GEODE_AS_STATIC_FUNCTION(modeDidChange) 
-	#endif
-
-	#ifndef GEODE_STATICS_performSlideCheck
-		#define GEODE_STATICS_performSlideCheck
-		GEODE_AS_STATIC_FUNCTION(performSlideCheck) 
-	#endif
-
 	#ifndef GEODE_STATICS_placeStreakPoint
 		#define GEODE_STATICS_placeStreakPoint
 		GEODE_AS_STATIC_FUNCTION(placeStreakPoint) 
@@ -363,11 +258,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_playBumpEffect
 		#define GEODE_STATICS_playBumpEffect
 		GEODE_AS_STATIC_FUNCTION(playBumpEffect) 
-	#endif
-
-	#ifndef GEODE_STATICS_playBurstEffect
-		#define GEODE_STATICS_playBurstEffect
-		GEODE_AS_STATIC_FUNCTION(playBurstEffect) 
 	#endif
 
 	#ifndef GEODE_STATICS_playCompleteEffect
@@ -390,29 +280,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(playerDestroyed) 
 	#endif
 
-	#ifndef GEODE_STATICS_playerIsFalling
-		#define GEODE_STATICS_playerIsFalling
-		GEODE_AS_STATIC_FUNCTION(playerIsFalling) 
-	#endif
-
 	#ifndef GEODE_STATICS_playerIsFallingBugged
 		#define GEODE_STATICS_playerIsFallingBugged
 		GEODE_AS_STATIC_FUNCTION(playerIsFallingBugged) 
-	#endif
-
-	#ifndef GEODE_STATICS_playerIsMovingUp
-		#define GEODE_STATICS_playerIsMovingUp
-		GEODE_AS_STATIC_FUNCTION(playerIsMovingUp) 
-	#endif
-
-	#ifndef GEODE_STATICS_playerTeleported
-		#define GEODE_STATICS_playerTeleported
-		GEODE_AS_STATIC_FUNCTION(playerTeleported) 
-	#endif
-
-	#ifndef GEODE_STATICS_playingEndEffect
-		#define GEODE_STATICS_playingEndEffect
-		GEODE_AS_STATIC_FUNCTION(playingEndEffect) 
 	#endif
 
 	#ifndef GEODE_STATICS_playSpawnEffect
@@ -430,11 +300,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(postCollision) 
 	#endif
 
-	#ifndef GEODE_STATICS_preCollision
-		#define GEODE_STATICS_preCollision
-		GEODE_AS_STATIC_FUNCTION(preCollision) 
-	#endif
-
 	#ifndef GEODE_STATICS_preSlopeCollision
 		#define GEODE_STATICS_preSlopeCollision
 		GEODE_AS_STATIC_FUNCTION(preSlopeCollision) 
@@ -448,21 +313,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_pushButton
 		#define GEODE_STATICS_pushButton
 		GEODE_AS_STATIC_FUNCTION(pushButton) 
-	#endif
-
-	#ifndef GEODE_STATICS_pushDown
-		#define GEODE_STATICS_pushDown
-		GEODE_AS_STATIC_FUNCTION(pushDown) 
-	#endif
-
-	#ifndef GEODE_STATICS_pushPlayer
-		#define GEODE_STATICS_pushPlayer
-		GEODE_AS_STATIC_FUNCTION(pushPlayer) 
-	#endif
-
-	#ifndef GEODE_STATICS_redirectDash
-		#define GEODE_STATICS_redirectDash
-		GEODE_AS_STATIC_FUNCTION(redirectDash) 
 	#endif
 
 	#ifndef GEODE_STATICS_redirectPlayerForce
@@ -480,19 +330,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(releaseButton) 
 	#endif
 
-	#ifndef GEODE_STATICS_removeAllParticles
-		#define GEODE_STATICS_removeAllParticles
-		GEODE_AS_STATIC_FUNCTION(removeAllParticles) 
-	#endif
-
 	#ifndef GEODE_STATICS_removePendingCheckpoint
 		#define GEODE_STATICS_removePendingCheckpoint
 		GEODE_AS_STATIC_FUNCTION(removePendingCheckpoint) 
-	#endif
-
-	#ifndef GEODE_STATICS_removePlacedCheckpoint
-		#define GEODE_STATICS_removePlacedCheckpoint
-		GEODE_AS_STATIC_FUNCTION(removePlacedCheckpoint) 
 	#endif
 
 	#ifndef GEODE_STATICS_resetAllParticles
@@ -500,24 +340,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(resetAllParticles) 
 	#endif
 
-	#ifndef GEODE_STATICS_resetCollisionLog
-		#define GEODE_STATICS_resetCollisionLog
-		GEODE_AS_STATIC_FUNCTION(resetCollisionLog) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetCollisionValues
-		#define GEODE_STATICS_resetCollisionValues
-		GEODE_AS_STATIC_FUNCTION(resetCollisionValues) 
-	#endif
-
 	#ifndef GEODE_STATICS_resetPlayerIcon
 		#define GEODE_STATICS_resetPlayerIcon
 		GEODE_AS_STATIC_FUNCTION(resetPlayerIcon) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetStateVariables
-		#define GEODE_STATICS_resetStateVariables
-		GEODE_AS_STATIC_FUNCTION(resetStateVariables) 
 	#endif
 
 	#ifndef GEODE_STATICS_resetStreak
@@ -528,11 +353,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_resetTouchedRings
 		#define GEODE_STATICS_resetTouchedRings
 		GEODE_AS_STATIC_FUNCTION(resetTouchedRings) 
-	#endif
-
-	#ifndef GEODE_STATICS_reverseMod
-		#define GEODE_STATICS_reverseMod
-		GEODE_AS_STATIC_FUNCTION(reverseMod) 
 	#endif
 
 	#ifndef GEODE_STATICS_reversePlayer
@@ -553,11 +373,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_rotateGameplayObject
 		#define GEODE_STATICS_rotateGameplayObject
 		GEODE_AS_STATIC_FUNCTION(rotateGameplayObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_rotatePreSlopeObjects
-		#define GEODE_STATICS_rotatePreSlopeObjects
-		GEODE_AS_STATIC_FUNCTION(rotatePreSlopeObjects) 
 	#endif
 
 	#ifndef GEODE_STATICS_runBallRotation
@@ -600,19 +415,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(spawnCircle) 
 	#endif
 
-	#ifndef GEODE_STATICS_spawnCircle2
-		#define GEODE_STATICS_spawnCircle2
-		GEODE_AS_STATIC_FUNCTION(spawnCircle2) 
-	#endif
-
 	#ifndef GEODE_STATICS_spawnDualCircle
 		#define GEODE_STATICS_spawnDualCircle
 		GEODE_AS_STATIC_FUNCTION(spawnDualCircle) 
-	#endif
-
-	#ifndef GEODE_STATICS_spawnFromPlayer
-		#define GEODE_STATICS_spawnFromPlayer
-		GEODE_AS_STATIC_FUNCTION(spawnFromPlayer) 
 	#endif
 
 	#ifndef GEODE_STATICS_spawnPortalCircle
@@ -623,21 +428,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_spawnScaleCircle
 		#define GEODE_STATICS_spawnScaleCircle
 		GEODE_AS_STATIC_FUNCTION(spawnScaleCircle) 
-	#endif
-
-	#ifndef GEODE_STATICS_specialGroundHit
-		#define GEODE_STATICS_specialGroundHit
-		GEODE_AS_STATIC_FUNCTION(specialGroundHit) 
-	#endif
-
-	#ifndef GEODE_STATICS_speedDown
-		#define GEODE_STATICS_speedDown
-		GEODE_AS_STATIC_FUNCTION(speedDown) 
-	#endif
-
-	#ifndef GEODE_STATICS_speedUp
-		#define GEODE_STATICS_speedUp
-		GEODE_AS_STATIC_FUNCTION(speedUp) 
 	#endif
 
 	#ifndef GEODE_STATICS_spiderTestJump
@@ -685,16 +475,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(stopPlatformerJumpAnimation) 
 	#endif
 
-	#ifndef GEODE_STATICS_stopStreak2
-		#define GEODE_STATICS_stopStreak2
-		GEODE_AS_STATIC_FUNCTION(stopStreak2) 
-	#endif
-
-	#ifndef GEODE_STATICS_storeCollision
-		#define GEODE_STATICS_storeCollision
-		GEODE_AS_STATIC_FUNCTION(storeCollision) 
-	#endif
-
 	#ifndef GEODE_STATICS_switchedDirTo
 		#define GEODE_STATICS_switchedDirTo
 		GEODE_AS_STATIC_FUNCTION(switchedDirTo) 
@@ -703,11 +483,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_switchedToMode
 		#define GEODE_STATICS_switchedToMode
 		GEODE_AS_STATIC_FUNCTION(switchedToMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_testForMoving
-		#define GEODE_STATICS_testForMoving
-		GEODE_AS_STATIC_FUNCTION(testForMoving) 
 	#endif
 
 	#ifndef GEODE_STATICS_toggleBirdMode
@@ -760,11 +535,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(toggleVisibility) 
 	#endif
 
-	#ifndef GEODE_STATICS_touchedObject
-		#define GEODE_STATICS_touchedObject
-		GEODE_AS_STATIC_FUNCTION(touchedObject) 
-	#endif
-
 	#ifndef GEODE_STATICS_tryPlaceCheckpoint
 		#define GEODE_STATICS_tryPlaceCheckpoint
 		GEODE_AS_STATIC_FUNCTION(tryPlaceCheckpoint) 
@@ -775,24 +545,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(unrotateGameplayObject) 
 	#endif
 
-	#ifndef GEODE_STATICS_unrotatePreSlopeObjects
-		#define GEODE_STATICS_unrotatePreSlopeObjects
-		GEODE_AS_STATIC_FUNCTION(unrotatePreSlopeObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateCheckpointTest
-		#define GEODE_STATICS_updateCheckpointTest
-		GEODE_AS_STATIC_FUNCTION(updateCheckpointTest) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateCollide
 		#define GEODE_STATICS_updateCollide
 		GEODE_AS_STATIC_FUNCTION(updateCollide) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateCollideBottom
-		#define GEODE_STATICS_updateCollideBottom
-		GEODE_AS_STATIC_FUNCTION(updateCollideBottom) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateCollideLeft
@@ -803,11 +558,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateCollideRight
 		#define GEODE_STATICS_updateCollideRight
 		GEODE_AS_STATIC_FUNCTION(updateCollideRight) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateCollideTop
-		#define GEODE_STATICS_updateCollideTop
-		GEODE_AS_STATIC_FUNCTION(updateCollideTop) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateDashAnimation
@@ -835,16 +585,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateJump) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateJumpVariables
-		#define GEODE_STATICS_updateJumpVariables
-		GEODE_AS_STATIC_FUNCTION(updateJumpVariables) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateLastGroundObject
-		#define GEODE_STATICS_updateLastGroundObject
-		GEODE_AS_STATIC_FUNCTION(updateLastGroundObject) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateMove
 		#define GEODE_STATICS_updateMove
 		GEODE_AS_STATIC_FUNCTION(updateMove) 
@@ -863,11 +603,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updatePlayerDartFrame
 		#define GEODE_STATICS_updatePlayerDartFrame
 		GEODE_AS_STATIC_FUNCTION(updatePlayerDartFrame) 
-	#endif
-
-	#ifndef GEODE_STATICS_updatePlayerForce
-		#define GEODE_STATICS_updatePlayerForce
-		GEODE_AS_STATIC_FUNCTION(updatePlayerForce) 
 	#endif
 
 	#ifndef GEODE_STATICS_updatePlayerFrame
@@ -935,34 +670,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateSlopeRotation) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateSlopeYVelocity
-		#define GEODE_STATICS_updateSlopeYVelocity
-		GEODE_AS_STATIC_FUNCTION(updateSlopeYVelocity) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateSpecial
-		#define GEODE_STATICS_updateSpecial
-		GEODE_AS_STATIC_FUNCTION(updateSpecial) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateStateVariables
-		#define GEODE_STATICS_updateStateVariables
-		GEODE_AS_STATIC_FUNCTION(updateStateVariables) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateStaticForce
-		#define GEODE_STATICS_updateStaticForce
-		GEODE_AS_STATIC_FUNCTION(updateStaticForce) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateStreakBlend
 		#define GEODE_STATICS_updateStreakBlend
 		GEODE_AS_STATIC_FUNCTION(updateStreakBlend) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateStreaks
-		#define GEODE_STATICS_updateStreaks
-		GEODE_AS_STATIC_FUNCTION(updateStreaks) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateSwingFire
@@ -973,21 +683,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateTimeMod
 		#define GEODE_STATICS_updateTimeMod
 		GEODE_AS_STATIC_FUNCTION(updateTimeMod) 
-	#endif
-
-	#ifndef GEODE_STATICS_usingWallLimitedMode
-		#define GEODE_STATICS_usingWallLimitedMode
-		GEODE_AS_STATIC_FUNCTION(usingWallLimitedMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_yStartDown
-		#define GEODE_STATICS_yStartDown
-		GEODE_AS_STATIC_FUNCTION(yStartDown) 
-	#endif
-
-	#ifndef GEODE_STATICS_yStartUp
-		#define GEODE_STATICS_yStartUp
-		GEODE_AS_STATIC_FUNCTION(yStartUp) 
 	#endif
 
     
@@ -1209,6 +904,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_doReversePlayer
 		#define GEODE_CONCEPT_CHECK_doReversePlayer
 		GEODE_CONCEPT_FUNCTION_CHECK(doReversePlayer) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_enableCustomGlowColor
+		#define GEODE_CONCEPT_CHECK_enableCustomGlowColor
+		GEODE_CONCEPT_FUNCTION_CHECK(enableCustomGlowColor) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_enablePlayerControls
@@ -2100,229 +1800,232 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x370960, Default, PlayerObject, create, int, int, GJBaseGameLayer*, cocos2d::CCLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x373010, Thiscall, PlayerObject, update, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, setScaleX, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, setScaleY, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, setScale, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3868b0, Thiscall, PlayerObject, setPosition, cocos2d::CCPoint const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38caf0, Thiscall, PlayerObject, setVisible, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, setRotation, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x387d60, Thiscall, PlayerObject, setOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x387580, Thiscall, PlayerObject, setColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38ca00, Thiscall, PlayerObject, setFlipX, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, setFlipY, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3810b0, Thiscall, PlayerObject, resetObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x387e90, Thiscall, PlayerObject, getRealPosition, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38a8c0, Thiscall, PlayerObject, getOrientedBox, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38a8e0, Thiscall, PlayerObject, getObjectRotation, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38cb10, Thiscall, PlayerObject, animationFinished, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38a300, Thiscall, PlayerObject, activateStreak, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x372900, Thiscall, PlayerObject, addAllParticles, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, addToTouchedRings, RingObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, addToYVelocity, double, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x376ef0, Thiscall, PlayerObject, animatePlatformerJump, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38a150, Thiscall, PlayerObject, boostPlayer, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x389910, Thiscall, PlayerObject, bumpPlayer, float, int, bool, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, buttonDown, PlayerButton)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, canStickToGround, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, checkSnapJumpToObject, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37bb80, Thiscall, PlayerObject, collidedWithObject, float, GameObject*, cocos2d::CCRect, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, collidedWithObject, float, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37bc40, Thiscall, PlayerObject, collidedWithObjectInternal, float, GameObject*, cocos2d::CCRect, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, collidedWithSlope, float, GameObject*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3799e0, Thiscall, PlayerObject, collidedWithSlopeInternal, float, GameObject*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, convertToClosestRotation, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38a710, Thiscall, PlayerObject, copyAttributes, PlayerObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x382830, Thiscall, PlayerObject, createFadeOutDartStreak, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x372180, Thiscall, PlayerObject, createRobot, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x372540, Thiscall, PlayerObject, createSpider, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, deactivateParticle, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x385350, Thiscall, PlayerObject, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x3864a0, Thiscall, PlayerObject)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3866d0, Default, PlayerObject, create, int, int, GJBaseGameLayer*, cocos2d::CCLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x388d80, Thiscall, PlayerObject, update, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3910, Thiscall, PlayerObject, setScaleX, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3920, Thiscall, PlayerObject, setScaleY, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3930, Thiscall, PlayerObject, setScale, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39c640, Thiscall, PlayerObject, setPosition, cocos2d::CCPoint const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3940, Thiscall, PlayerObject, setVisible, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3840, Thiscall, PlayerObject, setRotation, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39daf0, Thiscall, PlayerObject, setOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39d310, Thiscall, PlayerObject, setColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3850, Thiscall, PlayerObject, setFlipX, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198200, Thiscall, PlayerObject, setFlipY, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x396ee0, Thiscall, PlayerObject, resetObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39dc20, Thiscall, PlayerObject, getRealPosition, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a0650, Thiscall, PlayerObject, getOrientedBox, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a0670, Thiscall, PlayerObject, getObjectRotation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3960, Thiscall, PlayerObject, animationFinished, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a0090, Thiscall, PlayerObject, activateStreak, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x388670, Thiscall, PlayerObject, addAllParticles, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, addToTouchedRings, RingObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, addToYVelocity, double, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38cc80, Thiscall, PlayerObject, animatePlatformerJump, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39fee0, Thiscall, PlayerObject, boostPlayer, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39f6a0, Thiscall, PlayerObject, bumpPlayer, float, int, bool, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, buttonDown, PlayerButton)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, canStickToGround, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x393cb0, Thiscall, PlayerObject, checkSnapJumpToObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, collidedWithObject, float, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3919b0, Thiscall, PlayerObject, collidedWithObject, float, GameObject*, cocos2d::CCRect, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x391a70, Thiscall, PlayerObject, collidedWithObjectInternal, float, GameObject*, cocos2d::CCRect, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, collidedWithSlope, float, GameObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38f810, Thiscall, PlayerObject, collidedWithSlopeInternal, float, GameObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38d100, Thiscall, PlayerObject, convertToClosestRotation, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a04a0, Thiscall, PlayerObject, copyAttributes, PlayerObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x398660, Thiscall, PlayerObject, createFadeOutDartStreak, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x387ef0, Thiscall, PlayerObject, createRobot, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3882b0, Thiscall, PlayerObject, createSpider, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, deactivateParticle, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, deactivateStreak, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, destroyFromHitHead, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37de00, Thiscall, PlayerObject, didHitHead, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, destroyFromHitHead, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x393c30, Thiscall, PlayerObject, didHitHead, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, disableCustomGlowColor, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x389620, Thiscall, PlayerObject, disablePlayerControls, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x385170, Thiscall, PlayerObject, disableSwingFire, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3826e0, Thiscall, PlayerObject, doReversePlayer, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x389770, Thiscall, PlayerObject, enablePlayerControls, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, exitPlatformerAnimateJump, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38a400, Thiscall, PlayerObject, fadeOutStreak2, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39f3b0, Thiscall, PlayerObject, disablePlayerControls, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39af00, Thiscall, PlayerObject, disableSwingFire, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x398510, Thiscall, PlayerObject, doReversePlayer, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, enableCustomGlowColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39f500, Thiscall, PlayerObject, enablePlayerControls, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38cf30, Thiscall, PlayerObject, exitPlatformerAnimateJump, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a0190, Thiscall, PlayerObject, fadeOutStreak2, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, flashPlayer, float, float, cocos2d::ccColor3B, cocos2d::ccColor3B)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x384440, Thiscall, PlayerObject, flipGravity, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39a1d0, Thiscall, PlayerObject, flipGravity, bool, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, flipMod, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, gameEventTriggered, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, getActiveMode, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, getCurrentXVelocity, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, getModifiedSlopeYVel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, getOldPosition, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, getSecondColor, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, getYVelocity, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, gravityDown, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, gravityUp, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, handlePlayerCommand, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x379310, Thiscall, PlayerObject, handleRotatedCollisionInternal, float, GameObject*, cocos2d::CCRect, bool, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, getCurrentXVelocity, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, getModifiedSlopeYVel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, getOldPosition, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, getSecondColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, getYVelocity, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, gravityDown, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, gravityUp, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, handlePlayerCommand, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38f140, Thiscall, PlayerObject, handleRotatedCollisionInternal, float, GameObject*, cocos2d::CCRect, bool, bool, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, handleRotatedObjectCollision, float, GameObject*, cocos2d::CCRect, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, handleRotatedSlopeCollision, float, GameObject*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, hardFlipGravity, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3861a0, Thiscall, PlayerObject, hitGround, GameObject*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, hitGroundNoJump, GameObject*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x376e10, Thiscall, PlayerObject, incrementJumps, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x370a00, Thiscall, PlayerObject, init, int, int, GJBaseGameLayer*, cocos2d::CCLayer*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, isBoostValid, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, handleRotatedSlopeCollision, float, GameObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, hardFlipGravity, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39bf30, Thiscall, PlayerObject, hitGround, GameObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39bed0, Thiscall, PlayerObject, hitGroundNoJump, GameObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38cba0, Thiscall, PlayerObject, incrementJumps, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x386770, Thiscall, PlayerObject, init, int, int, GJBaseGameLayer*, cocos2d::CCLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, isBoostValid, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, isFlying, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, isInBasicMode, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, isInNormalMode, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, isSafeFlip, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, isSafeHeadTest, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, isSafeMode, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, isSafeSpiderFlip, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3759e0, Thiscall, PlayerObject, levelFlipFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x385760, Thiscall, PlayerObject, levelFlipping, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, levelWillFlip, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, limitDashRotation, float&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38bc30, Thiscall, PlayerObject, loadFromCheckpoint, PlayerCheckpoint*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x389540, Thiscall, PlayerObject, lockPlayer, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, logValues, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, modeDidChange, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, performSlideCheck, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38a8f0, Thiscall, PlayerObject, placeStreakPoint, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x389cc0, Thiscall, PlayerObject, playBumpEffect, int, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, playBurstEffect, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x36e2b0, Thiscall, PlayerObject, playCompleteEffect, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3691a0, Thiscall, PlayerObject, playDeathEffect, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38b740, Thiscall, PlayerObject, playDynamicSpiderRun, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x381f10, Thiscall, PlayerObject, playerDestroyed, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, playerIsFalling, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3846a0, Thiscall, PlayerObject, playerIsFallingBugged, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, playerIsMovingUp, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, playerTeleported, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, playingEndEffect, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x381650, Thiscall, PlayerObject, playSpawnEffect, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37f340, Thiscall, PlayerObject, playSpiderDashEffect, cocos2d::CCPoint, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3777f0, Thiscall, PlayerObject, postCollision, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, preCollision, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3794b0, Thiscall, PlayerObject, preSlopeCollision, float, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x389ac0, Thiscall, PlayerObject, propellPlayer, float, bool, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x382110, Thiscall, PlayerObject, pushButton, PlayerButton)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, pushDown, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, pushPlayer, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, redirectDash, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x389ed0, Thiscall, PlayerObject, redirectPlayerForce, float, float, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x389370, Thiscall, PlayerObject, releaseAllButtons, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3823a0, Thiscall, PlayerObject, releaseButton, PlayerButton)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, removeAllParticles, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38c400, Thiscall, PlayerObject, removePendingCheckpoint, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, removePlacedCheckpoint, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x375a70, Thiscall, PlayerObject, resetAllParticles, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, resetCollisionLog, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, resetCollisionValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x385550, Thiscall, PlayerObject, resetPlayerIcon, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, resetStateVariables, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x375870, Thiscall, PlayerObject, resetStreak, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3824b0, Thiscall, PlayerObject, resetTouchedRings, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, reverseMod, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x382600, Thiscall, PlayerObject, reversePlayer, EffectGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x382dd0, Thiscall, PlayerObject, ringJump, RingObject*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x383fc0, Thiscall, PlayerObject, rotateGameplay, int, int, bool, float, float, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37b5c0, Thiscall, PlayerObject, rotateGameplayObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, isSafeFlip, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, isSafeHeadTest, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, isSafeMode, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, isSafeSpiderFlip, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38b750, Thiscall, PlayerObject, levelFlipFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39b4f0, Thiscall, PlayerObject, levelFlipping, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38b6d0, Thiscall, PlayerObject, levelWillFlip, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, limitDashRotation, float&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a21b0, Thiscall, PlayerObject, loadFromCheckpoint, PlayerCheckpoint*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39f2d0, Thiscall, PlayerObject, lockPlayer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, logValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, modeDidChange, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, performSlideCheck, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a0680, Thiscall, PlayerObject, placeStreakPoint, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39fa50, Thiscall, PlayerObject, playBumpEffect, int, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, playBurstEffect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x384020, Thiscall, PlayerObject, playCompleteEffect, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37ef10, Thiscall, PlayerObject, playDeathEffect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a14d0, Thiscall, PlayerObject, playDynamicSpiderRun, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x397d40, Thiscall, PlayerObject, playerDestroyed, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, playerIsFalling, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39a430, Thiscall, PlayerObject, playerIsFallingBugged, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, playerIsMovingUp, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, playerTeleported, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, playingEndEffect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x397480, Thiscall, PlayerObject, playSpawnEffect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x395170, Thiscall, PlayerObject, playSpiderDashEffect, cocos2d::CCPoint, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38d580, Thiscall, PlayerObject, postCollision, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, preCollision, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38f2e0, Thiscall, PlayerObject, preSlopeCollision, float, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39f850, Thiscall, PlayerObject, propellPlayer, float, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x397f40, Thiscall, PlayerObject, pushButton, PlayerButton)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, pushDown, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, pushPlayer, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, redirectDash, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39fc60, Thiscall, PlayerObject, redirectPlayerForce, float, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39f100, Thiscall, PlayerObject, releaseAllButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3981d0, Thiscall, PlayerObject, releaseButton, PlayerButton)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, removeAllParticles, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3250, Thiscall, PlayerObject, removePendingCheckpoint, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, removePlacedCheckpoint, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38b7e0, Thiscall, PlayerObject, resetAllParticles, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, resetCollisionLog, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, resetCollisionValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39b2e0, Thiscall, PlayerObject, resetPlayerIcon, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, resetStateVariables, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38b5e0, Thiscall, PlayerObject, resetStreak, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3982e0, Thiscall, PlayerObject, resetTouchedRings, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, reverseMod, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x398430, Thiscall, PlayerObject, reversePlayer, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x398c00, Thiscall, PlayerObject, ringJump, RingObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x399d50, Thiscall, PlayerObject, rotateGameplay, int, int, bool, float, float, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3913f0, Thiscall, PlayerObject, rotateGameplayObject, GameObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, rotateGameplayOnly, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, rotatePreSlopeObjects, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3775c0, Thiscall, PlayerObject, runBallRotation, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3776f0, Thiscall, PlayerObject, runBallRotation2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, rotatePreSlopeObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38d350, Thiscall, PlayerObject, runBallRotation, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38d480, Thiscall, PlayerObject, runBallRotation2, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, runNormalRotation, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x377490, Thiscall, PlayerObject, runNormalRotation, bool, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38d220, Thiscall, PlayerObject, runNormalRotation, bool, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, runRotateAction, bool, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38b980, Thiscall, PlayerObject, saveToCheckpoint, PlayerCheckpoint*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x387610, Thiscall, PlayerObject, setSecondColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x372a50, Thiscall, PlayerObject, setupStreak, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x372fa0, Thiscall, PlayerObject, setYVelocity, double, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, spawnCircle, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, spawnCircle2, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, spawnDualCircle, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, spawnFromPlayer, PlayerObject*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x381930, Thiscall, PlayerObject, spawnPortalCircle, cocos2d::ccColor3B, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, spawnScaleCircle, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, specialGroundHit, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, speedDown, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, speedUp, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37e510, Thiscall, PlayerObject, spiderTestJump, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37e5c0, Thiscall, PlayerObject, spiderTestJumpInternal, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a1710, Thiscall, PlayerObject, saveToCheckpoint, PlayerCheckpoint*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39d3a0, Thiscall, PlayerObject, setSecondColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3887c0, Thiscall, PlayerObject, setupStreak, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x388d10, Thiscall, PlayerObject, setYVelocity, double, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3975b0, Thiscall, PlayerObject, spawnCircle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, spawnCircle2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x397b70, Thiscall, PlayerObject, spawnDualCircle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, spawnFromPlayer, PlayerObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x397760, Thiscall, PlayerObject, spawnPortalCircle, cocos2d::ccColor3B, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x397970, Thiscall, PlayerObject, spawnScaleCircle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, specialGroundHit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, speedDown, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, speedUp, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x394340, Thiscall, PlayerObject, spiderTestJump, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3943f0, Thiscall, PlayerObject, spiderTestJumpInternal, bool)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, spiderTestJumpX, bool)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, spiderTestJumpY, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37fae0, Thiscall, PlayerObject, startDashing, DashRingObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, stopBurstEffect, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x380820, Thiscall, PlayerObject, stopDashing, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x375af0, Thiscall, PlayerObject, stopParticles, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3772d0, Thiscall, PlayerObject, stopPlatformerJumpAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x395910, Thiscall, PlayerObject, startDashing, DashRingObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39b4e0, Thiscall, PlayerObject, stopBurstEffect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x396650, Thiscall, PlayerObject, stopDashing, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38b860, Thiscall, PlayerObject, stopParticles, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38d060, Thiscall, PlayerObject, stopPlatformerJumpAnimation, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, stopRotation, bool, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, stopStreak2, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, storeCollision, PlayerCollisionDirection, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x382000, Thiscall, PlayerObject, switchedDirTo, PlayerButton)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3860a0, Thiscall, PlayerObject, switchedToMode, GameObjectType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, testForMoving, float, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x384a90, Thiscall, PlayerObject, toggleBirdMode, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x385200, Thiscall, PlayerObject, toggleDartMode, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x384760, Thiscall, PlayerObject, toggleFlyMode, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3890a0, Thiscall, PlayerObject, toggleGhostEffect, GhostType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, stopStreak2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, storeCollision, PlayerCollisionDirection, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x397e30, Thiscall, PlayerObject, switchedDirTo, PlayerButton)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39be30, Thiscall, PlayerObject, switchedToMode, GameObjectType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, testForMoving, float, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39a820, Thiscall, PlayerObject, toggleBirdMode, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39af90, Thiscall, PlayerObject, toggleDartMode, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39a4f0, Thiscall, PlayerObject, toggleFlyMode, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39ee30, Thiscall, PlayerObject, toggleGhostEffect, GhostType)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, togglePlatformerMode, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38a970, Thiscall, PlayerObject, togglePlayerScale, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x385960, Thiscall, PlayerObject, toggleRobotMode, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3857e0, Thiscall, PlayerObject, toggleRollMode, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x385ce0, Thiscall, PlayerObject, toggleSpiderMode, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x384d90, Thiscall, PlayerObject, toggleSwingMode, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3756d0, Thiscall, PlayerObject, toggleVisibility, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, touchedObject, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38c480, Thiscall, PlayerObject, tryPlaceCheckpoint, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37b8b0, Thiscall, PlayerObject, unrotateGameplayObject, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, unrotatePreSlopeObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a0700, Thiscall, PlayerObject, togglePlayerScale, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39b6f0, Thiscall, PlayerObject, toggleRobotMode, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39b570, Thiscall, PlayerObject, toggleRollMode, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39ba70, Thiscall, PlayerObject, toggleSpiderMode, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39ab20, Thiscall, PlayerObject, toggleSwingMode, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38b440, Thiscall, PlayerObject, toggleVisibility, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, touchedObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a32d0, Thiscall, PlayerObject, tryPlaceCheckpoint, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3916e0, Thiscall, PlayerObject, unrotateGameplayObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, unrotatePreSlopeObjects, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, updateCheckpointMode, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, updateCheckpointTest, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37e1c0, Thiscall, PlayerObject, updateCollide, PlayerCollisionDirection, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, updateCollideBottom, float, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, updateCollideLeft, float, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, updateCollideRight, float, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, updateCollideTop, float, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x380ef0, Thiscall, PlayerObject, updateDashAnimation, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x380390, Thiscall, PlayerObject, updateDashArt, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, updateCheckpointTest, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x393ff0, Thiscall, PlayerObject, updateCollide, PlayerCollisionDirection, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, updateCollideBottom, float, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x394200, Thiscall, PlayerObject, updateCollideLeft, float, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3942a0, Thiscall, PlayerObject, updateCollideRight, float, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, updateCollideTop, float, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x396d20, Thiscall, PlayerObject, updateDashAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3961c0, Thiscall, PlayerObject, updateDashArt, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, updateEffects, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3876a0, Thiscall, PlayerObject, updateGlowColor, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38d0c0, Thiscall, PlayerObject, updateInternalActions, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x375b90, Thiscall, PlayerObject, updateJump, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, updateJumpVariables, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, updateLastGroundObject, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x374350, Thiscall, PlayerObject, updateMove, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x382a30, Thiscall, PlayerObject, updatePlayerArt, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x388550, Thiscall, PlayerObject, updatePlayerBirdFrame, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x388c50, Thiscall, PlayerObject, updatePlayerDartFrame, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, updatePlayerForce, cocos2d::CCPoint, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x387ec0, Thiscall, PlayerObject, updatePlayerFrame, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38a510, Thiscall, PlayerObject, updatePlayerGlow, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x388320, Thiscall, PlayerObject, updatePlayerJetpackFrame, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39d430, Thiscall, PlayerObject, updateGlowColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3f10, Thiscall, PlayerObject, updateInternalActions, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38b900, Thiscall, PlayerObject, updateJump, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, updateJumpVariables, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, updateLastGroundObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38a0c0, Thiscall, PlayerObject, updateMove, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x398860, Thiscall, PlayerObject, updatePlayerArt, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39e2e0, Thiscall, PlayerObject, updatePlayerBirdFrame, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39e9e0, Thiscall, PlayerObject, updatePlayerDartFrame, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, updatePlayerForce, cocos2d::CCPoint, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39dc50, Thiscall, PlayerObject, updatePlayerFrame, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a02a0, Thiscall, PlayerObject, updatePlayerGlow, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39e0b0, Thiscall, PlayerObject, updatePlayerJetpackFrame, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, updatePlayerRobotFrame, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3887f0, Thiscall, PlayerObject, updatePlayerRollFrame, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38a490, Thiscall, PlayerObject, updatePlayerScale, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3880f0, Thiscall, PlayerObject, updatePlayerShipFrame, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39e580, Thiscall, PlayerObject, updatePlayerRollFrame, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a0220, Thiscall, PlayerObject, updatePlayerScale, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39de80, Thiscall, PlayerObject, updatePlayerShipFrame, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, updatePlayerSpiderFrame, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x388e80, Thiscall, PlayerObject, updatePlayerSpriteExtra, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x388a20, Thiscall, PlayerObject, updatePlayerSwingFrame, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38b350, Thiscall, PlayerObject, updateRobotAnimationSpeed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x377370, Thiscall, PlayerObject, updateRotation, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37b1f0, Thiscall, PlayerObject, updateRotation, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37ae10, Thiscall, PlayerObject, updateShipRotation, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x388f90, Thiscall, PlayerObject, updateShipSpriteExtra, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, updateSlopeRotation, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, updateSlopeYVelocity, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, updateSpecial, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, updateStateVariables, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, updateStaticForce, float, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x372f30, Thiscall, PlayerObject, updateStreakBlend, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, updateStreaks, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x385040, Thiscall, PlayerObject, updateSwingFire, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38afc0, Thiscall, PlayerObject, updateTimeMod, float, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, usingWallLimitedMode, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, yStartDown, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayerObject, yStartUp, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39ec10, Thiscall, PlayerObject, updatePlayerSpriteExtra, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39e7b0, Thiscall, PlayerObject, updatePlayerSwingFrame, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a10e0, Thiscall, PlayerObject, updateRobotAnimationSpeed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x391020, Thiscall, PlayerObject, updateRotation, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x391260, Thiscall, PlayerObject, updateRotation, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x390c40, Thiscall, PlayerObject, updateShipRotation, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39ed20, Thiscall, PlayerObject, updateShipSpriteExtra, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x390bc0, Thiscall, PlayerObject, updateSlopeRotation, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, updateSlopeYVelocity, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, updateSpecial, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, updateStateVariables, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, updateStaticForce, float, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x388ca0, Thiscall, PlayerObject, updateStreakBlend, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, updateStreaks, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39add0, Thiscall, PlayerObject, updateSwingFire, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a0d50, Thiscall, PlayerObject, updateTimeMod, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, usingWallLimitedMode, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, yStartDown, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayerObject, yStartUp, )
 		}
 	};
 }

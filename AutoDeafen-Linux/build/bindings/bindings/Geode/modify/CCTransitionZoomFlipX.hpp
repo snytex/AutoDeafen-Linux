@@ -35,6 +35,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCTransitionZoomFlipX@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCTransitionZoomFlipX, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCTransitionZoomFlipX@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCTransitionZoomFlipX)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, cocos2d::CCScene*>::func(&cocos2d::CCTransitionZoomFlipX::create)), Default, cocos2d::CCTransitionZoomFlipX, create, float, cocos2d::CCScene*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, cocos2d::CCScene*, cocos2d::tOrientation>::func(&cocos2d::CCTransitionZoomFlipX::create)), Default, cocos2d::CCTransitionZoomFlipX, create, float, cocos2d::CCScene*, cocos2d::tOrientation)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTransitionZoomFlipX::onEnter)), Thiscall, cocos2d::CCTransitionZoomFlipX, onEnter, )

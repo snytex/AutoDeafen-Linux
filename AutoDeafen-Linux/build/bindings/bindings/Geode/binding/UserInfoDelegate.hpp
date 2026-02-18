@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void getUserInfoFinished(GJUserScore* p0);
+    virtual void getUserInfoFinished(GJUserScore* score);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,7 +29,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void getUserInfoFailed(int p0);
+    virtual void getUserInfoFailed(int id);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -38,5 +38,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void userInfoChanged(GJUserScore* p0);
+    virtual void userInfoChanged(GJUserScore* score);
 };

@@ -16,17 +16,28 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(TableViewCell, cocos2d::CCLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x53c9ec
-     * @note[short] MacOS (Intel): 0x610480
-     * @note[short] Windows: 0x76ad0
-     * @note[short] iOS: 0x37ef0
+     * @note[short] MacOS (ARM): 0x54a32c
+     * @note[short] MacOS (Intel): 0x626e10
+     * @note[short] Windows: 0x76b00
+     * @note[short] iOS: 0x33c9c
      * @note[short] Android: Rebinded
      */
-     TableViewCell(char const* p0, float p1, float p2);
+     TableViewCell(char const* identifier, float width, float height);
 
     /**
-     * @note[short] MacOS (ARM): 0x53ce88
-     * @note[short] MacOS (Intel): 0x610a20
+     * @note[short] MacOS (ARM): 0x54a51c
+     * @note[short] MacOS (Intel): 0x627070
+     * @note[short] Windows: 0x76d60
+     * @note[short] iOS: 0x33e04
+     * @note[short] Android: Rebinded
+     */
+     ~TableViewCell();
+
+    /**
+     * @note[short] MacOS (ARM): 0x54a7ac
+     * @note[short] MacOS (Intel): 0x6273a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x33eac
      * @note[short] Android
      */
     void updateVisibility();
@@ -34,7 +45,7 @@ public:
     TableView* m_tableView;
     CCIndexPath m_indexPath;
     void* m_unknown2;
-    gd::string m_unknownString;
+    gd::string m_cellIdentifier;
     float m_width;
     float m_height;
     cocos2d::CCLayerColor* m_backgroundLayer;

@@ -16,44 +16,48 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(ListCell, TableViewCell)
 
     /**
+     * @note[short] MacOS (ARM): 0x29c91c
+     * @note[short] MacOS (Intel): 0x30d2d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-     ListCell(char const* p0, float p1, float p2);
+     ListCell(char const* identifier, float width, float height);
 
     /**
-     * @note[short] MacOS (ARM): 0x291c48
-     * @note[short] MacOS (Intel): 0x2f9370
+     * @note[short] MacOS (ARM): 0x29c914
+     * @note[short] MacOS (Intel): 0x30d2c0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1d139c
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x1d05f8
+     * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x291c94
-     * @note[short] MacOS (Intel): 0x2f9400
-     * @note[short] Windows: 0x3c6f0
-     * @note[short] iOS: 0x1d13a4
+     * @note[short] MacOS (ARM): 0x29c960
+     * @note[short] MacOS (Intel): 0x30d350
+     * @note[short] Windows: 0x3c730
+     * @note[short] iOS: 0x1d0600
      * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x29c904
+     * @note[short] MacOS (Intel): 0x30d280
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] Android
      */
-    void loadFromObject(cocos2d::CCObject* p0, int p1, int p2, int p3);
+    void loadFromObject(cocos2d::CCObject* object, int id, int page, int index);
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x29c95c
+     * @note[short] MacOS (Intel): 0x30d340
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] Android
      */
-    void updateBGColor(int p0);
+    void updateBGColor(int index);
     int m_unk230;
 };

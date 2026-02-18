@@ -45,9 +45,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupGravityTriggerPopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x411950, Thiscall, SetupGravityTriggerPopup, valueDidChange, int, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupGravityTriggerPopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x429140, Default, SetupGravityTriggerPopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4296d0, Thiscall, SetupGravityTriggerPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x429250, Thiscall, SetupGravityTriggerPopup, init, EffectGameObject*, cocos2d::CCArray*)
 		}
 	};
 }

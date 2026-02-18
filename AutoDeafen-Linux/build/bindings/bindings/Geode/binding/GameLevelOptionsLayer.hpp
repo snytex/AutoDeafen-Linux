@@ -16,37 +16,39 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(GameLevelOptionsLayer, GJOptionsLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x246194
-     * @note[short] MacOS (Intel): 0x29ebd0
-     * @note[short] Windows: 0x2993c0
-     * @note[short] iOS: 0x2e20cc
+     * @note[short] MacOS (ARM): 0x250308
+     * @note[short] MacOS (Intel): 0x2b22a0
+     * @note[short] Windows: 0x2a0a80
+     * @note[short] iOS: 0x2e2444
      * @note[short] Android
      */
-    static GameLevelOptionsLayer* create(GJGameLevel* p0);
+    static GameLevelOptionsLayer* create(GJGameLevel* level);
 
     /**
-     * @note[short] MacOS (ARM): 0x2463b8
-     * @note[short] MacOS (Intel): 0x29eeb0
-     * @note[short] Windows: 0x299520
-     * @note[short] iOS: 0x2e2200
+     * @note[short] MacOS (ARM): 0x25052c
+     * @note[short] MacOS (Intel): 0x2b2580
+     * @note[short] Windows: 0x2a0be0
+     * @note[short] iOS: 0x2e2578
      * @note[short] Android
      */
     virtual void setupOptions();
 
     /**
-     * @note[short] MacOS (ARM): 0x246424
-     * @note[short] MacOS (Intel): 0x29ef20
-     * @note[short] Windows: 0x2995a0
-     * @note[short] iOS: 0x2e226c
+     * @note[short] MacOS (ARM): 0x250590
+     * @note[short] MacOS (Intel): 0x2b25f0
+     * @note[short] Windows: 0x2a0c60
+     * @note[short] iOS: 0x2e264c
      * @note[short] Android
      */
-    virtual void didToggle(int p0);
+    virtual void didToggle(int tag);
 
     /**
-     * @note[short] MacOS (ARM): 0x246350
-     * @note[short] MacOS (Intel): 0x29ee50
+     * @note[short] MacOS (ARM): 0x2504c4
+     * @note[short] MacOS (Intel): 0x2b2520
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2e2510
      * @note[short] Android
      */
-    bool init(GJGameLevel* p0);
+    bool init(GJGameLevel* level);
     GJGameLevel* m_level;
 };

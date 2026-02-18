@@ -60,13 +60,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x38db00, Thiscall, GJShaderState, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x3a4950, Thiscall, GJShaderState, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJShaderState, reset, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJShaderState, stopTweenAction, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4696c0, Thiscall, GJShaderState, timesyncShaderAction, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x481ba0, Thiscall, GJShaderState, timesyncShaderAction, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJShaderState, timesyncShaderActions, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJShaderState, tweenValue, float, float, int, float, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x469300, Thiscall, GJShaderState, updateTweenAction, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4817e0, Thiscall, GJShaderState, updateTweenAction, float, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJShaderState, updateTweenActions, float)
 		}
 	};

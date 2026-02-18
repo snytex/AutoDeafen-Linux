@@ -14,9 +14,10 @@ public:
     static constexpr auto CLASS_NAME = "GameObjectEditorState";
 
     /**
-     * @note[short] MacOS (ARM): 0xaa8c
-     * @note[short] MacOS (Intel): 0x9370
+     * @note[short] MacOS (ARM): 0x7abc
+     * @note[short] MacOS (Intel): 0x8cd0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3c4c28
      * @note[short] Android
      */
     void loadValues(GameObject* obj);

@@ -15,6 +15,10 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(CCExtenderNode, cocos2d::CCNode)
 
     /**
+     * @note[short] MacOS (ARM): 0x4668ec
+     * @note[short] MacOS (Intel): 0x50fa40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void setOpacity(unsigned int opacity);

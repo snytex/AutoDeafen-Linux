@@ -10,26 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
-	#ifndef GEODE_STATICS_getCopy
-		#define GEODE_STATICS_getCopy
-		GEODE_AS_STATIC_FUNCTION(getCopy) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
-	#ifndef GEODE_STATICS_isInUse
-		#define GEODE_STATICS_isInUse
-		GEODE_AS_STATIC_FUNCTION(isInUse) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetAction
-		#define GEODE_STATICS_resetAction
-		GEODE_AS_STATIC_FUNCTION(resetAction) 
-	#endif
-
 	#ifndef GEODE_STATICS_setupFromMap
 		#define GEODE_STATICS_setupFromMap
 		GEODE_AS_STATIC_FUNCTION(setupFromMap) 
@@ -43,11 +23,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_step
 		#define GEODE_STATICS_step
 		GEODE_AS_STATIC_FUNCTION(step) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateCustomColor
-		#define GEODE_STATICS_updateCustomColor
-		GEODE_AS_STATIC_FUNCTION(updateCustomColor) 
 	#endif
 
     
@@ -115,20 +90,20 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x251b40, Default, ColorAction, create, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorAction, create, cocos2d::ccColor3B, bool, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorAction, create, cocos2d::ccColor3B, cocos2d::ccColor3B, float, double, bool, int, float, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorAction, create, cocos2d::ccColor3B, cocos2d::ccColor3B, float, double, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorAction, getCopy, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorAction, init, cocos2d::ccColor3B, cocos2d::ccColor3B, float, double, bool, int, float, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorAction, isInUse, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x258ea0, Default, ColorAction, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorAction, create, cocos2d::ccColor3B, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorAction, create, cocos2d::ccColor3B, cocos2d::ccColor3B, float, double, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorAction, create, cocos2d::ccColor3B, cocos2d::ccColor3B, float, double, bool, int, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorAction, getCopy, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorAction, init, cocos2d::ccColor3B, cocos2d::ccColor3B, float, double, bool, int, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorAction, isInUse, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorAction, loadFromState, CAState&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorAction, resetAction, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorAction, resetAction, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorAction, saveToState, CAState&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x252800, Thiscall, ColorAction, setupFromMap, gd::map<gd::string, gd::string>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x252720, Thiscall, ColorAction, setupFromString, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x251c30, Thiscall, ColorAction, step, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorAction, updateCustomColor, cocos2d::ccColor3B, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x259b60, Thiscall, ColorAction, setupFromMap, gd::map<gd::string, gd::string>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x259a80, Thiscall, ColorAction, setupFromString, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x258f90, Thiscall, ColorAction, step, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorAction, updateCustomColor, cocos2d::ccColor3B, cocos2d::ccColor3B)
 		}
 	};
 }

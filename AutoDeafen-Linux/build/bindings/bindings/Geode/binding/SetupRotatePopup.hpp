@@ -16,34 +16,38 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupRotatePopup, SetupTriggerPopup)
 
     /**
+     * @note[short] MacOS (ARM): 0x4e5764
+     * @note[short] MacOS (Intel): 0x59c9e0
+     * @note[short] Windows: 0x442970
+     * @note[short] iOS: 0x2683c4
      * @note[short] Android
      */
-    static SetupRotatePopup* create(EnhancedGameObject* p0, cocos2d::CCArray* p1);
+    static SetupRotatePopup* create(EnhancedGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4d7138
-     * @note[short] MacOS (Intel): 0x585460
-     * @note[short] Windows: 0x42acd0
-     * @note[short] iOS: 0x267a44
+     * @note[short] MacOS (ARM): 0x4e5dd8
+     * @note[short] MacOS (Intel): 0x59d1a0
+     * @note[short] Windows: 0x442fe0
+     * @note[short] iOS: 0x2688cc
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4d71b4
-     * @note[short] MacOS (Intel): 0x5854e0
-     * @note[short] Windows: 0x42ad70
-     * @note[short] iOS: 0x267ac0
+     * @note[short] MacOS (ARM): 0x4e5e54
+     * @note[short] MacOS (Intel): 0x59d220
+     * @note[short] Windows: 0x443080
+     * @note[short] iOS: 0x268948
      * @note[short] Android
      */
     virtual void onCustomToggleTriggerValue(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4d6c50
-     * @note[short] MacOS (Intel): 0x584ec0
-     * @note[short] Windows: 0x42a770
-     * @note[short] iOS: 0x267614
+     * @note[short] MacOS (ARM): 0x4e58ec
+     * @note[short] MacOS (Intel): 0x59cc10
+     * @note[short] Windows: 0x442a80
+     * @note[short] iOS: 0x26849c
      * @note[short] Android
      */
-    bool init(EnhancedGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EnhancedGameObject* object, cocos2d::CCArray* objects);
 };

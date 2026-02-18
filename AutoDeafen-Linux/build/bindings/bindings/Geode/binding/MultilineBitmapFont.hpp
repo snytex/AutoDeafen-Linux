@@ -18,69 +18,74 @@ public:
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
+     * @note[short] iOS: 0x23590c
      * @note[short] Android: Out of line
      */
      MultilineBitmapFont();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x3eea94
+     * @note[short] MacOS (Intel): 0x489150
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x23581c
+     * @note[short] Android: Rebinded
      */
      ~MultilineBitmapFont();
 
     /**
+     * @note[short] MacOS (ARM): 0x3ecc14
+     * @note[short] MacOS (Intel): 0x487050
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x23415c
+     * @note[short] iOS: 0x23434c
      * @note[short] Android: Rebinded
      */
-    static MultilineBitmapFont* createWithFont(char const* p0, gd::string p1, float p2, float p3, cocos2d::CCPoint p4, int p5, bool p6);
+    static MultilineBitmapFont* createWithFont(char const* font, gd::string text, float scale, float width, cocos2d::CCPoint anchor, int height, bool disableColor);
 
     /**
-     * @note[short] MacOS (ARM): 0x3e4ad8
-     * @note[short] MacOS (Intel): 0x476100
-     * @note[short] Windows: 0x6c750
-     * @note[short] iOS: 0x235548
+     * @note[short] MacOS (ARM): 0x3ee70c
+     * @note[short] MacOS (Intel): 0x488db0
+     * @note[short] Windows: 0x6c780
+     * @note[short] iOS: 0x235708
      * @note[short] Android
      */
-    virtual void setOpacity(unsigned char p0);
+    virtual void setOpacity(unsigned char opacity);
 
     /**
-     * @note[short] MacOS (ARM): 0x3e30c0
-     * @note[short] MacOS (Intel): 0x474500
-     * @note[short] Windows: 0x6bea0
-     * @note[short] iOS: 0x234280
+     * @note[short] MacOS (ARM): 0x3ecd98
+     * @note[short] MacOS (Intel): 0x4871c0
+     * @note[short] Windows: 0x6bed0
+     * @note[short] iOS: 0x234470
      * @note[short] Android: Rebinded
      */
-    bool initWithFont(char const* p0, gd::string p1, float p2, float p3, cocos2d::CCPoint p4, int p5, bool p6);
+    bool initWithFont(char const* font, gd::string text, float scale, float width, cocos2d::CCPoint anchor, int height, bool disableColor);
 
     /**
-     * @note[short] MacOS (ARM): 0x3e4bb8
-     * @note[short] MacOS (Intel): 0x476200
-     * @note[short] Windows: 0x6d0a0
+     * @note[short] MacOS (ARM): 0x3ee7ec
+     * @note[short] MacOS (Intel): 0x488eb0
+     * @note[short] Windows: 0x6d0d0
+     * @note[short] iOS: 0x235780
      * @note[short] Android
      */
-    unsigned int moveSpecialDescriptors(int p0, int p1);
+    void moveSpecialDescriptors(int index, int size);
 
     /**
-     * @note[short] MacOS (ARM): 0x3e388c
-     * @note[short] MacOS (Intel): 0x474e10
-     * @note[short] Windows: 0x6c7d0
+     * @note[short] MacOS (ARM): 0x3ed558
+     * @note[short] MacOS (Intel): 0x487ac0
+     * @note[short] Windows: 0x6c800
+     * @note[short] iOS: 0x234c18
      * @note[short] Android: Rebinded
      */
-    gd::string readColorInfo(gd::string p0);
+    gd::string readColorInfo(gd::string text);
 
     /**
-     * @note[short] MacOS (ARM): 0x3e4524
-     * @note[short] MacOS (Intel): 0x475b20
-     * @note[short] Windows: 0x6d130
+     * @note[short] MacOS (ARM): 0x3ee1d0
+     * @note[short] MacOS (Intel): 0x488810
+     * @note[short] Windows: 0x6d160
+     * @note[short] iOS: 0x235350
      * @note[short] Android: Rebinded
      */
-    gd::string stringWithMaxWidth(gd::string p0, float p1, float p2);
-    std::array<int, 300> m_hugeIntArray;
+    gd::string stringWithMaxWidth(gd::string text, float width, float scale);
+    std::array<int, 300> m_fontWidths;
     cocos2d::CCArray* m_specialDescriptors;
     cocos2d::CCArray* m_characters;
     cocos2d::CCArray* m_lines;

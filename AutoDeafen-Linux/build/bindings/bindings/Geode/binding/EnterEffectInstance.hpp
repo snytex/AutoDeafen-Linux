@@ -14,51 +14,76 @@ public:
     static constexpr auto CLASS_NAME = "EnterEffectInstance";
 
     /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
      EnterEffectInstance();
 
     /**
-     * @note[short] Android: Rebinded
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: 0x2042f0
+     * @note[short] iOS: 0x20a724
+     * @note[short] Android: Out of line
      */
-     EnterEffectInstance(EnterEffectObject* p0, int p1, int p2, int p3, int p4, int p5, int p6);
+     EnterEffectInstance(EnterEffectObject* object, int targetID, int centerID, int unknown, int targetGroupIndex, int easeIndexCount, int controlID);
 
     /**
-     * @note[short] Windows: 0x1378e0
+     * @note[short] MacOS (ARM): 0x4ffc70
+     * @note[short] MacOS (Intel): 0x5d3b20
+     * @note[short] Windows: 0x139520
+     * @note[short] iOS: 0x4bd70
      * @note[short] Android
      */
-    void animateValue(int p0, float p1, float p2, float p3, int p4, float p5, int p6);
+    void animateValue(int key, float value, float distance, float duration, int easingType, float easingRate, int easingBuffer);
 
     /**
+     * @note[short] MacOS (ARM): 0x5000d8
+     * @note[short] MacOS (Intel): 0x5d4010
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    float getValue(int p0);
+    float getValue(int key);
 
     /**
-     * @note[short] Windows: 0x136d00
+     * @note[short] MacOS (ARM): 0x4ff57c
+     * @note[short] MacOS (Intel): 0x5d3150
+     * @note[short] Windows: 0x138940
+     * @note[short] iOS: 0x4b748
      * @note[short] Android
      */
-    void loadTransitions(EnterEffectObject* p0, float p1);
+    void loadTransitions(EnterEffectObject* object, float time);
 
     /**
-     * @note[short] Windows: 0x136b60
+     * @note[short] MacOS (ARM): 0x4ff4ac
+     * @note[short] MacOS (Intel): 0x5d3040
+     * @note[short] Windows: 0x1387a0
+     * @note[short] iOS: 0x4b678
      * @note[short] Android
      */
-    void loadValuesFromObject(EnterEffectObject* p0);
+    void loadValuesFromObject(EnterEffectObject* object);
 
     /**
-     * @note[short] Windows: 0x137d00
+     * @note[short] MacOS (ARM): 0x4ffe3c
+     * @note[short] MacOS (Intel): 0x5d3cd0
+     * @note[short] Windows: 0x139940
+     * @note[short] iOS: 0x4be30
      * @note[short] Android
      */
-    void setValue(int p0, float p1);
+    void setValue(int key, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x4f1338
-     * @note[short] MacOS (Intel): 0x5bb680
-     * @note[short] Windows: 0x137ad0
+     * @note[short] MacOS (ARM): 0x4fff58
+     * @note[short] MacOS (Intel): 0x5d3e60
+     * @note[short] Windows: 0x139710
+     * @note[short] iOS: 0x4bf4c
      * @note[short] Android
      */
-    void updateTransitions(float p0, GJBaseGameLayer* p1);
+    void updateTransitions(float dt, GJBaseGameLayer* layer);
     gd::map<int,EnterEffectAnimValue> m_enterEffectAnimMap;
     float m_length;
     float m_lengthVariance;
@@ -93,15 +118,15 @@ public:
     float m_saturation;
     float m_value;
     EnterEffectObject* m_gameObject;
-    bool m_unkBool1;
+    bool m_reversed;
     int m_targetID;
     int m_centerID;
-    float m_unkFloat3;
-    float m_unkFloat4;
-    bool m_unkBool2;
-    bool m_unkBool3;
+    int m_unkFloat3;
+    int m_easeIndex;
+    bool m_paused;
+    bool m_paused2;
     bool m_unkBool4;
-    int m_unkFloat5;
-    gd::vector<int> m_unkVecInt;
+    int m_targetGroupIndex;
+    gd::vector<int> m_easeIndices;
     int m_controlID;
 };

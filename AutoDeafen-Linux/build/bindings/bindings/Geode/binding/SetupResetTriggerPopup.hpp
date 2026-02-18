@@ -16,14 +16,20 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupResetTriggerPopup, SetupTriggerPopup)
 
     /**
+     * @note[short] MacOS (ARM): 0x4ca390
+     * @note[short] MacOS (Intel): 0x57db40
+     * @note[short] Windows: 0x46a640
+     * @note[short] iOS: 0x40b55c
      * @note[short] Android
      */
-    static SetupResetTriggerPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupResetTriggerPopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4bc558
-     * @note[short] MacOS (Intel): 0x566eb0
+     * @note[short] MacOS (ARM): 0x4ca51c
+     * @note[short] MacOS (Intel): 0x57dd70
+     * @note[short] Windows: 0x46a750
+     * @note[short] iOS: 0x40b638
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 };

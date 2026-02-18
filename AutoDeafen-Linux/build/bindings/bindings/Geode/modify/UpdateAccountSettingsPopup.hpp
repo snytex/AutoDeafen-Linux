@@ -5,6 +5,11 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
+	#ifndef GEODE_STATICS_create
+		#define GEODE_STATICS_create
+		GEODE_AS_STATIC_FUNCTION(create) 
+	#endif
+
 	#ifndef GEODE_STATICS_keyBackClicked
 		#define GEODE_STATICS_keyBackClicked
 		GEODE_AS_STATIC_FUNCTION(keyBackClicked) 
@@ -70,12 +75,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UpdateAccountSettingsPopup, create, GJAccountSettingsLayer*, int, int, int, gd::string, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28db10, Thiscall, UpdateAccountSettingsPopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28d790, Thiscall, UpdateAccountSettingsPopup, updateSettingsFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28d890, Thiscall, UpdateAccountSettingsPopup, updateSettingsFailed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28d200, Thiscall, UpdateAccountSettingsPopup, init, GJAccountSettingsLayer*, int, int, int, gd::string, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28d950, Thiscall, UpdateAccountSettingsPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x294570, Default, UpdateAccountSettingsPopup, create, GJAccountSettingsLayer*, int, int, int, gd::string, gd::string, gd::string, gd::string, gd::string, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x295170, Thiscall, UpdateAccountSettingsPopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x294f30, Thiscall, UpdateAccountSettingsPopup, updateSettingsFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x295030, Thiscall, UpdateAccountSettingsPopup, updateSettingsFailed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x294860, Thiscall, UpdateAccountSettingsPopup, init, GJAccountSettingsLayer*, int, int, int, gd::string, gd::string, gd::string, gd::string, gd::string, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2950f0, Thiscall, UpdateAccountSettingsPopup, onClose, cocos2d::CCObject*)
 		}
 	};
 }

@@ -45,9 +45,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretNumberLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ec90, Thiscall, SecretNumberLayer, init, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretNumberLayer, playNumberEffect, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e9960, Default, SecretNumberLayer, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ed00, Thiscall, SecretNumberLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e9a20, Thiscall, SecretNumberLayer, playNumberEffect, int)
 		}
 	};
 }

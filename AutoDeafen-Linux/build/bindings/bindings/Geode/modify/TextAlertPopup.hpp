@@ -45,8 +45,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2964a0, Default, TextAlertPopup, create, gd::string, float, float, int, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2965d0, Thiscall, TextAlertPopup, init, gd::string, float, float, int, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29db00, Default, TextAlertPopup, create, gd::string, float, float, int, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29dc30, Thiscall, TextAlertPopup, init, gd::string, float, float, int, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TextAlertPopup, setAlertPosition, cocos2d::CCPoint, cocos2d::CCPoint)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TextAlertPopup, setLabelColor, cocos2d::ccColor3B)
 		}

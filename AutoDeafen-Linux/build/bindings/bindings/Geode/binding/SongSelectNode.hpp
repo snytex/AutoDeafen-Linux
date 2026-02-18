@@ -18,147 +18,154 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(SongSelectNode, cocos2d::CCNode)
 
     /**
-     * @note[short] MacOS (ARM): 0x1bbf60
-     * @note[short] MacOS (Intel): 0x206f60
-     * @note[short] Windows: 0xc5f80
-     * @note[short] iOS: 0x14a4a8
+     * @note[short] MacOS (ARM): 0x1c3ee4
+     * @note[short] MacOS (Intel): 0x218a80
+     * @note[short] Windows: 0xc6ca0
+     * @note[short] iOS: 0x146de0
      * @note[short] Android
      */
-    static SongSelectNode* create(int p0, bool p1, LevelSettingsObject* p2, SongSelectType p3, cocos2d::CCPoint p4, cocos2d::CCNode* p5, cocos2d::CCMenu* p6, bool p7);
+    static SongSelectNode* create(int id, bool customSong, LevelSettingsObject* settings, SongSelectType selectType, cocos2d::CCPoint position, cocos2d::CCNode* parent, cocos2d::CCMenu* menu, bool noLabel);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bcd40
-     * @note[short] MacOS (Intel): 0x207db0
-     * @note[short] Windows: 0xc6fe0
-     * @note[short] iOS: 0x14b1a4
+     * @note[short] MacOS (ARM): 0x1c4cb8
+     * @note[short] MacOS (Intel): 0x2198b0
+     * @note[short] Windows: 0xc7d00
+     * @note[short] iOS: 0x147ad8
      * @note[short] Android
      */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bce28
-     * @note[short] MacOS (Intel): 0x207e90
-     * @note[short] Windows: 0xc7070
-     * @note[short] iOS: 0x14b220
+     * @note[short] MacOS (ARM): 0x1c4da0
+     * @note[short] MacOS (Intel): 0x219990
+     * @note[short] Windows: 0xc7d90
+     * @note[short] iOS: 0x147b54
      * @note[short] Android
      */
     virtual void customSongLayerClosed();
 
     /**
-     * @note[short] MacOS (ARM): 0x1bce90
-     * @note[short] MacOS (Intel): 0x207ef0
-     * @note[short] Windows: 0xc70a0
-     * @note[short] iOS: 0x14b288
+     * @note[short] MacOS (ARM): 0x1c4e08
+     * @note[short] MacOS (Intel): 0x2199f0
+     * @note[short] Windows: 0xc7dc0
+     * @note[short] iOS: 0x147bbc
      * @note[short] Android
      */
-    virtual void songIDChanged(int p0);
+    virtual void songIDChanged(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bceb0
-     * @note[short] MacOS (Intel): 0x207f20
-     * @note[short] Windows: 0xc70b0
-     * @note[short] iOS: 0x14b2a8
+     * @note[short] MacOS (ARM): 0x1c4e28
+     * @note[short] MacOS (Intel): 0x219a20
+     * @note[short] Windows: 0xc7dd0
+     * @note[short] iOS: 0x147bdc
      * @note[short] Android
      */
     virtual int getActiveSongID();
 
     /**
-     * @note[short] MacOS (ARM): 0x1bcec0
-     * @note[short] MacOS (Intel): 0x207f40
-     * @note[short] Windows: 0xc70c0
-     * @note[short] iOS: 0x14b2b8
+     * @note[short] MacOS (ARM): 0x1c4e38
+     * @note[short] MacOS (Intel): 0x219a40
+     * @note[short] Windows: 0xc7de0
+     * @note[short] iOS: 0x147bec
      * @note[short] Android
      */
     virtual gd::string getSongFileName();
 
     /**
-     * @note[short] MacOS (ARM): 0x1bd008
-     * @note[short] MacOS (Intel): 0x208090
-     * @note[short] Windows: 0xc7180
-     * @note[short] iOS: 0x14b364
+     * @note[short] MacOS (ARM): 0x1c4f74
+     * @note[short] MacOS (Intel): 0x219b90
+     * @note[short] Windows: 0xc7ea0
+     * @note[short] iOS: 0x147c98
      * @note[short] Android
      */
     virtual LevelSettingsObject* getLevelSettings();
 
     /**
-     * @note[short] MacOS (ARM): 0x1bc9d4
-     * @note[short] MacOS (Intel): 0x2079d0
-     * @note[short] Windows: 0xc6ab0
-     * @note[short] iOS: 0x14aef4
+     * @note[short] MacOS (ARM): 0x1c495c
+     * @note[short] MacOS (Intel): 0x2194f0
+     * @note[short] Windows: 0xc77d0
+     * @note[short] iOS: 0x147830
      * @note[short] Android
      */
     void audioNext(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bc9a0
-     * @note[short] MacOS (Intel): 0x207990
-     * @note[short] Windows: 0xc6af0
-     * @note[short] iOS: 0x14aec0
+     * @note[short] MacOS (ARM): 0x1c4928
+     * @note[short] MacOS (Intel): 0x2194b0
+     * @note[short] Windows: 0xc7810
+     * @note[short] iOS: 0x1477fc
      * @note[short] Android
      */
     void audioPrevious(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bc070
-     * @note[short] MacOS (Intel): 0x207080
-     * @note[short] Windows: 0xc60b0
-     * @note[short] iOS: 0x14a5b8
+     * @note[short] MacOS (ARM): 0x1c3ff4
+     * @note[short] MacOS (Intel): 0x218ba0
+     * @note[short] Windows: 0xc6dd0
+     * @note[short] iOS: 0x146ef0
      * @note[short] Android
      */
-    bool init(int p0, bool p1, LevelSettingsObject* p2, SongSelectType p3, cocos2d::CCPoint p4, cocos2d::CCNode* p5, cocos2d::CCMenu* p6, bool p7);
+    bool init(int id, bool customSong, LevelSettingsObject* settings, SongSelectType selectType, cocos2d::CCPoint position, cocos2d::CCNode* parent, cocos2d::CCMenu* menu, bool noLabel);
 
     /**
+     * @note[short] MacOS (ARM): 0x1c49c8
+     * @note[short] MacOS (Intel): 0x219560
+     * @note[short] Windows: 0xc7b20
+     * @note[short] iOS: 0x14789c
      * @note[short] Android
      */
     void onOpenCustomSong(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bca0c
-     * @note[short] MacOS (Intel): 0x207a10
-     * @note[short] Windows: 0xc6b20
-     * @note[short] iOS: 0x14af2c
+     * @note[short] MacOS (ARM): 0x1c4994
+     * @note[short] MacOS (Intel): 0x219530
+     * @note[short] Windows: 0xc7840
+     * @note[short] iOS: 0x147868
      * @note[short] Android
      */
     void onSongMode(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bcabc
-     * @note[short] MacOS (Intel): 0x207ae0
-     * @note[short] Windows: 0xc6b50
-     * @note[short] iOS: 0x14afbc
+     * @note[short] MacOS (ARM): 0x1c4a44
+     * @note[short] MacOS (Intel): 0x219600
+     * @note[short] Windows: 0xc7870
+     * @note[short] iOS: 0x1478f8
      * @note[short] Android
      */
-    void onSongMode(int p0);
+    void onSongMode(int songMode);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bca9c
-     * @note[short] MacOS (Intel): 0x207ab0
+     * @note[short] MacOS (ARM): 0x1c4a24
+     * @note[short] MacOS (Intel): 0x2195d0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void selectSong(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bcd0c
-     * @note[short] MacOS (Intel): 0x207d70
-     * @note[short] Windows: 0xc6e80
+     * @note[short] MacOS (ARM): 0x1c4c84
+     * @note[short] MacOS (Intel): 0x219870
+     * @note[short] Windows: 0xc7ba0
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void showCustomSongSelect();
 
     /**
-     * @note[short] MacOS (ARM): 0x1bc888
-     * @note[short] MacOS (Intel): 0x2078a0
-     * @note[short] Windows: 0xc69c0
-     * @note[short] iOS: 0x14adbc
+     * @note[short] MacOS (ARM): 0x1c4810
+     * @note[short] MacOS (Intel): 0x2193c0
+     * @note[short] Windows: 0xc76e0
+     * @note[short] iOS: 0x1476f8
      * @note[short] Android
      */
     void updateAudioLabel();
 
     /**
-     * @note[short] MacOS (ARM): 0x1bcc84
-     * @note[short] MacOS (Intel): 0x207ce0
-     * @note[short] Windows: 0xc6d70
+     * @note[short] MacOS (ARM): 0x1c4c04
+     * @note[short] MacOS (Intel): 0x2197f0
+     * @note[short] Windows: 0xc7a90
+     * @note[short] iOS: 0x147a58
      * @note[short] Android
      */
     void updateWidgetVisibility();

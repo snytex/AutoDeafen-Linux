@@ -16,46 +16,56 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupInteractObjectPopup, SetupTriggerPopup)
 
     /**
+     * @note[short] MacOS (ARM): 0x4652d8
+     * @note[short] MacOS (Intel): 0x50df00
+     * @note[short] Windows: 0x423990
+     * @note[short] iOS: 0x4128f0
      * @note[short] Android
      */
-    static SetupInteractObjectPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupInteractObjectPopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x45904c
-     * @note[short] MacOS (Intel): 0x4f8bf0
-     * @note[short] Windows: 0x40c730
-     * @note[short] iOS: 0x40b148
+     * @note[short] MacOS (ARM): 0x465e2c
+     * @note[short] MacOS (Intel): 0x50ec80
+     * @note[short] Windows: 0x4244b0
+     * @note[short] iOS: 0x413190
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x458f68
-     * @note[short] MacOS (Intel): 0x4f8b00
-     * @note[short] Windows: 0x40c610
-     * @note[short] iOS: 0x40b0ec
+     * @note[short] MacOS (ARM): 0x465d08
+     * @note[short] MacOS (Intel): 0x50eb50
+     * @note[short] Windows: 0x424360
+     * @note[short] iOS: 0x4130fc
      * @note[short] Android
      */
     virtual void onPlusButton(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x458fa0
-     * @note[short] MacOS (Intel): 0x4f8b40
-     * @note[short] Windows: 0x40c700
-     * @note[short] iOS: 0x40b124
+     * @note[short] MacOS (ARM): 0x465d98
+     * @note[short] MacOS (Intel): 0x50ebf0
+     * @note[short] Windows: 0x424480
+     * @note[short] iOS: 0x41316c
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x4586c0
-     * @note[short] MacOS (Intel): 0x4f80b0
+     * @note[short] MacOS (ARM): 0x465460
+     * @note[short] MacOS (Intel): 0x50e130
+     * @note[short] Windows: 0x423aa0
+     * @note[short] iOS: 0x4129c8
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
+     * @note[short] MacOS (ARM): 0x465c94
+     * @note[short] MacOS (Intel): 0x50ead0
+     * @note[short] Windows: 0x424400
+     * @note[short] iOS: 0x413088
      * @note[short] Android
      */
-    TodoReturn updateItems();
+    void updateItems();
 };

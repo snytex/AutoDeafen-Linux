@@ -101,13 +101,13 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ScrollingLayer, create, cocos2d::CCSize, cocos2d::CCPoint, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x70ee0, Thiscall, ScrollingLayer, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x70fa0, Thiscall, ScrollingLayer, visit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x70ff0, Thiscall, ScrollingLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x710e0, Thiscall, ScrollingLayer, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x711f0, Thiscall, ScrollingLayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71210, Thiscall, ScrollingLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x70df0, Thiscall, ScrollingLayer, getViewRect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x70f10, Thiscall, ScrollingLayer, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x70fd0, Thiscall, ScrollingLayer, visit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71020, Thiscall, ScrollingLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71110, Thiscall, ScrollingLayer, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71220, Thiscall, ScrollingLayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71240, Thiscall, ScrollingLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x70e20, Thiscall, ScrollingLayer, getViewRect, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ScrollingLayer, init, cocos2d::CCSize, cocos2d::CCPoint, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ScrollingLayer, setStartOffset, cocos2d::CCPoint)
 		}

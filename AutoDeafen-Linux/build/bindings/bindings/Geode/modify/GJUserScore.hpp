@@ -20,11 +20,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(isCurrentUser) 
 	#endif
 
-	#ifndef GEODE_STATICS_mergeWithScore
-		#define GEODE_STATICS_mergeWithScore
-		GEODE_AS_STATIC_FUNCTION(mergeWithScore) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -55,12 +50,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x1401d0, Thiscall, GJUserScore, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16e1a0, Default, GJUserScore, create, cocos2d::CCDictionary*)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x142100, Thiscall, GJUserScore, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUserScore, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16fb40, Thiscall, GJUserScore, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16fb90, Thiscall, GJUserScore, isCurrentUser, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJUserScore, mergeWithScore, GJUserScore*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1710b0, Default, GJUserScore, create, cocos2d::CCDictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x172b50, Thiscall, GJUserScore, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x172ba0, Thiscall, GJUserScore, isCurrentUser, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUserScore, mergeWithScore, GJUserScore*)
 		}
 	};
 }

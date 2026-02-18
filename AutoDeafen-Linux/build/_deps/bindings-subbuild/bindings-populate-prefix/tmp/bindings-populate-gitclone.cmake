@@ -3,11 +3,11 @@
 
 cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 
-if(EXISTS "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/bindings-subbuild/bindings-populate-prefix/src/bindings-populate-stamp/bindings-populate-gitclone-lastrun.txt" AND EXISTS "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/bindings-subbuild/bindings-populate-prefix/src/bindings-populate-stamp/bindings-populate-gitinfo.txt" AND
-  "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/bindings-subbuild/bindings-populate-prefix/src/bindings-populate-stamp/bindings-populate-gitclone-lastrun.txt" IS_NEWER_THAN "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/bindings-subbuild/bindings-populate-prefix/src/bindings-populate-stamp/bindings-populate-gitinfo.txt")
+if(EXISTS "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/bindings-subbuild/bindings-populate-prefix/src/bindings-populate-stamp/bindings-populate-gitclone-lastrun.txt" AND EXISTS "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/bindings-subbuild/bindings-populate-prefix/src/bindings-populate-stamp/bindings-populate-gitinfo.txt" AND
+  "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/bindings-subbuild/bindings-populate-prefix/src/bindings-populate-stamp/bindings-populate-gitclone-lastrun.txt" IS_NEWER_THAN "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/bindings-subbuild/bindings-populate-prefix/src/bindings-populate-stamp/bindings-populate-gitinfo.txt")
   message(VERBOSE
     "Avoiding repeated git clone, stamp file is up to date: "
-    "'/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/bindings-subbuild/bindings-populate-prefix/src/bindings-populate-stamp/bindings-populate-gitclone-lastrun.txt'"
+    "'/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/bindings-subbuild/bindings-populate-prefix/src/bindings-populate-stamp/bindings-populate-gitclone-lastrun.txt'"
   )
   return()
 endif()
@@ -22,12 +22,12 @@ else()
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E rm -rf "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/bindings-src"
+  COMMAND ${CMAKE_COMMAND} -E rm -rf "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/bindings-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to remove directory: '/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/bindings-src'")
+  message(FATAL_ERROR "Failed to remove directory: '/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/bindings-src'")
 endif()
 
 # try the clone 3 times in case there is an odd git clone issue
@@ -37,7 +37,7 @@ while(error_code AND number_of_tries LESS 3)
   execute_process(
     COMMAND "/usr/bin/git"
             clone --no-checkout --config "advice.detachedHead=false" "https://github.com/geode-sdk/bindings.git" "bindings-src"
-    WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps"
+    WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps"
     RESULT_VARIABLE error_code
     ${maybe_show_command}
   )
@@ -53,7 +53,7 @@ endif()
 execute_process(
   COMMAND "/usr/bin/git"
           checkout "main" --
-  WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/bindings-src"
+  WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/bindings-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
@@ -66,22 +66,22 @@ if(init_submodules)
   execute_process(
     COMMAND "/usr/bin/git" 
             submodule update --recursive --init 
-    WORKING_DIRECTORY "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/bindings-src"
+    WORKING_DIRECTORY "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/bindings-src"
     RESULT_VARIABLE error_code
     ${maybe_show_command}
   )
 endif()
 if(error_code)
-  message(FATAL_ERROR "Failed to update submodules in: '/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/bindings-src'")
+  message(FATAL_ERROR "Failed to update submodules in: '/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/bindings-src'")
 endif()
 
 # Complete success, update the script-last-run stamp file:
 #
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E copy "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/bindings-subbuild/bindings-populate-prefix/src/bindings-populate-stamp/bindings-populate-gitinfo.txt" "/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/bindings-subbuild/bindings-populate-prefix/src/bindings-populate-stamp/bindings-populate-gitclone-lastrun.txt"
+  COMMAND ${CMAKE_COMMAND} -E copy "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/bindings-subbuild/bindings-populate-prefix/src/bindings-populate-stamp/bindings-populate-gitinfo.txt" "/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/bindings-subbuild/bindings-populate-prefix/src/bindings-populate-stamp/bindings-populate-gitclone-lastrun.txt"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/home/snytex/Schreibtisch/AutoDeafen-Linux/AutoDeafen-Linux/build/_deps/bindings-subbuild/bindings-populate-prefix/src/bindings-populate-stamp/bindings-populate-gitclone-lastrun.txt'")
+  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/home/snytex/Projekte/AutoDeafen-Linux/AutoDeafen-Linux/geode-2.281-beta/build/_deps/bindings-subbuild/bindings-populate-prefix/src/bindings-populate-stamp/bindings-populate-gitclone-lastrun.txt'")
 endif()

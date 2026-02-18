@@ -60,14 +60,14 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCSpriteGrayscale, create, gd::string const&, cocos2d::CCRect const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCSpriteGrayscale, create, gd::string const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCSpriteGrayscale, create, gd::string const&, cocos2d::CCRect const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCSpriteGrayscale, createWithSpriteFrame, cocos2d::CCSpriteFrame*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49020, Default, CCSpriteGrayscale, createWithSpriteFrameName, gd::string const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCSpriteGrayscale, createWithTexture, cocos2d::CCTexture2D*, cocos2d::CCRect const&, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49090, Default, CCSpriteGrayscale, createWithSpriteFrameName, gd::string const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCSpriteGrayscale, createWithTexture, cocos2d::CCTexture2D*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48fc0, Thiscall, CCSpriteGrayscale, getShaderName, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48e00, Thiscall, CCSpriteGrayscale, shaderBody, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCSpriteGrayscale, createWithTexture, cocos2d::CCTexture2D*, cocos2d::CCRect const&, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49030, Thiscall, CCSpriteGrayscale, getShaderName, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48e70, Thiscall, CCSpriteGrayscale, shaderBody, )
 		}
 	};
 }

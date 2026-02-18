@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_setOpacity
-		#define GEODE_STATICS_setOpacity
-		GEODE_AS_STATIC_FUNCTION(setOpacity) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_setOpacity
 		#define GEODE_CONCEPT_CHECK_setOpacity
@@ -25,7 +20,7 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCExtenderNode, setOpacity, unsigned int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCExtenderNode, setOpacity, unsigned int)
 		}
 	};
 }

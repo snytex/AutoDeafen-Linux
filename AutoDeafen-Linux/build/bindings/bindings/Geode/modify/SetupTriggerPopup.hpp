@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_ccTouchBegan
 		#define GEODE_STATICS_ccTouchBegan
 		GEODE_AS_STATIC_FUNCTION(ccTouchBegan) 
@@ -110,6 +105,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addCloseButton) 
 	#endif
 
+	#ifndef GEODE_STATICS_addCustomButton
+		#define GEODE_STATICS_addCustomButton
+		GEODE_AS_STATIC_FUNCTION(addCustomButton) 
+	#endif
+
 	#ifndef GEODE_STATICS_addHelpButton
 		#define GEODE_STATICS_addHelpButton
 		GEODE_AS_STATIC_FUNCTION(addHelpButton) 
@@ -120,21 +120,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addInfoLabel) 
 	#endif
 
-	#ifndef GEODE_STATICS_addObjectsToGroup
-		#define GEODE_STATICS_addObjectsToGroup
-		GEODE_AS_STATIC_FUNCTION(addObjectsToGroup) 
-	#endif
-
-	#ifndef GEODE_STATICS_addObjectsToPage
-		#define GEODE_STATICS_addObjectsToPage
-		GEODE_AS_STATIC_FUNCTION(addObjectsToPage) 
-	#endif
-
-	#ifndef GEODE_STATICS_addObjectToGroup
-		#define GEODE_STATICS_addObjectToGroup
-		GEODE_AS_STATIC_FUNCTION(addObjectToGroup) 
-	#endif
-
 	#ifndef GEODE_STATICS_addObjectToPage
 		#define GEODE_STATICS_addObjectToPage
 		GEODE_AS_STATIC_FUNCTION(addObjectToPage) 
@@ -143,11 +128,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_addTitle
 		#define GEODE_STATICS_addTitle
 		GEODE_AS_STATIC_FUNCTION(addTitle) 
-	#endif
-
-	#ifndef GEODE_STATICS_closeInputNodes
-		#define GEODE_STATICS_closeInputNodes
-		GEODE_AS_STATIC_FUNCTION(closeInputNodes) 
 	#endif
 
 	#ifndef GEODE_STATICS_createCustomButton
@@ -215,11 +195,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createToggleValueControl) 
 	#endif
 
-	#ifndef GEODE_STATICS_createToggleValueControlAdvanced
-		#define GEODE_STATICS_createToggleValueControlAdvanced
-		GEODE_AS_STATIC_FUNCTION(createToggleValueControlAdvanced) 
-	#endif
-
 	#ifndef GEODE_STATICS_createValueControl
 		#define GEODE_STATICS_createValueControl
 		GEODE_AS_STATIC_FUNCTION(createValueControl) 
@@ -230,29 +205,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createValueControlAdvanced) 
 	#endif
 
-	#ifndef GEODE_STATICS_createValueControlWArrows
-		#define GEODE_STATICS_createValueControlWArrows
-		GEODE_AS_STATIC_FUNCTION(createValueControlWArrows) 
-	#endif
-
 	#ifndef GEODE_STATICS_getGroupContainer
 		#define GEODE_STATICS_getGroupContainer
 		GEODE_AS_STATIC_FUNCTION(getGroupContainer) 
-	#endif
-
-	#ifndef GEODE_STATICS_getMaxSliderValue
-		#define GEODE_STATICS_getMaxSliderValue
-		GEODE_AS_STATIC_FUNCTION(getMaxSliderValue) 
-	#endif
-
-	#ifndef GEODE_STATICS_getMinSliderValue
-		#define GEODE_STATICS_getMinSliderValue
-		GEODE_AS_STATIC_FUNCTION(getMinSliderValue) 
-	#endif
-
-	#ifndef GEODE_STATICS_getObjects
-		#define GEODE_STATICS_getObjects
-		GEODE_AS_STATIC_FUNCTION(getObjects) 
 	#endif
 
 	#ifndef GEODE_STATICS_getPageContainer
@@ -270,19 +225,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getTruncatedValue) 
 	#endif
 
-	#ifndef GEODE_STATICS_getTruncatedValueByTag
-		#define GEODE_STATICS_getTruncatedValueByTag
-		GEODE_AS_STATIC_FUNCTION(getTruncatedValueByTag) 
-	#endif
-
 	#ifndef GEODE_STATICS_goToPage
 		#define GEODE_STATICS_goToPage
 		GEODE_AS_STATIC_FUNCTION(goToPage) 
-	#endif
-
-	#ifndef GEODE_STATICS_hideAll
-		#define GEODE_STATICS_hideAll
-		GEODE_AS_STATIC_FUNCTION(hideAll) 
 	#endif
 
 	#ifndef GEODE_STATICS_init
@@ -350,46 +295,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onTouchTriggered) 
 	#endif
 
-	#ifndef GEODE_STATICS_refreshGroupVisibility
-		#define GEODE_STATICS_refreshGroupVisibility
-		GEODE_AS_STATIC_FUNCTION(refreshGroupVisibility) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeObjectFromGroup
-		#define GEODE_STATICS_removeObjectFromGroup
-		GEODE_AS_STATIC_FUNCTION(removeObjectFromGroup) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeObjectFromPage
-		#define GEODE_STATICS_removeObjectFromPage
-		GEODE_AS_STATIC_FUNCTION(removeObjectFromPage) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetDisabledValues
-		#define GEODE_STATICS_resetDisabledValues
-		GEODE_AS_STATIC_FUNCTION(resetDisabledValues) 
-	#endif
-
-	#ifndef GEODE_STATICS_setMaxSliderValue
-		#define GEODE_STATICS_setMaxSliderValue
-		GEODE_AS_STATIC_FUNCTION(setMaxSliderValue) 
-	#endif
-
-	#ifndef GEODE_STATICS_setMinSliderValue
-		#define GEODE_STATICS_setMinSliderValue
-		GEODE_AS_STATIC_FUNCTION(setMinSliderValue) 
-	#endif
-
-	#ifndef GEODE_STATICS_shouldLimitValue
-		#define GEODE_STATICS_shouldLimitValue
-		GEODE_AS_STATIC_FUNCTION(shouldLimitValue) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleBG
-		#define GEODE_STATICS_toggleBG
-		GEODE_AS_STATIC_FUNCTION(toggleBG) 
-	#endif
-
 	#ifndef GEODE_STATICS_toggleCustomEaseRateVisibility
 		#define GEODE_STATICS_toggleCustomEaseRateVisibility
 		GEODE_AS_STATIC_FUNCTION(toggleCustomEaseRateVisibility) 
@@ -403,16 +308,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_toggleEaseRateVisibility
 		#define GEODE_STATICS_toggleEaseRateVisibility
 		GEODE_AS_STATIC_FUNCTION(toggleEaseRateVisibility) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleLimitValue
-		#define GEODE_STATICS_toggleLimitValue
-		GEODE_AS_STATIC_FUNCTION(toggleLimitValue) 
-	#endif
-
-	#ifndef GEODE_STATICS_togglePageArrows
-		#define GEODE_STATICS_togglePageArrows
-		GEODE_AS_STATIC_FUNCTION(togglePageArrows) 
 	#endif
 
 	#ifndef GEODE_STATICS_triggerArrowChanged
@@ -445,11 +340,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateCustomEaseRateLabel) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateCustomToggleTrigger
-		#define GEODE_STATICS_updateCustomToggleTrigger
-		GEODE_AS_STATIC_FUNCTION(updateCustomToggleTrigger) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateEaseLabel
 		#define GEODE_STATICS_updateEaseLabel
 		GEODE_AS_STATIC_FUNCTION(updateEaseLabel) 
@@ -468,11 +358,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateInputNodeLabel
 		#define GEODE_STATICS_updateInputNodeLabel
 		GEODE_AS_STATIC_FUNCTION(updateInputNodeLabel) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateLabel
-		#define GEODE_STATICS_updateLabel
-		GEODE_AS_STATIC_FUNCTION(updateLabel) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateMultiTriggerBtn
@@ -644,6 +529,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_addCloseButton
 		#define GEODE_CONCEPT_CHECK_addCloseButton
 		GEODE_CONCEPT_FUNCTION_CHECK(addCloseButton) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_addCustomButton
+		#define GEODE_CONCEPT_CHECK_addCustomButton
+		GEODE_CONCEPT_FUNCTION_CHECK(addCustomButton) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_addHelpButton
@@ -1065,119 +955,120 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x8d6c0, Thiscall, SetupTriggerPopup, )
-			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x45b6e0, Thiscall, SetupTriggerPopup)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, create, EffectGameObject*, cocos2d::CCArray*, float, float, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, create, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x465a80, Thiscall, SetupTriggerPopup, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44f1d0, Thiscall, SetupTriggerPopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8ba30, Thiscall, SetupTriggerPopup, show, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x8d780, Thiscall, SetupTriggerPopup, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x473a80, Thiscall, SetupTriggerPopup)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, create, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, create, EffectGameObject*, cocos2d::CCArray*, float, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47df60, Thiscall, SetupTriggerPopup, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f6ec0, Thiscall, SetupTriggerPopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8baf0, Thiscall, SetupTriggerPopup, show, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, pageChanged, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45c310, Thiscall, SetupTriggerPopup, toggleGroup, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45d060, Thiscall, SetupTriggerPopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45d6a0, Thiscall, SetupTriggerPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b790, Thiscall, SetupTriggerPopup, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45d4e0, Thiscall, SetupTriggerPopup, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b5c0, Thiscall, SetupTriggerPopup, textInputShouldOffset, CCTextInputNode*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b620, Thiscall, SetupTriggerPopup, textInputReturn, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4746b0, Thiscall, SetupTriggerPopup, toggleGroup, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475400, Thiscall, SetupTriggerPopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475a40, Thiscall, SetupTriggerPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b850, Thiscall, SetupTriggerPopup, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475880, Thiscall, SetupTriggerPopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b600, Thiscall, SetupTriggerPopup, textInputShouldOffset, CCTextInputNode*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b660, Thiscall, SetupTriggerPopup, textInputReturn, CCTextInputNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, updateInputValue, int, float&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45d7e0, Thiscall, SetupTriggerPopup, sliderBegan, Slider*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45d8b0, Thiscall, SetupTriggerPopup, sliderEnded, Slider*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475b80, Thiscall, SetupTriggerPopup, sliderBegan, Slider*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475c50, Thiscall, SetupTriggerPopup, sliderEnded, Slider*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, onPlusButton, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, onCustomButton, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45f370, Thiscall, SetupTriggerPopup, updateDefaultTriggerValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45f860, Thiscall, SetupTriggerPopup, updateInputNode, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45fc00, Thiscall, SetupTriggerPopup, updateToggleItem, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x477830, Thiscall, SetupTriggerPopup, updateDefaultTriggerValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x477d20, Thiscall, SetupTriggerPopup, updateInputNode, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4780c0, Thiscall, SetupTriggerPopup, updateToggleItem, int, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45fc70, Thiscall, SetupTriggerPopup, getValue, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x463c60, Thiscall, SetupTriggerPopup, triggerValueFromSliderValue, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x463cf0, Thiscall, SetupTriggerPopup, triggerSliderValueFromValue, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x478130, Thiscall, SetupTriggerPopup, getValue, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47c120, Thiscall, SetupTriggerPopup, triggerValueFromSliderValue, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47c1b0, Thiscall, SetupTriggerPopup, triggerSliderValueFromValue, int, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x464c00, Thiscall, SetupTriggerPopup, valuePopupClosed, ConfigureValuePopup*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45c590, Thiscall, SetupTriggerPopup, addCloseButton, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45c6a0, Thiscall, SetupTriggerPopup, addHelpButton, gd::string, gd::string, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45ee90, Thiscall, SetupTriggerPopup, addInfoLabel, gd::string, float, cocos2d::CCPoint, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, addObjectsToGroup, cocos2d::CCArray*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, addObjectsToPage, cocos2d::CCArray*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, addObjectToGroup, cocos2d::CCObject*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45c400, Thiscall, SetupTriggerPopup, addObjectToPage, cocos2d::CCObject*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45c490, Thiscall, SetupTriggerPopup, addTitle, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, closeInputNodes, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45f110, Thiscall, SetupTriggerPopup, createCustomButton, int, gd::string, gd::string, cocos2d::CCPoint, float, float, bool, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x464cc0, Thiscall, SetupTriggerPopup, createCustomEasingControls, gd::string, cocos2d::CCPoint, float, int, int, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45ec10, Thiscall, SetupTriggerPopup, createCustomToggleValueControl, int, bool, bool, gd::string, cocos2d::CCPoint, bool, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x463da0, Thiscall, SetupTriggerPopup, createEasingControls, cocos2d::CCPoint, float, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45cd50, Thiscall, SetupTriggerPopup, createMultiTriggerItems, cocos2d::CCPoint, cocos2d::CCPoint, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45ca40, Thiscall, SetupTriggerPopup, createMultiTriggerItemsCorner, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45c930, Thiscall, SetupTriggerPopup, createMultiTriggerItemsDefault, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45cc40, Thiscall, SetupTriggerPopup, createMultiTriggerItemsDefaultHorizontal, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45cb40, Thiscall, SetupTriggerPopup, createMultiTriggerItemsDefaultVertical, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45bc80, Thiscall, SetupTriggerPopup, createPageButtons, float, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45ef70, Thiscall, SetupTriggerPopup, createPlusButton, int, cocos2d::CCPoint, float, gd::string, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45c800, Thiscall, SetupTriggerPopup, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45e900, Thiscall, SetupTriggerPopup, createToggleValueControl, int, gd::string, cocos2d::CCPoint, bool, int, int, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, createToggleValueControlAdvanced, int, gd::string, cocos2d::CCPoint, bool, int, int, float, float, float, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45db40, Thiscall, SetupTriggerPopup, createValueControl, int, gd::string, cocos2d::CCPoint, float, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45dc30, Thiscall, SetupTriggerPopup, createValueControlAdvanced, int, gd::string, cocos2d::CCPoint, float, bool, InputValueType, int, bool, float, float, int, int, GJInputStyle, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, createValueControlWArrows, int, gd::string, cocos2d::CCPoint, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, getGroupContainer, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, getMaxSliderValue, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, getMinSliderValue, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, getObjects, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, getPageContainer, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4620f0, Thiscall, SetupTriggerPopup, getTriggerValue, int, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45f750, Thiscall, SetupTriggerPopup, getTruncatedValue, float, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, getTruncatedValueByTag, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45c010, Thiscall, SetupTriggerPopup, goToPage, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, hideAll, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45b900, Thiscall, SetupTriggerPopup, init, EffectGameObject*, cocos2d::CCArray*, float, float, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x465590, Thiscall, SetupTriggerPopup, onCustomEaseArrow, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x465560, Thiscall, SetupTriggerPopup, onCustomEaseArrowDown, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x465530, Thiscall, SetupTriggerPopup, onCustomEaseArrowUp, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x465420, Thiscall, SetupTriggerPopup, onCustomEaseRate, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45e7f0, Thiscall, SetupTriggerPopup, onDisableValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x464ac0, Thiscall, SetupTriggerPopup, onEase, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x464b30, Thiscall, SetupTriggerPopup, onEaseRate, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, onMultiTrigger, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45bf30, Thiscall, SetupTriggerPopup, onPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45d2d0, Thiscall, SetupTriggerPopup, onSpawnedByTrigger, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45f6c0, Thiscall, SetupTriggerPopup, onToggleTriggerValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45d1e0, Thiscall, SetupTriggerPopup, onTouchTriggered, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47d0d0, Thiscall, SetupTriggerPopup, valuePopupClosed, ConfigureValuePopup*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x474930, Thiscall, SetupTriggerPopup, addCloseButton, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x477730, Thiscall, SetupTriggerPopup, addCustomButton, int, ButtonSprite*, cocos2d::CCPoint, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x474a40, Thiscall, SetupTriggerPopup, addHelpButton, gd::string, gd::string, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x477230, Thiscall, SetupTriggerPopup, addInfoLabel, gd::string, float, cocos2d::CCPoint, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, addObjectsToGroup, cocos2d::CCArray*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, addObjectsToPage, cocos2d::CCArray*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, addObjectToGroup, cocos2d::CCObject*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4747a0, Thiscall, SetupTriggerPopup, addObjectToPage, cocos2d::CCObject*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x474830, Thiscall, SetupTriggerPopup, addTitle, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, closeInputNodes, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4774b0, Thiscall, SetupTriggerPopup, createCustomButton, int, gd::string, gd::string, cocos2d::CCPoint, float, float, bool, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47d190, Thiscall, SetupTriggerPopup, createCustomEasingControls, gd::string, cocos2d::CCPoint, float, int, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x476fb0, Thiscall, SetupTriggerPopup, createCustomToggleValueControl, int, bool, bool, gd::string, cocos2d::CCPoint, bool, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47c260, Thiscall, SetupTriggerPopup, createEasingControls, cocos2d::CCPoint, float, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4750f0, Thiscall, SetupTriggerPopup, createMultiTriggerItems, cocos2d::CCPoint, cocos2d::CCPoint, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x474de0, Thiscall, SetupTriggerPopup, createMultiTriggerItemsCorner, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x474cd0, Thiscall, SetupTriggerPopup, createMultiTriggerItemsDefault, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x474fe0, Thiscall, SetupTriggerPopup, createMultiTriggerItemsDefaultHorizontal, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x474ee0, Thiscall, SetupTriggerPopup, createMultiTriggerItemsDefaultVertical, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x474020, Thiscall, SetupTriggerPopup, createPageButtons, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x477310, Thiscall, SetupTriggerPopup, createPlusButton, int, cocos2d::CCPoint, float, gd::string, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x474ba0, Thiscall, SetupTriggerPopup, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x476ca0, Thiscall, SetupTriggerPopup, createToggleValueControl, int, gd::string, cocos2d::CCPoint, bool, int, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, createToggleValueControlAdvanced, int, gd::string, cocos2d::CCPoint, bool, int, int, float, float, float, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475ee0, Thiscall, SetupTriggerPopup, createValueControl, int, gd::string, cocos2d::CCPoint, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475fd0, Thiscall, SetupTriggerPopup, createValueControlAdvanced, int, gd::string, cocos2d::CCPoint, float, bool, InputValueType, int, bool, float, float, int, int, GJInputStyle, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, createValueControlWArrows, int, gd::string, cocos2d::CCPoint, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x474640, Thiscall, SetupTriggerPopup, getGroupContainer, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, getMaxSliderValue, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, getMinSliderValue, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, getObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x474340, Thiscall, SetupTriggerPopup, getPageContainer, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47a5b0, Thiscall, SetupTriggerPopup, getTriggerValue, int, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x477c10, Thiscall, SetupTriggerPopup, getTruncatedValue, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, getTruncatedValueByTag, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4743b0, Thiscall, SetupTriggerPopup, goToPage, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, hideAll, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x473ca0, Thiscall, SetupTriggerPopup, init, EffectGameObject*, cocos2d::CCArray*, float, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47da70, Thiscall, SetupTriggerPopup, onCustomEaseArrow, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47da40, Thiscall, SetupTriggerPopup, onCustomEaseArrowDown, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47da10, Thiscall, SetupTriggerPopup, onCustomEaseArrowUp, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47d8f0, Thiscall, SetupTriggerPopup, onCustomEaseRate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x476b90, Thiscall, SetupTriggerPopup, onDisableValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47cf80, Thiscall, SetupTriggerPopup, onEase, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47cff0, Thiscall, SetupTriggerPopup, onEaseRate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4757f0, Thiscall, SetupTriggerPopup, onMultiTrigger, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4742d0, Thiscall, SetupTriggerPopup, onPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475670, Thiscall, SetupTriggerPopup, onSpawnedByTrigger, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x477b80, Thiscall, SetupTriggerPopup, onToggleTriggerValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475580, Thiscall, SetupTriggerPopup, onTouchTriggered, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, postSetup, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, preSetup, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, refreshGroupVisibility, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, removeObjectFromGroup, cocos2d::CCObject*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, removeObjectFromPage, cocos2d::CCObject*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, resetDisabledValues, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, setMaxSliderValue, float, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, setMinSliderValue, float, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, shouldLimitValue, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, toggleBG, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x465910, Thiscall, SetupTriggerPopup, toggleCustomEaseRateVisibility, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45e820, Thiscall, SetupTriggerPopup, toggleDisableButtons, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, toggleEaseRateVisibility, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, toggleLimitValue, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, togglePageArrows, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45daa0, Thiscall, SetupTriggerPopup, triggerArrowChanged, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45da40, Thiscall, SetupTriggerPopup, triggerArrowLeft, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45da70, Thiscall, SetupTriggerPopup, triggerArrowRight, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45d980, Thiscall, SetupTriggerPopup, triggerSliderChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x465630, Thiscall, SetupTriggerPopup, updateCustomEaseLabel, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x465800, Thiscall, SetupTriggerPopup, updateCustomEaseRateLabel, int, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, updateCustomToggleTrigger, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, updateEaseLabel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, updateEaseRateLabel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, updateEditorLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x463be0, Thiscall, SetupTriggerPopup, updateInputNodeLabel, int, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, updateLabel, int, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45d3c0, Thiscall, SetupTriggerPopup, updateMultiTriggerBtn, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, updateSlider, int, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupTriggerPopup, updateSlider, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45d320, Thiscall, SetupTriggerPopup, updateSpawnedByTrigger, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45d230, Thiscall, SetupTriggerPopup, updateTouchTriggered, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x463b50, Thiscall, SetupTriggerPopup, updateValue, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45f7c0, Thiscall, SetupTriggerPopup, updateValueControls, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45fd90, Thiscall, SetupTriggerPopup, valueChanged, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, refreshGroupVisibility, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, removeObjectFromGroup, cocos2d::CCObject*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, removeObjectFromPage, cocos2d::CCObject*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, resetDisabledValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, setMaxSliderValue, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, setMinSliderValue, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, shouldLimitValue, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, toggleBG, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47ddf0, Thiscall, SetupTriggerPopup, toggleCustomEaseRateVisibility, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x476bc0, Thiscall, SetupTriggerPopup, toggleDisableButtons, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47ce70, Thiscall, SetupTriggerPopup, toggleEaseRateVisibility, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, toggleLimitValue, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, togglePageArrows, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475e40, Thiscall, SetupTriggerPopup, triggerArrowChanged, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475de0, Thiscall, SetupTriggerPopup, triggerArrowLeft, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475e10, Thiscall, SetupTriggerPopup, triggerArrowRight, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475d20, Thiscall, SetupTriggerPopup, triggerSliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47db10, Thiscall, SetupTriggerPopup, updateCustomEaseLabel, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47dce0, Thiscall, SetupTriggerPopup, updateCustomEaseRateLabel, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, updateCustomToggleTrigger, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47cae0, Thiscall, SetupTriggerPopup, updateEaseLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47cc90, Thiscall, SetupTriggerPopup, updateEaseRateLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475500, Thiscall, SetupTriggerPopup, updateEditorLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47c0a0, Thiscall, SetupTriggerPopup, updateInputNodeLabel, int, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, updateLabel, int, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475760, Thiscall, SetupTriggerPopup, updateMultiTriggerBtn, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x478050, Thiscall, SetupTriggerPopup, updateSlider, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTriggerPopup, updateSlider, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4756c0, Thiscall, SetupTriggerPopup, updateSpawnedByTrigger, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4755d0, Thiscall, SetupTriggerPopup, updateTouchTriggered, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47c010, Thiscall, SetupTriggerPopup, updateValue, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x477c80, Thiscall, SetupTriggerPopup, updateValueControls, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x478250, Thiscall, SetupTriggerPopup, valueChanged, int, float)
 		}
 	};
 }

@@ -10,31 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
-	#ifndef GEODE_STATICS_initWithDuration
-		#define GEODE_STATICS_initWithDuration
-		GEODE_AS_STATIC_FUNCTION(initWithDuration) 
-	#endif
-
-	#ifndef GEODE_STATICS_getAmplitudeRate
-		#define GEODE_STATICS_getAmplitudeRate
-		GEODE_AS_STATIC_FUNCTION(getAmplitudeRate) 
-	#endif
-
-	#ifndef GEODE_STATICS_getElapsed
-		#define GEODE_STATICS_getElapsed
-		GEODE_AS_STATIC_FUNCTION(getElapsed) 
-	#endif
-
-	#ifndef GEODE_STATICS_getM_bFirstTick
-		#define GEODE_STATICS_getM_bFirstTick
-		GEODE_AS_STATIC_FUNCTION(getM_bFirstTick) 
-	#endif
-
-	#ifndef GEODE_STATICS_setAmplitudeRate
-		#define GEODE_STATICS_setAmplitudeRate
-		GEODE_AS_STATIC_FUNCTION(setAmplitudeRate) 
-	#endif
-
 	#ifndef GEODE_STATICS_copyWithZone
 		#define GEODE_STATICS_copyWithZone
 		GEODE_AS_STATIC_FUNCTION(copyWithZone) 
@@ -60,35 +35,25 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(reverse) 
 	#endif
 
+	#ifndef GEODE_STATICS_getAmplitudeRate
+		#define GEODE_STATICS_getAmplitudeRate
+		GEODE_AS_STATIC_FUNCTION(getAmplitudeRate) 
+	#endif
+
+	#ifndef GEODE_STATICS_initWithDuration
+		#define GEODE_STATICS_initWithDuration
+		GEODE_AS_STATIC_FUNCTION(initWithDuration) 
+	#endif
+
+	#ifndef GEODE_STATICS_setAmplitudeRate
+		#define GEODE_STATICS_setAmplitudeRate
+		GEODE_AS_STATIC_FUNCTION(setAmplitudeRate) 
+	#endif
+
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_initWithDuration
-		#define GEODE_CONCEPT_CHECK_initWithDuration
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithDuration) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getAmplitudeRate
-		#define GEODE_CONCEPT_CHECK_getAmplitudeRate
-		GEODE_CONCEPT_FUNCTION_CHECK(getAmplitudeRate) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getElapsed
-		#define GEODE_CONCEPT_CHECK_getElapsed
-		GEODE_CONCEPT_FUNCTION_CHECK(getElapsed) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getM_bFirstTick
-		#define GEODE_CONCEPT_CHECK_getM_bFirstTick
-		GEODE_CONCEPT_FUNCTION_CHECK(getM_bFirstTick) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setAmplitudeRate
-		#define GEODE_CONCEPT_CHECK_setAmplitudeRate
-		GEODE_CONCEPT_FUNCTION_CHECK(setAmplitudeRate) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_copyWithZone
@@ -116,6 +81,21 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(reverse) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_getAmplitudeRate
+		#define GEODE_CONCEPT_CHECK_getAmplitudeRate
+		GEODE_CONCEPT_FUNCTION_CHECK(getAmplitudeRate) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_initWithDuration
+		#define GEODE_CONCEPT_CHECK_initWithDuration
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithDuration) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setAmplitudeRate
+		#define GEODE_CONCEPT_CHECK_setAmplitudeRate
+		GEODE_CONCEPT_FUNCTION_CHECK(setAmplitudeRate) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::CCActionInterval> : ModifyBase<ModifyDerive<Der, cocos2d::CCActionInterval>> {
@@ -126,16 +106,14 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCActionInterval::create)), Default, cocos2d::CCActionInterval, create, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCActionInterval::initWithDuration)), Thiscall, cocos2d::CCActionInterval, initWithDuration, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCActionInterval::getAmplitudeRate)), Thiscall, cocos2d::CCActionInterval, getAmplitudeRate, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCActionInterval::getElapsed)), Thiscall, cocos2d::CCActionInterval, getElapsed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCActionInterval::getM_bFirstTick)), Thiscall, cocos2d::CCActionInterval, getM_bFirstTick, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCActionInterval::setAmplitudeRate)), Thiscall, cocos2d::CCActionInterval, setAmplitudeRate, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCZone*>::func(&cocos2d::CCActionInterval::copyWithZone)), Thiscall, cocos2d::CCActionInterval, copyWithZone, cocos2d::CCZone*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCActionInterval::isDone)), Thiscall, cocos2d::CCActionInterval, isDone, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCNode*>::func(&cocos2d::CCActionInterval::startWithTarget)), Thiscall, cocos2d::CCActionInterval, startWithTarget, cocos2d::CCNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCActionInterval::step)), Thiscall, cocos2d::CCActionInterval, step, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCActionInterval::reverse)), Thiscall, cocos2d::CCActionInterval, reverse, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCActionInterval::getAmplitudeRate)), Thiscall, cocos2d::CCActionInterval, getAmplitudeRate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCActionInterval::initWithDuration)), Thiscall, cocos2d::CCActionInterval, initWithDuration, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCActionInterval::setAmplitudeRate)), Thiscall, cocos2d::CCActionInterval, setAmplitudeRate, float)
 		}
 	};
 }

@@ -16,16 +16,20 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupSFXEditPopup, SetupAudioTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x431070
+     * @note[short] MacOS (ARM): 0x41b1cc
+     * @note[short] MacOS (Intel): 0x4bacc0
+     * @note[short] Windows: 0x449410
+     * @note[short] iOS: 0x181130
      * @note[short] Android
      */
-    static SetupSFXEditPopup* create(SFXTriggerGameObject* p0, cocos2d::CCArray* p1, bool p2);
+    static SetupSFXEditPopup* create(SFXTriggerGameObject* object, cocos2d::CCArray* objects, bool songTrigger);
 
     /**
-     * @note[short] MacOS (ARM): 0x411118
-     * @note[short] MacOS (Intel): 0x4a7b50
-     * @note[short] Windows: 0x431190
+     * @note[short] MacOS (ARM): 0x41b360
+     * @note[short] MacOS (Intel): 0x4baf00
+     * @note[short] Windows: 0x449530
+     * @note[short] iOS: 0x181214
      * @note[short] Android
      */
-    bool init(SFXTriggerGameObject* p0, cocos2d::CCArray* p1, bool p2);
+    bool init(SFXTriggerGameObject* object, cocos2d::CCArray* objects, bool songTrigger);
 };

@@ -5,54 +5,14 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_setVisible
 		#define GEODE_STATICS_setVisible
 		GEODE_AS_STATIC_FUNCTION(setVisible) 
 	#endif
 
-	#ifndef GEODE_STATICS_createWithSpriteFrameName
-		#define GEODE_STATICS_createWithSpriteFrameName
-		GEODE_AS_STATIC_FUNCTION(createWithSpriteFrameName) 
-	#endif
-
 	#ifndef GEODE_STATICS_frameChanged
 		#define GEODE_STATICS_frameChanged
 		GEODE_AS_STATIC_FUNCTION(frameChanged) 
-	#endif
-
-	#ifndef GEODE_STATICS_getBeingUsed
-		#define GEODE_STATICS_getBeingUsed
-		GEODE_AS_STATIC_FUNCTION(getBeingUsed) 
-	#endif
-
-	#ifndef GEODE_STATICS_hideInactive
-		#define GEODE_STATICS_hideInactive
-		GEODE_AS_STATIC_FUNCTION(hideInactive) 
-	#endif
-
-	#ifndef GEODE_STATICS_markAsNotBeingUsed
-		#define GEODE_STATICS_markAsNotBeingUsed
-		GEODE_AS_STATIC_FUNCTION(markAsNotBeingUsed) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetTextureRect
-		#define GEODE_STATICS_resetTextureRect
-		GEODE_AS_STATIC_FUNCTION(resetTextureRect) 
-	#endif
-
-	#ifndef GEODE_STATICS_setBeingUsed
-		#define GEODE_STATICS_setBeingUsed
-		GEODE_AS_STATIC_FUNCTION(setBeingUsed) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateDisplayFrame
-		#define GEODE_STATICS_updateDisplayFrame
-		GEODE_AS_STATIC_FUNCTION(updateDisplayFrame) 
 	#endif
 
     
@@ -61,14 +21,14 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_setVisible
-		#define GEODE_CONCEPT_CHECK_setVisible
-		GEODE_CONCEPT_FUNCTION_CHECK(setVisible) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_createWithSpriteFrameName
 		#define GEODE_CONCEPT_CHECK_createWithSpriteFrameName
 		GEODE_CONCEPT_FUNCTION_CHECK(createWithSpriteFrameName) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setVisible
+		#define GEODE_CONCEPT_CHECK_setVisible
+		GEODE_CONCEPT_FUNCTION_CHECK(setVisible) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_frameChanged
@@ -115,16 +75,17 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCSpritePart, create, cocos2d::CCTexture2D*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46a30, Thiscall, CCSpritePart, setVisible, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCSpritePart, createWithSpriteFrameName, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCSpritePart, frameChanged, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCSpritePart, getBeingUsed, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCSpritePart, hideInactive, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCSpritePart, markAsNotBeingUsed, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCSpritePart, resetTextureRect, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCSpritePart, setBeingUsed, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCSpritePart, updateDisplayFrame, gd::string)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x45890, Thiscall, CCSpritePart, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCSpritePart, create, cocos2d::CCTexture2D*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCSpritePart, createWithSpriteFrameName, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46aa0, Thiscall, CCSpritePart, setVisible, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x469f0, Thiscall, CCSpritePart, frameChanged, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCSpritePart, getBeingUsed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCSpritePart, hideInactive, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCSpritePart, markAsNotBeingUsed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCSpritePart, resetTextureRect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCSpritePart, setBeingUsed, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCSpritePart, updateDisplayFrame, gd::string)
 		}
 	};
 }

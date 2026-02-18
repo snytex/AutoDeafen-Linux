@@ -20,20 +20,15 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(loadGroundSprites) 
 	#endif
 
-	#ifndef GEODE_STATICS_scaleGround
-		#define GEODE_STATICS_scaleGround
-		GEODE_AS_STATIC_FUNCTION(scaleGround) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateGroundWidth
-		#define GEODE_STATICS_updateGroundWidth
-		GEODE_AS_STATIC_FUNCTION(updateGroundWidth) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_defaultYOffsetForBG2
+		#define GEODE_CONCEPT_CHECK_defaultYOffsetForBG2
+		GEODE_CONCEPT_FUNCTION_CHECK(defaultYOffsetForBG2) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_draw
@@ -49,11 +44,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_deactivateGround
 		#define GEODE_CONCEPT_CHECK_deactivateGround
 		GEODE_CONCEPT_FUNCTION_CHECK(deactivateGround) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_defaultYOffsetForBG2
-		#define GEODE_CONCEPT_CHECK_defaultYOffsetForBG2
-		GEODE_CONCEPT_FUNCTION_CHECK(defaultYOffsetForBG2) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_init
@@ -121,19 +111,19 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMGLayer, create, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMGLayer, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2774c0, Thiscall, GJMGLayer, showGround, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMGLayer, deactivateGround, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMGLayer, defaultYOffsetForBG2, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2776d0, Thiscall, GJMGLayer, init, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x277bd0, Thiscall, GJMGLayer, loadGroundSprites, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMGLayer, scaleGround, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMGLayer, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27edf0, Thiscall, GJMGLayer, showGround, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMGLayer, deactivateGround, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27f000, Thiscall, GJMGLayer, init, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27f500, Thiscall, GJMGLayer, loadGroundSprites, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMGLayer, scaleGround, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMGLayer, toggleVisible01, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMGLayer, toggleVisible02, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMGLayer, updateGroundColor, cocos2d::ccColor3B, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMGLayer, updateGroundOpacity, unsigned char, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMGLayer, updateGroundPos, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMGLayer, updateGroundWidth, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMGLayer, updateGroundWidth, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMGLayer, updateMG01Blend, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMGLayer, updateMG02Blend, bool)
 		}

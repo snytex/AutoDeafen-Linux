@@ -25,166 +25,181 @@ public:
      CharacterColorPage();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x57c6c4
+     * @note[short] MacOS (Intel): 0x65c8f0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x128b5c
+     * @note[short] Android: Rebinded
      */
      ~CharacterColorPage();
 
     /**
-     * @note[short] MacOS (ARM): 0x56ee50
-     * @note[short] MacOS (Intel): 0x6467b0
+     * @note[short] MacOS (ARM): 0x57c78c
+     * @note[short] MacOS (Intel): 0x65ca40
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x12be6c
+     * @note[short] iOS: 0x128c24
      * @note[short] Android
      */
     static CharacterColorPage* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x56ef58
-     * @note[short] MacOS (Intel): 0x646910
-     * @note[short] Windows: 0x87f30
-     * @note[short] iOS: 0x12bf2c
+     * @note[short] MacOS (ARM): 0x57c894
+     * @note[short] MacOS (Intel): 0x65cba0
+     * @note[short] Windows: 0x87f80
+     * @note[short] iOS: 0x128ce4
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x570eb4
-     * @note[short] MacOS (Intel): 0x6488c0
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x12d844
+     * @note[short] MacOS (ARM): 0x57e748
+     * @note[short] MacOS (Intel): 0x65ea70
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x12a560
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x570e08
-     * @note[short] MacOS (Intel): 0x648820
-     * @note[short] Windows: 0x8a7a0
-     * @note[short] iOS: 0x12d7e8
+     * @note[short] MacOS (ARM): 0x57e69c
+     * @note[short] MacOS (Intel): 0x65e9d0
+     * @note[short] Windows: 0x8a7f0
+     * @note[short] iOS: 0x12a504
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x570c80
-     * @note[short] MacOS (Intel): 0x648690
-     * @note[short] Windows: 0x867a0
-     * @note[short] iOS: 0x12d674
+     * @note[short] MacOS (ARM): 0x57e510
+     * @note[short] MacOS (Intel): 0x65e840
+     * @note[short] Windows: 0x867f0
+     * @note[short] iOS: 0x12a38c
      * @note[short] Android
      */
     virtual void show();
 
     /**
-     * @note[short] MacOS (ARM): 0x570bac
-     * @note[short] MacOS (Intel): 0x6485e0
-     * @note[short] Windows: 0x89440
-     * @note[short] iOS: 0x12d5b4
+     * @note[short] MacOS (ARM): 0x57e438
+     * @note[short] MacOS (Intel): 0x65e790
+     * @note[short] Windows: 0x89490
+     * @note[short] iOS: 0x12a2cc
      * @note[short] Android
      */
     int activeColorForMode(int mode);
 
     /**
+     * @note[short] MacOS (ARM): 0x57e4a8
+     * @note[short] MacOS (Intel): 0x65e7f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x12a328
      * @note[short] Android
      */
-    TodoReturn checkColor(int p0, UnlockType p1);
+    bool checkColor(int id, UnlockType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x5708e4
-     * @note[short] MacOS (Intel): 0x648300
-     * @note[short] Windows: 0x8a050
+     * @note[short] MacOS (ARM): 0x57e188
+     * @note[short] MacOS (Intel): 0x65e4b0
+     * @note[short] Windows: 0x8a0a0
+     * @note[short] iOS: 0x12a088
      * @note[short] Android
      */
-    int colorForIndex(int p0);
+    int colorForIndex(int index);
 
     /**
-     * @note[short] MacOS (ARM): 0x56ffac
-     * @note[short] MacOS (Intel): 0x6479b0
-     * @note[short] Windows: 0x88e50
-     * @note[short] iOS: 0x12cc88
+     * @note[short] MacOS (ARM): 0x57d898
+     * @note[short] MacOS (Intel): 0x65db80
+     * @note[short] Windows: 0x88ea0
+     * @note[short] iOS: 0x1299d8
      * @note[short] Android
      */
     void createColorMenu();
 
     /**
+     * @note[short] MacOS (ARM): 0x57e698
+     * @note[short] MacOS (Intel): 0x65e9c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x570b58
-     * @note[short] MacOS (Intel): 0x648570
+     * @note[short] MacOS (ARM): 0x57e3e4
+     * @note[short] MacOS (Intel): 0x65e720
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x12a280
      * @note[short] Android
      */
-    cocos2d::CCPoint offsetForIndex(int p0);
+    cocos2d::CCPoint offsetForIndex(int index);
 
     /**
-     * @note[short] MacOS (ARM): 0x56fb64
-     * @note[short] MacOS (Intel): 0x647590
-     * @note[short] Windows: 0x8a760
-     * @note[short] iOS: 0x12c8b0
+     * @note[short] MacOS (ARM): 0x57d450
+     * @note[short] MacOS (Intel): 0x65d760
+     * @note[short] Windows: 0x8a7b0
+     * @note[short] iOS: 0x129600
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x56fc80
-     * @note[short] MacOS (Intel): 0x647690
-     * @note[short] Windows: 0x89550
-     * @note[short] iOS: 0x12c9c8
+     * @note[short] MacOS (ARM): 0x57d56c
+     * @note[short] MacOS (Intel): 0x65d860
+     * @note[short] Windows: 0x895a0
+     * @note[short] iOS: 0x129718
      * @note[short] Android
      */
     void onMode(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x570904
-     * @note[short] MacOS (Intel): 0x648320
-     * @note[short] Windows: 0x89d60
-     * @note[short] iOS: 0x12d378
+     * @note[short] MacOS (ARM): 0x57e1a8
+     * @note[short] MacOS (Intel): 0x65e4d0
+     * @note[short] Windows: 0x89db0
+     * @note[short] iOS: 0x12a0a8
      * @note[short] Android
      */
     void onPlayerColor(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x570384
-     * @note[short] MacOS (Intel): 0x647d80
-     * @note[short] Windows: 0x88da0
-     * @note[short] iOS: 0x12cfe8
+     * @note[short] MacOS (ARM): 0x57dc70
+     * @note[short] MacOS (Intel): 0x65df60
+     * @note[short] Windows: 0x88df0
+     * @note[short] iOS: 0x129d30
      * @note[short] Android
      */
-    void toggleGlow(cocos2d::CCObject* p0);
+    void toggleGlow(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x57e134
+     * @note[short] MacOS (Intel): 0x65e460
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn toggleGlowItems(bool p0);
+    void toggleGlowItems(bool visible);
 
     /**
-     * @note[short] MacOS (ARM): 0x56fbb8
-     * @note[short] MacOS (Intel): 0x6475e0
-     * @note[short] Windows: 0x88c80
-     * @note[short] iOS: 0x12c904
+     * @note[short] MacOS (ARM): 0x57d4a4
+     * @note[short] MacOS (Intel): 0x65d7b0
+     * @note[short] Windows: 0x88cd0
+     * @note[short] iOS: 0x129654
      * @note[short] Android
      */
-    void toggleShip(cocos2d::CCObject* p0);
+    void toggleShip(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x5703bc
-     * @note[short] MacOS (Intel): 0x647dc0
-     * @note[short] Windows: 0x897f0
-     * @note[short] iOS: 0x12d020
+     * @note[short] MacOS (ARM): 0x57dca8
+     * @note[short] MacOS (Intel): 0x65dfa0
+     * @note[short] Windows: 0x89840
+     * @note[short] iOS: 0x129d68
      * @note[short] Android
      */
-    void updateColorMode(int p0);
+    void updateColorMode(int mode);
 
     /**
-     * @note[short] MacOS (ARM): 0x56fe6c
-     * @note[short] MacOS (Intel): 0x647850
-     * @note[short] Windows: 0x8a540
-     * @note[short] iOS: 0x12cb4c
+     * @note[short] MacOS (ARM): 0x57d758
+     * @note[short] MacOS (Intel): 0x65da20
+     * @note[short] Windows: 0x8a590
+     * @note[short] iOS: 0x12989c
      * @note[short] Android
      */
     void updateIconColors();

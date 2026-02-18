@@ -15,20 +15,22 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(CCAlertCircle, cocos2d::CCNode)
 
     /**
+     * @note[short] MacOS (ARM): 0x13f0a4
+     * @note[short] MacOS (Intel): 0x178f40
      * @note[short] Android
      */
     static CCAlertCircle* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x135718
-     * @note[short] MacOS (Intel): 0x1686a0
+     * @note[short] MacOS (ARM): 0x13f188
+     * @note[short] MacOS (Intel): 0x179020
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x1357c4
-     * @note[short] MacOS (Intel): 0x168730
+     * @note[short] MacOS (ARM): 0x13f234
+     * @note[short] MacOS (Intel): 0x1790b0
      * @note[short] Android
      */
     virtual void draw();

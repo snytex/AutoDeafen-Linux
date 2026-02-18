@@ -15,132 +15,134 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(SlideInLayer, cocos2d::CCLayerColor)
 
     /**
+     * @note[short] MacOS (ARM): 0x22ef3c
+     * @note[short] MacOS (Intel): 0x28e4b0
      * @note[short] Android
      */
     static SlideInLayer* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x2265e8
-     * @note[short] MacOS (Intel): 0x27c670
+     * @note[short] MacOS (ARM): 0x22f030
+     * @note[short] MacOS (Intel): 0x28e5d0
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x226cac
-     * @note[short] MacOS (Intel): 0x27cda0
+     * @note[short] MacOS (ARM): 0x22f6f8
+     * @note[short] MacOS (Intel): 0x28ecf0
      * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): 0x226ce8
-     * @note[short] MacOS (Intel): 0x27cdd0
+     * @note[short] MacOS (ARM): 0x22f734
+     * @note[short] MacOS (Intel): 0x28ed20
      * @note[short] Android
      */
-    virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual bool ccTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x226d08
-     * @note[short] MacOS (Intel): 0x27ce30
+     * @note[short] MacOS (ARM): 0x22f754
+     * @note[short] MacOS (Intel): 0x28ed80
      * @note[short] Android
      */
-    virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchMoved(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x226cf8
-     * @note[short] MacOS (Intel): 0x27cdf0
+     * @note[short] MacOS (ARM): 0x22f744
+     * @note[short] MacOS (Intel): 0x28ed40
      * @note[short] Android
      */
-    virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchEnded(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x226d00
-     * @note[short] MacOS (Intel): 0x27ce10
+     * @note[short] MacOS (ARM): 0x22f74c
+     * @note[short] MacOS (Intel): 0x28ed60
      * @note[short] Android
      */
-    virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchCancelled(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x2269cc
-     * @note[short] MacOS (Intel): 0x27caa0
+     * @note[short] MacOS (ARM): 0x22f414
+     * @note[short] MacOS (Intel): 0x28e9f0
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x226a04
-     * @note[short] MacOS (Intel): 0x27cae0
+     * @note[short] MacOS (ARM): 0x22f44c
+     * @note[short] MacOS (Intel): 0x28ea30
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x226968
-     * @note[short] MacOS (Intel): 0x27ca20
+     * @note[short] MacOS (ARM): 0x22f3b0
+     * @note[short] MacOS (Intel): 0x28e970
      * @note[short] Android
      */
     virtual void customSetup();
 
     /**
-     * @note[short] MacOS (ARM): 0x226994
-     * @note[short] MacOS (Intel): 0x27ca70
+     * @note[short] MacOS (ARM): 0x22f3dc
+     * @note[short] MacOS (Intel): 0x28e9c0
      * @note[short] Android
      */
     virtual void enterLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x226a28
-     * @note[short] MacOS (Intel): 0x27cb20
+     * @note[short] MacOS (ARM): 0x22f470
+     * @note[short] MacOS (Intel): 0x28ea70
      * @note[short] Android
      */
-    virtual void exitLayer(cocos2d::CCObject* p0);
+    virtual void exitLayer(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x226a8c
-     * @note[short] MacOS (Intel): 0x27cb70
+     * @note[short] MacOS (ARM): 0x22f4d4
+     * @note[short] MacOS (Intel): 0x28eac0
      * @note[short] Android
      */
-    virtual void showLayer(bool p0);
+    virtual void showLayer(bool instant);
 
     /**
-     * @note[short] MacOS (ARM): 0x226b7c
-     * @note[short] MacOS (Intel): 0x27cc60
+     * @note[short] MacOS (ARM): 0x22f5c4
+     * @note[short] MacOS (Intel): 0x28ebb0
      * @note[short] Android
      */
-    virtual void hideLayer(bool p0);
+    virtual void hideLayer(bool instant);
 
     /**
-     * @note[short] MacOS (ARM): 0x226c4c
-     * @note[short] MacOS (Intel): 0x27cd40
+     * @note[short] MacOS (ARM): 0x22f694
+     * @note[short] MacOS (Intel): 0x28ec90
      * @note[short] Android
      */
     virtual void layerVisible();
 
     /**
-     * @note[short] MacOS (ARM): 0x226c5c
-     * @note[short] MacOS (Intel): 0x27cd60
+     * @note[short] MacOS (ARM): 0x22f6a4
+     * @note[short] MacOS (Intel): 0x28ecb0
      * @note[short] Android
      */
     virtual void layerHidden();
 
     /**
-     * @note[short] MacOS (ARM): 0x226c48
-     * @note[short] MacOS (Intel): 0x27cd30
+     * @note[short] MacOS (ARM): 0x22f690
+     * @note[short] MacOS (Intel): 0x28ec80
      * @note[short] Android
      */
     virtual void enterAnimFinished();
 
     /**
-     * @note[short] MacOS (ARM): 0x22696c
-     * @note[short] MacOS (Intel): 0x27ca30
+     * @note[short] MacOS (ARM): 0x22f3b4
+     * @note[short] MacOS (Intel): 0x28e980
      * @note[short] Android
      */
     virtual void disableUI();
 
     /**
-     * @note[short] MacOS (ARM): 0x226980
-     * @note[short] MacOS (Intel): 0x27ca50
+     * @note[short] MacOS (ARM): 0x22f3c8
+     * @note[short] MacOS (Intel): 0x28e9a0
      * @note[short] Android
      */
     virtual void enableUI();

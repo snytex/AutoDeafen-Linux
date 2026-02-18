@@ -130,11 +130,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(applyParticleSettings) 
 	#endif
 
-	#ifndef GEODE_STATICS_createAndAddCustomParticle
-		#define GEODE_STATICS_createAndAddCustomParticle
-		GEODE_AS_STATIC_FUNCTION(createAndAddCustomParticle) 
-	#endif
-
 	#ifndef GEODE_STATICS_createParticlePreviewArt
 		#define GEODE_STATICS_createParticlePreviewArt
 		GEODE_AS_STATIC_FUNCTION(createParticlePreviewArt) 
@@ -158,11 +153,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateParticlePreviewArtOpacity
 		#define GEODE_STATICS_updateParticlePreviewArtOpacity
 		GEODE_AS_STATIC_FUNCTION(updateParticlePreviewArtOpacity) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateParticleScale
-		#define GEODE_STATICS_updateParticleScale
-		GEODE_AS_STATIC_FUNCTION(updateParticleScale) 
 	#endif
 
     
@@ -350,40 +340,40 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x487420, Default, ParticleGameObject, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x487540, Thiscall, ParticleGameObject, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x488900, Thiscall, ParticleGameObject, setScaleX, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x488980, Thiscall, ParticleGameObject, setScaleY, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x488a00, Thiscall, ParticleGameObject, setScale, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4884f0, Thiscall, ParticleGameObject, setRotation, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x488530, Thiscall, ParticleGameObject, setRotationX, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4886a0, Thiscall, ParticleGameObject, setRotationY, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x488bb0, Thiscall, ParticleGameObject, setChildColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x487790, Thiscall, ParticleGameObject, customSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x487860, Thiscall, ParticleGameObject, addMainSpriteToParent, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x488e00, Thiscall, ParticleGameObject, resetObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x488dc0, Thiscall, ParticleGameObject, deactivateObject, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4875a0, Thiscall, ParticleGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x489050, Thiscall, ParticleGameObject, getSaveString, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x487950, Thiscall, ParticleGameObject, claimParticle, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x487f10, Thiscall, ParticleGameObject, unclaimParticle, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x487ff0, Thiscall, ParticleGameObject, particleWasActivated, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x488a80, Thiscall, ParticleGameObject, setObjectColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x487820, Thiscall, ParticleGameObject, blendModeChanged, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49fb00, Default, ParticleGameObject, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49fc20, Thiscall, ParticleGameObject, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a0fe0, Thiscall, ParticleGameObject, setScaleX, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1060, Thiscall, ParticleGameObject, setScaleY, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a10e0, Thiscall, ParticleGameObject, setScale, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a0bd0, Thiscall, ParticleGameObject, setRotation, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a0c10, Thiscall, ParticleGameObject, setRotationX, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a0d80, Thiscall, ParticleGameObject, setRotationY, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1290, Thiscall, ParticleGameObject, setChildColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49fe70, Thiscall, ParticleGameObject, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49ff40, Thiscall, ParticleGameObject, addMainSpriteToParent, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a14e0, Thiscall, ParticleGameObject, resetObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a14a0, Thiscall, ParticleGameObject, deactivateObject, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49fc80, Thiscall, ParticleGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1730, Thiscall, ParticleGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a0030, Thiscall, ParticleGameObject, claimParticle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a05f0, Thiscall, ParticleGameObject, unclaimParticle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a06d0, Thiscall, ParticleGameObject, particleWasActivated, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1160, Thiscall, ParticleGameObject, setObjectColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49ff00, Thiscall, ParticleGameObject, blendModeChanged, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ParticleGameObject, updateParticleColor, cocos2d::ccColor3B const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ParticleGameObject, updateParticleOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x488ce0, Thiscall, ParticleGameObject, updateMainParticleOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x488d60, Thiscall, ParticleGameObject, updateSecondaryParticleOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x488e60, Thiscall, ParticleGameObject, updateSyncedAnimation, float, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x488fd0, Thiscall, ParticleGameObject, updateAnimateOnTrigger, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x487b50, Thiscall, ParticleGameObject, applyParticleSettings, cocos2d::CCParticleSystemQuad*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ParticleGameObject, createAndAddCustomParticle, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4882e0, Thiscall, ParticleGameObject, createParticlePreviewArt, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4880b0, Thiscall, ParticleGameObject, setParticleString, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x488140, Thiscall, ParticleGameObject, updateParticle, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4887d0, Thiscall, ParticleGameObject, updateParticleAngle, float, cocos2d::CCParticleSystemQuad*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x488470, Thiscall, ParticleGameObject, updateParticlePreviewArtOpacity, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ParticleGameObject, updateParticleScale, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a13c0, Thiscall, ParticleGameObject, updateMainParticleOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1440, Thiscall, ParticleGameObject, updateSecondaryParticleOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1540, Thiscall, ParticleGameObject, updateSyncedAnimation, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a16b0, Thiscall, ParticleGameObject, updateAnimateOnTrigger, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a0230, Thiscall, ParticleGameObject, applyParticleSettings, cocos2d::CCParticleSystemQuad*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ParticleGameObject, createAndAddCustomParticle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a09c0, Thiscall, ParticleGameObject, createParticlePreviewArt, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a0790, Thiscall, ParticleGameObject, setParticleString, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a0820, Thiscall, ParticleGameObject, updateParticle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a0eb0, Thiscall, ParticleGameObject, updateParticleAngle, float, cocos2d::CCParticleSystemQuad*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a0b50, Thiscall, ParticleGameObject, updateParticlePreviewArtOpacity, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ParticleGameObject, updateParticleScale, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ParticleGameObject, updateParticleStruct, )
 		}
 	};

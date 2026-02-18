@@ -27,193 +27,204 @@ public:
      GJShopLayer();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x2b06f0
+     * @note[short] MacOS (Intel): 0x322c60
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x14a45c
+     * @note[short] Android: Rebinded
      */
      ~GJShopLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a536c
-     * @note[short] MacOS (Intel): 0x30e990
+     * @note[short] MacOS (ARM): 0x2b08fc
+     * @note[short] MacOS (Intel): 0x322f30
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x14dc8c
+     * @note[short] iOS: 0x14a594
      * @note[short] Android
      */
     static GJShopLayer* create(ShopType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a5268
-     * @note[short] MacOS (Intel): 0x30e850
-     * @note[short] Windows: 0x2a1ef0
-     * @note[short] iOS: 0x14dc40
+     * @note[short] MacOS (ARM): 0x2b07f8
+     * @note[short] MacOS (Intel): 0x322df0
+     * @note[short] Windows: 0x2a95b0
+     * @note[short] iOS: 0x14a548
      * @note[short] Android
      */
-    static cocos2d::CCScene* scene(ShopType p0);
+    static cocos2d::CCScene* scene(ShopType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a7074
-     * @note[short] MacOS (Intel): 0x310710
-     * @note[short] Windows: 0x2a4160
-     * @note[short] iOS: 0x14f518
+     * @note[short] MacOS (ARM): 0x2b25b0
+     * @note[short] MacOS (Intel): 0x324ca0
+     * @note[short] Windows: 0x2ab820
+     * @note[short] iOS: 0x14be1c
      * @note[short] Android
      */
     virtual void onExit();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a91d0
-     * @note[short] MacOS (Intel): 0x312d20
-     * @note[short] Windows: 0x2a7290
-     * @note[short] iOS: 0x150e28
+     * @note[short] MacOS (ARM): 0x2b4714
+     * @note[short] MacOS (Intel): 0x327270
+     * @note[short] Windows: 0x2ae950
+     * @note[short] iOS: 0x14d77c
      * @note[short] Android
      */
-    virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual bool ccTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a9590
-     * @note[short] MacOS (Intel): 0x3130c0
+     * @note[short] MacOS (ARM): 0x2b4ac4
+     * @note[short] MacOS (Intel): 0x327600
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x151120
-     * @note[short] Android: Out of line
-     */
-    virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x2a9598
-     * @note[short] MacOS (Intel): 0x3130e0
-     * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x151128
-     * @note[short] Android: Out of line
-     */
-    virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x2a95a0
-     * @note[short] MacOS (Intel): 0x313100
-     * @note[short] Windows: 0x71210
-     * @note[short] iOS: 0x151130
+     * @note[short] iOS: 0x14da74
      * @note[short] Android
      */
-    virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchMoved(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a95bc
-     * @note[short] MacOS (Intel): 0x313140
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x15114c
+     * @note[short] MacOS (ARM): 0x2b4acc
+     * @note[short] MacOS (Intel): 0x327620
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x14da7c
+     * @note[short] Android
+     */
+    virtual void ccTouchEnded(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
+
+    /**
+     * @note[short] MacOS (ARM): 0x2b4ad4
+     * @note[short] MacOS (Intel): 0x327640
+     * @note[short] Windows: 0x71240
+     * @note[short] iOS: 0x14da84
+     * @note[short] Android
+     */
+    virtual void ccTouchCancelled(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
+
+    /**
+     * @note[short] MacOS (ARM): 0x2b4af0
+     * @note[short] MacOS (Intel): 0x327680
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x14daa0
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a7f40
-     * @note[short] MacOS (Intel): 0x311710
-     * @note[short] Windows: 0x2a58d0
-     * @note[short] iOS: 0x15003c
+     * @note[short] MacOS (ARM): 0x2b3468
+     * @note[short] MacOS (Intel): 0x325c90
+     * @note[short] Windows: 0x2acf90
+     * @note[short] iOS: 0x14c940
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a78d4
-     * @note[short] MacOS (Intel): 0x311010
-     * @note[short] Windows: 0x2a4ed0
-     * @note[short] iOS: 0x14fb3c
+     * @note[short] MacOS (ARM): 0x2b2dfc
+     * @note[short] MacOS (Intel): 0x325590
+     * @note[short] Windows: 0x2ac590
+     * @note[short] iOS: 0x14c440
      * @note[short] Android
      */
-    virtual void didPurchaseItem(GJStoreItem* p0);
+    virtual void didPurchaseItem(GJStoreItem* item);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a7360
-     * @note[short] MacOS (Intel): 0x310a30
-     * @note[short] Windows: 0x2a4520
-     * @note[short] iOS: 0x14f6b4
+     * @note[short] MacOS (ARM): 0x2b2888
+     * @note[short] MacOS (Intel): 0x324fb0
+     * @note[short] Windows: 0x2abbe0
+     * @note[short] iOS: 0x14bfb8
      * @note[short] Android
      */
     virtual void rewardedVideoFinished();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a8fec
-     * @note[short] MacOS (Intel): 0x312b60
-     * @note[short] Windows: 0x2a6f60
-     * @note[short] iOS: 0x150c68
+     * @note[short] MacOS (ARM): 0x2b4530
+     * @note[short] MacOS (Intel): 0x3270b0
+     * @note[short] Windows: 0x2ae620
+     * @note[short] iOS: 0x14d5bc
      * @note[short] Android
      */
-    virtual void dialogClosed(DialogLayer* p0);
+    virtual void dialogClosed(DialogLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a7298
-     * @note[short] MacOS (Intel): 0x310960
+     * @note[short] MacOS (ARM): 0x2b27c0
+     * @note[short] MacOS (Intel): 0x324ee0
      * @note[short] Android
      */
     void exitVideoAdItems();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a5450
-     * @note[short] MacOS (Intel): 0x30eaa0
-     * @note[short] Windows: 0x2a2070
-     * @note[short] iOS: 0x14dd64
+     * @note[short] MacOS (ARM): 0x2b09e0
+     * @note[short] MacOS (Intel): 0x323040
+     * @note[short] Windows: 0x2a9730
+     * @note[short] iOS: 0x14a66c
      * @note[short] Android
      */
-    bool init(ShopType p0);
+    bool init(ShopType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a6d78
-     * @note[short] MacOS (Intel): 0x310450
-     * @note[short] Windows: 0x2a56b0
-     * @note[short] iOS: 0x14f27c
+     * @note[short] MacOS (ARM): 0x2b22c8
+     * @note[short] MacOS (Intel): 0x3249d0
+     * @note[short] Windows: 0x2acd70
+     * @note[short] iOS: 0x14bb84
      * @note[short] Android
      */
     void onBack(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x2a43e0
-     * @note[short] iOS: 0x14f250
+     * @note[short] MacOS (ARM): 0x2b2250
+     * @note[short] MacOS (Intel): 0x324950
+     * @note[short] Windows: 0x2abaa0
+     * @note[short] iOS: 0x14bb58
      * @note[short] Android
      */
     void onCommunityCredits(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x2b224c
+     * @note[short] MacOS (Intel): 0x324940
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x14bb54
      * @note[short] Android
      */
     void onPlushies(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a6f30
-     * @note[short] MacOS (Intel): 0x310600
-     * @note[short] iOS: 0x14f408
+     * @note[short] MacOS (ARM): 0x2b247c
+     * @note[short] MacOS (Intel): 0x324b90
+     * @note[short] Windows: 0x2abcb0
+     * @note[short] iOS: 0x14bd0c
      * @note[short] Android
      */
     void onSelectItem(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a6d2c
-     * @note[short] MacOS (Intel): 0x310400
+     * @note[short] MacOS (ARM): 0x2b227c
+     * @note[short] MacOS (Intel): 0x324980
      * @note[short] Android
      */
     void onVideoAd(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a744c
-     * @note[short] MacOS (Intel): 0x310b20
-     * @note[short] iOS: 0x14f74c
+     * @note[short] MacOS (ARM): 0x2b2974
+     * @note[short] MacOS (Intel): 0x3250a0
+     * @note[short] Windows: 0x2abec0
+     * @note[short] iOS: 0x14c050
      * @note[short] Android
      */
-    void showCantAffordMessage(GJStoreItem* p0);
+    void showCantAffordMessage(GJStoreItem* item);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a7f4c
-     * @note[short] MacOS (Intel): 0x311740
-     * @note[short] Windows: 0x2a58e0
+     * @note[short] MacOS (ARM): 0x2b3474
+     * @note[short] MacOS (Intel): 0x325cc0
+     * @note[short] Windows: 0x2acfa0
+     * @note[short] iOS: 0x14c94c
      * @note[short] Android
      */
     void showReactMessage();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a73bc
-     * @note[short] MacOS (Intel): 0x310a80
+     * @note[short] MacOS (ARM): 0x2b28e4
+     * @note[short] MacOS (Intel): 0x325000
+     * @note[short] Windows: 0x2abc40
+     * @note[short] iOS: 0x14c014
      * @note[short] Android
      */
     void updateCurrencyCounter();

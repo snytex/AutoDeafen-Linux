@@ -21,227 +21,244 @@ public:
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x311b7c
+     * @note[short] iOS: 0x311a80
      * @note[short] Android: Out of line
      */
      SecretLayer2();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x400efc
+     * @note[short] MacOS (Intel): 0x49cc70
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x3095f4
+     * @note[short] Android: Rebinded
      */
      ~SecretLayer2();
 
     /**
-     * @note[short] MacOS (ARM): 0x3f72cc
-     * @note[short] MacOS (Intel): 0x489fc0
+     * @note[short] MacOS (ARM): 0x4011bc
+     * @note[short] MacOS (Intel): 0x49d070
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3098ec
+     * @note[short] iOS: 0x3096ec
      * @note[short] Android
      */
     static SecretLayer2* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x3f7288
-     * @note[short] MacOS (Intel): 0x489f80
-     * @note[short] Windows: 0x3cadf0
-     * @note[short] iOS: 0x3098a8
+     * @note[short] MacOS (ARM): 0x401178
+     * @note[short] MacOS (Intel): 0x49d030
+     * @note[short] Windows: 0x3e2160
+     * @note[short] iOS: 0x3096a8
      * @note[short] Android
      */
     static cocos2d::CCScene* scene();
 
     /**
-     * @note[short] MacOS (ARM): 0x3f73b4
-     * @note[short] MacOS (Intel): 0x48a0f0
-     * @note[short] Windows: 0x3caf70
-     * @note[short] iOS: 0x309960
+     * @note[short] MacOS (ARM): 0x4012a4
+     * @note[short] MacOS (Intel): 0x49d1a0
+     * @note[short] Windows: 0x3e22e0
+     * @note[short] iOS: 0x309760
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x3fce88
-     * @note[short] MacOS (Intel): 0x4900c0
-     * @note[short] Windows: 0x3d25a0
-     * @note[short] iOS: 0x30dc8c
+     * @note[short] MacOS (ARM): 0x406e20
+     * @note[short] MacOS (Intel): 0x4a3160
+     * @note[short] Windows: 0x3e9910
+     * @note[short] iOS: 0x30db94
      * @note[short] Android
      */
     virtual void onExit();
 
     /**
-     * @note[short] MacOS (ARM): 0x3fcd9c
-     * @note[short] MacOS (Intel): 0x48ffd0
-     * @note[short] Windows: 0x3d2590
-     * @note[short] iOS: 0x30dc80
+     * @note[short] MacOS (ARM): 0x406d34
+     * @note[short] MacOS (Intel): 0x4a3070
+     * @note[short] Windows: 0x3e9900
+     * @note[short] iOS: 0x30db88
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x3fbe64
-     * @note[short] MacOS (Intel): 0x48f060
-     * @note[short] Windows: 0x3cfa10
-     * @note[short] iOS: 0x30d318
+     * @note[short] MacOS (ARM): 0x405cb8
+     * @note[short] MacOS (Intel): 0x4a20f0
+     * @note[short] Windows: 0x3e6d80
+     * @note[short] iOS: 0x30d0d0
      * @note[short] Android
      */
-    virtual void textInputOpened(CCTextInputNode* p0);
+    virtual void textInputOpened(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x3fbf44
-     * @note[short] MacOS (Intel): 0x48f130
-     * @note[short] Windows: 0x3cfb60
-     * @note[short] iOS: 0x30d404
+     * @note[short] MacOS (ARM): 0x405d98
+     * @note[short] MacOS (Intel): 0x4a21c0
+     * @note[short] Windows: 0x3e6ed0
+     * @note[short] iOS: 0x30d1bc
      * @note[short] Android
      */
-    virtual void textInputClosed(CCTextInputNode* p0);
+    virtual void textInputClosed(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x3fc054
-     * @note[short] MacOS (Intel): 0x48f200
-     * @note[short] Windows: 0x3cfb60
-     * @note[short] iOS: 0x30d484
+     * @note[short] MacOS (ARM): 0x405ea8
+     * @note[short] MacOS (Intel): 0x4a2290
+     * @note[short] Windows: 0x3e6ed0
+     * @note[short] iOS: 0x30d23c
      * @note[short] Android
      */
-    virtual void textChanged(CCTextInputNode* p0);
+    virtual void textChanged(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x3fbe5c
-     * @note[short] MacOS (Intel): 0x48f040
+     * @note[short] MacOS (ARM): 0x405cb0
+     * @note[short] MacOS (Intel): 0x4a20d0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x30d310
-     * @note[short] Android: Out of line
-     */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x3fa9c0
-     * @note[short] MacOS (Intel): 0x48dbb0
-     * @note[short] Windows: 0x3cd250
-     * @note[short] iOS: 0x30c6f4
+     * @note[short] iOS: 0x30d0c8
      * @note[short] Android
      */
-    virtual void dialogClosed(DialogLayer* p0);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x3fc23c
-     * @note[short] MacOS (Intel): 0x48f3c0
-     * @note[short] Windows: 0x3d0880
-     * @note[short] iOS: 0x30d5c8
+     * @note[short] MacOS (ARM): 0x404858
+     * @note[short] MacOS (Intel): 0x4a0c40
+     * @note[short] Windows: 0x3e45c0
+     * @note[short] iOS: 0x30c4d0
+     * @note[short] Android
+     */
+    virtual void dialogClosed(DialogLayer* layer);
+
+    /**
+     * @note[short] MacOS (ARM): 0x406088
+     * @note[short] MacOS (Intel): 0x4a2450
+     * @note[short] Windows: 0x3e7bf0
+     * @note[short] iOS: 0x30d378
      * @note[short] Android
      */
     gd::string getBasicMessage();
 
     /**
-     * @note[short] Windows: 0x3d13e0
+     * @note[short] MacOS (ARM): 0x405448
+     * @note[short] MacOS (Intel): 0x4a18b0
+     * @note[short] Windows: 0x3e8750
+     * @note[short] iOS: 0x30cd70
      * @note[short] Android
      */
     gd::string getErrorMessage();
 
     /**
-     * @note[short] Windows: 0x3cffb0
-     * @note[short] iOS: 0x30a6c4
+     * @note[short] MacOS (ARM): 0x402170
+     * @note[short] MacOS (Intel): 0x49e0a0
+     * @note[short] Windows: 0x3e7320
+     * @note[short] iOS: 0x30a4c4
      * @note[short] Android
      */
     gd::string getMessage();
 
     /**
-     * @note[short] MacOS (ARM): 0x3fc958
-     * @note[short] MacOS (Intel): 0x48faa0
-     * @note[short] Windows: 0x3d0190
-     * @note[short] iOS: 0x30d864
+     * @note[short] MacOS (ARM): 0x406788
+     * @note[short] MacOS (Intel): 0x4a2b30
+     * @note[short] Windows: 0x3e7500
+     * @note[short] iOS: 0x30d604
      * @note[short] Android
      */
     gd::string getThreadMessage();
 
     /**
+     * @note[short] MacOS (ARM): 0x4020e4
+     * @note[short] MacOS (Intel): 0x49e020
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    cocos2d::CCNode* nodeWithTag(int p0);
+    cocos2d::CCNode* nodeWithTag(int tag);
 
     /**
-     * @note[short] MacOS (ARM): 0x3f8594
-     * @note[short] MacOS (Intel): 0x48b320
-     * @note[short] Windows: 0x3d24e0
-     * @note[short] iOS: 0x30a8f4
+     * @note[short] MacOS (ARM): 0x402440
+     * @note[short] MacOS (Intel): 0x49e3c0
+     * @note[short] Windows: 0x3e9850
+     * @note[short] iOS: 0x30a6ec
      * @note[short] Android
      */
     void onBack(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3f9a70
-     * @note[short] MacOS (Intel): 0x48ca80
-     * @note[short] Windows: 0x3cd5a0
-     * @note[short] iOS: 0x30bb3c
+     * @note[short] MacOS (ARM): 0x403910
+     * @note[short] MacOS (Intel): 0x49fb10
+     * @note[short] Windows: 0x3e4910
+     * @note[short] iOS: 0x30b920
      * @note[short] Android
      */
     void onDoor(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3f9cd4
-     * @note[short] MacOS (Intel): 0x48ccc0
-     * @note[short] Windows: 0x3cd2f0
-     * @note[short] iOS: 0x30bd10
+     * @note[short] MacOS (ARM): 0x403b6c
+     * @note[short] MacOS (Intel): 0x49fd40
+     * @note[short] Windows: 0x3e4660
+     * @note[short] iOS: 0x30baec
      * @note[short] Android
      */
     void onSecretLevel(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3f8608
-     * @note[short] MacOS (Intel): 0x48b390
-     * @note[short] Windows: 0x3cdf00
-     * @note[short] iOS: 0x30a968
+     * @note[short] MacOS (ARM): 0x4024b4
+     * @note[short] MacOS (Intel): 0x49e430
+     * @note[short] Windows: 0x3e5270
+     * @note[short] iOS: 0x30a760
      * @note[short] Android
      */
     void onSubmit(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x3d2060
-     * @note[short] iOS: 0x30c7a4
+     * @note[short] MacOS (ARM): 0x4049f0
+     * @note[short] MacOS (Intel): 0x4a0e10
+     * @note[short] Windows: 0x3e93d0
+     * @note[short] iOS: 0x30c580
      * @note[short] Android
      */
     void playCoinEffect();
 
     /**
-     * @note[short] iOS: 0x30d504
+     * @note[short] MacOS (ARM): 0x405fb8
+     * @note[short] MacOS (Intel): 0x4a2360
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x30d2bc
      * @note[short] Android
      */
     void selectAThread();
 
     /**
-     * @note[short] MacOS (ARM): 0x3f9e98
-     * @note[short] MacOS (Intel): 0x48ce80
-     * @note[short] Windows: 0x3cc5a0
+     * @note[short] MacOS (ARM): 0x403d30
+     * @note[short] MacOS (Intel): 0x49ff00
+     * @note[short] Windows: 0x3e3910
+     * @note[short] iOS: 0x30bc48
      * @note[short] Android
      */
     void showCompletedLevel();
 
     /**
-     * @note[short] Windows: 0x3cc430
-     * @note[short] iOS: 0x30c5e4
+     * @note[short] MacOS (ARM): 0x404744
+     * @note[short] MacOS (Intel): 0x4a0b10
+     * @note[short] Windows: 0x3e37a0
+     * @note[short] iOS: 0x30c3c0
      * @note[short] Android
      */
     void showSecretLevel();
 
     /**
-     * @note[short] MacOS (ARM): 0x3f8234
-     * @note[short] MacOS (Intel): 0x48afb0
-     * @note[short] Windows: 0x3cff20
-     * @note[short] iOS: 0x30a674
+     * @note[short] MacOS (ARM): 0x40211c
+     * @note[short] MacOS (Intel): 0x49e050
+     * @note[short] Windows: 0x3e7290
+     * @note[short] iOS: 0x30a474
      * @note[short] Android: Rebinded
      */
     void updateMessageLabel(gd::string text);
 
     /**
-     * @note[short] MacOS (ARM): 0x3f831c
-     * @note[short] MacOS (Intel): 0x48b090
-     * @note[short] Windows: 0x3cfc30
-     * @note[short] iOS: 0x30a754
+     * @note[short] MacOS (ARM): 0x4021e8
+     * @note[short] MacOS (Intel): 0x49e130
+     * @note[short] Windows: 0x3e6fa0
+     * @note[short] iOS: 0x30a54c
      * @note[short] Android
      */
-    void updateSearchLabel(char const* p0);
+    void updateSearchLabel(char const* text);
     int m_threadTag;
     int m_basicMessageIndex;
     int m_selectedThread;

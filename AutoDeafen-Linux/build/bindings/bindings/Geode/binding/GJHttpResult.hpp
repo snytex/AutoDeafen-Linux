@@ -15,14 +15,31 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJHttpResult, cocos2d::CCNode)
 
     /**
-     * @note[short] Android: Rebinded
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static GJHttpResult* create(bool p0, gd::string p1, gd::string p2, GJHttpType p3);
+     GJHttpResult();
 
     /**
+     * @note[short] MacOS (ARM): 0x473b8c
+     * @note[short] MacOS (Intel): 0x51e0c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-    bool init(bool p0, gd::string p1, gd::string p2, GJHttpType p3);
+    static GJHttpResult* create(bool success, gd::string response, gd::string tag, GJHttpType type);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4b0bcc
+     * @note[short] MacOS (Intel): 0x561b10
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Rebinded
+     */
+    bool init(bool success, gd::string response, gd::string tag, GJHttpType type);
     bool m_success;
     gd::string m_response;
     gd::string m_requestTag;

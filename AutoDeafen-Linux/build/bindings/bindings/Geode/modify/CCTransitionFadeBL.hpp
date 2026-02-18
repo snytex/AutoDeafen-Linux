@@ -35,6 +35,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCTransitionFadeBL@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCTransitionFadeBL, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCTransitionFadeBL@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCTransitionFadeBL)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, cocos2d::CCScene*>::func(&cocos2d::CCTransitionFadeBL::create)), Default, cocos2d::CCTransitionFadeBL, create, float, cocos2d::CCScene*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCSize const&>::func(&cocos2d::CCTransitionFadeBL::actionWithSize)), Thiscall, cocos2d::CCTransitionFadeBL, actionWithSize, cocos2d::CCSize const&)
 		}

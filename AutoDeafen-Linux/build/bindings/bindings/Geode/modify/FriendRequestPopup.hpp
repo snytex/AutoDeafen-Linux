@@ -35,11 +35,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(FLAlert_Clicked) 
 	#endif
 
-	#ifndef GEODE_STATICS_blockUser
-		#define GEODE_STATICS_blockUser
-		GEODE_AS_STATIC_FUNCTION(blockUser) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -145,19 +140,19 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28e370, Default, FriendRequestPopup, create, GJFriendRequest*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28f950, Thiscall, FriendRequestPopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28f960, Thiscall, FriendRequestPopup, uploadActionFinished, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28fb10, Thiscall, FriendRequestPopup, uploadActionFailed, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28fbd0, Thiscall, FriendRequestPopup, onClosePopup, UploadActionPopup*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28fc30, Thiscall, FriendRequestPopup, FLAlert_Clicked, FLAlertLayer*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(FriendRequestPopup, blockUser, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28e4b0, Thiscall, FriendRequestPopup, init, GJFriendRequest*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28eb20, Thiscall, FriendRequestPopup, loadFromGJFriendRequest, GJFriendRequest*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28f4e0, Thiscall, FriendRequestPopup, onAccept, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28f6f0, Thiscall, FriendRequestPopup, onBlock, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28f440, Thiscall, FriendRequestPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28f5f0, Thiscall, FriendRequestPopup, onRemove, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2959d0, Default, FriendRequestPopup, create, GJFriendRequest*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x296fb0, Thiscall, FriendRequestPopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x296fc0, Thiscall, FriendRequestPopup, uploadActionFinished, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x297170, Thiscall, FriendRequestPopup, uploadActionFailed, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x297230, Thiscall, FriendRequestPopup, onClosePopup, UploadActionPopup*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x297290, Thiscall, FriendRequestPopup, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FriendRequestPopup, blockUser, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x295b10, Thiscall, FriendRequestPopup, init, GJFriendRequest*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x296180, Thiscall, FriendRequestPopup, loadFromGJFriendRequest, GJFriendRequest*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x296b40, Thiscall, FriendRequestPopup, onAccept, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x296d50, Thiscall, FriendRequestPopup, onBlock, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x296aa0, Thiscall, FriendRequestPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x296c50, Thiscall, FriendRequestPopup, onRemove, cocos2d::CCObject*)
 		}
 	};
 }

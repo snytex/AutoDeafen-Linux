@@ -20,36 +20,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addPoint) 
 	#endif
 
-	#ifndef GEODE_STATICS_clearAboveXPos
-		#define GEODE_STATICS_clearAboveXPos
-		GEODE_AS_STATIC_FUNCTION(clearAboveXPos) 
-	#endif
-
-	#ifndef GEODE_STATICS_clearBehindXPos
-		#define GEODE_STATICS_clearBehindXPos
-		GEODE_AS_STATIC_FUNCTION(clearBehindXPos) 
-	#endif
-
-	#ifndef GEODE_STATICS_firstSetup
-		#define GEODE_STATICS_firstSetup
-		GEODE_AS_STATIC_FUNCTION(firstSetup) 
-	#endif
-
-	#ifndef GEODE_STATICS_normalizeAngle
-		#define GEODE_STATICS_normalizeAngle
-		GEODE_AS_STATIC_FUNCTION(normalizeAngle) 
-	#endif
-
-	#ifndef GEODE_STATICS_quadCornerOffset
-		#define GEODE_STATICS_quadCornerOffset
-		GEODE_AS_STATIC_FUNCTION(quadCornerOffset) 
-	#endif
-
-	#ifndef GEODE_STATICS_scheduleAutoUpdate
-		#define GEODE_STATICS_scheduleAutoUpdate
-		GEODE_AS_STATIC_FUNCTION(scheduleAutoUpdate) 
-	#endif
-
 	#ifndef GEODE_STATICS_stopStroke
 		#define GEODE_STATICS_stopStroke
 		GEODE_AS_STATIC_FUNCTION(stopStroke) 
@@ -140,20 +110,20 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b1680, Default, HardStreak, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b1740, Thiscall, HardStreak, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b2130, Thiscall, HardStreak, addPoint, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(HardStreak, clearAboveXPos, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(HardStreak, clearBehindXPos, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b8d40, Default, HardStreak, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b8e00, Thiscall, HardStreak, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b9800, Thiscall, HardStreak, addPoint, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(HardStreak, clearAboveXPos, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(HardStreak, clearBehindXPos, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(HardStreak, createDuplicate, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(HardStreak, firstSetup, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(HardStreak, normalizeAngle, double)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(HardStreak, quadCornerOffset, cocos2d::CCPoint, cocos2d::CCPoint, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(HardStreak, firstSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(HardStreak, normalizeAngle, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(HardStreak, quadCornerOffset, cocos2d::CCPoint, cocos2d::CCPoint, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(HardStreak, reset, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(HardStreak, resumeStroke, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(HardStreak, scheduleAutoUpdate, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b17f0, Thiscall, HardStreak, stopStroke, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b1830, Thiscall, HardStreak, updateStroke, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(HardStreak, scheduleAutoUpdate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b8eb0, Thiscall, HardStreak, stopStroke, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b8ef0, Thiscall, HardStreak, updateStroke, float)
 		}
 	};
 }

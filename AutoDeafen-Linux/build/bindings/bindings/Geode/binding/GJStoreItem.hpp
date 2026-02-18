@@ -24,26 +24,28 @@ public:
      GJStoreItem();
 
     /**
-     * @note[short] MacOS (ARM): 0x5a890
-     * @note[short] MacOS (Intel): 0x66200
+     * @note[short] MacOS (ARM): 0x5875c
+     * @note[short] MacOS (Intel): 0x668e0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x32bc54
+     * @note[short] iOS: 0x32bd98
      * @note[short] Android
      */
     static GJStoreItem* create(int index, int typeID, int unlockType, int price, ShopType shopType);
 
     /**
-     * @note[short] MacOS (ARM): 0x5ac78
-     * @note[short] MacOS (Intel): 0x665e0
+     * @note[short] MacOS (ARM): 0x58b40
+     * @note[short] MacOS (Intel): 0x66cb0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x32c074
      * @note[short] Android
      */
     gd::string getCurrencyKey();
 
     /**
-     * @note[short] MacOS (ARM): 0x82d3c
-     * @note[short] MacOS (Intel): 0x8f5a0
+     * @note[short] MacOS (ARM): 0x811b0
+     * @note[short] MacOS (Intel): 0x8fb00
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x340840
      * @note[short] Android
      */
     bool init(int index, int typeID, int unlockType, int price, ShopType shopType);

@@ -25,17 +25,8 @@ public:
      CCSpriteGrayscale();
 
     /**
-     * @note[short] MacOS (ARM): 0x50cabc
-     * @note[short] MacOS (Intel): 0x5d95c0
-     * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Rebinded
-     */
-    static CCSpriteGrayscale* create(gd::string const& file, cocos2d::CCRect const& rect);
-
-    /**
-     * @note[short] MacOS (ARM): 0x50c9f0
-     * @note[short] MacOS (Intel): 0x5d9500
+     * @note[short] MacOS (ARM): 0x51a6f4
+     * @note[short] MacOS (Intel): 0x5f0ce0
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
@@ -43,34 +34,35 @@ public:
     static CCSpriteGrayscale* create(gd::string const& file);
 
     /**
-     * @note[short] MacOS (ARM): 0x50cda8
-     * @note[short] MacOS (Intel): 0x5d9860
+     * @note[short] MacOS (ARM): 0x51a7c0
+     * @note[short] MacOS (Intel): 0x5f0da0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1a7110
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Rebinded
+     */
+    static CCSpriteGrayscale* create(gd::string const& file, cocos2d::CCRect const& rect);
+
+    /**
+     * @note[short] MacOS (ARM): 0x51aaac
+     * @note[short] MacOS (Intel): 0x5f1040
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1a3e98
      * @note[short] Android
      */
     static CCSpriteGrayscale* createWithSpriteFrame(cocos2d::CCSpriteFrame* frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x50cea4
-     * @note[short] MacOS (Intel): 0x5d9940
-     * @note[short] Windows: 0x49020
-     * @note[short] iOS: 0x1a71fc
+     * @note[short] MacOS (ARM): 0x51aba8
+     * @note[short] MacOS (Intel): 0x5f1120
+     * @note[short] Windows: 0x49090
+     * @note[short] iOS: 0x1a3f84
      * @note[short] Android: Rebinded
      */
     static CCSpriteGrayscale* createWithSpriteFrameName(gd::string const& frameName);
 
     /**
-     * @note[short] MacOS (ARM): 0x50ccb4
-     * @note[short] MacOS (Intel): 0x5d9790
-     * @note[short] Windows: Out of line
-     * @note[short] Android
-     */
-    static CCSpriteGrayscale* createWithTexture(cocos2d::CCTexture2D* texture, cocos2d::CCRect const& rect, bool rotated);
-
-    /**
-     * @note[short] MacOS (ARM): 0x50cb9c
-     * @note[short] MacOS (Intel): 0x5d9690
+     * @note[short] MacOS (ARM): 0x51a8a0
+     * @note[short] MacOS (Intel): 0x5f0e70
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
@@ -78,19 +70,28 @@ public:
     static CCSpriteGrayscale* createWithTexture(cocos2d::CCTexture2D* texture);
 
     /**
-     * @note[short] MacOS (ARM): 0x50c9cc
-     * @note[short] MacOS (Intel): 0x5d94e0
-     * @note[short] Windows: 0x48fc0
-     * @note[short] iOS: 0x1a7100
+     * @note[short] MacOS (ARM): 0x51a9b8
+     * @note[short] MacOS (Intel): 0x5f0f70
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    static CCSpriteGrayscale* createWithTexture(cocos2d::CCTexture2D* texture, cocos2d::CCRect const& rect, bool rotated);
+
+    /**
+     * @note[short] MacOS (ARM): 0x51a6d0
+     * @note[short] MacOS (Intel): 0x5f0cc0
+     * @note[short] Windows: 0x49030
+     * @note[short] iOS: 0x1a3e88
      * @note[short] Android
      */
     virtual gd::string getShaderName();
 
     /**
-     * @note[short] MacOS (ARM): 0x50c890
-     * @note[short] MacOS (Intel): 0x5d92d0
-     * @note[short] Windows: 0x48e00
-     * @note[short] iOS: 0x1a702c
+     * @note[short] MacOS (ARM): 0x51a590
+     * @note[short] MacOS (Intel): 0x5f0a90
+     * @note[short] Windows: 0x48e70
+     * @note[short] iOS: 0x1a3dac
      * @note[short] Android
      */
     virtual const char* shaderBody();

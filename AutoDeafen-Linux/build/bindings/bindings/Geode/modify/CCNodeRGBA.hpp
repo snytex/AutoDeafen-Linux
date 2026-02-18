@@ -155,11 +155,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNodeRGBA::create)), Default, cocos2d::CCNodeRGBA, create, )
 			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCNodeRGBA@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCNodeRGBA, )
 			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCNodeRGBA@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCNodeRGBA)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNodeRGBA::create)), Default, cocos2d::CCNodeRGBA, create, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCNodeRGBA::init)), Thiscall, cocos2d::CCNodeRGBA, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccColor3B const&>::func(&cocos2d::CCNodeRGBA::setColor)), Thiscall, cocos2d::CCNodeRGBA, setColor, cocos2d::_ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccColor3B const&>::func(&cocos2d::CCNodeRGBA::setColor)), Thiscall, cocos2d::CCNodeRGBA, setColor, cocos2d::ccColor3B const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCNodeRGBA::getColor)), Thiscall, cocos2d::CCNodeRGBA, getColor, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCNodeRGBA::getDisplayedColor)), Thiscall, cocos2d::CCNodeRGBA, getDisplayedColor, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCNodeRGBA::getDisplayedOpacity)), Thiscall, cocos2d::CCNodeRGBA, getDisplayedOpacity, )
@@ -167,7 +167,7 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<unsigned char>::func(&cocos2d::CCNodeRGBA::setOpacity)), Thiscall, cocos2d::CCNodeRGBA, setOpacity, unsigned char)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCNodeRGBA::isCascadeColorEnabled)), Thiscall, cocos2d::CCNodeRGBA, isCascadeColorEnabled, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<bool>::func(&cocos2d::CCNodeRGBA::setCascadeColorEnabled)), Thiscall, cocos2d::CCNodeRGBA, setCascadeColorEnabled, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccColor3B const&>::func(&cocos2d::CCNodeRGBA::updateDisplayedColor)), Thiscall, cocos2d::CCNodeRGBA, updateDisplayedColor, cocos2d::_ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccColor3B const&>::func(&cocos2d::CCNodeRGBA::updateDisplayedColor)), Thiscall, cocos2d::CCNodeRGBA, updateDisplayedColor, cocos2d::ccColor3B const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCNodeRGBA::isCascadeOpacityEnabled)), Thiscall, cocos2d::CCNodeRGBA, isCascadeOpacityEnabled, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<bool>::func(&cocos2d::CCNodeRGBA::setCascadeOpacityEnabled)), Thiscall, cocos2d::CCNodeRGBA, setCascadeOpacityEnabled, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<unsigned char>::func(&cocos2d::CCNodeRGBA::updateDisplayedOpacity)), Thiscall, cocos2d::CCNodeRGBA, updateDisplayedOpacity, unsigned char)

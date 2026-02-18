@@ -85,13 +85,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x318ea0, Default, LikeItemLayer, create, LikeItemType, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, LikeItemLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x318fa0, Thiscall, LikeItemLayer, init, LikeItemType, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84620, Thiscall, LikeItemLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x319380, Thiscall, LikeItemLayer, onDislike, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x319370, Thiscall, LikeItemLayer, onLike, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x319390, Thiscall, LikeItemLayer, triggerLike, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32dd60, Default, LikeItemLayer, create, LikeItemType, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, LikeItemLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32de60, Thiscall, LikeItemLayer, init, LikeItemType, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, LikeItemLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32e240, Thiscall, LikeItemLayer, onDislike, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32e230, Thiscall, LikeItemLayer, onLike, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32e250, Thiscall, LikeItemLayer, triggerLike, bool)
 		}
 	};
 }

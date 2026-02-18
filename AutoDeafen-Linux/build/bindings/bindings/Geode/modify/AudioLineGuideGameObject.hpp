@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -55,10 +50,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AudioLineGuideGameObject, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a8900, Thiscall, AudioLineGuideGameObject, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a8cc0, Thiscall, AudioLineGuideGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a8970, Thiscall, AudioLineGuideGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AudioLineGuideGameObject, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c1450, Thiscall, AudioLineGuideGameObject, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c1810, Thiscall, AudioLineGuideGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c14c0, Thiscall, AudioLineGuideGameObject, getSaveString, GJBaseGameLayer*)
 		}
 	};
 }

@@ -25,242 +25,251 @@ public:
      CreatorLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x22ec24
-     * @note[short] MacOS (Intel): 0x285610
+     * @note[short] MacOS (ARM): 0x2376d8
+     * @note[short] MacOS (Intel): 0x297520
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0xb813c
+     * @note[short] iOS: 0xb4fc8
      * @note[short] Android
      */
     static CreatorLayer* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x22eb40
-     * @note[short] MacOS (Intel): 0x2854f0
-     * @note[short] Windows: 0x9b9a0
-     * @note[short] iOS: 0xb80e4
+     * @note[short] MacOS (ARM): 0x2375f4
+     * @note[short] MacOS (Intel): 0x297400
+     * @note[short] Windows: 0x9bfd0
+     * @note[short] iOS: 0xb4f70
      * @note[short] Android
      */
     static cocos2d::CCScene* scene();
 
     /**
-     * @note[short] MacOS (ARM): 0x22ece0
-     * @note[short] MacOS (Intel): 0x2856f0
-     * @note[short] Windows: 0x9bb10
-     * @note[short] iOS: 0xb81ec
+     * @note[short] MacOS (ARM): 0x237794
+     * @note[short] MacOS (Intel): 0x297600
+     * @note[short] Windows: 0x9c140
+     * @note[short] iOS: 0xb5078
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x230ea4
-     * @note[short] MacOS (Intel): 0x287a70
-     * @note[short] Windows: 0x9f2b0
-     * @note[short] iOS: 0xb9d0c
+     * @note[short] MacOS (ARM): 0x2399b8
+     * @note[short] MacOS (Intel): 0x2999c0
+     * @note[short] Windows: 0x9f9c0
+     * @note[short] iOS: 0xb6c08
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x230e34
-     * @note[short] MacOS (Intel): 0x2879f0
-     * @note[short] Windows: 0x9f1f0
-     * @note[short] iOS: 0xb9ccc
+     * @note[short] MacOS (ARM): 0x239948
+     * @note[short] MacOS (Intel): 0x299940
+     * @note[short] Windows: 0x9f860
+     * @note[short] iOS: 0xb6bc8
      * @note[short] Android
      */
     virtual void sceneWillResume();
 
     /**
-     * @note[short] MacOS (ARM): 0x230d34
-     * @note[short] MacOS (Intel): 0x2878f0
-     * @note[short] Windows: 0x9f0d0
-     * @note[short] iOS: 0xb9c3c
+     * @note[short] MacOS (ARM): 0x239844
+     * @note[short] MacOS (Intel): 0x299840
+     * @note[short] Windows: 0x9f740
+     * @note[short] iOS: 0xb6b38
      * @note[short] Android
      */
-    virtual void dialogClosed(DialogLayer* p0);
+    virtual void dialogClosed(DialogLayer* layer);
 
     /**
+     * @note[short] MacOS (ARM): 0x2397f0
+     * @note[short] MacOS (Intel): 0x2997d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     bool canPlayOnlineLevels();
 
     /**
-     * @note[short] MacOS (ARM): 0x23039c
-     * @note[short] MacOS (Intel): 0x286f00
-     * @note[short] Windows: 0x9efb0
+     * @note[short] MacOS (ARM): 0x238eb0
+     * @note[short] MacOS (Intel): 0x298e50
+     * @note[short] Windows: 0x9f620
+     * @note[short] iOS: 0xb6418
      * @note[short] Android
      */
     void checkQuestsStatus();
 
     /**
-     * @note[short] MacOS (ARM): 0x22fdf4
-     * @note[short] MacOS (Intel): 0x286950
-     * @note[short] Windows: 0x9dbe0
-     * @note[short] iOS: 0xb91a4
+     * @note[short] MacOS (ARM): 0x238904
+     * @note[short] MacOS (Intel): 0x2988a0
+     * @note[short] Windows: 0x9e250
+     * @note[short] iOS: 0xb60a8
      * @note[short] Android
      */
     void onAdventureMap(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x230c80
-     * @note[short] MacOS (Intel): 0x287820
-     * @note[short] Windows: 0x9f190
-     * @note[short] iOS: 0xb9bdc
+     * @note[short] MacOS (ARM): 0x239790
+     * @note[short] MacOS (Intel): 0x299770
+     * @note[short] Windows: 0x9f800
+     * @note[short] iOS: 0xb6ad8
      * @note[short] Android
      */
     void onBack(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x22fe84
-     * @note[short] MacOS (Intel): 0x2869c0
-     * @note[short] Windows: 0x9ddb0
-     * @note[short] iOS: 0xb921c
+     * @note[short] MacOS (ARM): 0x238998
+     * @note[short] MacOS (Intel): 0x298910
+     * @note[short] Windows: 0x9e420
+     * @note[short] iOS: 0xb6120
      * @note[short] Android
      */
     void onChallenge(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x22febc
-     * @note[short] MacOS (Intel): 0x2869f0
-     * @note[short] Windows: 0x9dd50
-     * @note[short] iOS: 0xb9254
+     * @note[short] MacOS (ARM): 0x2389d0
+     * @note[short] MacOS (Intel): 0x298940
+     * @note[short] Windows: 0x9e3c0
+     * @note[short] iOS: 0xb6158
      * @note[short] Android
      */
     void onDailyLevel(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x22fefc
-     * @note[short] MacOS (Intel): 0x286a30
-     * @note[short] Windows: 0x9dd90
-     * @note[short] iOS: 0xb9294
+     * @note[short] MacOS (ARM): 0x238a10
+     * @note[short] MacOS (Intel): 0x298980
+     * @note[short] Windows: 0x9e400
+     * @note[short] iOS: 0xb6198
      * @note[short] Android
      */
     void onEventLevel(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x2397f8
+     * @note[short] MacOS (Intel): 0x2997e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void onFameLevels(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x22ff64
-     * @note[short] MacOS (Intel): 0x286aa0
-     * @note[short] Windows: 0x9d2a0
-     * @note[short] iOS: 0xb92fc
+     * @note[short] MacOS (ARM): 0x238a78
+     * @note[short] MacOS (Intel): 0x2989f0
+     * @note[short] Windows: 0x9d910
+     * @note[short] iOS: 0xb6200
      * @note[short] Android
      */
     void onFeaturedLevels(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x22ff1c
-     * @note[short] MacOS (Intel): 0x286a50
-     * @note[short] Windows: 0x9d590
-     * @note[short] iOS: 0xb92b4
+     * @note[short] MacOS (ARM): 0x238a30
+     * @note[short] MacOS (Intel): 0x2989a0
+     * @note[short] Windows: 0x9dc00
+     * @note[short] iOS: 0xb61b8
      * @note[short] Android
      */
     void onGauntlets(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x22fa48
-     * @note[short] MacOS (Intel): 0x2865a0
-     * @note[short] Windows: 0x9d0f0
-     * @note[short] iOS: 0xb8e90
+     * @note[short] MacOS (ARM): 0x2384fc
+     * @note[short] MacOS (Intel): 0x2984e0
+     * @note[short] Windows: 0x9d720
+     * @note[short] iOS: 0xb5d38
      * @note[short] Android
      */
     void onLeaderboards(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x23002c
-     * @note[short] MacOS (Intel): 0x286b80
-     * @note[short] Windows: 0x9d4d0
-     * @note[short] iOS: 0xb93c4
+     * @note[short] MacOS (ARM): 0x238b40
+     * @note[short] MacOS (Intel): 0x298ad0
+     * @note[short] Windows: 0x9db40
+     * @note[short] iOS: 0xb62c8
      * @note[short] Android
      */
     void onMapPacks(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x22fa84
-     * @note[short] MacOS (Intel): 0x2865e0
-     * @note[short] Windows: 0x9d610
-     * @note[short] iOS: 0xb8ecc
+     * @note[short] MacOS (ARM): 0x238544
+     * @note[short] MacOS (Intel): 0x298530
+     * @note[short] Windows: 0x9dc80
+     * @note[short] iOS: 0xb5d80
      * @note[short] Android
      */
     void onMultiplayer(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2300b4
-     * @note[short] MacOS (Intel): 0x286c20
-     * @note[short] Windows: 0x9cce0
-     * @note[short] iOS: 0xb944c
+     * @note[short] MacOS (ARM): 0x238bc8
+     * @note[short] MacOS (Intel): 0x298b70
+     * @note[short] Windows: 0x9d310
+     * @note[short] iOS: 0xb6350
      * @note[short] Android
      */
     void onMyLevels(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x230078
-     * @note[short] MacOS (Intel): 0x286be0
-     * @note[short] Windows: 0x9d450
-     * @note[short] iOS: 0xb9410
+     * @note[short] MacOS (ARM): 0x238b8c
+     * @note[short] MacOS (Intel): 0x298b30
+     * @note[short] Windows: 0x9dac0
+     * @note[short] iOS: 0xb6314
      * @note[short] Android
      */
     void onOnlineLevels(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x23017c
-     * @note[short] MacOS (Intel): 0x286d00
+     * @note[short] MacOS (ARM): 0x238c90
+     * @note[short] MacOS (Intel): 0x298c50
      * @note[short] Android
      */
     void onOnlyFullVersion(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x22ffb0
-     * @note[short] MacOS (Intel): 0x286b00
-     * @note[short] Windows: 0x9d360
-     * @note[short] iOS: 0xb9348
+     * @note[short] MacOS (ARM): 0x238ac4
+     * @note[short] MacOS (Intel): 0x298a50
+     * @note[short] Windows: 0x9d9d0
+     * @note[short] iOS: 0xb624c
      * @note[short] Android
      */
     void onPaths(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x22f988
-     * @note[short] MacOS (Intel): 0x2864d0
-     * @note[short] Windows: 0x9cef0
-     * @note[short] iOS: 0xb8dd0
+     * @note[short] MacOS (ARM): 0x23843c
+     * @note[short] MacOS (Intel): 0x298410
+     * @note[short] Windows: 0x9d520
+     * @note[short] iOS: 0xb5c78
      * @note[short] Android
      */
     void onSavedLevels(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x230498
-     * @note[short] MacOS (Intel): 0x287000
-     * @note[short] Windows: 0x9df20
-     * @note[short] iOS: 0xb95f0
+     * @note[short] MacOS (ARM): 0x238fb0
+     * @note[short] MacOS (Intel): 0x298f50
+     * @note[short] Windows: 0x9e590
+     * @note[short] iOS: 0xb64f4
      * @note[short] Android
      */
     void onSecretVault(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x22ffcc
-     * @note[short] MacOS (Intel): 0x286b20
-     * @note[short] Windows: 0x9d380
-     * @note[short] iOS: 0xb9364
+     * @note[short] MacOS (ARM): 0x238ae0
+     * @note[short] MacOS (Intel): 0x298a70
+     * @note[short] Windows: 0x9d9f0
+     * @note[short] iOS: 0xb6268
      * @note[short] Android
      */
     void onTopLists(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2306ec
-     * @note[short] MacOS (Intel): 0x287220
-     * @note[short] Windows: 0x9e730
-     * @note[short] iOS: 0xb97c8
+     * @note[short] MacOS (ARM): 0x2391fc
+     * @note[short] MacOS (Intel): 0x299170
+     * @note[short] Windows: 0x9eda0
+     * @note[short] iOS: 0xb66c4
      * @note[short] Android
      */
     void onTreasureRoom(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x22fedc
-     * @note[short] MacOS (Intel): 0x286a10
-     * @note[short] Windows: 0x9dd70
-     * @note[short] iOS: 0xb9274
+     * @note[short] MacOS (ARM): 0x2389f0
+     * @note[short] MacOS (Intel): 0x298960
+     * @note[short] Windows: 0x9e3e0
+     * @note[short] iOS: 0xb6178
      * @note[short] Android
      */
     void onWeeklyLevel(cocos2d::CCObject* sender);

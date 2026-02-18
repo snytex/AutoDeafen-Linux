@@ -60,26 +60,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateDurLabel) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateMaxSpeed
-		#define GEODE_STATICS_updateMaxSpeed
-		GEODE_AS_STATIC_FUNCTION(updateMaxSpeed) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateMaxSpeedLabel
-		#define GEODE_STATICS_updateMaxSpeedLabel
-		GEODE_AS_STATIC_FUNCTION(updateMaxSpeedLabel) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateOffsetLabel
-		#define GEODE_STATICS_updateOffsetLabel
-		GEODE_AS_STATIC_FUNCTION(updateOffsetLabel) 
-	#endif
-
-	#ifndef GEODE_STATICS_updatePlayerOffset
-		#define GEODE_STATICS_updatePlayerOffset
-		GEODE_AS_STATIC_FUNCTION(updatePlayerOffset) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateTargetGroupID
 		#define GEODE_STATICS_updateTargetGroupID
 		GEODE_AS_STATIC_FUNCTION(updateTargetGroupID) 
@@ -225,27 +205,27 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x282da0, Default, GJPFollowCommandLayer, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x284790, Thiscall, GJPFollowCommandLayer, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2855f0, Thiscall, GJPFollowCommandLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x284d20, Thiscall, GJPFollowCommandLayer, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x282ed0, Thiscall, GJPFollowCommandLayer, init, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x284cc0, Thiscall, GJPFollowCommandLayer, onUpdateGroupID, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26a440, Thiscall, GJPFollowCommandLayer, sliderChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x284b20, Thiscall, GJPFollowCommandLayer, sliderXModChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x284b50, Thiscall, GJPFollowCommandLayer, sliderYModChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26b120, Thiscall, GJPFollowCommandLayer, updateDuration, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26a500, Thiscall, GJPFollowCommandLayer, updateDurLabel, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJPFollowCommandLayer, updateMaxSpeed, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJPFollowCommandLayer, updateMaxSpeedLabel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJPFollowCommandLayer, updateOffsetLabel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJPFollowCommandLayer, updatePlayerOffset, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x285420, Thiscall, GJPFollowCommandLayer, updateTargetGroupID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x285390, Thiscall, GJPFollowCommandLayer, updateTextInputLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2854f0, Thiscall, GJPFollowCommandLayer, updateXMod, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x284b80, Thiscall, GJPFollowCommandLayer, updateXModLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x285570, Thiscall, GJPFollowCommandLayer, updateYMod, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x284c20, Thiscall, GJPFollowCommandLayer, updateYModLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28a6d0, Default, GJPFollowCommandLayer, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28c0c0, Thiscall, GJPFollowCommandLayer, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28cf20, Thiscall, GJPFollowCommandLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28c650, Thiscall, GJPFollowCommandLayer, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28a800, Thiscall, GJPFollowCommandLayer, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28c5f0, Thiscall, GJPFollowCommandLayer, onUpdateGroupID, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x271d20, Thiscall, GJPFollowCommandLayer, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28c450, Thiscall, GJPFollowCommandLayer, sliderXModChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28c480, Thiscall, GJPFollowCommandLayer, sliderYModChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x272a00, Thiscall, GJPFollowCommandLayer, updateDuration, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x271de0, Thiscall, GJPFollowCommandLayer, updateDurLabel, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJPFollowCommandLayer, updateMaxSpeed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJPFollowCommandLayer, updateMaxSpeedLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJPFollowCommandLayer, updateOffsetLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJPFollowCommandLayer, updatePlayerOffset, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28cd50, Thiscall, GJPFollowCommandLayer, updateTargetGroupID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28ccc0, Thiscall, GJPFollowCommandLayer, updateTextInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28ce20, Thiscall, GJPFollowCommandLayer, updateXMod, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28c4b0, Thiscall, GJPFollowCommandLayer, updateXModLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28cea0, Thiscall, GJPFollowCommandLayer, updateYMod, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28c550, Thiscall, GJPFollowCommandLayer, updateYModLabel, )
 		}
 	};
 }

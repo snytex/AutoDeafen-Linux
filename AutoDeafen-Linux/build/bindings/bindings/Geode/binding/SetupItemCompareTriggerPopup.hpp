@@ -16,54 +16,66 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupItemCompareTriggerPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x454d10
+     * @note[short] MacOS (ARM): 0x4cce40
+     * @note[short] MacOS (Intel): 0x5808c0
+     * @note[short] Windows: 0x46d280
+     * @note[short] iOS: 0x40d620
      * @note[short] Android
      */
-    static SetupItemCompareTriggerPopup* create(ItemTriggerGameObject* p0, cocos2d::CCArray* p1);
+    static SetupItemCompareTriggerPopup* create(ItemTriggerGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c0da8
-     * @note[short] MacOS (Intel): 0x56bbc0
-     * @note[short] Windows: 0x456fe0
-     * @note[short] iOS: 0x40708c
+     * @note[short] MacOS (ARM): 0x4cef5c
+     * @note[short] MacOS (Intel): 0x582cb0
+     * @note[short] Windows: 0x46f550
+     * @note[short] iOS: 0x40f0a4
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c0c50
-     * @note[short] MacOS (Intel): 0x56ba60
-     * @note[short] Windows: 0x4564d0
-     * @note[short] iOS: 0x406f44
+     * @note[short] MacOS (ARM): 0x4cee04
+     * @note[short] MacOS (Intel): 0x582b50
+     * @note[short] Windows: 0x46ea40
+     * @note[short] iOS: 0x40ef5c
      * @note[short] Android
      */
     virtual void onCustomToggleTriggerValue(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4beef4
-     * @note[short] MacOS (Intel): 0x569ae0
-     * @note[short] Windows: 0x454e30
-     * @note[short] iOS: 0x4056a8
+     * @note[short] MacOS (ARM): 0x4ccfcc
+     * @note[short] MacOS (Intel): 0x580b00
+     * @note[short] Windows: 0x46d3a0
+     * @note[short] iOS: 0x40d6fc
      * @note[short] Android
      */
-    bool init(ItemTriggerGameObject* p0, cocos2d::CCArray* p1);
+    bool init(ItemTriggerGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] Windows: 0x456100
+     * @note[short] MacOS (ARM): 0x4ce0a8
+     * @note[short] MacOS (Intel): 0x581ee0
+     * @note[short] Windows: 0x46e670
+     * @note[short] iOS: 0x40e668
      * @note[short] Android
      */
     void onOpButton(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x4566d0
+     * @note[short] MacOS (ARM): 0x4ce3ec
+     * @note[short] MacOS (Intel): 0x582200
+     * @note[short] Windows: 0x46ec40
+     * @note[short] iOS: 0x40e840
      * @note[short] Android
      */
     void updateFormulaLabel();
 
     /**
-     * @note[short] Windows: 0x4561e0
+     * @note[short] MacOS (ARM): 0x4ce164
+     * @note[short] MacOS (Intel): 0x581fa0
+     * @note[short] Windows: 0x46e750
+     * @note[short] iOS: 0x40e724
      * @note[short] Android
      */
-    void updateOpButton(CCMenuItemSpriteExtra* p0, int p1, int p2);
+    void updateOpButton(CCMenuItemSpriteExtra* button, int key, int objectID);
     cocos2d::CCLabelBMFont* m_formulaLabel;
 };

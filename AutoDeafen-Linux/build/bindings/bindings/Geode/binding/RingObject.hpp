@@ -16,99 +16,118 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(RingObject, EffectGameObject)
 
     /**
-     * @note[short] Windows: 0x489570
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static RingObject* create(char const* p0);
+     RingObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x165ca8
-     * @note[short] MacOS (Intel): 0x1a3520
-     * @note[short] Windows: 0x4898f0
-     * @note[short] iOS: 0x37b5e4
+     * @note[short] MacOS (ARM): 0x16e318
+     * @note[short] MacOS (Intel): 0x1b40f0
+     * @note[short] Windows: 0x4a1c50
+     * @note[short] iOS: 0x38250c
      * @note[short] Android
      */
-    virtual void setScale(float p0);
+    static RingObject* create(char const* frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x165d08
-     * @note[short] MacOS (Intel): 0x1a3580
-     * @note[short] Windows: 0x38c9f0
-     * @note[short] iOS: 0x37b634
+     * @note[short] MacOS (ARM): 0x16e5ac
+     * @note[short] MacOS (Intel): 0x1b43a0
+     * @note[short] Windows: 0x4a1fd0
+     * @note[short] iOS: 0x382744
      * @note[short] Android
      */
-    virtual void setRotation(float p0);
+    virtual void setScale(float scale);
 
     /**
-     * @note[short] MacOS (ARM): 0x165c7c
-     * @note[short] MacOS (Intel): 0x1a3500
-     * @note[short] Windows: 0x4898d0
-     * @note[short] iOS: 0x37b5b8
+     * @note[short] MacOS (ARM): 0x16e60c
+     * @note[short] MacOS (Intel): 0x1b4400
+     * @note[short] Windows: 0x3a3840
+     * @note[short] iOS: 0x382794
+     * @note[short] Android
+     */
+    virtual void setRotation(float rotation);
+
+    /**
+     * @note[short] MacOS (ARM): 0x16e580
+     * @note[short] MacOS (Intel): 0x1b4380
+     * @note[short] Windows: 0x4a1fb0
+     * @note[short] iOS: 0x382718
      * @note[short] Android
      */
     virtual void resetObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x165d1c
-     * @note[short] MacOS (Intel): 0x1a35b0
-     * @note[short] Windows: 0x4899b0
-     * @note[short] iOS: 0x37b648
+     * @note[short] MacOS (ARM): 0x16e620
+     * @note[short] MacOS (Intel): 0x1b4430
+     * @note[short] Windows: 0x4a2090
+     * @note[short] iOS: 0x3827a8
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x165e28
-     * @note[short] MacOS (Intel): 0x1a3700
-     * @note[short] Windows: 0x489ad0
-     * @note[short] iOS: 0x37b748
+     * @note[short] MacOS (ARM): 0x16e72c
+     * @note[short] MacOS (Intel): 0x1b4580
+     * @note[short] Windows: 0x4a21b0
+     * @note[short] iOS: 0x3828a8
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x165cd8
-     * @note[short] MacOS (Intel): 0x1a3550
-     * @note[short] Windows: 0x489920
-     * @note[short] iOS: 0x37b60c
+     * @note[short] MacOS (ARM): 0x16e5dc
+     * @note[short] MacOS (Intel): 0x1b43d0
+     * @note[short] Windows: 0x4a2000
+     * @note[short] iOS: 0x38276c
      * @note[short] Android
      */
-    virtual void setRScale(float p0);
+    virtual void setRScale(float scale);
 
     /**
-     * @note[short] MacOS (ARM): 0x165b30
-     * @note[short] MacOS (Intel): 0x1a33a0
-     * @note[short] Windows: 0x489620
-     * @note[short] iOS: 0x37b46c
+     * @note[short] MacOS (ARM): 0x16e434
+     * @note[short] MacOS (Intel): 0x1b4220
+     * @note[short] Windows: 0x4a1d00
+     * @note[short] iOS: 0x3825cc
      * @note[short] Android
      */
-    virtual void triggerActivated(float p0);
+    virtual void triggerActivated(float xPosition);
 
     /**
-     * @note[short] MacOS (ARM): 0x165d0c
-     * @note[short] MacOS (Intel): 0x1a3590
-     * @note[short] Windows: 0x4899a0
-     * @note[short] iOS: 0x37b638
+     * @note[short] MacOS (ARM): 0x16e610
+     * @note[short] MacOS (Intel): 0x1b4410
+     * @note[short] Windows: 0x4a2080
+     * @note[short] iOS: 0x382798
      * @note[short] Android
      */
     virtual bool shouldDrawEditorHitbox();
 
     /**
-     * @note[short] MacOS (ARM): 0x165b3c
-     * @note[short] MacOS (Intel): 0x1a33b0
-     * @note[short] Windows: 0x489630
-     * @note[short] iOS: 0x37b478
+     * @note[short] MacOS (ARM): 0x16e440
+     * @note[short] MacOS (Intel): 0x1b4230
+     * @note[short] Windows: 0x4a1d10
+     * @note[short] iOS: 0x3825d8
      * @note[short] Android
      */
-    virtual void powerOnObject(int p0);
+    virtual void powerOnObject(int state);
 
     /**
+     * @note[short] MacOS (ARM): 0x16e3e4
+     * @note[short] MacOS (Intel): 0x1b41c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(char const* p0);
+    bool init(char const* frame);
 
     /**
-     * @note[short] Windows: 0x4896d0
+     * @note[short] MacOS (ARM): 0x16e498
+     * @note[short] MacOS (Intel): 0x1b4290
+     * @note[short] Windows: 0x4a1db0
+     * @note[short] iOS: 0x382630
      * @note[short] Android
      */
     void spawnCircle();

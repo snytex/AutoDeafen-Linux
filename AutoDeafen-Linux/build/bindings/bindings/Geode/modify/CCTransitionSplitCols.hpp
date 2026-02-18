@@ -55,6 +55,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCTransitionSplitCols@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCTransitionSplitCols, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCTransitionSplitCols@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCTransitionSplitCols)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, cocos2d::CCScene*>::func(&cocos2d::CCTransitionSplitCols::create)), Default, cocos2d::CCTransitionSplitCols, create, float, cocos2d::CCScene*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTransitionSplitCols::onEnter)), Thiscall, cocos2d::CCTransitionSplitCols, onEnter, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTransitionSplitCols::action)), Thiscall, cocos2d::CCTransitionSplitCols, action, )

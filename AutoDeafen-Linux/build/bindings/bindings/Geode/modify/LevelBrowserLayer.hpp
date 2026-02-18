@@ -90,26 +90,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(cellPerformedAction) 
 	#endif
 
-	#ifndef GEODE_STATICS_createNewList
-		#define GEODE_STATICS_createNewList
-		GEODE_AS_STATIC_FUNCTION(createNewList) 
-	#endif
-
-	#ifndef GEODE_STATICS_createNewSmartTemplate
-		#define GEODE_STATICS_createNewSmartTemplate
-		GEODE_AS_STATIC_FUNCTION(createNewSmartTemplate) 
-	#endif
-
-	#ifndef GEODE_STATICS_deleteSelected
-		#define GEODE_STATICS_deleteSelected
-		GEODE_AS_STATIC_FUNCTION(deleteSelected) 
-	#endif
-
-	#ifndef GEODE_STATICS_exitLayer
-		#define GEODE_STATICS_exitLayer
-		GEODE_AS_STATIC_FUNCTION(exitLayer) 
-	#endif
-
 	#ifndef GEODE_STATICS_getItemsMatchingSearch
 		#define GEODE_STATICS_getItemsMatchingSearch
 		GEODE_AS_STATIC_FUNCTION(getItemsMatchingSearch) 
@@ -168,11 +148,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onGoToPage
 		#define GEODE_STATICS_onGoToPage
 		GEODE_AS_STATIC_FUNCTION(onGoToPage) 
-	#endif
-
-	#ifndef GEODE_STATICS_onHelp
-		#define GEODE_STATICS_onHelp
-		GEODE_AS_STATIC_FUNCTION(onHelp) 
 	#endif
 
 	#ifndef GEODE_STATICS_onInfo
@@ -235,11 +210,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onToggleAllObjects) 
 	#endif
 
-	#ifndef GEODE_STATICS_setSearchObject
-		#define GEODE_STATICS_setSearchObject
-		GEODE_AS_STATIC_FUNCTION(setSearchObject) 
-	#endif
-
 	#ifndef GEODE_STATICS_setupLevelBrowser
 		#define GEODE_STATICS_setupLevelBrowser
 		GEODE_AS_STATIC_FUNCTION(setupLevelBrowser) 
@@ -248,11 +218,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_show
 		#define GEODE_STATICS_show
 		GEODE_AS_STATIC_FUNCTION(show) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateLevelsLabel
-		#define GEODE_STATICS_updateLevelsLabel
-		GEODE_AS_STATIC_FUNCTION(updateLevelsLabel) 
 	#endif
 
 	#ifndef GEODE_STATICS_updatePageLabel
@@ -555,65 +520,65 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x2c05d0, Thiscall, LevelBrowserLayer, )
-			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x2c07c0, Thiscall, LevelBrowserLayer)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c09f0, Default, LevelBrowserLayer, create, GJSearchObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c09a0, Default, LevelBrowserLayer, scene, GJSearchObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c78b0, Thiscall, LevelBrowserLayer, onEnter, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x242b20, Thiscall, LevelBrowserLayer, onEnterTransitionDidFinish, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x2c87d0, Thiscall, LevelBrowserLayer, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x2c89c0, Thiscall, LevelBrowserLayer)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c8bf0, Default, LevelBrowserLayer, create, GJSearchObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c8ba0, Default, LevelBrowserLayer, scene, GJSearchObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cfc90, Thiscall, LevelBrowserLayer, onEnter, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2490b0, Thiscall, LevelBrowserLayer, onEnterTransitionDidFinish, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelBrowserLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelBrowserLayer, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelBrowserLayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelBrowserLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c79f0, Thiscall, LevelBrowserLayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c4d30, Thiscall, LevelBrowserLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c4d50, Thiscall, LevelBrowserLayer, keyDown, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c4240, Thiscall, LevelBrowserLayer, loadLevelsFinished, cocos2d::CCArray*, char const*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c4370, Thiscall, LevelBrowserLayer, loadLevelsFailed, char const*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c43c0, Thiscall, LevelBrowserLayer, setupPageInfo, gd::string, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c4ca0, Thiscall, LevelBrowserLayer, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c5d50, Thiscall, LevelBrowserLayer, shareCommentClosed, gd::string, ShareCommentLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c6ac0, Thiscall, LevelBrowserLayer, setTextPopupClosed, SetTextPopup*, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c72f0, Thiscall, LevelBrowserLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c4870, Thiscall, LevelBrowserLayer, setIDPopupClosed, SetIDPopup*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c0770, Thiscall, LevelBrowserLayer, updateResultArray, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c7950, Thiscall, LevelBrowserLayer, cellPerformedAction, TableViewCell*, int, CellAction, cocos2d::CCNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cfdd0, Thiscall, LevelBrowserLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ccf10, Thiscall, LevelBrowserLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ccf30, Thiscall, LevelBrowserLayer, keyDown, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cc420, Thiscall, LevelBrowserLayer, loadLevelsFinished, cocos2d::CCArray*, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cc550, Thiscall, LevelBrowserLayer, loadLevelsFailed, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cc5a0, Thiscall, LevelBrowserLayer, setupPageInfo, gd::string, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cce80, Thiscall, LevelBrowserLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ce130, Thiscall, LevelBrowserLayer, shareCommentClosed, gd::string, ShareCommentLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ceea0, Thiscall, LevelBrowserLayer, setTextPopupClosed, SetTextPopup*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cf6d0, Thiscall, LevelBrowserLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cca50, Thiscall, LevelBrowserLayer, setIDPopupClosed, SetIDPopup*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c8970, Thiscall, LevelBrowserLayer, updateResultArray, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cfd30, Thiscall, LevelBrowserLayer, cellPerformedAction, TableViewCell*, int, CellAction, cocos2d::CCNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelBrowserLayer, createNewLevel, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelBrowserLayer, createNewList, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelBrowserLayer, createNewSmartTemplate, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelBrowserLayer, deleteSelected, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelBrowserLayer, exitLayer, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c6b80, Thiscall, LevelBrowserLayer, getItemsMatchingSearch, cocos2d::CCArray*, gd::string, GJSearchObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c39e0, Thiscall, LevelBrowserLayer, getSearchTitle, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c0a60, Thiscall, LevelBrowserLayer, init, GJSearchObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c2370, Thiscall, LevelBrowserLayer, isCorrect, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c2540, Thiscall, LevelBrowserLayer, loadPage, GJSearchObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c67a0, Thiscall, LevelBrowserLayer, onClearSearch, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c61f0, Thiscall, LevelBrowserLayer, onDeleteAll, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c6f10, Thiscall, LevelBrowserLayer, onDeleteSelected, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c6030, Thiscall, LevelBrowserLayer, onFavorites, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c47c0, Thiscall, LevelBrowserLayer, onGoToFolder, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c4640, Thiscall, LevelBrowserLayer, onGoToLastPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c46b0, Thiscall, LevelBrowserLayer, onGoToPage, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelBrowserLayer, onHelp, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c4df0, Thiscall, LevelBrowserLayer, onInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c5c70, Thiscall, LevelBrowserLayer, onLocalMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c5e60, Thiscall, LevelBrowserLayer, onMyOnlineLevels, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c57c0, Thiscall, LevelBrowserLayer, onNew, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c4ba0, Thiscall, LevelBrowserLayer, onNextPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c4c20, Thiscall, LevelBrowserLayer, onPrevPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c6660, Thiscall, LevelBrowserLayer, onRefresh, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelBrowserLayer, onRemoveAllFavorites, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c6110, Thiscall, LevelBrowserLayer, onSaved, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c5b90, Thiscall, LevelBrowserLayer, onSavedMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c6840, Thiscall, LevelBrowserLayer, onSearch, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c7250, Thiscall, LevelBrowserLayer, onToggleAllObjects, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelBrowserLayer, createNewList, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelBrowserLayer, createNewSmartTemplate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelBrowserLayer, deleteSelected, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelBrowserLayer, exitLayer, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cef60, Thiscall, LevelBrowserLayer, getItemsMatchingSearch, cocos2d::CCArray*, gd::string, GJSearchObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cbbc0, Thiscall, LevelBrowserLayer, getSearchTitle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c8c60, Thiscall, LevelBrowserLayer, init, GJSearchObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ca550, Thiscall, LevelBrowserLayer, isCorrect, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ca720, Thiscall, LevelBrowserLayer, loadPage, GJSearchObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ceb80, Thiscall, LevelBrowserLayer, onClearSearch, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ce5d0, Thiscall, LevelBrowserLayer, onDeleteAll, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cf2f0, Thiscall, LevelBrowserLayer, onDeleteSelected, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ce410, Thiscall, LevelBrowserLayer, onFavorites, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cc9a0, Thiscall, LevelBrowserLayer, onGoToFolder, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cc820, Thiscall, LevelBrowserLayer, onGoToLastPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cc890, Thiscall, LevelBrowserLayer, onGoToPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelBrowserLayer, onHelp, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ccfd0, Thiscall, LevelBrowserLayer, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ce050, Thiscall, LevelBrowserLayer, onLocalMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ce240, Thiscall, LevelBrowserLayer, onMyOnlineLevels, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cdba0, Thiscall, LevelBrowserLayer, onNew, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ccd80, Thiscall, LevelBrowserLayer, onNextPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cce00, Thiscall, LevelBrowserLayer, onPrevPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cea40, Thiscall, LevelBrowserLayer, onRefresh, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ce770, Thiscall, LevelBrowserLayer, onRemoveAllFavorites, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ce4f0, Thiscall, LevelBrowserLayer, onSaved, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cdf70, Thiscall, LevelBrowserLayer, onSavedMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cec20, Thiscall, LevelBrowserLayer, onSearch, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cf630, Thiscall, LevelBrowserLayer, onToggleAllObjects, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelBrowserLayer, reloadAllObjects, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelBrowserLayer, setSearchObject, GJSearchObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c36d0, Thiscall, LevelBrowserLayer, setupLevelBrowser, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c7a60, Thiscall, LevelBrowserLayer, show, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelBrowserLayer, updateLevelsLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c4a70, Thiscall, LevelBrowserLayer, updatePageLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelBrowserLayer, setSearchObject, GJSearchObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cb8b0, Thiscall, LevelBrowserLayer, setupLevelBrowser, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cfe40, Thiscall, LevelBrowserLayer, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelBrowserLayer, updateLevelsLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ccc50, Thiscall, LevelBrowserLayer, updatePageLabel, )
 		}
 	};
 }

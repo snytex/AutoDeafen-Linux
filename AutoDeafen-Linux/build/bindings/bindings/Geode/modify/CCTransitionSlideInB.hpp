@@ -55,6 +55,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCTransitionSlideInB@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCTransitionSlideInB, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCTransitionSlideInB@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCTransitionSlideInB)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, cocos2d::CCScene*>::func(&cocos2d::CCTransitionSlideInB::create)), Default, cocos2d::CCTransitionSlideInB, create, float, cocos2d::CCScene*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTransitionSlideInB::sceneOrder)), Thiscall, cocos2d::CCTransitionSlideInB, sceneOrder, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTransitionSlideInB::initScenes)), Thiscall, cocos2d::CCTransitionSlideInB, initScenes, )

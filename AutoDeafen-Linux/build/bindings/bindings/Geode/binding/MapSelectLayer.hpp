@@ -15,101 +15,113 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(MapSelectLayer, cocos2d::CCLayer)
 
     /**
+     * @note[short] MacOS (ARM): 0x20b78c
+     * @note[short] MacOS (Intel): 0x267e20
      * @note[short] Android
      */
     static MapSelectLayer* create();
 
     /**
+     * @note[short] MacOS (ARM): 0x20b748
+     * @note[short] MacOS (Intel): 0x267de0
      * @note[short] Android
      */
     static cocos2d::CCScene* scene();
 
     /**
-     * @note[short] MacOS (ARM): 0x203b7c
-     * @note[short] MacOS (Intel): 0x256ee0
+     * @note[short] MacOS (ARM): 0x20c6d4
+     * @note[short] MacOS (Intel): 0x268e90
      * @note[short] Android
      */
-    virtual void update(float p0);
+    virtual void update(float dt);
 
     /**
-     * @note[short] MacOS (ARM): 0x202d08
-     * @note[short] MacOS (Intel): 0x255f90
+     * @note[short] MacOS (ARM): 0x20b878
+     * @note[short] MacOS (Intel): 0x267f40
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x203e38
-     * @note[short] MacOS (Intel): 0x2571a0
+     * @note[short] MacOS (ARM): 0x20c984
+     * @note[short] MacOS (Intel): 0x269130
      * @note[short] Android
      */
     virtual void onExit();
 
     /**
-     * @note[short] MacOS (ARM): 0x20441c
-     * @note[short] MacOS (Intel): 0x257850
+     * @note[short] MacOS (ARM): 0x20cf54
+     * @note[short] MacOS (Intel): 0x2697d0
      * @note[short] Android
      */
-    virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual bool ccTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x204518
-     * @note[short] MacOS (Intel): 0x257960
+     * @note[short] MacOS (ARM): 0x20d050
+     * @note[short] MacOS (Intel): 0x2698e0
      * @note[short] Android
      */
-    virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchMoved(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x2046e8
-     * @note[short] MacOS (Intel): 0x257b80
+     * @note[short] MacOS (ARM): 0x20d218
+     * @note[short] MacOS (Intel): 0x269b00
      * @note[short] Android
      */
-    virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchEnded(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x2047f8
-     * @note[short] MacOS (Intel): 0x257c60
+     * @note[short] MacOS (ARM): 0x20d328
+     * @note[short] MacOS (Intel): 0x269be0
      * @note[short] Android
      */
-    virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchCancelled(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x204814
-     * @note[short] MacOS (Intel): 0x257ca0
+     * @note[short] MacOS (ARM): 0x20d344
+     * @note[short] MacOS (Intel): 0x269c20
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x203d60
-     * @note[short] MacOS (Intel): 0x2570c0
+     * @note[short] MacOS (ARM): 0x20c8bc
+     * @note[short] MacOS (Intel): 0x269070
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x20395c
-     * @note[short] MacOS (Intel): 0x256ca0
+     * @note[short] MacOS (ARM): 0x20c4b4
+     * @note[short] MacOS (Intel): 0x268c50
      * @note[short] Android
      */
-    virtual void scrollWheel(float p0, float p1);
+    virtual void scrollWheel(float y, float x);
 
     /**
+     * @note[short] MacOS (ARM): 0x20caf8
+     * @note[short] MacOS (Intel): 0x2692e0
      * @note[short] Android
      */
-    bool checkTouchMonster(cocos2d::CCPoint p0);
+    bool checkTouchMonster(cocos2d::CCPoint position);
 
     /**
+     * @note[short] MacOS (ARM): 0x20cf4c
+     * @note[short] MacOS (Intel): 0x2697c0
      * @note[short] Android
      */
-    cocos2d::CCObject* createObjectAtPoint(cocos2d::CCPoint p0);
+    GJMapObject* createObjectAtPoint(cocos2d::CCPoint position);
 
     /**
+     * @note[short] MacOS (ARM): 0x20c650
+     * @note[short] MacOS (Intel): 0x268e10
      * @note[short] Android
      */
-    cocos2d::CCPoint getConstrainedMapPos(cocos2d::CCPoint p0);
+    cocos2d::CCPoint getConstrainedMapPos(cocos2d::CCPoint position);
 
     /**
+     * @note[short] MacOS (ARM): 0x20bf00
+     * @note[short] MacOS (Intel): 0x268620
      * @note[short] Android
      */
     void onBack(cocos2d::CCObject* sender);

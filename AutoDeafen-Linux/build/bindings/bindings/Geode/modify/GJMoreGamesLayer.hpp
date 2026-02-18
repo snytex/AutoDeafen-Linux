@@ -45,9 +45,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x278610, Default, GJMoreGamesLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x278cf0, Thiscall, GJMoreGamesLayer, customSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x278950, Thiscall, GJMoreGamesLayer, getMoreGamesList, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27ff40, Default, GJMoreGamesLayer, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x280620, Thiscall, GJMoreGamesLayer, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x280280, Thiscall, GJMoreGamesLayer, getMoreGamesList, )
 		}
 	};
 }

@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void willTweenToIndexPath(CCIndexPath& p0, TableViewCell* p1, TableView* p2);
+    virtual void willTweenToIndexPath(CCIndexPath& indexPath, TableViewCell* cell, TableView* tableView);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,7 +29,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void didEndTweenToIndexPath(CCIndexPath& p0, TableView* p1);
+    virtual void didEndTweenToIndexPath(CCIndexPath& indexPath, TableView* tableView);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -38,7 +38,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void TableViewWillDisplayCellForRowAtIndexPath(CCIndexPath& p0, TableViewCell* p1, TableView* p2);
+    virtual void TableViewWillDisplayCellForRowAtIndexPath(CCIndexPath& indexPath, TableViewCell* cell, TableView* tableView);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -47,7 +47,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void TableViewDidDisplayCellForRowAtIndexPath(CCIndexPath& p0, TableViewCell* p1, TableView* p2);
+    virtual void TableViewDidDisplayCellForRowAtIndexPath(CCIndexPath& indexPath, TableViewCell* cell, TableView* tableView);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -56,7 +56,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void TableViewWillReloadCellForRowAtIndexPath(CCIndexPath& p0, TableViewCell* p1, TableView* p2);
+    virtual void TableViewWillReloadCellForRowAtIndexPath(CCIndexPath& indexPath, TableViewCell* cell, TableView* tableView);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -65,7 +65,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual float cellHeightForRowAtIndexPath(CCIndexPath& p0, TableView* p1);
+    virtual float cellHeightForRowAtIndexPath(CCIndexPath& indexPath, TableView* tableView);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -74,5 +74,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void didSelectRowAtIndexPath(CCIndexPath& p0, TableView* p1);
+    virtual void didSelectRowAtIndexPath(CCIndexPath& indexPath, TableView* tableView);
 };

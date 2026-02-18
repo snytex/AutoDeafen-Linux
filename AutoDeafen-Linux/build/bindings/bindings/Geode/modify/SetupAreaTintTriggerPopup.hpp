@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_determineStartValues
 		#define GEODE_STATICS_determineStartValues
 		GEODE_AS_STATIC_FUNCTION(determineStartValues) 
@@ -95,14 +90,15 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupAreaTintTriggerPopup, create, EnterEffectObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f8840, Thiscall, SetupAreaTintTriggerPopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f8b50, Thiscall, SetupAreaTintTriggerPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f8680, Thiscall, SetupAreaTintTriggerPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f8a60, Thiscall, SetupAreaTintTriggerPopup, hsvPopupClosed, HSVWidgetPopup*, cocos2d::ccHSVValue)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f7c40, Thiscall, SetupAreaTintTriggerPopup, init, EnterEffectObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f89e0, Thiscall, SetupAreaTintTriggerPopup, onHSV, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f8a80, Thiscall, SetupAreaTintTriggerPopup, updateHSVButton, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x40af10, Thiscall, SetupAreaTintTriggerPopup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupAreaTintTriggerPopup, create, EnterEffectObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x410500, Thiscall, SetupAreaTintTriggerPopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x410810, Thiscall, SetupAreaTintTriggerPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x410340, Thiscall, SetupAreaTintTriggerPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x410720, Thiscall, SetupAreaTintTriggerPopup, hsvPopupClosed, HSVWidgetPopup*, cocos2d::ccHSVValue)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40f900, Thiscall, SetupAreaTintTriggerPopup, init, EnterEffectObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4106a0, Thiscall, SetupAreaTintTriggerPopup, onHSV, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x410740, Thiscall, SetupAreaTintTriggerPopup, updateHSVButton, )
 		}
 	};
 }

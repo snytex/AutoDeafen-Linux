@@ -15,16 +15,19 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(ListButtonPage, cocos2d::CCLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x361358
-     * @note[short] MacOS (Intel): 0x3de560
-     * @note[short] Windows: 0x6b450
+     * @note[short] MacOS (ARM): 0x369b2c
+     * @note[short] MacOS (Intel): 0x3f0230
+     * @note[short] Windows: 0x6b480
+     * @note[short] iOS: 0x168104
      * @note[short] Android
      */
     static ListButtonPage* create(cocos2d::CCArray* items, cocos2d::CCPoint position, int columns, int rows, float columnOffset, float rowOffset, float offset);
 
     /**
-     * @note[short] MacOS (ARM): 0x361600
-     * @note[short] MacOS (Intel): 0x3de840
+     * @note[short] MacOS (ARM): 0x369dc4
+     * @note[short] MacOS (Intel): 0x3f0510
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1682a4
      * @note[short] Android
      */
     bool init(cocos2d::CCArray* items, cocos2d::CCPoint position, int columns, int rows, float columnOffset, float rowOffset, float offset);

@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void updatePageWithObject(cocos2d::CCObject* p0, cocos2d::CCObject* p1);
+    virtual void updatePageWithObject(cocos2d::CCObject* layer, cocos2d::CCObject* object);
 };

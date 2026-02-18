@@ -15,24 +15,37 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJSmartBlockPreviewSprite, cocos2d::CCNode)
 
     /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     GJSmartBlockPreviewSprite();
+
+    /**
+     * @note[short] MacOS (ARM): 0x39bb90
+     * @note[short] MacOS (Intel): 0x429210
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x90ec
      * @note[short] Android
      */
     static GJSmartBlockPreviewSprite* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x3927f0
-     * @note[short] MacOS (Intel): 0x416d80
-     * @note[short] Windows: 0x77db0
-     * @note[short] iOS: 0xd46c
+     * @note[short] MacOS (ARM): 0x39c174
+     * @note[short] MacOS (Intel): 0x429800
+     * @note[short] Windows: 0x77de0
+     * @note[short] iOS: 0x962c
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x3927f4
-     * @note[short] MacOS (Intel): 0x416d90
-     * @note[short] Windows: 0x2af2b0
-     * @note[short] iOS: 0xd470
+     * @note[short] MacOS (ARM): 0x39c178
+     * @note[short] MacOS (Intel): 0x429810
+     * @note[short] Windows: 0x2b6970
+     * @note[short] iOS: 0x9630
      * @note[short] Android
      */
     virtual void visit();

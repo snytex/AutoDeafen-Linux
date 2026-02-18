@@ -35,8 +35,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ffd20, Default, SetupCameraRotatePopup2, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ffe30, Thiscall, SetupCameraRotatePopup2, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4179f0, Default, SetupCameraRotatePopup2, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x417b00, Thiscall, SetupCameraRotatePopup2, init, EffectGameObject*, cocos2d::CCArray*)
 		}
 	};
 }

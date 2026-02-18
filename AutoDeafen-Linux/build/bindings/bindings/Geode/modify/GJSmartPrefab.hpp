@@ -15,15 +15,15 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(encodeWithCoder) 
 	#endif
 
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_createWithCoder
+		#define GEODE_CONCEPT_CHECK_createWithCoder
+		GEODE_CONCEPT_FUNCTION_CHECK(createWithCoder) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_encodeWithCoder
@@ -34,11 +34,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_canEncode
 		#define GEODE_CONCEPT_CHECK_canEncode
 		GEODE_CONCEPT_FUNCTION_CHECK(canEncode) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_createWithCoder
-		#define GEODE_CONCEPT_CHECK_createWithCoder
-		GEODE_CONCEPT_FUNCTION_CHECK(createWithCoder) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_dataLoaded
@@ -60,12 +55,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ae230, Default, GJSmartPrefab, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ae2b0, Thiscall, GJSmartPrefab, encodeWithCoder, DS_Dictionary*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSmartPrefab, canEncode, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b58f0, Default, GJSmartPrefab, create, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSmartPrefab, createWithCoder, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b5970, Thiscall, GJSmartPrefab, encodeWithCoder, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSmartPrefab, canEncode, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSmartPrefab, dataLoaded, DS_Dictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJSmartPrefab, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSmartPrefab, init, )
 		}
 	};
 }

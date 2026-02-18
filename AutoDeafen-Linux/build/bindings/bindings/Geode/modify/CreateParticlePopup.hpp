@@ -85,36 +85,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createParticleSlider) 
 	#endif
 
-	#ifndef GEODE_STATICS_getPage
-		#define GEODE_STATICS_getPage
-		GEODE_AS_STATIC_FUNCTION(getPage) 
-	#endif
-
-	#ifndef GEODE_STATICS_getPageButton
-		#define GEODE_STATICS_getPageButton
-		GEODE_AS_STATIC_FUNCTION(getPageButton) 
-	#endif
-
-	#ifndef GEODE_STATICS_getPageContainer
-		#define GEODE_STATICS_getPageContainer
-		GEODE_AS_STATIC_FUNCTION(getPageContainer) 
-	#endif
-
-	#ifndef GEODE_STATICS_getPageInputNodes
-		#define GEODE_STATICS_getPageInputNodes
-		GEODE_AS_STATIC_FUNCTION(getPageInputNodes) 
-	#endif
-
-	#ifndef GEODE_STATICS_getPageMenu
-		#define GEODE_STATICS_getPageMenu
-		GEODE_AS_STATIC_FUNCTION(getPageMenu) 
-	#endif
-
-	#ifndef GEODE_STATICS_getPageSliders
-		#define GEODE_STATICS_getPageSliders
-		GEODE_AS_STATIC_FUNCTION(getPageSliders) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -240,6 +210,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onToggleBlending) 
 	#endif
 
+	#ifndef GEODE_STATICS_onTogglePerfLog
+		#define GEODE_STATICS_onTogglePerfLog
+		GEODE_AS_STATIC_FUNCTION(onTogglePerfLog) 
+	#endif
+
 	#ifndef GEODE_STATICS_onToggleStartRadiusEqualToEnd
 		#define GEODE_STATICS_onToggleStartRadiusEqualToEnd
 		GEODE_AS_STATIC_FUNCTION(onToggleStartRadiusEqualToEnd) 
@@ -283,11 +258,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_toggleGravityMode
 		#define GEODE_STATICS_toggleGravityMode
 		GEODE_AS_STATIC_FUNCTION(toggleGravityMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateColorSprite
-		#define GEODE_STATICS_updateColorSprite
-		GEODE_AS_STATIC_FUNCTION(updateColorSprite) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateInputNodeStringForType
@@ -551,6 +521,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(onToggleBlending) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_onTogglePerfLog
+		#define GEODE_CONCEPT_CHECK_onTogglePerfLog
+		GEODE_CONCEPT_FUNCTION_CHECK(onTogglePerfLog) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_onToggleStartRadiusEqualToEnd
 		#define GEODE_CONCEPT_CHECK_onToggleStartRadiusEqualToEnd
 		GEODE_CONCEPT_FUNCTION_CHECK(onToggleStartRadiusEqualToEnd) 
@@ -635,70 +610,71 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, create, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, create, ParticleGameObject*, cocos2d::CCArray*, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x414180, Default, CreateParticlePopup, create, ParticleGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41a520, Thiscall, CreateParticlePopup, update, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41d070, Thiscall, CreateParticlePopup, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41d170, Thiscall, CreateParticlePopup, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41d5a0, Thiscall, CreateParticlePopup, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71210, Thiscall, CreateParticlePopup, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41d060, Thiscall, CreateParticlePopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c7a0, Thiscall, CreateParticlePopup, sliderBegan, Slider*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c860, Thiscall, CreateParticlePopup, sliderEnded, Slider*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x419e10, Thiscall, CreateParticlePopup, colorSelectClosed, cocos2d::CCNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b5c0, Thiscall, CreateParticlePopup, textInputShouldOffset, CCTextInputNode*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b620, Thiscall, CreateParticlePopup, textInputReturn, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b790, Thiscall, CreateParticlePopup, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41a6b0, Thiscall, CreateParticlePopup, textChanged, CCTextInputNode*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, centerAlignParticle, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4188d0, Thiscall, CreateParticlePopup, createParticleSlider, gjParticleValue, int, bool, cocos2d::CCPoint, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, getPage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, getPageButton, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, getPageContainer, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, getPageInputNodes, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, getPageMenu, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, getPageSliders, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x414370, Thiscall, CreateParticlePopup, init, ParticleGameObject*, cocos2d::CCArray*, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, maxSliderValueForType, gjParticleValue)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, minSliderValueForType, gjParticleValue)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onAnimateActiveOnly, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onAnimateOnTrigger, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onCalcEmission, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41cf20, Thiscall, CreateParticlePopup, onClose, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onCopySettings, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onDuplicateColor, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onDurationForever, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onDynamicColor, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onDynamicRotation, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onEmitterMode, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onEndRGBVarSync, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onMaxEmission, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41a0c0, Thiscall, CreateParticlePopup, onMode, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onOrderSensitive, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41a320, Thiscall, CreateParticlePopup, onPage, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onPasteSettings, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onPosType, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onQuickStart, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onSelectColor, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onSelectParticleTexture, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onStartRGBVarSync, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onToggleBlending, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onToggleStartRadiusEqualToEnd, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onToggleStartRotationIsDir, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onToggleStartSizeEqualToEnd, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onToggleStartSpinEqualToEnd, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, onUniformColor, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c920, Thiscall, CreateParticlePopup, particleValueIsInt, gjParticleValue)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, sliderChanged, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, titleForParticleValue, gjParticleValue)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41cc40, Thiscall, CreateParticlePopup, toggleGravityMode, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, updateColorSprite, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c990, Thiscall, CreateParticlePopup, updateInputNodeStringForType, gjParticleValue)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41ba90, Thiscall, CreateParticlePopup, updateParticleValueForType, float, gjParticleValue, cocos2d::CCParticleSystemQuad*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c700, Thiscall, CreateParticlePopup, updateSliderForType, gjParticleValue)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41b210, Thiscall, CreateParticlePopup, valueForParticleValue, gjParticleValue)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateParticlePopup, willClose, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreateParticlePopup, create, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreateParticlePopup, create, ParticleGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42bf00, Default, CreateParticlePopup, create, ParticleGameObject*, cocos2d::CCArray*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4325b0, Thiscall, CreateParticlePopup, update, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x435290, Thiscall, CreateParticlePopup, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x435390, Thiscall, CreateParticlePopup, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4357c0, Thiscall, CreateParticlePopup, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71240, Thiscall, CreateParticlePopup, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x435280, Thiscall, CreateParticlePopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4349c0, Thiscall, CreateParticlePopup, sliderBegan, Slider*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x434a80, Thiscall, CreateParticlePopup, sliderEnded, Slider*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431e70, Thiscall, CreateParticlePopup, colorSelectClosed, cocos2d::CCNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b600, Thiscall, CreateParticlePopup, textInputShouldOffset, CCTextInputNode*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b660, Thiscall, CreateParticlePopup, textInputReturn, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b850, Thiscall, CreateParticlePopup, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4328d0, Thiscall, CreateParticlePopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x432360, Thiscall, CreateParticlePopup, centerAlignParticle, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x430930, Thiscall, CreateParticlePopup, createParticleSlider, gjParticleValue, int, bool, cocos2d::CCPoint, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreateParticlePopup, getPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreateParticlePopup, getPageButton, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreateParticlePopup, getPageContainer, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreateParticlePopup, getPageInputNodes, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreateParticlePopup, getPageMenu, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreateParticlePopup, getPageSliders, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42c110, Thiscall, CreateParticlePopup, init, ParticleGameObject*, cocos2d::CCArray*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x433ac0, Thiscall, CreateParticlePopup, maxSliderValueForType, gjParticleValue)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x433b90, Thiscall, CreateParticlePopup, minSliderValueForType, gjParticleValue)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431510, Thiscall, CreateParticlePopup, onAnimateActiveOnly, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431480, Thiscall, CreateParticlePopup, onAnimateOnTrigger, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x432ac0, Thiscall, CreateParticlePopup, onCalcEmission, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x435140, Thiscall, CreateParticlePopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431a90, Thiscall, CreateParticlePopup, onCopySettings, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431960, Thiscall, CreateParticlePopup, onDuplicateColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x432a20, Thiscall, CreateParticlePopup, onDurationForever, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431630, Thiscall, CreateParticlePopup, onDynamicColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4313c0, Thiscall, CreateParticlePopup, onDynamicRotation, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x434de0, Thiscall, CreateParticlePopup, onEmitterMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431450, Thiscall, CreateParticlePopup, onEndRGBVarSync, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x432a70, Thiscall, CreateParticlePopup, onMaxEmission, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x432150, Thiscall, CreateParticlePopup, onMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4313f0, Thiscall, CreateParticlePopup, onOrderSensitive, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4323b0, Thiscall, CreateParticlePopup, onPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431ce0, Thiscall, CreateParticlePopup, onPasteSettings, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x434d60, Thiscall, CreateParticlePopup, onPosType, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4315a0, Thiscall, CreateParticlePopup, onQuickStart, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431830, Thiscall, CreateParticlePopup, onSelectColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x432230, Thiscall, CreateParticlePopup, onSelectParticleTexture, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431420, Thiscall, CreateParticlePopup, onStartRGBVarSync, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4312b0, Thiscall, CreateParticlePopup, onToggleBlending, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x432810, Thiscall, CreateParticlePopup, onTogglePerfLog, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431320, Thiscall, CreateParticlePopup, onToggleStartRadiusEqualToEnd, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431380, Thiscall, CreateParticlePopup, onToggleStartRotationIsDir, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4312f0, Thiscall, CreateParticlePopup, onToggleStartSizeEqualToEnd, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431350, Thiscall, CreateParticlePopup, onToggleStartSpinEqualToEnd, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431750, Thiscall, CreateParticlePopup, onUniformColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x434b40, Thiscall, CreateParticlePopup, particleValueIsInt, gjParticleValue)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x434a90, Thiscall, CreateParticlePopup, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x432b80, Thiscall, CreateParticlePopup, titleForParticleValue, gjParticleValue)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x434e60, Thiscall, CreateParticlePopup, toggleGravityMode, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreateParticlePopup, updateColorSprite, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x434bb0, Thiscall, CreateParticlePopup, updateInputNodeStringForType, gjParticleValue)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x433cb0, Thiscall, CreateParticlePopup, updateParticleValueForType, float, gjParticleValue, cocos2d::CCParticleSystemQuad*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x434920, Thiscall, CreateParticlePopup, updateSliderForType, gjParticleValue)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x433430, Thiscall, CreateParticlePopup, valueForParticleValue, gjParticleValue)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4350b0, Thiscall, CreateParticlePopup, willClose, )
 		}
 	};
 }

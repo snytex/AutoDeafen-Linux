@@ -15,40 +15,40 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(ExplodeItemNode, cocos2d::CCNode)
 
     /**
-     * @note[short] MacOS (ARM): 0x1b6f88
-     * @note[short] MacOS (Intel): 0x201ac0
-     * @note[short] Windows: 0x36e780
-     * @note[short] iOS: 0x6031c
+     * @note[short] MacOS (ARM): 0x1befb4
+     * @note[short] MacOS (Intel): 0x2136b0
+     * @note[short] Windows: 0x3844f0
+     * @note[short] iOS: 0x5c6a4
      * @note[short] Android
      */
-    static ExplodeItemNode* create(cocos2d::CCRenderTexture* p0);
+    static ExplodeItemNode* create(cocos2d::CCRenderTexture* texture);
 
     /**
-     * @note[short] MacOS (ARM): 0x1b7f14
-     * @note[short] MacOS (Intel): 0x202b30
-     * @note[short] Windows: 0x36f1f0
-     * @note[short] iOS: 0x6105c
+     * @note[short] MacOS (ARM): 0x1bfe98
+     * @note[short] MacOS (Intel): 0x214680
+     * @note[short] Windows: 0x384f60
+     * @note[short] iOS: 0x5d3a8
      * @note[short] Android
      */
-    virtual void update(float p0);
+    virtual void update(float dt);
 
     /**
-     * @note[short] MacOS (ARM): 0x1b703c
-     * @note[short] MacOS (Intel): 0x201b70
-     * @note[short] Windows: 0x36e840
-     * @note[short] iOS: 0x603a8
+     * @note[short] MacOS (ARM): 0x1bf068
+     * @note[short] MacOS (Intel): 0x213760
+     * @note[short] Windows: 0x3845b0
+     * @note[short] iOS: 0x5c730
      * @note[short] Android
      */
-    void createSprites(int p0, int p1, float p2, float p3, float p4, float p5, float p6, float p7, cocos2d::ccColor4F p8, cocos2d::ccColor4F p9, bool p10);
+    void createSprites(int countX, int countY, float xVel, float xVar, float yVel, float yVar, float dur, float durVar, cocos2d::ccColor4F startColor, cocos2d::ccColor4F endColor, bool noParticles);
 
     /**
-     * @note[short] MacOS (ARM): 0x1b7e18
-     * @note[short] MacOS (Intel): 0x202a40
+     * @note[short] MacOS (ARM): 0x1bfd9c
+     * @note[short] MacOS (Intel): 0x2145a0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x60f6c
+     * @note[short] iOS: 0x5d2b8
      * @note[short] Android
      */
-    bool init(cocos2d::CCRenderTexture* p0);
+    bool init(cocos2d::CCRenderTexture* texture);
     cocos2d::CCRenderTexture* m_renderTexture;
     cocos2d::CCArray* m_sprites;
     float m_unk1;

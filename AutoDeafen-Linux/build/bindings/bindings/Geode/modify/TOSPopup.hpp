@@ -66,11 +66,11 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TOSPopup, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x296930, Thiscall, TOSPopup, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29df90, Thiscall, TOSPopup, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TOSPopup, keyBackClicked, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TOSPopup, onClose, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TOSPopup, onPrivacy, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TOSPopup, onTOS, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29e620, Thiscall, TOSPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29e5e0, Thiscall, TOSPopup, onPrivacy, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29e600, Thiscall, TOSPopup, onTOS, cocos2d::CCObject*)
 		}
 	};
 }

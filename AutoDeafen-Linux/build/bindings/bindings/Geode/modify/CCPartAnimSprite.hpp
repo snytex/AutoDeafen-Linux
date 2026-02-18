@@ -45,26 +45,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(displayFrame) 
 	#endif
 
-	#ifndef GEODE_STATICS_changeTextureOfID
-		#define GEODE_STATICS_changeTextureOfID
-		GEODE_AS_STATIC_FUNCTION(changeTextureOfID) 
-	#endif
-
-	#ifndef GEODE_STATICS_countParts
-		#define GEODE_STATICS_countParts
-		GEODE_AS_STATIC_FUNCTION(countParts) 
-	#endif
-
-	#ifndef GEODE_STATICS_dirtify
-		#define GEODE_STATICS_dirtify
-		GEODE_AS_STATIC_FUNCTION(dirtify) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSpriteForKey
-		#define GEODE_STATICS_getSpriteForKey
-		GEODE_AS_STATIC_FUNCTION(getSpriteForKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_initWithAnimDesc
 		#define GEODE_STATICS_initWithAnimDesc
 		GEODE_AS_STATIC_FUNCTION(initWithAnimDesc) 
@@ -73,26 +53,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_setColor
 		#define GEODE_STATICS_setColor
 		GEODE_AS_STATIC_FUNCTION(setColor) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFlipX
-		#define GEODE_STATICS_setFlipX
-		GEODE_AS_STATIC_FUNCTION(setFlipX) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFlipY
-		#define GEODE_STATICS_setFlipY
-		GEODE_AS_STATIC_FUNCTION(setFlipY) 
-	#endif
-
-	#ifndef GEODE_STATICS_transformSprite
-		#define GEODE_STATICS_transformSprite
-		GEODE_AS_STATIC_FUNCTION(transformSprite) 
-	#endif
-
-	#ifndef GEODE_STATICS_tweenSpriteTo
-		#define GEODE_STATICS_tweenSpriteTo
-		GEODE_AS_STATIC_FUNCTION(tweenSpriteTo) 
 	#endif
 
 	#ifndef GEODE_STATICS_tweenToFrame
@@ -211,25 +171,25 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCPartAnimSprite, createWithAnimDesc, char const*, cocos2d::CCTexture2D*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x466b0, Thiscall, CCPartAnimSprite, setScaleX, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x466d0, Thiscall, CCPartAnimSprite, setScaleY, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46690, Thiscall, CCPartAnimSprite, setScale, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x468a0, Thiscall, CCPartAnimSprite, setOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x466f0, Thiscall, CCPartAnimSprite, setBlendFunc, cocos2d::_ccBlendFunc)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x460c0, Thiscall, CCPartAnimSprite, setDisplayFrame, cocos2d::CCSpriteFrame*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46330, Thiscall, CCPartAnimSprite, isFrameDisplayed, cocos2d::CCSpriteFrame*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46350, Thiscall, CCPartAnimSprite, displayFrame, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCPartAnimSprite, changeTextureOfID, char const*, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCPartAnimSprite, countParts, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCPartAnimSprite, dirtify, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCPartAnimSprite, getSpriteForKey, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45910, Thiscall, CCPartAnimSprite, initWithAnimDesc, char const*, cocos2d::CCTexture2D*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x467c0, Thiscall, CCPartAnimSprite, setColor, cocos2d::ccColor3B)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCPartAnimSprite, setFlipX, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCPartAnimSprite, setFlipY, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCPartAnimSprite, transformSprite, SpriteDescription*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCPartAnimSprite, tweenSpriteTo, SpriteDescription*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46360, Thiscall, CCPartAnimSprite, tweenToFrame, cocos2d::CCSpriteFrame*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46720, Thiscall, CCPartAnimSprite, setScaleX, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46740, Thiscall, CCPartAnimSprite, setScaleY, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46700, Thiscall, CCPartAnimSprite, setScale, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46910, Thiscall, CCPartAnimSprite, setOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46760, Thiscall, CCPartAnimSprite, setBlendFunc, cocos2d::ccBlendFunc)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46130, Thiscall, CCPartAnimSprite, setDisplayFrame, cocos2d::CCSpriteFrame*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x463a0, Thiscall, CCPartAnimSprite, isFrameDisplayed, cocos2d::CCSpriteFrame*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x463c0, Thiscall, CCPartAnimSprite, displayFrame, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCPartAnimSprite, changeTextureOfID, char const*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCPartAnimSprite, countParts, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCPartAnimSprite, dirtify, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCPartAnimSprite, getSpriteForKey, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45980, Thiscall, CCPartAnimSprite, initWithAnimDesc, char const*, cocos2d::CCTexture2D*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46830, Thiscall, CCPartAnimSprite, setColor, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCPartAnimSprite, setFlipX, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCPartAnimSprite, setFlipY, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCPartAnimSprite, transformSprite, SpriteDescription*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCPartAnimSprite, tweenSpriteTo, SpriteDescription*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x463d0, Thiscall, CCPartAnimSprite, tweenToFrame, cocos2d::CCSpriteFrame*, float)
 		}
 	};
 }

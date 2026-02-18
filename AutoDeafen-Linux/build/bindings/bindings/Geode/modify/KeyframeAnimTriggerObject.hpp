@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -55,10 +50,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeyframeAnimTriggerObject, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x498a40, Thiscall, KeyframeAnimTriggerObject, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x498eb0, Thiscall, KeyframeAnimTriggerObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x498ab0, Thiscall, KeyframeAnimTriggerObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(KeyframeAnimTriggerObject, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b1590, Thiscall, KeyframeAnimTriggerObject, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b1a00, Thiscall, KeyframeAnimTriggerObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b1600, Thiscall, KeyframeAnimTriggerObject, getSaveString, GJBaseGameLayer*)
 		}
 	};
 }

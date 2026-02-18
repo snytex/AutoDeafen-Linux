@@ -25,24 +25,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(colorAllCharactersTo) 
 	#endif
 
-	#ifndef GEODE_STATICS_fadeIn
-		#define GEODE_STATICS_fadeIn
-		GEODE_AS_STATIC_FUNCTION(fadeIn) 
-	#endif
-
 	#ifndef GEODE_STATICS_fadeInCharacters
 		#define GEODE_STATICS_fadeInCharacters
 		GEODE_AS_STATIC_FUNCTION(fadeInCharacters) 
-	#endif
-
-	#ifndef GEODE_STATICS_fadeOut
-		#define GEODE_STATICS_fadeOut
-		GEODE_AS_STATIC_FUNCTION(fadeOut) 
-	#endif
-
-	#ifndef GEODE_STATICS_fadeOutAndRemove
-		#define GEODE_STATICS_fadeOutAndRemove
-		GEODE_AS_STATIC_FUNCTION(fadeOutAndRemove) 
 	#endif
 
 	#ifndef GEODE_STATICS_finishFade
@@ -50,29 +35,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(finishFade) 
 	#endif
 
-	#ifndef GEODE_STATICS_hideAll
-		#define GEODE_STATICS_hideAll
-		GEODE_AS_STATIC_FUNCTION(hideAll) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
-	#ifndef GEODE_STATICS_setIgnoreColorCode
-		#define GEODE_STATICS_setIgnoreColorCode
-		GEODE_AS_STATIC_FUNCTION(setIgnoreColorCode) 
-	#endif
-
 	#ifndef GEODE_STATICS_setString
 		#define GEODE_STATICS_setString
 		GEODE_AS_STATIC_FUNCTION(setString) 
-	#endif
-
-	#ifndef GEODE_STATICS_showAll
-		#define GEODE_STATICS_showAll
-		GEODE_AS_STATIC_FUNCTION(showAll) 
 	#endif
 
 	#ifndef GEODE_STATICS_stopAllCharacterActions
@@ -175,23 +140,23 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x76e50, Default, TextArea, create, gd::string, char const*, float, float, cocos2d::CCPoint, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x776b0, Thiscall, TextArea, update, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x76e80, Default, TextArea, create, gd::string, char const*, float, float, cocos2d::CCPoint, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x776e0, Thiscall, TextArea, update, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TextArea, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x775c0, Thiscall, TextArea, setOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x77600, Thiscall, TextArea, colorAllCharactersTo, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x775f0, Thiscall, TextArea, setOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x77630, Thiscall, TextArea, colorAllCharactersTo, cocos2d::ccColor3B)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TextArea, colorAllLabels, cocos2d::ccColor3B)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TextArea, fadeIn, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x77890, Thiscall, TextArea, fadeInCharacters, float, float, bool, TextFadeInStyle)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TextArea, fadeOut, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TextArea, fadeOutAndRemove, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x775a0, Thiscall, TextArea, finishFade, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TextArea, hideAll, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TextArea, init, gd::string, char const*, float, float, cocos2d::CCPoint, float, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TextArea, setIgnoreColorCode, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x77090, Thiscall, TextArea, setString, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TextArea, showAll, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x774e0, Thiscall, TextArea, stopAllCharacterActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TextArea, fadeIn, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x778c0, Thiscall, TextArea, fadeInCharacters, float, float, bool, TextFadeInStyle)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TextArea, fadeOut, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TextArea, fadeOutAndRemove, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x775d0, Thiscall, TextArea, finishFade, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TextArea, hideAll, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TextArea, init, gd::string, char const*, float, float, cocos2d::CCPoint, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TextArea, setIgnoreColorCode, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x770c0, Thiscall, TextArea, setString, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TextArea, showAll, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x77510, Thiscall, TextArea, stopAllCharacterActions, )
 		}
 	};
 }

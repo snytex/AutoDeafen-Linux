@@ -97,13 +97,13 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UploadPopup, create, GJGameLevel*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UploadPopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f7220, Thiscall, UploadPopup, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x478710, Thiscall, UploadPopup, levelUploadFinished, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4788e0, Thiscall, UploadPopup, levelUploadFailed, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x478140, Thiscall, UploadPopup, init, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x478bb0, Thiscall, UploadPopup, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84620, Thiscall, UploadPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x478ac0, Thiscall, UploadPopup, onReturnToLevel, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30bc70, Thiscall, UploadPopup, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x490bf0, Thiscall, UploadPopup, levelUploadFinished, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x490dc0, Thiscall, UploadPopup, levelUploadFailed, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x490620, Thiscall, UploadPopup, init, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x491090, Thiscall, UploadPopup, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, UploadPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x490fa0, Thiscall, UploadPopup, onReturnToLevel, cocos2d::CCObject*)
 		}
 	};
 }

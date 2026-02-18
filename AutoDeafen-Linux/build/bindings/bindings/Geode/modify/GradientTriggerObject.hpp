@@ -51,9 +51,9 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GradientTriggerObject, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x480b40, Thiscall, GradientTriggerObject, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4811d0, Thiscall, GradientTriggerObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x480bc0, Thiscall, GradientTriggerObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x499220, Thiscall, GradientTriggerObject, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4998b0, Thiscall, GradientTriggerObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4992a0, Thiscall, GradientTriggerObject, getSaveString, GJBaseGameLayer*)
 		}
 	};
 }

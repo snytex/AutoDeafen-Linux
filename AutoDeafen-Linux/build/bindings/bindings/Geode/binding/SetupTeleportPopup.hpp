@@ -16,56 +16,66 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupTeleportPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x448220
+     * @note[short] MacOS (ARM): 0x2e45f8
+     * @note[short] MacOS (Intel): 0x358ae0
+     * @note[short] Windows: 0x460830
+     * @note[short] iOS: 0xb254
      * @note[short] Android
      */
-    static SetupTeleportPopup* create(TeleportPortalObject* p0, cocos2d::CCArray* p1, int p2, bool p3);
+    static SetupTeleportPopup* create(TeleportPortalObject* object, cocos2d::CCArray* objects, int id, bool platformer);
 
     /**
-     * @note[short] MacOS (ARM): 0x2db89c
-     * @note[short] MacOS (Intel): 0x346b20
-     * @note[short] Windows: 0x287910
-     * @note[short] iOS: 0x1008c
+     * @note[short] MacOS (ARM): 0x2e5aac
+     * @note[short] MacOS (Intel): 0x35a310
+     * @note[short] Windows: 0x28f240
+     * @note[short] iOS: 0xc1dc
      * @note[short] Android
      */
     virtual void determineStartValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x2db8a0
-     * @note[short] MacOS (Intel): 0x346b30
-     * @note[short] Windows: 0x4494c0
-     * @note[short] iOS: 0x10090
+     * @note[short] MacOS (ARM): 0x2e5ab0
+     * @note[short] MacOS (Intel): 0x35a320
+     * @note[short] Windows: 0x461ad0
+     * @note[short] iOS: 0xc1e0
      * @note[short] Android
      */
     virtual void updateDefaultTriggerValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x2db9ac
-     * @note[short] MacOS (Intel): 0x346c30
-     * @note[short] Windows: 0x4494f0
-     * @note[short] iOS: 0x10144
+     * @note[short] MacOS (ARM): 0x2e5bbc
+     * @note[short] MacOS (Intel): 0x35a420
+     * @note[short] Windows: 0x461b00
+     * @note[short] iOS: 0xc294
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x2da580
-     * @note[short] MacOS (Intel): 0x3454c0
-     * @note[short] Windows: 0x448360
+     * @note[short] MacOS (ARM): 0x2e47a0
+     * @note[short] MacOS (Intel): 0x358d30
+     * @note[short] Windows: 0x460970
+     * @note[short] iOS: 0xb348
      * @note[short] Android
      */
-    bool init(TeleportPortalObject* p0, cocos2d::CCArray* p1, int p2, bool p3);
+    bool init(TeleportPortalObject* object, cocos2d::CCArray* objects, int id, bool platformer);
 
     /**
-     * @note[short] Windows: 0x4495f0
+     * @note[short] MacOS (ARM): 0x2e5994
+     * @note[short] MacOS (Intel): 0x35a1f0
+     * @note[short] Windows: 0x461c00
+     * @note[short] iOS: 0xc148
      * @note[short] Android
      */
     void onTeleportGravity(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x449680
+     * @note[short] MacOS (ARM): 0x2e5b44
+     * @note[short] MacOS (Intel): 0x35a3b0
+     * @note[short] Windows: 0x461c90
+     * @note[short] iOS: 0xc21c
      * @note[short] Android
      */
-    void updateTeleportGravityState(int p0);
+    void updateTeleportGravityState(int state);
     cocos2d::CCArray* m_teleportGravityToggles;
 };

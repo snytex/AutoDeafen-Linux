@@ -40,11 +40,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(show) 
 	#endif
 
-	#ifndef GEODE_STATICS_darkenButtons
-		#define GEODE_STATICS_darkenButtons
-		GEODE_AS_STATIC_FUNCTION(darkenButtons) 
-	#endif
-
 	#ifndef GEODE_STATICS_onClose
 		#define GEODE_STATICS_onClose
 		GEODE_AS_STATIC_FUNCTION(onClose) 
@@ -115,16 +110,16 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27d1d0, Default, GJPathsLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27cf60, Default, GJPathsLayer, nameForPath, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27d2d0, Thiscall, GJPathsLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27d830, Thiscall, GJPathsLayer, onExit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, GJPathsLayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27db20, Thiscall, GJPathsLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867a0, Thiscall, GJPathsLayer, show, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJPathsLayer, darkenButtons, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27dac0, Thiscall, GJPathsLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27d880, Thiscall, GJPathsLayer, onPath, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x284b00, Default, GJPathsLayer, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x284890, Default, GJPathsLayer, nameForPath, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x284c00, Thiscall, GJPathsLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x285160, Thiscall, GJPathsLayer, onExit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, GJPathsLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x285450, Thiscall, GJPathsLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867f0, Thiscall, GJPathsLayer, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJPathsLayer, darkenButtons, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2853f0, Thiscall, GJPathsLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2851b0, Thiscall, GJPathsLayer, onPath, cocos2d::CCObject*)
 		}
 	};
 }

@@ -13,6 +13,6 @@ class SavedActiveObjectState {
 public:
     static constexpr auto CLASS_NAME = "SavedActiveObjectState";
     GameObject* m_gameObject;
-    bool m_unkBool1;
-    bool m_unkBool2;
+    bool m_activatedByPlayer1;
+    bool m_activatedByPlayer2;
 };

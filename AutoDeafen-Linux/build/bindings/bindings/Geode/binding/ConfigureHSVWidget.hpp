@@ -16,113 +16,127 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(ConfigureHSVWidget, cocos2d::CCNode)
 
     /**
-     * @note[short] MacOS (ARM): 0x39886c
-     * @note[short] MacOS (Intel): 0x41cf70
-     * @note[short] Windows: 0x96950
+     * @note[short] MacOS (ARM): 0x3a21ec
+     * @note[short] MacOS (Intel): 0x42fa40
+     * @note[short] Windows: 0x96a10
+     * @note[short] iOS: 0xfefc0
      * @note[short] Android
      */
-    static ConfigureHSVWidget* create(cocos2d::ccHSVValue p0, bool p1, bool p2);
+    static ConfigureHSVWidget* create(cocos2d::ccHSVValue hsv, bool noBackground, bool addInputs);
 
     /**
-     * @note[short] MacOS (ARM): 0x39a274
-     * @note[short] MacOS (Intel): 0x41ead0
-     * @note[short] Windows: 0x980a0
-     * @note[short] iOS: 0x1033fc
+     * @note[short] MacOS (ARM): 0x3a3bc0
+     * @note[short] MacOS (Intel): 0x431590
+     * @note[short] Windows: 0x98160
+     * @note[short] iOS: 0x1003dc
      * @note[short] Android
      */
-    static cocos2d::ccHSVValue getHSV(GameObject* p0, cocos2d::CCArray* p1, int p2);
+    static cocos2d::ccHSVValue getHSV(GameObject* object, cocos2d::CCArray* objects, int mode);
 
     /**
-     * @note[short] MacOS (ARM): 0x39a008
-     * @note[short] MacOS (Intel): 0x41e810
+     * @note[short] MacOS (ARM): 0x3a3964
+     * @note[short] MacOS (Intel): 0x4312c0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x10323c
-     * @note[short] Android: Out of line
-     */
-    virtual void textInputOpened(CCTextInputNode* p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x39a010
-     * @note[short] MacOS (Intel): 0x41e830
-     * @note[short] Windows: 0x8b790
-     * @note[short] iOS: 0x103244
+     * @note[short] iOS: 0x10021c
      * @note[short] Android
      */
-    virtual void textInputClosed(CCTextInputNode* p0);
+    virtual void textInputOpened(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x39a02c
-     * @note[short] MacOS (Intel): 0x41e870
-     * @note[short] Windows: 0x97560
-     * @note[short] iOS: 0x103260
+     * @note[short] MacOS (ARM): 0x3a396c
+     * @note[short] MacOS (Intel): 0x4312e0
+     * @note[short] Windows: 0x8b850
+     * @note[short] iOS: 0x100224
      * @note[short] Android
      */
-    virtual void textChanged(CCTextInputNode* p0);
+    virtual void textInputClosed(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x3994ec
-     * @note[short] MacOS (Intel): 0x41dcd0
-     * @note[short] Windows: 0x97300
+     * @note[short] MacOS (ARM): 0x3a3988
+     * @note[short] MacOS (Intel): 0x431320
+     * @note[short] Windows: 0x97620
+     * @note[short] iOS: 0x100240
      * @note[short] Android
      */
-    void createTextInputNode(cocos2d::CCPoint p0, int p1);
+    virtual void textChanged(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x398bbc
-     * @note[short] MacOS (Intel): 0x41d320
-     * @note[short] Windows: 0x96a20
-     * @note[short] iOS: 0x102110
+     * @note[short] MacOS (ARM): 0x3a2e68
+     * @note[short] MacOS (Intel): 0x430780
+     * @note[short] Windows: 0x973c0
+     * @note[short] iOS: 0xff904
      * @note[short] Android
      */
-    bool init(cocos2d::ccHSVValue hsv, bool unused, bool addInputs);
+    void createTextInputNode(cocos2d::CCPoint position, int tag);
 
     /**
-     * @note[short] MacOS (ARM): 0x398940
-     * @note[short] MacOS (Intel): 0x41d040
+     * @note[short] MacOS (ARM): 0x3a253c
+     * @note[short] MacOS (Intel): 0x42fdf0
+     * @note[short] Windows: 0x96ae0
+     * @note[short] iOS: 0xff0e8
+     * @note[short] Android
+     */
+    bool init(cocos2d::ccHSVValue hsv, bool noBackground, bool addInputs);
+
+    /**
+     * @note[short] MacOS (ARM): 0x3a22c0
+     * @note[short] MacOS (Intel): 0x42fb10
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void onClose();
 
     /**
-     * @note[short] MacOS (ARM): 0x399978
-     * @note[short] MacOS (Intel): 0x41e0f0
-     * @note[short] Windows: 0x97b10
-     * @note[short] iOS: 0x102d7c
+     * @note[short] MacOS (ARM): 0x3a32f4
+     * @note[short] MacOS (Intel): 0x430ba0
+     * @note[short] Windows: 0x97bd0
+     * @note[short] iOS: 0xffd50
      * @note[short] Android
      */
     void onResetHSV(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x3a320c
+     * @note[short] MacOS (Intel): 0x430ac0
+     * @note[short] Windows: 0x97ad0
+     * @note[short] iOS: 0xffc68
      * @note[short] Android
      */
     void onToggleSConst(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x3a3280
+     * @note[short] MacOS (Intel): 0x430b30
+     * @note[short] Windows: 0x97b50
+     * @note[short] iOS: 0xffcdc
      * @note[short] Android
      */
     void onToggleVConst(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x399748
-     * @note[short] MacOS (Intel): 0x41df00
+     * @note[short] MacOS (ARM): 0x3a30c4
+     * @note[short] MacOS (Intel): 0x4309b0
+     * @note[short] Windows: 0x979b0
+     * @note[short] iOS: 0xffb3c
      * @note[short] Android
      */
     void sliderChanged(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3999f0
-     * @note[short] MacOS (Intel): 0x41e170
-     * @note[short] Windows: 0x97b90
-     * @note[short] iOS: 0x102df4
+     * @note[short] MacOS (ARM): 0x3a336c
+     * @note[short] MacOS (Intel): 0x430c20
+     * @note[short] Windows: 0x97c50
+     * @note[short] iOS: 0xffdc8
      * @note[short] Android
      */
     void updateLabels();
 
     /**
-     * @note[short] MacOS (ARM): 0x399f4c
-     * @note[short] MacOS (Intel): 0x41e750
-     * @note[short] Windows: 0x97820
-     * @note[short] iOS: 0x103180
+     * @note[short] MacOS (ARM): 0x3a38a8
+     * @note[short] MacOS (Intel): 0x4311e0
+     * @note[short] Windows: 0x978e0
+     * @note[short] iOS: 0x100160
      * @note[short] Android
      */
     void updateSliders();

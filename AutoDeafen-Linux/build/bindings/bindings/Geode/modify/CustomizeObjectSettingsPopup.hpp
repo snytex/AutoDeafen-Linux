@@ -51,9 +51,9 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomizeObjectSettingsPopup, create, GameObject*, cocos2d::CCArray*, CustomizeObjectLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9e50, Thiscall, CustomizeObjectSettingsPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa9da0, Thiscall, CustomizeObjectSettingsPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa99f0, Thiscall, CustomizeObjectSettingsPopup, init, GameObject*, cocos2d::CCArray*, CustomizeObjectLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xaa560, Thiscall, CustomizeObjectSettingsPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xaa4b0, Thiscall, CustomizeObjectSettingsPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xaa100, Thiscall, CustomizeObjectSettingsPopup, init, GameObject*, cocos2d::CCArray*, CustomizeObjectLayer*)
 		}
 	};
 }

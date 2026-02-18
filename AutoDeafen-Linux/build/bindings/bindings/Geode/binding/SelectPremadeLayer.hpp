@@ -25,37 +25,46 @@ public:
      SelectPremadeLayer();
 
     /**
+     * @note[short] MacOS (ARM): 0x29983c
+     * @note[short] MacOS (Intel): 0x309a60
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x62f60
      * @note[short] Android
      */
     static SelectPremadeLayer* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x28ef80
-     * @note[short] MacOS (Intel): 0x2f5fc0
-     * @note[short] Windows: 0x3eef30
-     * @note[short] iOS: 0x66fa4
+     * @note[short] MacOS (ARM): 0x299c94
+     * @note[short] MacOS (Intel): 0x309f80
+     * @note[short] Windows: 0x406bb0
+     * @note[short] iOS: 0x632d8
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x28f4c8
-     * @note[short] MacOS (Intel): 0x2f64c0
-     * @note[short] Windows: 0x84650
-     * @note[short] iOS: 0x6745c
+     * @note[short] MacOS (ARM): 0x29a1dc
+     * @note[short] MacOS (Intel): 0x30a480
+     * @note[short] Windows: 0x846a0
+     * @note[short] iOS: 0x6377c
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] Windows: 0x84620
+     * @note[short] MacOS (ARM): 0x29a1a0
+     * @note[short] MacOS (Intel): 0x30a450
+     * @note[short] Windows: 0x84670
+     * @note[short] iOS: 0x63740
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x3ef540
+     * @note[short] MacOS (ARM): 0x29a130
+     * @note[short] MacOS (Intel): 0x30a3f0
+     * @note[short] Windows: 0x4071c0
+     * @note[short] iOS: 0x636d0
      * @note[short] Android
      */
     void onSelectPremade(cocos2d::CCObject* sender);

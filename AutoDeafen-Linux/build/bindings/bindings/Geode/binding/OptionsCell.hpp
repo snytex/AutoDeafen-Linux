@@ -16,28 +16,39 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(OptionsCell, TableViewCell)
 
     /**
+     * @note[short] MacOS (ARM): 0x1fa630
+     * @note[short] MacOS (Intel): 0x254560
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1106cc
      * @note[short] Android: Rebinded
      */
-     OptionsCell(char const* p0, float p1, float p2);
+     OptionsCell(char const* identifier, float width, float height);
 
     /**
-     * @note[short] MacOS (ARM): 0x1e26f8
-     * @note[short] MacOS (Intel): 0x232740
-     * @note[short] Windows: 0xb49f0
-     * @note[short] iOS: 0x1055fc
+     * @note[short] MacOS (ARM): 0x1eaf1c
+     * @note[short] MacOS (Intel): 0x2441b0
+     * @note[short] Windows: 0xb5170
+     * @note[short] iOS: 0x1025dc
      * @note[short] Android
      */
-    void loadFromObject(OptionsObject* p0);
+    void loadFromObject(OptionsObject* object);
 
     /**
-     * @note[short] Windows: 0xb4d90
+     * @note[short] MacOS (ARM): 0x1fa69c
+     * @note[short] MacOS (Intel): 0x2545f0
+     * @note[short] Windows: 0xb5510
+     * @note[short] iOS: 0x110738
      * @note[short] Android
      */
     void onToggleOption(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x1eb2f4
+     * @note[short] MacOS (Intel): 0x244540
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x102990
      * @note[short] Android
      */
-    void updateBGColor(int p0);
+    void updateBGColor(int index);
     OptionsObject* m_optionsObject;
 };

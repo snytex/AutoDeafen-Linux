@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_toggleGroup
 		#define GEODE_STATICS_toggleGroup
 		GEODE_AS_STATIC_FUNCTION(toggleGroup) 
@@ -295,34 +290,34 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupShaderEffectPopup, create, EffectGameObject*, cocos2d::CCArray*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43c650, Thiscall, SetupShaderEffectPopup, toggleGroup, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x287920, Thiscall, SetupShaderEffectPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x432210, Thiscall, SetupShaderEffectPopup, updateDefaultTriggerValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43c220, Thiscall, SetupShaderEffectPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431f20, Thiscall, SetupShaderEffectPopup, init, EffectGameObject*, cocos2d::CCArray*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43bb80, Thiscall, SetupShaderEffectPopup, onResetColors, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x432d00, Thiscall, SetupShaderEffectPopup, onZLayer, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x438e00, Thiscall, SetupShaderEffectPopup, setupBulge, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x435a30, Thiscall, SetupShaderEffectPopup, setupChromatic, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x435fb0, Thiscall, SetupShaderEffectPopup, setupChromaticGlitch, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43b4b0, Thiscall, SetupShaderEffectPopup, setupColorChange, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4353b0, Thiscall, SetupShaderEffectPopup, setupGlitch, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43a2c0, Thiscall, SetupShaderEffectPopup, setupGrayscale, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43b160, Thiscall, SetupShaderEffectPopup, setupHueShift, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43aaf0, Thiscall, SetupShaderEffectPopup, setupInvertColor, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x436f00, Thiscall, SetupShaderEffectPopup, setupLensCircle, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x438290, Thiscall, SetupShaderEffectPopup, setupMotionBlur, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4396d0, Thiscall, SetupShaderEffectPopup, setupPinch, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x436860, Thiscall, SetupShaderEffectPopup, setupPixelate, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x437850, Thiscall, SetupShaderEffectPopup, setupRadialBlur, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43a7c0, Thiscall, SetupShaderEffectPopup, setupSepia, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x432300, Thiscall, SetupShaderEffectPopup, setupShaderTrigger, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4341b0, Thiscall, SetupShaderEffectPopup, setupShockLine, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x432ea0, Thiscall, SetupShaderEffectPopup, setupShockWave, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43bd40, Thiscall, SetupShaderEffectPopup, setupSplitScreen, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x432df0, Thiscall, SetupShaderEffectPopup, updateZLayerButtons, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x432a20, Thiscall, SetupShaderEffectPopup, zLayerToString, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupShaderEffectPopup, create, EffectGameObject*, cocos2d::CCArray*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4549f0, Thiscall, SetupShaderEffectPopup, toggleGroup, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28f250, Thiscall, SetupShaderEffectPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44a5b0, Thiscall, SetupShaderEffectPopup, updateDefaultTriggerValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4545c0, Thiscall, SetupShaderEffectPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44a2c0, Thiscall, SetupShaderEffectPopup, init, EffectGameObject*, cocos2d::CCArray*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x453f20, Thiscall, SetupShaderEffectPopup, onResetColors, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44b0a0, Thiscall, SetupShaderEffectPopup, onZLayer, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4511a0, Thiscall, SetupShaderEffectPopup, setupBulge, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44ddd0, Thiscall, SetupShaderEffectPopup, setupChromatic, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44e350, Thiscall, SetupShaderEffectPopup, setupChromaticGlitch, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x453850, Thiscall, SetupShaderEffectPopup, setupColorChange, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44d750, Thiscall, SetupShaderEffectPopup, setupGlitch, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x452660, Thiscall, SetupShaderEffectPopup, setupGrayscale, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x453500, Thiscall, SetupShaderEffectPopup, setupHueShift, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x452e90, Thiscall, SetupShaderEffectPopup, setupInvertColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44f2a0, Thiscall, SetupShaderEffectPopup, setupLensCircle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x450630, Thiscall, SetupShaderEffectPopup, setupMotionBlur, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x451a70, Thiscall, SetupShaderEffectPopup, setupPinch, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44ec00, Thiscall, SetupShaderEffectPopup, setupPixelate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44fbf0, Thiscall, SetupShaderEffectPopup, setupRadialBlur, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x452b60, Thiscall, SetupShaderEffectPopup, setupSepia, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44a6a0, Thiscall, SetupShaderEffectPopup, setupShaderTrigger, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44c550, Thiscall, SetupShaderEffectPopup, setupShockLine, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44b240, Thiscall, SetupShaderEffectPopup, setupShockWave, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4540e0, Thiscall, SetupShaderEffectPopup, setupSplitScreen, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44b190, Thiscall, SetupShaderEffectPopup, updateZLayerButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44adc0, Thiscall, SetupShaderEffectPopup, zLayerToString, int)
 		}
 	};
 }

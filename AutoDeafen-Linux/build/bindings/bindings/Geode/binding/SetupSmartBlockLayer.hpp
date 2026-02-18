@@ -18,132 +18,172 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupSmartBlockLayer, FLAlertLayer)
 
     /**
-     * @note[short] Windows: 0x43e530
-     * @note[short] iOS: 0x72e9c
+     * @note[short] MacOS (ARM): 0x440a40
+     * @note[short] MacOS (Intel): 0x4e5c20
+     * @note[short] Windows: 0x4568d0
+     * @note[short] iOS: 0x6f020
      * @note[short] Android
      */
-    static SetupSmartBlockLayer* create(SmartGameObject* p0, cocos2d::CCArray* p1);
+    static SetupSmartBlockLayer* create(SmartGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4383cc
-     * @note[short] MacOS (Intel): 0x4d46d0
-     * @note[short] Windows: 0x4406d0
-     * @note[short] iOS: 0x74300
+     * @note[short] MacOS (ARM): 0x44211c
+     * @note[short] MacOS (Intel): 0x4e7620
+     * @note[short] Windows: 0x458a70
+     * @note[short] iOS: 0x70478
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x438368
-     * @note[short] MacOS (Intel): 0x4d4640
-     * @note[short] Windows: 0x8ba30
-     * @note[short] iOS: 0x7429c
+     * @note[short] MacOS (ARM): 0x4420b8
+     * @note[short] MacOS (Intel): 0x4e7590
+     * @note[short] Windows: 0x8baf0
+     * @note[short] iOS: 0x70414
      * @note[short] Android
      */
     virtual void show();
 
     /**
-     * @note[short] MacOS (ARM): 0x4383b4
-     * @note[short] MacOS (Intel): 0x4d46a0
-     * @note[short] Windows: 0x440690
-     * @note[short] iOS: 0x742e8
+     * @note[short] MacOS (ARM): 0x442104
+     * @note[short] MacOS (Intel): 0x4e75f0
+     * @note[short] Windows: 0x458a30
+     * @note[short] iOS: 0x70460
      * @note[short] Android
      */
-    virtual void selectArtClosed(SelectArtLayer* p0);
+    virtual void selectArtClosed(SelectArtLayer* layer);
 
     /**
+     * @note[short] MacOS (ARM): 0x441794
+     * @note[short] MacOS (Intel): 0x4e6b30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x6fbe0
      * @note[short] Android
      */
     void determineStartValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x436e18
-     * @note[short] MacOS (Intel): 0x4d2e00
-     * @note[short] Windows: 0x43e670
-     * @note[short] iOS: 0x72f8c
+     * @note[short] MacOS (ARM): 0x440b78
+     * @note[short] MacOS (Intel): 0x4e5da0
+     * @note[short] Windows: 0x456a10
+     * @note[short] iOS: 0x6f110
      * @note[short] Android
      */
-    bool init(SmartGameObject* p0, cocos2d::CCArray* p1);
+    bool init(SmartGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] Windows: 0x43f750
+     * @note[short] MacOS (ARM): 0x441f88
+     * @note[short] MacOS (Intel): 0x4e7450
+     * @note[short] Windows: 0x457af0
+     * @note[short] iOS: 0x702e4
      * @note[short] Android
      */
     void onAllowFlipping(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x43f6d0
+     * @note[short] MacOS (ARM): 0x441f4c
+     * @note[short] MacOS (Intel): 0x4e7410
+     * @note[short] Windows: 0x457a70
+     * @note[short] iOS: 0x702a8
      * @note[short] Android
      */
     void onAllowRotation(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x440030
+     * @note[short] MacOS (ARM): 0x441858
+     * @note[short] MacOS (Intel): 0x4e6c30
+     * @note[short] Windows: 0x4583d0
+     * @note[short] iOS: 0x6fca0
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x4400f0
+     * @note[short] MacOS (ARM): 0x4418f8
+     * @note[short] MacOS (Intel): 0x4e6ce0
+     * @note[short] Windows: 0x458490
+     * @note[short] iOS: 0x6fd40
      * @note[short] Android
      */
     void onCreate(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x437f50
-     * @note[short] MacOS (Intel): 0x4d41d0
-     * @note[short] Windows: 0x43fd80
-     * @note[short] iOS: 0x73f48
+     * @note[short] MacOS (ARM): 0x441ca0
+     * @note[short] MacOS (Intel): 0x4e7130
+     * @note[short] Windows: 0x458120
+     * @note[short] iOS: 0x700b4
      * @note[short] Android
      */
     void onCreateAll(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x440520
+     * @note[short] MacOS (ARM): 0x4419e4
+     * @note[short] MacOS (Intel): 0x4e6df0
+     * @note[short] Windows: 0x4588c0
+     * @note[short] iOS: 0x6fe1c
      * @note[short] Android
      */
     void onCreateTemplate(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x43f890
+     * @note[short] MacOS (ARM): 0x442080
+     * @note[short] MacOS (Intel): 0x4e7550
+     * @note[short] Windows: 0x457c30
+     * @note[short] iOS: 0x703dc
      * @note[short] Android
      */
     void onDontDelete(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x43f900
+     * @note[short] MacOS (ARM): 0x44200c
+     * @note[short] MacOS (Intel): 0x4e74d0
+     * @note[short] Windows: 0x457ca0
+     * @note[short] iOS: 0x70368
      * @note[short] Android
      */
     void onIgnoreCorners(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x43f820
+     * @note[short] MacOS (ARM): 0x442048
+     * @note[short] MacOS (Intel): 0x4e7510
+     * @note[short] Windows: 0x457bc0
+     * @note[short] iOS: 0x703a4
      * @note[short] Android
      */
     void onNearbyReference(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x437d78
-     * @note[short] MacOS (Intel): 0x4d3f90
-     * @note[short] Windows: 0x43f980
+     * @note[short] MacOS (ARM): 0x441ac8
+     * @note[short] MacOS (Intel): 0x4e6ef0
+     * @note[short] Windows: 0x457d20
+     * @note[short] iOS: 0x6ff00
      * @note[short] Android
      */
     void onPasteTemplate(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x43f640
+     * @note[short] MacOS (ARM): 0x441ed4
+     * @note[short] MacOS (Intel): 0x4e7380
+     * @note[short] Windows: 0x4579e0
+     * @note[short] iOS: 0x70230
      * @note[short] Android
      */
     void onReferenceOnly(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x440620
+     * @note[short] MacOS (ARM): 0x441a5c
+     * @note[short] MacOS (Intel): 0x4e6e70
+     * @note[short] Windows: 0x4589c0
+     * @note[short] iOS: 0x6fe94
      * @note[short] Android
      */
     void onSelectPremade(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x4406a0
+     * @note[short] MacOS (ARM): 0x441aa4
+     * @note[short] MacOS (Intel): 0x4e6ec0
+     * @note[short] Windows: 0x458a40
+     * @note[short] iOS: 0x6fedc
      * @note[short] Android
      */
     void onSelectTemplate(cocos2d::CCObject* sender);

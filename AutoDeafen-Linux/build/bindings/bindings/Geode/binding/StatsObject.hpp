@@ -15,15 +15,22 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(StatsObject, cocos2d::CCObject)
 
     /**
-     * @note[short] Windows: 0xb24d0
+     * @note[short] MacOS (ARM): 0x1f909c
+     * @note[short] MacOS (Intel): 0x252cb0
+     * @note[short] Windows: 0xb2c50
+     * @note[short] iOS: 0x10f7cc
      * @note[short] Android
      */
-    static StatsObject* create(char const* p0, int p1);
+    static StatsObject* create(char const* key, int value);
 
     /**
+     * @note[short] MacOS (ARM): 0x1f9124
+     * @note[short] MacOS (Intel): 0x252d40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x10f854
      * @note[short] Android
      */
-    bool init(char const* p0, int p1);
+    bool init(char const* key, int value);
     const char* m_key;
     int m_value;
 };

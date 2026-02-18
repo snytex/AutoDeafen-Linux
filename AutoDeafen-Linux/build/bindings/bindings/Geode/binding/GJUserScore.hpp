@@ -15,51 +15,58 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJUserScore, cocos2d::CCNode)
 
     /**
-     * @note[short] Windows: 0x1401d0
-     * @note[short] Android: Rebinded
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: 0x142100
+     * @note[short] iOS: 0xb3048
+     * @note[short] Android: Out of line
      */
      GJUserScore();
 
     /**
-     * @note[short] MacOS (ARM): 0x479a1c
-     * @note[short] MacOS (Intel): 0x51d290
-     * @note[short] Windows: 0x16e1a0
-     * @note[short] iOS: 0x99f28
-     * @note[short] Android
-     */
-    static GJUserScore* create(cocos2d::CCDictionary* p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x4a205c
-     * @note[short] MacOS (Intel): 0x549900
+     * @note[short] MacOS (ARM): 0x4af5f4
+     * @note[short] MacOS (Intel): 0x560140
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0xb3264
+     * @note[short] iOS: 0xafe74
      * @note[short] Android
      */
     static GJUserScore* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x4a2144
-     * @note[short] MacOS (Intel): 0x549a60
-     * @note[short] Windows: 0x16fb40
-     * @note[short] iOS: 0xb32d8
+     * @note[short] MacOS (ARM): 0x486598
+     * @note[short] MacOS (Intel): 0x533030
+     * @note[short] Windows: 0x1710b0
+     * @note[short] iOS: 0x9618c
+     * @note[short] Android
+     */
+    static GJUserScore* create(cocos2d::CCDictionary* dict);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4af6e0
+     * @note[short] MacOS (Intel): 0x5602c0
+     * @note[short] Windows: 0x172b50
+     * @note[short] iOS: 0xafee8
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x4a21b8
-     * @note[short] MacOS (Intel): 0x549af0
-     * @note[short] Windows: 0x16fb90
-     * @note[short] iOS: 0xb3320
+     * @note[short] MacOS (ARM): 0x4af754
+     * @note[short] MacOS (Intel): 0x560350
+     * @note[short] Windows: 0x172ba0
+     * @note[short] iOS: 0xaff30
      * @note[short] Android
      */
     bool isCurrentUser();
 
     /**
+     * @note[short] MacOS (ARM): 0x4af728
+     * @note[short] MacOS (Intel): 0x560310
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn mergeWithScore(GJUserScore* p0);
+    void mergeWithScore(GJUserScore* score);
     gd::string m_userName;
     gd::string m_userUDID;
     int m_scoreType;
@@ -85,6 +92,10 @@ public:
     gd::string m_youtubeURL;
     gd::string m_twitterURL;
     gd::string m_twitchURL;
+    gd::string m_discordUsername;
+    gd::string m_instagramURL;
+    gd::string m_tiktokURL;
+    gd::string m_customString;
     int m_playerCube;
     int m_playerShip;
     int m_playerBall;
@@ -104,11 +115,14 @@ public:
     int m_friendReqCount;
     int m_newFriendCount;
     bool m_newFriendRequest;
+    bool m_toggled;
     gd::string m_unkString;
     int m_unkInt;
     int m_unkInt2;
-    void* m_unkSizeT;
     gd::string m_demonInfo;
     gd::string m_starsInfo;
     gd::string m_platformerInfo;
+    int m_levelMode;
+    LevelLeaderboardMode m_leaderboardMode;
+    LeaderboardStat m_leaderboardStat;
 };

@@ -85,12 +85,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb1480, Thiscall, MapPackCell, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xad710, Thiscall, MapPackCell, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb14e0, Thiscall, MapPackCell, loadFromMapPack, GJMapPack*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MapPackCell, onClaimReward, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb2000, Thiscall, MapPackCell, onClick, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb21d0, Thiscall, MapPackCell, playCompleteEffect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb1c00, Thiscall, MapPackCell, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xade20, Thiscall, MapPackCell, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb1c60, Thiscall, MapPackCell, loadFromMapPack, GJMapPack*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb28a0, Thiscall, MapPackCell, onClaimReward, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb2780, Thiscall, MapPackCell, onClick, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb2950, Thiscall, MapPackCell, playCompleteEffect, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MapPackCell, reloadCell, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MapPackCell, updateBGColor, int)
 		}

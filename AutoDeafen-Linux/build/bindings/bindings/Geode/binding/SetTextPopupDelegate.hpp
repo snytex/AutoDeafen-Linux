@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void setTextPopupClosed(SetTextPopup* p0, gd::string p1);
+    virtual void setTextPopupClosed(SetTextPopup* popup, gd::string text);
 };

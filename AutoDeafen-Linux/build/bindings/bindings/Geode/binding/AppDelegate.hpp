@@ -15,147 +15,184 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(AppDelegate, cocos2d::CCApplication)
 
     /**
-     * @note[short] MacOS (ARM): 0x56e744
-     * @note[short] MacOS (Intel): 0x645fb0
+     * @note[short] MacOS (ARM): 0x57c070
+     * @note[short] MacOS (Intel): 0x65c240
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
+     * @note[short] iOS: 0x2693f4
      * @note[short] Android
      */
     static AppDelegate* get();
 
     /**
-     * @note[short] MacOS (ARM): 0x56e5c0
-     * @note[short] MacOS (Intel): 0x645e30
-     * @note[short] Windows: 0x829f0
-     * @note[short] iOS: 0x268414
+     * @note[short] MacOS (ARM): 0x57beec
+     * @note[short] MacOS (Intel): 0x65c0c0
+     * @note[short] Windows: 0x82a40
+     * @note[short] iOS: 0x2692a0
      * @note[short] Android
      */
     virtual bool applicationDidFinishLaunching();
 
     /**
-     * @note[short] MacOS (ARM): 0x56e838
-     * @note[short] MacOS (Intel): 0x6460d0
-     * @note[short] Windows: 0x82da0
-     * @note[short] iOS: 0x2685f8
+     * @note[short] MacOS (ARM): 0x57c164
+     * @note[short] MacOS (Intel): 0x65c360
+     * @note[short] Windows: 0x82df0
+     * @note[short] iOS: 0x269484
      * @note[short] Android
      */
     virtual void applicationDidEnterBackground();
 
     /**
-     * @note[short] MacOS (ARM): 0x56e978
-     * @note[short] MacOS (Intel): 0x646230
-     * @note[short] Windows: 0x82e20
-     * @note[short] iOS: 0x2686b4
+     * @note[short] MacOS (ARM): 0x57c2b0
+     * @note[short] MacOS (Intel): 0x65c4c0
+     * @note[short] Windows: 0x82e70
+     * @note[short] iOS: 0x269548
      * @note[short] Android
      */
     virtual void applicationWillEnterForeground();
 
     /**
-     * @note[short] MacOS (ARM): 0x56e754
-     * @note[short] MacOS (Intel): 0x645fd0
-     * @note[short] Windows: 0x82d40
-     * @note[short] iOS: 0x268578
+     * @note[short] MacOS (ARM): 0x57c080
+     * @note[short] MacOS (Intel): 0x65c260
+     * @note[short] Windows: 0x82d90
+     * @note[short] iOS: 0x269404
      * @note[short] Android
      */
     virtual void applicationWillBecomeActive();
 
     /**
-     * @note[short] MacOS (ARM): 0x56e768
-     * @note[short] MacOS (Intel): 0x645ff0
-     * @note[short] Windows: 0x82d90
-     * @note[short] iOS: 0x26858c
+     * @note[short] MacOS (ARM): 0x57c094
+     * @note[short] MacOS (Intel): 0x65c280
+     * @note[short] Windows: 0x82de0
+     * @note[short] iOS: 0x269418
      * @note[short] Android
      */
     virtual void applicationWillResignActive();
 
     /**
-     * @note[short] MacOS (ARM): 0x56ebfc
-     * @note[short] MacOS (Intel): 0x6464c0
-     * @note[short] Windows: 0x834b0
-     * @note[short] iOS: 0x268884
+     * @note[short] MacOS (ARM): 0x57c534
+     * @note[short] MacOS (Intel): 0x65c750
+     * @note[short] Windows: 0x83500
+     * @note[short] iOS: 0x269718
      * @note[short] Android
      */
-    virtual void trySaveGame(bool p0);
+    virtual void trySaveGame(bool force);
 
     /**
-     * @note[short] MacOS (ARM): 0x56ecd4
-     * @note[short] MacOS (Intel): 0x6465a0
-     * @note[short] Windows: 0x83590
-     * @note[short] iOS: 0x26885c
+     * @note[short] MacOS (ARM): 0x57c610
+     * @note[short] MacOS (Intel): 0x65c830
+     * @note[short] Windows: 0x835e0
+     * @note[short] iOS: 0x2697ec
      * @note[short] Android
      */
-    virtual void willSwitchToScene(cocos2d::CCScene* p0);
+    virtual void willSwitchToScene(cocos2d::CCScene* scene);
 
     /**
-     * @note[short] iOS: 0x268554
+     * @note[short] MacOS (ARM): 0x57c05c
+     * @note[short] MacOS (Intel): 0x65c220
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2693e0
      * @note[short] Android
      */
     float bgScale();
 
     /**
+     * @note[short] MacOS (ARM): 0x57c4bc
+     * @note[short] MacOS (Intel): 0x65c6d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2696f0
      * @note[short] Android
      */
     void checkSound();
 
     /**
+     * @note[short] MacOS (ARM): 0x57c65c
+     * @note[short] MacOS (Intel): 0x65c880
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x269838
      * @note[short] Android
      */
     void hideLoadingCircle();
 
     /**
+     * @note[short] MacOS (ARM): 0x57c074
+     * @note[short] MacOS (Intel): 0x65c250
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2693f8
      * @note[short] Android
      */
     void loadingIsFinished();
 
     /**
-     * @note[short] Windows: 0x83370
-     * @note[short] iOS: 0x2687e8
+     * @note[short] MacOS (ARM): 0x57c438
+     * @note[short] MacOS (Intel): 0x65c660
+     * @note[short] Windows: 0x833c0
+     * @note[short] iOS: 0x26967c
      * @note[short] Android
      */
     bool musicTest();
 
     /**
-     * @note[short] Windows: 0x82ff0
+     * @note[short] MacOS (ARM): 0x57c0fc
+     * @note[short] MacOS (Intel): 0x65c2f0
+     * @note[short] Windows: 0x83040
+     * @note[short] iOS: 0x26941c
      * @note[short] Android
      */
     void pauseGame();
 
     /**
-     * @note[short] Windows: 0x830d0
+     * @note[short] MacOS (ARM): 0x57c25c
+     * @note[short] MacOS (Intel): 0x65c460
+     * @note[short] Windows: 0x83120
+     * @note[short] iOS: 0x2694f0
      * @note[short] Android
      */
     void pauseSound();
 
     /**
-     * @note[short] Windows: 0x82560
+     * @note[short] MacOS (ARM): 0x57be38
+     * @note[short] MacOS (Intel): 0x65bff0
+     * @note[short] Windows: 0x825b0
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void platformShutdown();
 
     /**
-     * @note[short] MacOS (ARM): 0x56ea64
-     * @note[short] MacOS (Intel): 0x646320
-     * @note[short] Windows: 0x83270
-     * @note[short] iOS: 0x26879c
+     * @note[short] MacOS (ARM): 0x57c39c
+     * @note[short] MacOS (Intel): 0x65c5b0
+     * @note[short] Windows: 0x832c0
+     * @note[short] iOS: 0x269630
      * @note[short] Android
      */
     void resumeSound();
 
     /**
+     * @note[short] MacOS (ARM): 0x57c398
+     * @note[short] MacOS (Intel): 0x65c5a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void setIdleTimerDisabled(bool p0);
+    void setIdleTimerDisabled(bool disabled);
 
     /**
-     * @note[short] Windows: 0x82580
+     * @note[short] MacOS (ARM): 0x57be3c
+     * @note[short] MacOS (Intel): 0x65c000
+     * @note[short] Windows: 0x825d0
+     * @note[short] iOS: 0x2691b4
      * @note[short] Android
      */
     void setupGLView();
 
     /**
+     * @note[short] MacOS (ARM): 0x57c658
+     * @note[short] MacOS (Intel): 0x65c870
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x269834
      * @note[short] Android
      */
-    void showLoadingCircle(bool p0, bool p1, bool p2);
+    void showLoadingCircle(bool unk1, bool unk2, bool unk3);
     bool m_glViewSetup;
     bool m_gamePaused;
     cocos2d::CCScene* m_runningScene;

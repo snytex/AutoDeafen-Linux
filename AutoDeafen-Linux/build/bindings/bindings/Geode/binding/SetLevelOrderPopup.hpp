@@ -19,27 +19,34 @@ public:
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
+     * @note[short] iOS: 0x249f78
      * @note[short] Android: Out of line
      */
      SetLevelOrderPopup();
 
     /**
+     * @note[short] MacOS (ARM): 0x2eab0c
+     * @note[short] MacOS (Intel): 0x35f7f0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x24662c
      * @note[short] Android
      */
     static SetLevelOrderPopup* create(int levelID, int order, int amount);
 
     /**
-     * @note[short] MacOS (ARM): 0x2e1e74
-     * @note[short] MacOS (Intel): 0x34d660
-     * @note[short] Windows: 0x2f4480
+     * @note[short] MacOS (ARM): 0x2ebf44
+     * @note[short] MacOS (Intel): 0x360d70
+     * @note[short] Windows: 0x308ed0
+     * @note[short] iOS: 0x247538
      * @note[short] Android
      */
     bool init(int levelID, int order, int amount);
 
     /**
-     * @note[short] Windows: 0x2f4750
+     * @note[short] MacOS (ARM): 0x2ec270
+     * @note[short] MacOS (Intel): 0x361060
+     * @note[short] Windows: 0x3091a0
+     * @note[short] iOS: 0x247840
      * @note[short] Android
      */
     void onOrderButton(cocos2d::CCObject* sender);

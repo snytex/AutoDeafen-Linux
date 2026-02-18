@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void textChanged(CCTextInputNode* p0);
+    virtual void textChanged(CCTextInputNode* node);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,7 +29,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void textInputOpened(CCTextInputNode* p0);
+    virtual void textInputOpened(CCTextInputNode* node);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -38,7 +38,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void textInputClosed(CCTextInputNode* p0);
+    virtual void textInputClosed(CCTextInputNode* node);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -47,7 +47,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void textInputShouldOffset(CCTextInputNode* p0, float p1);
+    virtual void textInputShouldOffset(CCTextInputNode* node, float yOffset);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -56,7 +56,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void textInputReturn(CCTextInputNode* p0);
+    virtual void textInputReturn(CCTextInputNode* node);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -65,7 +65,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual bool allowTextInput(CCTextInputNode* p0);
+    virtual bool allowTextInput(CCTextInputNode* node);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -74,5 +74,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void enterPressed(CCTextInputNode* p0);
+    virtual void enterPressed(CCTextInputNode* node);
 };

@@ -15,52 +15,58 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(TextStyleSection, cocos2d::CCObject)
 
     /**
-     * @note[short] MacOS (ARM): 0x3e4f90
-     * @note[short] MacOS (Intel): 0x476620
-     * @note[short] Windows: 0x6d810
+     * @note[short] MacOS (ARM): 0x3eebc4
+     * @note[short] MacOS (Intel): 0x4892d0
+     * @note[short] Windows: 0x6d840
+     * @note[short] iOS: 0x235898
      * @note[short] Android
      */
-    static TextStyleSection* create(int p0, int p1, TextStyleType p2);
+    static TextStyleSection* create(int start, int end, TextStyleType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x3e4c54
-     * @note[short] MacOS (Intel): 0x476290
+     * @note[short] MacOS (ARM): 0x3ee888
+     * @note[short] MacOS (Intel): 0x488f40
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    static TextStyleSection* createColoredSection(cocos2d::ccColor3B p0, int p1, int p2);
+    static TextStyleSection* createColoredSection(cocos2d::ccColor3B color, int start, int end);
 
     /**
-     * @note[short] MacOS (ARM): 0x3e4de4
-     * @note[short] MacOS (Intel): 0x476420
+     * @note[short] MacOS (ARM): 0x3eea18
+     * @note[short] MacOS (Intel): 0x4890d0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    static TextStyleSection* createDelaySection(int p0, float p1);
+    static TextStyleSection* createDelaySection(int start, float delay);
 
     /**
-     * @note[short] MacOS (ARM): 0x3e4cd8
-     * @note[short] MacOS (Intel): 0x476310
+     * @note[short] MacOS (ARM): 0x3ee90c
+     * @note[short] MacOS (Intel): 0x488fc0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    static TextStyleSection* createInstantSection(int p0, int p1, float p2);
+    static TextStyleSection* createInstantSection(int start, int end, float duration);
 
     /**
-     * @note[short] MacOS (ARM): 0x3e4d5c
-     * @note[short] MacOS (Intel): 0x476390
+     * @note[short] MacOS (ARM): 0x3ee990
+     * @note[short] MacOS (Intel): 0x489040
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    static TextStyleSection* createShakeSection(int p0, int p1, int p2, int p3);
+    static TextStyleSection* createShakeSection(int start, int end, int intensity, int perSecond);
 
     /**
-     * @note[short] MacOS (ARM): 0x3e5004
-     * @note[short] MacOS (Intel): 0x476690
+     * @note[short] MacOS (ARM): 0x3eec38
+     * @note[short] MacOS (Intel): 0x489340
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(int p0, int p1, TextStyleType p2);
+    bool init(int start, int end, TextStyleType type);
     TextStyleType m_styleType;
     int m_startIndex;
     int m_endIndex;

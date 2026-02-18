@@ -125,17 +125,17 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f0fb0, Default, SetupAnimationPopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f1ed0, Thiscall, SetupAnimationPopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f2480, Thiscall, SetupAnimationPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f2060, Thiscall, SetupAnimationPopup, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f10e0, Thiscall, SetupAnimationPopup, init, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f1fd0, Thiscall, SetupAnimationPopup, onAnimationIDArrow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f2010, Thiscall, SetupAnimationPopup, onTargetIDArrow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f23e0, Thiscall, SetupAnimationPopup, updateAnimationID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f2290, Thiscall, SetupAnimationPopup, updateAnimationTextInputLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f2310, Thiscall, SetupAnimationPopup, updateTargetID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f2210, Thiscall, SetupAnimationPopup, updateTextInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x408c30, Default, SetupAnimationPopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x409b50, Thiscall, SetupAnimationPopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40a100, Thiscall, SetupAnimationPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x409ce0, Thiscall, SetupAnimationPopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x408d60, Thiscall, SetupAnimationPopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x409c50, Thiscall, SetupAnimationPopup, onAnimationIDArrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x409c90, Thiscall, SetupAnimationPopup, onTargetIDArrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40a060, Thiscall, SetupAnimationPopup, updateAnimationID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x409f10, Thiscall, SetupAnimationPopup, updateAnimationTextInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x409f90, Thiscall, SetupAnimationPopup, updateTargetID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x409e90, Thiscall, SetupAnimationPopup, updateTextInputLabel, )
 		}
 	};
 }

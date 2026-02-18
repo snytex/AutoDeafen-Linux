@@ -125,11 +125,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onClaimReward) 
 	#endif
 
-	#ifndef GEODE_STATICS_onDelete
-		#define GEODE_STATICS_onDelete
-		GEODE_AS_STATIC_FUNCTION(onDelete) 
-	#endif
-
 	#ifndef GEODE_STATICS_onDescription
 		#define GEODE_STATICS_onDescription
 		GEODE_AS_STATIC_FUNCTION(onDescription) 
@@ -180,16 +175,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onViewProfile) 
 	#endif
 
-	#ifndef GEODE_STATICS_ownerDelete
-		#define GEODE_STATICS_ownerDelete
-		GEODE_AS_STATIC_FUNCTION(ownerDelete) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateEditMode
-		#define GEODE_STATICS_updateEditMode
-		GEODE_AS_STATIC_FUNCTION(updateEditMode) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateSideButtons
 		#define GEODE_STATICS_updateSideButtons
 		GEODE_AS_STATIC_FUNCTION(updateSideButtons) 
@@ -198,11 +183,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateStatsArt
 		#define GEODE_STATICS_updateStatsArt
 		GEODE_AS_STATIC_FUNCTION(updateStatsArt) 
-	#endif
-
-	#ifndef GEODE_STATICS_verifyListName
-		#define GEODE_STATICS_verifyListName
-		GEODE_AS_STATIC_FUNCTION(verifyListName) 
 	#endif
 
     
@@ -421,46 +401,46 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelListLayer, create, GJLevelList*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ee9c0, Default, LevelListLayer, scene, GJLevelList*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f0680, Thiscall, LevelListLayer, onEnter, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f06b0, Thiscall, LevelListLayer, onExit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f1e80, Thiscall, LevelListLayer, loadLevelsFinished, cocos2d::CCArray*, char const*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c4370, Thiscall, LevelListLayer, loadLevelsFailed, char const*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f26e0, Thiscall, LevelListLayer, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f2ee0, Thiscall, LevelListLayer, shareCommentClosed, gd::string, ShareCommentLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f2b00, Thiscall, LevelListLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f2630, Thiscall, LevelListLayer, setIDPopupClosed, SetIDPopup*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f26d0, Thiscall, LevelListLayer, updateResultArray, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f21e0, Thiscall, LevelListLayer, cellPerformedAction, TableViewCell*, int, CellAction, cocos2d::CCNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f3100, Thiscall, LevelListLayer, likedItem, LikeItemType, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f33b0, Thiscall, LevelListLayer, iconSelectClosed, SelectListIconLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f3cd0, Thiscall, LevelListLayer, levelListDeleteFinished, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f3e00, Thiscall, LevelListLayer, levelListDeleteFailed, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f41c0, Thiscall, LevelListLayer, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f3f30, Thiscall, LevelListLayer, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f4320, Thiscall, LevelListLayer, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f3790, Thiscall, LevelListLayer, cloneList, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f36a0, Thiscall, LevelListLayer, confirmClone, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f3a20, Thiscall, LevelListLayer, confirmDelete, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f3b50, Thiscall, LevelListLayer, confirmOwnerDelete, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2eebf0, Thiscall, LevelListLayer, init, GJLevelList*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f1650, Thiscall, LevelListLayer, onClaimReward, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelListLayer, onDelete, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelListLayer, onDescription, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f2ce0, Thiscall, LevelListLayer, onFavorite, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f2fe0, Thiscall, LevelListLayer, onInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f3020, Thiscall, LevelListLayer, onLike, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelListLayer, onListInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f1cc0, Thiscall, LevelListLayer, onRefreshLevelList, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f3260, Thiscall, LevelListLayer, onSelectIcon, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f33d0, Thiscall, LevelListLayer, onShare, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f3660, Thiscall, LevelListLayer, onToggleEditMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f2ca0, Thiscall, LevelListLayer, onViewProfile, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelListLayer, ownerDelete, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelListLayer, updateEditMode, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f3160, Thiscall, LevelListLayer, updateSideButtons, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f06d0, Thiscall, LevelListLayer, updateStatsArt, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelListLayer, verifyListName, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x303410, Default, LevelListLayer, scene, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3050d0, Thiscall, LevelListLayer, onEnter, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x305100, Thiscall, LevelListLayer, onExit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3068d0, Thiscall, LevelListLayer, loadLevelsFinished, cocos2d::CCArray*, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2cc550, Thiscall, LevelListLayer, loadLevelsFailed, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307130, Thiscall, LevelListLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307930, Thiscall, LevelListLayer, shareCommentClosed, gd::string, ShareCommentLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307550, Thiscall, LevelListLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307080, Thiscall, LevelListLayer, setIDPopupClosed, SetIDPopup*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307120, Thiscall, LevelListLayer, updateResultArray, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x306c30, Thiscall, LevelListLayer, cellPerformedAction, TableViewCell*, int, CellAction, cocos2d::CCNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307b50, Thiscall, LevelListLayer, likedItem, LikeItemType, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307e00, Thiscall, LevelListLayer, iconSelectClosed, SelectListIconLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x308720, Thiscall, LevelListLayer, levelListDeleteFinished, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x308850, Thiscall, LevelListLayer, levelListDeleteFailed, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x308c10, Thiscall, LevelListLayer, textInputOpened, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x308980, Thiscall, LevelListLayer, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x308d70, Thiscall, LevelListLayer, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3081e0, Thiscall, LevelListLayer, cloneList, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3080f0, Thiscall, LevelListLayer, confirmClone, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x308470, Thiscall, LevelListLayer, confirmDelete, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3085a0, Thiscall, LevelListLayer, confirmOwnerDelete, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x303640, Thiscall, LevelListLayer, init, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3060a0, Thiscall, LevelListLayer, onClaimReward, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelListLayer, onDelete, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307860, Thiscall, LevelListLayer, onDescription, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307730, Thiscall, LevelListLayer, onFavorite, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307a30, Thiscall, LevelListLayer, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307a70, Thiscall, LevelListLayer, onLike, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3050c0, Thiscall, LevelListLayer, onListInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x306710, Thiscall, LevelListLayer, onRefreshLevelList, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307cb0, Thiscall, LevelListLayer, onSelectIcon, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307e20, Thiscall, LevelListLayer, onShare, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3080b0, Thiscall, LevelListLayer, onToggleEditMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3076f0, Thiscall, LevelListLayer, onViewProfile, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelListLayer, ownerDelete, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelListLayer, updateEditMode, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x307bb0, Thiscall, LevelListLayer, updateSideButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x305120, Thiscall, LevelListLayer, updateStatsArt, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelListLayer, verifyListName, )
 		}
 	};
 }

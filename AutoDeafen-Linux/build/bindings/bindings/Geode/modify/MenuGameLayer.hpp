@@ -55,11 +55,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateColor) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateColors
-		#define GEODE_STATICS_updateColors
-		GEODE_AS_STATIC_FUNCTION(updateColors) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -141,19 +136,19 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MenuGameLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31d380, Thiscall, MenuGameLayer, update, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31c560, Thiscall, MenuGameLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31e740, Thiscall, MenuGameLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x332240, Thiscall, MenuGameLayer, update, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x331420, Thiscall, MenuGameLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x333600, Thiscall, MenuGameLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MenuGameLayer, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MenuGameLayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71210, Thiscall, MenuGameLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31e8f0, Thiscall, MenuGameLayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31e480, Thiscall, MenuGameLayer, destroyPlayer, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31cde0, Thiscall, MenuGameLayer, getBGColor, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31d850, Thiscall, MenuGameLayer, resetPlayer, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31d0b0, Thiscall, MenuGameLayer, tryJump, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31cc90, Thiscall, MenuGameLayer, updateColor, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MenuGameLayer, updateColors, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71240, Thiscall, MenuGameLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3337b0, Thiscall, MenuGameLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x333340, Thiscall, MenuGameLayer, destroyPlayer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x331ca0, Thiscall, MenuGameLayer, getBGColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x332710, Thiscall, MenuGameLayer, resetPlayer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x331f70, Thiscall, MenuGameLayer, tryJump, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x331b50, Thiscall, MenuGameLayer, updateColor, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MenuGameLayer, updateColors, )
 		}
 	};
 }

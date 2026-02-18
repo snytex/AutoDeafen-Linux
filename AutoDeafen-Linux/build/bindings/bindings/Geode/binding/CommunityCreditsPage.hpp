@@ -25,77 +25,91 @@ public:
      CommunityCreditsPage();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x2ac740
+     * @note[short] MacOS (Intel): 0x31e5d0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x1a03d0
+     * @note[short] Android: Rebinded
      */
      ~CommunityCreditsPage();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a13f8
-     * @note[short] MacOS (Intel): 0x30a3b0
+     * @note[short] MacOS (ARM): 0x2ac964
+     * @note[short] MacOS (Intel): 0x31e900
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1a0474
      * @note[short] Android
      */
     static CommunityCreditsPage* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a14fc
-     * @note[short] MacOS (Intel): 0x30a500
-     * @note[short] Windows: 0x94000
-     * @note[short] iOS: 0x1a3788
+     * @note[short] MacOS (ARM): 0x2aca68
+     * @note[short] MacOS (Intel): 0x31ea50
+     * @note[short] Windows: 0x940c0
+     * @note[short] iOS: 0x1a0530
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a37e4
-     * @note[short] MacOS (Intel): 0x30ca60
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x1a5d64
+     * @note[short] MacOS (ARM): 0x2aed70
+     * @note[short] MacOS (Intel): 0x320fb0
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x1a2b04
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a3768
-     * @note[short] MacOS (Intel): 0x30c9f0
-     * @note[short] Windows: 0x84650
-     * @note[short] iOS: 0x1a5ce8
+     * @note[short] MacOS (ARM): 0x2aecf4
+     * @note[short] MacOS (Intel): 0x320f40
+     * @note[short] Windows: 0x846a0
+     * @note[short] iOS: 0x1a2a88
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a35e0
-     * @note[short] MacOS (Intel): 0x30c860
-     * @note[short] Windows: 0x96160
-     * @note[short] iOS: 0x1a5b74
+     * @note[short] MacOS (ARM): 0x2aeb68
+     * @note[short] MacOS (Intel): 0x320db0
+     * @note[short] Windows: 0x96220
+     * @note[short] iOS: 0x1a2910
      * @note[short] Android
      */
     virtual void show();
 
     /**
+     * @note[short] MacOS (ARM): 0x2aecf0
+     * @note[short] MacOS (Intel): 0x320f30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    void FLAlert_Clicked(FLAlertLayer* alert, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x2a34cc
-     * @note[short] MacOS (Intel): 0x30c750
-     * @note[short] Windows: 0x96040
+     * @note[short] MacOS (ARM): 0x2aea54
+     * @note[short] MacOS (Intel): 0x320ca0
+     * @note[short] Windows: 0x96100
+     * @note[short] iOS: 0x1a2804
      * @note[short] Android
      */
-    void goToPage(int p0);
+    void goToPage(int page);
 
     /**
+     * @note[short] MacOS (ARM): 0x2ae9d8
+     * @note[short] MacOS (Intel): 0x320c30
+     * @note[short] Windows: 0x84670
+     * @note[short] iOS: 0x1a2788
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x2aea14
+     * @note[short] MacOS (Intel): 0x320c60
+     * @note[short] Windows: 0x960c0
+     * @note[short] iOS: 0x1a27c4
      * @note[short] Android
      */
     void onSwitchPage(cocos2d::CCObject* sender);

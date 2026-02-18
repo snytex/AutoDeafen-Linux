@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void dropDownLayerWillClose(GJDropDownLayer* p0);
+    virtual void dropDownLayerWillClose(GJDropDownLayer* layer);
 };

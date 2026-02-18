@@ -25,29 +25,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(loadFromScore) 
 	#endif
 
-	#ifndef GEODE_STATICS_onBan
-		#define GEODE_STATICS_onBan
-		GEODE_AS_STATIC_FUNCTION(onBan) 
-	#endif
-
-	#ifndef GEODE_STATICS_onCheck
-		#define GEODE_STATICS_onCheck
-		GEODE_AS_STATIC_FUNCTION(onCheck) 
-	#endif
-
-	#ifndef GEODE_STATICS_onMoreLevels
-		#define GEODE_STATICS_onMoreLevels
-		GEODE_AS_STATIC_FUNCTION(onMoreLevels) 
-	#endif
-
 	#ifndef GEODE_STATICS_onViewProfile
 		#define GEODE_STATICS_onViewProfile
 		GEODE_AS_STATIC_FUNCTION(onViewProfile) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateBGColor
-		#define GEODE_STATICS_updateBGColor
-		GEODE_AS_STATIC_FUNCTION(updateBGColor) 
 	#endif
 
     
@@ -105,15 +85,15 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb3f00, Thiscall, GJScoreCell, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xad710, Thiscall, GJScoreCell, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb8ee0, Thiscall, GJScoreCell, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb7c80, Thiscall, GJScoreCell, loadFromScore, GJUserScore*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJScoreCell, onBan, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJScoreCell, onCheck, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJScoreCell, onMoreLevels, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb8d60, Thiscall, GJScoreCell, onViewProfile, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJScoreCell, updateBGColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4680, Thiscall, GJScoreCell, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xade20, Thiscall, GJScoreCell, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb9bb0, Thiscall, GJScoreCell, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb8490, Thiscall, GJScoreCell, loadFromScore, GJUserScore*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJScoreCell, onBan, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJScoreCell, onCheck, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJScoreCell, onMoreLevels, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb9a30, Thiscall, GJScoreCell, onViewProfile, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJScoreCell, updateBGColor, int)
 		}
 	};
 }

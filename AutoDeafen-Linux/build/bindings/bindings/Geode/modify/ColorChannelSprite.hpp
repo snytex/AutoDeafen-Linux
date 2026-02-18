@@ -70,11 +70,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2515d0, Default, ColorChannelSprite, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x251690, Thiscall, ColorChannelSprite, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2519c0, Thiscall, ColorChannelSprite, updateBlending, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2516b0, Thiscall, ColorChannelSprite, updateCopyLabel, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x251870, Thiscall, ColorChannelSprite, updateOpacity, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x258930, Default, ColorChannelSprite, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2589f0, Thiscall, ColorChannelSprite, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x258d20, Thiscall, ColorChannelSprite, updateBlending, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x258a10, Thiscall, ColorChannelSprite, updateCopyLabel, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x258bd0, Thiscall, ColorChannelSprite, updateOpacity, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorChannelSprite, updateValues, ColorAction*)
 		}
 	};

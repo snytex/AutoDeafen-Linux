@@ -155,20 +155,20 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x427720, Default, SetupRandTriggerPopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4285e0, Thiscall, SetupRandTriggerPopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4290c0, Thiscall, SetupRandTriggerPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4288e0, Thiscall, SetupRandTriggerPopup, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x427860, Thiscall, SetupRandTriggerPopup, init, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x428890, Thiscall, SetupRandTriggerPopup, onTargetID2Arrow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x428840, Thiscall, SetupRandTriggerPopup, onTargetIDArrow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x428730, Thiscall, SetupRandTriggerPopup, sliderChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26b120, Thiscall, SetupRandTriggerPopup, updateChance, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x428770, Thiscall, SetupRandTriggerPopup, updateChanceLabel, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x428f20, Thiscall, SetupRandTriggerPopup, updateTargetID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x428ff0, Thiscall, SetupRandTriggerPopup, updateTargetID2, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x428bc0, Thiscall, SetupRandTriggerPopup, updateTextInputLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x428d70, Thiscall, SetupRandTriggerPopup, updateTextInputLabel2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43f9f0, Default, SetupRandTriggerPopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4408b0, Thiscall, SetupRandTriggerPopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x441390, Thiscall, SetupRandTriggerPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x440bb0, Thiscall, SetupRandTriggerPopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43fb30, Thiscall, SetupRandTriggerPopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x440b60, Thiscall, SetupRandTriggerPopup, onTargetID2Arrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x440b10, Thiscall, SetupRandTriggerPopup, onTargetIDArrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x440a00, Thiscall, SetupRandTriggerPopup, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x272a00, Thiscall, SetupRandTriggerPopup, updateChance, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x440a40, Thiscall, SetupRandTriggerPopup, updateChanceLabel, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4411f0, Thiscall, SetupRandTriggerPopup, updateTargetID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4412c0, Thiscall, SetupRandTriggerPopup, updateTargetID2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x440e90, Thiscall, SetupRandTriggerPopup, updateTextInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x441040, Thiscall, SetupRandTriggerPopup, updateTextInputLabel2, )
 		}
 	};
 }

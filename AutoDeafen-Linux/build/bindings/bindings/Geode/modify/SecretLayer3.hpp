@@ -30,19 +30,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(animateEyes) 
 	#endif
 
-	#ifndef GEODE_STATICS_firstInteractionStep1
-		#define GEODE_STATICS_firstInteractionStep1
-		GEODE_AS_STATIC_FUNCTION(firstInteractionStep1) 
-	#endif
-
 	#ifndef GEODE_STATICS_firstInteractionStep2
 		#define GEODE_STATICS_firstInteractionStep2
 		GEODE_AS_STATIC_FUNCTION(firstInteractionStep2) 
-	#endif
-
-	#ifndef GEODE_STATICS_firstInteractionStep3
-		#define GEODE_STATICS_firstInteractionStep3
-		GEODE_AS_STATIC_FUNCTION(firstInteractionStep3) 
 	#endif
 
 	#ifndef GEODE_STATICS_firstInteractionStep4
@@ -78,11 +68,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_revealStep2
 		#define GEODE_STATICS_revealStep2
 		GEODE_AS_STATIC_FUNCTION(revealStep2) 
-	#endif
-
-	#ifndef GEODE_STATICS_revealStep3
-		#define GEODE_STATICS_revealStep3
-		GEODE_AS_STATIC_FUNCTION(revealStep3) 
 	#endif
 
 	#ifndef GEODE_STATICS_revealStep4
@@ -217,25 +202,25 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer3, create, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer3, scene, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d2b20, Thiscall, SecretLayer3, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d8430, Thiscall, SecretLayer3, onExit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d8420, Thiscall, SecretLayer3, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d7e20, Thiscall, SecretLayer3, dialogClosed, DialogLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer3, animateEyes, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer3, firstInteractionStep1, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer3, firstInteractionStep2, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer3, firstInteractionStep3, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer3, firstInteractionStep4, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer3, onBack, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer3, onChest01, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer3, onChest02, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d5090, Thiscall, SecretLayer3, onClick, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer3, revealStep1, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d6aa0, Thiscall, SecretLayer3, revealStep2, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer3, revealStep3, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d6f30, Thiscall, SecretLayer3, revealStep4, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d7780, Thiscall, SecretLayer3, revealStep5, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d63a0, Thiscall, SecretLayer3, showUnlockDialog, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e9e90, Thiscall, SecretLayer3, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ef7a0, Thiscall, SecretLayer3, onExit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ef790, Thiscall, SecretLayer3, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ef190, Thiscall, SecretLayer3, dialogClosed, DialogLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3eb7f0, Thiscall, SecretLayer3, animateEyes, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer3, firstInteractionStep1, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3eb910, Thiscall, SecretLayer3, firstInteractionStep2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer3, firstInteractionStep3, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ebe90, Thiscall, SecretLayer3, firstInteractionStep4, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ef620, Thiscall, SecretLayer3, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3eb4f0, Thiscall, SecretLayer3, onChest01, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3eb670, Thiscall, SecretLayer3, onChest02, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ec400, Thiscall, SecretLayer3, onClick, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3edc20, Thiscall, SecretLayer3, revealStep1, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ede10, Thiscall, SecretLayer3, revealStep2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer3, revealStep3, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ee2a0, Thiscall, SecretLayer3, revealStep4, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3eeaf0, Thiscall, SecretLayer3, revealStep5, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ed710, Thiscall, SecretLayer3, showUnlockDialog, )
 		}
 	};
 }

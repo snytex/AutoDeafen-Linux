@@ -16,36 +16,49 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(KeyframeAnimTriggerObject, EffectGameObject)
 
     /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     KeyframeAnimTriggerObject();
+
+    /**
+     * @note[short] MacOS (ARM): 0x174764
+     * @note[short] MacOS (Intel): 0x1bb640
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x386aa4
      * @note[short] Android
      */
     static KeyframeAnimTriggerObject* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x16bc30
-     * @note[short] MacOS (Intel): 0x1aa550
-     * @note[short] Windows: 0x498a40
-     * @note[short] iOS: 0x37f844
+     * @note[short] MacOS (ARM): 0x174840
+     * @note[short] MacOS (Intel): 0x1bb710
+     * @note[short] Windows: 0x4b1590
+     * @note[short] iOS: 0x386b74
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x16c950
-     * @note[short] MacOS (Intel): 0x1ab5c0
-     * @note[short] Windows: 0x498eb0
-     * @note[short] iOS: 0x37fc84
+     * @note[short] MacOS (ARM): 0x175524
+     * @note[short] MacOS (Intel): 0x1bc7c0
+     * @note[short] Windows: 0x4b1a00
+     * @note[short] iOS: 0x386fb4
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x16bc80
-     * @note[short] MacOS (Intel): 0x1aa5a0
-     * @note[short] Windows: 0x498ab0
-     * @note[short] iOS: 0x37f894
+     * @note[short] MacOS (ARM): 0x174890
+     * @note[short] MacOS (Intel): 0x1bb760
+     * @note[short] Windows: 0x4b1600
+     * @note[short] iOS: 0x386bc4
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
     float m_timeMod;
     float m_positionXMod;
     float m_positionYMod;

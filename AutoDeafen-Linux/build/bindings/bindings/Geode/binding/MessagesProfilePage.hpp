@@ -20,212 +20,235 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(MessagesProfilePage, FLAlertLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x1ce7c4
-     * @note[short] MacOS (Intel): 0x21ba30
-     * @note[short] Windows: 0x3216b0
-     * @note[short] iOS: 0x1ccbe4
+     * @note[short] MacOS (ARM): 0x1d7064
+     * @note[short] MacOS (Intel): 0x22d880
+     * @note[short] Windows: 0x336570
+     * @note[short] iOS: 0x1cbe90
      * @note[short] Android
      */
-    static MessagesProfilePage* create(bool p0);
+    static MessagesProfilePage* create(bool sent);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d0144
-     * @note[short] MacOS (Intel): 0x21d550
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x1ce01c
+     * @note[short] MacOS (ARM): 0x1d899c
+     * @note[short] MacOS (Intel): 0x22f380
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x1cd2bc
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x1d0138
-     * @note[short] MacOS (Intel): 0x21d520
-     * @note[short] Windows: 0x322cb0
-     * @note[short] iOS: 0x1ce010
+     * @note[short] MacOS (ARM): 0x1d8990
+     * @note[short] MacOS (Intel): 0x22f350
+     * @note[short] Windows: 0x337b70
+     * @note[short] iOS: 0x1cd2b0
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x1cfc98
-     * @note[short] MacOS (Intel): 0x21d0f0
-     * @note[short] Windows: 0x322a50
-     * @note[short] iOS: 0x1cdd48
+     * @note[short] MacOS (ARM): 0x1d8508
+     * @note[short] MacOS (Intel): 0x22ef30
+     * @note[short] Windows: 0x337910
+     * @note[short] iOS: 0x1ccfe8
      * @note[short] Android
      */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x1cfd28
-     * @note[short] MacOS (Intel): 0x21d160
-     * @note[short] Windows: 0x13d2a0
-     * @note[short] iOS: 0x1cddd8
+     * @note[short] MacOS (ARM): 0x1d8598
+     * @note[short] MacOS (Intel): 0x22efa0
+     * @note[short] Windows: 0x13eee0
+     * @note[short] iOS: 0x1cd078
      * @note[short] Android
      */
-    virtual void onClosePopup(UploadActionPopup* p0);
+    virtual void onClosePopup(UploadActionPopup* popup);
 
     /**
-     * @note[short] MacOS (ARM): 0x1cfdb0
-     * @note[short] MacOS (Intel): 0x21d1d0
-     * @note[short] Windows: 0x322a80
-     * @note[short] iOS: 0x1cde48
+     * @note[short] MacOS (ARM): 0x1d8620
+     * @note[short] MacOS (Intel): 0x22f010
+     * @note[short] Windows: 0x337940
+     * @note[short] iOS: 0x1cd0e8
      * @note[short] Android
      */
-    virtual void uploadActionFinished(int p0, int p1);
+    virtual void uploadActionFinished(int id, int response);
 
     /**
-     * @note[short] MacOS (ARM): 0x1cff7c
-     * @note[short] MacOS (Intel): 0x21d390
-     * @note[short] Windows: 0x13d460
-     * @note[short] iOS: 0x1cdf30
+     * @note[short] MacOS (ARM): 0x1d87e0
+     * @note[short] MacOS (Intel): 0x22f1c0
+     * @note[short] Windows: 0x13f0a0
+     * @note[short] iOS: 0x1cd1d0
      * @note[short] Android
      */
-    virtual void uploadActionFailed(int p0, int p1);
+    virtual void uploadActionFailed(int id, int response);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d03f8
-     * @note[short] MacOS (Intel): 0x21d830
-     * @note[short] Windows: 0x323300
-     * @note[short] iOS: 0x1ce208
+     * @note[short] MacOS (ARM): 0x1d8c40
+     * @note[short] MacOS (Intel): 0x22f650
+     * @note[short] Windows: 0x3381c0
+     * @note[short] iOS: 0x1cd4a8
      * @note[short] Android
      */
-    virtual void loadMessagesFinished(cocos2d::CCArray* p0, char const* p1);
+    virtual void loadMessagesFinished(cocos2d::CCArray* messages, char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d0504
-     * @note[short] MacOS (Intel): 0x21d950
-     * @note[short] Windows: 0x13dc50
-     * @note[short] iOS: 0x1ce314
+     * @note[short] MacOS (ARM): 0x1d8d4c
+     * @note[short] MacOS (Intel): 0x22f780
+     * @note[short] Windows: 0x13f890
+     * @note[short] iOS: 0x1cd5b4
      * @note[short] Android
      */
-    virtual void loadMessagesFailed(char const* p0, GJErrorCode p1);
+    virtual void loadMessagesFailed(char const* key, GJErrorCode errorType);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d0630
-     * @note[short] MacOS (Intel): 0x21da60
-     * @note[short] Windows: 0x323450
-     * @note[short] iOS: 0x1ce3b0
+     * @note[short] MacOS (ARM): 0x1d8e78
+     * @note[short] MacOS (Intel): 0x22f890
+     * @note[short] Windows: 0x338310
+     * @note[short] iOS: 0x1cd650
      * @note[short] Android
      */
-    virtual void forceReloadMessages(bool p0);
+    virtual void forceReloadMessages(bool sent);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d0664
-     * @note[short] MacOS (Intel): 0x21daa0
-     * @note[short] Windows: 0x323470
-     * @note[short] iOS: 0x1ce3e4
+     * @note[short] MacOS (ARM): 0x1d8eac
+     * @note[short] MacOS (Intel): 0x22f8d0
+     * @note[short] Windows: 0x338330
+     * @note[short] iOS: 0x1cd684
      * @note[short] Android: Rebinded
      */
-    virtual void setupPageInfo(gd::string p0, char const* p1);
+    virtual void setupPageInfo(gd::string info, char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x1cfac8
-     * @note[short] MacOS (Intel): 0x21cf00
-     * @note[short] Windows: 0x3227d0
-     * @note[short] iOS: 0x1cdb9c
+     * @note[short] MacOS (ARM): 0x1d8334
+     * @note[short] MacOS (Intel): 0x22ed40
+     * @note[short] Windows: 0x337690
+     * @note[short] iOS: 0x1cce3c
      * @note[short] Android
      */
     void deleteSelected();
 
     /**
-     * @note[short] MacOS (ARM): 0x1ce900
-     * @note[short] MacOS (Intel): 0x21bbe0
-     * @note[short] Windows: 0x321850
-     * @note[short] iOS: 0x1ccc58
+     * @note[short] MacOS (ARM): 0x1d71a0
+     * @note[short] MacOS (Intel): 0x22da30
+     * @note[short] Windows: 0x336710
+     * @note[short] iOS: 0x1cbf04
      * @note[short] Android
      */
-    bool init(bool p0);
+    bool init(bool sent);
 
     /**
-     * @note[short] iOS: 0x1ce054
+     * @note[short] MacOS (ARM): 0x1d89d4
+     * @note[short] MacOS (Intel): 0x22f3c0
+     * @note[short] Windows: 0x13f140
+     * @note[short] iOS: 0x1cd2f4
      * @note[short] Android
      */
-    bool isCorrect(char const* p0);
+    bool isCorrect(char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x1cf6e0
-     * @note[short] MacOS (Intel): 0x21caa0
-     * @note[short] Windows: 0x322d60
-     * @note[short] iOS: 0x1cd974
+     * @note[short] MacOS (ARM): 0x1d7f74
+     * @note[short] MacOS (Intel): 0x22e8f0
+     * @note[short] Windows: 0x337c20
+     * @note[short] iOS: 0x1ccc1c
      * @note[short] Android
      */
-    void loadPage(int p0);
+    void loadPage(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x1cf258
-     * @note[short] MacOS (Intel): 0x21c5b0
-     * @note[short] Windows: 0x322bf0
-     * @note[short] iOS: 0x1cd594
+     * @note[short] MacOS (ARM): 0x1d7af8
+     * @note[short] MacOS (Intel): 0x22e400
+     * @note[short] Windows: 0x337ab0
+     * @note[short] iOS: 0x1cc840
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1cf3f4
-     * @note[short] MacOS (Intel): 0x21c760
-     * @note[short] Windows: 0x3224e0
-     * @note[short] iOS: 0x1cd6e0
+     * @note[short] MacOS (ARM): 0x1d7c88
+     * @note[short] MacOS (Intel): 0x22e5b0
+     * @note[short] Windows: 0x3373a0
+     * @note[short] iOS: 0x1cc98c
      * @note[short] Android
      */
     void onDeleteSelected(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x323610
-     * @note[short] iOS: 0x1cd8f8
+     * @note[short] MacOS (ARM): 0x1d7f04
+     * @note[short] MacOS (Intel): 0x22e860
+     * @note[short] Windows: 0x3384d0
+     * @note[short] iOS: 0x1ccbac
      * @note[short] Android
      */
     void onNextPage(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x323620
-     * @note[short] iOS: 0x1cd904
+     * @note[short] MacOS (ARM): 0x1d7ef8
+     * @note[short] MacOS (Intel): 0x22e840
+     * @note[short] Windows: 0x3384e0
+     * @note[short] iOS: 0x1ccba0
      * @note[short] Android
      */
     void onPrevPage(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x322450
-     * @note[short] iOS: 0x1cd654
+     * @note[short] MacOS (ARM): 0x1d7bfc
+     * @note[short] MacOS (Intel): 0x22e520
+     * @note[short] Windows: 0x337310
+     * @note[short] iOS: 0x1cc900
      * @note[short] Android
      */
     void onSentMessages(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1cf5c0
-     * @note[short] MacOS (Intel): 0x21c940
-     * @note[short] Windows: 0x322270
-     * @note[short] iOS: 0x1cd860
+     * @note[short] MacOS (ARM): 0x1d7e54
+     * @note[short] MacOS (Intel): 0x22e790
+     * @note[short] Windows: 0x337130
+     * @note[short] iOS: 0x1ccb08
      * @note[short] Android
      */
     void onToggleAllObjects(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] iOS: 0x1cd910
+     * @note[short] MacOS (ARM): 0x1d7f10
+     * @note[short] MacOS (Intel): 0x22e880
+     * @note[short] Windows: 0x337210
+     * @note[short] iOS: 0x1ccbb8
      * @note[short] Android
      */
     void onUpdate(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x323170
-     * @note[short] iOS: 0x1ce0a4
+     * @note[short] MacOS (ARM): 0x1d8adc
+     * @note[short] MacOS (Intel): 0x22f4e0
+     * @note[short] Windows: 0x338030
+     * @note[short] iOS: 0x1cd344
      * @note[short] Android
      */
-    void setupCommentsBrowser(cocos2d::CCArray* p0);
+    void setupCommentsBrowser(cocos2d::CCArray* messages);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d00c4
-     * @note[short] MacOS (Intel): 0x21d4b0
-     * @note[short] Windows: 0x322cc0
+     * @note[short] MacOS (ARM): 0x1d8928
+     * @note[short] MacOS (Intel): 0x22f2e0
+     * @note[short] Windows: 0x337b80
+     * @note[short] iOS: 0x1cd248
      * @note[short] Android
      */
     void untoggleAll();
 
     /**
+     * @note[short] MacOS (ARM): 0x1d94b0
+     * @note[short] MacOS (Intel): 0x22fe50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void updateLevelsLabel();
 
     /**
+     * @note[short] MacOS (ARM): 0x1d944c
+     * @note[short] MacOS (Intel): 0x22fdd0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void updatePageArrows();

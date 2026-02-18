@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_selectSettingClosed
 		#define GEODE_STATICS_selectSettingClosed
 		GEODE_AS_STATIC_FUNCTION(selectSettingClosed) 
@@ -55,10 +50,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupAudioLineGuidePopup, create, AudioLineGuideGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4581a0, Thiscall, SetupAudioLineGuidePopup, selectSettingClosed, SelectSettingLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x457a40, Thiscall, SetupAudioLineGuidePopup, init, AudioLineGuideGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x458150, Thiscall, SetupAudioLineGuidePopup, onSpeed, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupAudioLineGuidePopup, create, AudioLineGuideGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x470710, Thiscall, SetupAudioLineGuidePopup, selectSettingClosed, SelectSettingLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46ffb0, Thiscall, SetupAudioLineGuidePopup, init, AudioLineGuideGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4706c0, Thiscall, SetupAudioLineGuidePopup, onSpeed, cocos2d::CCObject*)
 		}
 	};
 }

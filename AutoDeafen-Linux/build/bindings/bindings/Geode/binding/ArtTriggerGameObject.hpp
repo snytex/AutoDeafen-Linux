@@ -16,40 +16,57 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(ArtTriggerGameObject, EffectGameObject)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static ArtTriggerGameObject* create(char const* p0);
+     ArtTriggerGameObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x194614
-     * @note[short] MacOS (Intel): 0x1db7e0
-     * @note[short] Windows: 0x4a98a0
-     * @note[short] iOS: 0x390034
+     * @note[short] MacOS (ARM): 0x19c4e8
+     * @note[short] MacOS (Intel): 0x1ecf40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x39700c
+     * @note[short] Android
+     */
+    static ArtTriggerGameObject* create(char const* frame);
+
+    /**
+     * @note[short] MacOS (ARM): 0x19cad4
+     * @note[short] MacOS (Intel): 0x1ed5e0
+     * @note[short] Windows: 0x4c23f0
+     * @note[short] iOS: 0x3972bc
      * @note[short] Android: Rebinded
      */
-    virtual void triggerObject(GJBaseGameLayer* p0, int p1, gd::vector<int> const* p2);
+    virtual void triggerObject(GJBaseGameLayer* layer, int uniqueID, gd::vector<int> const* remapKeys);
 
     /**
-     * @note[short] MacOS (ARM): 0x19459c
-     * @note[short] MacOS (Intel): 0x1db780
-     * @note[short] Windows: 0x4a9820
-     * @note[short] iOS: 0x38ffcc
+     * @note[short] MacOS (ARM): 0x19ca5c
+     * @note[short] MacOS (Intel): 0x1ed580
+     * @note[short] Windows: 0x4c2370
+     * @note[short] iOS: 0x397254
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x194120
-     * @note[short] MacOS (Intel): 0x1db260
-     * @note[short] Windows: 0x4a96b0
-     * @note[short] iOS: 0x38fe3c
+     * @note[short] MacOS (ARM): 0x19c5f4
+     * @note[short] MacOS (Intel): 0x1ed050
+     * @note[short] Windows: 0x4c2200
+     * @note[short] iOS: 0x3970c4
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
+     * @note[short] MacOS (ARM): 0x19c5ac
+     * @note[short] MacOS (Intel): 0x1ed000
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(char const* p0);
+    bool init(char const* frame);
     int m_artIndex;
 };

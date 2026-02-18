@@ -16,16 +16,20 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupCameraRotatePopup2, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x3ffd20
+     * @note[short] MacOS (ARM): 0x41e9b8
+     * @note[short] MacOS (Intel): 0x4be940
+     * @note[short] Windows: 0x4179f0
+     * @note[short] iOS: 0x4c220
      * @note[short] Android
      */
-    static SetupCameraRotatePopup2* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupCameraRotatePopup2* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x414974
-     * @note[short] MacOS (Intel): 0x4ab7d0
-     * @note[short] Windows: 0x3ffe30
+     * @note[short] MacOS (ARM): 0x41eb44
+     * @note[short] MacOS (Intel): 0x4beb70
+     * @note[short] Windows: 0x417b00
+     * @note[short] iOS: 0x4c2fc
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 };

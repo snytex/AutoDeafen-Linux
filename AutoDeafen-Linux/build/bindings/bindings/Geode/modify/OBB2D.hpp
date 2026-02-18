@@ -15,19 +15,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(calculateWithCenter) 
 	#endif
 
-	#ifndef GEODE_STATICS_computeAxes
-		#define GEODE_STATICS_computeAxes
-		GEODE_AS_STATIC_FUNCTION(computeAxes) 
-	#endif
-
 	#ifndef GEODE_STATICS_getBoundingRect
 		#define GEODE_STATICS_getBoundingRect
 		GEODE_AS_STATIC_FUNCTION(getBoundingRect) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
 	#ifndef GEODE_STATICS_orderCorners
@@ -90,14 +80,14 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6d880, Default, OBB2D, create, cocos2d::CCPoint, float, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6da50, Thiscall, OBB2D, calculateWithCenter, cocos2d::CCPoint, float, float, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(OBB2D, computeAxes, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6e240, Thiscall, OBB2D, getBoundingRect, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(OBB2D, init, cocos2d::CCPoint, float, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6dd70, Thiscall, OBB2D, orderCorners, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6d8b0, Default, OBB2D, create, cocos2d::CCPoint, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6da80, Thiscall, OBB2D, calculateWithCenter, cocos2d::CCPoint, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(OBB2D, computeAxes, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6e270, Thiscall, OBB2D, getBoundingRect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(OBB2D, init, cocos2d::CCPoint, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6dda0, Thiscall, OBB2D, orderCorners, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(OBB2D, overlaps, OBB2D*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6e100, Thiscall, OBB2D, overlaps1Way, OBB2D*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6e130, Thiscall, OBB2D, overlaps1Way, OBB2D*)
 		}
 	};
 }

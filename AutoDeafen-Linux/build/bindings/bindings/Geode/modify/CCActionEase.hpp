@@ -10,11 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
-	#ifndef GEODE_STATICS_initWithAction
-		#define GEODE_STATICS_initWithAction
-		GEODE_AS_STATIC_FUNCTION(initWithAction) 
-	#endif
-
 	#ifndef GEODE_STATICS_copyWithZone
 		#define GEODE_STATICS_copyWithZone
 		GEODE_AS_STATIC_FUNCTION(copyWithZone) 
@@ -45,15 +40,15 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getInnerAction) 
 	#endif
 
+	#ifndef GEODE_STATICS_initWithAction
+		#define GEODE_STATICS_initWithAction
+		GEODE_AS_STATIC_FUNCTION(initWithAction) 
+	#endif
+
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_initWithAction
-		#define GEODE_CONCEPT_CHECK_initWithAction
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithAction) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_copyWithZone
@@ -86,6 +81,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(getInnerAction) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_initWithAction
+		#define GEODE_CONCEPT_CHECK_initWithAction
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithAction) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::CCActionEase> : ModifyBase<ModifyDerive<Der, cocos2d::CCActionEase>> {
@@ -95,15 +95,15 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCActionInterval*>::func(&cocos2d::CCActionEase::create)), Default, cocos2d::CCActionEase, create, cocos2d::CCActionInterval*)
 			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCActionEase@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCActionEase)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCActionInterval*>::func(&cocos2d::CCActionEase::initWithAction)), Thiscall, cocos2d::CCActionEase, initWithAction, cocos2d::CCActionInterval*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCActionInterval*>::func(&cocos2d::CCActionEase::create)), Default, cocos2d::CCActionEase, create, cocos2d::CCActionInterval*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCZone*>::func(&cocos2d::CCActionEase::copyWithZone)), Thiscall, cocos2d::CCActionEase, copyWithZone, cocos2d::CCZone*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCNode*>::func(&cocos2d::CCActionEase::startWithTarget)), Thiscall, cocos2d::CCActionEase, startWithTarget, cocos2d::CCNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCActionEase::stop)), Thiscall, cocos2d::CCActionEase, stop, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCActionEase::update)), Thiscall, cocos2d::CCActionEase, update, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCActionEase::reverse)), Thiscall, cocos2d::CCActionEase, reverse, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCActionEase::getInnerAction)), Thiscall, cocos2d::CCActionEase, getInnerAction, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCActionInterval*>::func(&cocos2d::CCActionEase::initWithAction)), Thiscall, cocos2d::CCActionEase, initWithAction, cocos2d::CCActionInterval*)
 		}
 	};
 }

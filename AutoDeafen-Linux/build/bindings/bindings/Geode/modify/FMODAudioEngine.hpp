@@ -5,14 +5,19 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
+	#ifndef GEODE_STATICS_pitchForIdx
+		#define GEODE_STATICS_pitchForIdx
+		GEODE_AS_STATIC_FUNCTION(pitchForIdx) 
+	#endif
+
+	#ifndef GEODE_STATICS_reverbToString
+		#define GEODE_STATICS_reverbToString
+		GEODE_AS_STATIC_FUNCTION(reverbToString) 
+	#endif
+
 	#ifndef GEODE_STATICS_update
 		#define GEODE_STATICS_update
 		GEODE_AS_STATIC_FUNCTION(update) 
-	#endif
-
-	#ifndef GEODE_STATICS_activateQueuedMusic
-		#define GEODE_STATICS_activateQueuedMusic
-		GEODE_AS_STATIC_FUNCTION(activateQueuedMusic) 
 	#endif
 
 	#ifndef GEODE_STATICS_channelForChannelID
@@ -23,11 +28,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_channelIDForUniqueID
 		#define GEODE_STATICS_channelIDForUniqueID
 		GEODE_AS_STATIC_FUNCTION(channelIDForUniqueID) 
-	#endif
-
-	#ifndef GEODE_STATICS_channelLinkSound
-		#define GEODE_STATICS_channelLinkSound
-		GEODE_AS_STATIC_FUNCTION(channelLinkSound) 
 	#endif
 
 	#ifndef GEODE_STATICS_channelStopped
@@ -85,11 +85,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getMusicTimeMS) 
 	#endif
 
-	#ifndef GEODE_STATICS_getNextChannelID
-		#define GEODE_STATICS_getNextChannelID
-		GEODE_AS_STATIC_FUNCTION(getNextChannelID) 
-	#endif
-
 	#ifndef GEODE_STATICS_isMusicPlaying
 		#define GEODE_STATICS_isMusicPlaying
 		GEODE_AS_STATIC_FUNCTION(isMusicPlaying) 
@@ -118,11 +113,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_loadMusic
 		#define GEODE_STATICS_loadMusic
 		GEODE_AS_STATIC_FUNCTION(loadMusic) 
-	#endif
-
-	#ifndef GEODE_STATICS_pitchForIdx
-		#define GEODE_STATICS_pitchForIdx
-		GEODE_AS_STATIC_FUNCTION(pitchForIdx) 
 	#endif
 
 	#ifndef GEODE_STATICS_playEffect
@@ -178,11 +168,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_resumeAllMusic
 		#define GEODE_STATICS_resumeAllMusic
 		GEODE_AS_STATIC_FUNCTION(resumeAllMusic) 
-	#endif
-
-	#ifndef GEODE_STATICS_reverbToString
-		#define GEODE_STATICS_reverbToString
-		GEODE_AS_STATIC_FUNCTION(reverbToString) 
 	#endif
 
 	#ifndef GEODE_STATICS_saveAudioState
@@ -280,11 +265,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(unregisterChannel) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateBackgroundFade
-		#define GEODE_STATICS_updateBackgroundFade
-		GEODE_AS_STATIC_FUNCTION(updateBackgroundFade) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateChannel
 		#define GEODE_STATICS_updateChannel
 		GEODE_AS_STATIC_FUNCTION(updateChannel) 
@@ -293,11 +273,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateChannelTweens
 		#define GEODE_STATICS_updateChannelTweens
 		GEODE_AS_STATIC_FUNCTION(updateChannelTweens) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateMetering
-		#define GEODE_STATICS_updateMetering
-		GEODE_AS_STATIC_FUNCTION(updateMetering) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateQueuedEffects
@@ -324,6 +299,16 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_get
 		#define GEODE_CONCEPT_CHECK_get
 		GEODE_CONCEPT_FUNCTION_CHECK(get) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_pitchForIdx
+		#define GEODE_CONCEPT_CHECK_pitchForIdx
+		GEODE_CONCEPT_FUNCTION_CHECK(pitchForIdx) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_reverbToString
+		#define GEODE_CONCEPT_CHECK_reverbToString
+		GEODE_CONCEPT_FUNCTION_CHECK(reverbToString) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_sharedEngine
@@ -561,11 +546,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(pauseMusic) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_pitchForIdx
-		#define GEODE_CONCEPT_CHECK_pitchForIdx
-		GEODE_CONCEPT_FUNCTION_CHECK(pitchForIdx) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_playEffect
 		#define GEODE_CONCEPT_CHECK_playEffect
 		GEODE_CONCEPT_FUNCTION_CHECK(playEffect) 
@@ -659,11 +639,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_resumeMusic
 		#define GEODE_CONCEPT_CHECK_resumeMusic
 		GEODE_CONCEPT_FUNCTION_CHECK(resumeMusic) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_reverbToString
-		#define GEODE_CONCEPT_CHECK_reverbToString
-		GEODE_CONCEPT_FUNCTION_CHECK(reverbToString) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_saveAudioState
@@ -860,117 +835,117 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x530d0, Thiscall, FMODAudioEngine, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x53100, Thiscall, FMODAudioEngine, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, get, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x569e0, Default, FMODAudioEngine, pitchForIdx, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x54cf0, Default, FMODAudioEngine, reverbToString, FMODReverbPreset)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, sharedEngine, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x55390, Thiscall, FMODAudioEngine, update, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(FMODAudioEngine, activateQueuedMusic, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x58480, Thiscall, FMODAudioEngine, channelForChannelID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x553c0, Thiscall, FMODAudioEngine, update, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, activateQueuedMusic, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x584b0, Thiscall, FMODAudioEngine, channelForChannelID, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, channelForUniqueID, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x583c0, Thiscall, FMODAudioEngine, channelIDForUniqueID, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(FMODAudioEngine, channelLinkSound, int, FMODSound*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x580b0, Thiscall, FMODAudioEngine, channelStopped, FMOD::Channel*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x57e20, Thiscall, FMODAudioEngine, channelUnlinkSound, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x552e0, Thiscall, FMODAudioEngine, clearAllAudio, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x583f0, Thiscall, FMODAudioEngine, channelIDForUniqueID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, channelLinkSound, int, FMODSound*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x580e0, Thiscall, FMODAudioEngine, channelStopped, FMOD::Channel*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x57e50, Thiscall, FMODAudioEngine, channelUnlinkSound, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x55310, Thiscall, FMODAudioEngine, clearAllAudio, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, countActiveEffects, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, countActiveMusic, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5cb70, Thiscall, FMODAudioEngine, createStream, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5cba0, Thiscall, FMODAudioEngine, createStream, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, disableMetering, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, enableMetering, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, fadeInBackgroundMusic, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5c3c0, Thiscall, FMODAudioEngine, fadeInMusic, float, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5c640, Thiscall, FMODAudioEngine, fadeMusic, float, int, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5c500, Thiscall, FMODAudioEngine, fadeOutMusic, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5c3f0, Thiscall, FMODAudioEngine, fadeInMusic, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5c670, Thiscall, FMODAudioEngine, fadeMusic, float, int, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5c530, Thiscall, FMODAudioEngine, fadeOutMusic, float, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, getActiveMusic, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, getActiveMusicChannel, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, getBackgroundMusicVolume, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x56b20, Thiscall, FMODAudioEngine, getChannelGroup, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x56b50, Thiscall, FMODAudioEngine, getChannelGroup, int, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, getEffectsVolume, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5cdb0, Thiscall, FMODAudioEngine, getFMODStatus, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5cde0, Thiscall, FMODAudioEngine, getFMODStatus, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, getMeteringValue, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, getMusicChannelID, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5c330, Thiscall, FMODAudioEngine, getMusicLengthMS, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5c360, Thiscall, FMODAudioEngine, getMusicLengthMS, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, getMusicTime, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5c2d0, Thiscall, FMODAudioEngine, getMusicTimeMS, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(FMODAudioEngine, getNextChannelID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5c300, Thiscall, FMODAudioEngine, getMusicTimeMS, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, getNextChannelID, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, getTweenContainer, AudioTargetType)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, isAnyPersistentPlaying, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, isChannelStopping, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, isEffectLoaded, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59ee0, Thiscall, FMODAudioEngine, isMusicPlaying, gd::string, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59d00, Thiscall, FMODAudioEngine, isMusicPlaying, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5ad50, Thiscall, FMODAudioEngine, isPersistentMatchPlaying, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59d30, Thiscall, FMODAudioEngine, isMusicPlaying, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59f10, Thiscall, FMODAudioEngine, isMusicPlaying, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5ad80, Thiscall, FMODAudioEngine, isPersistentMatchPlaying, gd::string, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, isSoundReady, FMOD::Sound*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x599d0, Thiscall, FMODAudioEngine, lengthForSound, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5a010, Thiscall, FMODAudioEngine, loadAndPlayMusic, gd::string, unsigned int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x55f20, Thiscall, FMODAudioEngine, loadAudioState, FMODAudioState&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5a280, Thiscall, FMODAudioEngine, loadMusic, gd::string, float, float, float, bool, int, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59a00, Thiscall, FMODAudioEngine, lengthForSound, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5a040, Thiscall, FMODAudioEngine, loadAndPlayMusic, gd::string, unsigned int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x55f50, Thiscall, FMODAudioEngine, loadAudioState, FMODAudioState&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, loadMusic, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5a2b0, Thiscall, FMODAudioEngine, loadMusic, gd::string, float, float, float, bool, int, int, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, pauseAllAudio, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, pauseAllEffects, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, pauseAllMusic, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, pauseEffect, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, pauseMusic, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x569b0, Default, FMODAudioEngine, pitchForIdx, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x56e10, Thiscall, FMODAudioEngine, playEffect, gd::string, float, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x56d90, Thiscall, FMODAudioEngine, playEffect, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x56f00, Thiscall, FMODAudioEngine, playEffectAdvanced, gd::string, float, float, float, float, bool, bool, int, int, int, int, bool, int, bool, bool, int, int, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x56dc0, Thiscall, FMODAudioEngine, playEffect, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x56e40, Thiscall, FMODAudioEngine, playEffect, gd::string, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x56f30, Thiscall, FMODAudioEngine, playEffectAdvanced, gd::string, float, float, float, float, bool, bool, int, int, int, int, bool, int, bool, bool, int, int, float, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, playEffectAsync, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5a110, Thiscall, FMODAudioEngine, playMusic, gd::string, bool, float, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59260, Thiscall, FMODAudioEngine, preloadEffect, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59650, Thiscall, FMODAudioEngine, preloadEffectAsync, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5c790, Thiscall, FMODAudioEngine, preloadMusic, gd::string, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5a140, Thiscall, FMODAudioEngine, playMusic, gd::string, bool, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59290, Thiscall, FMODAudioEngine, preloadEffect, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59680, Thiscall, FMODAudioEngine, preloadEffectAsync, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5c7c0, Thiscall, FMODAudioEngine, preloadMusic, gd::string, bool, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, printResult, FMOD_RESULT)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5b070, Thiscall, FMODAudioEngine, queuedEffectFinishedLoading, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x57920, Thiscall, FMODAudioEngine, queuePlayEffect, gd::string, float, float, float, float, bool, bool, int, int, int, int, bool, int, bool, int, float, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5aa70, Thiscall, FMODAudioEngine, queueStartMusic, gd::string, float, float, float, bool, int, int, int, int, int, bool, int, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x57af0, Thiscall, FMODAudioEngine, registerChannel, FMOD::Channel*, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5b0a0, Thiscall, FMODAudioEngine, queuedEffectFinishedLoading, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x57950, Thiscall, FMODAudioEngine, queuePlayEffect, gd::string, float, float, float, float, bool, bool, int, int, int, int, bool, int, bool, int, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5aaa0, Thiscall, FMODAudioEngine, queueStartMusic, gd::string, float, float, float, bool, int, int, int, int, int, bool, int, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x57b20, Thiscall, FMODAudioEngine, registerChannel, FMOD::Channel*, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, releaseRemovedSounds, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, resumeAllAudio, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, resumeAllEffects, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59e80, Thiscall, FMODAudioEngine, resumeAllMusic, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59eb0, Thiscall, FMODAudioEngine, resumeAllMusic, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, resumeAudio, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, resumeEffect, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, resumeMusic, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x54cc0, Default, FMODAudioEngine, reverbToString, FMODReverbPreset)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x558f0, Thiscall, FMODAudioEngine, saveAudioState, FMODAudioState&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x55920, Thiscall, FMODAudioEngine, saveAudioState, FMODAudioState&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, setBackgroundMusicVolume, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59150, Thiscall, FMODAudioEngine, setChannelPitch, int, AudioTargetType, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x58db0, Thiscall, FMODAudioEngine, setChannelVolume, int, AudioTargetType, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x58f80, Thiscall, FMODAudioEngine, setChannelVolumeMod, int, AudioTargetType, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59180, Thiscall, FMODAudioEngine, setChannelPitch, int, AudioTargetType, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x58de0, Thiscall, FMODAudioEngine, setChannelVolume, int, AudioTargetType, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x58fb0, Thiscall, FMODAudioEngine, setChannelVolumeMod, int, AudioTargetType, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, setEffectsVolume, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5c190, Thiscall, FMODAudioEngine, setMusicTimeMS, unsigned int, bool, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x53bc0, Thiscall, FMODAudioEngine, setup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x540a0, Thiscall, FMODAudioEngine, setupAudioEngine, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x55280, Thiscall, FMODAudioEngine, start, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5a5f0, Thiscall, FMODAudioEngine, startMusic, int, int, int, int, bool, int, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5c1c0, Thiscall, FMODAudioEngine, setMusicTimeMS, unsigned int, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x53bf0, Thiscall, FMODAudioEngine, setup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x540d0, Thiscall, FMODAudioEngine, setupAudioEngine, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x552b0, Thiscall, FMODAudioEngine, start, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5a620, Thiscall, FMODAudioEngine, startMusic, int, int, int, int, bool, int, bool, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, stop, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x598b0, Thiscall, FMODAudioEngine, stopAllEffects, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59d70, Thiscall, FMODAudioEngine, stopAllMusic, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x58a20, Thiscall, FMODAudioEngine, stopAndGetFade, FMOD::Channel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5ca80, Thiscall, FMODAudioEngine, stopAndRemoveMusic, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x58810, Thiscall, FMODAudioEngine, stopChannel, FMOD::Channel*, bool, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x58540, Thiscall, FMODAudioEngine, stopChannel, int, AudioTargetType, bool, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x598e0, Thiscall, FMODAudioEngine, stopAllEffects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59da0, Thiscall, FMODAudioEngine, stopAllMusic, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x58a50, Thiscall, FMODAudioEngine, stopAndGetFade, FMOD::Channel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5cab0, Thiscall, FMODAudioEngine, stopAndRemoveMusic, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, stopChannel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x58840, Thiscall, FMODAudioEngine, stopChannel, FMOD::Channel*, bool, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x58570, Thiscall, FMODAudioEngine, stopChannel, int, AudioTargetType, bool, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, stopChannelTween, int, AudioTargetType, AudioModType)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, stopChannelTweens, int, AudioTargetType)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, stopMusic, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, stopMusicNotInSet, gd::unordered_set<int>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59510, Thiscall, FMODAudioEngine, storeEffect, FMOD::Sound*, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5bce0, Thiscall, FMODAudioEngine, swapMusicIndex, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59540, Thiscall, FMODAudioEngine, storeEffect, FMOD::Sound*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5bd10, Thiscall, FMODAudioEngine, swapMusicIndex, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, testFunction, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5b9a0, Thiscall, FMODAudioEngine, triggerQueuedMusic, FMODQueuedMusic)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59aa0, Thiscall, FMODAudioEngine, unloadAllEffects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5b9d0, Thiscall, FMODAudioEngine, triggerQueuedMusic, FMODQueuedMusic)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x59ad0, Thiscall, FMODAudioEngine, unloadAllEffects, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, unloadEffect, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x57c20, Thiscall, FMODAudioEngine, unregisterChannel, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(FMODAudioEngine, updateBackgroundFade, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x58b60, Thiscall, FMODAudioEngine, updateChannel, int, AudioTargetType, AudioModType, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x567c0, Thiscall, FMODAudioEngine, updateChannelTweens, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(FMODAudioEngine, updateMetering, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5aec0, Thiscall, FMODAudioEngine, updateQueuedEffects, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5b6a0, Thiscall, FMODAudioEngine, updateQueuedMusic, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x54400, Thiscall, FMODAudioEngine, updateReverb, FMODReverbPreset, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5b410, Thiscall, FMODAudioEngine, updateTemporaryEffects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x57c50, Thiscall, FMODAudioEngine, unregisterChannel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, updateBackgroundFade, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x58b90, Thiscall, FMODAudioEngine, updateChannel, int, AudioTargetType, AudioModType, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x567f0, Thiscall, FMODAudioEngine, updateChannelTweens, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, updateMetering, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5aef0, Thiscall, FMODAudioEngine, updateQueuedEffects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5b6d0, Thiscall, FMODAudioEngine, updateQueuedMusic, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x54430, Thiscall, FMODAudioEngine, updateReverb, FMODReverbPreset, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x5b440, Thiscall, FMODAudioEngine, updateTemporaryEffects, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FMODAudioEngine, waitUntilSoundReady, FMOD::Sound*)
 		}
 	};

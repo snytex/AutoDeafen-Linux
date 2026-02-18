@@ -24,58 +24,58 @@ public:
      SliderThumb();
 
     /**
-     * @note[short] MacOS (ARM): 0x2893f4
-     * @note[short] MacOS (Intel): 0x2ef2e0
+     * @note[short] MacOS (ARM): 0x294200
+     * @note[short] MacOS (Intel): 0x303620
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x2ee934
+     * @note[short] iOS: 0x2eec10
      * @note[short] Android
      */
-    static SliderThumb* create(cocos2d::CCNode* p0, cocos2d::SEL_MenuHandler p1, char const* p2, char const* p3);
+    static SliderThumb* create(cocos2d::CCNode* target, cocos2d::SEL_MenuHandler selector, char const* normalFrame, char const* selectedFrame);
 
     /**
-     * @note[short] MacOS (ARM): 0x2895e4
-     * @note[short] MacOS (Intel): 0x2ef4f0
-     * @note[short] Windows: 0x712b0
-     * @note[short] iOS: 0x2eea84
+     * @note[short] MacOS (ARM): 0x2943f0
+     * @note[short] MacOS (Intel): 0x303820
+     * @note[short] Windows: 0x712e0
+     * @note[short] iOS: 0x2eed60
      * @note[short] Android
      */
     float getValue();
 
     /**
-     * @note[short] MacOS (ARM): 0x2894ec
-     * @note[short] MacOS (Intel): 0x2ef3d0
+     * @note[short] MacOS (ARM): 0x2942f8
+     * @note[short] MacOS (Intel): 0x303710
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(cocos2d::CCNode* p0, cocos2d::SEL_MenuHandler p1, char const* p2, char const* p3);
+    bool init(cocos2d::CCNode* target, cocos2d::SEL_MenuHandler selector, char const* normalFrame, char const* selectedFrame);
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x294584
+     * @note[short] MacOS (Intel): 0x3039f0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x2eeef4
+     * @note[short] Android
      */
     void setMaxOffset(float offset);
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x294324
+     * @note[short] MacOS (Intel): 0x303750
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x2eecf4
+     * @note[short] Android
      */
     void setRotated(bool rotated);
 
     /**
-     * @note[short] MacOS (ARM): 0x289668
-     * @note[short] MacOS (Intel): 0x2ef590
-     * @note[short] Windows: 0x71340
-     * @note[short] iOS: 0x2eeb08
+     * @note[short] MacOS (ARM): 0x294474
+     * @note[short] MacOS (Intel): 0x3038b0
+     * @note[short] Windows: 0x71370
+     * @note[short] iOS: 0x2eede4
      * @note[short] Android
      */
-    void setValue(float p0);
+    void setValue(float value);
     float m_length;
     bool m_vertical;
 };

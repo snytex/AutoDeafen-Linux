@@ -25,21 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(backupAccount) 
 	#endif
 
-	#ifndef GEODE_STATICS_dataLoaded
-		#define GEODE_STATICS_dataLoaded
-		GEODE_AS_STATIC_FUNCTION(dataLoaded) 
-	#endif
-
-	#ifndef GEODE_STATICS_encodeDataTo
-		#define GEODE_STATICS_encodeDataTo
-		GEODE_AS_STATIC_FUNCTION(encodeDataTo) 
-	#endif
-
-	#ifndef GEODE_STATICS_firstSetup
-		#define GEODE_STATICS_firstSetup
-		GEODE_AS_STATIC_FUNCTION(firstSetup) 
-	#endif
-
 	#ifndef GEODE_STATICS_getAccountBackupURL
 		#define GEODE_STATICS_getAccountBackupURL
 		GEODE_AS_STATIC_FUNCTION(getAccountBackupURL) 
@@ -50,11 +35,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getAccountSyncURL) 
 	#endif
 
-	#ifndef GEODE_STATICS_getDLObject
-		#define GEODE_STATICS_getDLObject
-		GEODE_AS_STATIC_FUNCTION(getDLObject) 
-	#endif
-
 	#ifndef GEODE_STATICS_getShaPassword
 		#define GEODE_STATICS_getShaPassword
 		GEODE_AS_STATIC_FUNCTION(getShaPassword) 
@@ -63,21 +43,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_handleIt
 		#define GEODE_STATICS_handleIt
 		GEODE_AS_STATIC_FUNCTION(handleIt) 
-	#endif
-
-	#ifndef GEODE_STATICS_handleItDelayed
-		#define GEODE_STATICS_handleItDelayed
-		GEODE_AS_STATIC_FUNCTION(handleItDelayed) 
-	#endif
-
-	#ifndef GEODE_STATICS_handleItND
-		#define GEODE_STATICS_handleItND
-		GEODE_AS_STATIC_FUNCTION(handleItND) 
-	#endif
-
-	#ifndef GEODE_STATICS_isDLActive
-		#define GEODE_STATICS_isDLActive
-		GEODE_AS_STATIC_FUNCTION(isDLActive) 
 	#endif
 
 	#ifndef GEODE_STATICS_linkToAccount
@@ -140,19 +105,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(registerAccount) 
 	#endif
 
-	#ifndef GEODE_STATICS_removeDLFromActive
-		#define GEODE_STATICS_removeDLFromActive
-		GEODE_AS_STATIC_FUNCTION(removeDLFromActive) 
-	#endif
-
 	#ifndef GEODE_STATICS_syncAccount
 		#define GEODE_STATICS_syncAccount
 		GEODE_AS_STATIC_FUNCTION(syncAccount) 
-	#endif
-
-	#ifndef GEODE_STATICS_unlinkFromAccount
-		#define GEODE_STATICS_unlinkFromAccount
-		GEODE_AS_STATIC_FUNCTION(unlinkFromAccount) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateAccountSettings
@@ -331,38 +286,38 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJAccountManager, get, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1faf50, Default, GJAccountManager, sharedState, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fb510, Thiscall, GJAccountManager, init, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, addDLToActive, char const*, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, addDLToActive, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fc8f0, Thiscall, GJAccountManager, backupAccount, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, dataLoaded, DS_Dictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, encodeDataTo, DS_Dictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, firstSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fc2d0, Thiscall, GJAccountManager, getAccountBackupURL, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fd230, Thiscall, GJAccountManager, getAccountSyncURL, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, getDLObject, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1feee0, Thiscall, GJAccountManager, getShaPassword, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fb2c0, Thiscall, GJAccountManager, handleIt, bool, gd::string, gd::string, GJHttpType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, handleItDelayed, bool, gd::string, gd::string, GJHttpType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, handleItND, cocos2d::CCNode*, void*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, isDLActive, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, linkToAccount, gd::string, gd::string, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, loginAccount, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fce20, Thiscall, GJAccountManager, onBackupAccountCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fc620, Thiscall, GJAccountManager, onGetAccountBackupURLCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, onGetAccountSyncURLCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fbee0, Thiscall, GJAccountManager, onLoginAccountCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, onProcessHttpRequestCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fb8f0, Thiscall, GJAccountManager, onRegisterAccountCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fdab0, Thiscall, GJAccountManager, onSyncAccountCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fed80, Thiscall, GJAccountManager, onUpdateAccountSettingsCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fb070, Thiscall, GJAccountManager, ProcessHttpRequest, gd::string, gd::string, gd::string, GJHttpType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, registerAccount, gd::string, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, removeDLFromActive, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, syncAccount, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, unlinkFromAccount, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJAccountManager, updateAccountSettings, int, int, int, gd::string, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fffd0, Default, GJAccountManager, sharedState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x200590, Thiscall, GJAccountManager, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2005d0, Thiscall, GJAccountManager, addDLToActive, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJAccountManager, addDLToActive, char const*, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x201970, Thiscall, GJAccountManager, backupAccount, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJAccountManager, dataLoaded, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJAccountManager, encodeDataTo, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJAccountManager, firstSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x201350, Thiscall, GJAccountManager, getAccountBackupURL, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2022b0, Thiscall, GJAccountManager, getAccountSyncURL, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJAccountManager, getDLObject, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x204060, Thiscall, GJAccountManager, getShaPassword, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x200340, Thiscall, GJAccountManager, handleIt, bool, gd::string, gd::string, GJHttpType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJAccountManager, handleItDelayed, bool, gd::string, gd::string, GJHttpType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJAccountManager, handleItND, cocos2d::CCNode*, void*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJAccountManager, isDLActive, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2038a0, Thiscall, GJAccountManager, linkToAccount, gd::string, gd::string, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x200b00, Thiscall, GJAccountManager, loginAccount, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x201ea0, Thiscall, GJAccountManager, onBackupAccountCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2016a0, Thiscall, GJAccountManager, onGetAccountBackupURLCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2025f0, Thiscall, GJAccountManager, onGetAccountSyncURLCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x200f60, Thiscall, GJAccountManager, onLoginAccountCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x200240, Thiscall, GJAccountManager, onProcessHttpRequestCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x200970, Thiscall, GJAccountManager, onRegisterAccountCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x202b30, Thiscall, GJAccountManager, onSyncAccountCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x203f00, Thiscall, GJAccountManager, onUpdateAccountSettingsCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2000f0, Thiscall, GJAccountManager, ProcessHttpRequest, gd::string, gd::string, gd::string, GJHttpType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2006a0, Thiscall, GJAccountManager, registerAccount, gd::string, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJAccountManager, removeDLFromActive, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2028c0, Thiscall, GJAccountManager, syncAccount, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJAccountManager, unlinkFromAccount, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x203ab0, Thiscall, GJAccountManager, updateAccountSettings, int, int, int, gd::string, gd::string, gd::string, gd::string, gd::string, gd::string, gd::string)
 		}
 	};
 }

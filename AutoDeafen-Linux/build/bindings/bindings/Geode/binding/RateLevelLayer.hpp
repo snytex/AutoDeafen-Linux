@@ -25,61 +25,64 @@ public:
      RateLevelLayer();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x4b61f8
+     * @note[short] MacOS (Intel): 0x567830
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x5e44c
+     * @note[short] Android: Rebinded
      */
      ~RateLevelLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x4a8394
-     * @note[short] MacOS (Intel): 0x551030
+     * @note[short] MacOS (ARM): 0x4b641c
+     * @note[short] MacOS (Intel): 0x567b60
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x621ac
+     * @note[short] iOS: 0x5e4f0
      * @note[short] Android
      */
     static RateLevelLayer* create(int levelID);
 
     /**
-     * @note[short] MacOS (ARM): 0x4a8d14
-     * @note[short] MacOS (Intel): 0x5519b0
-     * @note[short] Windows: 0x3b2ab0
-     * @note[short] iOS: 0x627b0
+     * @note[short] MacOS (ARM): 0x4b6d9c
+     * @note[short] MacOS (Intel): 0x5684e0
+     * @note[short] Windows: 0x3c9e70
+     * @note[short] iOS: 0x5eaf4
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x4a8498
-     * @note[short] MacOS (Intel): 0x551170
-     * @note[short] Windows: 0x3b23c0
-     * @note[short] iOS: 0x62268
+     * @note[short] MacOS (ARM): 0x4b6520
+     * @note[short] MacOS (Intel): 0x567ca0
+     * @note[short] Windows: 0x3c9780
+     * @note[short] iOS: 0x5e5ac
      * @note[short] Android
      */
-    bool init(int p0);
+    bool init(int levelID);
 
     /**
-     * @note[short] iOS: 0x626ec
+     * @note[short] MacOS (ARM): 0x4b6cd8
+     * @note[short] MacOS (Intel): 0x568440
+     * @note[short] Windows: 0x3c9e30
+     * @note[short] iOS: 0x5ea30
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4a8cac
-     * @note[short] MacOS (Intel): 0x551960
-     * @note[short] Windows: 0x3b2a20
-     * @note[short] iOS: 0x62748
+     * @note[short] MacOS (ARM): 0x4b6d34
+     * @note[short] MacOS (Intel): 0x568490
+     * @note[short] Windows: 0x3c9de0
+     * @note[short] iOS: 0x5ea8c
      * @note[short] Android
      */
     void onRate(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4a8b34
-     * @note[short] MacOS (Intel): 0x551830
-     * @note[short] Windows: 0x3b28d0
-     * @note[short] iOS: 0x625f8
+     * @note[short] MacOS (ARM): 0x4b6bbc
+     * @note[short] MacOS (Intel): 0x568360
+     * @note[short] Windows: 0x3c9c90
+     * @note[short] iOS: 0x5e93c
      * @note[short] Android
      */
     void selectRating(cocos2d::CCObject* sender);

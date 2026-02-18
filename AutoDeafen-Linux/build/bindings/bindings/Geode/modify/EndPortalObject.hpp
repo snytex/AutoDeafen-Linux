@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -28,16 +23,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getSpawnPos
 		#define GEODE_STATICS_getSpawnPos
 		GEODE_AS_STATIC_FUNCTION(getSpawnPos) 
-	#endif
-
-	#ifndef GEODE_STATICS_triggerObject
-		#define GEODE_STATICS_triggerObject
-		GEODE_AS_STATIC_FUNCTION(triggerObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateColors
-		#define GEODE_STATICS_updateColors
-		GEODE_AS_STATIC_FUNCTION(updateColors) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateEndPos
@@ -95,14 +80,14 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EndPortalObject, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136110, Thiscall, EndPortalObject, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136620, Thiscall, EndPortalObject, setPosition, cocos2d::CCPoint const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136780, Thiscall, EndPortalObject, setVisible, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136560, Thiscall, EndPortalObject, getSpawnPos, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EndPortalObject, triggerObject, GJBaseGameLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EndPortalObject, updateColors, cocos2d::ccColor3B)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1367d0, Thiscall, EndPortalObject, updateEndPos, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EndPortalObject, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x137d50, Thiscall, EndPortalObject, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x138260, Thiscall, EndPortalObject, setPosition, cocos2d::CCPoint const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1383c0, Thiscall, EndPortalObject, setVisible, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1381a0, Thiscall, EndPortalObject, getSpawnPos, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EndPortalObject, triggerObject, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EndPortalObject, updateColors, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x138410, Thiscall, EndPortalObject, updateEndPos, bool)
 		}
 	};
 }

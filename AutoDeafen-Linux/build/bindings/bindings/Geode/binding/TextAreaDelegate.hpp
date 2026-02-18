@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void fadeInTextFinished(TextArea* p0);
+    virtual void fadeInTextFinished(TextArea* textArea);
 };

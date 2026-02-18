@@ -16,60 +16,73 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(GJSpecialColorSelect, FLAlertLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x53a934
-     * @note[short] MacOS (Intel): 0x60dd40
-     * @note[short] Windows: 0x2b0670
+     * @note[short] MacOS (ARM): 0x549474
+     * @note[short] MacOS (Intel): 0x625f00
+     * @note[short] Windows: 0x2b7d30
+     * @note[short] iOS: 0x1aecc8
      * @note[short] Android
      */
-    static GJSpecialColorSelect* create(int p0, GJSpecialColorSelectDelegate* p1, ColorSelectType p2);
+    static GJSpecialColorSelect* create(int id, GJSpecialColorSelectDelegate* delegate, ColorSelectType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x53c684
-     * @note[short] MacOS (Intel): 0x610110
-     * @note[short] Windows: 0x2b13c0
-     * @note[short] iOS: 0x1b37b0
+     * @note[short] MacOS (ARM): 0x549fc4
+     * @note[short] MacOS (Intel): 0x626aa0
+     * @note[short] Windows: 0x2b8a80
+     * @note[short] iOS: 0x1af550
      * @note[short] Android
      */
-    static const char* textForColorIdx(int p0);
+    static const char* textForColorIdx(int index);
 
     /**
-     * @note[short] MacOS (ARM): 0x53c8cc
-     * @note[short] MacOS (Intel): 0x610360
-     * @note[short] Windows: 0x2b1370
-     * @note[short] iOS: 0x1b38d8
+     * @note[short] MacOS (ARM): 0x54a20c
+     * @note[short] MacOS (Intel): 0x626cf0
+     * @note[short] Windows: 0x2b8a30
+     * @note[short] iOS: 0x1af678
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
+     * @note[short] MacOS (ARM): 0x54a0c8
+     * @note[short] MacOS (Intel): 0x626bb0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    ButtonSprite* getButtonByTag(int p0);
+    ButtonSprite* getButtonByTag(int tag);
 
     /**
+     * @note[short] MacOS (ARM): 0x54a158
+     * @note[short] MacOS (Intel): 0x626c30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1af5c4
      * @note[short] Android
      */
-    void highlightSelected(ButtonSprite* p0);
+    void highlightSelected(ButtonSprite* sprite);
 
     /**
-     * @note[short] MacOS (ARM): 0x53aa54
-     * @note[short] MacOS (Intel): 0x60deb0
-     * @note[short] Windows: 0x2b0780
-     * @note[short] iOS: 0x1b2268
+     * @note[short] MacOS (ARM): 0x549594
+     * @note[short] MacOS (Intel): 0x626070
+     * @note[short] Windows: 0x2b7e40
+     * @note[short] iOS: 0x1aed9c
      * @note[short] Android
      */
-    bool init(int p0, GJSpecialColorSelectDelegate* p1, ColorSelectType p2);
+    bool init(int id, GJSpecialColorSelectDelegate* delegate, ColorSelectType type);
 
     /**
-     * @note[short] Windows: 0x2b1320
+     * @note[short] MacOS (ARM): 0x549f68
+     * @note[short] MacOS (Intel): 0x626a50
+     * @note[short] Windows: 0x2b89e0
+     * @note[short] iOS: 0x1af4f4
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x53c6ac
-     * @note[short] MacOS (Intel): 0x610140
-     * @note[short] Windows: 0x2b1240
+     * @note[short] MacOS (ARM): 0x549fec
+     * @note[short] MacOS (Intel): 0x626ad0
+     * @note[short] Windows: 0x2b8900
+     * @note[short] iOS: 0x1af578
      * @note[short] Android
      */
     void onSelectColor(cocos2d::CCObject* sender);

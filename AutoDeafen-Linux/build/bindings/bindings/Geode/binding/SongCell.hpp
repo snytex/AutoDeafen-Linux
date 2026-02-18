@@ -16,50 +16,57 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SongCell, TableViewCell)
 
     /**
+     * @note[short] MacOS (ARM): 0x1f9fb0
+     * @note[short] MacOS (Intel): 0x253b60
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-     SongCell(char const* p0, float p1, float p2);
+     SongCell(char const* identifier, float width, float height);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f13c8
-     * @note[short] MacOS (Intel): 0x241b80
-     * @note[short] Windows: 0x3c7f0
-     * @note[short] iOS: 0x112de8
+     * @note[short] MacOS (ARM): 0x1f9ff4
+     * @note[short] MacOS (Intel): 0x253bd0
+     * @note[short] Windows: 0x3c830
+     * @note[short] iOS: 0x110188
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x1f13f8
-     * @note[short] MacOS (Intel): 0x241bc0
-     * @note[short] Windows: 0xad710
-     * @note[short] iOS: 0x112e18
+     * @note[short] MacOS (ARM): 0x1fa024
+     * @note[short] MacOS (Intel): 0x253c10
+     * @note[short] Windows: 0xade20
+     * @note[short] iOS: 0x1101b8
      * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): 0x1e5430
-     * @note[short] MacOS (Intel): 0x235330
-     * @note[short] Windows: 0xb3990
-     * @note[short] iOS: 0x1081fc
+     * @note[short] MacOS (ARM): 0x1edc6c
+     * @note[short] MacOS (Intel): 0x246da0
+     * @note[short] Windows: 0xb4110
+     * @note[short] iOS: 0x1051e0
      * @note[short] Android
      */
-    void loadFromObject(SongObject* p0);
+    void loadFromObject(SongObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f13d4
-     * @note[short] MacOS (Intel): 0x241ba0
-     * @note[short] Windows: 0xb3da0
-     * @note[short] iOS: 0x112df4
+     * @note[short] MacOS (ARM): 0x1fa000
+     * @note[short] MacOS (Intel): 0x253bf0
+     * @note[short] Windows: 0xb4520
+     * @note[short] iOS: 0x110194
      * @note[short] Android
      */
     void onClick(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] iOS: 0x10862c
+     * @note[short] MacOS (ARM): 0x1ee0b0
+     * @note[short] MacOS (Intel): 0x247180
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x105610
      * @note[short] Android
      */
-    void updateBGColor(int p0);
+    void updateBGColor(int index);
     SongObject* m_songObject;
 };

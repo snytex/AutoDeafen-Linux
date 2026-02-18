@@ -25,11 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(parsePackColors) 
 	#endif
 
-	#ifndef GEODE_STATICS_parsePackLevels
-		#define GEODE_STATICS_parsePackLevels
-		GEODE_AS_STATIC_FUNCTION(parsePackLevels) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -75,13 +70,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16d210, Default, GJMapPack, create, cocos2d::CCDictionary*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMapPack, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16dd70, Thiscall, GJMapPack, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16e080, Thiscall, GJMapPack, completedMaps, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x170120, Default, GJMapPack, create, cocos2d::CCDictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x170c80, Thiscall, GJMapPack, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x170f90, Thiscall, GJMapPack, completedMaps, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMapPack, hasCompletedMapPack, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16ddd0, Thiscall, GJMapPack, parsePackColors, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMapPack, parsePackLevels, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x170ce0, Thiscall, GJMapPack, parsePackColors, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMapPack, parsePackLevels, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMapPack, totalMaps, )
 		}
 	};

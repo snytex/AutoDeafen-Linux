@@ -135,18 +135,18 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43c850, Default, SetupShakePopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43d6d0, Thiscall, SetupShakePopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43e120, Thiscall, SetupShakePopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43dd60, Thiscall, SetupShakePopup, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43c980, Thiscall, SetupShakePopup, init, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43d8a0, Thiscall, SetupShakePopup, sliderChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26b120, Thiscall, SetupShakePopup, updateDuration, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26a500, Thiscall, SetupShakePopup, updateDurLabel, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43dce0, Thiscall, SetupShakePopup, updateInterval, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43dc10, Thiscall, SetupShakePopup, updateIntervalLabel, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43db90, Thiscall, SetupShakePopup, updateShake, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43dac0, Thiscall, SetupShakePopup, updateShakeLabel, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x454bf0, Default, SetupShakePopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x455a70, Thiscall, SetupShakePopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4564c0, Thiscall, SetupShakePopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x456100, Thiscall, SetupShakePopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x454d20, Thiscall, SetupShakePopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x455c40, Thiscall, SetupShakePopup, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x272a00, Thiscall, SetupShakePopup, updateDuration, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x271de0, Thiscall, SetupShakePopup, updateDurLabel, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x456080, Thiscall, SetupShakePopup, updateInterval, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x455fb0, Thiscall, SetupShakePopup, updateIntervalLabel, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x455f30, Thiscall, SetupShakePopup, updateShake, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x455e60, Thiscall, SetupShakePopup, updateShakeLabel, bool)
 		}
 	};
 }

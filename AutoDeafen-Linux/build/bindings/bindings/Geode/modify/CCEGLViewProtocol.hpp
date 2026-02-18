@@ -5,21 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_getViewPortRect
-		#define GEODE_STATICS_getViewPortRect
-		GEODE_AS_STATIC_FUNCTION(getViewPortRect) 
-	#endif
-
-	#ifndef GEODE_STATICS_getScaleX
-		#define GEODE_STATICS_getScaleX
-		GEODE_AS_STATIC_FUNCTION(getScaleX) 
-	#endif
-
-	#ifndef GEODE_STATICS_getScaleY
-		#define GEODE_STATICS_getScaleY
-		GEODE_AS_STATIC_FUNCTION(getScaleY) 
-	#endif
-
 	#ifndef GEODE_STATICS_getFrameSize
 		#define GEODE_STATICS_getFrameSize
 		GEODE_AS_STATIC_FUNCTION(getFrameSize) 
@@ -105,22 +90,42 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(handleTouchesCancel) 
 	#endif
 
+	#ifndef GEODE_STATICS_getPlatformTimestamp
+		#define GEODE_STATICS_getPlatformTimestamp
+		GEODE_AS_STATIC_FUNCTION(getPlatformTimestamp) 
+	#endif
+
+	#ifndef GEODE_STATICS_getScaleX
+		#define GEODE_STATICS_getScaleX
+		GEODE_AS_STATIC_FUNCTION(getScaleX) 
+	#endif
+
+	#ifndef GEODE_STATICS_getScaleY
+		#define GEODE_STATICS_getScaleY
+		GEODE_AS_STATIC_FUNCTION(getScaleY) 
+	#endif
+
+	#ifndef GEODE_STATICS_getSetOfTouchesEndOrCancel
+		#define GEODE_STATICS_getSetOfTouchesEndOrCancel
+		GEODE_AS_STATIC_FUNCTION(getSetOfTouchesEndOrCancel) 
+	#endif
+
+	#ifndef GEODE_STATICS_getViewName
+		#define GEODE_STATICS_getViewName
+		GEODE_AS_STATIC_FUNCTION(getViewName) 
+	#endif
+
+	#ifndef GEODE_STATICS_getViewPortRect
+		#define GEODE_STATICS_getViewPortRect
+		GEODE_AS_STATIC_FUNCTION(getViewPortRect) 
+	#endif
+
+	#ifndef GEODE_STATICS_updateDesignResolutionSize
+		#define GEODE_STATICS_updateDesignResolutionSize
+		GEODE_AS_STATIC_FUNCTION(updateDesignResolutionSize) 
+	#endif
+
     
-	#ifndef GEODE_CONCEPT_CHECK_getViewPortRect
-		#define GEODE_CONCEPT_CHECK_getViewPortRect
-		GEODE_CONCEPT_FUNCTION_CHECK(getViewPortRect) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getScaleX
-		#define GEODE_CONCEPT_CHECK_getScaleX
-		GEODE_CONCEPT_FUNCTION_CHECK(getScaleX) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getScaleY
-		#define GEODE_CONCEPT_CHECK_getScaleY
-		GEODE_CONCEPT_FUNCTION_CHECK(getScaleY) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_getFrameSize
 		#define GEODE_CONCEPT_CHECK_getFrameSize
 		GEODE_CONCEPT_FUNCTION_CHECK(getFrameSize) 
@@ -206,6 +211,41 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(handleTouchesCancel) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_getPlatformTimestamp
+		#define GEODE_CONCEPT_CHECK_getPlatformTimestamp
+		GEODE_CONCEPT_FUNCTION_CHECK(getPlatformTimestamp) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getScaleX
+		#define GEODE_CONCEPT_CHECK_getScaleX
+		GEODE_CONCEPT_FUNCTION_CHECK(getScaleX) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getScaleY
+		#define GEODE_CONCEPT_CHECK_getScaleY
+		GEODE_CONCEPT_FUNCTION_CHECK(getScaleY) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getSetOfTouchesEndOrCancel
+		#define GEODE_CONCEPT_CHECK_getSetOfTouchesEndOrCancel
+		GEODE_CONCEPT_FUNCTION_CHECK(getSetOfTouchesEndOrCancel) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getViewName
+		#define GEODE_CONCEPT_CHECK_getViewName
+		GEODE_CONCEPT_FUNCTION_CHECK(getViewName) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getViewPortRect
+		#define GEODE_CONCEPT_CHECK_getViewPortRect
+		GEODE_CONCEPT_FUNCTION_CHECK(getViewPortRect) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_updateDesignResolutionSize
+		#define GEODE_CONCEPT_CHECK_updateDesignResolutionSize
+		GEODE_CONCEPT_FUNCTION_CHECK(updateDesignResolutionSize) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::CCEGLViewProtocol> : ModifyBase<ModifyDerive<Der, cocos2d::CCEGLViewProtocol>> {
@@ -217,9 +257,6 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCEGLViewProtocol@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCEGLViewProtocol, )
 			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCEGLViewProtocol@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCEGLViewProtocol)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCEGLViewProtocol::getViewPortRect)), Thiscall, cocos2d::CCEGLViewProtocol, getViewPortRect, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCEGLViewProtocol::getScaleX)), Thiscall, cocos2d::CCEGLViewProtocol, getScaleX, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCEGLViewProtocol::getScaleY)), Thiscall, cocos2d::CCEGLViewProtocol, getScaleY, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCEGLViewProtocol::getFrameSize)), Thiscall, cocos2d::CCEGLViewProtocol, getFrameSize, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float, float>::func(&cocos2d::CCEGLViewProtocol::setFrameSize)), Thiscall, cocos2d::CCEGLViewProtocol, setFrameSize, float, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCEGLViewProtocol::getVisibleSize)), Thiscall, cocos2d::CCEGLViewProtocol, getVisibleSize, )
@@ -233,10 +270,17 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCEGLViewProtocol::getScissorRect)), Thiscall, cocos2d::CCEGLViewProtocol, getScissorRect, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<char const*>::func(&cocos2d::CCEGLViewProtocol::setViewName)), Thiscall, cocos2d::CCEGLViewProtocol, setViewName, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCEGLViewProtocol::pollInputEvents)), Thiscall, cocos2d::CCEGLViewProtocol, pollInputEvents, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<int, int*, float*, float*>::func(&cocos2d::CCEGLViewProtocol::handleTouchesBegin)), Thiscall, cocos2d::CCEGLViewProtocol, handleTouchesBegin, int, int*, float*, float*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<int, int*, float*, float*>::func(&cocos2d::CCEGLViewProtocol::handleTouchesMove)), Thiscall, cocos2d::CCEGLViewProtocol, handleTouchesMove, int, int*, float*, float*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<int, int*, float*, float*>::func(&cocos2d::CCEGLViewProtocol::handleTouchesEnd)), Thiscall, cocos2d::CCEGLViewProtocol, handleTouchesEnd, int, int*, float*, float*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<int, int*, float*, float*>::func(&cocos2d::CCEGLViewProtocol::handleTouchesCancel)), Thiscall, cocos2d::CCEGLViewProtocol, handleTouchesCancel, int, int*, float*, float*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<int, int*, float*, float*, double>::func(&cocos2d::CCEGLViewProtocol::handleTouchesBegin)), Thiscall, cocos2d::CCEGLViewProtocol, handleTouchesBegin, int, int*, float*, float*, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<int, int*, float*, float*, double>::func(&cocos2d::CCEGLViewProtocol::handleTouchesMove)), Thiscall, cocos2d::CCEGLViewProtocol, handleTouchesMove, int, int*, float*, float*, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<int, int*, float*, float*, double>::func(&cocos2d::CCEGLViewProtocol::handleTouchesEnd)), Thiscall, cocos2d::CCEGLViewProtocol, handleTouchesEnd, int, int*, float*, float*, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<int, int*, float*, float*, double>::func(&cocos2d::CCEGLViewProtocol::handleTouchesCancel)), Thiscall, cocos2d::CCEGLViewProtocol, handleTouchesCancel, int, int*, float*, float*, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCEGLViewProtocol::getPlatformTimestamp)), Thiscall, cocos2d::CCEGLViewProtocol, getPlatformTimestamp, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCEGLViewProtocol::getScaleX)), Thiscall, cocos2d::CCEGLViewProtocol, getScaleX, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCEGLViewProtocol::getScaleY)), Thiscall, cocos2d::CCEGLViewProtocol, getScaleY, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCSet&, int, int*, float*, float*>::func(&cocos2d::CCEGLViewProtocol::getSetOfTouchesEndOrCancel)), Thiscall, cocos2d::CCEGLViewProtocol, getSetOfTouchesEndOrCancel, cocos2d::CCSet&, int, int*, float*, float*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCEGLViewProtocol::getViewName)), Thiscall, cocos2d::CCEGLViewProtocol, getViewName, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCEGLViewProtocol::getViewPortRect)), Thiscall, cocos2d::CCEGLViewProtocol, getViewPortRect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCEGLViewProtocol::updateDesignResolutionSize)), Thiscall, cocos2d::CCEGLViewProtocol, updateDesignResolutionSize, )
 		}
 	};
 }

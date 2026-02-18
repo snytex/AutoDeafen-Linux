@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_customObjectSetup
 		#define GEODE_STATICS_customObjectSetup
 		GEODE_AS_STATIC_FUNCTION(customObjectSetup) 
@@ -18,11 +13,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getSaveString
 		#define GEODE_STATICS_getSaveString
 		GEODE_AS_STATIC_FUNCTION(getSaveString) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
     
@@ -55,10 +45,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EnhancedTriggerObject, create, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x499340, Thiscall, EnhancedTriggerObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x499070, Thiscall, EnhancedTriggerObject, getSaveString, GJBaseGameLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EnhancedTriggerObject, init, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EnhancedTriggerObject, create, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b1e90, Thiscall, EnhancedTriggerObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b1bc0, Thiscall, EnhancedTriggerObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EnhancedTriggerObject, init, char const*)
 		}
 	};
 }

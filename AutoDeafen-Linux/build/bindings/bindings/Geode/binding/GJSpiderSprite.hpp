@@ -16,20 +16,20 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(GJSpiderSprite, GJRobotSprite)
 
     /**
-     * @note[short] MacOS (ARM): 0x4fa09c
-     * @note[short] MacOS (Intel): 0x5c50e0
-     * @note[short] Windows: 0x2a0420
-     * @note[short] iOS: 0x23ff78
+     * @note[short] MacOS (ARM): 0x50869c
+     * @note[short] MacOS (Intel): 0x5dd320
+     * @note[short] Windows: 0x2a7ae0
+     * @note[short] iOS: 0x2401f0
      * @note[short] Android
      */
-    static GJSpiderSprite* create(int p0);
+    static GJSpiderSprite* create(int frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x4fa1d0
-     * @note[short] MacOS (Intel): 0x5c5230
+     * @note[short] MacOS (ARM): 0x5087d8
+     * @note[short] MacOS (Intel): 0x5dd470
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x240040
+     * @note[short] iOS: 0x2402b8
      * @note[short] Android
      */
-    bool init(int p0);
+    bool init(int frame);
 };

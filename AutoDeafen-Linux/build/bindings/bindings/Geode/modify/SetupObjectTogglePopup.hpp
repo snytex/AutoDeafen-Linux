@@ -55,10 +55,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x411b70, Default, SetupObjectTogglePopup, create, EffectGameObject*, cocos2d::CCArray*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40c730, Thiscall, SetupObjectTogglePopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4125e0, Thiscall, SetupObjectTogglePopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x411c90, Thiscall, SetupObjectTogglePopup, init, EffectGameObject*, cocos2d::CCArray*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4298f0, Default, SetupObjectTogglePopup, create, EffectGameObject*, cocos2d::CCArray*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4244b0, Thiscall, SetupObjectTogglePopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42a360, Thiscall, SetupObjectTogglePopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x429a10, Thiscall, SetupObjectTogglePopup, init, EffectGameObject*, cocos2d::CCArray*, bool)
 		}
 	};
 }

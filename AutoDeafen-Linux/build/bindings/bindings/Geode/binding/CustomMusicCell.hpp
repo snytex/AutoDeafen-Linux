@@ -16,21 +16,29 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(CustomMusicCell, CustomSongCell)
 
     /**
+     * @note[short] MacOS (ARM): 0x1fa5a8
+     * @note[short] MacOS (Intel): 0x254450
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-     CustomMusicCell(char const* p0, float p1, float p2);
+     CustomMusicCell(char const* identifier, float width, float height);
 
     /**
-     * @note[short] MacOS (ARM): 0x1e2548
-     * @note[short] MacOS (Intel): 0x2325a0
-     * @note[short] Windows: 0xb46f0
-     * @note[short] iOS: 0x10544c
+     * @note[short] MacOS (ARM): 0x1ead6c
+     * @note[short] MacOS (Intel): 0x244010
+     * @note[short] Windows: 0xb4e70
+     * @note[short] iOS: 0x10242c
      * @note[short] Android
      */
-    void loadFromObject(SongInfoObject* p0);
+    void loadFromObject(SongInfoObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0x1eae9c
+     * @note[short] MacOS (Intel): 0x244150
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x10255c
      * @note[short] Android
      */
-    void updateBGColor(int p0);
+    void updateBGColor(int index);
 };

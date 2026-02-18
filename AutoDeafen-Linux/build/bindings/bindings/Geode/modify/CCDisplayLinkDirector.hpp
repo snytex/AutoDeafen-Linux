@@ -55,10 +55,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::getCocos() + 0xbcf10, Thiscall, cocos2d::CCDisplayLinkDirector, setAnimationInterval, double)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::getCocos() + 0xbda50, Thiscall, cocos2d::CCDisplayLinkDirector, stopAnimation, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::getCocos() + 0xbda10, Thiscall, cocos2d::CCDisplayLinkDirector, startAnimation, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::getCocos() + 0xbc600, Thiscall, cocos2d::CCDisplayLinkDirector, mainLoop, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::getCocos() + 0xbf3f0, Thiscall, cocos2d::CCDisplayLinkDirector, setAnimationInterval, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::getCocos() + 0xbff30, Thiscall, cocos2d::CCDisplayLinkDirector, stopAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::getCocos() + 0xbfef0, Thiscall, cocos2d::CCDisplayLinkDirector, startAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::getCocos() + 0xbeae0, Thiscall, cocos2d::CCDisplayLinkDirector, mainLoop, )
 		}
 	};
 }

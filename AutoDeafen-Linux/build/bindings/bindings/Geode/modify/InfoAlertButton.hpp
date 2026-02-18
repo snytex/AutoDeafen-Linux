@@ -15,11 +15,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(activate) 
 	#endif
 
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -45,9 +40,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b2d80, Default, InfoAlertButton, create, gd::string, gd::string, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b2f80, Thiscall, InfoAlertButton, activate, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(InfoAlertButton, init, gd::string, gd::string, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ba450, Default, InfoAlertButton, create, gd::string, gd::string, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ba650, Thiscall, InfoAlertButton, activate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(InfoAlertButton, init, gd::string, gd::string, float)
 		}
 	};
 }

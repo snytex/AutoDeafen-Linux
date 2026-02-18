@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void downloadFinished(char const* p0);
+    virtual void downloadFinished(char const* key);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,5 +29,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void downloadFailed(char const* p0);
+    virtual void downloadFailed(char const* key);
 };

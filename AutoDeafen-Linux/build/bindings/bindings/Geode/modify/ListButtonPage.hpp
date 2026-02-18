@@ -10,11 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -35,8 +30,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6b450, Default, ListButtonPage, create, cocos2d::CCArray*, cocos2d::CCPoint, int, int, float, float, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ListButtonPage, init, cocos2d::CCArray*, cocos2d::CCPoint, int, int, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6b480, Default, ListButtonPage, create, cocos2d::CCArray*, cocos2d::CCPoint, int, int, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ListButtonPage, init, cocos2d::CCArray*, cocos2d::CCPoint, int, int, float, float, float)
 		}
 	};
 }

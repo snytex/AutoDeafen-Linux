@@ -15,16 +15,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(visit) 
 	#endif
 
-	#ifndef GEODE_STATICS_postVisit
-		#define GEODE_STATICS_postVisit
-		GEODE_AS_STATIC_FUNCTION(postVisit) 
-	#endif
-
-	#ifndef GEODE_STATICS_preVisitWithClippingRect
-		#define GEODE_STATICS_preVisitWithClippingRect
-		GEODE_AS_STATIC_FUNCTION(preVisitWithClippingRect) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -66,11 +56,11 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ParticlePreviewLayer, create, cocos2d::CCParticleSystemQuad*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41d700, Thiscall, ParticlePreviewLayer, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41d620, Thiscall, ParticlePreviewLayer, visit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x435920, Thiscall, ParticlePreviewLayer, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x435840, Thiscall, ParticlePreviewLayer, visit, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ParticlePreviewLayer, init, cocos2d::CCParticleSystemQuad*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ParticlePreviewLayer, postVisit, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ParticlePreviewLayer, preVisitWithClippingRect, cocos2d::CCRect)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ParticlePreviewLayer, postVisit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ParticlePreviewLayer, preVisitWithClippingRect, cocos2d::CCRect)
 		}
 	};
 }

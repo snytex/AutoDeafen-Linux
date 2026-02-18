@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -70,11 +65,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(StartPosObject, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x499450, Thiscall, StartPosObject, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4995b0, Thiscall, StartPosObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4995c0, Thiscall, StartPosObject, getSaveString, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x499510, Thiscall, StartPosObject, loadSettingsFromString, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(StartPosObject, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b1fa0, Thiscall, StartPosObject, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b2100, Thiscall, StartPosObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b2110, Thiscall, StartPosObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b2060, Thiscall, StartPosObject, loadSettingsFromString, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(StartPosObject, setSettings, LevelSettingsObject*)
 		}
 	};

@@ -60,11 +60,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ba270, Default, GJChestSprite, create, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ba400, Thiscall, GJChestSprite, setOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ba340, Thiscall, GJChestSprite, setColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d15e0, Default, GJChestSprite, create, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d1770, Thiscall, GJChestSprite, setOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d16b0, Thiscall, GJChestSprite, setColor, cocos2d::ccColor3B const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJChestSprite, init, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ba470, Thiscall, GJChestSprite, switchToState, ChestSpriteState, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d17e0, Thiscall, GJChestSprite, switchToState, ChestSpriteState, bool)
 		}
 	};
 }

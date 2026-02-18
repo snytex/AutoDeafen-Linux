@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -65,19 +60,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createLabel) 
 	#endif
 
-	#ifndef GEODE_STATICS_queueUpdateLabel
-		#define GEODE_STATICS_queueUpdateLabel
-		GEODE_AS_STATIC_FUNCTION(queueUpdateLabel) 
-	#endif
-
 	#ifndef GEODE_STATICS_removeLabel
 		#define GEODE_STATICS_removeLabel
 		GEODE_AS_STATIC_FUNCTION(removeLabel) 
-	#endif
-
-	#ifndef GEODE_STATICS_unlockLabelColor
-		#define GEODE_STATICS_unlockLabelColor
-		GEODE_AS_STATIC_FUNCTION(unlockLabelColor) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateLabel
@@ -88,11 +73,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateLabelAlign
 		#define GEODE_STATICS_updateLabelAlign
 		GEODE_AS_STATIC_FUNCTION(updateLabelAlign) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateLabelIfDirty
-		#define GEODE_STATICS_updateLabelIfDirty
-		GEODE_AS_STATIC_FUNCTION(updateLabelIfDirty) 
 	#endif
 
 	#ifndef GEODE_STATICS_updatePreviewLabel
@@ -205,26 +185,26 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LabelGameObject, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49a900, Thiscall, LabelGameObject, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49ac60, Thiscall, LabelGameObject, setOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49a940, Thiscall, LabelGameObject, setupCustomSprites, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49b150, Thiscall, LabelGameObject, addMainSpriteToParent, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49b570, Thiscall, LabelGameObject, resetObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49af90, Thiscall, LabelGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49b1c0, Thiscall, LabelGameObject, getSaveString, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49b100, Thiscall, LabelGameObject, setObjectColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49ad20, Thiscall, LabelGameObject, updateTextKerning, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47d930, Thiscall, LabelGameObject, getTextKerning, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49a9e0, Thiscall, LabelGameObject, createLabel, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LabelGameObject, queueUpdateLabel, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49ab80, Thiscall, LabelGameObject, removeLabel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LabelGameObject, unlockLabelColor, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LabelGameObject, updateLabel, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49af00, Thiscall, LabelGameObject, updateLabel, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49aca0, Thiscall, LabelGameObject, updateLabelAlign, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LabelGameObject, updateLabelIfDirty, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49ad40, Thiscall, LabelGameObject, updatePreviewLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LabelGameObject, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b3450, Thiscall, LabelGameObject, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b37b0, Thiscall, LabelGameObject, setOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b3490, Thiscall, LabelGameObject, setupCustomSprites, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b3ca0, Thiscall, LabelGameObject, addMainSpriteToParent, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b40c0, Thiscall, LabelGameObject, resetObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b3ae0, Thiscall, LabelGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b3d10, Thiscall, LabelGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b3c50, Thiscall, LabelGameObject, setObjectColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b3870, Thiscall, LabelGameObject, updateTextKerning, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x496010, Thiscall, LabelGameObject, getTextKerning, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b3530, Thiscall, LabelGameObject, createLabel, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LabelGameObject, queueUpdateLabel, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b36d0, Thiscall, LabelGameObject, removeLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LabelGameObject, unlockLabelColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LabelGameObject, updateLabel, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b3a50, Thiscall, LabelGameObject, updateLabel, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b37f0, Thiscall, LabelGameObject, updateLabelAlign, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LabelGameObject, updateLabelIfDirty, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b3890, Thiscall, LabelGameObject, updatePreviewLabel, )
 		}
 	};
 }

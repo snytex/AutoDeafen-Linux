@@ -16,18 +16,22 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(CreateMenuItem, CCMenuItemSpriteExtra)
 
     /**
-     * @note[short] MacOS (ARM): 0x2ed0c
-     * @note[short] MacOS (Intel): 0x2f300
-     * @note[short] Windows: 0x127700
-     * @note[short] iOS: 0x3df644
+     * @note[short] MacOS (ARM): 0x2bf9c
+     * @note[short] MacOS (Intel): 0x2ee40
+     * @note[short] Windows: 0x1294b0
+     * @note[short] iOS: 0x3e7360
      * @note[short] Android
      */
-    static CreateMenuItem* create(cocos2d::CCNode* p0, cocos2d::CCNode* p1, cocos2d::CCObject* p2, cocos2d::SEL_MenuHandler p3);
+    static CreateMenuItem* create(cocos2d::CCNode* normal, cocos2d::CCNode* selected, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler selector);
 
     /**
+     * @note[short] MacOS (ARM): 0x4677c
+     * @note[short] MacOS (Intel): 0x51900
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(cocos2d::CCNode* p0, cocos2d::CCNode* p1, cocos2d::CCObject* p2, cocos2d::SEL_MenuHandler p3);
+    bool init(cocos2d::CCNode* normal, cocos2d::CCNode* selected, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler selector);
     gd::string m_spriteFileName;
     int m_objectID;
     int m_pageIndex;

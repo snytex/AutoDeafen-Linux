@@ -100,17 +100,17 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30e580, Default, SelectSettingLayer, create, SelectSettingType, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30ede0, Default, SelectSettingLayer, frameForItem, SelectSettingType, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x323110, Default, SelectSettingLayer, create, SelectSettingType, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x323970, Default, SelectSettingLayer, frameForItem, SelectSettingType, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SelectSettingLayer, frameForValue, SelectSettingType, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SelectSettingLayer, idxToValue, SelectSettingType, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SelectSettingLayer, valueToIdx, SelectSettingType, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30f380, Thiscall, SelectSettingLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x323f10, Thiscall, SelectSettingLayer, keyBackClicked, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SelectSettingLayer, getSelectedFrame, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SelectSettingLayer, getSelectedValue, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30e690, Thiscall, SelectSettingLayer, init, SelectSettingType, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30f330, Thiscall, SelectSettingLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30f280, Thiscall, SelectSettingLayer, onSelect, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x323220, Thiscall, SelectSettingLayer, init, SelectSettingType, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x323ec0, Thiscall, SelectSettingLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x323e10, Thiscall, SelectSettingLayer, onSelect, cocos2d::CCObject*)
 		}
 	};
 }

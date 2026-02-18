@@ -35,8 +35,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45a8c0, Default, SetupObjectControlPopup, create, ObjectControlGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45a9d0, Thiscall, SetupObjectControlPopup, init, ObjectControlGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x472e30, Default, SetupObjectControlPopup, create, ObjectControlGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x472f40, Thiscall, SetupObjectControlPopup, init, ObjectControlGameObject*, cocos2d::CCArray*)
 		}
 	};
 }

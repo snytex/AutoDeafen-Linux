@@ -43,7 +43,7 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FontObject, createWithConfigFile, char const*, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FontObject, getFontWidth, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FontObject, initWithConfigFile, char const*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b620, Thiscall, FontObject, parseConfigFile, char const*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b660, Thiscall, FontObject, parseConfigFile, char const*, float)
 		}
 	};
 }

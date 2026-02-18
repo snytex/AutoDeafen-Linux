@@ -5,6 +5,11 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
+	#ifndef GEODE_STATICS_create
+		#define GEODE_STATICS_create
+		GEODE_AS_STATIC_FUNCTION(create) 
+	#endif
+
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -95,7 +100,47 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(isTouchInside) 
 	#endif
 
+	#ifndef GEODE_STATICS_addHandleOfControlEvent
+		#define GEODE_STATICS_addHandleOfControlEvent
+		GEODE_AS_STATIC_FUNCTION(addHandleOfControlEvent) 
+	#endif
+
+	#ifndef GEODE_STATICS_addTargetWithActionForControlEvent
+		#define GEODE_STATICS_addTargetWithActionForControlEvent
+		GEODE_AS_STATIC_FUNCTION(addTargetWithActionForControlEvent) 
+	#endif
+
+	#ifndef GEODE_STATICS_dispatchListforControlEvent
+		#define GEODE_STATICS_dispatchListforControlEvent
+		GEODE_AS_STATIC_FUNCTION(dispatchListforControlEvent) 
+	#endif
+
+	#ifndef GEODE_STATICS_getHandleOfControlEvent
+		#define GEODE_STATICS_getHandleOfControlEvent
+		GEODE_AS_STATIC_FUNCTION(getHandleOfControlEvent) 
+	#endif
+
+	#ifndef GEODE_STATICS_hasVisibleParents
+		#define GEODE_STATICS_hasVisibleParents
+		GEODE_AS_STATIC_FUNCTION(hasVisibleParents) 
+	#endif
+
+	#ifndef GEODE_STATICS_removeHandleOfControlEvent
+		#define GEODE_STATICS_removeHandleOfControlEvent
+		GEODE_AS_STATIC_FUNCTION(removeHandleOfControlEvent) 
+	#endif
+
+	#ifndef GEODE_STATICS_removeTargetWithActionForControlEvent
+		#define GEODE_STATICS_removeTargetWithActionForControlEvent
+		GEODE_AS_STATIC_FUNCTION(removeTargetWithActionForControlEvent) 
+	#endif
+
     
+	#ifndef GEODE_CONCEPT_CHECK_create
+		#define GEODE_CONCEPT_CHECK_create
+		GEODE_CONCEPT_FUNCTION_CHECK(create) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_init
 		#define GEODE_CONCEPT_CHECK_init
 		GEODE_CONCEPT_FUNCTION_CHECK(init) 
@@ -186,6 +231,41 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(isTouchInside) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_addHandleOfControlEvent
+		#define GEODE_CONCEPT_CHECK_addHandleOfControlEvent
+		GEODE_CONCEPT_FUNCTION_CHECK(addHandleOfControlEvent) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_addTargetWithActionForControlEvent
+		#define GEODE_CONCEPT_CHECK_addTargetWithActionForControlEvent
+		GEODE_CONCEPT_FUNCTION_CHECK(addTargetWithActionForControlEvent) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_dispatchListforControlEvent
+		#define GEODE_CONCEPT_CHECK_dispatchListforControlEvent
+		GEODE_CONCEPT_FUNCTION_CHECK(dispatchListforControlEvent) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getHandleOfControlEvent
+		#define GEODE_CONCEPT_CHECK_getHandleOfControlEvent
+		GEODE_CONCEPT_FUNCTION_CHECK(getHandleOfControlEvent) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_hasVisibleParents
+		#define GEODE_CONCEPT_CHECK_hasVisibleParents
+		GEODE_CONCEPT_FUNCTION_CHECK(hasVisibleParents) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_removeHandleOfControlEvent
+		#define GEODE_CONCEPT_CHECK_removeHandleOfControlEvent
+		GEODE_CONCEPT_FUNCTION_CHECK(removeHandleOfControlEvent) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_removeTargetWithActionForControlEvent
+		#define GEODE_CONCEPT_CHECK_removeTargetWithActionForControlEvent
+		GEODE_CONCEPT_FUNCTION_CHECK(removeTargetWithActionForControlEvent) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::extension::CCControl> : ModifyBase<ModifyDerive<Der, cocos2d::extension::CCControl>> {
@@ -197,6 +277,7 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getExtensions(), "??0CCControl@extension@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::extension::CCControl, )
 			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getExtensions(), "??1CCControl@extension@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::extension::CCControl)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::extension::CCControl::create)), Default, cocos2d::extension::CCControl, create, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::extension::CCControl::init)), Thiscall, cocos2d::extension::CCControl, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::extension::CCControl::onEnter)), Thiscall, cocos2d::extension::CCControl, onEnter, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::extension::CCControl::onExit)), Thiscall, cocos2d::extension::CCControl, onExit, )
@@ -215,6 +296,13 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCObject*, cocos2d::extension::SEL_CCControlHandler, unsigned int>::func(&cocos2d::extension::CCControl::removeTargetWithActionForControlEvents)), Thiscall, cocos2d::extension::CCControl, removeTargetWithActionForControlEvents, cocos2d::CCObject*, cocos2d::extension::SEL_CCControlHandler, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCTouch*>::func(&cocos2d::extension::CCControl::getTouchLocation)), Thiscall, cocos2d::extension::CCControl, getTouchLocation, cocos2d::CCTouch*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCTouch*>::func(&cocos2d::extension::CCControl::isTouchInside)), Thiscall, cocos2d::extension::CCControl, isTouchInside, cocos2d::CCTouch*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int, cocos2d::extension::CCControlEvent>::func(&cocos2d::extension::CCControl::addHandleOfControlEvent)), Thiscall, cocos2d::extension::CCControl, addHandleOfControlEvent, int, cocos2d::extension::CCControlEvent)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*, cocos2d::extension::SEL_CCControlHandler, cocos2d::extension::CCControlEvent>::func(&cocos2d::extension::CCControl::addTargetWithActionForControlEvent)), Thiscall, cocos2d::extension::CCControl, addTargetWithActionForControlEvent, cocos2d::CCObject*, cocos2d::extension::SEL_CCControlHandler, cocos2d::extension::CCControlEvent)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::extension::CCControlEvent>::func(&cocos2d::extension::CCControl::dispatchListforControlEvent)), Thiscall, cocos2d::extension::CCControl, dispatchListforControlEvent, cocos2d::extension::CCControlEvent)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::extension::CCControlEvent>::func(&cocos2d::extension::CCControl::getHandleOfControlEvent)), Thiscall, cocos2d::extension::CCControl, getHandleOfControlEvent, cocos2d::extension::CCControlEvent)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::extension::CCControl::hasVisibleParents)), Thiscall, cocos2d::extension::CCControl, hasVisibleParents, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::extension::CCControlEvent>::func(&cocos2d::extension::CCControl::removeHandleOfControlEvent)), Thiscall, cocos2d::extension::CCControl, removeHandleOfControlEvent, cocos2d::extension::CCControlEvent)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*, cocos2d::extension::SEL_CCControlHandler, cocos2d::extension::CCControlEvent>::func(&cocos2d::extension::CCControl::removeTargetWithActionForControlEvent)), Thiscall, cocos2d::extension::CCControl, removeTargetWithActionForControlEvent, cocos2d::CCObject*, cocos2d::extension::SEL_CCControlHandler, cocos2d::extension::CCControlEvent)
 		}
 	};
 }

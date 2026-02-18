@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_onPlusButton
 		#define GEODE_STATICS_onPlusButton
 		GEODE_AS_STATIC_FUNCTION(onPlusButton) 
@@ -55,10 +50,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupRotateGameplayPopup, create, RotateGameplayGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x429c50, Thiscall, SetupRotateGameplayPopup, onPlusButton, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x429cc0, Thiscall, SetupRotateGameplayPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x429280, Thiscall, SetupRotateGameplayPopup, init, RotateGameplayGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupRotateGameplayPopup, create, RotateGameplayGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x441f20, Thiscall, SetupRotateGameplayPopup, onPlusButton, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x441fd0, Thiscall, SetupRotateGameplayPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x441550, Thiscall, SetupRotateGameplayPopup, init, RotateGameplayGameObject*, cocos2d::CCArray*)
 		}
 	};
 }

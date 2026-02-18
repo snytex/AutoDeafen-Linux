@@ -26,78 +26,91 @@ public:
      UploadPopup();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x223818
+     * @note[short] MacOS (Intel): 0x281940
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x27644c
+     * @note[short] Android: Rebinded
      */
      ~UploadPopup();
 
     /**
+     * @note[short] MacOS (ARM): 0x223694
+     * @note[short] MacOS (Intel): 0x281780
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x276310
      * @note[short] Android
      */
-    static UploadPopup* create(GJGameLevel* p0);
+    static UploadPopup* create(GJGameLevel* level);
 
     /**
-     * @note[short] MacOS (ARM): 0x21b974
-     * @note[short] MacOS (Intel): 0x2706b0
+     * @note[short] MacOS (ARM): 0x2242b0
+     * @note[short] MacOS (Intel): 0x282500
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x275ffc
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x276e70
+     * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x21b914
-     * @note[short] MacOS (Intel): 0x270640
-     * @note[short] Windows: 0x2f7220
-     * @note[short] iOS: 0x275f9c
+     * @note[short] MacOS (ARM): 0x224250
+     * @note[short] MacOS (Intel): 0x282490
+     * @note[short] Windows: 0x30bc70
+     * @note[short] iOS: 0x276e10
      * @note[short] Android
      */
     virtual void show();
 
     /**
-     * @note[short] MacOS (ARM): 0x21b4e4
-     * @note[short] MacOS (Intel): 0x2701e0
-     * @note[short] Windows: 0x478710
-     * @note[short] iOS: 0x275ba0
+     * @note[short] MacOS (ARM): 0x223e20
+     * @note[short] MacOS (Intel): 0x282030
+     * @note[short] Windows: 0x490bf0
+     * @note[short] iOS: 0x276a14
      * @note[short] Android
      */
-    virtual void levelUploadFinished(GJGameLevel* p0);
+    virtual void levelUploadFinished(GJGameLevel* level);
 
     /**
-     * @note[short] MacOS (ARM): 0x21b71c
-     * @note[short] MacOS (Intel): 0x270430
-     * @note[short] Windows: 0x4788e0
-     * @note[short] iOS: 0x275dc8
+     * @note[short] MacOS (ARM): 0x224058
+     * @note[short] MacOS (Intel): 0x282280
+     * @note[short] Windows: 0x490dc0
+     * @note[short] iOS: 0x276c3c
      * @note[short] Android
      */
-    virtual void levelUploadFailed(GJGameLevel* p0);
+    virtual void levelUploadFailed(GJGameLevel* level);
 
     /**
-     * @note[short] MacOS (ARM): 0x21afc4
-     * @note[short] MacOS (Intel): 0x26fc40
-     * @note[short] Windows: 0x478140
+     * @note[short] MacOS (ARM): 0x2238fc
+     * @note[short] MacOS (Intel): 0x281aa0
+     * @note[short] Windows: 0x490620
+     * @note[short] iOS: 0x276520
      * @note[short] Android
      */
-    bool init(GJGameLevel* p0);
+    bool init(GJGameLevel* level);
 
     /**
-     * @note[short] Windows: 0x478bb0
+     * @note[short] MacOS (ARM): 0x223dd4
+     * @note[short] MacOS (Intel): 0x281fe0
+     * @note[short] Windows: 0x491090
+     * @note[short] iOS: 0x2769c8
      * @note[short] Android
      */
     void onBack(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x84620
+     * @note[short] MacOS (ARM): 0x22420c
+     * @note[short] MacOS (Intel): 0x282440
+     * @note[short] Windows: 0x84670
+     * @note[short] iOS: 0x276dcc
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x478ac0
+     * @note[short] MacOS (ARM): 0x223fd0
+     * @note[short] MacOS (Intel): 0x2821e0
+     * @note[short] Windows: 0x490fa0
+     * @note[short] iOS: 0x276bb4
      * @note[short] Android
      */
     void onReturnToLevel(cocos2d::CCObject* sender);

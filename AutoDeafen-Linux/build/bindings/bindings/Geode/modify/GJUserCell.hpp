@@ -60,19 +60,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onUnblockUser) 
 	#endif
 
-	#ifndef GEODE_STATICS_onViewFriendRequest
-		#define GEODE_STATICS_onViewFriendRequest
-		GEODE_AS_STATIC_FUNCTION(onViewFriendRequest) 
-	#endif
-
 	#ifndef GEODE_STATICS_onViewProfile
 		#define GEODE_STATICS_onViewProfile
 		GEODE_AS_STATIC_FUNCTION(onViewProfile) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateBGColor
-		#define GEODE_STATICS_updateBGColor
-		GEODE_AS_STATIC_FUNCTION(updateBGColor) 
 	#endif
 
     
@@ -155,20 +145,20 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb9f50, Thiscall, GJUserCell, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xad710, Thiscall, GJUserCell, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbae70, Thiscall, GJUserCell, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbb230, Thiscall, GJUserCell, uploadActionFinished, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbb3e0, Thiscall, GJUserCell, uploadActionFailed, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbb4b0, Thiscall, GJUserCell, onClosePopup, UploadActionPopup*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb9f70, Thiscall, GJUserCell, loadFromScore, GJUserScore*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbaa50, Thiscall, GJUserCell, onCancelFriendRequest, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbabf0, Thiscall, GJUserCell, onRemoveFriend, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbae30, Thiscall, GJUserCell, onSendMessage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xba840, Thiscall, GJUserCell, onUnblockUser, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJUserCell, onViewFriendRequest, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xba800, Thiscall, GJUserCell, onViewProfile, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJUserCell, updateBGColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbac40, Thiscall, GJUserCell, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xade20, Thiscall, GJUserCell, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbbb70, Thiscall, GJUserCell, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbbf30, Thiscall, GJUserCell, uploadActionFinished, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbc0e0, Thiscall, GJUserCell, uploadActionFailed, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbc1b0, Thiscall, GJUserCell, onClosePopup, UploadActionPopup*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbac60, Thiscall, GJUserCell, loadFromScore, GJUserScore*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbb750, Thiscall, GJUserCell, onCancelFriendRequest, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbb8f0, Thiscall, GJUserCell, onRemoveFriend, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbbb30, Thiscall, GJUserCell, onSendMessage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbb540, Thiscall, GJUserCell, onUnblockUser, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUserCell, onViewFriendRequest, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbb500, Thiscall, GJUserCell, onViewProfile, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUserCell, updateBGColor, int)
 		}
 	};
 }

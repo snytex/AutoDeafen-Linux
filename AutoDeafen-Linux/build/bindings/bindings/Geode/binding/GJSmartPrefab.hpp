@@ -15,45 +15,55 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJSmartPrefab, cocos2d::CCObject)
 
     /**
-     * @note[short] Windows: 0x2ae230
+     * @note[short] MacOS (ARM): 0x395778
+     * @note[short] MacOS (Intel): 0x4222c0
+     * @note[short] Windows: 0x2b58f0
+     * @note[short] iOS: 0x461c
      * @note[short] Android
      */
     static GJSmartPrefab* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x391654
-     * @note[short] MacOS (Intel): 0x415c60
-     * @note[short] Windows: 0x2ae2b0
-     * @note[short] iOS: 0xc604
-     * @note[short] Android
-     */
-    virtual void encodeWithCoder(DS_Dictionary* p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x3914f4
-     * @note[short] MacOS (Intel): 0x415b10
+     * @note[short] MacOS (ARM): 0x39aec0
+     * @note[short] MacOS (Intel): 0x4285a0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0xc550
-     * @note[short] Android: Out of line
-     */
-    virtual bool canEncode();
-
-    /**
-     * @note[short] MacOS (ARM): 0x3914fc
-     * @note[short] MacOS (Intel): 0x415b20
-     * @note[short] Windows: Out of line
-     * @note[short] iOS: 0xc558
+     * @note[short] iOS: 0x8740
      * @note[short] Android
      */
     static GJSmartPrefab* createWithCoder(DS_Dictionary* dict);
 
     /**
+     * @note[short] MacOS (ARM): 0x39b000
+     * @note[short] MacOS (Intel): 0x4286e0
+     * @note[short] Windows: 0x2b5970
+     * @note[short] iOS: 0x87e0
+     * @note[short] Android
+     */
+    virtual void encodeWithCoder(DS_Dictionary* dict);
+
+    /**
+     * @note[short] MacOS (ARM): 0x39aeb8
+     * @note[short] MacOS (Intel): 0x428590
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x8738
+     * @note[short] Android
+     */
+    virtual bool canEncode();
+
+    /**
+     * @note[short] MacOS (ARM): 0x39af90
+     * @note[short] MacOS (Intel): 0x428670
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x8770
      * @note[short] Android
      */
     void dataLoaded(DS_Dictionary* dict);
 
     /**
+     * @note[short] MacOS (ARM): 0x39ae9c
+     * @note[short] MacOS (Intel): 0x428570
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     bool init();

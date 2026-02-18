@@ -35,8 +35,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28a320, Default, GJCommentListLayer, create, BoomListView*, char const*, cocos2d::ccColor4B, float, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28a440, Thiscall, GJCommentListLayer, init, BoomListView*, char const*, cocos2d::ccColor4B, float, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x291cb0, Default, GJCommentListLayer, create, BoomListView*, char const*, cocos2d::ccColor4B, float, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x291dd0, Thiscall, GJCommentListLayer, init, BoomListView*, char const*, cocos2d::ccColor4B, float, float, bool)
 		}
 	};
 }

@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_onClose
 		#define GEODE_STATICS_onClose
 		GEODE_AS_STATIC_FUNCTION(onClose) 
@@ -75,12 +70,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupReverbPopup, create, SFXTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42eda0, Thiscall, SetupReverbPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42e510, Thiscall, SetupReverbPopup, init, SFXTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42ead0, Thiscall, SetupReverbPopup, onPlay, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42ebc0, Thiscall, SetupReverbPopup, onReverb, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42ec50, Thiscall, SetupReverbPopup, updateReverbLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupReverbPopup, create, SFXTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4470b0, Thiscall, SetupReverbPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x446820, Thiscall, SetupReverbPopup, init, SFXTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x446de0, Thiscall, SetupReverbPopup, onPlay, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x446ed0, Thiscall, SetupReverbPopup, onReverb, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x446f60, Thiscall, SetupReverbPopup, updateReverbLabel, )
 		}
 	};
 }

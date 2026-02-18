@@ -10,19 +10,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
-	#ifndef GEODE_STATICS_getPage
-		#define GEODE_STATICS_getPage
-		GEODE_AS_STATIC_FUNCTION(getPage) 
-	#endif
-
 	#ifndef GEODE_STATICS_goToPage
 		#define GEODE_STATICS_goToPage
 		GEODE_AS_STATIC_FUNCTION(goToPage) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
 	#ifndef GEODE_STATICS_loadFromItems
@@ -90,13 +80,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd2f40, Default, EditButtonBar, create, cocos2d::CCArray*, cocos2d::CCPoint, int, bool, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditButtonBar, getPage, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditButtonBar, goToPage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditButtonBar, init, cocos2d::CCArray*, cocos2d::CCPoint, int, bool, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd30a0, Thiscall, EditButtonBar, loadFromItems, cocos2d::CCArray*, int, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd3a90, Thiscall, EditButtonBar, onLeft, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd3a20, Thiscall, EditButtonBar, onRight, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd4470, Default, EditButtonBar, create, cocos2d::CCArray*, cocos2d::CCPoint, int, bool, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditButtonBar, getPage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd4ef0, Thiscall, EditButtonBar, goToPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditButtonBar, init, cocos2d::CCArray*, cocos2d::CCPoint, int, bool, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd45d0, Thiscall, EditButtonBar, loadFromItems, cocos2d::CCArray*, int, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd4fc0, Thiscall, EditButtonBar, onLeft, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd4f50, Thiscall, EditButtonBar, onRight, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditButtonBar, reloadItems, int, int)
 		}
 	};

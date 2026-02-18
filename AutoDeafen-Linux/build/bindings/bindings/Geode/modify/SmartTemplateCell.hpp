@@ -65,11 +65,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c7f0, Thiscall, SmartTemplateCell, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xad710, Thiscall, SmartTemplateCell, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbd8c0, Thiscall, SmartTemplateCell, loadFromObject, GJSmartTemplate*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbdda0, Thiscall, SmartTemplateCell, onClick, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbdcb0, Thiscall, SmartTemplateCell, updateBGColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c830, Thiscall, SmartTemplateCell, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xade20, Thiscall, SmartTemplateCell, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbe5e0, Thiscall, SmartTemplateCell, loadFromObject, GJSmartTemplate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbeac0, Thiscall, SmartTemplateCell, onClick, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbe9d0, Thiscall, SmartTemplateCell, updateBGColor, int)
 		}
 	};
 }

@@ -5,9 +5,19 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
+	#ifndef GEODE_STATICS_getRandomStartKey
+		#define GEODE_STATICS_getRandomStartKey
+		GEODE_AS_STATIC_FUNCTION(getRandomStartKey) 
+	#endif
+
+	#ifndef GEODE_STATICS_getSmartObjectKey
+		#define GEODE_STATICS_getSmartObjectKey
+		GEODE_AS_STATIC_FUNCTION(getSmartObjectKey) 
+	#endif
+
+	#ifndef GEODE_STATICS_smartTypeForKey
+		#define GEODE_STATICS_smartTypeForKey
+		GEODE_AS_STATIC_FUNCTION(smartTypeForKey) 
 	#endif
 
 	#ifndef GEODE_STATICS_draw
@@ -210,11 +220,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addObjectsToSmartTemplate) 
 	#endif
 
-	#ifndef GEODE_STATICS_addSnapPosition
-		#define GEODE_STATICS_addSnapPosition
-		GEODE_AS_STATIC_FUNCTION(addSnapPosition) 
-	#endif
-
 	#ifndef GEODE_STATICS_alignObjects
 		#define GEODE_STATICS_alignObjects
 		GEODE_AS_STATIC_FUNCTION(alignObjects) 
@@ -230,34 +235,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(applySpecialOffset) 
 	#endif
 
-	#ifndef GEODE_STATICS_arrayContainsClass
-		#define GEODE_STATICS_arrayContainsClass
-		GEODE_AS_STATIC_FUNCTION(arrayContainsClass) 
-	#endif
-
 	#ifndef GEODE_STATICS_assignNewGroups
 		#define GEODE_STATICS_assignNewGroups
 		GEODE_AS_STATIC_FUNCTION(assignNewGroups) 
 	#endif
 
-	#ifndef GEODE_STATICS_canAllowMultiActivate
-		#define GEODE_STATICS_canAllowMultiActivate
-		GEODE_AS_STATIC_FUNCTION(canAllowMultiActivate) 
-	#endif
-
 	#ifndef GEODE_STATICS_canSelectObject
 		#define GEODE_STATICS_canSelectObject
 		GEODE_AS_STATIC_FUNCTION(canSelectObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_centerCameraOnObject
-		#define GEODE_STATICS_centerCameraOnObject
-		GEODE_AS_STATIC_FUNCTION(centerCameraOnObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_changeSelectedObjects
-		#define GEODE_STATICS_changeSelectedObjects
-		GEODE_AS_STATIC_FUNCTION(changeSelectedObjects) 
 	#endif
 
 	#ifndef GEODE_STATICS_checkDiffAfterTransformAnchor
@@ -305,11 +290,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(copyObjects) 
 	#endif
 
-	#ifndef GEODE_STATICS_copyObjectsDetailed
-		#define GEODE_STATICS_copyObjectsDetailed
-		GEODE_AS_STATIC_FUNCTION(copyObjectsDetailed) 
-	#endif
-
 	#ifndef GEODE_STATICS_createCustomItems
 		#define GEODE_STATICS_createCustomItems
 		GEODE_AS_STATIC_FUNCTION(createCustomItems) 
@@ -325,19 +305,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createExtraObject) 
 	#endif
 
-	#ifndef GEODE_STATICS_createExtras
-		#define GEODE_STATICS_createExtras
-		GEODE_AS_STATIC_FUNCTION(createExtras) 
-	#endif
-
 	#ifndef GEODE_STATICS_createExtrasForObject
 		#define GEODE_STATICS_createExtrasForObject
 		GEODE_AS_STATIC_FUNCTION(createExtrasForObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_createGlow
-		#define GEODE_STATICS_createGlow
-		GEODE_AS_STATIC_FUNCTION(createGlow) 
 	#endif
 
 	#ifndef GEODE_STATICS_createLoop
@@ -435,19 +405,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(deselectTargetPortals) 
 	#endif
 
-	#ifndef GEODE_STATICS_disableButton
-		#define GEODE_STATICS_disableButton
-		GEODE_AS_STATIC_FUNCTION(disableButton) 
-	#endif
-
 	#ifndef GEODE_STATICS_doCopyObjects
 		#define GEODE_STATICS_doCopyObjects
 		GEODE_AS_STATIC_FUNCTION(doCopyObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_doPasteInPlace
-		#define GEODE_STATICS_doPasteInPlace
-		GEODE_AS_STATIC_FUNCTION(doPasteInPlace) 
 	#endif
 
 	#ifndef GEODE_STATICS_doPasteObjects
@@ -458,11 +418,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_dynamicGroupUpdate
 		#define GEODE_STATICS_dynamicGroupUpdate
 		GEODE_AS_STATIC_FUNCTION(dynamicGroupUpdate) 
-	#endif
-
-	#ifndef GEODE_STATICS_edgeForObject
-		#define GEODE_STATICS_edgeForObject
-		GEODE_AS_STATIC_FUNCTION(edgeForObject) 
 	#endif
 
 	#ifndef GEODE_STATICS_editButton2Usable
@@ -478,11 +433,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_editColor
 		#define GEODE_STATICS_editColor
 		GEODE_AS_STATIC_FUNCTION(editColor) 
-	#endif
-
-	#ifndef GEODE_STATICS_editColorButtonUsable
-		#define GEODE_STATICS_editColorButtonUsable
-		GEODE_AS_STATIC_FUNCTION(editColorButtonUsable) 
 	#endif
 
 	#ifndef GEODE_STATICS_editGroup
@@ -505,24 +455,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(editObject2) 
 	#endif
 
-	#ifndef GEODE_STATICS_editObject3
-		#define GEODE_STATICS_editObject3
-		GEODE_AS_STATIC_FUNCTION(editObject3) 
-	#endif
-
 	#ifndef GEODE_STATICS_editObjectSpecial
 		#define GEODE_STATICS_editObjectSpecial
 		GEODE_AS_STATIC_FUNCTION(editObjectSpecial) 
-	#endif
-
-	#ifndef GEODE_STATICS_editorLayerForArray
-		#define GEODE_STATICS_editorLayerForArray
-		GEODE_AS_STATIC_FUNCTION(editorLayerForArray) 
-	#endif
-
-	#ifndef GEODE_STATICS_enableButton
-		#define GEODE_STATICS_enableButton
-		GEODE_AS_STATIC_FUNCTION(enableButton) 
 	#endif
 
 	#ifndef GEODE_STATICS_findAndSelectObject
@@ -535,11 +470,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(findSnapObject) 
 	#endif
 
-	#ifndef GEODE_STATICS_findTriggerTest
-		#define GEODE_STATICS_findTriggerTest
-		GEODE_AS_STATIC_FUNCTION(findTriggerTest) 
-	#endif
-
 	#ifndef GEODE_STATICS_flipObjectsX
 		#define GEODE_STATICS_flipObjectsX
 		GEODE_AS_STATIC_FUNCTION(flipObjectsX) 
@@ -550,24 +480,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(flipObjectsY) 
 	#endif
 
-	#ifndef GEODE_STATICS_getButton
-		#define GEODE_STATICS_getButton
-		GEODE_AS_STATIC_FUNCTION(getButton) 
-	#endif
-
 	#ifndef GEODE_STATICS_getCreateBtn
 		#define GEODE_STATICS_getCreateBtn
 		GEODE_AS_STATIC_FUNCTION(getCreateBtn) 
-	#endif
-
-	#ifndef GEODE_STATICS_getCreateMenuItemButton
-		#define GEODE_STATICS_getCreateMenuItemButton
-		GEODE_AS_STATIC_FUNCTION(getCreateMenuItemButton) 
-	#endif
-
-	#ifndef GEODE_STATICS_getCycledObject
-		#define GEODE_STATICS_getCycledObject
-		GEODE_AS_STATIC_FUNCTION(getCycledObject) 
 	#endif
 
 	#ifndef GEODE_STATICS_getEditColorTargets
@@ -580,19 +495,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getGroupCenter) 
 	#endif
 
-	#ifndef GEODE_STATICS_getGroupInfo
-		#define GEODE_STATICS_getGroupInfo
-		GEODE_AS_STATIC_FUNCTION(getGroupInfo) 
-	#endif
-
 	#ifndef GEODE_STATICS_getLimitedPosition
 		#define GEODE_STATICS_getLimitedPosition
 		GEODE_AS_STATIC_FUNCTION(getLimitedPosition) 
-	#endif
-
-	#ifndef GEODE_STATICS_getModeBtn
-		#define GEODE_STATICS_getModeBtn
-		GEODE_AS_STATIC_FUNCTION(getModeBtn) 
 	#endif
 
 	#ifndef GEODE_STATICS_getNeighbor
@@ -600,24 +505,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getNeighbor) 
 	#endif
 
-	#ifndef GEODE_STATICS_getRandomStartKey
-		#define GEODE_STATICS_getRandomStartKey
-		GEODE_AS_STATIC_FUNCTION(getRandomStartKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getRelativeOffset
-		#define GEODE_STATICS_getRelativeOffset
-		GEODE_AS_STATIC_FUNCTION(getRelativeOffset) 
-	#endif
-
 	#ifndef GEODE_STATICS_getSelectedObjects
 		#define GEODE_STATICS_getSelectedObjects
 		GEODE_AS_STATIC_FUNCTION(getSelectedObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSimpleButton
-		#define GEODE_STATICS_getSimpleButton
-		GEODE_AS_STATIC_FUNCTION(getSimpleButton) 
 	#endif
 
 	#ifndef GEODE_STATICS_getSmartNeighbor
@@ -625,24 +515,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getSmartNeighbor) 
 	#endif
 
-	#ifndef GEODE_STATICS_getSmartObjectKey
-		#define GEODE_STATICS_getSmartObjectKey
-		GEODE_AS_STATIC_FUNCTION(getSmartObjectKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_getSpriteButton
 		#define GEODE_STATICS_getSpriteButton
 		GEODE_AS_STATIC_FUNCTION(getSpriteButton) 
-	#endif
-
-	#ifndef GEODE_STATICS_getTouchPoint
-		#define GEODE_STATICS_getTouchPoint
-		GEODE_AS_STATIC_FUNCTION(getTouchPoint) 
-	#endif
-
-	#ifndef GEODE_STATICS_getTransformState
-		#define GEODE_STATICS_getTransformState
-		GEODE_AS_STATIC_FUNCTION(getTransformState) 
 	#endif
 
 	#ifndef GEODE_STATICS_getXMin
@@ -655,19 +530,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_isLiveColorSelectTrigger
-		#define GEODE_STATICS_isLiveColorSelectTrigger
-		GEODE_AS_STATIC_FUNCTION(isLiveColorSelectTrigger) 
-	#endif
-
 	#ifndef GEODE_STATICS_isSpecialSnapObject
 		#define GEODE_STATICS_isSpecialSnapObject
 		GEODE_AS_STATIC_FUNCTION(isSpecialSnapObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_liveEditColorUsable
-		#define GEODE_STATICS_liveEditColorUsable
-		GEODE_AS_STATIC_FUNCTION(liveEditColorUsable) 
 	#endif
 
 	#ifndef GEODE_STATICS_menuItemFromObjectString
@@ -738,11 +603,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onDelete
 		#define GEODE_STATICS_onDelete
 		GEODE_AS_STATIC_FUNCTION(onDelete) 
-	#endif
-
-	#ifndef GEODE_STATICS_onDeleteAll
-		#define GEODE_STATICS_onDeleteAll
-		GEODE_AS_STATIC_FUNCTION(onDeleteAll) 
 	#endif
 
 	#ifndef GEODE_STATICS_onDeleteCustomItem
@@ -840,11 +700,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onPasteColor) 
 	#endif
 
-	#ifndef GEODE_STATICS_onPasteInPlace
-		#define GEODE_STATICS_onPasteInPlace
-		GEODE_AS_STATIC_FUNCTION(onPasteInPlace) 
-	#endif
-
 	#ifndef GEODE_STATICS_onPasteState
 		#define GEODE_STATICS_onPasteState
 		GEODE_AS_STATIC_FUNCTION(onPasteState) 
@@ -880,6 +735,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onSettings) 
 	#endif
 
+	#ifndef GEODE_STATICS_onStickyToggle
+		#define GEODE_STATICS_onStickyToggle
+		GEODE_AS_STATIC_FUNCTION(onStickyToggle) 
+	#endif
+
 	#ifndef GEODE_STATICS_onStopPlaytest
 		#define GEODE_STATICS_onStopPlaytest
 		GEODE_AS_STATIC_FUNCTION(onStopPlaytest) 
@@ -888,16 +748,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onTargetIDChange
 		#define GEODE_STATICS_onTargetIDChange
 		GEODE_AS_STATIC_FUNCTION(onTargetIDChange) 
-	#endif
-
-	#ifndef GEODE_STATICS_onToggleGuide
-		#define GEODE_STATICS_onToggleGuide
-		GEODE_AS_STATIC_FUNCTION(onToggleGuide) 
-	#endif
-
-	#ifndef GEODE_STATICS_onToggleSelectedOrder
-		#define GEODE_STATICS_onToggleSelectedOrder
-		GEODE_AS_STATIC_FUNCTION(onToggleSelectedOrder) 
 	#endif
 
 	#ifndef GEODE_STATICS_onUngroupSticky
@@ -925,34 +775,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(pasteObjects) 
 	#endif
 
-	#ifndef GEODE_STATICS_playCircleAnim
-		#define GEODE_STATICS_playCircleAnim
-		GEODE_AS_STATIC_FUNCTION(playCircleAnim) 
-	#endif
-
-	#ifndef GEODE_STATICS_playerTouchBegan
-		#define GEODE_STATICS_playerTouchBegan
-		GEODE_AS_STATIC_FUNCTION(playerTouchBegan) 
-	#endif
-
-	#ifndef GEODE_STATICS_playerTouchEnded
-		#define GEODE_STATICS_playerTouchEnded
-		GEODE_AS_STATIC_FUNCTION(playerTouchEnded) 
-	#endif
-
 	#ifndef GEODE_STATICS_playtestStopped
 		#define GEODE_STATICS_playtestStopped
 		GEODE_AS_STATIC_FUNCTION(playtestStopped) 
-	#endif
-
-	#ifndef GEODE_STATICS_positionIsInSnapped
-		#define GEODE_STATICS_positionIsInSnapped
-		GEODE_AS_STATIC_FUNCTION(positionIsInSnapped) 
-	#endif
-
-	#ifndef GEODE_STATICS_positionWithoutOffset
-		#define GEODE_STATICS_positionWithoutOffset
-		GEODE_AS_STATIC_FUNCTION(positionWithoutOffset) 
 	#endif
 
 	#ifndef GEODE_STATICS_processSelectObjects
@@ -963,11 +788,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_processSmartObjectsFromType
 		#define GEODE_STATICS_processSmartObjectsFromType
 		GEODE_AS_STATIC_FUNCTION(processSmartObjectsFromType) 
-	#endif
-
-	#ifndef GEODE_STATICS_recreateButtonTabs
-		#define GEODE_STATICS_recreateButtonTabs
-		GEODE_AS_STATIC_FUNCTION(recreateButtonTabs) 
 	#endif
 
 	#ifndef GEODE_STATICS_redoLastAction
@@ -995,11 +815,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(repositionObjectsToCenter) 
 	#endif
 
-	#ifndef GEODE_STATICS_resetObjectEditorValues
-		#define GEODE_STATICS_resetObjectEditorValues
-		GEODE_AS_STATIC_FUNCTION(resetObjectEditorValues) 
-	#endif
-
 	#ifndef GEODE_STATICS_resetSelectedObjectsColor
 		#define GEODE_STATICS_resetSelectedObjectsColor
 		GEODE_AS_STATIC_FUNCTION(resetSelectedObjectsColor) 
@@ -1018,11 +833,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_scaleObjects
 		#define GEODE_STATICS_scaleObjects
 		GEODE_AS_STATIC_FUNCTION(scaleObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_selectAll
-		#define GEODE_STATICS_selectAll
-		GEODE_AS_STATIC_FUNCTION(selectAll) 
 	#endif
 
 	#ifndef GEODE_STATICS_selectAllWithDirection
@@ -1055,24 +865,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(setupDeleteMenu) 
 	#endif
 
-	#ifndef GEODE_STATICS_setupTransformControl
-		#define GEODE_STATICS_setupTransformControl
-		GEODE_AS_STATIC_FUNCTION(setupTransformControl) 
-	#endif
-
 	#ifndef GEODE_STATICS_shouldDeleteObject
 		#define GEODE_STATICS_shouldDeleteObject
 		GEODE_AS_STATIC_FUNCTION(shouldDeleteObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_shouldSnap
-		#define GEODE_STATICS_shouldSnap
-		GEODE_AS_STATIC_FUNCTION(shouldSnap) 
-	#endif
-
-	#ifndef GEODE_STATICS_showDeleteConfirmation
-		#define GEODE_STATICS_showDeleteConfirmation
-		GEODE_AS_STATIC_FUNCTION(showDeleteConfirmation) 
 	#endif
 
 	#ifndef GEODE_STATICS_showLiveColorSelectForMode
@@ -1080,19 +875,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(showLiveColorSelectForMode) 
 	#endif
 
-	#ifndef GEODE_STATICS_showLiveColorSelectForModeSpecial
-		#define GEODE_STATICS_showLiveColorSelectForModeSpecial
-		GEODE_AS_STATIC_FUNCTION(showLiveColorSelectForModeSpecial) 
-	#endif
-
 	#ifndef GEODE_STATICS_showMaxBasicError
 		#define GEODE_STATICS_showMaxBasicError
 		GEODE_AS_STATIC_FUNCTION(showMaxBasicError) 
-	#endif
-
-	#ifndef GEODE_STATICS_showMaxCoinError
-		#define GEODE_STATICS_showMaxCoinError
-		GEODE_AS_STATIC_FUNCTION(showMaxCoinError) 
 	#endif
 
 	#ifndef GEODE_STATICS_showMaxError
@@ -1110,19 +895,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(sliderChanged) 
 	#endif
 
-	#ifndef GEODE_STATICS_smartTypeForKey
-		#define GEODE_STATICS_smartTypeForKey
-		GEODE_AS_STATIC_FUNCTION(smartTypeForKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_spriteFromObjectString
 		#define GEODE_STATICS_spriteFromObjectString
 		GEODE_AS_STATIC_FUNCTION(spriteFromObjectString) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleDuplicateButton
-		#define GEODE_STATICS_toggleDuplicateButton
-		GEODE_AS_STATIC_FUNCTION(toggleDuplicateButton) 
 	#endif
 
 	#ifndef GEODE_STATICS_toggleEditObjectButton
@@ -1138,11 +913,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_toggleFreeMove
 		#define GEODE_STATICS_toggleFreeMove
 		GEODE_AS_STATIC_FUNCTION(toggleFreeMove) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleLockUI
-		#define GEODE_STATICS_toggleLockUI
-		GEODE_AS_STATIC_FUNCTION(toggleLockUI) 
 	#endif
 
 	#ifndef GEODE_STATICS_toggleMode
@@ -1195,11 +965,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(triggerSwipeMode) 
 	#endif
 
-	#ifndef GEODE_STATICS_tryUpdateTimeMarkers
-		#define GEODE_STATICS_tryUpdateTimeMarkers
-		GEODE_AS_STATIC_FUNCTION(tryUpdateTimeMarkers) 
-	#endif
-
 	#ifndef GEODE_STATICS_undoLastAction
 		#define GEODE_STATICS_undoLastAction
 		GEODE_AS_STATIC_FUNCTION(undoLastAction) 
@@ -1235,11 +1000,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateGridNodeSize) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateGroupIDBtn2
-		#define GEODE_STATICS_updateGroupIDBtn2
-		GEODE_AS_STATIC_FUNCTION(updateGroupIDBtn2) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateGroupIDLabel
 		#define GEODE_STATICS_updateGroupIDLabel
 		GEODE_AS_STATIC_FUNCTION(updateGroupIDLabel) 
@@ -1265,16 +1025,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateZoom) 
 	#endif
 
-	#ifndef GEODE_STATICS_valueFromXPos
-		#define GEODE_STATICS_valueFromXPos
-		GEODE_AS_STATIC_FUNCTION(valueFromXPos) 
-	#endif
-
-	#ifndef GEODE_STATICS_xPosFromValue
-		#define GEODE_STATICS_xPosFromValue
-		GEODE_AS_STATIC_FUNCTION(xPosFromValue) 
-	#endif
-
 	#ifndef GEODE_STATICS_zoomIn
 		#define GEODE_STATICS_zoomIn
 		GEODE_AS_STATIC_FUNCTION(zoomIn) 
@@ -1294,6 +1044,21 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_get
 		#define GEODE_CONCEPT_CHECK_get
 		GEODE_CONCEPT_FUNCTION_CHECK(get) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getRandomStartKey
+		#define GEODE_CONCEPT_CHECK_getRandomStartKey
+		GEODE_CONCEPT_FUNCTION_CHECK(getRandomStartKey) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getSmartObjectKey
+		#define GEODE_CONCEPT_CHECK_getSmartObjectKey
+		GEODE_CONCEPT_FUNCTION_CHECK(getSmartObjectKey) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_smartTypeForKey
+		#define GEODE_CONCEPT_CHECK_smartTypeForKey
+		GEODE_CONCEPT_FUNCTION_CHECK(smartTypeForKey) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_draw
@@ -1921,11 +1686,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(getNeighbor) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_getRandomStartKey
-		#define GEODE_CONCEPT_CHECK_getRandomStartKey
-		GEODE_CONCEPT_FUNCTION_CHECK(getRandomStartKey) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_getRelativeOffset
 		#define GEODE_CONCEPT_CHECK_getRelativeOffset
 		GEODE_CONCEPT_FUNCTION_CHECK(getRelativeOffset) 
@@ -1944,11 +1704,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_getSmartNeighbor
 		#define GEODE_CONCEPT_CHECK_getSmartNeighbor
 		GEODE_CONCEPT_FUNCTION_CHECK(getSmartNeighbor) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getSmartObjectKey
-		#define GEODE_CONCEPT_CHECK_getSmartObjectKey
-		GEODE_CONCEPT_FUNCTION_CHECK(getSmartObjectKey) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_getSnapAngle
@@ -2206,6 +1961,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(onSettings) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_onStickyToggle
+		#define GEODE_CONCEPT_CHECK_onStickyToggle
+		GEODE_CONCEPT_FUNCTION_CHECK(onStickyToggle) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_onStopPlaytest
 		#define GEODE_CONCEPT_CHECK_onStopPlaytest
 		GEODE_CONCEPT_FUNCTION_CHECK(onStopPlaytest) 
@@ -2224,6 +1984,16 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_onToggleSelectedOrder
 		#define GEODE_CONCEPT_CHECK_onToggleSelectedOrder
 		GEODE_CONCEPT_FUNCTION_CHECK(onToggleSelectedOrder) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_onToggleTraceIn
+		#define GEODE_CONCEPT_CHECK_onToggleTraceIn
+		GEODE_CONCEPT_FUNCTION_CHECK(onToggleTraceIn) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_onToggleTraceOut
+		#define GEODE_CONCEPT_CHECK_onToggleTraceOut
+		GEODE_CONCEPT_FUNCTION_CHECK(onToggleTraceOut) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_onUngroupSticky
@@ -2451,11 +2221,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(sliderChanged) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_smartTypeForKey
-		#define GEODE_CONCEPT_CHECK_smartTypeForKey
-		GEODE_CONCEPT_FUNCTION_CHECK(smartTypeForKey) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_spriteFromObjectString
 		#define GEODE_CONCEPT_CHECK_spriteFromObjectString
 		GEODE_CONCEPT_FUNCTION_CHECK(spriteFromObjectString) 
@@ -2504,11 +2269,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_toggleSpecialEditButtons
 		#define GEODE_CONCEPT_CHECK_toggleSpecialEditButtons
 		GEODE_CONCEPT_FUNCTION_CHECK(toggleSpecialEditButtons) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_toggleStickyControls
-		#define GEODE_CONCEPT_CHECK_toggleStickyControls
-		GEODE_CONCEPT_FUNCTION_CHECK(toggleStickyControls) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_toggleSwipe
@@ -2626,6 +2386,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(updateSpecialUIElements) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_updateStickyControls
+		#define GEODE_CONCEPT_CHECK_updateStickyControls
+		GEODE_CONCEPT_FUNCTION_CHECK(updateStickyControls) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_updateZoom
 		#define GEODE_CONCEPT_CHECK_updateZoom
 		GEODE_CONCEPT_FUNCTION_CHECK(updateZoom) 
@@ -2665,290 +2430,293 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0xdd4b0, Thiscall, EditorUI, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, create, LevelEditorLayer*)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0xde9e0, Thiscall, EditorUI, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, create, LevelEditorLayer*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, get, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121120, Thiscall, EditorUI, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121c60, Thiscall, EditorUI, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1222e0, Thiscall, EditorUI, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x122a30, Thiscall, EditorUI, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71210, Thiscall, EditorUI, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b1a0, Thiscall, EditorUI, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1130e0, Thiscall, EditorUI, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x123770, Thiscall, EditorUI, keyDown, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd8f0, Thiscall, EditorUI, getUI, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe5580, Thiscall, EditorUI, setIDPopupClosed, SetIDPopup*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe5390, Thiscall, EditorUI, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x113b60, Thiscall, EditorUI, updateTransformControl, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x114050, Thiscall, EditorUI, transformChangeBegin, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12d520, Default, EditorUI, getRandomStartKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12d7c0, Default, EditorUI, getSmartObjectKey, int, GJSmartDirection)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12d480, Default, EditorUI, smartTypeForKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x122cd0, Thiscall, EditorUI, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x123810, Thiscall, EditorUI, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x123e90, Thiscall, EditorUI, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1245e0, Thiscall, EditorUI, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71240, Thiscall, EditorUI, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b7d0, Thiscall, EditorUI, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x114980, Thiscall, EditorUI, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x125320, Thiscall, EditorUI, keyDown, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdee20, Thiscall, EditorUI, getUI, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe6c50, Thiscall, EditorUI, setIDPopupClosed, SetIDPopup*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe6a50, Thiscall, EditorUI, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x115400, Thiscall, EditorUI, updateTransformControl, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1158f0, Thiscall, EditorUI, transformChangeBegin, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, transformChangeEnded, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd900, Thiscall, EditorUI, getTransformNode, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11fca0, Thiscall, EditorUI, transformScaleXChanged, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11fcc0, Thiscall, EditorUI, transformScaleYChanged, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11fce0, Thiscall, EditorUI, transformScaleXYChanged, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11fd00, Thiscall, EditorUI, transformSkewXChanged, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11fd20, Thiscall, EditorUI, transformSkewYChanged, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11fd40, Thiscall, EditorUI, transformRotationXChanged, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11fd60, Thiscall, EditorUI, transformRotationYChanged, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11fd80, Thiscall, EditorUI, transformRotationChanged, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11fda0, Thiscall, EditorUI, transformResetRotation, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11fdd0, Thiscall, EditorUI, transformRestoreRotation, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110990, Thiscall, EditorUI, songStateChanged, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11dcd0, Thiscall, EditorUI, colorSelectClosed, cocos2d::CCNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x124a00, Thiscall, EditorUI, keyUp, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x124a40, Thiscall, EditorUI, scrollWheel, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121560, Thiscall, EditorUI, angleChangeBegin, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdee30, Thiscall, EditorUI, getTransformNode, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121820, Thiscall, EditorUI, transformScaleXChanged, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121840, Thiscall, EditorUI, transformScaleYChanged, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121860, Thiscall, EditorUI, transformScaleXYChanged, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121880, Thiscall, EditorUI, transformSkewXChanged, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1218a0, Thiscall, EditorUI, transformSkewYChanged, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1218c0, Thiscall, EditorUI, transformRotationXChanged, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1218e0, Thiscall, EditorUI, transformRotationYChanged, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121900, Thiscall, EditorUI, transformRotationChanged, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121920, Thiscall, EditorUI, transformResetRotation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121950, Thiscall, EditorUI, transformRestoreRotation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1120a0, Thiscall, EditorUI, songStateChanged, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11f6f0, Thiscall, EditorUI, colorSelectClosed, cocos2d::CCNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1267b0, Thiscall, EditorUI, keyUp, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1267f0, Thiscall, EditorUI, scrollWheel, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x123110, Thiscall, EditorUI, angleChangeBegin, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, angleChangeEnded, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121570, Thiscall, EditorUI, angleChanged, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x113550, Thiscall, EditorUI, updateScaleControl, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x114060, Thiscall, EditorUI, anchorPointMoved, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1136b0, Thiscall, EditorUI, scaleChangeBegin, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x123120, Thiscall, EditorUI, angleChanged, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x114df0, Thiscall, EditorUI, updateScaleControl, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x115900, Thiscall, EditorUI, anchorPointMoved, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x114f50, Thiscall, EditorUI, scaleChangeBegin, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, scaleChangeEnded, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1136c0, Thiscall, EditorUI, scaleXChanged, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x113770, Thiscall, EditorUI, scaleYChanged, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x113820, Thiscall, EditorUI, scaleXYChanged, float, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121420, Thiscall, EditorUI, activateRotationControl, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x113280, Thiscall, EditorUI, activateScaleControl, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1138d0, Thiscall, EditorUI, activateTransformControl, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x114390, Thiscall, EditorUI, addObjectsToSmartTemplate, GJSmartTemplate*, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, addSnapPosition, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1203a0, Thiscall, EditorUI, alignObjects, cocos2d::CCArray*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x120d40, Thiscall, EditorUI, applyOffset, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, applySpecialOffset, cocos2d::CCPoint, GameObject*, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, arrayContainsClass, cocos2d::CCArray*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1178c0, Thiscall, EditorUI, assignNewGroups, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, canAllowMultiActivate, GameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10ec30, Thiscall, EditorUI, canSelectObject, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, centerCameraOnObject, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, changeSelectedObjects, cocos2d::CCArray*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1140e0, Thiscall, EditorUI, checkDiffAfterTransformAnchor, cocos2d::CCPoint, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10ef50, Thiscall, EditorUI, checkLiveColorSelect, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe1040, Thiscall, EditorUI, clickOnPosition, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, closeLiveColorSelect, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, closeLiveHSVSelect, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, colorSelectClosed, cocos2d::ccColor3B)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, constrainGameLayerPosition, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x120dd0, Thiscall, EditorUI, constrainGameLayerPosition, float, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, convertKeyBasedOnNeighbors, int, int, cocos2d::CCPoint, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, convertToBaseKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x111560, Thiscall, EditorUI, copyObjects, cocos2d::CCArray*, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, copyObjectsDetailed, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe30e0, Thiscall, EditorUI, createCustomItems, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, createEdgeForObject, GameObject*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, createExtraObject, int, cocos2d::CCPoint, GameObject*, cocos2d::CCArray*, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, createExtras, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, createExtrasForObject, int, GameObject*, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, createGlow, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x117c90, Thiscall, EditorUI, createLoop, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x119350, Thiscall, EditorUI, createMoveMenu, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1179f0, Thiscall, EditorUI, createNewKeyframeAnim, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10e840, Thiscall, EditorUI, createObject, int, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, createOutlines, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1160f0, Thiscall, EditorUI, createPrefab, GJSmartTemplate*, gd::string, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12da00, Thiscall, EditorUI, createRockBases, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, createRockEdges, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x115580, Thiscall, EditorUI, createSmartObjectsFromTemplate, GJSmartTemplate*, cocos2d::CCArray*, bool, bool, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x116660, Thiscall, EditorUI, createSmartObjectsFromType, int, cocos2d::CCArray*, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10f830, Thiscall, EditorUI, createUndoObject, UndoCommand, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10fb50, Thiscall, EditorUI, createUndoSelectObject, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x114f60, Thiscall, EditorUI, scaleXChanged, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x115010, Thiscall, EditorUI, scaleYChanged, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1150c0, Thiscall, EditorUI, scaleXYChanged, float, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x122fd0, Thiscall, EditorUI, activateRotationControl, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x114b20, Thiscall, EditorUI, activateScaleControl, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x115170, Thiscall, EditorUI, activateTransformControl, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x115c30, Thiscall, EditorUI, addObjectsToSmartTemplate, GJSmartTemplate*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, addSnapPosition, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121f20, Thiscall, EditorUI, alignObjects, cocos2d::CCArray*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1228f0, Thiscall, EditorUI, applyOffset, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x122660, Thiscall, EditorUI, applySpecialOffset, cocos2d::CCPoint, GameObject*, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, arrayContainsClass, cocos2d::CCArray*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x119220, Thiscall, EditorUI, assignNewGroups, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, canAllowMultiActivate, GameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110310, Thiscall, EditorUI, canSelectObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, centerCameraOnObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, changeSelectedObjects, cocos2d::CCArray*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x115980, Thiscall, EditorUI, checkDiffAfterTransformAnchor, cocos2d::CCPoint, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110630, Thiscall, EditorUI, checkLiveColorSelect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe26e0, Thiscall, EditorUI, clickOnPosition, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11efa0, Thiscall, EditorUI, closeLiveColorSelect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11f1f0, Thiscall, EditorUI, closeLiveHSVSelect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, colorSelectClosed, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, constrainGameLayerPosition, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x122980, Thiscall, EditorUI, constrainGameLayerPosition, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12deb0, Thiscall, EditorUI, convertKeyBasedOnNeighbors, int, int, cocos2d::CCPoint, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12ddb0, Thiscall, EditorUI, convertToBaseKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112e00, Thiscall, EditorUI, copyObjects, cocos2d::CCArray*, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, copyObjectsDetailed, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe4780, Thiscall, EditorUI, createCustomItems, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12e690, Thiscall, EditorUI, createEdgeForObject, GameObject*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x132c80, Thiscall, EditorUI, createExtraObject, int, cocos2d::CCPoint, GameObject*, cocos2d::CCArray*, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, createExtras, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12ff20, Thiscall, EditorUI, createExtrasForObject, int, GameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, createGlow, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x119630, Thiscall, EditorUI, createLoop, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11ad30, Thiscall, EditorUI, createMoveMenu, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x119390, Thiscall, EditorUI, createNewKeyframeAnim, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10ff20, Thiscall, EditorUI, createObject, int, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12ecf0, Thiscall, EditorUI, createOutlines, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1179a0, Thiscall, EditorUI, createPrefab, GJSmartTemplate*, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12f5f0, Thiscall, EditorUI, createRockBases, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12e320, Thiscall, EditorUI, createRockEdges, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x116e20, Thiscall, EditorUI, createSmartObjectsFromTemplate, GJSmartTemplate*, cocos2d::CCArray*, bool, bool, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x117f10, Thiscall, EditorUI, createSmartObjectsFromType, int, cocos2d::CCArray*, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110f30, Thiscall, EditorUI, createUndoObject, UndoCommand, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x111250, Thiscall, EditorUI, createUndoSelectObject, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, deactivateRotationControl, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x113480, Thiscall, EditorUI, deactivateScaleControl, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x113ad0, Thiscall, EditorUI, deactivateTransformControl, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x114d20, Thiscall, EditorUI, deactivateScaleControl, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x115370, Thiscall, EditorUI, deactivateTransformControl, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, deleteObject, GameObject*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x116500, Thiscall, EditorUI, deleteSmartBlocksFromObjects, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x117db0, Thiscall, EditorUI, deleteSmartBlocksFromObjects, cocos2d::CCArray*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, deleteTypeFromObjects, int, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10fd80, Thiscall, EditorUI, deselectAll, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x111480, Thiscall, EditorUI, deselectAll, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, deselectObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10fc60, Thiscall, EditorUI, deselectObject, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10f0b0, Thiscall, EditorUI, deselectObjectsColor, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe51b0, Thiscall, EditorUI, deselectTargetPortals, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, disableButton, CreateMenuItem*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x111900, Thiscall, EditorUI, doCopyObjects, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, doPasteInPlace, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x111a90, Thiscall, EditorUI, doPasteObjects, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x117000, Thiscall, EditorUI, dynamicGroupUpdate, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, edgeForObject, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, editButton2Usable, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1182f0, Thiscall, EditorUI, editButtonUsable, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, editColor, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, editColorButtonUsable, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11d880, Thiscall, EditorUI, editGroup, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, editHSV, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11a510, Thiscall, EditorUI, editObject, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11c4a0, Thiscall, EditorUI, editObject2, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, editObject3, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11c4b0, Thiscall, EditorUI, editObjectSpecial, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, editorLayerForArray, cocos2d::CCArray*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, enableButton, CreateMenuItem*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, findAndSelectObject, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121790, Thiscall, EditorUI, findSnapObject, cocos2d::CCArray*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121690, Thiscall, EditorUI, findSnapObject, cocos2d::CCPoint, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, findTriggerTest, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11f0f0, Thiscall, EditorUI, flipObjectsX, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11f2d0, Thiscall, EditorUI, flipObjectsY, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, getButton, char const*, int, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10d2a0, Thiscall, EditorUI, getCreateBtn, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, getCreateMenuItemButton, cocos2d::CCSprite*, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*, float, int, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, getCycledObject, cocos2d::CCArray*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, getEditColorTargets, ColorAction*&, ColorAction*&, EffectGameObject*&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x111360, Thiscall, EditorUI, deselectObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110790, Thiscall, EditorUI, deselectObjectsColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe6870, Thiscall, EditorUI, deselectTargetPortals, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, disableButton, CreateMenuItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1131a0, Thiscall, EditorUI, doCopyObjects, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, doPasteInPlace, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x113330, Thiscall, EditorUI, doPasteObjects, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1188b0, Thiscall, EditorUI, dynamicGroupUpdate, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, edgeForObject, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11a520, Thiscall, EditorUI, editButton2Usable, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x119cd0, Thiscall, EditorUI, editButtonUsable, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11ed90, Thiscall, EditorUI, editColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, editColorButtonUsable, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11f260, Thiscall, EditorUI, editGroup, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11f010, Thiscall, EditorUI, editHSV, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11bef0, Thiscall, EditorUI, editObject, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11de80, Thiscall, EditorUI, editObject2, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, editObject3, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11de90, Thiscall, EditorUI, editObjectSpecial, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, editorLayerForArray, cocos2d::CCArray*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, enableButton, CreateMenuItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe6ee0, Thiscall, EditorUI, findAndSelectObject, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x123340, Thiscall, EditorUI, findSnapObject, cocos2d::CCArray*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x123240, Thiscall, EditorUI, findSnapObject, cocos2d::CCPoint, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, findTriggerTest, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x120c70, Thiscall, EditorUI, flipObjectsX, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x120e50, Thiscall, EditorUI, flipObjectsY, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, getButton, char const*, int, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10e980, Thiscall, EditorUI, getCreateBtn, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, getCreateMenuItemButton, cocos2d::CCSprite*, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*, float, int, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, getCycledObject, cocos2d::CCArray*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11eb00, Thiscall, EditorUI, getEditColorTargets, ColorAction*&, ColorAction*&, EffectGameObject*&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, getGridSnappedPos, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121190, Thiscall, EditorUI, getGroupCenter, cocos2d::CCArray*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, getGroupInfo, GameObject*, cocos2d::CCArray*, int&, int&, int&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11e6f0, Thiscall, EditorUI, getLimitedPosition, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, getModeBtn, char const*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x116f30, Thiscall, EditorUI, getNeighbor, int, cocos2d::CCPoint, GJSmartDirection, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, getRandomStartKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, getRelativeOffset, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10f780, Thiscall, EditorUI, getSelectedObjects, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, getSimpleButton, gd::string, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x116e10, Thiscall, EditorUI, getSmartNeighbor, SmartGameObject*, cocos2d::CCPoint, GJSmartDirection, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, getSmartObjectKey, int, GJSmartDirection)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x122d40, Thiscall, EditorUI, getGroupCenter, cocos2d::CCArray*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, getGroupInfo, GameObject*, cocos2d::CCArray*, int&, int&, int&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x120110, Thiscall, EditorUI, getLimitedPosition, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, getModeBtn, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1187e0, Thiscall, EditorUI, getNeighbor, int, cocos2d::CCPoint, GJSmartDirection, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, getRelativeOffset, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110e80, Thiscall, EditorUI, getSelectedObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, getSimpleButton, gd::string, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1186c0, Thiscall, EditorUI, getSmartNeighbor, SmartGameObject*, cocos2d::CCPoint, GJSmartDirection, cocos2d::CCArray*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, getSnapAngle, GameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe11d0, Thiscall, EditorUI, getSpriteButton, char const*, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*, float, int, cocos2d::CCPoint)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, getSpriteButton, char const*, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe1260, Thiscall, EditorUI, getSpriteButton, cocos2d::CCSprite*, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*, float, int, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, getTouchPoint, cocos2d::CCTouch*, cocos2d::CCEvent*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, getTransformState, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, getXMin, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdde60, Thiscall, EditorUI, init, LevelEditorLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, isLiveColorSelectTrigger, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1272b0, Thiscall, EditorUI, isSpecialSnapObject, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, liveEditColorUsable, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10d090, Thiscall, EditorUI, menuItemFromObjectString, gd::string, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11de20, Thiscall, EditorUI, moveForCommand, EditCommand)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe16b0, Thiscall, EditorUI, moveGamelayer, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11e290, Thiscall, EditorUI, moveObject, GameObject*, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11dfd0, Thiscall, EditorUI, moveObjectCall, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11e000, Thiscall, EditorUI, moveObjectCall, EditCommand)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x124bf0, Thiscall, EditorUI, offsetForKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, onAssignNewGroupID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe5bd0, Thiscall, EditorUI, onColorFilter, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, onCopy, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112ac0, Thiscall, EditorUI, onCopyState, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10dd10, Thiscall, EditorUI, onCreate, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10d880, Thiscall, EditorUI, onCreateButton, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10df10, Thiscall, EditorUI, onCreateObject, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe4760, Thiscall, EditorUI, onDelete, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, onDeleteAll, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe2e80, Thiscall, EditorUI, onDeleteCustomItem, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, onDeleteInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe4d80, Thiscall, EditorUI, onDeleteSelected, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe5310, Thiscall, EditorUI, onDeleteSelectedType, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe5360, Thiscall, EditorUI, onDeleteStartPos, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10fd40, Thiscall, EditorUI, onDeselectAll, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1113e0, Thiscall, EditorUI, onDuplicate, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11d0b0, Thiscall, EditorUI, onEditColor, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, onFindObject, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112f40, Thiscall, EditorUI, onGoToBaseLayer, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112de0, Thiscall, EditorUI, onGoToLayer, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11da90, Thiscall, EditorUI, onGroupDown, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe5a80, Thiscall, EditorUI, onGroupIDFilter, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1110f0, Thiscall, EditorUI, onGroupSticky, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11da70, Thiscall, EditorUI, onGroupUp, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11dc00, Thiscall, EditorUI, onLockLayer, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe2990, Thiscall, EditorUI, onNewCustomItem, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, onPaste, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112cd0, Thiscall, EditorUI, onPasteColor, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, onPasteInPlace, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112b40, Thiscall, EditorUI, onPasteState, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe03d0, Thiscall, EditorUI, onPause, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110390, Thiscall, EditorUI, onPlayback, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1109a0, Thiscall, EditorUI, onPlaytest, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, onResetSpecialFilter, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112f60, Thiscall, EditorUI, onSelectBuildTab, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe0350, Thiscall, EditorUI, onSettings, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110d40, Thiscall, EditorUI, onStopPlaytest, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x120860, Thiscall, EditorUI, onTargetIDChange, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, onToggleGuide, EffectGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, onToggleSelectedOrder, EffectGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x111130, Thiscall, EditorUI, onUngroupSticky, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe5e30, Thiscall, EditorUI, onUpdateDeleteFilter, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe3050, Thiscall, EditorUI, orderDownCustomItem, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe2fc0, Thiscall, EditorUI, orderUpCustomItem, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x111d10, Thiscall, EditorUI, pasteObjects, gd::string, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, playCircleAnim, cocos2d::CCPoint, float, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, playerTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, playerTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110d80, Thiscall, EditorUI, playtestStopped, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, positionIsInSnapped, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, positionWithoutOffset, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110060, Thiscall, EditorUI, processSelectObjects, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x116b80, Thiscall, EditorUI, processSmartObjectsFromType, int, cocos2d::CCArray*, cocos2d::CCArray*, cocos2d::CCArray*, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, recreateButtonTabs, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110190, Thiscall, EditorUI, redoLastAction, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe35f0, Thiscall, EditorUI, reloadCustomItems, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x120cb0, Thiscall, EditorUI, removeOffset, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x117680, Thiscall, EditorUI, replaceGroupID, GameObject*, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112a20, Thiscall, EditorUI, repositionObjectsToCenter, cocos2d::CCArray*, cocos2d::CCPoint, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, resetObjectEditorValues, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11dd50, Thiscall, EditorUI, resetSelectedObjectsColor, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe36d0, Thiscall, EditorUI, resetUI, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11f4b0, Thiscall, EditorUI, rotateObjects, cocos2d::CCArray*, float, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe2870, Thiscall, EditorUI, getSpriteButton, char const*, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*, float, int, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe2900, Thiscall, EditorUI, getSpriteButton, cocos2d::CCSprite*, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*, float, int, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, getTouchPoint, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, getTransformState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x122bc0, Thiscall, EditorUI, getXMin, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdf390, Thiscall, EditorUI, init, LevelEditorLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, isLiveColorSelectTrigger, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x129060, Thiscall, EditorUI, isSpecialSnapObject, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, liveEditColorUsable, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10e770, Thiscall, EditorUI, menuItemFromObjectString, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11f840, Thiscall, EditorUI, moveForCommand, EditCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe2d50, Thiscall, EditorUI, moveGamelayer, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11fcb0, Thiscall, EditorUI, moveObject, GameObject*, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11fa20, Thiscall, EditorUI, moveObjectCall, EditCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11f9f0, Thiscall, EditorUI, moveObjectCall, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1269a0, Thiscall, EditorUI, offsetForKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x122550, Thiscall, EditorUI, onAssignNewGroupID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe72a0, Thiscall, EditorUI, onColorFilter, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x113190, Thiscall, EditorUI, onCopy, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x114360, Thiscall, EditorUI, onCopyState, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10f3f0, Thiscall, EditorUI, onCreate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10ef60, Thiscall, EditorUI, onCreateButton, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10f5f0, Thiscall, EditorUI, onCreateObject, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe5e00, Thiscall, EditorUI, onDelete, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, onDeleteAll, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe4520, Thiscall, EditorUI, onDeleteCustomItem, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe5cb0, Thiscall, EditorUI, onDeleteInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe6430, Thiscall, EditorUI, onDeleteSelected, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe69d0, Thiscall, EditorUI, onDeleteSelectedType, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe6a20, Thiscall, EditorUI, onDeleteStartPos, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x111440, Thiscall, EditorUI, onDeselectAll, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112c80, Thiscall, EditorUI, onDuplicate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11ea90, Thiscall, EditorUI, onEditColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe7e90, Thiscall, EditorUI, onFindObject, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1147e0, Thiscall, EditorUI, onGoToBaseLayer, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x114680, Thiscall, EditorUI, onGoToLayer, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11f4b0, Thiscall, EditorUI, onGroupDown, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe7150, Thiscall, EditorUI, onGroupIDFilter, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1128e0, Thiscall, EditorUI, onGroupSticky, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11f490, Thiscall, EditorUI, onGroupUp, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11f620, Thiscall, EditorUI, onLockLayer, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe4030, Thiscall, EditorUI, onNewCustomItem, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x113320, Thiscall, EditorUI, onPaste, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x114570, Thiscall, EditorUI, onPasteColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, onPasteInPlace, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1143e0, Thiscall, EditorUI, onPasteState, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe19c0, Thiscall, EditorUI, onPause, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x111aa0, Thiscall, EditorUI, onPlayback, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1120b0, Thiscall, EditorUI, onPlaytest, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe7430, Thiscall, EditorUI, onResetSpecialFilter, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x114800, Thiscall, EditorUI, onSelectBuildTab, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe1940, Thiscall, EditorUI, onSettings, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112960, Thiscall, EditorUI, onStickyToggle, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112530, Thiscall, EditorUI, onStopPlaytest, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1223e0, Thiscall, EditorUI, onTargetIDChange, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, onToggleGuide, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, onToggleSelectedOrder, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, onToggleTraceIn, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, onToggleTraceOut, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112920, Thiscall, EditorUI, onUngroupSticky, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe7500, Thiscall, EditorUI, onUpdateDeleteFilter, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe46f0, Thiscall, EditorUI, orderDownCustomItem, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe4660, Thiscall, EditorUI, orderUpCustomItem, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1135b0, Thiscall, EditorUI, pasteObjects, gd::string, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, playCircleAnim, cocos2d::CCPoint, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, playerTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, playerTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112570, Thiscall, EditorUI, playtestStopped, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, positionIsInSnapped, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, positionWithoutOffset, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x111760, Thiscall, EditorUI, processSelectObjects, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x118430, Thiscall, EditorUI, processSmartObjectsFromType, int, cocos2d::CCArray*, cocos2d::CCArray*, cocos2d::CCArray*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, recreateButtonTabs, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x111890, Thiscall, EditorUI, redoLastAction, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe4c90, Thiscall, EditorUI, reloadCustomItems, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x122860, Thiscall, EditorUI, removeOffset, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x118fe0, Thiscall, EditorUI, replaceGroupID, GameObject*, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1142c0, Thiscall, EditorUI, repositionObjectsToCenter, cocos2d::CCArray*, cocos2d::CCPoint, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, resetObjectEditorValues, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11f770, Thiscall, EditorUI, resetSelectedObjectsColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe4d70, Thiscall, EditorUI, resetUI, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121030, Thiscall, EditorUI, rotateObjects, cocos2d::CCArray*, float, cocos2d::CCPoint)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, rotationforCommand, EditCommand)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11f8d0, Thiscall, EditorUI, scaleObjects, cocos2d::CCArray*, float, float, cocos2d::CCPoint, ObjectScaleType, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, selectAll, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, selectAllWithDirection, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112f90, Thiscall, EditorUI, selectBuildTab, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10ee50, Thiscall, EditorUI, selectObject, GameObject*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10f140, Thiscall, EditorUI, selectObjects, cocos2d::CCArray*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121450, Thiscall, EditorUI, scaleObjects, cocos2d::CCArray*, float, float, cocos2d::CCPoint, ObjectScaleType, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, selectAll, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1115b0, Thiscall, EditorUI, selectAllWithDirection, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x114830, Thiscall, EditorUI, selectBuildTab, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110530, Thiscall, EditorUI, selectObject, GameObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110820, Thiscall, EditorUI, selectObjects, cocos2d::CCArray*, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, selectObjectsInRect, cocos2d::CCRect)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe6910, Thiscall, EditorUI, setupCreateMenu, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe38d0, Thiscall, EditorUI, setupDeleteMenu, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe7fe0, Thiscall, EditorUI, setupCreateMenu, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe4f70, Thiscall, EditorUI, setupDeleteMenu, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, setupEditMenu, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, setupTransformControl, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe4c50, Thiscall, EditorUI, shouldDeleteObject, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, shouldSnap, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, showDeleteConfirmation, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, showLiveColorSelectForMode, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, showLiveColorSelectForModeSpecial, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, showMaxBasicError, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, showMaxCoinError, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x111170, Thiscall, EditorUI, showMaxError, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110200, Thiscall, EditorUI, showUI, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe13a0, Thiscall, EditorUI, sliderChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12b890, Default, EditorUI, smartTypeForKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10c790, Thiscall, EditorUI, spriteFromObjectString, gd::string, bool, bool, int, cocos2d::CCArray*, cocos2d::CCArray*, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, toggleDuplicateButton, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x118f10, Thiscall, EditorUI, toggleEditObjectButton, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10eb00, Thiscall, EditorUI, toggleEnableRotate, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10e980, Thiscall, EditorUI, toggleFreeMove, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, toggleLockUI, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe37f0, Thiscall, EditorUI, toggleMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe1730, Thiscall, EditorUI, toggleObjectInfoLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10ea20, Thiscall, EditorUI, toggleSnap, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, toggleSpecialEditButtons, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, toggleStickyControls, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10e8e0, Thiscall, EditorUI, toggleSwipe, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11ed00, Thiscall, EditorUI, transformObject, GameObject*, EditCommand, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11e780, Thiscall, EditorUI, transformObjectCall, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11e7b0, Thiscall, EditorUI, transformObjectCall, EditCommand)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11fec0, Thiscall, EditorUI, transformObjects, cocos2d::CCArray*, cocos2d::CCPoint, float, float, float, float, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11fe00, Thiscall, EditorUI, transformObjectsActive, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, setupTransformControl, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe6300, Thiscall, EditorUI, shouldDeleteObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, shouldSnap, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, showDeleteConfirmation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11eee0, Thiscall, EditorUI, showLiveColorSelectForMode, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, showLiveColorSelectForModeSpecial, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112b40, Thiscall, EditorUI, showMaxBasicError, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, showMaxCoinError, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112a10, Thiscall, EditorUI, showMaxError, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x111900, Thiscall, EditorUI, showUI, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe2a40, Thiscall, EditorUI, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10de60, Thiscall, EditorUI, spriteFromObjectString, gd::string, bool, bool, int, cocos2d::CCArray*, cocos2d::CCArray*, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, toggleDuplicateButton, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11a8f0, Thiscall, EditorUI, toggleEditObjectButton, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1101e0, Thiscall, EditorUI, toggleEnableRotate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110060, Thiscall, EditorUI, toggleFreeMove, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, toggleLockUI, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe4e90, Thiscall, EditorUI, toggleMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe2dd0, Thiscall, EditorUI, toggleObjectInfoLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110100, Thiscall, EditorUI, toggleSnap, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11a9f0, Thiscall, EditorUI, toggleSpecialEditButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10ffc0, Thiscall, EditorUI, toggleSwipe, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x120720, Thiscall, EditorUI, transformObject, GameObject*, EditCommand, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1201d0, Thiscall, EditorUI, transformObjectCall, EditCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1201a0, Thiscall, EditorUI, transformObjectCall, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121a40, Thiscall, EditorUI, transformObjects, cocos2d::CCArray*, cocos2d::CCPoint, float, float, float, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121980, Thiscall, EditorUI, transformObjectsActive, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, transformObjectsReset, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121b80, Thiscall, EditorUI, triggerSwipeMode, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, tryUpdateTimeMarkers, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110120, Thiscall, EditorUI, undoLastAction, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe07e0, Thiscall, EditorUI, updateButtons, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10d8c0, Thiscall, EditorUI, updateCreateMenu, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe5fb0, Thiscall, EditorUI, updateDeleteButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x123730, Thiscall, EditorUI, triggerSwipeMode, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, tryUpdateTimeMarkers, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x111820, Thiscall, EditorUI, undoLastAction, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe1dd0, Thiscall, EditorUI, updateButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x10efa0, Thiscall, EditorUI, updateCreateMenu, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe7680, Thiscall, EditorUI, updateDeleteButtons, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, updateDeleteMenu, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, updateEditButtonColor, int, cocos2d::ccColor3B)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, updateEditColorButton, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x114990, Thiscall, EditorUI, updateEditButtonColor, int, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11e920, Thiscall, EditorUI, updateEditColorButton, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, updateEditMenu, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe1560, Thiscall, EditorUI, updateGridNodeSize, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, updateGridNodeSize, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, updateGroupIDBtn2, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11dac0, Thiscall, EditorUI, updateGroupIDLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe17c0, Thiscall, EditorUI, updateObjectInfoLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110850, Thiscall, EditorUI, updatePlaybackBtn, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe14a0, Thiscall, EditorUI, updateSlider, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe2c00, Thiscall, EditorUI, updateGridNodeSize, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, updateGridNodeSize, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, updateGroupIDBtn2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x11f4e0, Thiscall, EditorUI, updateGroupIDLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe2e60, Thiscall, EditorUI, updateObjectInfoLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x111f60, Thiscall, EditorUI, updatePlaybackBtn, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xe2b40, Thiscall, EditorUI, updateSlider, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, updateSpecialUIElements, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110ef0, Thiscall, EditorUI, updateZoom, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorUI, valueFromXPos, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x121010, Thiscall, EditorUI, xPosFromValue, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, updateStickyControls, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1126e0, Thiscall, EditorUI, updateZoom, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, valueFromXPos, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, xPosFromValue, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorUI, zoomGameLayer, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110e50, Thiscall, EditorUI, zoomIn, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x110ea0, Thiscall, EditorUI, zoomOut, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112640, Thiscall, EditorUI, zoomIn, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x112690, Thiscall, EditorUI, zoomOut, cocos2d::CCObject*)
 		}
 	};
 }

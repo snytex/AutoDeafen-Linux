@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual int numberOfRowsInSection(unsigned int p0, TableView* p1);
+    virtual int numberOfRowsInSection(unsigned int section, TableView* tableView);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,7 +29,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual unsigned int numberOfSectionsInTableView(TableView* p0);
+    virtual unsigned int numberOfSectionsInTableView(TableView* tableView);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -38,7 +38,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void TableViewCommitCellEditingStyleForRowAtIndexPath(TableView* p0, TableViewCellEditingStyle p1, CCIndexPath& p2);
+    virtual void TableViewCommitCellEditingStyleForRowAtIndexPath(TableView* tableView, TableViewCellEditingStyle style, CCIndexPath& indexPath);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -47,5 +47,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual TableViewCell* cellForRowAtIndexPath(CCIndexPath& p0, TableView* p1);
+    virtual TableViewCell* cellForRowAtIndexPath(CCIndexPath& indexPath, TableView* tableView);
 };

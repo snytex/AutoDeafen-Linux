@@ -10,11 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
-	#ifndef GEODE_STATICS_addRankLabel
-		#define GEODE_STATICS_addRankLabel
-		GEODE_AS_STATIC_FUNCTION(addRankLabel) 
-	#endif
-
 	#ifndef GEODE_STATICS_addShardSprite
 		#define GEODE_STATICS_addShardSprite
 		GEODE_AS_STATIC_FUNCTION(addShardSprite) 
@@ -23,11 +18,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_changeToLockedArt
 		#define GEODE_STATICS_changeToLockedArt
 		GEODE_AS_STATIC_FUNCTION(changeToLockedArt) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateState
@@ -75,12 +65,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x281720, Default, GJPathSprite, create, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJPathSprite, addRankLabel, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x281d90, Thiscall, GJPathSprite, addShardSprite, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x281ad0, Thiscall, GJPathSprite, changeToLockedArt, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJPathSprite, init, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2818f0, Thiscall, GJPathSprite, updateState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x289050, Default, GJPathSprite, create, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJPathSprite, addRankLabel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2896c0, Thiscall, GJPathSprite, addShardSprite, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x289400, Thiscall, GJPathSprite, changeToLockedArt, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJPathSprite, init, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x289220, Thiscall, GJPathSprite, updateState, )
 		}
 	};
 }

@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void shareCommentClosed(gd::string p0, ShareCommentLayer* p1);
+    virtual void shareCommentClosed(gd::string text, ShareCommentLayer* layer);
 };

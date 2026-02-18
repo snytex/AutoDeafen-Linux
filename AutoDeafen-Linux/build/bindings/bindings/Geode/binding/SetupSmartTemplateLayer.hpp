@@ -18,84 +18,91 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupSmartTemplateLayer, FLAlertLayer)
 
     /**
-     * @note[short] Windows: 0x4406e0
+     * @note[short] MacOS (ARM): 0x442394
+     * @note[short] MacOS (Intel): 0x4e7a00
+     * @note[short] Windows: 0x458a80
+     * @note[short] iOS: 0x70538
      * @note[short] Android
      */
-    static SetupSmartTemplateLayer* create(GJSmartTemplate* p0);
+    static SetupSmartTemplateLayer* create(GJSmartTemplate* smartTemplate);
 
     /**
-     * @note[short] MacOS (ARM): 0x4396d4
-     * @note[short] MacOS (Intel): 0x4d5b70
-     * @note[short] Windows: 0x441940
-     * @note[short] iOS: 0x75228
+     * @note[short] MacOS (ARM): 0x443410
+     * @note[short] MacOS (Intel): 0x4e8ab0
+     * @note[short] Windows: 0x459ce0
+     * @note[short] iOS: 0x71380
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x439378
-     * @note[short] MacOS (Intel): 0x4d5870
-     * @note[short] Windows: 0x4413a0
-     * @note[short] iOS: 0x74f38
+     * @note[short] MacOS (ARM): 0x4430b4
+     * @note[short] MacOS (Intel): 0x4e87b0
+     * @note[short] Windows: 0x459740
+     * @note[short] iOS: 0x710a0
      * @note[short] Android
      */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x4395c8
-     * @note[short] MacOS (Intel): 0x4d5a90
-     * @note[short] Windows: 0x4416e0
-     * @note[short] iOS: 0x750bc
+     * @note[short] MacOS (ARM): 0x443304
+     * @note[short] MacOS (Intel): 0x4e89d0
+     * @note[short] Windows: 0x459a80
+     * @note[short] iOS: 0x71224
      * @note[short] Android
      */
-    virtual void textInputOpened(CCTextInputNode* p0);
+    virtual void textInputOpened(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x43945c
-     * @note[short] MacOS (Intel): 0x4d5950
-     * @note[short] Windows: 0x441480
-     * @note[short] iOS: 0x74f9c
+     * @note[short] MacOS (ARM): 0x443198
+     * @note[short] MacOS (Intel): 0x4e8890
+     * @note[short] Windows: 0x459820
+     * @note[short] iOS: 0x71104
      * @note[short] Android
      */
-    virtual void textInputClosed(CCTextInputNode* p0);
+    virtual void textInputClosed(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x4396b4
-     * @note[short] MacOS (Intel): 0x4d5b50
-     * @note[short] Windows: 0xc3110
-     * @note[short] iOS: 0x75208
+     * @note[short] MacOS (ARM): 0x4433f0
+     * @note[short] MacOS (Intel): 0x4e8a90
+     * @note[short] Windows: 0xc3e30
+     * @note[short] iOS: 0x71360
      * @note[short] Android
      */
-    virtual void textChanged(CCTextInputNode* p0);
+    virtual void textChanged(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x43875c
-     * @note[short] MacOS (Intel): 0x4d4c10
-     * @note[short] Windows: 0x4407f0
+     * @note[short] MacOS (ARM): 0x4424ac
+     * @note[short] MacOS (Intel): 0x4e7b60
+     * @note[short] Windows: 0x458b90
+     * @note[short] iOS: 0x70604
      * @note[short] Android
      */
-    bool init(GJSmartTemplate* p0);
+    bool init(GJSmartTemplate* smartTemplate);
 
     /**
-     * @note[short] MacOS (ARM): 0x439040
-     * @note[short] MacOS (Intel): 0x4d5500
-     * @note[short] Windows: 0x441840
+     * @note[short] MacOS (ARM): 0x442d84
+     * @note[short] MacOS (Intel): 0x4e8440
+     * @note[short] Windows: 0x459be0
+     * @note[short] iOS: 0x70de0
      * @note[short] Android
      */
     void onBack(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x439068
-     * @note[short] MacOS (Intel): 0x4d5530
-     * @note[short] Windows: 0x4411e0
+     * @note[short] MacOS (ARM): 0x442dac
+     * @note[short] MacOS (Intel): 0x4e8470
+     * @note[short] Windows: 0x459580
+     * @note[short] iOS: 0x70e08
      * @note[short] Android
      */
     void onClick(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4392a4
-     * @note[short] MacOS (Intel): 0x4d57a0
-     * @note[short] Windows: 0x441870
+     * @note[short] MacOS (ARM): 0x442fe4
+     * @note[short] MacOS (Intel): 0x4e86e0
+     * @note[short] Windows: 0x459c10
+     * @note[short] iOS: 0x70fd0
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);

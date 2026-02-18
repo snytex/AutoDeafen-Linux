@@ -130,20 +130,20 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x286480, Thiscall, SetIDPopup, )
-			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x293b10, Thiscall, SetIDPopup)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x293bb0, Default, SetIDPopup, create, int, int, int, gd::string, gd::string, bool, int, float, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x294a90, Thiscall, SetIDPopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2948c0, Thiscall, SetIDPopup, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b790, Thiscall, SetIDPopup, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x294710, Thiscall, SetIDPopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x28ddb0, Thiscall, SetIDPopup, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x29b170, Thiscall, SetIDPopup)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29b210, Default, SetIDPopup, create, int, int, int, gd::string, gd::string, bool, int, float, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29c0f0, Thiscall, SetIDPopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29bf20, Thiscall, SetIDPopup, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b850, Thiscall, SetIDPopup, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29bd70, Thiscall, SetIDPopup, textChanged, CCTextInputNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetIDPopup, valueChanged, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x293ce0, Thiscall, SetIDPopup, init, int, int, int, gd::string, gd::string, bool, int, float, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x294950, Thiscall, SetIDPopup, onCancel, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2949f0, Thiscall, SetIDPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2946a0, Thiscall, SetIDPopup, onItemIDArrow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2946f0, Thiscall, SetIDPopup, onResetValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x294810, Thiscall, SetIDPopup, updateTextInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29b340, Thiscall, SetIDPopup, init, int, int, int, gd::string, gd::string, bool, int, float, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29bfb0, Thiscall, SetIDPopup, onCancel, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29c050, Thiscall, SetIDPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29bd00, Thiscall, SetIDPopup, onItemIDArrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29bd50, Thiscall, SetIDPopup, onResetValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29be70, Thiscall, SetIDPopup, updateTextInputLabel, )
 		}
 	};
 }

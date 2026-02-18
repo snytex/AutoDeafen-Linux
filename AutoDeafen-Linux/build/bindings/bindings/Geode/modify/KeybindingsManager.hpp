@@ -30,21 +30,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(commandToKeyForGroup) 
 	#endif
 
-	#ifndef GEODE_STATICS_dataLoaded
-		#define GEODE_STATICS_dataLoaded
-		GEODE_AS_STATIC_FUNCTION(dataLoaded) 
-	#endif
-
-	#ifndef GEODE_STATICS_encodeDataTo
-		#define GEODE_STATICS_encodeDataTo
-		GEODE_AS_STATIC_FUNCTION(encodeDataTo) 
-	#endif
-
-	#ifndef GEODE_STATICS_firstSetup
-		#define GEODE_STATICS_firstSetup
-		GEODE_AS_STATIC_FUNCTION(firstSetup) 
-	#endif
-
 	#ifndef GEODE_STATICS_groupForCommand
 		#define GEODE_STATICS_groupForCommand
 		GEODE_AS_STATIC_FUNCTION(groupForCommand) 
@@ -130,15 +115,15 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b96b0, Default, KeybindingsManager, sharedState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c0d80, Default, KeybindingsManager, sharedState, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(KeybindingsManager, init, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsManager, commandForKey, cocos2d::enumKeyCodes, GJKeyGroup, bool, bool, bool)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsManager, commandForKeyMods, cocos2d::enumKeyCodes, GJKeyGroup)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsManager, commandForKeyNoMods, cocos2d::enumKeyCodes, GJKeyGroup)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsManager, commandToKeyForGroup, GJKeyGroup)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsManager, dataLoaded, DS_Dictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsManager, encodeDataTo, DS_Dictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsManager, firstSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(KeybindingsManager, dataLoaded, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(KeybindingsManager, encodeDataTo, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(KeybindingsManager, firstSetup, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsManager, groupForCommand, GJKeyCommand)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsManager, keyForCommand, GJKeyCommand)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsManager, keyToCommandForGroup, GJKeyGroup)

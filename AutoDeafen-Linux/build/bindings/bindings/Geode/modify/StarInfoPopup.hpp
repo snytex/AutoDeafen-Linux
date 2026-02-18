@@ -75,12 +75,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b0cb0, Default, StarInfoPopup, create, int, int, int, int, int, int, int, int, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b0720, Default, StarInfoPopup, createFromString, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b0a00, Default, StarInfoPopup, createFromStringMoons, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, StarInfoPopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b0df0, Thiscall, StarInfoPopup, init, int, int, int, int, int, int, int, int, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(StarInfoPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c8070, Default, StarInfoPopup, create, int, int, int, int, int, int, int, int, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c7ae0, Default, StarInfoPopup, createFromString, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c7dc0, Default, StarInfoPopup, createFromStringMoons, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, StarInfoPopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c81b0, Thiscall, StarInfoPopup, init, int, int, int, int, int, int, int, int, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, StarInfoPopup, onClose, cocos2d::CCObject*)
 		}
 	};
 }

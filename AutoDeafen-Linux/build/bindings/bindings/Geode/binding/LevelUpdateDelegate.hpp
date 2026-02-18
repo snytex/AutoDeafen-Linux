@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void levelUpdateFinished(GJGameLevel* p0, UpdateResponse p1);
+    virtual void levelUpdateFinished(GJGameLevel* level, UpdateResponse response);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,5 +29,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void levelUpdateFailed(int p0);
+    virtual void levelUpdateFailed(int response);
 };

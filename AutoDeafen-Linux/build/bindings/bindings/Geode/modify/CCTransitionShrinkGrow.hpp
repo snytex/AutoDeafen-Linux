@@ -45,6 +45,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCTransitionShrinkGrow@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCTransitionShrinkGrow, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCTransitionShrinkGrow@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCTransitionShrinkGrow)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, cocos2d::CCScene*>::func(&cocos2d::CCTransitionShrinkGrow::create)), Default, cocos2d::CCTransitionShrinkGrow, create, float, cocos2d::CCScene*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTransitionShrinkGrow::onEnter)), Thiscall, cocos2d::CCTransitionShrinkGrow, onEnter, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCActionInterval*>::func(&cocos2d::CCTransitionShrinkGrow::easeActionWithAction)), Thiscall, cocos2d::CCTransitionShrinkGrow, easeActionWithAction, cocos2d::CCActionInterval*)

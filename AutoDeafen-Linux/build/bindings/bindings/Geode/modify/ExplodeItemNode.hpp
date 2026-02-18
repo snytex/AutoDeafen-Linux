@@ -50,9 +50,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x36e780, Default, ExplodeItemNode, create, cocos2d::CCRenderTexture*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x36f1f0, Thiscall, ExplodeItemNode, update, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x36e840, Thiscall, ExplodeItemNode, createSprites, int, int, float, float, float, float, float, float, cocos2d::ccColor4F, cocos2d::ccColor4F, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3844f0, Default, ExplodeItemNode, create, cocos2d::CCRenderTexture*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x384f60, Thiscall, ExplodeItemNode, update, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3845b0, Thiscall, ExplodeItemNode, createSprites, int, int, float, float, float, float, float, float, cocos2d::ccColor4F, cocos2d::ccColor4F, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ExplodeItemNode, init, cocos2d::CCRenderTexture*)
 		}
 	};

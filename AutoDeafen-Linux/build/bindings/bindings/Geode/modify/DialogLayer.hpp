@@ -55,16 +55,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addToMainScene) 
 	#endif
 
-	#ifndef GEODE_STATICS_animateIn
-		#define GEODE_STATICS_animateIn
-		GEODE_AS_STATIC_FUNCTION(animateIn) 
-	#endif
-
-	#ifndef GEODE_STATICS_animateInDialog
-		#define GEODE_STATICS_animateInDialog
-		GEODE_AS_STATIC_FUNCTION(animateInDialog) 
-	#endif
-
 	#ifndef GEODE_STATICS_animateInRandomSide
 		#define GEODE_STATICS_animateInRandomSide
 		GEODE_AS_STATIC_FUNCTION(animateInRandomSide) 
@@ -78,11 +68,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_displayNextObject
 		#define GEODE_STATICS_displayNextObject
 		GEODE_AS_STATIC_FUNCTION(displayNextObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_finishCurrentAnimation
-		#define GEODE_STATICS_finishCurrentAnimation
-		GEODE_AS_STATIC_FUNCTION(finishCurrentAnimation) 
 	#endif
 
 	#ifndef GEODE_STATICS_handleDialogTap
@@ -236,29 +221,29 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DialogLayer, create, DialogObject*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd1f60, Default, DialogLayer, createDialogLayer, DialogObject*, cocos2d::CCArray*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd3490, Default, DialogLayer, createDialogLayer, DialogObject*, cocos2d::CCArray*, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DialogLayer, createWithObjects, cocos2d::CCArray*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52db0, Thiscall, DialogLayer, onEnter, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd2b60, Thiscall, DialogLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52e20, Thiscall, DialogLayer, onEnter, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd4090, Thiscall, DialogLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DialogLayer, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd2b90, Thiscall, DialogLayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd2bb0, Thiscall, DialogLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52d60, Thiscall, DialogLayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd2ad0, Thiscall, DialogLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd2e80, Thiscall, DialogLayer, keyDown, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd2bd0, Thiscall, DialogLayer, fadeInTextFinished, TextArea*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd2a70, Thiscall, DialogLayer, addToMainScene, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DialogLayer, animateIn, DialogAnimationType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DialogLayer, animateInDialog, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd2c40, Thiscall, DialogLayer, animateInRandomSide, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd2570, Thiscall, DialogLayer, displayDialogObject, DialogObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd2510, Thiscall, DialogLayer, displayNextObject, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DialogLayer, finishCurrentAnimation, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd2940, Thiscall, DialogLayer, handleDialogTap, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd20b0, Thiscall, DialogLayer, init, DialogObject*, cocos2d::CCArray*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd2ae0, Thiscall, DialogLayer, onClose, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd40c0, Thiscall, DialogLayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd40e0, Thiscall, DialogLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52dd0, Thiscall, DialogLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd4000, Thiscall, DialogLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd43b0, Thiscall, DialogLayer, keyDown, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd4100, Thiscall, DialogLayer, fadeInTextFinished, TextArea*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd3fa0, Thiscall, DialogLayer, addToMainScene, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DialogLayer, animateIn, DialogAnimationType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DialogLayer, animateInDialog, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd4170, Thiscall, DialogLayer, animateInRandomSide, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd3aa0, Thiscall, DialogLayer, displayDialogObject, DialogObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd3a40, Thiscall, DialogLayer, displayNextObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DialogLayer, finishCurrentAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd3e70, Thiscall, DialogLayer, handleDialogTap, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd35e0, Thiscall, DialogLayer, init, DialogObject*, cocos2d::CCArray*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd4010, Thiscall, DialogLayer, onClose, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DialogLayer, updateChatPlacement, DialogChatPlacement)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd28c0, Thiscall, DialogLayer, updateNavButtonFrame, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd3df0, Thiscall, DialogLayer, updateNavButtonFrame, )
 		}
 	};
 }

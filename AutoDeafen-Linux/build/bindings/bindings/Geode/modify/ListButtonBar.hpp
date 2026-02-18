@@ -10,11 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
-	#ifndef GEODE_STATICS_getPage
-		#define GEODE_STATICS_getPage
-		GEODE_AS_STATIC_FUNCTION(getPage) 
-	#endif
-
 	#ifndef GEODE_STATICS_goToPage
 		#define GEODE_STATICS_goToPage
 		GEODE_AS_STATIC_FUNCTION(goToPage) 
@@ -75,12 +70,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6ad70, Default, ListButtonBar, create, cocos2d::CCArray*, cocos2d::CCPoint, int, int, float, float, float, float, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ListButtonBar, getPage, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6b380, Thiscall, ListButtonBar, goToPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6ae80, Thiscall, ListButtonBar, init, cocos2d::CCArray*, cocos2d::CCPoint, int, int, float, float, float, float, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6b430, Thiscall, ListButtonBar, onLeft, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6b410, Thiscall, ListButtonBar, onRight, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6ada0, Default, ListButtonBar, create, cocos2d::CCArray*, cocos2d::CCPoint, int, int, float, float, float, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ListButtonBar, getPage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6b3b0, Thiscall, ListButtonBar, goToPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6aeb0, Thiscall, ListButtonBar, init, cocos2d::CCArray*, cocos2d::CCPoint, int, int, float, float, float, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6b460, Thiscall, ListButtonBar, onLeft, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6b440, Thiscall, ListButtonBar, onRight, cocos2d::CCObject*)
 		}
 	};
 }

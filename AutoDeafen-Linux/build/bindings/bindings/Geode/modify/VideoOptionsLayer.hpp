@@ -55,11 +55,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onFullscreen) 
 	#endif
 
-	#ifndef GEODE_STATICS_onInfo
-		#define GEODE_STATICS_onInfo
-		GEODE_AS_STATIC_FUNCTION(onInfo) 
-	#endif
-
 	#ifndef GEODE_STATICS_onResolutionNext
 		#define GEODE_STATICS_onResolutionNext
 		GEODE_AS_STATIC_FUNCTION(onResolutionNext) 
@@ -78,11 +73,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onTextureQualityPrev
 		#define GEODE_STATICS_onTextureQualityPrev
 		GEODE_AS_STATIC_FUNCTION(onTextureQualityPrev) 
-	#endif
-
-	#ifndef GEODE_STATICS_reloadMenu
-		#define GEODE_STATICS_reloadMenu
-		GEODE_AS_STATIC_FUNCTION(reloadMenu) 
 	#endif
 
 	#ifndef GEODE_STATICS_toggleResolution
@@ -205,25 +195,25 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x360cd0, Default, VideoOptionsLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x360df0, Thiscall, VideoOptionsLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x362c60, Thiscall, VideoOptionsLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x362c70, Thiscall, VideoOptionsLayer, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint, float, float, bool, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x362130, Thiscall, VideoOptionsLayer, onAdvanced, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x362720, Thiscall, VideoOptionsLayer, onApply, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x362280, Thiscall, VideoOptionsLayer, onBorderless, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3622a0, Thiscall, VideoOptionsLayer, onBorderlessFix, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x362be0, Thiscall, VideoOptionsLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x362260, Thiscall, VideoOptionsLayer, onFullscreen, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(VideoOptionsLayer, onInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3623a0, Thiscall, VideoOptionsLayer, onResolutionNext, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x362390, Thiscall, VideoOptionsLayer, onResolutionPrev, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3622d0, Thiscall, VideoOptionsLayer, onTextureQualityNext, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3622c0, Thiscall, VideoOptionsLayer, onTextureQualityPrev, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(VideoOptionsLayer, reloadMenu, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3624c0, Thiscall, VideoOptionsLayer, toggleResolution, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3623b0, Thiscall, VideoOptionsLayer, updateResolution, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3622e0, Thiscall, VideoOptionsLayer, updateTextureQuality, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x376a40, Default, VideoOptionsLayer, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x376b60, Thiscall, VideoOptionsLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3789d0, Thiscall, VideoOptionsLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3789e0, Thiscall, VideoOptionsLayer, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint, float, float, bool, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x377ea0, Thiscall, VideoOptionsLayer, onAdvanced, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x378490, Thiscall, VideoOptionsLayer, onApply, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x377ff0, Thiscall, VideoOptionsLayer, onBorderless, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x378010, Thiscall, VideoOptionsLayer, onBorderlessFix, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x378950, Thiscall, VideoOptionsLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x377fd0, Thiscall, VideoOptionsLayer, onFullscreen, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(VideoOptionsLayer, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x378110, Thiscall, VideoOptionsLayer, onResolutionNext, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x378100, Thiscall, VideoOptionsLayer, onResolutionPrev, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x378040, Thiscall, VideoOptionsLayer, onTextureQualityNext, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x378030, Thiscall, VideoOptionsLayer, onTextureQualityPrev, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(VideoOptionsLayer, reloadMenu, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x378230, Thiscall, VideoOptionsLayer, toggleResolution, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x378120, Thiscall, VideoOptionsLayer, updateResolution, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x378050, Thiscall, VideoOptionsLayer, updateTextureQuality, int)
 		}
 	};
 }

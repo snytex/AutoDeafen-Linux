@@ -16,36 +16,40 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetTargetIDLayer, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x3ea050
+     * @note[short] MacOS (ARM): 0x256fe8
+     * @note[short] MacOS (Intel): 0x2b9ba0
+     * @note[short] Windows: 0x401cd0
+     * @note[short] iOS: 0x2131c4
      * @note[short] Android: Rebinded
      */
-    static SetTargetIDLayer* create(EffectGameObject* p0, cocos2d::CCArray* p1, gd::string p2, gd::string p3, int p4, int p5, int p6);
+    static SetTargetIDLayer* create(EffectGameObject* object, cocos2d::CCArray* objects, gd::string title, gd::string label, int minimum, int maximum, int objectID);
 
     /**
-     * @note[short] MacOS (ARM): 0x24d528
-     * @note[short] MacOS (Intel): 0x2a6e20
-     * @note[short] Windows: 0x287910
-     * @note[short] iOS: 0x2142c0
+     * @note[short] MacOS (ARM): 0x257600
+     * @note[short] MacOS (Intel): 0x2ba2d0
+     * @note[short] Windows: 0x28f240
+     * @note[short] iOS: 0x213688
      * @note[short] Android
      */
     virtual void determineStartValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x24d52c
-     * @note[short] MacOS (Intel): 0x2a6e30
-     * @note[short] Windows: 0x3ea680
-     * @note[short] iOS: 0x2142c4
+     * @note[short] MacOS (ARM): 0x257604
+     * @note[short] MacOS (Intel): 0x2ba2e0
+     * @note[short] Windows: 0x402300
+     * @note[short] iOS: 0x21368c
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x24d190
-     * @note[short] MacOS (Intel): 0x2a6a20
-     * @note[short] Windows: 0x3ea1e0
+     * @note[short] MacOS (ARM): 0x257274
+     * @note[short] MacOS (Intel): 0x2b9ed0
+     * @note[short] Windows: 0x401e60
+     * @note[short] iOS: 0x213388
      * @note[short] Android: Rebinded
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1, gd::string p2, gd::string p3, int p4, int p5, int p6);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects, gd::string title, gd::string label, int minimum, int maximum, int objectID);
     int m_objectID;
     int m_minimumID;
     int m_maximumID;

@@ -15,13 +15,30 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(NodePoint, cocos2d::CCObject)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static NodePoint* create(cocos2d::CCPoint p0);
+     NodePoint();
 
     /**
+     * @note[short] MacOS (ARM): 0xe1468
+     * @note[short] MacOS (Intel): 0x102c50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(cocos2d::CCPoint p0);
+    static NodePoint* create(cocos2d::CCPoint point);
+
+    /**
+     * @note[short] MacOS (ARM): 0xe151c
+     * @note[short] MacOS (Intel): 0x102d10
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    bool init(cocos2d::CCPoint point);
     cocos2d::CCPoint m_point;
 };

@@ -16,46 +16,57 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(GJLevelScoreCell, TableViewCell)
 
     /**
+     * @note[short] MacOS (ARM): 0x1fba04
+     * @note[short] MacOS (Intel): 0x255dc0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-     GJLevelScoreCell(char const* p0, float p1, float p2);
+     GJLevelScoreCell(char const* identifier, float width, float height);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f2e24
-     * @note[short] MacOS (Intel): 0x243de0
-     * @note[short] Windows: 0x3c7f0
-     * @note[short] iOS: 0x11405c
+     * @note[short] MacOS (ARM): 0x1fba48
+     * @note[short] MacOS (Intel): 0x255e30
+     * @note[short] Windows: 0x3c830
+     * @note[short] iOS: 0x1113f0
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x1f2e6c
-     * @note[short] MacOS (Intel): 0x243e30
-     * @note[short] Windows: 0xad710
-     * @note[short] iOS: 0x1140a4
+     * @note[short] MacOS (ARM): 0x1fba8c
+     * @note[short] MacOS (Intel): 0x255e80
+     * @note[short] Windows: 0xade20
+     * @note[short] iOS: 0x111434
      * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): 0x1e8cec
-     * @note[short] MacOS (Intel): 0x238d60
-     * @note[short] Windows: 0xb93d0
-     * @note[short] iOS: 0x10b8d4
+     * @note[short] MacOS (ARM): 0x1f18d0
+     * @note[short] MacOS (Intel): 0x24ad00
+     * @note[short] Windows: 0xba0a0
+     * @note[short] iOS: 0x108c54
      * @note[short] Android
      */
-    void loadFromScore(GJUserScore* p0);
+    void loadFromScore(GJUserScore* score);
 
     /**
-     * @note[short] Windows: 0xb9e30
+     * @note[short] MacOS (ARM): 0x1fba54
+     * @note[short] MacOS (Intel): 0x255e50
+     * @note[short] Windows: 0xbab20
+     * @note[short] iOS: 0x1113fc
      * @note[short] Android
      */
     void onViewProfile(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x1f1850
+     * @note[short] MacOS (Intel): 0x24aca0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x108bd4
      * @note[short] Android
      */
-    void updateBGColor(int p0);
+    void updateBGColor(int index);
     GJUserScore* m_userScore;
 };

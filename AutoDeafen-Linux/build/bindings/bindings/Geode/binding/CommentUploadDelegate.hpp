@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void commentUploadFinished(int p0);
+    virtual void commentUploadFinished(int parentID);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,7 +29,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void commentUploadFailed(int p0, CommentError p1);
+    virtual void commentUploadFailed(int parentID, CommentError errorType);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -38,5 +38,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void commentDeleteFailed(int p0, int p1);
+    virtual void commentDeleteFailed(int id, int parentID);
 };

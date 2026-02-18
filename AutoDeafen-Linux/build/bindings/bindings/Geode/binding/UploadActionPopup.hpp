@@ -16,58 +16,64 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(UploadActionPopup, FLAlertLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x238c74
-     * @note[short] MacOS (Intel): 0x290720
-     * @note[short] Windows: 0x28db20
-     * @note[short] iOS: 0x2d7fb4
+     * @note[short] MacOS (ARM): 0x242eb0
+     * @note[short] MacOS (Intel): 0x2a3fc0
+     * @note[short] Windows: 0x295180
+     * @note[short] iOS: 0x2d831c
      * @note[short] Android: Rebinded
      */
     static UploadActionPopup* create(UploadPopupDelegate* delegate, gd::string str);
 
     /**
-     * @note[short] MacOS (ARM): 0x239564
-     * @note[short] MacOS (Intel): 0x291070
-     * @note[short] Windows: 0x28e320
-     * @note[short] iOS: 0x2d86e0
+     * @note[short] MacOS (ARM): 0x243784
+     * @note[short] MacOS (Intel): 0x2a48f0
+     * @note[short] Windows: 0x295980
+     * @note[short] iOS: 0x2d8a48
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
+     * @note[short] MacOS (ARM): 0x243748
+     * @note[short] MacOS (Intel): 0x2a48c0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2d8a0c
      * @note[short] Android
      */
     void closePopup();
 
     /**
-     * @note[short] MacOS (ARM): 0x238df0
-     * @note[short] MacOS (Intel): 0x2908c0
-     * @note[short] Windows: 0x28dc60
-     * @note[short] iOS: 0x2d80e0
+     * @note[short] MacOS (ARM): 0x243034
+     * @note[short] MacOS (Intel): 0x2a4160
+     * @note[short] Windows: 0x2952c0
+     * @note[short] iOS: 0x2d8448
      * @note[short] Android: Rebinded
      */
     bool init(UploadPopupDelegate* delegate, gd::string str);
 
     /**
-     * @note[short] Windows: 0x28e2d0
+     * @note[short] MacOS (ARM): 0x243444
+     * @note[short] MacOS (Intel): 0x2a45b0
+     * @note[short] Windows: 0x295930
+     * @note[short] iOS: 0x2d87e0
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2393d4
-     * @note[short] MacOS (Intel): 0x290ee0
-     * @note[short] Windows: 0x28e1d0
-     * @note[short] iOS: 0x2d85c8
+     * @note[short] MacOS (ARM): 0x243600
+     * @note[short] MacOS (Intel): 0x2a4770
+     * @note[short] Windows: 0x295830
+     * @note[short] iOS: 0x2d8930
      * @note[short] Android: Rebinded
      */
     void showFailMessage(gd::string message);
 
     /**
-     * @note[short] MacOS (ARM): 0x23926c
-     * @note[short] MacOS (Intel): 0x290d70
-     * @note[short] Windows: 0x28e0c0
-     * @note[short] iOS: 0x2d84d8
+     * @note[short] MacOS (ARM): 0x2434a4
+     * @note[short] MacOS (Intel): 0x2a4600
+     * @note[short] Windows: 0x295720
+     * @note[short] iOS: 0x2d8840
      * @note[short] Android: Rebinded
      */
     void showSuccessMessage(gd::string message);

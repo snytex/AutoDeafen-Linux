@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void scrllViewWillBeginDecelerating(CCScrollLayerExt* p0);
+    virtual void scrllViewWillBeginDecelerating(CCScrollLayerExt* layer);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,7 +29,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void scrollViewDidEndDecelerating(CCScrollLayerExt* p0);
+    virtual void scrollViewDidEndDecelerating(CCScrollLayerExt* layer);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -38,7 +38,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void scrollViewTouchMoving(CCScrollLayerExt* p0);
+    virtual void scrollViewTouchMoving(CCScrollLayerExt* layer);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -47,7 +47,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void scrollViewDidEndMoving(CCScrollLayerExt* p0);
+    virtual void scrollViewDidEndMoving(CCScrollLayerExt* layer);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -56,7 +56,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void scrollViewTouchBegin(CCScrollLayerExt* p0);
+    virtual void scrollViewTouchBegin(CCScrollLayerExt* layer);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -65,5 +65,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void scrollViewTouchEnd(CCScrollLayerExt* p0);
+    virtual void scrollViewTouchEnd(CCScrollLayerExt* layer);
 };

@@ -24,27 +24,30 @@ public:
      ExtendedLayer();
 
     /**
+     * @note[short] MacOS (ARM): 0x32998c
+     * @note[short] MacOS (Intel): 0x3a4fe0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x12b2f8
      * @note[short] Android
      */
     static ExtendedLayer* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x322be4
-     * @note[short] MacOS (Intel): 0x394410
-     * @note[short] Windows: 0x3ec90
-     * @note[short] iOS: 0x12fc48
+     * @note[short] MacOS (ARM): 0x32bc8c
+     * @note[short] MacOS (Intel): 0x3a7530
+     * @note[short] Windows: 0x3ed00
+     * @note[short] iOS: 0x12c9b0
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x322be8
-     * @note[short] MacOS (Intel): 0x394420
-     * @note[short] Windows: 0x3ecb0
-     * @note[short] iOS: 0x12fc4c
+     * @note[short] MacOS (ARM): 0x32bc90
+     * @note[short] MacOS (Intel): 0x3a7540
+     * @note[short] Windows: 0x3ed20
+     * @note[short] iOS: 0x12c9b4
      * @note[short] Android
      */
-    virtual void setPosition(cocos2d::CCPoint const& p0);
+    virtual void setPosition(cocos2d::CCPoint const& position);
     BoomScrollLayerDelegate* m_delegate;
 };

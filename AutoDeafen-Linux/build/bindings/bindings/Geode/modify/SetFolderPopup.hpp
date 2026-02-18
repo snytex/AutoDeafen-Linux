@@ -65,11 +65,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x294e90, Default, SetFolderPopup, create, int, bool, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x295250, Thiscall, SetFolderPopup, valueChanged, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x295590, Thiscall, SetFolderPopup, setTextPopupClosed, SetTextPopup*, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x294fd0, Thiscall, SetFolderPopup, init, int, bool, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x295390, Thiscall, SetFolderPopup, onSetFolderName, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29c4f0, Default, SetFolderPopup, create, int, bool, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29c8b0, Thiscall, SetFolderPopup, valueChanged, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29cbf0, Thiscall, SetFolderPopup, setTextPopupClosed, SetTextPopup*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29c630, Thiscall, SetFolderPopup, init, int, bool, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29c9f0, Thiscall, SetFolderPopup, onSetFolderName, cocos2d::CCObject*)
 		}
 	};
 }

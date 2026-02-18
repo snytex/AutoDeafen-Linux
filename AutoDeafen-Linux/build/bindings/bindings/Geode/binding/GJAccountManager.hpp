@@ -24,212 +24,292 @@ public:
     static GJAccountManager* get();
 
     /**
-     * @note[short] MacOS (ARM): 0xb8518
-     * @note[short] MacOS (Intel): 0xcf8d0
-     * @note[short] Windows: 0x1faf50
-     * @note[short] iOS: 0x3977dc
+     * @note[short] MacOS (ARM): 0xb6520
+     * @note[short] MacOS (Intel): 0xcf140
+     * @note[short] Windows: 0x1fffd0
+     * @note[short] iOS: 0x39e9c4
      * @note[short] Android
      */
     static GJAccountManager* sharedState();
 
     /**
-     * @note[short] MacOS (ARM): 0xbab8c
-     * @note[short] MacOS (Intel): 0xd2340
-     * @note[short] Windows: 0x1fb510
-     * @note[short] iOS: 0x399040
+     * @note[short] MacOS (ARM): 0xb8b04
+     * @note[short] MacOS (Intel): 0xd1bb0
+     * @note[short] Windows: 0x200590
+     * @note[short] iOS: 0x3a0230
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] Android
-     */
-    void addDLToActive(char const* tag, cocos2d::CCObject* p1);
-
-    /**
+     * @note[short] MacOS (ARM): 0xb8c5c
+     * @note[short] MacOS (Intel): 0xd1cf0
+     * @note[short] Windows: 0x2005d0
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void addDLToActive(char const* tag);
 
     /**
-     * @note[short] MacOS (ARM): 0xbbce4
-     * @note[short] MacOS (Intel): 0xd34c0
-     * @note[short] Windows: 0x1fc8f0
+     * @note[short] MacOS (ARM): 0xb8c8c
+     * @note[short] MacOS (Intel): 0xd1d20
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3a02d4
+     * @note[short] Android
+     */
+    void addDLToActive(char const* tag, cocos2d::CCObject* object);
+
+    /**
+     * @note[short] MacOS (ARM): 0xb9cb8
+     * @note[short] MacOS (Intel): 0xd2d10
+     * @note[short] Windows: 0x201970
+     * @note[short] iOS: 0x3a0ba0
      * @note[short] Android: Rebinded
      */
-    bool backupAccount(gd::string p0);
+    bool backupAccount(gd::string url);
 
     /**
-     * @note[short] MacOS (ARM): 0xbcd78
-     * @note[short] MacOS (Intel): 0xd4730
+     * @note[short] MacOS (ARM): 0xbad8c
+     * @note[short] MacOS (Intel): 0xd3fa0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3a176c
      * @note[short] Android
      */
-    void dataLoaded(DS_Dictionary* p0);
+    void dataLoaded(DS_Dictionary* dict);
 
     /**
-     * @note[short] MacOS (ARM): 0xbcd20
-     * @note[short] MacOS (Intel): 0xd46d0
+     * @note[short] MacOS (ARM): 0xbad34
+     * @note[short] MacOS (Intel): 0xd3f40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3a1714
      * @note[short] Android
      */
-    void encodeDataTo(DS_Dictionary* p0);
+    void encodeDataTo(DS_Dictionary* dict);
 
     /**
+     * @note[short] MacOS (ARM): 0xbad30
+     * @note[short] MacOS (Intel): 0xd3f30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3a1710
      * @note[short] Android
      */
     void firstSetup();
 
     /**
-     * @note[short] MacOS (ARM): 0xbb9b0
-     * @note[short] MacOS (Intel): 0xd3180
-     * @note[short] Windows: 0x1fc2d0
+     * @note[short] MacOS (ARM): 0xb999c
+     * @note[short] MacOS (Intel): 0xd29e0
+     * @note[short] Windows: 0x201350
+     * @note[short] iOS: 0x3a09dc
      * @note[short] Android
      */
     bool getAccountBackupURL();
 
     /**
-     * @note[short] MacOS (ARM): 0xbc19c
-     * @note[short] MacOS (Intel): 0xd3a10
-     * @note[short] Windows: 0x1fd230
+     * @note[short] MacOS (ARM): 0xba160
+     * @note[short] MacOS (Intel): 0xd3260
+     * @note[short] Windows: 0x2022b0
+     * @note[short] iOS: 0x3a0f08
      * @note[short] Android
      */
     bool getAccountSyncURL();
 
     /**
+     * @note[short] MacOS (ARM): 0xb8b58
+     * @note[short] MacOS (Intel): 0xd1c10
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3a0268
      * @note[short] Android
      */
-    cocos2d::CCObject* getDLObject(char const* p0);
+    cocos2d::CCObject* getDLObject(char const* tag);
 
     /**
-     * @note[short] Windows: 0x1feee0
+     * @note[short] MacOS (ARM): 0xbaf60
+     * @note[short] MacOS (Intel): 0xd4160
+     * @note[short] Windows: 0x204060
+     * @note[short] iOS: 0x3a1908
      * @note[short] Android: Rebinded
      */
-    gd::string getShaPassword(gd::string p0);
+    gd::string getShaPassword(gd::string password);
 
     /**
-     * @note[short] MacOS (ARM): 0xb8918
-     * @note[short] MacOS (Intel): 0xcfd00
-     * @note[short] Windows: 0x1fb2c0
-     * @note[short] iOS: 0x397ad0
+     * @note[short] MacOS (ARM): 0xb6910
+     * @note[short] MacOS (Intel): 0xcf570
+     * @note[short] Windows: 0x200340
+     * @note[short] iOS: 0x39ecb4
      * @note[short] Android: Rebinded
      */
-    void handleIt(bool p0, gd::string p1, gd::string p2, GJHttpType p3);
+    void handleIt(bool success, gd::string response, gd::string tag, GJHttpType type);
 
     /**
+     * @note[short] MacOS (ARM): 0xb6f8c
+     * @note[short] MacOS (Intel): 0xcfd80
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-    void handleItDelayed(bool p0, gd::string p1, gd::string p2, GJHttpType p3);
+    void handleItDelayed(bool success, gd::string response, gd::string tag, GJHttpType type);
 
     /**
+     * @note[short] MacOS (ARM): 0xb70f8
+     * @note[short] MacOS (Intel): 0xcfec0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void handleItND(cocos2d::CCNode* p0, void* p1);
+    void handleItND(cocos2d::CCNode* node, void* data);
 
     /**
+     * @note[short] MacOS (ARM): 0xb8b3c
+     * @note[short] MacOS (Intel): 0xd1bf0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     bool isDLActive(char const* tag);
 
     /**
+     * @note[short] MacOS (ARM): 0xba734
+     * @note[short] MacOS (Intel): 0xd3850
+     * @note[short] Windows: 0x2038a0
+     * @note[short] iOS: 0x3a12ac
      * @note[short] Android: Rebinded
      */
-    void linkToAccount(gd::string p0, gd::string p1, int p2, int p3);
+    void linkToAccount(gd::string username, gd::string gjp2, int accountID, int userID);
 
     /**
-     * @note[short] MacOS (ARM): 0xbb1b8
-     * @note[short] MacOS (Intel): 0xd2940
+     * @note[short] MacOS (ARM): 0xb911c
+     * @note[short] MacOS (Intel): 0xd21a0
+     * @note[short] Windows: 0x200b00
+     * @note[short] iOS: 0x3a0558
      * @note[short] Android: Rebinded
      */
-    void loginAccount(gd::string p0, gd::string p1);
+    void loginAccount(gd::string username, gd::string gjp2);
 
     /**
-     * @note[short] Windows: 0x1fce20
+     * @note[short] MacOS (ARM): 0xb7654
+     * @note[short] MacOS (Intel): 0xd0440
+     * @note[short] Windows: 0x201ea0
+     * @note[short] iOS: 0x39f498
      * @note[short] Android: Rebinded
      */
-    void onBackupAccountCompleted(gd::string p0, gd::string p1);
+    void onBackupAccountCompleted(gd::string response, gd::string tag);
 
     /**
-     * @note[short] MacOS (ARM): 0xba684
-     * @note[short] MacOS (Intel): 0xd1e40
-     * @note[short] Windows: 0x1fc620
+     * @note[short] MacOS (ARM): 0xb8604
+     * @note[short] MacOS (Intel): 0xd16c0
+     * @note[short] Windows: 0x2016a0
+     * @note[short] iOS: 0x39feb8
      * @note[short] Android: Rebinded
      */
-    void onGetAccountBackupURLCompleted(gd::string p0, gd::string p1);
+    void onGetAccountBackupURLCompleted(gd::string response, gd::string tag);
 
     /**
-     * @note[short] MacOS (ARM): 0xba8b0
-     * @note[short] MacOS (Intel): 0xd2050
+     * @note[short] MacOS (ARM): 0xb882c
+     * @note[short] MacOS (Intel): 0xd18d0
+     * @note[short] Windows: 0x2025f0
+     * @note[short] iOS: 0x3a002c
      * @note[short] Android: Rebinded
      */
-    void onGetAccountSyncURLCompleted(gd::string p0, gd::string p1);
+    void onGetAccountSyncURLCompleted(gd::string response, gd::string tag);
 
     /**
-     * @note[short] Windows: 0x1fbee0
+     * @note[short] MacOS (ARM): 0xb72f8
+     * @note[short] MacOS (Intel): 0xd00a0
+     * @note[short] Windows: 0x200f60
+     * @note[short] iOS: 0x39f2b0
      * @note[short] Android: Rebinded
      */
-    void onLoginAccountCompleted(gd::string p0, gd::string p1);
+    void onLoginAccountCompleted(gd::string response, gd::string tag);
 
     /**
+     * @note[short] MacOS (ARM): 0xb6720
+     * @note[short] MacOS (Intel): 0xcf3b0
+     * @note[short] Windows: 0x200240
+     * @note[short] iOS: 0x39eb9c
      * @note[short] Android
      */
-    void onProcessHttpRequestCompleted(cocos2d::extension::CCHttpClient* p0, cocos2d::extension::CCHttpResponse* p1);
+    void onProcessHttpRequestCompleted(cocos2d::extension::CCHttpClient* client, cocos2d::extension::CCHttpResponse* response);
 
     /**
-     * @note[short] Windows: 0x1fb8f0
+     * @note[short] MacOS (ARM): 0xb721c
+     * @note[short] MacOS (Intel): 0xcffe0
+     * @note[short] Windows: 0x200970
+     * @note[short] iOS: 0x39f1f8
      * @note[short] Android: Rebinded
      */
-    void onRegisterAccountCompleted(gd::string p0, gd::string p1);
+    void onRegisterAccountCompleted(gd::string response, gd::string tag);
 
     /**
-     * @note[short] MacOS (ARM): 0xb9924
-     * @note[short] MacOS (Intel): 0xd0e80
-     * @note[short] Windows: 0x1fdab0
+     * @note[short] MacOS (ARM): 0xb7900
+     * @note[short] MacOS (Intel): 0xd0710
+     * @note[short] Windows: 0x202b30
+     * @note[short] iOS: 0x39f674
      * @note[short] Android: Rebinded
      */
-    void onSyncAccountCompleted(gd::string p0, gd::string p1);
+    void onSyncAccountCompleted(gd::string response, gd::string tag);
 
     /**
-     * @note[short] Windows: 0x1fed80
+     * @note[short] MacOS (ARM): 0xb8538
+     * @note[short] MacOS (Intel): 0xd1620
+     * @note[short] Windows: 0x203f00
+     * @note[short] iOS: 0x39fe2c
      * @note[short] Android: Rebinded
      */
-    void onUpdateAccountSettingsCompleted(gd::string p0, gd::string p1);
+    void onUpdateAccountSettingsCompleted(gd::string response, gd::string tag);
 
     /**
-     * @note[short] Windows: 0x1fb070
-     * @note[short] iOS: 0x397860
+     * @note[short] MacOS (ARM): 0xb65cc
+     * @note[short] MacOS (Intel): 0xcf210
+     * @note[short] Windows: 0x2000f0
+     * @note[short] iOS: 0x39ea48
      * @note[short] Android: Rebinded
      */
-    void ProcessHttpRequest(gd::string p0, gd::string p1, gd::string p2, GJHttpType p3);
+    void ProcessHttpRequest(gd::string url, gd::string params, gd::string tag, GJHttpType type);
 
     /**
-     * @note[short] MacOS (ARM): 0xbaf14
-     * @note[short] MacOS (Intel): 0xd2690
+     * @note[short] MacOS (ARM): 0xb8e84
+     * @note[short] MacOS (Intel): 0xd1ef0
+     * @note[short] Windows: 0x2006a0
+     * @note[short] iOS: 0x3a03a4
      * @note[short] Android: Rebinded
      */
-    void registerAccount(gd::string p0, gd::string p1, gd::string p2);
+    void registerAccount(gd::string response, gd::string tag, gd::string data);
 
     /**
+     * @note[short] MacOS (ARM): 0xb8d8c
+     * @note[short] MacOS (Intel): 0xd1e10
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3a0340
      * @note[short] Android
      */
-    void removeDLFromActive(char const* p0);
+    void removeDLFromActive(char const* tag);
 
     /**
-     * @note[short] MacOS (ARM): 0xbc4d8
-     * @note[short] MacOS (Intel): 0xd3d60
+     * @note[short] MacOS (ARM): 0xba484
+     * @note[short] MacOS (Intel): 0xd35a0
+     * @note[short] Windows: 0x2028c0
+     * @note[short] iOS: 0x3a10cc
      * @note[short] Android: Rebinded
      */
-    bool syncAccount(gd::string p0);
+    bool syncAccount(gd::string url);
 
     /**
+     * @note[short] MacOS (ARM): 0xba848
+     * @note[short] MacOS (Intel): 0xd3980
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3a13c0
      * @note[short] Android
      */
     void unlinkFromAccount();
 
     /**
-     * @note[short] MacOS (ARM): 0xbc948
-     * @note[short] MacOS (Intel): 0xd4200
+     * @note[short] MacOS (ARM): 0xba8e0
+     * @note[short] MacOS (Intel): 0xd3a30
+     * @note[short] Windows: 0x203ab0
+     * @note[short] iOS: 0x3a1458
      * @note[short] Android: Rebinded
      */
-    void updateAccountSettings(int p0, int p1, int p2, gd::string p3, gd::string p4, gd::string p5);
+    bool updateAccountSettings(int messageStatus, int friendRequestStatus, int commentStatus, gd::string youtube, gd::string twitter, gd::string twitch, gd::string instagram, gd::string tiktok, gd::string discord, gd::string custom);
     cocos2d::CCDictionary* m_activeDownloads;
     gd::string m_username;
     int m_accountID;

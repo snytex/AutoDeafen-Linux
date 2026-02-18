@@ -30,31 +30,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addManualAchievements) 
 	#endif
 
-	#ifndef GEODE_STATICS_areAchievementsEarned
-		#define GEODE_STATICS_areAchievementsEarned
-		GEODE_AS_STATIC_FUNCTION(areAchievementsEarned) 
-	#endif
-
-	#ifndef GEODE_STATICS_checkAchFromUnlock
-		#define GEODE_STATICS_checkAchFromUnlock
-		GEODE_AS_STATIC_FUNCTION(checkAchFromUnlock) 
-	#endif
-
-	#ifndef GEODE_STATICS_dataLoaded
-		#define GEODE_STATICS_dataLoaded
-		GEODE_AS_STATIC_FUNCTION(dataLoaded) 
-	#endif
-
-	#ifndef GEODE_STATICS_encodeDataTo
-		#define GEODE_STATICS_encodeDataTo
-		GEODE_AS_STATIC_FUNCTION(encodeDataTo) 
-	#endif
-
-	#ifndef GEODE_STATICS_firstSetup
-		#define GEODE_STATICS_firstSetup
-		GEODE_AS_STATIC_FUNCTION(firstSetup) 
-	#endif
-
 	#ifndef GEODE_STATICS_getAchievementRewardDict
 		#define GEODE_STATICS_getAchievementRewardDict
 		GEODE_AS_STATIC_FUNCTION(getAchievementRewardDict) 
@@ -65,19 +40,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getAchievementsWithID) 
 	#endif
 
-	#ifndef GEODE_STATICS_getAllAchievements
-		#define GEODE_STATICS_getAllAchievements
-		GEODE_AS_STATIC_FUNCTION(getAllAchievements) 
-	#endif
-
 	#ifndef GEODE_STATICS_getAllAchievementsSorted
 		#define GEODE_STATICS_getAllAchievementsSorted
 		GEODE_AS_STATIC_FUNCTION(getAllAchievementsSorted) 
-	#endif
-
-	#ifndef GEODE_STATICS_isAchievementAvailable
-		#define GEODE_STATICS_isAchievementAvailable
-		GEODE_AS_STATIC_FUNCTION(isAchievementAvailable) 
 	#endif
 
 	#ifndef GEODE_STATICS_isAchievementEarned
@@ -85,19 +50,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(isAchievementEarned) 
 	#endif
 
-	#ifndef GEODE_STATICS_notifyAchievement
-		#define GEODE_STATICS_notifyAchievement
-		GEODE_AS_STATIC_FUNCTION(notifyAchievement) 
-	#endif
-
 	#ifndef GEODE_STATICS_notifyAchievementWithID
 		#define GEODE_STATICS_notifyAchievementWithID
 		GEODE_AS_STATIC_FUNCTION(notifyAchievementWithID) 
-	#endif
-
-	#ifndef GEODE_STATICS_percentageForCount
-		#define GEODE_STATICS_percentageForCount
-		GEODE_AS_STATIC_FUNCTION(percentageForCount) 
 	#endif
 
 	#ifndef GEODE_STATICS_percentForAchievement
@@ -113,21 +68,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_reportPlatformAchievementWithID
 		#define GEODE_STATICS_reportPlatformAchievementWithID
 		GEODE_AS_STATIC_FUNCTION(reportPlatformAchievementWithID) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetAchievement
-		#define GEODE_STATICS_resetAchievement
-		GEODE_AS_STATIC_FUNCTION(resetAchievement) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetAchievements
-		#define GEODE_STATICS_resetAchievements
-		GEODE_AS_STATIC_FUNCTION(resetAchievements) 
-	#endif
-
-	#ifndef GEODE_STATICS_setup
-		#define GEODE_STATICS_setup
-		GEODE_AS_STATIC_FUNCTION(setup) 
 	#endif
 
 	#ifndef GEODE_STATICS_storeAchievementUnlocks
@@ -285,28 +225,28 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a1c0, Thiscall, AchievementManager, achievementForUnlock, int, UnlockType)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7ef0, Thiscall, AchievementManager, addAchievement, gd::string, gd::string, gd::string, gd::string, gd::string, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8410, Thiscall, AchievementManager, addManualAchievements, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, areAchievementsEarned, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, checkAchFromUnlock, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, dataLoaded, DS_Dictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, encodeDataTo, DS_Dictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, firstSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementManager, areAchievementsEarned, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementManager, checkAchFromUnlock, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementManager, dataLoaded, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementManager, encodeDataTo, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementManager, firstSetup, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, getAchievementRewardDict, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39d70, Thiscall, AchievementManager, getAchievementsWithID, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, getAllAchievements, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, getAllAchievementsSorted, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, isAchievementAvailable, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementManager, getAllAchievements, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39b50, Thiscall, AchievementManager, getAllAchievementsSorted, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementManager, isAchievementAvailable, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39a70, Thiscall, AchievementManager, isAchievementEarned, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementManager, limitForAchievement, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, notifyAchievement, char const*, char const*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementManager, notifyAchievement, char const*, char const*, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a470, Thiscall, AchievementManager, notifyAchievementWithID, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, percentageForCount, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementManager, percentageForCount, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39a90, Thiscall, AchievementManager, percentForAchievement, char const*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, reportAchievementWithID, char const*, int, bool)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, reportPlatformAchievementWithID, char const*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, resetAchievement, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, resetAchievements, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, setup, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementManager, storeAchievementUnlocks, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementManager, resetAchievement, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementManager, resetAchievements, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementManager, setup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39e20, Thiscall, AchievementManager, storeAchievementUnlocks, )
 		}
 	};
 }

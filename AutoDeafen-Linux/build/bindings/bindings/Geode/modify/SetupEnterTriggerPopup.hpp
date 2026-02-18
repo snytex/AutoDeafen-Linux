@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_determineStartValues
 		#define GEODE_STATICS_determineStartValues
 		GEODE_AS_STATIC_FUNCTION(determineStartValues) 
@@ -55,10 +50,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupEnterTriggerPopup, create, EnterEffectObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x287eb0, Thiscall, SetupEnterTriggerPopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x287930, Thiscall, SetupEnterTriggerPopup, init, EnterEffectObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x287f80, Thiscall, SetupEnterTriggerPopup, onEnterType, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupEnterTriggerPopup, create, EnterEffectObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28f7e0, Thiscall, SetupEnterTriggerPopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28f260, Thiscall, SetupEnterTriggerPopup, init, EnterEffectObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28f8b0, Thiscall, SetupEnterTriggerPopup, onEnterType, cocos2d::CCObject*)
 		}
 	};
 }

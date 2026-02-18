@@ -45,9 +45,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27c690, Default, GJObjectDecoder, sharedDecoder, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x77db0, Thiscall, GJObjectDecoder, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27c730, Thiscall, GJObjectDecoder, getDecodedObject, int, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x283fc0, Default, GJObjectDecoder, sharedDecoder, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x77de0, Thiscall, GJObjectDecoder, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x284060, Thiscall, GJObjectDecoder, getDecodedObject, int, DS_Dictionary*)
 		}
 	};
 }

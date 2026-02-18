@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void listButtonBarSwitchedPage(ListButtonBar* p0, int p1);
+    virtual void listButtonBarSwitchedPage(ListButtonBar* bar, int page);
 };

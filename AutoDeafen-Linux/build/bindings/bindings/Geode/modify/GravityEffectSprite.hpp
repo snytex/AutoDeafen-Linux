@@ -41,7 +41,7 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GravityEffectSprite, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a4390, Thiscall, GravityEffectSprite, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bb2b0, Thiscall, GravityEffectSprite, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GravityEffectSprite, draw, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GravityEffectSprite, updateSpritesColor, cocos2d::ccColor3B)
 		}

@@ -5,14 +5,14 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_keyBackClicked
 		#define GEODE_STATICS_keyBackClicked
 		GEODE_AS_STATIC_FUNCTION(keyBackClicked) 
+	#endif
+
+	#ifndef GEODE_STATICS_valuePopupClosed
+		#define GEODE_STATICS_valuePopupClosed
+		GEODE_AS_STATIC_FUNCTION(valuePopupClosed) 
 	#endif
 
 	#ifndef GEODE_STATICS_textInputClosed
@@ -23,11 +23,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_textChanged
 		#define GEODE_STATICS_textChanged
 		GEODE_AS_STATIC_FUNCTION(textChanged) 
-	#endif
-
-	#ifndef GEODE_STATICS_addGroupID
-		#define GEODE_STATICS_addGroupID
-		GEODE_AS_STATIC_FUNCTION(addGroupID) 
 	#endif
 
 	#ifndef GEODE_STATICS_callRemoveFromGroup
@@ -100,6 +95,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onExtra2) 
 	#endif
 
+	#ifndef GEODE_STATICS_onGroupIDOptions
+		#define GEODE_STATICS_onGroupIDOptions
+		GEODE_AS_STATIC_FUNCTION(onGroupIDOptions) 
+	#endif
+
 	#ifndef GEODE_STATICS_onNextFreeEditorLayer1
 		#define GEODE_STATICS_onNextFreeEditorLayer1
 		GEODE_AS_STATIC_FUNCTION(onNextFreeEditorLayer1) 
@@ -130,11 +130,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onRemoveFromGroup) 
 	#endif
 
-	#ifndef GEODE_STATICS_onSmoothEase
-		#define GEODE_STATICS_onSmoothEase
-		GEODE_AS_STATIC_FUNCTION(onSmoothEase) 
-	#endif
-
 	#ifndef GEODE_STATICS_onToggleGuide
 		#define GEODE_STATICS_onToggleGuide
 		GEODE_AS_STATIC_FUNCTION(onToggleGuide) 
@@ -145,6 +140,16 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onToggleSelectedOrder) 
 	#endif
 
+	#ifndef GEODE_STATICS_onToggleTraceIn
+		#define GEODE_STATICS_onToggleTraceIn
+		GEODE_AS_STATIC_FUNCTION(onToggleTraceIn) 
+	#endif
+
+	#ifndef GEODE_STATICS_onToggleTraceOut
+		#define GEODE_STATICS_onToggleTraceOut
+		GEODE_AS_STATIC_FUNCTION(onToggleTraceOut) 
+	#endif
+
 	#ifndef GEODE_STATICS_onZLayer
 		#define GEODE_STATICS_onZLayer
 		GEODE_AS_STATIC_FUNCTION(onZLayer) 
@@ -153,11 +158,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onZLayerShift
 		#define GEODE_STATICS_onZLayerShift
 		GEODE_AS_STATIC_FUNCTION(onZLayerShift) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeGroupID
-		#define GEODE_STATICS_removeGroupID
-		GEODE_AS_STATIC_FUNCTION(removeGroupID) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateEditorLabel
@@ -234,6 +234,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_keyBackClicked
 		#define GEODE_CONCEPT_CHECK_keyBackClicked
 		GEODE_CONCEPT_FUNCTION_CHECK(keyBackClicked) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_valuePopupClosed
+		#define GEODE_CONCEPT_CHECK_valuePopupClosed
+		GEODE_CONCEPT_FUNCTION_CHECK(valuePopupClosed) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_textInputClosed
@@ -321,6 +326,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(onExtra2) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_onGroupIDOptions
+		#define GEODE_CONCEPT_CHECK_onGroupIDOptions
+		GEODE_CONCEPT_FUNCTION_CHECK(onGroupIDOptions) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_onNextFreeEditorLayer1
 		#define GEODE_CONCEPT_CHECK_onNextFreeEditorLayer1
 		GEODE_CONCEPT_FUNCTION_CHECK(onNextFreeEditorLayer1) 
@@ -364,6 +374,16 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_onToggleSelectedOrder
 		#define GEODE_CONCEPT_CHECK_onToggleSelectedOrder
 		GEODE_CONCEPT_FUNCTION_CHECK(onToggleSelectedOrder) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_onToggleTraceIn
+		#define GEODE_CONCEPT_CHECK_onToggleTraceIn
+		GEODE_CONCEPT_FUNCTION_CHECK(onToggleTraceIn) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_onToggleTraceOut
+		#define GEODE_CONCEPT_CHECK_onToggleTraceOut
+		GEODE_CONCEPT_FUNCTION_CHECK(onToggleTraceOut) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_onZLayer
@@ -455,50 +475,54 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetGroupIDLayer, create, GameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e62e0, Thiscall, SetGroupIDLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b790, Thiscall, SetGroupIDLayer, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e4400, Thiscall, SetGroupIDLayer, textChanged, CCTextInputNode*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetGroupIDLayer, addGroupID, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e5000, Thiscall, SetGroupIDLayer, callRemoveFromGroup, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e34b0, Thiscall, SetGroupIDLayer, createTextInput, cocos2d::CCPoint, int, int, gd::string, float, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetGroupIDLayer, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e1260, Thiscall, SetGroupIDLayer, init, GameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e52b0, Thiscall, SetGroupIDLayer, onAddGroup, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e5420, Thiscall, SetGroupIDLayer, onAddGroupParent, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e4390, Thiscall, SetGroupIDLayer, onAnim, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e39e0, Thiscall, SetGroupIDLayer, onArrow, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e3980, Thiscall, SetGroupIDLayer, onArrowLeft, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e39b0, Thiscall, SetGroupIDLayer, onArrowRight, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e5f60, Thiscall, SetGroupIDLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e3ed0, Thiscall, SetGroupIDLayer, onCopy, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e40d0, Thiscall, SetGroupIDLayer, onExtra, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e4250, Thiscall, SetGroupIDLayer, onExtra2, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e57b0, Thiscall, SetGroupIDLayer, onNextFreeEditorLayer1, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e5820, Thiscall, SetGroupIDLayer, onNextFreeEditorLayer2, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e5cc0, Thiscall, SetGroupIDLayer, onNextFreeOrderChannel, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e48d0, Thiscall, SetGroupIDLayer, onNextGroupID1, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e3f30, Thiscall, SetGroupIDLayer, onPaste, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e51e0, Thiscall, SetGroupIDLayer, onRemoveFromGroup, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetGroupIDLayer, onSmoothEase, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetGroupIDLayer, onToggleGuide, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e3410, Thiscall, SetGroupIDLayer, onToggleSelectedOrder, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetGroupIDLayer, onZLayer, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetGroupIDLayer, onZLayerShift, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetGroupIDLayer, removeGroupID, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e5920, Thiscall, SetGroupIDLayer, updateEditorLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e59b0, Thiscall, SetGroupIDLayer, updateEditorLabel2, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetGroupIDLayer, updateEditorLayerID, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetGroupIDLayer, updateEditorLayerID2, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetGroupIDLayer, updateEditorOrder, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetGroupIDLayer, updateEditorOrderLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e4940, Thiscall, SetGroupIDLayer, updateGroupIDButtons, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e5ad0, Thiscall, SetGroupIDLayer, updateGroupIDLabel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetGroupIDLayer, updateOrderChannel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetGroupIDLayer, updateOrderChannelLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e5d30, Thiscall, SetGroupIDLayer, updateZLayerButtons, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e5890, Thiscall, SetGroupIDLayer, updateZOrder, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e5a40, Thiscall, SetGroupIDLayer, updateZOrderLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetGroupIDLayer, create, GameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fdf20, Thiscall, SetGroupIDLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd3d0, Thiscall, SetGroupIDLayer, valuePopupClosed, ConfigureValuePopup*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b850, Thiscall, SetGroupIDLayer, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fbbb0, Thiscall, SetGroupIDLayer, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetGroupIDLayer, addGroupID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fc7e0, Thiscall, SetGroupIDLayer, callRemoveFromGroup, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fac60, Thiscall, SetGroupIDLayer, createTextInput, cocos2d::CCPoint, int, int, gd::string, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fb300, Thiscall, SetGroupIDLayer, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f85e0, Thiscall, SetGroupIDLayer, init, GameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fca90, Thiscall, SetGroupIDLayer, onAddGroup, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fcc00, Thiscall, SetGroupIDLayer, onAddGroupParent, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fbb40, Thiscall, SetGroupIDLayer, onAnim, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fb190, Thiscall, SetGroupIDLayer, onArrow, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fb130, Thiscall, SetGroupIDLayer, onArrowLeft, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fb160, Thiscall, SetGroupIDLayer, onArrowRight, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fdb60, Thiscall, SetGroupIDLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fb680, Thiscall, SetGroupIDLayer, onCopy, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fb880, Thiscall, SetGroupIDLayer, onExtra, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fba00, Thiscall, SetGroupIDLayer, onExtra2, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd0d0, Thiscall, SetGroupIDLayer, onGroupIDOptions, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fcf90, Thiscall, SetGroupIDLayer, onNextFreeEditorLayer1, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd030, Thiscall, SetGroupIDLayer, onNextFreeEditorLayer2, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd890, Thiscall, SetGroupIDLayer, onNextFreeOrderChannel, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fc080, Thiscall, SetGroupIDLayer, onNextGroupID1, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fb6e0, Thiscall, SetGroupIDLayer, onPaste, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fc9c0, Thiscall, SetGroupIDLayer, onRemoveFromGroup, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetGroupIDLayer, onSmoothEase, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fa9f0, Thiscall, SetGroupIDLayer, onToggleGuide, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3faa80, Thiscall, SetGroupIDLayer, onToggleSelectedOrder, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fab20, Thiscall, SetGroupIDLayer, onToggleTraceIn, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fabc0, Thiscall, SetGroupIDLayer, onToggleTraceOut, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fcd00, Thiscall, SetGroupIDLayer, onZLayer, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fcdc0, Thiscall, SetGroupIDLayer, onZLayerShift, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetGroupIDLayer, removeGroupID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd4f0, Thiscall, SetGroupIDLayer, updateEditorLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd580, Thiscall, SetGroupIDLayer, updateEditorLabel2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fce90, Thiscall, SetGroupIDLayer, updateEditorLayerID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fcf10, Thiscall, SetGroupIDLayer, updateEditorLayerID2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fda90, Thiscall, SetGroupIDLayer, updateEditorOrder, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd730, Thiscall, SetGroupIDLayer, updateEditorOrderLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fc120, Thiscall, SetGroupIDLayer, updateGroupIDButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd6a0, Thiscall, SetGroupIDLayer, updateGroupIDLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd9c0, Thiscall, SetGroupIDLayer, updateOrderChannel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd7e0, Thiscall, SetGroupIDLayer, updateOrderChannelLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd930, Thiscall, SetGroupIDLayer, updateZLayerButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd460, Thiscall, SetGroupIDLayer, updateZOrder, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd610, Thiscall, SetGroupIDLayer, updateZOrderLabel, )
 		}
 	};
 }

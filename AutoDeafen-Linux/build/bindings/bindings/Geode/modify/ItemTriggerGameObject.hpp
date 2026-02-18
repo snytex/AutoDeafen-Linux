@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_customSetup
 		#define GEODE_STATICS_customSetup
 		GEODE_AS_STATIC_FUNCTION(customSetup) 
@@ -28,11 +23,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getSaveString
 		#define GEODE_STATICS_getSaveString
 		GEODE_AS_STATIC_FUNCTION(getSaveString) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
     
@@ -75,12 +65,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ItemTriggerGameObject, create, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a7160, Thiscall, ItemTriggerGameObject, customSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a71a0, Thiscall, ItemTriggerGameObject, triggerObject, GJBaseGameLayer*, int, gd::vector<int> const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a8280, Thiscall, ItemTriggerGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a7300, Thiscall, ItemTriggerGameObject, getSaveString, GJBaseGameLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ItemTriggerGameObject, init, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ItemTriggerGameObject, create, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4bfcb0, Thiscall, ItemTriggerGameObject, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4bfcf0, Thiscall, ItemTriggerGameObject, triggerObject, GJBaseGameLayer*, int, gd::vector<int> const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c0dd0, Thiscall, ItemTriggerGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4bfe50, Thiscall, ItemTriggerGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ItemTriggerGameObject, init, char const*)
 		}
 	};
 }

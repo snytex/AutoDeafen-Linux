@@ -16,148 +16,193 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(CCScrollLayerExt, cocos2d::CCLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x396eb8
-     * @note[short] MacOS (Intel): 0x41b380
-     * @note[short] Windows: 0x46a50
-     * @note[short] iOS: 0x300a10
+     * @note[short] MacOS (ARM): 0x3a07e4
+     * @note[short] MacOS (Intel): 0x42de60
+     * @note[short] Windows: 0x46ac0
+     * @note[short] iOS: 0x300760
      * @note[short] Android: Rebinded
      */
-     CCScrollLayerExt(cocos2d::CCRect p0);
+     CCScrollLayerExt(cocos2d::CCRect rect);
 
     /**
-     * @note[short] MacOS (ARM): 0x3980f4
-     * @note[short] MacOS (Intel): 0x41c710
-     * @note[short] Windows: 0x47ad0
-     * @note[short] iOS: 0x3019ec
+     * @note[short] MacOS (ARM): 0x3a0fb4
+     * @note[short] MacOS (Intel): 0x42e610
+     * @note[short] Windows: 0x47100
+     * @note[short] iOS: 0x300e34
+     * @note[short] Android: Rebinded
+     */
+     ~CCScrollLayerExt();
+
+    /**
+     * @note[short] MacOS (ARM): 0x3a1a3c
+     * @note[short] MacOS (Intel): 0x42f1f0
+     * @note[short] Windows: 0x47b40
+     * @note[short] iOS: 0x301734
      * @note[short] Android
      */
     virtual void visit();
 
     /**
-     * @note[short] MacOS (ARM): 0x397afc
-     * @note[short] MacOS (Intel): 0x41c0b0
-     * @note[short] Windows: 0x47580
-     * @note[short] iOS: 0x301428
+     * @note[short] MacOS (ARM): 0x3a1440
+     * @note[short] MacOS (Intel): 0x42eb90
+     * @note[short] Windows: 0x475f0
+     * @note[short] iOS: 0x30116c
      * @note[short] Android
      */
-    virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual bool ccTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x397eb8
-     * @note[short] MacOS (Intel): 0x41c4d0
-     * @note[short] Windows: 0x47950
-     * @note[short] iOS: 0x3017c4
+     * @note[short] MacOS (ARM): 0x3a17fc
+     * @note[short] MacOS (Intel): 0x42efb0
+     * @note[short] Windows: 0x479c0
+     * @note[short] iOS: 0x301508
      * @note[short] Android
      */
-    virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchMoved(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x397c18
-     * @note[short] MacOS (Intel): 0x41c1d0
-     * @note[short] Windows: 0x476a0
-     * @note[short] iOS: 0x301534
+     * @note[short] MacOS (ARM): 0x3a1558
+     * @note[short] MacOS (Intel): 0x42ecb0
+     * @note[short] Windows: 0x47710
+     * @note[short] iOS: 0x301274
      * @note[short] Android
      */
-    virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchEnded(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x397e54
-     * @note[short] MacOS (Intel): 0x41c470
-     * @note[short] Windows: 0x47920
-     * @note[short] iOS: 0x301760
+     * @note[short] MacOS (ARM): 0x3a1798
+     * @note[short] MacOS (Intel): 0x42ef50
+     * @note[short] Windows: 0x47990
+     * @note[short] iOS: 0x3014a4
      * @note[short] Android
      */
-    virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchCancelled(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x397ac4
-     * @note[short] MacOS (Intel): 0x41c070
-     * @note[short] Windows: 0x47530
-     * @note[short] iOS: 0x3013f0
+     * @note[short] MacOS (ARM): 0x3a1408
+     * @note[short] MacOS (Intel): 0x42eb50
+     * @note[short] Windows: 0x475a0
+     * @note[short] iOS: 0x301134
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x3981e8
-     * @note[short] MacOS (Intel): 0x41c810
-     * @note[short] Windows: 0x47c00
-     * @note[short] iOS: 0x301ae0
+     * @note[short] MacOS (ARM): 0x3a1b64
+     * @note[short] MacOS (Intel): 0x42f2f0
+     * @note[short] Windows: 0x47c70
+     * @note[short] iOS: 0x301830
      * @note[short] Android
      */
-    virtual void preVisitWithClippingRect(cocos2d::CCRect p0);
+    virtual void preVisitWithClippingRect(cocos2d::CCRect rect);
 
     /**
-     * @note[short] MacOS (ARM): 0x39827c
-     * @note[short] MacOS (Intel): 0x41c890
-     * @note[short] Windows: 0x47ca0
-     * @note[short] iOS: 0x301b74
+     * @note[short] MacOS (ARM): 0x3a1bf8
+     * @note[short] MacOS (Intel): 0x42f370
+     * @note[short] Windows: 0x47d10
+     * @note[short] iOS: 0x3018c4
      * @note[short] Android
      */
     virtual void postVisit();
 
     /**
+     * @note[short] MacOS (ARM): 0x3a117c
+     * @note[short] MacOS (Intel): 0x42e8a0
+     * @note[short] Windows: 0x47170
+     * @note[short] iOS: 0x300ec4
      * @note[short] Android
      */
-    TodoReturn constraintContent();
+    void constraintContent();
 
     /**
+     * @note[short] MacOS (ARM): 0x3a1184
+     * @note[short] MacOS (Intel): 0x42e8b0
+     * @note[short] Windows: 0x47180
+     * @note[short] iOS: 0x300ecc
      * @note[short] Android
      */
-    TodoReturn doConstraintContent(bool p0);
-	inline float getMaxY() {
-        return m_scrollLimitBottom;
-    }
-	inline float getMinY() {
-        return this->getContentSize().height - m_contentLayer->getContentSize().height - m_scrollLimitTop;
-    }
+    void doConstraintContent(bool instant);
 
     /**
-     * @note[short] MacOS (ARM): 0x3975d4
-     * @note[short] MacOS (Intel): 0x41baa0
-     * @note[short] Windows: 0x47000
-     * @note[short] iOS: 0x301054
+     * @note[short] MacOS (ARM): 0x3a0e18
+     * @note[short] MacOS (Intel): 0x42e480
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x300cec
+     * @note[short] Android
+     */
+    float getMaxY();
+
+    /**
+     * @note[short] MacOS (ARM): 0x3a0e20
+     * @note[short] MacOS (Intel): 0x42e490
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    float getMinY();
+
+    /**
+     * @note[short] MacOS (ARM): 0x3a0f1c
+     * @note[short] MacOS (Intel): 0x42e580
+     * @note[short] Windows: 0x47070
+     * @note[short] iOS: 0x300d9c
      * @note[short] Android
      */
     void moveToTop();
 
     /**
-     * @note[short] MacOS (ARM): 0x39752c
-     * @note[short] MacOS (Intel): 0x41ba00
-     * @note[short] Windows: 0x46f60
-     * @note[short] iOS: 0x300fac
+     * @note[short] MacOS (ARM): 0x3a0e74
+     * @note[short] MacOS (Intel): 0x42e4e0
+     * @note[short] Windows: 0x46fd0
+     * @note[short] iOS: 0x300cf4
      * @note[short] Android
      */
-    void moveToTopWithOffset(float p0);
+    void moveToTopWithOffset(float offset);
 
     /**
+     * @note[short] MacOS (ARM): 0x3a1314
+     * @note[short] MacOS (Intel): 0x42ea50
+     * @note[short] Windows: 0x47330
+     * @note[short] iOS: 0x301054
      * @note[short] Android
      */
-    TodoReturn scrollingEnd();
+    void scrollingEnd();
 
     /**
-     * @note[short] MacOS (ARM): 0x39802c
-     * @note[short] MacOS (Intel): 0x41c650
+     * @note[short] MacOS (ARM): 0x3a1974
+     * @note[short] MacOS (Intel): 0x42f130
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x301924
+     * @note[short] iOS: 0x30166c
      * @note[short] Android
      */
     void scrollLayer(float offset);
 
     /**
+     * @note[short] MacOS (ARM): 0x3a135c
+     * @note[short] MacOS (Intel): 0x42eaa0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void setContentLayerSize(cocos2d::CCSize p0);
+    void setContentLayerSize(cocos2d::CCSize size);
 
     /**
+     * @note[short] MacOS (ARM): 0x3a136c
+     * @note[short] MacOS (Intel): 0x42eac0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x30109c
      * @note[short] Android
      */
-    void setContentOffset(cocos2d::CCPoint p0, bool p1);
+    void setContentOffset(cocos2d::CCPoint offset, bool animate);
 
     /**
+     * @note[short] MacOS (ARM): 0x3a0bcc
+     * @note[short] MacOS (Intel): 0x42e220
+     * @note[short] Windows: 0x47370
+     * @note[short] iOS: 0x300ac8
      * @note[short] Android
      */
-    TodoReturn updateIndicators(float p0);
+    void updateIndicators(float dt);
     cocos2d::CCTouch* m_touch;
     cocos2d::CCPoint m_touchPosition;
     cocos2d::CCPoint m_touchStartPosition;

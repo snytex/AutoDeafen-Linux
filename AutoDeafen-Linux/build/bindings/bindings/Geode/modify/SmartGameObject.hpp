@@ -56,10 +56,10 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SmartGameObject, create, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4873d0, Thiscall, SmartGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x487260, Thiscall, SmartGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49fab0, Thiscall, SmartGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49f940, Thiscall, SmartGameObject, getSaveString, GJBaseGameLayer*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SmartGameObject, init, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x487070, Thiscall, SmartGameObject, updateSmartFrame, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49f750, Thiscall, SmartGameObject, updateSmartFrame, )
 		}
 	};
 }

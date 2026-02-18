@@ -15,206 +15,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(resetGlobalOrderOfArrival) 
 	#endif
 
-	#ifndef GEODE_STATICS_getActionByTag
-		#define GEODE_STATICS_getActionByTag
-		GEODE_AS_STATIC_FUNCTION(getActionByTag) 
-	#endif
-
-	#ifndef GEODE_STATICS_getComponent
-		#define GEODE_STATICS_getComponent
-		GEODE_AS_STATIC_FUNCTION(getComponent) 
-	#endif
-
-	#ifndef GEODE_STATICS_getScriptHandler
-		#define GEODE_STATICS_getScriptHandler
-		GEODE_AS_STATIC_FUNCTION(getScriptHandler) 
-	#endif
-
-	#ifndef GEODE_STATICS_getTransformTemp
-		#define GEODE_STATICS_getTransformTemp
-		GEODE_AS_STATIC_FUNCTION(getTransformTemp) 
-	#endif
-
-	#ifndef GEODE_STATICS_getUseChildIndex
-		#define GEODE_STATICS_getUseChildIndex
-		GEODE_AS_STATIC_FUNCTION(getUseChildIndex) 
-	#endif
-
-	#ifndef GEODE_STATICS_setAdditionalTransform
-		#define GEODE_STATICS_setAdditionalTransform
-		GEODE_AS_STATIC_FUNCTION(setAdditionalTransform) 
-	#endif
-
-	#ifndef GEODE_STATICS_setUseChildIndex
-		#define GEODE_STATICS_setUseChildIndex
-		GEODE_AS_STATIC_FUNCTION(setUseChildIndex) 
-	#endif
-
-	#ifndef GEODE_STATICS_boundingBox
-		#define GEODE_STATICS_boundingBox
-		GEODE_AS_STATIC_FUNCTION(boundingBox) 
-	#endif
-
-	#ifndef GEODE_STATICS_childrenAlloc
-		#define GEODE_STATICS_childrenAlloc
-		GEODE_AS_STATIC_FUNCTION(childrenAlloc) 
-	#endif
-
-	#ifndef GEODE_STATICS_convertToNodeSpace
-		#define GEODE_STATICS_convertToNodeSpace
-		GEODE_AS_STATIC_FUNCTION(convertToNodeSpace) 
-	#endif
-
-	#ifndef GEODE_STATICS_convertToNodeSpaceAR
-		#define GEODE_STATICS_convertToNodeSpaceAR
-		GEODE_AS_STATIC_FUNCTION(convertToNodeSpaceAR) 
-	#endif
-
-	#ifndef GEODE_STATICS_convertToWindowSpace
-		#define GEODE_STATICS_convertToWindowSpace
-		GEODE_AS_STATIC_FUNCTION(convertToWindowSpace) 
-	#endif
-
-	#ifndef GEODE_STATICS_convertToWorldSpace
-		#define GEODE_STATICS_convertToWorldSpace
-		GEODE_AS_STATIC_FUNCTION(convertToWorldSpace) 
-	#endif
-
-	#ifndef GEODE_STATICS_convertToWorldSpaceAR
-		#define GEODE_STATICS_convertToWorldSpaceAR
-		GEODE_AS_STATIC_FUNCTION(convertToWorldSpaceAR) 
-	#endif
-
-	#ifndef GEODE_STATICS_convertTouchToNodeSpace
-		#define GEODE_STATICS_convertTouchToNodeSpace
-		GEODE_AS_STATIC_FUNCTION(convertTouchToNodeSpace) 
-	#endif
-
-	#ifndef GEODE_STATICS_convertTouchToNodeSpaceAR
-		#define GEODE_STATICS_convertTouchToNodeSpaceAR
-		GEODE_AS_STATIC_FUNCTION(convertTouchToNodeSpaceAR) 
-	#endif
-
-	#ifndef GEODE_STATICS_description
-		#define GEODE_STATICS_description
-		GEODE_AS_STATIC_FUNCTION(description) 
-	#endif
-
-	#ifndef GEODE_STATICS_detachChild
-		#define GEODE_STATICS_detachChild
-		GEODE_AS_STATIC_FUNCTION(detachChild) 
-	#endif
-
-	#ifndef GEODE_STATICS_insertChild
-		#define GEODE_STATICS_insertChild
-		GEODE_AS_STATIC_FUNCTION(insertChild) 
-	#endif
-
-	#ifndef GEODE_STATICS_numberOfRunningActions
-		#define GEODE_STATICS_numberOfRunningActions
-		GEODE_AS_STATIC_FUNCTION(numberOfRunningActions) 
-	#endif
-
-	#ifndef GEODE_STATICS_pauseSchedulerAndActions
-		#define GEODE_STATICS_pauseSchedulerAndActions
-		GEODE_AS_STATIC_FUNCTION(pauseSchedulerAndActions) 
-	#endif
-
-	#ifndef GEODE_STATICS_qsortAllChildrenWithIndex
-		#define GEODE_STATICS_qsortAllChildrenWithIndex
-		GEODE_AS_STATIC_FUNCTION(qsortAllChildrenWithIndex) 
-	#endif
-
-	#ifndef GEODE_STATICS_resumeSchedulerAndActions
-		#define GEODE_STATICS_resumeSchedulerAndActions
-		GEODE_AS_STATIC_FUNCTION(resumeSchedulerAndActions) 
-	#endif
-
-	#ifndef GEODE_STATICS_runAction
-		#define GEODE_STATICS_runAction
-		GEODE_AS_STATIC_FUNCTION(runAction) 
-	#endif
-
-	#ifndef GEODE_STATICS_schedule
-		#define GEODE_STATICS_schedule
-		GEODE_AS_STATIC_FUNCTION(schedule) 
-	#endif
-
-	#ifndef GEODE_STATICS_scheduleOnce
-		#define GEODE_STATICS_scheduleOnce
-		GEODE_AS_STATIC_FUNCTION(scheduleOnce) 
-	#endif
-
-	#ifndef GEODE_STATICS_scheduleUpdate
-		#define GEODE_STATICS_scheduleUpdate
-		GEODE_AS_STATIC_FUNCTION(scheduleUpdate) 
-	#endif
-
-	#ifndef GEODE_STATICS_scheduleUpdateWithPriority
-		#define GEODE_STATICS_scheduleUpdateWithPriority
-		GEODE_AS_STATIC_FUNCTION(scheduleUpdateWithPriority) 
-	#endif
-
-	#ifndef GEODE_STATICS_scheduleUpdateWithPriorityLua
-		#define GEODE_STATICS_scheduleUpdateWithPriorityLua
-		GEODE_AS_STATIC_FUNCTION(scheduleUpdateWithPriorityLua) 
-	#endif
-
-	#ifndef GEODE_STATICS_sortAllChildrenNoIndex
-		#define GEODE_STATICS_sortAllChildrenNoIndex
-		GEODE_AS_STATIC_FUNCTION(sortAllChildrenNoIndex) 
-	#endif
-
-	#ifndef GEODE_STATICS_sortAllChildrenWithIndex
-		#define GEODE_STATICS_sortAllChildrenWithIndex
-		GEODE_AS_STATIC_FUNCTION(sortAllChildrenWithIndex) 
-	#endif
-
-	#ifndef GEODE_STATICS_stopAction
-		#define GEODE_STATICS_stopAction
-		GEODE_AS_STATIC_FUNCTION(stopAction) 
-	#endif
-
-	#ifndef GEODE_STATICS_stopActionByTag
-		#define GEODE_STATICS_stopActionByTag
-		GEODE_AS_STATIC_FUNCTION(stopActionByTag) 
-	#endif
-
-	#ifndef GEODE_STATICS_stopAllActions
-		#define GEODE_STATICS_stopAllActions
-		GEODE_AS_STATIC_FUNCTION(stopAllActions) 
-	#endif
-
-	#ifndef GEODE_STATICS_transform
-		#define GEODE_STATICS_transform
-		GEODE_AS_STATIC_FUNCTION(transform) 
-	#endif
-
-	#ifndef GEODE_STATICS_transformAncestors
-		#define GEODE_STATICS_transformAncestors
-		GEODE_AS_STATIC_FUNCTION(transformAncestors) 
-	#endif
-
-	#ifndef GEODE_STATICS_unschedule
-		#define GEODE_STATICS_unschedule
-		GEODE_AS_STATIC_FUNCTION(unschedule) 
-	#endif
-
-	#ifndef GEODE_STATICS_unscheduleAllSelectors
-		#define GEODE_STATICS_unscheduleAllSelectors
-		GEODE_AS_STATIC_FUNCTION(unscheduleAllSelectors) 
-	#endif
-
-	#ifndef GEODE_STATICS_unscheduleUpdate
-		#define GEODE_STATICS_unscheduleUpdate
-		GEODE_AS_STATIC_FUNCTION(unscheduleUpdate) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateChildIndexes
-		#define GEODE_STATICS_updateChildIndexes
-		GEODE_AS_STATIC_FUNCTION(updateChildIndexes) 
-	#endif
-
 	#ifndef GEODE_STATICS_update
 		#define GEODE_STATICS_update
 		GEODE_AS_STATIC_FUNCTION(update) 
@@ -680,6 +480,191 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateTweenActionInt) 
 	#endif
 
+	#ifndef GEODE_STATICS_boundingBox
+		#define GEODE_STATICS_boundingBox
+		GEODE_AS_STATIC_FUNCTION(boundingBox) 
+	#endif
+
+	#ifndef GEODE_STATICS_childrenAlloc
+		#define GEODE_STATICS_childrenAlloc
+		GEODE_AS_STATIC_FUNCTION(childrenAlloc) 
+	#endif
+
+	#ifndef GEODE_STATICS_convertToNodeSpace
+		#define GEODE_STATICS_convertToNodeSpace
+		GEODE_AS_STATIC_FUNCTION(convertToNodeSpace) 
+	#endif
+
+	#ifndef GEODE_STATICS_convertToNodeSpaceAR
+		#define GEODE_STATICS_convertToNodeSpaceAR
+		GEODE_AS_STATIC_FUNCTION(convertToNodeSpaceAR) 
+	#endif
+
+	#ifndef GEODE_STATICS_convertTouchToNodeSpace
+		#define GEODE_STATICS_convertTouchToNodeSpace
+		GEODE_AS_STATIC_FUNCTION(convertTouchToNodeSpace) 
+	#endif
+
+	#ifndef GEODE_STATICS_convertTouchToNodeSpaceAR
+		#define GEODE_STATICS_convertTouchToNodeSpaceAR
+		GEODE_AS_STATIC_FUNCTION(convertTouchToNodeSpaceAR) 
+	#endif
+
+	#ifndef GEODE_STATICS_convertToWindowSpace
+		#define GEODE_STATICS_convertToWindowSpace
+		GEODE_AS_STATIC_FUNCTION(convertToWindowSpace) 
+	#endif
+
+	#ifndef GEODE_STATICS_convertToWorldSpace
+		#define GEODE_STATICS_convertToWorldSpace
+		GEODE_AS_STATIC_FUNCTION(convertToWorldSpace) 
+	#endif
+
+	#ifndef GEODE_STATICS_convertToWorldSpaceAR
+		#define GEODE_STATICS_convertToWorldSpaceAR
+		GEODE_AS_STATIC_FUNCTION(convertToWorldSpaceAR) 
+	#endif
+
+	#ifndef GEODE_STATICS_description
+		#define GEODE_STATICS_description
+		GEODE_AS_STATIC_FUNCTION(description) 
+	#endif
+
+	#ifndef GEODE_STATICS_detachChild
+		#define GEODE_STATICS_detachChild
+		GEODE_AS_STATIC_FUNCTION(detachChild) 
+	#endif
+
+	#ifndef GEODE_STATICS_getActionByTag
+		#define GEODE_STATICS_getActionByTag
+		GEODE_AS_STATIC_FUNCTION(getActionByTag) 
+	#endif
+
+	#ifndef GEODE_STATICS_getComponent
+		#define GEODE_STATICS_getComponent
+		GEODE_AS_STATIC_FUNCTION(getComponent) 
+	#endif
+
+	#ifndef GEODE_STATICS_insertChild
+		#define GEODE_STATICS_insertChild
+		GEODE_AS_STATIC_FUNCTION(insertChild) 
+	#endif
+
+	#ifndef GEODE_STATICS_numberOfRunningActions
+		#define GEODE_STATICS_numberOfRunningActions
+		GEODE_AS_STATIC_FUNCTION(numberOfRunningActions) 
+	#endif
+
+	#ifndef GEODE_STATICS_pauseSchedulerAndActions
+		#define GEODE_STATICS_pauseSchedulerAndActions
+		GEODE_AS_STATIC_FUNCTION(pauseSchedulerAndActions) 
+	#endif
+
+	#ifndef GEODE_STATICS_qsortAllChildrenWithIndex
+		#define GEODE_STATICS_qsortAllChildrenWithIndex
+		GEODE_AS_STATIC_FUNCTION(qsortAllChildrenWithIndex) 
+	#endif
+
+	#ifndef GEODE_STATICS_resumeSchedulerAndActions
+		#define GEODE_STATICS_resumeSchedulerAndActions
+		GEODE_AS_STATIC_FUNCTION(resumeSchedulerAndActions) 
+	#endif
+
+	#ifndef GEODE_STATICS_runAction
+		#define GEODE_STATICS_runAction
+		GEODE_AS_STATIC_FUNCTION(runAction) 
+	#endif
+
+	#ifndef GEODE_STATICS_schedule
+		#define GEODE_STATICS_schedule
+		GEODE_AS_STATIC_FUNCTION(schedule) 
+	#endif
+
+	#ifndef GEODE_STATICS_scheduleOnce
+		#define GEODE_STATICS_scheduleOnce
+		GEODE_AS_STATIC_FUNCTION(scheduleOnce) 
+	#endif
+
+	#ifndef GEODE_STATICS_scheduleUpdate
+		#define GEODE_STATICS_scheduleUpdate
+		GEODE_AS_STATIC_FUNCTION(scheduleUpdate) 
+	#endif
+
+	#ifndef GEODE_STATICS_scheduleUpdateWithPriority
+		#define GEODE_STATICS_scheduleUpdateWithPriority
+		GEODE_AS_STATIC_FUNCTION(scheduleUpdateWithPriority) 
+	#endif
+
+	#ifndef GEODE_STATICS_scheduleUpdateWithPriorityLua
+		#define GEODE_STATICS_scheduleUpdateWithPriorityLua
+		GEODE_AS_STATIC_FUNCTION(scheduleUpdateWithPriorityLua) 
+	#endif
+
+	#ifndef GEODE_STATICS_setAdditionalTransform
+		#define GEODE_STATICS_setAdditionalTransform
+		GEODE_AS_STATIC_FUNCTION(setAdditionalTransform) 
+	#endif
+
+	#ifndef GEODE_STATICS_setUseChildIndex
+		#define GEODE_STATICS_setUseChildIndex
+		GEODE_AS_STATIC_FUNCTION(setUseChildIndex) 
+	#endif
+
+	#ifndef GEODE_STATICS_sortAllChildrenNoIndex
+		#define GEODE_STATICS_sortAllChildrenNoIndex
+		GEODE_AS_STATIC_FUNCTION(sortAllChildrenNoIndex) 
+	#endif
+
+	#ifndef GEODE_STATICS_sortAllChildrenWithIndex
+		#define GEODE_STATICS_sortAllChildrenWithIndex
+		GEODE_AS_STATIC_FUNCTION(sortAllChildrenWithIndex) 
+	#endif
+
+	#ifndef GEODE_STATICS_stopAction
+		#define GEODE_STATICS_stopAction
+		GEODE_AS_STATIC_FUNCTION(stopAction) 
+	#endif
+
+	#ifndef GEODE_STATICS_stopActionByTag
+		#define GEODE_STATICS_stopActionByTag
+		GEODE_AS_STATIC_FUNCTION(stopActionByTag) 
+	#endif
+
+	#ifndef GEODE_STATICS_stopAllActions
+		#define GEODE_STATICS_stopAllActions
+		GEODE_AS_STATIC_FUNCTION(stopAllActions) 
+	#endif
+
+	#ifndef GEODE_STATICS_transform
+		#define GEODE_STATICS_transform
+		GEODE_AS_STATIC_FUNCTION(transform) 
+	#endif
+
+	#ifndef GEODE_STATICS_transformAncestors
+		#define GEODE_STATICS_transformAncestors
+		GEODE_AS_STATIC_FUNCTION(transformAncestors) 
+	#endif
+
+	#ifndef GEODE_STATICS_unschedule
+		#define GEODE_STATICS_unschedule
+		GEODE_AS_STATIC_FUNCTION(unschedule) 
+	#endif
+
+	#ifndef GEODE_STATICS_unscheduleAllSelectors
+		#define GEODE_STATICS_unscheduleAllSelectors
+		GEODE_AS_STATIC_FUNCTION(unscheduleAllSelectors) 
+	#endif
+
+	#ifndef GEODE_STATICS_unscheduleUpdate
+		#define GEODE_STATICS_unscheduleUpdate
+		GEODE_AS_STATIC_FUNCTION(unscheduleUpdate) 
+	#endif
+
+	#ifndef GEODE_STATICS_updateChildIndexes
+		#define GEODE_STATICS_updateChildIndexes
+		GEODE_AS_STATIC_FUNCTION(updateChildIndexes) 
+	#endif
+
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -689,206 +674,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_resetGlobalOrderOfArrival
 		#define GEODE_CONCEPT_CHECK_resetGlobalOrderOfArrival
 		GEODE_CONCEPT_FUNCTION_CHECK(resetGlobalOrderOfArrival) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getActionByTag
-		#define GEODE_CONCEPT_CHECK_getActionByTag
-		GEODE_CONCEPT_FUNCTION_CHECK(getActionByTag) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getComponent
-		#define GEODE_CONCEPT_CHECK_getComponent
-		GEODE_CONCEPT_FUNCTION_CHECK(getComponent) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getScriptHandler
-		#define GEODE_CONCEPT_CHECK_getScriptHandler
-		GEODE_CONCEPT_FUNCTION_CHECK(getScriptHandler) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getTransformTemp
-		#define GEODE_CONCEPT_CHECK_getTransformTemp
-		GEODE_CONCEPT_FUNCTION_CHECK(getTransformTemp) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getUseChildIndex
-		#define GEODE_CONCEPT_CHECK_getUseChildIndex
-		GEODE_CONCEPT_FUNCTION_CHECK(getUseChildIndex) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setAdditionalTransform
-		#define GEODE_CONCEPT_CHECK_setAdditionalTransform
-		GEODE_CONCEPT_FUNCTION_CHECK(setAdditionalTransform) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setUseChildIndex
-		#define GEODE_CONCEPT_CHECK_setUseChildIndex
-		GEODE_CONCEPT_FUNCTION_CHECK(setUseChildIndex) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_boundingBox
-		#define GEODE_CONCEPT_CHECK_boundingBox
-		GEODE_CONCEPT_FUNCTION_CHECK(boundingBox) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_childrenAlloc
-		#define GEODE_CONCEPT_CHECK_childrenAlloc
-		GEODE_CONCEPT_FUNCTION_CHECK(childrenAlloc) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_convertToNodeSpace
-		#define GEODE_CONCEPT_CHECK_convertToNodeSpace
-		GEODE_CONCEPT_FUNCTION_CHECK(convertToNodeSpace) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_convertToNodeSpaceAR
-		#define GEODE_CONCEPT_CHECK_convertToNodeSpaceAR
-		GEODE_CONCEPT_FUNCTION_CHECK(convertToNodeSpaceAR) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_convertToWindowSpace
-		#define GEODE_CONCEPT_CHECK_convertToWindowSpace
-		GEODE_CONCEPT_FUNCTION_CHECK(convertToWindowSpace) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_convertToWorldSpace
-		#define GEODE_CONCEPT_CHECK_convertToWorldSpace
-		GEODE_CONCEPT_FUNCTION_CHECK(convertToWorldSpace) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_convertToWorldSpaceAR
-		#define GEODE_CONCEPT_CHECK_convertToWorldSpaceAR
-		GEODE_CONCEPT_FUNCTION_CHECK(convertToWorldSpaceAR) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_convertTouchToNodeSpace
-		#define GEODE_CONCEPT_CHECK_convertTouchToNodeSpace
-		GEODE_CONCEPT_FUNCTION_CHECK(convertTouchToNodeSpace) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_convertTouchToNodeSpaceAR
-		#define GEODE_CONCEPT_CHECK_convertTouchToNodeSpaceAR
-		GEODE_CONCEPT_FUNCTION_CHECK(convertTouchToNodeSpaceAR) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_description
-		#define GEODE_CONCEPT_CHECK_description
-		GEODE_CONCEPT_FUNCTION_CHECK(description) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_detachChild
-		#define GEODE_CONCEPT_CHECK_detachChild
-		GEODE_CONCEPT_FUNCTION_CHECK(detachChild) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_insertChild
-		#define GEODE_CONCEPT_CHECK_insertChild
-		GEODE_CONCEPT_FUNCTION_CHECK(insertChild) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_numberOfRunningActions
-		#define GEODE_CONCEPT_CHECK_numberOfRunningActions
-		GEODE_CONCEPT_FUNCTION_CHECK(numberOfRunningActions) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_pauseSchedulerAndActions
-		#define GEODE_CONCEPT_CHECK_pauseSchedulerAndActions
-		GEODE_CONCEPT_FUNCTION_CHECK(pauseSchedulerAndActions) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_qsortAllChildrenWithIndex
-		#define GEODE_CONCEPT_CHECK_qsortAllChildrenWithIndex
-		GEODE_CONCEPT_FUNCTION_CHECK(qsortAllChildrenWithIndex) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_resumeSchedulerAndActions
-		#define GEODE_CONCEPT_CHECK_resumeSchedulerAndActions
-		GEODE_CONCEPT_FUNCTION_CHECK(resumeSchedulerAndActions) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_runAction
-		#define GEODE_CONCEPT_CHECK_runAction
-		GEODE_CONCEPT_FUNCTION_CHECK(runAction) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_schedule
-		#define GEODE_CONCEPT_CHECK_schedule
-		GEODE_CONCEPT_FUNCTION_CHECK(schedule) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_scheduleOnce
-		#define GEODE_CONCEPT_CHECK_scheduleOnce
-		GEODE_CONCEPT_FUNCTION_CHECK(scheduleOnce) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_scheduleUpdate
-		#define GEODE_CONCEPT_CHECK_scheduleUpdate
-		GEODE_CONCEPT_FUNCTION_CHECK(scheduleUpdate) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_scheduleUpdateWithPriority
-		#define GEODE_CONCEPT_CHECK_scheduleUpdateWithPriority
-		GEODE_CONCEPT_FUNCTION_CHECK(scheduleUpdateWithPriority) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_scheduleUpdateWithPriorityLua
-		#define GEODE_CONCEPT_CHECK_scheduleUpdateWithPriorityLua
-		GEODE_CONCEPT_FUNCTION_CHECK(scheduleUpdateWithPriorityLua) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_sortAllChildrenNoIndex
-		#define GEODE_CONCEPT_CHECK_sortAllChildrenNoIndex
-		GEODE_CONCEPT_FUNCTION_CHECK(sortAllChildrenNoIndex) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_sortAllChildrenWithIndex
-		#define GEODE_CONCEPT_CHECK_sortAllChildrenWithIndex
-		GEODE_CONCEPT_FUNCTION_CHECK(sortAllChildrenWithIndex) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_stopAction
-		#define GEODE_CONCEPT_CHECK_stopAction
-		GEODE_CONCEPT_FUNCTION_CHECK(stopAction) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_stopActionByTag
-		#define GEODE_CONCEPT_CHECK_stopActionByTag
-		GEODE_CONCEPT_FUNCTION_CHECK(stopActionByTag) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_stopAllActions
-		#define GEODE_CONCEPT_CHECK_stopAllActions
-		GEODE_CONCEPT_FUNCTION_CHECK(stopAllActions) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_transform
-		#define GEODE_CONCEPT_CHECK_transform
-		GEODE_CONCEPT_FUNCTION_CHECK(transform) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_transformAncestors
-		#define GEODE_CONCEPT_CHECK_transformAncestors
-		GEODE_CONCEPT_FUNCTION_CHECK(transformAncestors) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_unschedule
-		#define GEODE_CONCEPT_CHECK_unschedule
-		GEODE_CONCEPT_FUNCTION_CHECK(unschedule) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_unscheduleAllSelectors
-		#define GEODE_CONCEPT_CHECK_unscheduleAllSelectors
-		GEODE_CONCEPT_FUNCTION_CHECK(unscheduleAllSelectors) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_unscheduleUpdate
-		#define GEODE_CONCEPT_CHECK_unscheduleUpdate
-		GEODE_CONCEPT_FUNCTION_CHECK(unscheduleUpdate) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_updateChildIndexes
-		#define GEODE_CONCEPT_CHECK_updateChildIndexes
-		GEODE_CONCEPT_FUNCTION_CHECK(updateChildIndexes) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_update
@@ -1356,6 +1141,191 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(updateTweenActionInt) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_boundingBox
+		#define GEODE_CONCEPT_CHECK_boundingBox
+		GEODE_CONCEPT_FUNCTION_CHECK(boundingBox) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_childrenAlloc
+		#define GEODE_CONCEPT_CHECK_childrenAlloc
+		GEODE_CONCEPT_FUNCTION_CHECK(childrenAlloc) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_convertToNodeSpace
+		#define GEODE_CONCEPT_CHECK_convertToNodeSpace
+		GEODE_CONCEPT_FUNCTION_CHECK(convertToNodeSpace) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_convertToNodeSpaceAR
+		#define GEODE_CONCEPT_CHECK_convertToNodeSpaceAR
+		GEODE_CONCEPT_FUNCTION_CHECK(convertToNodeSpaceAR) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_convertTouchToNodeSpace
+		#define GEODE_CONCEPT_CHECK_convertTouchToNodeSpace
+		GEODE_CONCEPT_FUNCTION_CHECK(convertTouchToNodeSpace) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_convertTouchToNodeSpaceAR
+		#define GEODE_CONCEPT_CHECK_convertTouchToNodeSpaceAR
+		GEODE_CONCEPT_FUNCTION_CHECK(convertTouchToNodeSpaceAR) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_convertToWindowSpace
+		#define GEODE_CONCEPT_CHECK_convertToWindowSpace
+		GEODE_CONCEPT_FUNCTION_CHECK(convertToWindowSpace) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_convertToWorldSpace
+		#define GEODE_CONCEPT_CHECK_convertToWorldSpace
+		GEODE_CONCEPT_FUNCTION_CHECK(convertToWorldSpace) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_convertToWorldSpaceAR
+		#define GEODE_CONCEPT_CHECK_convertToWorldSpaceAR
+		GEODE_CONCEPT_FUNCTION_CHECK(convertToWorldSpaceAR) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_description
+		#define GEODE_CONCEPT_CHECK_description
+		GEODE_CONCEPT_FUNCTION_CHECK(description) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_detachChild
+		#define GEODE_CONCEPT_CHECK_detachChild
+		GEODE_CONCEPT_FUNCTION_CHECK(detachChild) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getActionByTag
+		#define GEODE_CONCEPT_CHECK_getActionByTag
+		GEODE_CONCEPT_FUNCTION_CHECK(getActionByTag) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getComponent
+		#define GEODE_CONCEPT_CHECK_getComponent
+		GEODE_CONCEPT_FUNCTION_CHECK(getComponent) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_insertChild
+		#define GEODE_CONCEPT_CHECK_insertChild
+		GEODE_CONCEPT_FUNCTION_CHECK(insertChild) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_numberOfRunningActions
+		#define GEODE_CONCEPT_CHECK_numberOfRunningActions
+		GEODE_CONCEPT_FUNCTION_CHECK(numberOfRunningActions) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_pauseSchedulerAndActions
+		#define GEODE_CONCEPT_CHECK_pauseSchedulerAndActions
+		GEODE_CONCEPT_FUNCTION_CHECK(pauseSchedulerAndActions) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_qsortAllChildrenWithIndex
+		#define GEODE_CONCEPT_CHECK_qsortAllChildrenWithIndex
+		GEODE_CONCEPT_FUNCTION_CHECK(qsortAllChildrenWithIndex) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_resumeSchedulerAndActions
+		#define GEODE_CONCEPT_CHECK_resumeSchedulerAndActions
+		GEODE_CONCEPT_FUNCTION_CHECK(resumeSchedulerAndActions) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_runAction
+		#define GEODE_CONCEPT_CHECK_runAction
+		GEODE_CONCEPT_FUNCTION_CHECK(runAction) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_schedule
+		#define GEODE_CONCEPT_CHECK_schedule
+		GEODE_CONCEPT_FUNCTION_CHECK(schedule) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_scheduleOnce
+		#define GEODE_CONCEPT_CHECK_scheduleOnce
+		GEODE_CONCEPT_FUNCTION_CHECK(scheduleOnce) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_scheduleUpdate
+		#define GEODE_CONCEPT_CHECK_scheduleUpdate
+		GEODE_CONCEPT_FUNCTION_CHECK(scheduleUpdate) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_scheduleUpdateWithPriority
+		#define GEODE_CONCEPT_CHECK_scheduleUpdateWithPriority
+		GEODE_CONCEPT_FUNCTION_CHECK(scheduleUpdateWithPriority) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_scheduleUpdateWithPriorityLua
+		#define GEODE_CONCEPT_CHECK_scheduleUpdateWithPriorityLua
+		GEODE_CONCEPT_FUNCTION_CHECK(scheduleUpdateWithPriorityLua) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setAdditionalTransform
+		#define GEODE_CONCEPT_CHECK_setAdditionalTransform
+		GEODE_CONCEPT_FUNCTION_CHECK(setAdditionalTransform) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setUseChildIndex
+		#define GEODE_CONCEPT_CHECK_setUseChildIndex
+		GEODE_CONCEPT_FUNCTION_CHECK(setUseChildIndex) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_sortAllChildrenNoIndex
+		#define GEODE_CONCEPT_CHECK_sortAllChildrenNoIndex
+		GEODE_CONCEPT_FUNCTION_CHECK(sortAllChildrenNoIndex) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_sortAllChildrenWithIndex
+		#define GEODE_CONCEPT_CHECK_sortAllChildrenWithIndex
+		GEODE_CONCEPT_FUNCTION_CHECK(sortAllChildrenWithIndex) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_stopAction
+		#define GEODE_CONCEPT_CHECK_stopAction
+		GEODE_CONCEPT_FUNCTION_CHECK(stopAction) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_stopActionByTag
+		#define GEODE_CONCEPT_CHECK_stopActionByTag
+		GEODE_CONCEPT_FUNCTION_CHECK(stopActionByTag) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_stopAllActions
+		#define GEODE_CONCEPT_CHECK_stopAllActions
+		GEODE_CONCEPT_FUNCTION_CHECK(stopAllActions) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_transform
+		#define GEODE_CONCEPT_CHECK_transform
+		GEODE_CONCEPT_FUNCTION_CHECK(transform) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_transformAncestors
+		#define GEODE_CONCEPT_CHECK_transformAncestors
+		GEODE_CONCEPT_FUNCTION_CHECK(transformAncestors) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_unschedule
+		#define GEODE_CONCEPT_CHECK_unschedule
+		GEODE_CONCEPT_FUNCTION_CHECK(unschedule) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_unscheduleAllSelectors
+		#define GEODE_CONCEPT_CHECK_unscheduleAllSelectors
+		GEODE_CONCEPT_FUNCTION_CHECK(unscheduleAllSelectors) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_unscheduleUpdate
+		#define GEODE_CONCEPT_CHECK_unscheduleUpdate
+		GEODE_CONCEPT_FUNCTION_CHECK(unscheduleUpdate) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_updateChildIndexes
+		#define GEODE_CONCEPT_CHECK_updateChildIndexes
+		GEODE_CONCEPT_FUNCTION_CHECK(updateChildIndexes) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::CCNode> : ModifyBase<ModifyDerive<Der, cocos2d::CCNode>> {
@@ -1365,52 +1335,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::create)), Default, cocos2d::CCNode, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::resetGlobalOrderOfArrival)), Default, cocos2d::CCNode, resetGlobalOrderOfArrival, )
 			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCNode@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCNode, )
 			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCNode@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCNode)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int>::func(&cocos2d::CCNode::getActionByTag)), Thiscall, cocos2d::CCNode, getActionByTag, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCNode::getComponent)), Thiscall, cocos2d::CCNode, getComponent, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::getScriptHandler)), Thiscall, cocos2d::CCNode, getScriptHandler, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::getTransformTemp)), Thiscall, cocos2d::CCNode, getTransformTemp, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::getUseChildIndex)), Thiscall, cocos2d::CCNode, getUseChildIndex, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCAffineTransform const&>::func(&cocos2d::CCNode::setAdditionalTransform)), Thiscall, cocos2d::CCNode, setAdditionalTransform, cocos2d::CCAffineTransform const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCNode::setUseChildIndex)), Thiscall, cocos2d::CCNode, setUseChildIndex, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::boundingBox)), Thiscall, cocos2d::CCNode, boundingBox, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::childrenAlloc)), Thiscall, cocos2d::CCNode, childrenAlloc, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint const&>::func(&cocos2d::CCNode::convertToNodeSpace)), Thiscall, cocos2d::CCNode, convertToNodeSpace, cocos2d::CCPoint const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint const&>::func(&cocos2d::CCNode::convertToNodeSpaceAR)), Thiscall, cocos2d::CCNode, convertToNodeSpaceAR, cocos2d::CCPoint const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint const&>::func(&cocos2d::CCNode::convertToWindowSpace)), Thiscall, cocos2d::CCNode, convertToWindowSpace, cocos2d::CCPoint const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint const&>::func(&cocos2d::CCNode::convertToWorldSpace)), Thiscall, cocos2d::CCNode, convertToWorldSpace, cocos2d::CCPoint const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint const&>::func(&cocos2d::CCNode::convertToWorldSpaceAR)), Thiscall, cocos2d::CCNode, convertToWorldSpaceAR, cocos2d::CCPoint const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTouch*>::func(&cocos2d::CCNode::convertTouchToNodeSpace)), Thiscall, cocos2d::CCNode, convertTouchToNodeSpace, cocos2d::CCTouch*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTouch*>::func(&cocos2d::CCNode::convertTouchToNodeSpaceAR)), Thiscall, cocos2d::CCNode, convertTouchToNodeSpaceAR, cocos2d::CCTouch*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::description)), Thiscall, cocos2d::CCNode, description, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCNode*, bool>::func(&cocos2d::CCNode::detachChild)), Thiscall, cocos2d::CCNode, detachChild, cocos2d::CCNode*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCNode*, int>::func(&cocos2d::CCNode::insertChild)), Thiscall, cocos2d::CCNode, insertChild, cocos2d::CCNode*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::numberOfRunningActions)), Thiscall, cocos2d::CCNode, numberOfRunningActions, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::pauseSchedulerAndActions)), Thiscall, cocos2d::CCNode, pauseSchedulerAndActions, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::qsortAllChildrenWithIndex)), Thiscall, cocos2d::CCNode, qsortAllChildrenWithIndex, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::resumeSchedulerAndActions)), Thiscall, cocos2d::CCNode, resumeSchedulerAndActions, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCAction*>::func(&cocos2d::CCNode::runAction)), Thiscall, cocos2d::CCNode, runAction, cocos2d::CCAction*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::SEL_SCHEDULE>::func(&cocos2d::CCNode::schedule)), Thiscall, cocos2d::CCNode, schedule, cocos2d::SEL_SCHEDULE)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::SEL_SCHEDULE, float>::func(&cocos2d::CCNode::schedule)), Thiscall, cocos2d::CCNode, schedule, cocos2d::SEL_SCHEDULE, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::SEL_SCHEDULE, float, unsigned int, float>::func(&cocos2d::CCNode::schedule)), Thiscall, cocos2d::CCNode, schedule, cocos2d::SEL_SCHEDULE, float, unsigned int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::SEL_SCHEDULE, float>::func(&cocos2d::CCNode::scheduleOnce)), Thiscall, cocos2d::CCNode, scheduleOnce, cocos2d::SEL_SCHEDULE, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::scheduleUpdate)), Thiscall, cocos2d::CCNode, scheduleUpdate, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int>::func(&cocos2d::CCNode::scheduleUpdateWithPriority)), Thiscall, cocos2d::CCNode, scheduleUpdateWithPriority, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int, int>::func(&cocos2d::CCNode::scheduleUpdateWithPriorityLua)), Thiscall, cocos2d::CCNode, scheduleUpdateWithPriorityLua, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::sortAllChildrenNoIndex)), Thiscall, cocos2d::CCNode, sortAllChildrenNoIndex, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::sortAllChildrenWithIndex)), Thiscall, cocos2d::CCNode, sortAllChildrenWithIndex, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCAction*>::func(&cocos2d::CCNode::stopAction)), Thiscall, cocos2d::CCNode, stopAction, cocos2d::CCAction*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int>::func(&cocos2d::CCNode::stopActionByTag)), Thiscall, cocos2d::CCNode, stopActionByTag, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::stopAllActions)), Thiscall, cocos2d::CCNode, stopAllActions, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::transform)), Thiscall, cocos2d::CCNode, transform, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::transformAncestors)), Thiscall, cocos2d::CCNode, transformAncestors, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::SEL_SCHEDULE>::func(&cocos2d::CCNode::unschedule)), Thiscall, cocos2d::CCNode, unschedule, cocos2d::SEL_SCHEDULE)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::unscheduleAllSelectors)), Thiscall, cocos2d::CCNode, unscheduleAllSelectors, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::unscheduleUpdate)), Thiscall, cocos2d::CCNode, unscheduleUpdate, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::updateChildIndexes)), Thiscall, cocos2d::CCNode, updateChildIndexes, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::create)), Default, cocos2d::CCNode, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::resetGlobalOrderOfArrival)), Default, cocos2d::CCNode, resetGlobalOrderOfArrival, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCNode::update)), Thiscall, cocos2d::CCNode, update, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCNode::init)), Thiscall, cocos2d::CCNode, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<int>::func(&cocos2d::CCNode::setZOrder)), Thiscall, cocos2d::CCNode, setZOrder, int)
@@ -1512,6 +1440,45 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCNode::removeAllComponents)), Thiscall, cocos2d::CCNode, removeAllComponents, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float, char const*>::func(&cocos2d::CCNode::updateTweenAction)), Thiscall, cocos2d::CCNode, updateTweenAction, float, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float, int>::func(&cocos2d::CCNode::updateTweenActionInt)), Thiscall, cocos2d::CCNode, updateTweenActionInt, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::boundingBox)), Thiscall, cocos2d::CCNode, boundingBox, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::childrenAlloc)), Thiscall, cocos2d::CCNode, childrenAlloc, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint const&>::func(&cocos2d::CCNode::convertToNodeSpace)), Thiscall, cocos2d::CCNode, convertToNodeSpace, cocos2d::CCPoint const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint const&>::func(&cocos2d::CCNode::convertToNodeSpaceAR)), Thiscall, cocos2d::CCNode, convertToNodeSpaceAR, cocos2d::CCPoint const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTouch*>::func(&cocos2d::CCNode::convertTouchToNodeSpace)), Thiscall, cocos2d::CCNode, convertTouchToNodeSpace, cocos2d::CCTouch*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTouch*>::func(&cocos2d::CCNode::convertTouchToNodeSpaceAR)), Thiscall, cocos2d::CCNode, convertTouchToNodeSpaceAR, cocos2d::CCTouch*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint const&>::func(&cocos2d::CCNode::convertToWindowSpace)), Thiscall, cocos2d::CCNode, convertToWindowSpace, cocos2d::CCPoint const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint const&>::func(&cocos2d::CCNode::convertToWorldSpace)), Thiscall, cocos2d::CCNode, convertToWorldSpace, cocos2d::CCPoint const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint const&>::func(&cocos2d::CCNode::convertToWorldSpaceAR)), Thiscall, cocos2d::CCNode, convertToWorldSpaceAR, cocos2d::CCPoint const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::description)), Thiscall, cocos2d::CCNode, description, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCNode*, bool>::func(&cocos2d::CCNode::detachChild)), Thiscall, cocos2d::CCNode, detachChild, cocos2d::CCNode*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int>::func(&cocos2d::CCNode::getActionByTag)), Thiscall, cocos2d::CCNode, getActionByTag, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCNode::getComponent)), Thiscall, cocos2d::CCNode, getComponent, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCNode*, int>::func(&cocos2d::CCNode::insertChild)), Thiscall, cocos2d::CCNode, insertChild, cocos2d::CCNode*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::numberOfRunningActions)), Thiscall, cocos2d::CCNode, numberOfRunningActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::pauseSchedulerAndActions)), Thiscall, cocos2d::CCNode, pauseSchedulerAndActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::qsortAllChildrenWithIndex)), Thiscall, cocos2d::CCNode, qsortAllChildrenWithIndex, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::resumeSchedulerAndActions)), Thiscall, cocos2d::CCNode, resumeSchedulerAndActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCAction*>::func(&cocos2d::CCNode::runAction)), Thiscall, cocos2d::CCNode, runAction, cocos2d::CCAction*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::SEL_SCHEDULE>::func(&cocos2d::CCNode::schedule)), Thiscall, cocos2d::CCNode, schedule, cocos2d::SEL_SCHEDULE)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::SEL_SCHEDULE, float>::func(&cocos2d::CCNode::schedule)), Thiscall, cocos2d::CCNode, schedule, cocos2d::SEL_SCHEDULE, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::SEL_SCHEDULE, float, unsigned int, float>::func(&cocos2d::CCNode::schedule)), Thiscall, cocos2d::CCNode, schedule, cocos2d::SEL_SCHEDULE, float, unsigned int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::SEL_SCHEDULE, float>::func(&cocos2d::CCNode::scheduleOnce)), Thiscall, cocos2d::CCNode, scheduleOnce, cocos2d::SEL_SCHEDULE, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::scheduleUpdate)), Thiscall, cocos2d::CCNode, scheduleUpdate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int>::func(&cocos2d::CCNode::scheduleUpdateWithPriority)), Thiscall, cocos2d::CCNode, scheduleUpdateWithPriority, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int, int>::func(&cocos2d::CCNode::scheduleUpdateWithPriorityLua)), Thiscall, cocos2d::CCNode, scheduleUpdateWithPriorityLua, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCAffineTransform const&>::func(&cocos2d::CCNode::setAdditionalTransform)), Thiscall, cocos2d::CCNode, setAdditionalTransform, cocos2d::CCAffineTransform const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCNode::setUseChildIndex)), Thiscall, cocos2d::CCNode, setUseChildIndex, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::sortAllChildrenNoIndex)), Thiscall, cocos2d::CCNode, sortAllChildrenNoIndex, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::sortAllChildrenWithIndex)), Thiscall, cocos2d::CCNode, sortAllChildrenWithIndex, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCAction*>::func(&cocos2d::CCNode::stopAction)), Thiscall, cocos2d::CCNode, stopAction, cocos2d::CCAction*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int>::func(&cocos2d::CCNode::stopActionByTag)), Thiscall, cocos2d::CCNode, stopActionByTag, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::stopAllActions)), Thiscall, cocos2d::CCNode, stopAllActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::transform)), Thiscall, cocos2d::CCNode, transform, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::transformAncestors)), Thiscall, cocos2d::CCNode, transformAncestors, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::SEL_SCHEDULE>::func(&cocos2d::CCNode::unschedule)), Thiscall, cocos2d::CCNode, unschedule, cocos2d::SEL_SCHEDULE)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::unscheduleAllSelectors)), Thiscall, cocos2d::CCNode, unscheduleAllSelectors, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::unscheduleUpdate)), Thiscall, cocos2d::CCNode, unscheduleUpdate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCNode::updateChildIndexes)), Thiscall, cocos2d::CCNode, updateChildIndexes, )
 		}
 	};
 }

@@ -16,15 +16,29 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupCollisionStateTriggerPopup, SetupInstantCollisionTriggerPopup)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static SetupCollisionStateTriggerPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+     SetupCollisionStateTriggerPopup();
 
     /**
-     * @note[short] MacOS (ARM): 0x314c08
-     * @note[short] MacOS (Intel): 0x384de0
-     * @note[short] Windows: 0x402cf0
+     * @note[short] MacOS (ARM): 0x31d938
+     * @note[short] MacOS (Intel): 0x397d20
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x231488
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupCollisionStateTriggerPopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
+
+    /**
+     * @note[short] MacOS (ARM): 0x31dac4
+     * @note[short] MacOS (Intel): 0x397f50
+     * @note[short] Windows: 0x41a9c0
+     * @note[short] iOS: 0x231564
+     * @note[short] Android
+     */
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 };

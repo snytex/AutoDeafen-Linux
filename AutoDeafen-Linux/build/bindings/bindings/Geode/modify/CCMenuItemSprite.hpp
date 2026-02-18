@@ -10,11 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
-	#ifndef GEODE_STATICS_initWithNormalSprite
-		#define GEODE_STATICS_initWithNormalSprite
-		GEODE_AS_STATIC_FUNCTION(initWithNormalSprite) 
-	#endif
-
 	#ifndef GEODE_STATICS_selected
 		#define GEODE_STATICS_selected
 		GEODE_AS_STATIC_FUNCTION(selected) 
@@ -65,15 +60,15 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateImagesVisibility) 
 	#endif
 
+	#ifndef GEODE_STATICS_initWithNormalSprite
+		#define GEODE_STATICS_initWithNormalSprite
+		GEODE_AS_STATIC_FUNCTION(initWithNormalSprite) 
+	#endif
+
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_initWithNormalSprite
-		#define GEODE_CONCEPT_CHECK_initWithNormalSprite
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithNormalSprite) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_selected
@@ -126,6 +121,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(updateImagesVisibility) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_initWithNormalSprite
+		#define GEODE_CONCEPT_CHECK_initWithNormalSprite
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithNormalSprite) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::CCMenuItemSprite> : ModifyBase<ModifyDerive<Der, cocos2d::CCMenuItemSprite>> {
@@ -138,7 +138,6 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCNode*>::func(&cocos2d::CCMenuItemSprite::create)), Default, cocos2d::CCMenuItemSprite, create, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler>::func(&cocos2d::CCMenuItemSprite::create)), Default, cocos2d::CCMenuItemSprite, create, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler>::func(&cocos2d::CCMenuItemSprite::create)), Default, cocos2d::CCMenuItemSprite, create, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler>::func(&cocos2d::CCMenuItemSprite::initWithNormalSprite)), Thiscall, cocos2d::CCMenuItemSprite, initWithNormalSprite, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCMenuItemSprite::selected)), Thiscall, cocos2d::CCMenuItemSprite, selected, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCMenuItemSprite::unselected)), Thiscall, cocos2d::CCMenuItemSprite, unselected, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<bool>::func(&cocos2d::CCMenuItemSprite::setEnabled)), Thiscall, cocos2d::CCMenuItemSprite, setEnabled, bool)
@@ -149,6 +148,7 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCMenuItemSprite::getDisabledImage)), Thiscall, cocos2d::CCMenuItemSprite, getDisabledImage, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCNode*>::func(&cocos2d::CCMenuItemSprite::setDisabledImage)), Thiscall, cocos2d::CCMenuItemSprite, setDisabledImage, cocos2d::CCNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCMenuItemSprite::updateImagesVisibility)), Thiscall, cocos2d::CCMenuItemSprite, updateImagesVisibility, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler>::func(&cocos2d::CCMenuItemSprite::initWithNormalSprite)), Thiscall, cocos2d::CCMenuItemSprite, initWithNormalSprite, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
 		}
 	};
 }

@@ -70,11 +70,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onCommunityCredits) 
 	#endif
 
-	#ifndef GEODE_STATICS_onPlushies
-		#define GEODE_STATICS_onPlushies
-		GEODE_AS_STATIC_FUNCTION(onPlushies) 
-	#endif
-
 	#ifndef GEODE_STATICS_onSelectItem
 		#define GEODE_STATICS_onSelectItem
 		GEODE_AS_STATIC_FUNCTION(onSelectItem) 
@@ -221,27 +216,27 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJShopLayer, create, ShopType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a1ef0, Default, GJShopLayer, scene, ShopType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a4160, Thiscall, GJShopLayer, onExit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a7290, Thiscall, GJShopLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a95b0, Default, GJShopLayer, scene, ShopType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ab820, Thiscall, GJShopLayer, onExit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ae950, Thiscall, GJShopLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJShopLayer, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJShopLayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71210, Thiscall, GJShopLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, GJShopLayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a58d0, Thiscall, GJShopLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a4ed0, Thiscall, GJShopLayer, didPurchaseItem, GJStoreItem*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a4520, Thiscall, GJShopLayer, rewardedVideoFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a6f60, Thiscall, GJShopLayer, dialogClosed, DialogLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71240, Thiscall, GJShopLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, GJShopLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2acf90, Thiscall, GJShopLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ac590, Thiscall, GJShopLayer, didPurchaseItem, GJStoreItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2abbe0, Thiscall, GJShopLayer, rewardedVideoFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ae620, Thiscall, GJShopLayer, dialogClosed, DialogLayer*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJShopLayer, exitVideoAdItems, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a2070, Thiscall, GJShopLayer, init, ShopType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a56b0, Thiscall, GJShopLayer, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a43e0, Thiscall, GJShopLayer, onCommunityCredits, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJShopLayer, onPlushies, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJShopLayer, onSelectItem, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a9730, Thiscall, GJShopLayer, init, ShopType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2acd70, Thiscall, GJShopLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2abaa0, Thiscall, GJShopLayer, onCommunityCredits, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJShopLayer, onPlushies, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2abcb0, Thiscall, GJShopLayer, onSelectItem, cocos2d::CCObject*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJShopLayer, onVideoAd, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJShopLayer, showCantAffordMessage, GJStoreItem*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a58e0, Thiscall, GJShopLayer, showReactMessage, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJShopLayer, updateCurrencyCounter, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2abec0, Thiscall, GJShopLayer, showCantAffordMessage, GJStoreItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2acfa0, Thiscall, GJShopLayer, showReactMessage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2abc40, Thiscall, GJShopLayer, updateCurrencyCounter, )
 		}
 	};
 }

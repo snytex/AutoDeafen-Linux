@@ -80,13 +80,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44ad30, Default, SetupTimeWarpPopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44b2c0, Thiscall, SetupTimeWarpPopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x287920, Thiscall, SetupTimeWarpPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44ae50, Thiscall, SetupTimeWarpPopup, init, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44b3d0, Thiscall, SetupTimeWarpPopup, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x463340, Default, SetupTimeWarpPopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4638d0, Thiscall, SetupTimeWarpPopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28f250, Thiscall, SetupTimeWarpPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x463460, Thiscall, SetupTimeWarpPopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4639e0, Thiscall, SetupTimeWarpPopup, sliderChanged, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupTimeWarpPopup, updateTimeWarp, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44b4a0, Thiscall, SetupTimeWarpPopup, updateTimeWarpLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x463ab0, Thiscall, SetupTimeWarpPopup, updateTimeWarpLabel, )
 		}
 	};
 }

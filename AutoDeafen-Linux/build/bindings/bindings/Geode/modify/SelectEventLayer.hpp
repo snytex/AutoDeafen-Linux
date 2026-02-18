@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_keyBackClicked
 		#define GEODE_STATICS_keyBackClicked
 		GEODE_AS_STATIC_FUNCTION(keyBackClicked) 
@@ -33,11 +28,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
-	#ifndef GEODE_STATICS_nextPosition
-		#define GEODE_STATICS_nextPosition
-		GEODE_AS_STATIC_FUNCTION(nextPosition) 
 	#endif
 
 	#ifndef GEODE_STATICS_onInfo
@@ -95,14 +85,14 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SelectEventLayer, create, SetupEventLinkPopup*, gd::set<int>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44f1d0, Thiscall, SelectEventLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44f110, Thiscall, SelectEventLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44ef40, Thiscall, SelectEventLayer, onCustomToggleTriggerValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44f1f0, Thiscall, SelectEventLayer, addToggle, int, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44e0d0, Thiscall, SelectEventLayer, init, SetupEventLinkPopup*, gd::set<int>&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SelectEventLayer, nextPosition, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44f630, Thiscall, SelectEventLayer, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SelectEventLayer, create, SetupEventLinkPopup*, gd::set<int>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f6ec0, Thiscall, SelectEventLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4676a0, Thiscall, SelectEventLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x467550, Thiscall, SelectEventLayer, onCustomToggleTriggerValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x467760, Thiscall, SelectEventLayer, addToggle, int, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4666e0, Thiscall, SelectEventLayer, init, SetupEventLinkPopup*, gd::set<int>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SelectEventLayer, nextPosition, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x467ba0, Thiscall, SelectEventLayer, onInfo, cocos2d::CCObject*)
 		}
 	};
 }

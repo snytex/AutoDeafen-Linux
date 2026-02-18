@@ -25,68 +25,91 @@ public:
      SongOptionsLayer();
 
     /**
+     * @note[short] MacOS (ARM): 0x1c12ac
+     * @note[short] MacOS (Intel): 0x215c90
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1448d4
      * @note[short] Android
      */
-    static SongOptionsLayer* create(CustomSongDelegate* p0);
+    static SongOptionsLayer* create(CustomSongDelegate* delegate);
 
     /**
-     * @note[short] MacOS (ARM): 0x1baab4
-     * @note[short] MacOS (Intel): 0x205a20
-     * @note[short] Windows: 0xc4920
-     * @note[short] iOS: 0x1491e0
+     * @note[short] MacOS (ARM): 0x1c2a30
+     * @note[short] MacOS (Intel): 0x217550
+     * @note[short] Windows: 0xc5640
+     * @note[short] iOS: 0x145b18
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x1b9c60
-     * @note[short] MacOS (Intel): 0x204b20
-     * @note[short] Windows: 0xc3880
+     * @note[short] MacOS (ARM): 0x1c1bf0
+     * @note[short] MacOS (Intel): 0x216670
+     * @note[short] Windows: 0xc45a0
+     * @note[short] iOS: 0x144e40
      * @note[short] Android
      */
-    bool init(CustomSongDelegate* p0);
+    bool init(CustomSongDelegate* delegate);
 
     /**
-     * @note[short] Windows: 0xc47b0
+     * @note[short] MacOS (ARM): 0x1c2688
+     * @note[short] MacOS (Intel): 0x2171e0
+     * @note[short] Windows: 0xc54d0
+     * @note[short] iOS: 0x145808
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0xc42a0
+     * @note[short] MacOS (ARM): 0x1c25a4
+     * @note[short] MacOS (Intel): 0x217120
+     * @note[short] Windows: 0xc4fc0
+     * @note[short] iOS: 0x145724
      * @note[short] Android
      */
     void onFadeIn(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0xc42f0
+     * @note[short] MacOS (ARM): 0x1c25f0
+     * @note[short] MacOS (Intel): 0x217160
+     * @note[short] Windows: 0xc5010
+     * @note[short] iOS: 0x145770
      * @note[short] Android
      */
     void onFadeOut(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1ba820
-     * @note[short] MacOS (Intel): 0x2057b0
-     * @note[short] Windows: 0xc4650
+     * @note[short] MacOS (ARM): 0x1c2798
+     * @note[short] MacOS (Intel): 0x2172e0
+     * @note[short] Windows: 0xc5370
+     * @note[short] iOS: 0x145918
      * @note[short] Android
      */
     void onInfo(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0xc4390
+     * @note[short] MacOS (ARM): 0x1c2878
+     * @note[short] MacOS (Intel): 0x217390
+     * @note[short] Windows: 0xc50b0
+     * @note[short] iOS: 0x1459b0
      * @note[short] Android
      */
     void onPlayback(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0xc4340
+     * @note[short] MacOS (ARM): 0x1c263c
+     * @note[short] MacOS (Intel): 0x2171a0
+     * @note[short] Windows: 0xc5060
+     * @note[short] iOS: 0x1457bc
      * @note[short] Android
      */
     void onSongPersistent(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x1c29c4
+     * @note[short] MacOS (Intel): 0x2174e0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x145aac
      * @note[short] Android
      */
     void updatePlaybackBtn();

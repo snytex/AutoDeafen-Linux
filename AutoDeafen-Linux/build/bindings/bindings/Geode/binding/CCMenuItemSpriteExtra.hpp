@@ -15,10 +15,10 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(CCMenuItemSpriteExtra, cocos2d::CCMenuItemSprite)
 
     /**
-     * @note[short] MacOS (ARM): 0x4bbf4
-     * @note[short] MacOS (Intel): 0x54e80
-     * @note[short] Windows: 0x449f0
-     * @note[short] iOS: 0x16ecb8
+     * @note[short] MacOS (ARM): 0x49240
+     * @note[short] MacOS (Intel): 0x54a70
+     * @note[short] Windows: 0x44a60
+     * @note[short] iOS: 0x16b5a4
      * @note[short] Android: Out of line
      */
      CCMenuItemSpriteExtra();
@@ -30,67 +30,58 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-     ~CCMenuItemSpriteExtra();
-
-    /**
-     * @note[short] MacOS (ARM): 0x2105c0
-     * @note[short] MacOS (Intel): 0x264b80
-     * @note[short] Windows: 0x44b40
-     * @note[short] iOS: 0x214364
-     * @note[short] Android
-     */
-    static CCMenuItemSpriteExtra* create(cocos2d::CCNode* sprite, cocos2d::CCNode* disabledSprite, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler callback);
-
-    /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
-     * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
-     */
     static CCMenuItemSpriteExtra* create(cocos2d::CCNode* sprite, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler callback);
 
     /**
-     * @note[short] MacOS (ARM): 0x210804
-     * @note[short] MacOS (Intel): 0x264d90
-     * @note[short] Windows: 0x44d40
-     * @note[short] iOS: 0x214594
+     * @note[short] MacOS (ARM): 0x21903c
+     * @note[short] MacOS (Intel): 0x276b90
+     * @note[short] Windows: 0x44bb0
+     * @note[short] iOS: 0x21372c
+     * @note[short] Android
+     */
+    static CCMenuItemSpriteExtra* create(cocos2d::CCNode* sprite, cocos2d::CCNode* selectedSprite, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler callback);
+
+    /**
+     * @note[short] MacOS (ARM): 0x219280
+     * @note[short] MacOS (Intel): 0x276da0
+     * @note[short] Windows: 0x44db0
+     * @note[short] iOS: 0x21395c
      * @note[short] Android
      */
     virtual void activate();
 
     /**
-     * @note[short] MacOS (ARM): 0x210964
-     * @note[short] MacOS (Intel): 0x264f10
-     * @note[short] Windows: 0x44e50
-     * @note[short] iOS: 0x214674
+     * @note[short] MacOS (ARM): 0x2193d4
+     * @note[short] MacOS (Intel): 0x276f20
+     * @note[short] Windows: 0x44ec0
+     * @note[short] iOS: 0x213a3c
      * @note[short] Android
      */
     virtual void selected();
 
     /**
-     * @note[short] MacOS (ARM): 0x210bb4
-     * @note[short] MacOS (Intel): 0x265190
-     * @note[short] Windows: 0x45070
-     * @note[short] iOS: 0x21484c
+     * @note[short] MacOS (ARM): 0x219620
+     * @note[short] MacOS (Intel): 0x2771a0
+     * @note[short] Windows: 0x450e0
+     * @note[short] iOS: 0x213c1c
      * @note[short] Android
      */
     virtual void unselected();
 
     /**
-     * @note[short] MacOS (ARM): 0x210678
-     * @note[short] MacOS (Intel): 0x264c10
-     * @note[short] Windows: 0x44be0
-     * @note[short] iOS: 0x214408
+     * @note[short] MacOS (ARM): 0x2190f4
+     * @note[short] MacOS (Intel): 0x276c20
+     * @note[short] Windows: 0x44c50
+     * @note[short] iOS: 0x2137d0
      * @note[short] Android
      */
-    bool init(cocos2d::CCNode* sprite, cocos2d::CCNode* disabledSprite, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler callback);
+    bool init(cocos2d::CCNode* sprite, cocos2d::CCNode* selectedSprite, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler callback);
 
     /**
-     * @note[short] MacOS (ARM): 0x2107fc
-     * @note[short] MacOS (Intel): 0x264d80
+     * @note[short] MacOS (ARM): 0x219278
+     * @note[short] MacOS (Intel): 0x276d90
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x21458c
+     * @note[short] iOS: 0x213954
      * @note[short] Android
      */
     void setSizeMult(float mult);
@@ -130,9 +121,13 @@ Update the sizing of this button's image
     void updateSprite();
 
     /**
+     * @note[short] MacOS (ARM): 0x219230
+     * @note[short] MacOS (Intel): 0x276d50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x21390c
      * @note[short] Android
      */
-    void useAnimationType(MenuAnimationType p0);
+    void useAnimationType(MenuAnimationType type);
     float m_scaleMultiplier;
     float m_baseScale;
     bool m_animationEnabled;

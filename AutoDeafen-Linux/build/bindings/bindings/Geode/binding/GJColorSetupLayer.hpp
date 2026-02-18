@@ -18,86 +18,91 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(GJColorSetupLayer, FLAlertLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x1aeb44
-     * @note[short] MacOS (Intel): 0x1f9510
-     * @note[short] Windows: 0x24ef80
-     * @note[short] iOS: 0x1912c0
+     * @note[short] MacOS (ARM): 0x1b7114
+     * @note[short] MacOS (Intel): 0x20b3d0
+     * @note[short] Windows: 0x255f50
+     * @note[short] iOS: 0x18dbec
      * @note[short] Android
      */
-    static GJColorSetupLayer* create(LevelSettingsObject* p0);
+    static GJColorSetupLayer* create(LevelSettingsObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x1af784
-     * @note[short] MacOS (Intel): 0x1fa230
-     * @note[short] Windows: 0x24fda0
-     * @note[short] iOS: 0x191cf8
+     * @note[short] MacOS (ARM): 0x1b7d6c
+     * @note[short] MacOS (Intel): 0x20c0f0
+     * @note[short] Windows: 0x256d70
+     * @note[short] iOS: 0x18e628
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x1af778
-     * @note[short] MacOS (Intel): 0x1fa200
-     * @note[short] Windows: 0x24fcd0
-     * @note[short] iOS: 0x191cec
+     * @note[short] MacOS (ARM): 0x1b7d60
+     * @note[short] MacOS (Intel): 0x20c0c0
+     * @note[short] Windows: 0x256ca0
+     * @note[short] iOS: 0x18e61c
      * @note[short] Android
      */
-    virtual void colorSelectClosed(cocos2d::CCNode* p0);
+    virtual void colorSelectClosed(cocos2d::CCNode* popup);
 
     /**
-     * @note[short] MacOS (ARM): 0x1aec70
-     * @note[short] MacOS (Intel): 0x1f96a0
-     * @note[short] Windows: 0x24f0c0
-     * @note[short] iOS: 0x191334
+     * @note[short] MacOS (ARM): 0x1b7240
+     * @note[short] MacOS (Intel): 0x20b560
+     * @note[short] Windows: 0x256090
+     * @note[short] iOS: 0x18dc60
      * @note[short] Android
      */
-    bool init(LevelSettingsObject* p0);
+    bool init(LevelSettingsObject* object);
 
     /**
-     * @note[short] Windows: 0x24fd50
+     * @note[short] MacOS (ARM): 0x1b7bf4
+     * @note[short] MacOS (Intel): 0x20bf60
+     * @note[short] Windows: 0x256d20
+     * @note[short] iOS: 0x18e4c4
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1af318
-     * @note[short] MacOS (Intel): 0x1f9db0
-     * @note[short] Windows: 0x24fc00
-     * @note[short] iOS: 0x191990
+     * @note[short] MacOS (ARM): 0x1b78fc
+     * @note[short] MacOS (Intel): 0x20bc70
+     * @note[short] Windows: 0x256bd0
+     * @note[short] iOS: 0x18e2c0
      * @note[short] Android
      */
     void onColor(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1af574
-     * @note[short] MacOS (Intel): 0x1fa000
-     * @note[short] Windows: 0x24fbb0
+     * @note[short] MacOS (ARM): 0x1b7b5c
+     * @note[short] MacOS (Intel): 0x20bec0
+     * @note[short] Windows: 0x256b80
+     * @note[short] iOS: 0x18e46c
      * @note[short] Android
      */
     void onPage(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1af66c
-     * @note[short] MacOS (Intel): 0x1fa0f0
-     * @note[short] Windows: 0x24fce0
+     * @note[short] MacOS (ARM): 0x1b7c54
+     * @note[short] MacOS (Intel): 0x20bfb0
+     * @note[short] Windows: 0x256cb0
+     * @note[short] iOS: 0x18e524
      * @note[short] Android
      */
-    void showPage(int p0);
+    void showPage(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x1af6d0
-     * @note[short] MacOS (Intel): 0x1fa160
-     * @note[short] Windows: 0x24fa40
-     * @note[short] iOS: 0x191c58
+     * @note[short] MacOS (ARM): 0x1b7cb8
+     * @note[short] MacOS (Intel): 0x20c020
+     * @note[short] Windows: 0x256a10
+     * @note[short] iOS: 0x18e588
      * @note[short] Android
      */
-    void updateSpriteColor(ColorChannelSprite* p0, cocos2d::CCLabelBMFont* p1, int p2);
+    void updateSpriteColor(ColorChannelSprite* sprite, cocos2d::CCLabelBMFont* label, int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x1af3dc
-     * @note[short] MacOS (Intel): 0x1f9e70
-     * @note[short] Windows: 0x24f920
-     * @note[short] iOS: 0x191a18
+     * @note[short] MacOS (ARM): 0x1b79c4
+     * @note[short] MacOS (Intel): 0x20bd30
+     * @note[short] Windows: 0x2568f0
+     * @note[short] iOS: 0x18e34c
      * @note[short] Android
      */
     void updateSpriteColors();

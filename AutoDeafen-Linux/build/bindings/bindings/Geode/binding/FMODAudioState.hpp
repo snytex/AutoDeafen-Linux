@@ -20,8 +20,8 @@ public:
     /**
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
-     * @note[short] Windows: 0x52e40
-     * @note[short] iOS: 0x12ad78
+     * @note[short] Windows: 0x52e70
+     * @note[short] iOS: 0x127b08
      * @note[short] Android: Out of line
      */
      FMODAudioState();

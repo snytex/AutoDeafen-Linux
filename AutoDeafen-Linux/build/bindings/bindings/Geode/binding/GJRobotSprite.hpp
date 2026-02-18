@@ -16,112 +16,112 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(GJRobotSprite, CCAnimatedSprite)
 
     /**
-     * @note[short] MacOS (ARM): 0x4f8c84
-     * @note[short] MacOS (Intel): 0x5c3a10
-     * @note[short] Windows: 0x29efd0
-     * @note[short] iOS: 0x23eff0
+     * @note[short] MacOS (ARM): 0x5072c8
+     * @note[short] MacOS (Intel): 0x5dbc50
+     * @note[short] Windows: 0x2a6690
+     * @note[short] iOS: 0x23f284
      * @note[short] Android
      */
-    static GJRobotSprite* create(int p0);
+    static GJRobotSprite* create(int frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x4f9e1c
-     * @note[short] MacOS (Intel): 0x5c4dd0
-     * @note[short] Windows: 0x29fcc0
-     * @note[short] iOS: 0x23fe10
+     * @note[short] MacOS (ARM): 0x50841c
+     * @note[short] MacOS (Intel): 0x5dd010
+     * @note[short] Windows: 0x2a7380
+     * @note[short] iOS: 0x240088
      * @note[short] Android
      */
-    virtual void setOpacity(unsigned char p0);
+    virtual void setOpacity(unsigned char opacity);
 
     /**
-     * @note[short] MacOS (ARM): 0x4f9f00
-     * @note[short] MacOS (Intel): 0x5c4ee0
-     * @note[short] Windows: 0x2a03b0
-     * @note[short] iOS: 0x23fef4
+     * @note[short] MacOS (ARM): 0x508500
+     * @note[short] MacOS (Intel): 0x5dd120
+     * @note[short] Windows: 0x2a7a70
+     * @note[short] iOS: 0x24016c
      * @note[short] Android
      */
     virtual void hideSecondary();
 
     /**
-     * @note[short] MacOS (ARM): 0x4f9ad0
-     * @note[short] MacOS (Intel): 0x5c49e0
+     * @note[short] MacOS (ARM): 0x5080d4
+     * @note[short] MacOS (Intel): 0x5dcc20
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x23fac8
+     * @note[short] iOS: 0x23fd44
      * @note[short] Android
      */
     void hideGlow();
 
     /**
-     * @note[short] MacOS (ARM): 0x4f8e44
-     * @note[short] MacOS (Intel): 0x5c3bc0
-     * @note[short] Windows: 0x29f080
-     * @note[short] iOS: 0x23f13c
-     * @note[short] Android: Rebinded
-     */
-    bool init(int p0, gd::string p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x4f8db4
-     * @note[short] MacOS (Intel): 0x5c3b50
+     * @note[short] MacOS (ARM): 0x507400
+     * @note[short] MacOS (Intel): 0x5dbd90
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x23f0b8
+     * @note[short] iOS: 0x23f34c
      * @note[short] Android
      */
-    bool init(int p0);
+    bool init(int frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x4f9abc
-     * @note[short] MacOS (Intel): 0x5c49c0
+     * @note[short] MacOS (ARM): 0x507490
+     * @note[short] MacOS (Intel): 0x5dbe00
+     * @note[short] Windows: 0x2a6740
+     * @note[short] iOS: 0x23f3d0
+     * @note[short] Android: Rebinded
+     */
+    bool init(int frame, gd::string animName);
+
+    /**
+     * @note[short] MacOS (ARM): 0x5080c0
+     * @note[short] MacOS (Intel): 0x5dcc00
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x23fab4
+     * @note[short] iOS: 0x23fd30
      * @note[short] Android
      */
     void showGlow();
 
     /**
-     * @note[short] MacOS (ARM): 0x4f9ae4
-     * @note[short] MacOS (Intel): 0x5c4a00
+     * @note[short] MacOS (ARM): 0x5080e8
+     * @note[short] MacOS (Intel): 0x5dcc40
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x23fadc
+     * @note[short] iOS: 0x23fd58
      * @note[short] Android
      */
-    void updateColor01(cocos2d::ccColor3B p0);
+    void updateColor01(cocos2d::ccColor3B color);
 
     /**
-     * @note[short] MacOS (ARM): 0x4f9d90
-     * @note[short] MacOS (Intel): 0x5c4d30
+     * @note[short] MacOS (ARM): 0x508390
+     * @note[short] MacOS (Intel): 0x5dcf70
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x23fd84
+     * @note[short] iOS: 0x23fffc
      * @note[short] Android
      */
-    void updateColor02(cocos2d::ccColor3B p0);
+    void updateColor02(cocos2d::ccColor3B color);
 
     /**
-     * @note[short] MacOS (ARM): 0x4f9af8
-     * @note[short] MacOS (Intel): 0x5c4a20
-     * @note[short] Windows: 0x29f810
-     * @note[short] iOS: 0x23faf0
+     * @note[short] MacOS (ARM): 0x5080fc
+     * @note[short] MacOS (Intel): 0x5dcc60
+     * @note[short] Windows: 0x2a6ed0
+     * @note[short] iOS: 0x23fd6c
      * @note[short] Android
      */
     void updateColors();
 
     /**
-     * @note[short] MacOS (ARM): 0x4f9378
-     * @note[short] MacOS (Intel): 0x5c4140
-     * @note[short] Windows: 0x29fdc0
-     * @note[short] iOS: 0x23f5ec
+     * @note[short] MacOS (ARM): 0x5079c0
+     * @note[short] MacOS (Intel): 0x5dc3a0
+     * @note[short] Windows: 0x2a7480
+     * @note[short] iOS: 0x23f87c
      * @note[short] Android
      */
-    void updateFrame(int p0);
+    void updateFrame(int frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x4f9da0
-     * @note[short] MacOS (Intel): 0x5c4d50
+     * @note[short] MacOS (ARM): 0x5083a0
+     * @note[short] MacOS (Intel): 0x5dcf90
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x23fd94
+     * @note[short] iOS: 0x24000c
      * @note[short] Android
      */
-    void updateGlowColor(cocos2d::ccColor3B p0, bool p1);
+    void updateGlowColor(cocos2d::ccColor3B color, bool simple);
     cocos2d::CCArray* m_unkArray;
     bool m_hasExtra;
     cocos2d::ccColor3B m_color;

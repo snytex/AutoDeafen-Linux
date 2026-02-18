@@ -25,64 +25,64 @@ public:
      GJPromoPopup();
 
     /**
-     * @note[short] MacOS (ARM): 0x249be0
-     * @note[short] MacOS (Intel): 0x2a2de0
+     * @note[short] MacOS (ARM): 0x253cd8
+     * @note[short] MacOS (Intel): 0x2b62e0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x2e4d9c
+     * @note[short] iOS: 0x2e5120
      * @note[short] Android: Rebinded
      */
-    static GJPromoPopup* create(gd::string p0);
+    static GJPromoPopup* create(gd::string filename);
 
     /**
-     * @note[short] MacOS (ARM): 0x249ff4
-     * @note[short] MacOS (Intel): 0x2a3260
-     * @note[short] Windows: 0x29d890
-     * @note[short] iOS: 0x2e515c
+     * @note[short] MacOS (ARM): 0x2540f4
+     * @note[short] MacOS (Intel): 0x2b6760
+     * @note[short] Windows: 0x2a4f50
+     * @note[short] iOS: 0x2e54e0
      * @note[short] Android
      */
     virtual void onExit();
 
     /**
-     * @note[short] MacOS (ARM): 0x24a104
-     * @note[short] MacOS (Intel): 0x2a3370
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x2e519c
+     * @note[short] MacOS (ARM): 0x254204
+     * @note[short] MacOS (Intel): 0x2b6870
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x2e5520
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x24a034
-     * @note[short] MacOS (Intel): 0x2a32a0
-     * @note[short] Windows: 0x27db20
-     * @note[short] iOS: 0x2e5190
+     * @note[short] MacOS (ARM): 0x254134
+     * @note[short] MacOS (Intel): 0x2b67a0
+     * @note[short] Windows: 0x285450
+     * @note[short] iOS: 0x2e5514
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x24a13c
-     * @note[short] MacOS (Intel): 0x2a33b0
-     * @note[short] Windows: 0x867a0
-     * @note[short] iOS: 0x2e51d4
+     * @note[short] MacOS (ARM): 0x25423c
+     * @note[short] MacOS (Intel): 0x2b68b0
+     * @note[short] Windows: 0x867f0
+     * @note[short] iOS: 0x2e5558
      * @note[short] Android
      */
     virtual void show();
 
     /**
-     * @note[short] MacOS (ARM): 0x249d48
-     * @note[short] MacOS (Intel): 0x2a2f80
-     * @note[short] Windows: 0x29d590
-     * @note[short] iOS: 0x2e4eb4
+     * @note[short] MacOS (ARM): 0x253e48
+     * @note[short] MacOS (Intel): 0x2b6480
+     * @note[short] Windows: 0x2a4c50
+     * @note[short] iOS: 0x2e5238
      * @note[short] Android: Rebinded
      */
-    bool init(gd::string p0);
+    bool init(gd::string filename);
 
     /**
-     * @note[short] MacOS (ARM): 0x249f8c
-     * @note[short] MacOS (Intel): 0x2a3200
-     * @note[short] Windows: 0x27dac0
-     * @note[short] iOS: 0x2e50f4
+     * @note[short] MacOS (ARM): 0x25408c
+     * @note[short] MacOS (Intel): 0x2b6700
+     * @note[short] Windows: 0x2853f0
+     * @note[short] iOS: 0x2e5478
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);

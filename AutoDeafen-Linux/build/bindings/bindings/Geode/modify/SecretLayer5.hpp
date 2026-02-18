@@ -60,11 +60,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(claimOnlineReward) 
 	#endif
 
-	#ifndef GEODE_STATICS_fadeInMessage
-		#define GEODE_STATICS_fadeInMessage
-		GEODE_AS_STATIC_FUNCTION(fadeInMessage) 
-	#endif
-
 	#ifndef GEODE_STATICS_fadeInSubmitMessage
 		#define GEODE_STATICS_fadeInSubmitMessage
 		GEODE_AS_STATIC_FUNCTION(fadeInSubmitMessage) 
@@ -83,11 +78,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_handleSecretResponse
 		#define GEODE_STATICS_handleSecretResponse
 		GEODE_AS_STATIC_FUNCTION(handleSecretResponse) 
-	#endif
-
-	#ifndef GEODE_STATICS_incrementChatIdx
-		#define GEODE_STATICS_incrementChatIdx
-		GEODE_AS_STATIC_FUNCTION(incrementChatIdx) 
 	#endif
 
 	#ifndef GEODE_STATICS_onBack
@@ -327,39 +317,39 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer5, create, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer5, scene, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dccc0, Thiscall, SecretLayer5, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d25a0, Thiscall, SecretLayer5, onExit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3de3d0, Thiscall, SecretLayer5, updateTweenActionInt, float, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e0c90, Thiscall, SecretLayer5, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dffe0, Thiscall, SecretLayer5, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e0130, Thiscall, SecretLayer5, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e0130, Thiscall, SecretLayer5, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f4030, Thiscall, SecretLayer5, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e9910, Thiscall, SecretLayer5, onExit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f5740, Thiscall, SecretLayer5, updateTweenActionInt, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f8000, Thiscall, SecretLayer5, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f7350, Thiscall, SecretLayer5, textInputOpened, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f74a0, Thiscall, SecretLayer5, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f74a0, Thiscall, SecretLayer5, textChanged, CCTextInputNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer5, FLAlert_Clicked, FLAlertLayer*, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer5, dialogClosed, DialogLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3df6b0, Thiscall, SecretLayer5, onlineRewardStatusFinished, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3df820, Thiscall, SecretLayer5, onlineRewardStatusFailed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3de060, Thiscall, SecretLayer5, animateHead, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3df490, Thiscall, SecretLayer5, claimOnlineReward, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer5, fadeInMessage, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dde60, Thiscall, SecretLayer5, fadeInSubmitMessage, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3de030, Thiscall, SecretLayer5, fadeOutMessage, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3de420, Thiscall, SecretLayer5, finishLoadingState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f6a20, Thiscall, SecretLayer5, onlineRewardStatusFinished, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f6b90, Thiscall, SecretLayer5, onlineRewardStatusFailed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f53d0, Thiscall, SecretLayer5, animateHead, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f6800, Thiscall, SecretLayer5, claimOnlineReward, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer5, fadeInMessage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f51d0, Thiscall, SecretLayer5, fadeInSubmitMessage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f53a0, Thiscall, SecretLayer5, fadeOutMessage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f5790, Thiscall, SecretLayer5, finishLoadingState, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer5, getMessage, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3de440, Thiscall, SecretLayer5, handleSecretResponse, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f57b0, Thiscall, SecretLayer5, handleSecretResponse, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer5, hideTextInput, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer5, incrementChatIdx, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer5, incrementChatIdx, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer5, nodeWithTag, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e0c10, Thiscall, SecretLayer5, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3df8c0, Thiscall, SecretLayer5, onSubmit, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3df400, Thiscall, SecretLayer5, playWinSFX, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f7f80, Thiscall, SecretLayer5, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f6c30, Thiscall, SecretLayer5, onSubmit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f6770, Thiscall, SecretLayer5, playWinSFX, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer5, showDialog, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3de4a0, Thiscall, SecretLayer5, showFailAnimation, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e04f0, Thiscall, SecretLayer5, showFirstDialog, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dea60, Thiscall, SecretLayer5, showSuccessAnimation, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3df860, Thiscall, SecretLayer5, showTextInput, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3df6a0, Thiscall, SecretLayer5, unlockUI, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f5810, Thiscall, SecretLayer5, showFailAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f7860, Thiscall, SecretLayer5, showFirstDialog, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f5dd0, Thiscall, SecretLayer5, showSuccessAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f6bd0, Thiscall, SecretLayer5, showTextInput, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f6a10, Thiscall, SecretLayer5, unlockUI, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer5, updateMessageLabel, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e0200, Thiscall, SecretLayer5, updateSearchLabel, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f7570, Thiscall, SecretLayer5, updateSearchLabel, char const*)
 		}
 	};
 }

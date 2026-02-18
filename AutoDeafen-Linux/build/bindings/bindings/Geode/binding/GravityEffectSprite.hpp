@@ -24,37 +24,37 @@ public:
      GravityEffectSprite();
 
     /**
-     * @note[short] MacOS (ARM): 0x9d8c0
-     * @note[short] MacOS (Intel): 0xacad0
+     * @note[short] MacOS (ARM): 0x9b920
+     * @note[short] MacOS (Intel): 0xacc90
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x119108
+     * @note[short] iOS: 0x115ff0
      * @note[short] Android
      */
     static GravityEffectSprite* create();
 
     /**
-     * @note[short] MacOS (ARM): 0xae348
-     * @note[short] MacOS (Intel): 0xbfa30
-     * @note[short] Windows: 0x3a4390
-     * @note[short] iOS: 0x126114
+     * @note[short] MacOS (ARM): 0xac4b8
+     * @note[short] MacOS (Intel): 0xbfaf0
+     * @note[short] Windows: 0x3bb2b0
+     * @note[short] iOS: 0x122dec
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0xae56c
-     * @note[short] MacOS (Intel): 0xbfc90
+     * @note[short] MacOS (ARM): 0xac6bc
+     * @note[short] MacOS (Intel): 0xbfd50
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x126338
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x122ff0
+     * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): 0xa97a4
-     * @note[short] MacOS (Intel): 0xba240
+     * @note[short] MacOS (ARM): 0xa6ddc
+     * @note[short] MacOS (Intel): 0xb9690
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x121f34
+     * @note[short] iOS: 0x11e294
      * @note[short] Android
      */
     void updateSpritesColor(cocos2d::ccColor3B color);

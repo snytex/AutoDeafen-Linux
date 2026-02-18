@@ -10,6 +10,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
+	#ifndef GEODE_STATICS_createWithSpriteFrame
+		#define GEODE_STATICS_createWithSpriteFrame
+		GEODE_AS_STATIC_FUNCTION(createWithSpriteFrame) 
+	#endif
+
 	#ifndef GEODE_STATICS_createWithSpriteFrameName
 		#define GEODE_STATICS_createWithSpriteFrameName
 		GEODE_AS_STATIC_FUNCTION(createWithSpriteFrameName) 
@@ -160,10 +165,35 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(setSpriteFrame) 
 	#endif
 
+	#ifndef GEODE_STATICS_resizableSpriteWithCapInsets
+		#define GEODE_STATICS_resizableSpriteWithCapInsets
+		GEODE_AS_STATIC_FUNCTION(resizableSpriteWithCapInsets) 
+	#endif
+
+	#ifndef GEODE_STATICS_setBlendAdditive
+		#define GEODE_STATICS_setBlendAdditive
+		GEODE_AS_STATIC_FUNCTION(setBlendAdditive) 
+	#endif
+
+	#ifndef GEODE_STATICS_updateCapInset
+		#define GEODE_STATICS_updateCapInset
+		GEODE_AS_STATIC_FUNCTION(updateCapInset) 
+	#endif
+
+	#ifndef GEODE_STATICS_updatePositions
+		#define GEODE_STATICS_updatePositions
+		GEODE_AS_STATIC_FUNCTION(updatePositions) 
+	#endif
+
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_createWithSpriteFrame
+		#define GEODE_CONCEPT_CHECK_createWithSpriteFrame
+		GEODE_CONCEPT_FUNCTION_CHECK(createWithSpriteFrame) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_createWithSpriteFrameName
@@ -316,6 +346,26 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(setSpriteFrame) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_resizableSpriteWithCapInsets
+		#define GEODE_CONCEPT_CHECK_resizableSpriteWithCapInsets
+		GEODE_CONCEPT_FUNCTION_CHECK(resizableSpriteWithCapInsets) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setBlendAdditive
+		#define GEODE_CONCEPT_CHECK_setBlendAdditive
+		GEODE_CONCEPT_FUNCTION_CHECK(setBlendAdditive) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_updateCapInset
+		#define GEODE_CONCEPT_CHECK_updateCapInset
+		GEODE_CONCEPT_FUNCTION_CHECK(updateCapInset) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_updatePositions
+		#define GEODE_CONCEPT_CHECK_updatePositions
+		GEODE_CONCEPT_FUNCTION_CHECK(updatePositions) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::extension::CCScale9Sprite> : ModifyBase<ModifyDerive<Der, cocos2d::extension::CCScale9Sprite>> {
@@ -325,15 +375,17 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::extension::CCScale9Sprite::create)), Default, cocos2d::extension::CCScale9Sprite, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::extension::CCScale9Sprite::createWithSpriteFrameName)), Default, cocos2d::extension::CCScale9Sprite, createWithSpriteFrameName, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, cocos2d::CCRect>::func(&cocos2d::extension::CCScale9Sprite::createWithSpriteFrameName)), Default, cocos2d::extension::CCScale9Sprite, createWithSpriteFrameName, char const*, cocos2d::CCRect)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::extension::CCScale9Sprite::create)), Default, cocos2d::extension::CCScale9Sprite, create, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, cocos2d::CCRect>::func(&cocos2d::extension::CCScale9Sprite::create)), Default, cocos2d::extension::CCScale9Sprite, create, char const*, cocos2d::CCRect)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, cocos2d::CCRect, cocos2d::CCRect>::func(&cocos2d::extension::CCScale9Sprite::create)), Default, cocos2d::extension::CCScale9Sprite, create, char const*, cocos2d::CCRect, cocos2d::CCRect)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCRect, char const*>::func(&cocos2d::extension::CCScale9Sprite::create)), Default, cocos2d::extension::CCScale9Sprite, create, cocos2d::CCRect, char const*)
 			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getExtensions(), "??0CCScale9Sprite@extension@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::extension::CCScale9Sprite, )
 			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getExtensions(), "??1CCScale9Sprite@extension@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::extension::CCScale9Sprite)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::extension::CCScale9Sprite::create)), Default, cocos2d::extension::CCScale9Sprite, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::extension::CCScale9Sprite::create)), Default, cocos2d::extension::CCScale9Sprite, create, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, cocos2d::CCRect>::func(&cocos2d::extension::CCScale9Sprite::create)), Default, cocos2d::extension::CCScale9Sprite, create, char const*, cocos2d::CCRect)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCRect, char const*>::func(&cocos2d::extension::CCScale9Sprite::create)), Default, cocos2d::extension::CCScale9Sprite, create, cocos2d::CCRect, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, cocos2d::CCRect, cocos2d::CCRect>::func(&cocos2d::extension::CCScale9Sprite::create)), Default, cocos2d::extension::CCScale9Sprite, create, char const*, cocos2d::CCRect, cocos2d::CCRect)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCSpriteFrame*>::func(&cocos2d::extension::CCScale9Sprite::createWithSpriteFrame)), Default, cocos2d::extension::CCScale9Sprite, createWithSpriteFrame, cocos2d::CCSpriteFrame*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCSpriteFrame*, cocos2d::CCRect>::func(&cocos2d::extension::CCScale9Sprite::createWithSpriteFrame)), Default, cocos2d::extension::CCScale9Sprite, createWithSpriteFrame, cocos2d::CCSpriteFrame*, cocos2d::CCRect)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::extension::CCScale9Sprite::createWithSpriteFrameName)), Default, cocos2d::extension::CCScale9Sprite, createWithSpriteFrameName, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, cocos2d::CCRect>::func(&cocos2d::extension::CCScale9Sprite::createWithSpriteFrameName)), Default, cocos2d::extension::CCScale9Sprite, createWithSpriteFrameName, char const*, cocos2d::CCRect)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::extension::CCScale9Sprite::init)), Thiscall, cocos2d::extension::CCScale9Sprite, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<const cocos2d::CCSize&>::func(&cocos2d::extension::CCScale9Sprite::setContentSize)), Thiscall, cocos2d::extension::CCScale9Sprite, setContentSize, const cocos2d::CCSize&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::extension::CCScale9Sprite::visit)), Thiscall, cocos2d::extension::CCScale9Sprite, visit, )
@@ -369,6 +421,10 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<const char*>::func(&cocos2d::extension::CCScale9Sprite::initWithSpriteFrameName)), Thiscall, cocos2d::extension::CCScale9Sprite, initWithSpriteFrameName, const char*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCSpriteBatchNode*, cocos2d::CCRect, bool, cocos2d::CCRect>::func(&cocos2d::extension::CCScale9Sprite::updateWithBatchNode)), Thiscall, cocos2d::extension::CCScale9Sprite, updateWithBatchNode, cocos2d::CCSpriteBatchNode*, cocos2d::CCRect, bool, cocos2d::CCRect)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCSpriteFrame*>::func(&cocos2d::extension::CCScale9Sprite::setSpriteFrame)), Thiscall, cocos2d::extension::CCScale9Sprite, setSpriteFrame, cocos2d::CCSpriteFrame*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCRect>::func(&cocos2d::extension::CCScale9Sprite::resizableSpriteWithCapInsets)), Thiscall, cocos2d::extension::CCScale9Sprite, resizableSpriteWithCapInsets, cocos2d::CCRect)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::extension::CCScale9Sprite::setBlendAdditive)), Thiscall, cocos2d::extension::CCScale9Sprite, setBlendAdditive, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::extension::CCScale9Sprite::updateCapInset)), Thiscall, cocos2d::extension::CCScale9Sprite, updateCapInset, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::extension::CCScale9Sprite::updatePositions)), Thiscall, cocos2d::extension::CCScale9Sprite, updatePositions, )
 		}
 	};
 }

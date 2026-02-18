@@ -16,35 +16,35 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SelectSettingLayer, FLAlertLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x208e98
-     * @note[short] MacOS (Intel): 0x25c9f0
-     * @note[short] Windows: 0x30e580
-     * @note[short] iOS: 0x17f228
+     * @note[short] MacOS (ARM): 0x2119a8
+     * @note[short] MacOS (Intel): 0x26e990
+     * @note[short] Windows: 0x323110
+     * @note[short] iOS: 0x17bb88
      * @note[short] Android
      */
-    static SelectSettingLayer* create(SelectSettingType p0, int p1);
+    static SelectSettingLayer* create(SelectSettingType type, int value);
 
     /**
-     * @note[short] MacOS (ARM): 0x20b08c
-     * @note[short] MacOS (Intel): 0x25efd0
-     * @note[short] Windows: 0x30ede0
-     * @note[short] iOS: 0x180b3c
+     * @note[short] MacOS (ARM): 0x213b58
+     * @note[short] MacOS (Intel): 0x270f70
+     * @note[short] Windows: 0x323970
+     * @note[short] iOS: 0x17d474
      * @note[short] Android
      */
-    static gd::string frameForItem(SelectSettingType p0, int p1);
+    static gd::string frameForItem(SelectSettingType type, int index);
 
     /**
-     * @note[short] MacOS (ARM): 0x208c2c
-     * @note[short] MacOS (Intel): 0x25c690
+     * @note[short] MacOS (ARM): 0x21173c
+     * @note[short] MacOS (Intel): 0x26e630
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x17f09c
+     * @note[short] iOS: 0x17b9fc
      * @note[short] Android
      */
     static gd::string frameForValue(SelectSettingType type, int value);
 
     /**
-     * @note[short] MacOS (ARM): 0x20b404
-     * @note[short] MacOS (Intel): 0x25f2b0
+     * @note[short] MacOS (ARM): 0x213ebc
+     * @note[short] MacOS (Intel): 0x271280
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
@@ -52,8 +52,8 @@ public:
     static int idxToValue(SelectSettingType type, int idx);
 
     /**
-     * @note[short] MacOS (ARM): 0x20b060
-     * @note[short] MacOS (Intel): 0x25efa0
+     * @note[short] MacOS (ARM): 0x213b2c
+     * @note[short] MacOS (Intel): 0x270f40
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
@@ -61,55 +61,55 @@ public:
     static int valueToIdx(SelectSettingType type, int value);
 
     /**
-     * @note[short] MacOS (ARM): 0x20b430
-     * @note[short] MacOS (Intel): 0x25f2e0
-     * @note[short] Windows: 0x30f380
-     * @note[short] iOS: 0x180cbc
+     * @note[short] MacOS (ARM): 0x213ee8
+     * @note[short] MacOS (Intel): 0x2712b0
+     * @note[short] Windows: 0x323f10
+     * @note[short] iOS: 0x17d5f4
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x209154
-     * @note[short] MacOS (Intel): 0x25ccd0
+     * @note[short] MacOS (ARM): 0x211c5c
+     * @note[short] MacOS (Intel): 0x26ec70
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x17f484
+     * @note[short] iOS: 0x17bdc8
      * @note[short] Android
      */
     gd::string getSelectedFrame();
 
     /**
-     * @note[short] MacOS (ARM): 0x209120
-     * @note[short] MacOS (Intel): 0x25cca0
+     * @note[short] MacOS (ARM): 0x211c2c
+     * @note[short] MacOS (Intel): 0x26ec40
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x17f450
+     * @note[short] iOS: 0x17bd98
      * @note[short] Android
      */
     int getSelectedValue();
 
     /**
-     * @note[short] MacOS (ARM): 0x20aaac
-     * @note[short] MacOS (Intel): 0x25e9f0
-     * @note[short] Windows: 0x30e690
-     * @note[short] iOS: 0x18061c
+     * @note[short] MacOS (ARM): 0x213580
+     * @note[short] MacOS (Intel): 0x270990
+     * @note[short] Windows: 0x323220
+     * @note[short] iOS: 0x17cf58
      * @note[short] Android
      */
-    bool init(SelectSettingType p0, int p1);
+    bool init(SelectSettingType type, int value);
 
     /**
-     * @note[short] MacOS (ARM): 0x20b3a4
-     * @note[short] MacOS (Intel): 0x25f260
-     * @note[short] Windows: 0x30f330
-     * @note[short] iOS: 0x180c5c
+     * @note[short] MacOS (ARM): 0x213e5c
+     * @note[short] MacOS (Intel): 0x271230
+     * @note[short] Windows: 0x323ec0
+     * @note[short] iOS: 0x17d594
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x20b2cc
-     * @note[short] MacOS (Intel): 0x25f1b0
-     * @note[short] Windows: 0x30f280
-     * @note[short] iOS: 0x180b9c
+     * @note[short] MacOS (ARM): 0x213d84
+     * @note[short] MacOS (Intel): 0x271180
+     * @note[short] Windows: 0x323e10
+     * @note[short] iOS: 0x17d4d4
      * @note[short] Android
      */
     void onSelect(cocos2d::CCObject* sender);

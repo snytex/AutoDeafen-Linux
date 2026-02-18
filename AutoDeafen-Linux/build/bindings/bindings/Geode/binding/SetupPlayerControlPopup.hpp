@@ -16,16 +16,20 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupPlayerControlPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x44f720
+     * @note[short] MacOS (ARM): 0x4c7a98
+     * @note[short] MacOS (Intel): 0x57a9b0
+     * @note[short] Windows: 0x467c90
+     * @note[short] iOS: 0x4093d4
      * @note[short] Android
      */
-    static SetupPlayerControlPopup* create(PlayerControlGameObject* p0, cocos2d::CCArray* p1);
+    static SetupPlayerControlPopup* create(PlayerControlGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4b9c68
-     * @note[short] MacOS (Intel): 0x563c90
-     * @note[short] Windows: 0x44f830
+     * @note[short] MacOS (ARM): 0x4c7c20
+     * @note[short] MacOS (Intel): 0x57abe0
+     * @note[short] Windows: 0x467da0
+     * @note[short] iOS: 0x4094ac
      * @note[short] Android
      */
-    bool init(PlayerControlGameObject* p0, cocos2d::CCArray* p1);
+    bool init(PlayerControlGameObject* object, cocos2d::CCArray* objects);
 };

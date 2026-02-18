@@ -71,11 +71,11 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RateLevelLayer, create, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b2ab0, Thiscall, RateLevelLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b23c0, Thiscall, RateLevelLayer, init, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(RateLevelLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b2a20, Thiscall, RateLevelLayer, onRate, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b28d0, Thiscall, RateLevelLayer, selectRating, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c9e70, Thiscall, RateLevelLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c9780, Thiscall, RateLevelLayer, init, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c9e30, Thiscall, RateLevelLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c9de0, Thiscall, RateLevelLayer, onRate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c9c90, Thiscall, RateLevelLayer, selectRating, cocos2d::CCObject*)
 		}
 	};
 }

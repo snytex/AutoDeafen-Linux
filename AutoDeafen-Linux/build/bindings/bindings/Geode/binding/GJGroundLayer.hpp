@@ -15,193 +15,211 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJGroundLayer, cocos2d::CCLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x50636c
-     * @note[short] MacOS (Intel): 0x5d2760
-     * @note[short] Windows: 0x276870
-     * @note[short] iOS: 0x2fddc
+     * @note[short] MacOS (ARM): 0x5148fc
+     * @note[short] MacOS (Intel): 0x5ea980
+     * @note[short] Windows: 0x27e1a0
+     * @note[short] iOS: 0x2b988
      * @note[short] Android
      */
-    static GJGroundLayer* create(int p0, int p1);
+    static GJGroundLayer* create(int groundID, int lineType);
 
     /**
-     * @note[short] MacOS (ARM): 0x50745c
-     * @note[short] MacOS (Intel): 0x5d38a0
+     * @note[short] MacOS (ARM): 0x5159fc
+     * @note[short] MacOS (Intel): 0x5ebab0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x30c08
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x2c7b4
+     * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): 0x507250
-     * @note[short] MacOS (Intel): 0x5d36c0
-     * @note[short] Windows: 0x2774c0
-     * @note[short] iOS: 0x30aa0
+     * @note[short] MacOS (ARM): 0x5157f0
+     * @note[short] MacOS (Intel): 0x5eb8d0
+     * @note[short] Windows: 0x27edf0
+     * @note[short] iOS: 0x2c64c
      * @note[short] Android
      */
     virtual void showGround();
 
     /**
-     * @note[short] MacOS (ARM): 0x50725c
-     * @note[short] MacOS (Intel): 0x5d36d0
-     * @note[short] Windows: 0x2774d0
-     * @note[short] iOS: 0x30aac
+     * @note[short] MacOS (ARM): 0x5157fc
+     * @note[short] MacOS (Intel): 0x5eb8e0
+     * @note[short] Windows: 0x27ee00
+     * @note[short] iOS: 0x2c658
      * @note[short] Android
      */
-    virtual void fadeInGround(float p0);
+    virtual void fadeInGround(float duration);
 
     /**
-     * @note[short] MacOS (ARM): 0x507430
-     * @note[short] MacOS (Intel): 0x5d3870
-     * @note[short] Windows: 0x2776c0
-     * @note[short] iOS: 0x30c00
+     * @note[short] MacOS (ARM): 0x5159d0
+     * @note[short] MacOS (Intel): 0x5eba80
+     * @note[short] Windows: 0x27eff0
+     * @note[short] iOS: 0x2c7ac
      * @note[short] Android
      */
-    virtual void fadeOutGround(float p0);
+    virtual void fadeOutGround(float duration);
 
     /**
-     * @note[short] MacOS (ARM): 0x506958
-     * @note[short] MacOS (Intel): 0x5d2d50
-     * @note[short] Windows: 0x277120
+     * @note[short] MacOS (ARM): 0x514eec
+     * @note[short] MacOS (Intel): 0x5eaf70
+     * @note[short] Windows: 0x27ea50
+     * @note[short] iOS: 0x2be6c
      * @note[short] Android
      */
-    void createLine(int p0);
+    void createLine(int lineType);
 
     /**
-     * @note[short] MacOS (ARM): 0x507438
-     * @note[short] MacOS (Intel): 0x5d3880
+     * @note[short] MacOS (ARM): 0x5159d8
+     * @note[short] MacOS (Intel): 0x5eba90
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void deactivateGround();
 
     /**
-     * @note[short] MacOS (ARM): 0x5072dc
-     * @note[short] MacOS (Intel): 0x5d3740
-     * @note[short] Windows: 0x2774c0
+     * @note[short] MacOS (ARM): 0x51587c
+     * @note[short] MacOS (Intel): 0x5eb950
+     * @note[short] Windows: 0x27edf0
+     * @note[short] iOS: 0x2c6d8
      * @note[short] Android
      */
     void fadeInFinished();
 
     /**
-     * @note[short] MacOS (ARM): 0x5074a8
-     * @note[short] MacOS (Intel): 0x5d38f0
+     * @note[short] MacOS (ARM): 0x515a48
+     * @note[short] MacOS (Intel): 0x5ebb00
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     float getGroundY();
 
     /**
-     * @note[short] MacOS (ARM): 0x5072e8
-     * @note[short] MacOS (Intel): 0x5d3750
+     * @note[short] MacOS (ARM): 0x515888
+     * @note[short] MacOS (Intel): 0x5eb960
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void hideShadows();
 
     /**
-     * @note[short] MacOS (ARM): 0x506450
-     * @note[short] MacOS (Intel): 0x5d2870
-     * @note[short] Windows: 0x2768f0
-     * @note[short] iOS: 0x2fe60
+     * @note[short] MacOS (ARM): 0x5149e0
+     * @note[short] MacOS (Intel): 0x5eaa90
+     * @note[short] Windows: 0x27e220
+     * @note[short] iOS: 0x2ba0c
      * @note[short] Android
      */
-    bool init(int p0, int p1);
+    bool init(int groundID, int lineType);
 
     /**
-     * @note[short] MacOS (ARM): 0x506af4
-     * @note[short] MacOS (Intel): 0x5d2f10
-     * @note[short] Windows: 0x276e60
+     * @note[short] MacOS (ARM): 0x51508c
+     * @note[short] MacOS (Intel): 0x5eb130
+     * @note[short] Windows: 0x27e790
+     * @note[short] iOS: 0x2c008
      * @note[short] Android
      */
-    void loadGroundSprites(int p0, bool p1);
+    void loadGroundSprites(int count, bool ground1);
 
     /**
-     * @note[short] MacOS (ARM): 0x507460
-     * @note[short] MacOS (Intel): 0x5d38b0
+     * @note[short] MacOS (ARM): 0x515a00
+     * @note[short] MacOS (Intel): 0x5ebac0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2c7b8
      * @note[short] Android
      */
     void positionGround(float y);
 
     /**
-     * @note[short] MacOS (ARM): 0x506f20
-     * @note[short] MacOS (Intel): 0x5d3350
-     * @note[short] Windows: 0x277310
+     * @note[short] MacOS (ARM): 0x5154c4
+     * @note[short] MacOS (Intel): 0x5eb560
+     * @note[short] Windows: 0x27ec40
+     * @note[short] iOS: 0x2c390
      * @note[short] Android
      */
-    float scaleGround(float p0);
+    float scaleGround(float scale);
 
     /**
-     * @note[short] MacOS (ARM): 0x506df0
-     * @note[short] MacOS (Intel): 0x5d31f0
+     * @note[short] MacOS (ARM): 0x515388
+     * @note[short] MacOS (Intel): 0x5eb410
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2c260
      * @note[short] Android
      */
     void toggleVisible01(bool visible);
 
     /**
-     * @note[short] MacOS (ARM): 0x506e20
-     * @note[short] MacOS (Intel): 0x5d3230
+     * @note[short] MacOS (ARM): 0x5153c8
+     * @note[short] MacOS (Intel): 0x5eb450
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2c294
      * @note[short] Android
      */
     void toggleVisible02(bool visible);
 
     /**
-     * @note[short] MacOS (ARM): 0x506d70
-     * @note[short] MacOS (Intel): 0x5d3170
+     * @note[short] MacOS (ARM): 0x515308
+     * @note[short] MacOS (Intel): 0x5eb390
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2c1e0
      * @note[short] Android
      */
     void updateGround01Color(cocos2d::ccColor3B color);
 
     /**
-     * @note[short] MacOS (ARM): 0x506e9c
-     * @note[short] MacOS (Intel): 0x5d32c0
+     * @note[short] MacOS (ARM): 0x515440
+     * @note[short] MacOS (Intel): 0x5eb4d0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2c30c
      * @note[short] Android
      */
     void updateGround02Color(cocos2d::ccColor3B color);
 
     /**
-     * @note[short] MacOS (ARM): 0x506e4c
-     * @note[short] MacOS (Intel): 0x5d3270
+     * @note[short] MacOS (ARM): 0x5153f0
+     * @note[short] MacOS (Intel): 0x5eb480
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2c2bc
      * @note[short] Android
      */
     void updateGroundPos(cocos2d::CCPoint pos);
 
     /**
-     * @note[short] MacOS (ARM): 0x507014
-     * @note[short] MacOS (Intel): 0x5d3460
+     * @note[short] MacOS (ARM): 0x5155b8
+     * @note[short] MacOS (Intel): 0x5eb670
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2c414
      * @note[short] Android
      */
-    void updateGroundWidth(bool p0);
+    void updateGroundWidth(bool useThis);
 
     /**
-     * @note[short] MacOS (ARM): 0x507214
-     * @note[short] MacOS (Intel): 0x5d3670
+     * @note[short] MacOS (ARM): 0x5157b4
+     * @note[short] MacOS (Intel): 0x5eb880
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2c610
      * @note[short] Android
      */
     void updateLineBlend(bool blend);
 
     /**
-     * @note[short] MacOS (ARM): 0x507180
-     * @note[short] MacOS (Intel): 0x5d35e0
-     * @note[short] Windows: 0x277550
+     * @note[short] MacOS (ARM): 0x515720
+     * @note[short] MacOS (Intel): 0x5eb7f0
+     * @note[short] Windows: 0x27ee80
+     * @note[short] iOS: 0x2c57c
      * @note[short] Android
      */
     void updateShadows();
 
     /**
-     * @note[short] MacOS (ARM): 0x507368
-     * @note[short] MacOS (Intel): 0x5d37b0
-     * @note[short] Windows: 0x2775f0
+     * @note[short] MacOS (ARM): 0x515908
+     * @note[short] MacOS (Intel): 0x5eb9c0
+     * @note[short] Windows: 0x27ef20
+     * @note[short] iOS: 0x2c6e4
      * @note[short] Android
      */
-    void updateShadowXPos(float p0, float p1);
+    void updateShadowXPos(float leftX, float rightX);
     cocos2d::CCSprite* m_ground1Sprite;
     cocos2d::CCSprite* m_ground2Sprite;
     float m_textureWidth;

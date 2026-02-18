@@ -31,7 +31,7 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorActionSprite, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x251ad0, Thiscall, ColorActionSprite, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x258e30, Thiscall, ColorActionSprite, init, )
 		}
 	};
 }

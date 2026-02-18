@@ -15,16 +15,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onClose) 
 	#endif
 
-	#ifndef GEODE_STATICS_addChance
-		#define GEODE_STATICS_addChance
-		GEODE_AS_STATIC_FUNCTION(addChance) 
-	#endif
-
-	#ifndef GEODE_STATICS_addChanceToObject
-		#define GEODE_STATICS_addChanceToObject
-		GEODE_AS_STATIC_FUNCTION(addChanceToObject) 
-	#endif
-
 	#ifndef GEODE_STATICS_callRemoveFromGroup
 		#define GEODE_STATICS_callRemoveFromGroup
 		GEODE_AS_STATIC_FUNCTION(callRemoveFromGroup) 
@@ -43,16 +33,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onRemoveFromGroup
 		#define GEODE_STATICS_onRemoveFromGroup
 		GEODE_AS_STATIC_FUNCTION(onRemoveFromGroup) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeGroupID
-		#define GEODE_STATICS_removeGroupID
-		GEODE_AS_STATIC_FUNCTION(removeGroupID) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeGroupIDFromObject
-		#define GEODE_STATICS_removeGroupIDFromObject
-		GEODE_AS_STATIC_FUNCTION(removeGroupIDFromObject) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateGroupIDButtons
@@ -130,18 +110,18 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x424f50, Default, SetupRandAdvTriggerPopup, create, RandTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425b10, Thiscall, SetupRandAdvTriggerPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43d220, Default, SetupRandAdvTriggerPopup, create, RandTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43dde0, Thiscall, SetupRandAdvTriggerPopup, onClose, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupRandAdvTriggerPopup, textChanged, CCTextInputNode*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupRandAdvTriggerPopup, addChance, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupRandAdvTriggerPopup, addChanceToObject, RandTriggerGameObject*, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x426550, Thiscall, SetupRandAdvTriggerPopup, callRemoveFromGroup, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425090, Thiscall, SetupRandAdvTriggerPopup, init, RandTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x426790, Thiscall, SetupRandAdvTriggerPopup, onAddChance, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4266c0, Thiscall, SetupRandAdvTriggerPopup, onRemoveFromGroup, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupRandAdvTriggerPopup, removeGroupID, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupRandAdvTriggerPopup, removeGroupIDFromObject, RandTriggerGameObject*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425bd0, Thiscall, SetupRandAdvTriggerPopup, updateGroupIDButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupRandAdvTriggerPopup, addChance, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupRandAdvTriggerPopup, addChanceToObject, RandTriggerGameObject*, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43e820, Thiscall, SetupRandAdvTriggerPopup, callRemoveFromGroup, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43d360, Thiscall, SetupRandAdvTriggerPopup, init, RandTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43ea60, Thiscall, SetupRandAdvTriggerPopup, onAddChance, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43e990, Thiscall, SetupRandAdvTriggerPopup, onRemoveFromGroup, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupRandAdvTriggerPopup, removeGroupID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupRandAdvTriggerPopup, removeGroupIDFromObject, RandTriggerGameObject*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43dea0, Thiscall, SetupRandAdvTriggerPopup, updateGroupIDButtons, )
 		}
 	};
 }

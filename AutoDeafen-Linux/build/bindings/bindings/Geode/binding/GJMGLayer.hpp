@@ -24,129 +24,145 @@ public:
      GJMGLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x5075c4
-     * @note[short] MacOS (Intel): 0x5d3a40
+     * @note[short] MacOS (ARM): 0x515b64
+     * @note[short] MacOS (Intel): 0x5ebc50
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2c800
      * @note[short] Android
      */
-    static GJMGLayer* create(int p0);
+    static GJMGLayer* create(int index);
 
     /**
-     * @note[short] MacOS (ARM): 0x508038
-     * @note[short] MacOS (Intel): 0x5d4520
+     * @note[short] MacOS (ARM): 0x515b44
+     * @note[short] MacOS (Intel): 0x5ebc30
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x31548
-     * @note[short] Android: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    static float defaultYOffsetForBG2(int index);
+
+    /**
+     * @note[short] MacOS (ARM): 0x5165dc
+     * @note[short] MacOS (Intel): 0x5ec700
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2d0f4
+     * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): 0x508008
-     * @note[short] MacOS (Intel): 0x5d44f0
-     * @note[short] Windows: 0x2774c0
-     * @note[short] iOS: 0x3153c
+     * @note[short] MacOS (ARM): 0x5165ac
+     * @note[short] MacOS (Intel): 0x5ec6d0
+     * @note[short] Windows: 0x27edf0
+     * @note[short] iOS: 0x2d0e8
      * @note[short] Android
      */
     virtual void showGround();
 
     /**
-     * @note[short] MacOS (ARM): 0x508014
-     * @note[short] MacOS (Intel): 0x5d4500
+     * @note[short] MacOS (ARM): 0x5165b8
+     * @note[short] MacOS (Intel): 0x5ec6e0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void deactivateGround();
 
     /**
-     * @note[short] MacOS (ARM): 0x5075a4
-     * @note[short] MacOS (Intel): 0x5d3a20
+     * @note[short] MacOS (ARM): 0x515c40
+     * @note[short] MacOS (Intel): 0x5ebd60
+     * @note[short] Windows: 0x27f000
+     * @note[short] iOS: 0x2c8d0
+     * @note[short] Android
+     */
+    bool init(int index);
+
+    /**
+     * @note[short] MacOS (ARM): 0x5160bc
+     * @note[short] MacOS (Intel): 0x5ec1f0
+     * @note[short] Windows: 0x27f500
+     * @note[short] iOS: 0x2cc38
+     * @note[short] Android
+     */
+    void loadGroundSprites(int count, bool ground1);
+
+    /**
+     * @note[short] MacOS (ARM): 0x516448
+     * @note[short] MacOS (Intel): 0x5ec560
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2cf84
      * @note[short] Android
      */
-    static float defaultYOffsetForBG2(int p0);
+    float scaleGround(float scale);
 
     /**
-     * @note[short] MacOS (ARM): 0x5076a0
-     * @note[short] MacOS (Intel): 0x5d3b50
-     * @note[short] Windows: 0x2776d0
-     * @note[short] Android
-     */
-    bool init(int p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x507b28
-     * @note[short] MacOS (Intel): 0x5d4000
-     * @note[short] Windows: 0x277bd0
-     * @note[short] Android
-     */
-    void loadGroundSprites(int p0, bool p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x507ea8
-     * @note[short] MacOS (Intel): 0x5d4380
-     * @note[short] Android
-     */
-    float scaleGround(float p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x507d74
-     * @note[short] MacOS (Intel): 0x5d4230
+     * @note[short] MacOS (ARM): 0x516308
+     * @note[short] MacOS (Intel): 0x5ec420
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void toggleVisible01(bool visible);
 
     /**
-     * @note[short] MacOS (ARM): 0x507da4
-     * @note[short] MacOS (Intel): 0x5d4270
+     * @note[short] MacOS (ARM): 0x516348
+     * @note[short] MacOS (Intel): 0x5ec460
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2ce84
      * @note[short] Android
      */
     void toggleVisible02(bool visible);
 
     /**
-     * @note[short] MacOS (ARM): 0x507ce4
-     * @note[short] MacOS (Intel): 0x5d41a0
+     * @note[short] MacOS (ARM): 0x516278
+     * @note[short] MacOS (Intel): 0x5ec390
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2cdf4
      * @note[short] Android
      */
-    void updateGroundColor(cocos2d::ccColor3B color, bool ground2);
+    void updateGroundColor(cocos2d::ccColor3B color, bool ground1);
 
     /**
-     * @note[short] MacOS (ARM): 0x507e20
-     * @note[short] MacOS (Intel): 0x5d4300
+     * @note[short] MacOS (ARM): 0x5163c0
+     * @note[short] MacOS (Intel): 0x5ec4e0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2cefc
      * @note[short] Android
      */
-    void updateGroundOpacity(unsigned char opacity, bool ground2);
+    void updateGroundOpacity(unsigned char opacity, bool ground1);
 
     /**
-     * @note[short] MacOS (ARM): 0x507dd0
-     * @note[short] MacOS (Intel): 0x5d42b0
+     * @note[short] MacOS (ARM): 0x516370
+     * @note[short] MacOS (Intel): 0x5ec490
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2ceac
      * @note[short] Android
      */
     void updateGroundPos(cocos2d::CCPoint pos);
 
     /**
-     * @note[short] MacOS (ARM): 0x507f24
-     * @note[short] MacOS (Intel): 0x5d4410
+     * @note[short] MacOS (ARM): 0x5164c4
+     * @note[short] MacOS (Intel): 0x5ec5f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2d000
      * @note[short] Android
      */
-    void updateGroundWidth(bool p0);
+    void updateGroundWidth(bool useThis);
 
     /**
-     * @note[short] MacOS (ARM): 0x50803c
-     * @note[short] MacOS (Intel): 0x5d4530
+     * @note[short] MacOS (ARM): 0x5165e0
+     * @note[short] MacOS (Intel): 0x5ec710
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2d0f8
      * @note[short] Android
      */
     void updateMG01Blend(bool blend);
 
     /**
-     * @note[short] MacOS (ARM): 0x508078
-     * @note[short] MacOS (Intel): 0x5d4580
+     * @note[short] MacOS (ARM): 0x51661c
+     * @note[short] MacOS (Intel): 0x5ec760
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2d134
      * @note[short] Android
      */
     void updateMG02Blend(bool blend);

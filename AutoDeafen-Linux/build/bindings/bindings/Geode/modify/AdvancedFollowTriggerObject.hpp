@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_customObjectSetup
 		#define GEODE_STATICS_customObjectSetup
 		GEODE_AS_STATIC_FUNCTION(customObjectSetup) 
@@ -18,16 +13,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getSaveString
 		#define GEODE_STATICS_getSaveString
 		GEODE_AS_STATIC_FUNCTION(getSaveString) 
-	#endif
-
-	#ifndef GEODE_STATICS_getAdvancedFollowID
-		#define GEODE_STATICS_getAdvancedFollowID
-		GEODE_AS_STATIC_FUNCTION(getAdvancedFollowID) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
     
@@ -65,11 +50,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AdvancedFollowTriggerObject, create, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x485150, Thiscall, AdvancedFollowTriggerObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x482f50, Thiscall, AdvancedFollowTriggerObject, getSaveString, GJBaseGameLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AdvancedFollowTriggerObject, getAdvancedFollowID, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AdvancedFollowTriggerObject, init, char const*)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x495bf0, Thiscall, AdvancedFollowTriggerObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AdvancedFollowTriggerObject, create, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49d830, Thiscall, AdvancedFollowTriggerObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49b630, Thiscall, AdvancedFollowTriggerObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AdvancedFollowTriggerObject, getAdvancedFollowID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AdvancedFollowTriggerObject, init, char const*)
 		}
 	};
 }

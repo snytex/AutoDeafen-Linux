@@ -16,16 +16,20 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupTimerTriggerPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x449710
+     * @note[short] MacOS (ARM): 0x325b74
+     * @note[short] MacOS (Intel): 0x3a0a80
+     * @note[short] Windows: 0x461d20
+     * @note[short] iOS: 0x2d2d4
      * @note[short] Android
      */
-    static SetupTimerTriggerPopup* create(TimerTriggerGameObject* p0, cocos2d::CCArray* p1);
+    static SetupTimerTriggerPopup* create(TimerTriggerGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x31cd50
-     * @note[short] MacOS (Intel): 0x38db20
-     * @note[short] Windows: 0x449820
+     * @note[short] MacOS (ARM): 0x325d00
+     * @note[short] MacOS (Intel): 0x3a0cb0
+     * @note[short] Windows: 0x461e30
+     * @note[short] iOS: 0x2d3b0
      * @note[short] Android
      */
-    bool init(TimerTriggerGameObject* p0, cocos2d::CCArray* p1);
+    bool init(TimerTriggerGameObject* object, cocos2d::CCArray* objects);
 };

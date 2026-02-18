@@ -20,79 +20,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(draw) 
 	#endif
 
-	#ifndef GEODE_STATICS_addAudioLineObject
-		#define GEODE_STATICS_addAudioLineObject
-		GEODE_AS_STATIC_FUNCTION(addAudioLineObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_addToEffects
-		#define GEODE_STATICS_addToEffects
-		GEODE_AS_STATIC_FUNCTION(addToEffects) 
-	#endif
-
-	#ifndef GEODE_STATICS_addToGuides
-		#define GEODE_STATICS_addToGuides
-		GEODE_AS_STATIC_FUNCTION(addToGuides) 
-	#endif
-
-	#ifndef GEODE_STATICS_addToSpeedObjects
-		#define GEODE_STATICS_addToSpeedObjects
-		GEODE_AS_STATIC_FUNCTION(addToSpeedObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_getPortalMinMax
-		#define GEODE_STATICS_getPortalMinMax
-		GEODE_AS_STATIC_FUNCTION(getPortalMinMax) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
 	#ifndef GEODE_STATICS_loadTimeMarkers
 		#define GEODE_STATICS_loadTimeMarkers
 		GEODE_AS_STATIC_FUNCTION(loadTimeMarkers) 
-	#endif
-
-	#ifndef GEODE_STATICS_postUpdate
-		#define GEODE_STATICS_postUpdate
-		GEODE_AS_STATIC_FUNCTION(postUpdate) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeAudioLineObject
-		#define GEODE_STATICS_removeAudioLineObject
-		GEODE_AS_STATIC_FUNCTION(removeAudioLineObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeFromEffects
-		#define GEODE_STATICS_removeFromEffects
-		GEODE_AS_STATIC_FUNCTION(removeFromEffects) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeFromGuides
-		#define GEODE_STATICS_removeFromGuides
-		GEODE_AS_STATIC_FUNCTION(removeFromGuides) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeFromSpeedObjects
-		#define GEODE_STATICS_removeFromSpeedObjects
-		GEODE_AS_STATIC_FUNCTION(removeFromSpeedObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_sortSpeedObjects
-		#define GEODE_STATICS_sortSpeedObjects
-		GEODE_AS_STATIC_FUNCTION(sortSpeedObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateMusicGuideTime
-		#define GEODE_STATICS_updateMusicGuideTime
-		GEODE_AS_STATIC_FUNCTION(updateMusicGuideTime) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateTimeMarkers
-		#define GEODE_STATICS_updateTimeMarkers
-		GEODE_AS_STATIC_FUNCTION(updateTimeMarkers) 
 	#endif
 
     
@@ -205,26 +135,26 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2db1f0, Default, DrawGridLayer, create, cocos2d::CCNode*, LevelEditorLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2db6f0, Thiscall, DrawGridLayer, update, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2db8f0, Thiscall, DrawGridLayer, draw, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DrawGridLayer, addAudioLineObject, AudioLineGuideGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DrawGridLayer, addToEffects, EffectGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DrawGridLayer, addToGuides, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DrawGridLayer, addToSpeedObjects, EffectGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DrawGridLayer, getPortalMinMax, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DrawGridLayer, init, cocos2d::CCNode*, LevelEditorLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2db3d0, Thiscall, DrawGridLayer, loadTimeMarkers, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2e8af0, Default, DrawGridLayer, create, cocos2d::CCNode*, LevelEditorLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2e8ff0, Thiscall, DrawGridLayer, update, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2e91f0, Thiscall, DrawGridLayer, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DrawGridLayer, addAudioLineObject, AudioLineGuideGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DrawGridLayer, addToEffects, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DrawGridLayer, addToGuides, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DrawGridLayer, addToSpeedObjects, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DrawGridLayer, getPortalMinMax, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DrawGridLayer, init, cocos2d::CCNode*, LevelEditorLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2e8cd0, Thiscall, DrawGridLayer, loadTimeMarkers, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DrawGridLayer, posForTime, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DrawGridLayer, postUpdate, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DrawGridLayer, removeAudioLineObject, AudioLineGuideGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DrawGridLayer, removeFromEffects, EffectGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DrawGridLayer, removeFromGuides, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DrawGridLayer, removeFromSpeedObjects, EffectGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DrawGridLayer, sortSpeedObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DrawGridLayer, postUpdate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DrawGridLayer, removeAudioLineObject, AudioLineGuideGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DrawGridLayer, removeFromEffects, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DrawGridLayer, removeFromGuides, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DrawGridLayer, removeFromSpeedObjects, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DrawGridLayer, sortSpeedObjects, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DrawGridLayer, timeForPos, cocos2d::CCPoint, int, int, bool, bool, bool, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DrawGridLayer, updateMusicGuideTime, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DrawGridLayer, updateTimeMarkers, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DrawGridLayer, updateMusicGuideTime, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DrawGridLayer, updateTimeMarkers, )
 		}
 	};
 }

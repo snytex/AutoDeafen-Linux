@@ -75,12 +75,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2dd1f0, Default, LevelSettingsObject, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2deff0, Default, LevelSettingsObject, objectFromDict, cocos2d::CCDictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2eab20, Default, LevelSettingsObject, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2eca40, Default, LevelSettingsObject, objectFromDict, cocos2d::CCDictionary*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelSettingsObject, objectFromString, gd::string const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2dd320, Thiscall, LevelSettingsObject, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2dd630, Thiscall, LevelSettingsObject, getSaveString, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2e0840, Thiscall, LevelSettingsObject, setupColorsFromLegacyMode, cocos2d::CCDictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2eac60, Thiscall, LevelSettingsObject, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2eaf70, Thiscall, LevelSettingsObject, getSaveString, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ee2f0, Thiscall, LevelSettingsObject, setupColorsFromLegacyMode, cocos2d::CCDictionary*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelSettingsObject, shouldUseYSection, )
 		}
 	};

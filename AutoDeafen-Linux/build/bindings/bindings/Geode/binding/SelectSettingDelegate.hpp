@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void selectSettingClosed(SelectSettingLayer* p0);
+    virtual void selectSettingClosed(SelectSettingLayer* layer);
 };

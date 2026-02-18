@@ -30,11 +30,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(loadFromObject) 
 	#endif
 
-	#ifndef GEODE_STATICS_shouldReload
-		#define GEODE_STATICS_shouldReload
-		GEODE_AS_STATIC_FUNCTION(shouldReload) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateBGColor
 		#define GEODE_STATICS_updateBGColor
 		GEODE_AS_STATIC_FUNCTION(updateBGColor) 
@@ -85,14 +80,14 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0xb4380, Thiscall, CustomSFXCell, char const*, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4410, Thiscall, CustomSFXCell, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xad710, Thiscall, CustomSFXCell, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4520, Thiscall, CustomSFXCell, sfxObjectSelected, SFXInfoObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4110, Thiscall, CustomSFXCell, getActiveSFXID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4430, Thiscall, CustomSFXCell, loadFromObject, SFXInfoObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSFXCell, shouldReload, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4560, Thiscall, CustomSFXCell, updateBGColor, int)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0xb4b00, Thiscall, CustomSFXCell, char const*, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4b90, Thiscall, CustomSFXCell, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xade20, Thiscall, CustomSFXCell, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4ca0, Thiscall, CustomSFXCell, sfxObjectSelected, SFXInfoObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4890, Thiscall, CustomSFXCell, getActiveSFXID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4bb0, Thiscall, CustomSFXCell, loadFromObject, SFXInfoObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSFXCell, shouldReload, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4ce0, Thiscall, CustomSFXCell, updateBGColor, int)
 		}
 	};
 }

@@ -41,8 +41,8 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupObjectOptions2Popup, create, GameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e9380, Thiscall, SetupObjectOptions2Popup, onPlusButton, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e8e80, Thiscall, SetupObjectOptions2Popup, init, GameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x400fc0, Thiscall, SetupObjectOptions2Popup, onPlusButton, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x400ac0, Thiscall, SetupObjectOptions2Popup, init, GameObject*, cocos2d::CCArray*)
 		}
 	};
 }

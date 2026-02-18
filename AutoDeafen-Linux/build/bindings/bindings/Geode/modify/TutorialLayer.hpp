@@ -80,12 +80,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b30b0, Default, TutorialLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b31c0, Thiscall, TutorialLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b3de0, Thiscall, TutorialLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b3730, Thiscall, TutorialLayer, loadPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b3d60, Thiscall, TutorialLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b3710, Thiscall, TutorialLayer, onNext, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cbc90, Default, TutorialLayer, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cbda0, Thiscall, TutorialLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cc9c0, Thiscall, TutorialLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cc310, Thiscall, TutorialLayer, loadPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cc940, Thiscall, TutorialLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cc2f0, Thiscall, TutorialLayer, onNext, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TutorialLayer, removeTutorialTexture, )
 		}
 	};

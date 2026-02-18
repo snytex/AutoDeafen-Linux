@@ -15,146 +15,225 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJMultiplayerManager, cocos2d::CCNode)
 
     /**
-     * @note[short] MacOS (ARM): 0x56b350
-     * @note[short] MacOS (Intel): 0x642870
-     * @note[short] Windows: 0x27acc0
+     * @note[short] MacOS (ARM): 0x578c94
+     * @note[short] MacOS (Intel): 0x658b50
+     * @note[short] Windows: 0x2825f0
+     * @note[short] iOS: 0x1ce33c
      * @note[short] Android
      */
     static GJMultiplayerManager* sharedState();
 
     /**
-     * @note[short] MacOS (ARM): 0x56c9a8
-     * @note[short] MacOS (Intel): 0x643ff0
-     * @note[short] Windows: 0x27b410
-     * @note[short] iOS: 0x1cfeac
+     * @note[short] MacOS (ARM): 0x57a298
+     * @note[short] MacOS (Intel): 0x65a2c0
+     * @note[short] Windows: 0x282d40
+     * @note[short] iOS: 0x1cf130
      * @note[short] Android
      */
     virtual bool init();
 
     /**
+     * @note[short] MacOS (ARM): 0x57af70
+     * @note[short] MacOS (Intel): 0x65aef0
+     * @note[short] Windows: 0x283d10
+     * @note[short] iOS: 0x1cf4e0
      * @note[short] Android: Rebinded
      */
-    void addComment(gd::string p0, int p1);
+    void addComment(gd::string str, int lobbyID);
 
     /**
-     * @note[short] Android
-     */
-    void addDLToActive(char const* tag, cocos2d::CCObject* obj);
-
-    /**
+     * @note[short] MacOS (ARM): 0x57a414
+     * @note[short] MacOS (Intel): 0x65a430
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void addDLToActive(char const* tag);
 
     /**
-     * @note[short] MacOS (ARM): 0x56e2b4
-     * @note[short] MacOS (Intel): 0x645ae0
+     * @note[short] MacOS (ARM): 0x57a444
+     * @note[short] MacOS (Intel): 0x65a460
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    void addDLToActive(char const* tag, cocos2d::CCObject* obj);
+
+    /**
+     * @note[short] MacOS (ARM): 0x57bbfc
+     * @note[short] MacOS (Intel): 0x65bd70
+     * @note[short] Windows: 0x283b30
+     * @note[short] iOS: 0x1cfbfc
      * @note[short] Android: Rebinded
      */
-    TodoReturn createAndAddComment(gd::string p0, int p1);
+    void createAndAddComment(gd::string text, int lobbyID);
 
     /**
+     * @note[short] MacOS (ARM): 0x57bdb4
+     * @note[short] MacOS (Intel): 0x65bf40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1cfd14
      * @note[short] Android
      */
-    void dataLoaded(DS_Dictionary* p0);
+    void dataLoaded(DS_Dictionary* dict);
 
     /**
+     * @note[short] MacOS (ARM): 0x57bdb0
+     * @note[short] MacOS (Intel): 0x65bf30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1cfd10
      * @note[short] Android
      */
-    void encodeDataTo(DS_Dictionary* p0);
+    void encodeDataTo(DS_Dictionary* dict);
 
     /**
-     * @note[short] MacOS (ARM): 0x56d7f8
-     * @note[short] MacOS (Intel): 0x644e40
+     * @note[short] MacOS (ARM): 0x57b170
+     * @note[short] MacOS (Intel): 0x65b100
      * @note[short] Android
      */
-    TodoReturn exitLobby(int p0);
+    bool exitLobby(int id);
 
     /**
+     * @note[short] MacOS (ARM): 0x57bdac
+     * @note[short] MacOS (Intel): 0x65bf20
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1cfd0c
      * @note[short] Android
      */
     void firstSetup();
 
     /**
-     * @note[short] MacOS (ARM): 0x56d0b4
-     * @note[short] MacOS (Intel): 0x644700
+     * @note[short] MacOS (ARM): 0x57a990
+     * @note[short] MacOS (Intel): 0x65a9b0
+     * @note[short] Windows: 0x283ed0
+     * @note[short] iOS: 0x1cf1f0
      * @note[short] Android
      */
-    TodoReturn getBasePostString();
+    gd::string getBasePostString();
 
     /**
+     * @note[short] MacOS (ARM): 0x57a310
+     * @note[short] MacOS (Intel): 0x65a350
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    cocos2d::CCObject* getDLObject(char const* p0);
+    cocos2d::CCObject* getDLObject(char const* tag);
 
     /**
+     * @note[short] MacOS (ARM): 0x57aa98
+     * @note[short] MacOS (Intel): 0x65aaa0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn getLastCommentIDForGame(int p0);
+    int getLastCommentIDForGame(int id);
 
     /**
+     * @note[short] MacOS (ARM): 0x579194
+     * @note[short] MacOS (Intel): 0x659090
+     * @note[short] Windows: 0x282ab0
+     * @note[short] iOS: 0x1ce7d8
      * @note[short] Android: Rebinded
      */
-    void handleIt(bool p0, gd::string p1, gd::string p2, GJHttpType p3);
+    void handleIt(bool success, gd::string response, gd::string tag, GJHttpType type);
 
     /**
+     * @note[short] MacOS (ARM): 0x579580
+     * @note[short] MacOS (Intel): 0x6594d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-    void handleItDelayed(bool p0, gd::string p1, gd::string p2, GJHttpType p3);
+    void handleItDelayed(bool success, gd::string response, gd::string tag, GJHttpType type);
 
     /**
+     * @note[short] MacOS (ARM): 0x5796ec
+     * @note[short] MacOS (Intel): 0x659610
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void handleItND(cocos2d::CCNode* p0, void* p1);
+    void handleItND(cocos2d::CCNode* node, void* data);
 
     /**
+     * @note[short] MacOS (ARM): 0x57a2f4
+     * @note[short] MacOS (Intel): 0x65a330
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     bool isDLActive(char const* tag);
 
     /**
-     * @note[short] MacOS (ARM): 0x56cd54
-     * @note[short] MacOS (Intel): 0x644380
+     * @note[short] MacOS (ARM): 0x57a63c
+     * @note[short] MacOS (Intel): 0x65a630
      * @note[short] Android
      */
-    TodoReturn joinLobby(int p0);
+    bool joinLobby(int id);
 
     /**
+     * @note[short] MacOS (ARM): 0x57a030
+     * @note[short] MacOS (Intel): 0x65a060
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1cef34
      * @note[short] Android: Rebinded
      */
-    void onExitLobbyCompleted(gd::string p0, gd::string p1);
+    void onExitLobbyCompleted(gd::string response, gd::string tag);
 
     /**
+     * @note[short] MacOS (ARM): 0x579810
+     * @note[short] MacOS (Intel): 0x659730
+     * @note[short] Windows: 0x282e70
+     * @note[short] iOS: 0x1cea50
      * @note[short] Android: Rebinded
      */
-    void onJoinLobbyCompleted(gd::string p0, gd::string p1);
+    void onJoinLobbyCompleted(gd::string response, gd::string tag);
 
     /**
+     * @note[short] MacOS (ARM): 0x578fa4
+     * @note[short] MacOS (Intel): 0x658ed0
+     * @note[short] Windows: 0x2829b0
+     * @note[short] iOS: 0x1ce6c0
      * @note[short] Android
      */
-    void onProcessHttpRequestCompleted(cocos2d::extension::CCHttpClient* p0, cocos2d::extension::CCHttpResponse* p1);
+    void onProcessHttpRequestCompleted(cocos2d::extension::CCHttpClient* client, cocos2d::extension::CCHttpResponse* response);
 
     /**
+     * @note[short] MacOS (ARM): 0x57a130
+     * @note[short] MacOS (Intel): 0x65a140
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1ceff8
      * @note[short] Android: Rebinded
      */
-    void onUploadCommentCompleted(gd::string p0, gd::string p1);
+    void onUploadCommentCompleted(gd::string response, gd::string tag);
 
     /**
+     * @note[short] MacOS (ARM): 0x578d10
+     * @note[short] MacOS (Intel): 0x658bd0
+     * @note[short] Windows: 0x2826a0
+     * @note[short] iOS: 0x1ce3ac
      * @note[short] Android: Rebinded
      */
-    void ProcessHttpRequest(gd::string p0, gd::string p1, gd::string p2, GJHttpType p3);
+    void ProcessHttpRequest(gd::string url, gd::string params, gd::string tag, GJHttpType type);
 
     /**
+     * @note[short] MacOS (ARM): 0x57a544
+     * @note[short] MacOS (Intel): 0x65a550
+     * @note[short] Windows: 0x282dc0
+     * @note[short] iOS: 0x1cf18c
      * @note[short] Android
      */
-    void removeDLFromActive(char const* p0);
+    void removeDLFromActive(char const* tag);
 
     /**
-     * @note[short] MacOS (ARM): 0x56dad4
-     * @note[short] MacOS (Intel): 0x645130
+     * @note[short] MacOS (ARM): 0x57b440
+     * @note[short] MacOS (Intel): 0x65b3e0
+     * @note[short] Windows: 0x2835d0
+     * @note[short] iOS: 0x1cf6c0
      * @note[short] Android: Rebinded
      */
-    void uploadComment(gd::string p0, int p1);
+    bool uploadComment(gd::string text, int lobbyID);
     cocos2d::CCDictionary* m_activeDownloads;
     cocos2d::CCDictionary* m_lobbyScores;
     cocos2d::CCDictionary* m_scoreArrays;

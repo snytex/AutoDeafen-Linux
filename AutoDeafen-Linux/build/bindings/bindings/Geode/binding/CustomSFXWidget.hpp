@@ -17,175 +17,226 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(CustomSFXWidget, cocos2d::CCNode)
 
     /**
-     * @note[short] Windows: 0xbf920
+     * @note[short] MacOS (ARM): 0x50d408
+     * @note[short] MacOS (Intel): 0x5e2900
+     * @note[short] Windows: 0xc0640
+     * @note[short] iOS: 0x2efb44
      * @note[short] Android
      */
-    static CustomSFXWidget* create(SFXInfoObject* p0, CustomSFXDelegate* p1, bool p2, bool p3, bool p4, bool p5, bool p6);
+    static CustomSFXWidget* create(SFXInfoObject* object, CustomSFXDelegate* delegate, bool showDelete, bool showPlay, bool showDownload, bool noBackground, bool compactMode);
 
     /**
-     * @note[short] MacOS (ARM): 0x500fac
-     * @note[short] MacOS (Intel): 0x5cc910
-     * @note[short] Windows: 0xc18e0
-     * @note[short] iOS: 0x2f13bc
+     * @note[short] MacOS (ARM): 0x50f568
+     * @note[short] MacOS (Intel): 0x5e4b90
+     * @note[short] Windows: 0xc2600
+     * @note[short] iOS: 0x2f16a4
      * @note[short] Android
      */
-    virtual void downloadSFXFinished(int p0);
+    virtual void downloadSFXFinished(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x50104c
-     * @note[short] MacOS (Intel): 0x5cc9b0
-     * @note[short] Windows: 0xc1960
-     * @note[short] iOS: 0x2f1414
+     * @note[short] MacOS (ARM): 0x50f608
+     * @note[short] MacOS (Intel): 0x5e4c40
+     * @note[short] Windows: 0xc2680
+     * @note[short] iOS: 0x2f16fc
      * @note[short] Android
      */
-    virtual void downloadSFXFailed(int p0, GJSongError p1);
+    virtual void downloadSFXFailed(int id, GJSongError errorType);
 
     /**
-     * @note[short] MacOS (ARM): 0x500f84
-     * @note[short] MacOS (Intel): 0x5cc8a0
-     * @note[short] Windows: 0xc1230
-     * @note[short] iOS: 0x2f13a8
+     * @note[short] MacOS (ARM): 0x50f540
+     * @note[short] MacOS (Intel): 0x5e4b20
+     * @note[short] Windows: 0xc1f50
+     * @note[short] iOS: 0x2f1690
      * @note[short] Android
      */
     virtual void songStateChanged();
 
     /**
-     * @note[short] MacOS (ARM): 0x50125c
-     * @note[short] MacOS (Intel): 0x5ccb90
-     * @note[short] Windows: 0xc1a60
-     * @note[short] iOS: 0x2f1554
+     * @note[short] MacOS (ARM): 0x50f860
+     * @note[short] MacOS (Intel): 0x5e4e60
+     * @note[short] Windows: 0xc2780
+     * @note[short] iOS: 0x2f17f0
      * @note[short] Android
      */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x500ad8
-     * @note[short] MacOS (Intel): 0x5cc3f0
+     * @note[short] MacOS (ARM): 0x50f090
+     * @note[short] MacOS (Intel): 0x5e4660
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2f1354
      * @note[short] Android
      */
     void deleteSFX();
 
     /**
+     * @note[short] MacOS (ARM): 0x50f48c
+     * @note[short] MacOS (Intel): 0x5e4a70
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2f1654
      * @note[short] Android
      */
     void downloadFailed();
 
     /**
-     * @note[short] Windows: 0xc0bf0
+     * @note[short] MacOS (ARM): 0x50e850
+     * @note[short] MacOS (Intel): 0x5e3e20
+     * @note[short] Windows: 0xc1910
+     * @note[short] iOS: 0x2f0c64
      * @note[short] Android
      */
     void hideLoadingArt();
 
     /**
-     * @note[short] MacOS (ARM): 0x4fef30
-     * @note[short] MacOS (Intel): 0x5ca7d0
-     * @note[short] Windows: 0xbfa60
-     * @note[short] iOS: 0x2ef954
+     * @note[short] MacOS (ARM): 0x50d500
+     * @note[short] MacOS (Intel): 0x5e2a20
+     * @note[short] Windows: 0xc0780
+     * @note[short] iOS: 0x2efc3c
      * @note[short] Android
      */
-    bool init(SFXInfoObject* p0, CustomSFXDelegate* p1, bool p2, bool p3, bool p4, bool p5, bool p6);
+    bool init(SFXInfoObject* object, CustomSFXDelegate* delegate, bool showDelete, bool showPlay, bool showDownload, bool noBackground, bool compactMode);
 
     /**
-     * @note[short] MacOS (ARM): 0x4fff30
-     * @note[short] MacOS (Intel): 0x5cb850
-     * @note[short] Windows: 0xc0c80
+     * @note[short] MacOS (ARM): 0x50e500
+     * @note[short] MacOS (Intel): 0x5e3ad0
+     * @note[short] Windows: 0xc19a0
+     * @note[short] iOS: 0x2f09ec
      * @note[short] Android
      */
     void onCancelDownload(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4fff6c
-     * @note[short] MacOS (Intel): 0x5cb890
-     * @note[short] Windows: 0xc0950
+     * @note[short] MacOS (ARM): 0x50e53c
+     * @note[short] MacOS (Intel): 0x5e3b10
+     * @note[short] Windows: 0xc1670
+     * @note[short] iOS: 0x2f0a28
      * @note[short] Android
      */
     void onDelete(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0xc0d10
+     * @note[short] MacOS (ARM): 0x50e3bc
+     * @note[short] MacOS (Intel): 0x5e3970
+     * @note[short] Windows: 0xc1a30
+     * @note[short] iOS: 0x2f0938
      * @note[short] Android
      */
     void onDownload(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0xc0ee0
+     * @note[short] MacOS (ARM): 0x50e63c
+     * @note[short] MacOS (Intel): 0x5e3c20
+     * @note[short] Windows: 0xc1c00
+     * @note[short] iOS: 0x2f0b04
      * @note[short] Android
      */
     void onPlayback(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0xc0ec0
+     * @note[short] MacOS (ARM): 0x50e61c
+     * @note[short] MacOS (Intel): 0x5e3bf0
+     * @note[short] Windows: 0xc1be0
+     * @note[short] iOS: 0x2f0ae4
      * @note[short] Android
      */
     void onSelect(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0xc0a90
+     * @note[short] MacOS (ARM): 0x50f19c
+     * @note[short] MacOS (Intel): 0x5e4760
+     * @note[short] Windows: 0xc17b0
+     * @note[short] iOS: 0x2f144c
      * @note[short] Android
      */
     void showLoadingArt();
 
     /**
+     * @note[short] MacOS (ARM): 0x50f310
+     * @note[short] MacOS (Intel): 0x5e48e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2f15bc
      * @note[short] Android
      */
     void startDownload();
 
     /**
-     * @note[short] Windows: 0xc0e10
+     * @note[short] MacOS (ARM): 0x50efe4
+     * @note[short] MacOS (Intel): 0x5e45b0
+     * @note[short] Windows: 0xc1b30
+     * @note[short] iOS: 0x2f12fc
      * @note[short] Android
      */
     void startMonitorDownload();
 
     /**
-     * @note[short] Windows: 0xc1100
+     * @note[short] MacOS (ARM): 0x50f3c8
+     * @note[short] MacOS (Intel): 0x5e49a0
+     * @note[short] Windows: 0xc1e20
+     * @note[short] iOS: 0x2f15ec
      * @note[short] Android
      */
-    void updateDownloadProgress(float p0);
+    void updateDownloadProgress(float dt);
 
     /**
-     * @note[short] MacOS (ARM): 0x50115c
-     * @note[short] MacOS (Intel): 0x5ccaa0
-     * @note[short] Android
-     */
-    void updateError(GJSongError p0);
-
-    /**
+     * @note[short] MacOS (ARM): 0x50f6d4
+     * @note[short] MacOS (Intel): 0x5e4d00
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2f1738
+     * @note[short] Android
+     */
+    void updateError(GJSongError errorType);
+
+    /**
+     * @note[short] MacOS (ARM): 0x50f54c
+     * @note[short] MacOS (Intel): 0x5e4b50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2f169c
      * @note[short] Android
      */
     void updateLengthMod(float mod);
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x50f08c
+     * @note[short] MacOS (Intel): 0x5e4650
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] Android
      */
     void updatePlaybackBtn();
 
     /**
-     * @note[short] Windows: 0xc11b0
+     * @note[short] MacOS (ARM): 0x50e7d8
+     * @note[short] MacOS (Intel): 0x5e3da0
+     * @note[short] Windows: 0xc1ed0
+     * @note[short] iOS: 0x2f0bec
      * @note[short] Android
      */
-    void updateProgressBar(int p0);
+    void updateProgressBar(int progress);
 
     /**
-     * @note[short] MacOS (ARM): 0x5003a4
-     * @note[short] MacOS (Intel): 0x5cbcc0
-     * @note[short] Windows: 0xc1240
+     * @note[short] MacOS (ARM): 0x50e970
+     * @note[short] MacOS (Intel): 0x5e3f40
+     * @note[short] Windows: 0xc1f60
+     * @note[short] iOS: 0x2f0d48
      * @note[short] Android
      */
     void updateSFXInfo();
 
     /**
+     * @note[short] MacOS (ARM): 0x50e8e4
+     * @note[short] MacOS (Intel): 0x5e3eb0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2f0cf4
      * @note[short] Android
      */
     void updateSFXObject(SFXInfoObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0x50f554
+     * @note[short] MacOS (Intel): 0x5e4b70
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     bool verifySFXID(int id);

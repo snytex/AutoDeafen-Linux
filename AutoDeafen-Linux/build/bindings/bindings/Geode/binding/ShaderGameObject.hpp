@@ -16,41 +16,58 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(ShaderGameObject, EffectGameObject)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x399a54
+     * @note[short] Android: Out of line
      */
-    static ShaderGameObject* create(char const* p0);
+     ShaderGameObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x1537ec
-     * @note[short] MacOS (Intel): 0x18c9a0
-     * @note[short] Windows: 0x481460
-     * @note[short] iOS: 0x373f2c
+     * @note[short] MacOS (ARM): 0x15c524
+     * @note[short] MacOS (Intel): 0x19d1d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x37b0a8
+     * @note[short] Android
+     */
+    static ShaderGameObject* create(char const* frame);
+
+    /**
+     * @note[short] MacOS (ARM): 0x15c67c
+     * @note[short] MacOS (Intel): 0x19d330
+     * @note[short] Windows: 0x499b40
+     * @note[short] iOS: 0x37b140
      * @note[short] Android
      */
     virtual void customSetup();
 
     /**
-     * @note[short] MacOS (ARM): 0x1573c4
-     * @note[short] MacOS (Intel): 0x191760
-     * @note[short] Windows: 0x4826e0
-     * @note[short] iOS: 0x374f24
+     * @note[short] MacOS (ARM): 0x16018c
+     * @note[short] MacOS (Intel): 0x1a2260
+     * @note[short] Windows: 0x49adc0
+     * @note[short] iOS: 0x37c174
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x153844
-     * @note[short] MacOS (Intel): 0x18ca10
-     * @note[short] Windows: 0x4814c0
-     * @note[short] iOS: 0x373f7c
+     * @note[short] MacOS (ARM): 0x15c6d4
+     * @note[short] MacOS (Intel): 0x19d3a0
+     * @note[short] Windows: 0x499ba0
+     * @note[short] iOS: 0x37b190
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
+     * @note[short] MacOS (ARM): 0x15c634
+     * @note[short] MacOS (Intel): 0x19d2e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(char const* p0);
+    bool init(char const* frame);
     float m_speed;
     float m_strength;
     float m_outer;

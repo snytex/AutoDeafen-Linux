@@ -16,31 +16,37 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(HSVWidgetPopup, FLAlertLayer)
 
     /**
-     * @note[short] Windows: 0x96410
+     * @note[short] MacOS (ARM): 0x3a1ca0
+     * @note[short] MacOS (Intel): 0x42f470
+     * @note[short] Windows: 0x964d0
+     * @note[short] iOS: 0xfeb28
      * @note[short] Android: Rebinded
      */
-    static HSVWidgetPopup* create(cocos2d::ccHSVValue p0, HSVWidgetDelegate* p1, gd::string p2);
+    static HSVWidgetPopup* create(cocos2d::ccHSVValue hsv, HSVWidgetDelegate* delegate, gd::string title);
 
     /**
-     * @note[short] MacOS (ARM): 0x398990
-     * @note[short] MacOS (Intel): 0x41d0a0
-     * @note[short] Windows: 0x96940
-     * @note[short] iOS: 0x1020a8
+     * @note[short] MacOS (ARM): 0x3a2310
+     * @note[short] MacOS (Intel): 0x42fb70
+     * @note[short] Windows: 0x96a00
+     * @note[short] iOS: 0xff080
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x398494
-     * @note[short] MacOS (Intel): 0x41cb40
-     * @note[short] Windows: 0x96530
-     * @note[short] iOS: 0x101c80
+     * @note[short] MacOS (ARM): 0x3a1e18
+     * @note[short] MacOS (Intel): 0x42f620
+     * @note[short] Windows: 0x965f0
+     * @note[short] iOS: 0xfec5c
      * @note[short] Android: Rebinded
      */
     bool init(cocos2d::ccHSVValue hsv, HSVWidgetDelegate* delegate, gd::string title);
 
     /**
-     * @note[short] Windows: 0x96860
+     * @note[short] MacOS (ARM): 0x3a2140
+     * @note[short] MacOS (Intel): 0x42f980
+     * @note[short] Windows: 0x96920
+     * @note[short] iOS: 0xfef14
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);

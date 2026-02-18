@@ -15,11 +15,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addChance) 
 	#endif
 
-	#ifndef GEODE_STATICS_addCount
-		#define GEODE_STATICS_addCount
-		GEODE_AS_STATIC_FUNCTION(addCount) 
-	#endif
-
 	#ifndef GEODE_STATICS_addPreview
 		#define GEODE_STATICS_addPreview
 		GEODE_AS_STATIC_FUNCTION(addPreview) 
@@ -28,16 +23,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_addTemplateGuide
 		#define GEODE_STATICS_addTemplateGuide
 		GEODE_AS_STATIC_FUNCTION(addTemplateGuide) 
-	#endif
-
-	#ifndef GEODE_STATICS_createInfoLabel
-		#define GEODE_STATICS_createInfoLabel
-		GEODE_AS_STATIC_FUNCTION(createInfoLabel) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleSelectItem
-		#define GEODE_STATICS_toggleSelectItem
-		GEODE_AS_STATIC_FUNCTION(toggleSelectItem) 
 	#endif
 
     
@@ -90,15 +75,15 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ae310, Default, GJSmartBlockPreview, create, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2af0b0, Thiscall, GJSmartBlockPreview, addChance, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJSmartBlockPreview, addCount, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2aef30, Thiscall, GJSmartBlockPreview, addPreview, gd::string, gd::string, LevelEditorLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ae450, Thiscall, GJSmartBlockPreview, addTemplateGuide, gd::string, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ae6e0, Thiscall, GJSmartBlockPreview, addTemplateGuide, SmartPrefabResult, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJSmartBlockPreview, createInfoLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b59d0, Default, GJSmartBlockPreview, create, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b6770, Thiscall, GJSmartBlockPreview, addChance, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSmartBlockPreview, addCount, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b65f0, Thiscall, GJSmartBlockPreview, addPreview, gd::string, gd::string, LevelEditorLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b5da0, Thiscall, GJSmartBlockPreview, addTemplateGuide, SmartPrefabResult, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b5b10, Thiscall, GJSmartBlockPreview, addTemplateGuide, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSmartBlockPreview, createInfoLabel, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSmartBlockPreview, init, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJSmartBlockPreview, toggleSelectItem, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSmartBlockPreview, toggleSelectItem, bool)
 		}
 	};
 }

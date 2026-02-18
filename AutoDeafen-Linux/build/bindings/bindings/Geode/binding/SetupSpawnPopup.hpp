@@ -16,64 +16,94 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupSpawnPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x445be0
+     * @note[short] MacOS (ARM): 0x22fa64
+     * @note[short] MacOS (Intel): 0x28f200
+     * @note[short] Windows: 0x45df80
+     * @note[short] iOS: 0xf79e4
      * @note[short] Android
      */
-    static SetupSpawnPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupSpawnPopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x2286cc
-     * @note[short] MacOS (Intel): 0x27ece0
-     * @note[short] Windows: 0x40c730
-     * @note[short] iOS: 0xfbd4c
+     * @note[short] MacOS (ARM): 0x2311b0
+     * @note[short] MacOS (Intel): 0x290c60
+     * @note[short] Windows: 0x4244b0
+     * @note[short] iOS: 0xf8c78
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2271a4
-     * @note[short] MacOS (Intel): 0x27d4f0
-     * @note[short] Windows: 0x445d20
-     * @note[short] iOS: 0xfac18
+     * @note[short] MacOS (ARM): 0x230f7c
+     * @note[short] MacOS (Intel): 0x290a20
+     * @note[short] Windows: 0x45eeb0
+     * @note[short] iOS: 0xf8ac8
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    void addRemap(int oldID, int newID);
 
     /**
-     * @note[short] Windows: 0x446910
+     * @note[short] MacOS (ARM): 0x22fbf8
+     * @note[short] MacOS (Intel): 0x28f440
+     * @note[short] Windows: 0x45e0c0
+     * @note[short] iOS: 0xf7acc
+     * @note[short] Android
+     */
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
+
+    /**
+     * @note[short] MacOS (ARM): 0x2306fc
+     * @note[short] MacOS (Intel): 0x290100
+     * @note[short] Windows: 0x45ee50
+     * @note[short] iOS: 0xf84c8
      * @note[short] Android
      */
     void onAddRemap(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x446a80
+     * @note[short] MacOS (ARM): 0x23074c
+     * @note[short] MacOS (Intel): 0x290150
+     * @note[short] Windows: 0x45eff0
+     * @note[short] iOS: 0xf8524
      * @note[short] Android
      */
     void onDeleteRemap(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x447440
+     * @note[short] MacOS (ARM): 0x230834
+     * @note[short] MacOS (Intel): 0x290250
+     * @note[short] Windows: 0x45f190
+     * @note[short] iOS: 0xf85d0
+     * @note[short] Android
+     */
+    void onPasteRemap(cocos2d::CCObject* sender);
+
+    /**
+     * @note[short] MacOS (ARM): 0x2310b8
+     * @note[short] MacOS (Intel): 0x290b60
+     * @note[short] Windows: 0x45fa50
+     * @note[short] iOS: 0xf8bb8
      * @note[short] Android
      */
     void onSelectRemap(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x228568
-     * @note[short] MacOS (Intel): 0x27eb80
-     * @note[short] Windows: 0x447510
-     * @note[short] iOS: 0xfbc20
+     * @note[short] MacOS (ARM): 0x231060
+     * @note[short] MacOS (Intel): 0x290b10
+     * @note[short] Windows: 0x45fb20
+     * @note[short] iOS: 0xf8b60
      * @note[short] Android
      */
     void queueUpdateButtons();
 
     /**
-     * @note[short] MacOS (ARM): 0x227d98
-     * @note[short] MacOS (Intel): 0x27e2e0
-     * @note[short] Windows: 0x446c20
-     * @note[short] iOS: 0xfb69c
+     * @note[short] MacOS (ARM): 0x230874
+     * @note[short] MacOS (Intel): 0x2902a0
+     * @note[short] Windows: 0x45f230
+     * @note[short] iOS: 0xf8610
      * @note[short] Android
      */
-    void updateRemapButtons(float p0);
+    void updateRemapButtons(float dt);
     bool m_isBusy;
     cocos2d::CCArray* m_remapButtons;
     gd::vector<int> m_remapGroups;

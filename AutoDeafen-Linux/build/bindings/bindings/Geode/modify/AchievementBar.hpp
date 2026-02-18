@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_setOpacity
 		#define GEODE_STATICS_setOpacity
 		GEODE_AS_STATIC_FUNCTION(setOpacity) 
@@ -55,11 +50,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x80620, Thiscall, AchievementBar, unsigned int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AchievementBar, create, char const*, char const*, char const*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x81ea0, Thiscall, AchievementBar, setOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x80670, Thiscall, AchievementBar, init, char const*, char const*, char const*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x81c20, Thiscall, AchievementBar, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementBar, create, char const*, char const*, char const*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x81ef0, Thiscall, AchievementBar, setOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x806c0, Thiscall, AchievementBar, init, char const*, char const*, char const*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x81c70, Thiscall, AchievementBar, show, )
 		}
 	};
 }

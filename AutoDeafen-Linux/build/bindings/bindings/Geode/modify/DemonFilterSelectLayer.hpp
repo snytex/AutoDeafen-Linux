@@ -61,10 +61,10 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DemonFilterSelectLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x302da0, Thiscall, DemonFilterSelectLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3034f0, Thiscall, DemonFilterSelectLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3034a0, Thiscall, DemonFilterSelectLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3033e0, Thiscall, DemonFilterSelectLayer, selectRating, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x317950, Thiscall, DemonFilterSelectLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3180a0, Thiscall, DemonFilterSelectLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x318050, Thiscall, DemonFilterSelectLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x317f90, Thiscall, DemonFilterSelectLayer, selectRating, cocos2d::CCObject*)
 		}
 	};
 }

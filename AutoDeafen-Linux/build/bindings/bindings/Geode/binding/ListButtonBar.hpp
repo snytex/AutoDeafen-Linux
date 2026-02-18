@@ -15,49 +15,55 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(ListButtonBar, cocos2d::CCNode)
 
     /**
-     * @note[short] MacOS (ARM): 0x360e74
-     * @note[short] MacOS (Intel): 0x3de040
-     * @note[short] Windows: 0x6ad70
-     * @note[short] iOS: 0x16b2d8
+     * @note[short] MacOS (ARM): 0x369648
+     * @note[short] MacOS (Intel): 0x3efd20
+     * @note[short] Windows: 0x6ada0
+     * @note[short] iOS: 0x167c20
      * @note[short] Android
      */
     static ListButtonBar* create(cocos2d::CCArray* items, cocos2d::CCPoint position, int columns, int rows, float columnOffset, float rowOffset, float offset, float arrowOffset, int arrowType);
 
     /**
+     * @note[short] MacOS (ARM): 0x369d3c
+     * @note[short] MacOS (Intel): 0x3f0470
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     int getPage();
 
     /**
-     * @note[short] MacOS (ARM): 0x361584
-     * @note[short] MacOS (Intel): 0x3de7c0
-     * @note[short] Windows: 0x6b380
+     * @note[short] MacOS (ARM): 0x369d48
+     * @note[short] MacOS (Intel): 0x3f0490
+     * @note[short] Windows: 0x6b3b0
+     * @note[short] iOS: 0x16822c
      * @note[short] Android
      */
-    void goToPage(int p0);
+    void goToPage(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x360f58
-     * @note[short] MacOS (Intel): 0x3de110
-     * @note[short] Windows: 0x6ae80
+     * @note[short] MacOS (ARM): 0x36972c
+     * @note[short] MacOS (Intel): 0x3efdf0
+     * @note[short] Windows: 0x6aeb0
+     * @note[short] iOS: 0x167d04
      * @note[short] Android
      */
     bool init(cocos2d::CCArray* items, cocos2d::CCPoint position, int columns, int rows, float columnOffset, float rowOffset, float offset, float arrowOffset, int arrowType);
 
     /**
-     * @note[short] MacOS (ARM): 0x361460
-     * @note[short] MacOS (Intel): 0x3de670
-     * @note[short] Windows: 0x6b430
-     * @note[short] iOS: 0x16b8c4
+     * @note[short] MacOS (ARM): 0x369c34
+     * @note[short] MacOS (Intel): 0x3f0340
+     * @note[short] Windows: 0x6b460
+     * @note[short] iOS: 0x16820c
      * @note[short] Android
      */
     void onLeft(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3614ec
-     * @note[short] MacOS (Intel): 0x3de710
-     * @note[short] Windows: 0x6b410
-     * @note[short] iOS: 0x16b8d4
+     * @note[short] MacOS (ARM): 0x369cc0
+     * @note[short] MacOS (Intel): 0x3f03e0
+     * @note[short] Windows: 0x6b440
+     * @note[short] iOS: 0x16821c
      * @note[short] Android
      */
     void onRight(cocos2d::CCObject* sender);

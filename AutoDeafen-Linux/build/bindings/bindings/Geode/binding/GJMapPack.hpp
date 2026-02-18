@@ -18,82 +18,88 @@ public:
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
+     * @note[short] iOS: 0xb2fbc
      * @note[short] Android: Out of line
      */
      GJMapPack();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x4aed00
+     * @note[short] MacOS (Intel): 0x55f730
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0xaf8a8
+     * @note[short] Android: Rebinded
      */
      ~GJMapPack();
 
     /**
-     * @note[short] MacOS (ARM): 0x478e24
-     * @note[short] MacOS (Intel): 0x51c560
-     * @note[short] Windows: 0x16d210
-     * @note[short] iOS: 0x99770
-     * @note[short] Android
-     */
-    static GJMapPack* create(cocos2d::CCDictionary* p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x4a1910
-     * @note[short] MacOS (Intel): 0x5490c0
+     * @note[short] MacOS (ARM): 0x4aee64
+     * @note[short] MacOS (Intel): 0x55f880
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0xb2d50
+     * @note[short] iOS: 0xaf91c
      * @note[short] Android
      */
     static GJMapPack* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x4a1d4c
-     * @note[short] MacOS (Intel): 0x549550
-     * @note[short] Windows: 0x16dd70
-     * @note[short] iOS: 0xb2fdc
+     * @note[short] MacOS (ARM): 0x4859ec
+     * @note[short] MacOS (Intel): 0x532340
+     * @note[short] Windows: 0x170120
+     * @note[short] iOS: 0x959d8
+     * @note[short] Android
+     */
+    static GJMapPack* create(cocos2d::CCDictionary* dict);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4af280
+     * @note[short] MacOS (Intel): 0x55fcf0
+     * @note[short] Windows: 0x170c80
+     * @note[short] iOS: 0xafba8
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x4a1dac
-     * @note[short] MacOS (Intel): 0x5495d0
-     * @note[short] Windows: 0x16e080
-     * @note[short] iOS: 0xb303c
+     * @note[short] MacOS (ARM): 0x4af2e0
+     * @note[short] MacOS (Intel): 0x55fd70
+     * @note[short] Windows: 0x170f90
+     * @note[short] iOS: 0xafc08
      * @note[short] Android
      */
     int completedMaps();
 
     /**
-     * @note[short] MacOS (ARM): 0x4a1e70
-     * @note[short] MacOS (Intel): 0x549680
+     * @note[short] MacOS (ARM): 0x4af3a8
+     * @note[short] MacOS (Intel): 0x55fe20
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0xb30d4
+     * @note[short] iOS: 0xafca4
      * @note[short] Android
      */
     bool hasCompletedMapPack();
 
     /**
-     * @note[short] MacOS (ARM): 0x4a1ac8
-     * @note[short] MacOS (Intel): 0x5492a0
-     * @note[short] Windows: 0x16ddd0
+     * @note[short] MacOS (ARM): 0x4af010
+     * @note[short] MacOS (Intel): 0x55fa50
+     * @note[short] Windows: 0x170ce0
+     * @note[short] iOS: 0xafa24
      * @note[short] Android: Rebinded
      */
-    void parsePackColors(gd::string p0, gd::string p1);
+    void parsePackColors(gd::string textColorStr, gd::string barColorStr);
 
     /**
-     * @note[short] MacOS (ARM): 0x4a19b4
-     * @note[short] MacOS (Intel): 0x549180
-     * @note[short] Android: Rebinded
-     */
-    void parsePackLevels(gd::string p0);
-
-    /**
+     * @note[short] MacOS (ARM): 0x4aef08
+     * @note[short] MacOS (Intel): 0x55f940
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xaf990
+     * @note[short] Android: Rebinded
+     */
+    void parsePackLevels(gd::string levelsStr);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4af2d0
+     * @note[short] MacOS (Intel): 0x55fd50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xafbf8
      * @note[short] Android
      */
     int totalMaps();

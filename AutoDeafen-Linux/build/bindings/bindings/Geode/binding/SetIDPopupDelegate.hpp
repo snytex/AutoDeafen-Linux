@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void setIDPopupClosed(SetIDPopup* p0, int p1);
+    virtual void setIDPopupClosed(SetIDPopup* popup, int value);
 };

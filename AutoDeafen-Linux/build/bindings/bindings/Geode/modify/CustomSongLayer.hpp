@@ -95,11 +95,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onSongBrowser) 
 	#endif
 
-	#ifndef GEODE_STATICS_showNewgroundsMessage
-		#define GEODE_STATICS_showNewgroundsMessage
-		GEODE_AS_STATIC_FUNCTION(showNewgroundsMessage) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -211,25 +206,25 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSongLayer, create, CustomSongDelegate*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3760, Thiscall, CustomSongLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3770, Thiscall, CustomSongLayer, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3110, Thiscall, CustomSongLayer, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3060, Thiscall, CustomSongLayer, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3060, Thiscall, CustomSongLayer, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b5c0, Thiscall, CustomSongLayer, textInputShouldOffset, CCTextInputNode*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b620, Thiscall, CustomSongLayer, textInputReturn, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc34f0, Thiscall, CustomSongLayer, dropDownLayerWillClose, GJDropDownLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc35c0, Thiscall, CustomSongLayer, musicBrowserClosed, MusicBrowser*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc1f00, Thiscall, CustomSongLayer, init, CustomSongDelegate*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3690, Thiscall, CustomSongLayer, onClose, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSongLayer, onCreateLines, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc31a0, Thiscall, CustomSongLayer, onMusicBrowser, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSongLayer, onNCSBrowser, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3300, Thiscall, CustomSongLayer, onNewgroundsBrowser, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSongLayer, onOptions, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc2c80, Thiscall, CustomSongLayer, onSearch, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3120, Thiscall, CustomSongLayer, onSongBrowser, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSongLayer, showNewgroundsMessage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc4480, Thiscall, CustomSongLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc4490, Thiscall, CustomSongLayer, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3e30, Thiscall, CustomSongLayer, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3d80, Thiscall, CustomSongLayer, textInputOpened, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3d80, Thiscall, CustomSongLayer, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b600, Thiscall, CustomSongLayer, textInputShouldOffset, CCTextInputNode*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b660, Thiscall, CustomSongLayer, textInputReturn, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc4210, Thiscall, CustomSongLayer, dropDownLayerWillClose, GJDropDownLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc42e0, Thiscall, CustomSongLayer, musicBrowserClosed, MusicBrowser*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc2c20, Thiscall, CustomSongLayer, init, CustomSongDelegate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc43b0, Thiscall, CustomSongLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc4120, Thiscall, CustomSongLayer, onCreateLines, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3ec0, Thiscall, CustomSongLayer, onMusicBrowser, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3f20, Thiscall, CustomSongLayer, onNCSBrowser, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc4020, Thiscall, CustomSongLayer, onNewgroundsBrowser, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc38a0, Thiscall, CustomSongLayer, onOptions, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc39a0, Thiscall, CustomSongLayer, onSearch, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3e40, Thiscall, CustomSongLayer, onSongBrowser, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSongLayer, showNewgroundsMessage, )
 		}
 	};
 }

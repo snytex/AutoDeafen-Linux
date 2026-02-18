@@ -5,6 +5,11 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
+	#ifndef GEODE_STATICS_animationForID
+		#define GEODE_STATICS_animationForID
+		GEODE_AS_STATIC_FUNCTION(animationForID) 
+	#endif
+
 	#ifndef GEODE_STATICS_setOpacity
 		#define GEODE_STATICS_setOpacity
 		GEODE_AS_STATIC_FUNCTION(setOpacity) 
@@ -45,11 +50,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(displayFrameChanged) 
 	#endif
 
-	#ifndef GEODE_STATICS_animationForID
-		#define GEODE_STATICS_animationForID
-		GEODE_AS_STATIC_FUNCTION(animationForID) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -58,11 +58,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_playAnimation
 		#define GEODE_STATICS_playAnimation
 		GEODE_AS_STATIC_FUNCTION(playAnimation) 
-	#endif
-
-	#ifndef GEODE_STATICS_setupAnimatedSize
-		#define GEODE_STATICS_setupAnimatedSize
-		GEODE_AS_STATIC_FUNCTION(setupAnimatedSize) 
 	#endif
 
 	#ifndef GEODE_STATICS_setupChildSprites
@@ -76,9 +71,19 @@ namespace geode::modifier {
 	#endif
 
     
+	#ifndef GEODE_CONCEPT_CHECK_animationForID
+		#define GEODE_CONCEPT_CHECK_animationForID
+		GEODE_CONCEPT_FUNCTION_CHECK(animationForID) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getTweenTime
+		#define GEODE_CONCEPT_CHECK_getTweenTime
+		GEODE_CONCEPT_FUNCTION_CHECK(getTweenTime) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_setOpacity
@@ -121,16 +126,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(displayFrameChanged) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_animationForID
-		#define GEODE_CONCEPT_CHECK_animationForID
-		GEODE_CONCEPT_FUNCTION_CHECK(animationForID) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getTweenTime
-		#define GEODE_CONCEPT_CHECK_getTweenTime
-		GEODE_CONCEPT_FUNCTION_CHECK(getTweenTime) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_init
 		#define GEODE_CONCEPT_CHECK_init
 		GEODE_CONCEPT_FUNCTION_CHECK(init) 
@@ -170,23 +165,23 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a5380, Default, AnimatedGameObject, animationForID, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AnimatedGameObject, create, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48b5e0, Thiscall, AnimatedGameObject, setOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48d150, Thiscall, AnimatedGameObject, setChildColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48cc50, Thiscall, AnimatedGameObject, resetObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48b430, Thiscall, AnimatedGameObject, activateObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48b500, Thiscall, AnimatedGameObject, deactivateObject, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48b6b0, Thiscall, AnimatedGameObject, setObjectColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48b6f0, Thiscall, AnimatedGameObject, animationFinished, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48c9d0, Thiscall, AnimatedGameObject, displayFrameChanged, cocos2d::CCObject*, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48cca0, Default, AnimatedGameObject, animationForID, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AnimatedGameObject, getTweenTime, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48a360, Thiscall, AnimatedGameObject, init, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48cb20, Thiscall, AnimatedGameObject, playAnimation, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AnimatedGameObject, setupAnimatedSize, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48a8f0, Thiscall, AnimatedGameObject, setupChildSprites, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a3cc0, Thiscall, AnimatedGameObject, setOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a5830, Thiscall, AnimatedGameObject, setChildColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a5330, Thiscall, AnimatedGameObject, resetObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a3b10, Thiscall, AnimatedGameObject, activateObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a3be0, Thiscall, AnimatedGameObject, deactivateObject, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a3d90, Thiscall, AnimatedGameObject, setObjectColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a3dd0, Thiscall, AnimatedGameObject, animationFinished, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a50b0, Thiscall, AnimatedGameObject, displayFrameChanged, cocos2d::CCObject*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a2a40, Thiscall, AnimatedGameObject, init, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a5200, Thiscall, AnimatedGameObject, playAnimation, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AnimatedGameObject, setupAnimatedSize, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a2fd0, Thiscall, AnimatedGameObject, setupChildSprites, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AnimatedGameObject, updateChildSpriteColor, cocos2d::ccColor3B)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48b1c0, Thiscall, AnimatedGameObject, updateObjectAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a38a0, Thiscall, AnimatedGameObject, updateObjectAnimation, )
 		}
 	};
 }

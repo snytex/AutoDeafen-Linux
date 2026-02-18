@@ -17,220 +17,246 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(PauseLayer, CCBlockLayer)
 
     /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
-     * @note[short] Android: Rebinded
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
      PauseLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x34c250
-     * @note[short] MacOS (Intel): 0x3c2f60
+     * @note[short] MacOS (ARM): 0x35522c
+     * @note[short] MacOS (Intel): 0x3d5c20
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x141d38
      * @note[short] Android
      */
-    static PauseLayer* create(bool p0);
+    static PauseLayer* create(bool unfocused);
 
     /**
-     * @note[short] MacOS (ARM): 0x34e270
-     * @note[short] MacOS (Intel): 0x3c4fc0
-     * @note[short] Windows: 0x369070
-     * @note[short] iOS: 0x146f60
+     * @note[short] MacOS (ARM): 0x357188
+     * @note[short] MacOS (Intel): 0x3d7bd0
+     * @note[short] Windows: 0x37ede0
+     * @note[short] iOS: 0x1438ac
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x34e194
-     * @note[short] MacOS (Intel): 0x3c4ec0
-     * @note[short] Windows: 0x368fa0
-     * @note[short] iOS: 0x146eac
+     * @note[short] MacOS (ARM): 0x3570ac
+     * @note[short] MacOS (Intel): 0x3d7ad0
+     * @note[short] Windows: 0x37ed10
+     * @note[short] iOS: 0x1437f8
      * @note[short] Android
      */
-    virtual void keyDown(cocos2d::enumKeyCodes p0);
+    virtual void keyDown(cocos2d::enumKeyCodes key, double timestamp);
 
     /**
-     * @note[short] MacOS (ARM): 0x34c324
-     * @note[short] MacOS (Intel): 0x3c3070
-     * @note[short] Windows: 0x366b00
-     * @note[short] iOS: 0x1454b8
+     * @note[short] MacOS (ARM): 0x355300
+     * @note[short] MacOS (Intel): 0x3d5d30
+     * @note[short] Windows: 0x37c870
+     * @note[short] iOS: 0x141df8
      * @note[short] Android
      */
     virtual void customSetup();
 
     /**
-     * @note[short] MacOS (ARM): 0x34e0b0
-     * @note[short] MacOS (Intel): 0x3c4e00
-     * @note[short] Windows: 0x368de0
-     * @note[short] iOS: 0x146e3c
+     * @note[short] MacOS (ARM): 0x356fc8
+     * @note[short] MacOS (Intel): 0x3d7a10
+     * @note[short] Windows: 0x37eb50
+     * @note[short] iOS: 0x143788
      * @note[short] Android
      */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x34e268
-     * @note[short] MacOS (Intel): 0x3c4fa0
+     * @note[short] MacOS (ARM): 0x357180
+     * @note[short] MacOS (Intel): 0x3d7bb0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x146f58
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x1438a4
+     * @note[short] Android
      */
-    virtual void keyUp(cocos2d::enumKeyCodes p0);
+    virtual void keyUp(cocos2d::enumKeyCodes key, double timestamp);
 
     /**
+     * @note[short] MacOS (ARM): 0x356b8c
+     * @note[short] MacOS (Intel): 0x3d7600
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-    TodoReturn createToggleButton(gd::string p0, cocos2d::SEL_MenuHandler p1, bool p2, cocos2d::CCMenu* p3, cocos2d::CCPoint p4);
+    void createToggleButton(gd::string label, cocos2d::SEL_MenuHandler selector, bool toggled, cocos2d::CCMenu* menu, cocos2d::CCPoint position);
 
     /**
-     * @note[short] MacOS (ARM): 0x34df78
-     * @note[short] MacOS (Intel): 0x3c4cc0
-     * @note[short] Windows: 0x368b80
-     * @note[short] iOS: 0x146d14
+     * @note[short] MacOS (ARM): 0x356e90
+     * @note[short] MacOS (Intel): 0x3d78d0
+     * @note[short] Windows: 0x37e8f0
+     * @note[short] iOS: 0x143660
      * @note[short] Android
      */
     void goEdit();
 
     /**
+     * @note[short] MacOS (ARM): 0x3552f8
+     * @note[short] MacOS (Intel): 0x3d5d10
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(bool p0);
+    bool init(bool unfocused);
 
     /**
-     * @note[short] MacOS (ARM): 0x34daec
-     * @note[short] MacOS (Intel): 0x3c4870
-     * @note[short] Windows: 0x3683c0
-     * @note[short] iOS: 0x146bc0
+     * @note[short] MacOS (ARM): 0x356ad4
+     * @note[short] MacOS (Intel): 0x3d7530
+     * @note[short] Windows: 0x37e130
+     * @note[short] iOS: 0x14350c
      * @note[short] Android
      */
-    void musicSliderChanged(cocos2d::CCObject* p0);
+    void musicSliderChanged(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x34de9c
-     * @note[short] MacOS (Intel): 0x3c4be0
-     * @note[short] Windows: 0x368990
-     * @note[short] iOS: 0x146c38
+     * @note[short] MacOS (ARM): 0x356db4
+     * @note[short] MacOS (Intel): 0x3d77f0
+     * @note[short] Windows: 0x37e700
+     * @note[short] iOS: 0x143584
      * @note[short] Android
      */
     void onEdit(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x356ef8
+     * @note[short] MacOS (Intel): 0x3d7950
      * @note[short] Android
      */
     void onHelp(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x34d904
-     * @note[short] MacOS (Intel): 0x3c4670
-     * @note[short] Windows: 0x368530
-     * @note[short] iOS: 0x146a18
+     * @note[short] MacOS (ARM): 0x3568f0
+     * @note[short] MacOS (Intel): 0x3d7330
+     * @note[short] Windows: 0x37e2a0
+     * @note[short] iOS: 0x143368
      * @note[short] Android
      */
     void onNormalMode(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x34d8ac
-     * @note[short] MacOS (Intel): 0x3c4610
-     * @note[short] Windows: 0x368450
-     * @note[short] iOS: 0x1469dc
+     * @note[short] MacOS (ARM): 0x356898
+     * @note[short] MacOS (Intel): 0x3d72d0
+     * @note[short] Windows: 0x37e1c0
+     * @note[short] iOS: 0x14332c
      * @note[short] Android
      */
     void onPracticeMode(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x34dffc
-     * @note[short] MacOS (Intel): 0x3c4d60
-     * @note[short] Windows: 0x368e50
-     * @note[short] iOS: 0x146da0
+     * @note[short] MacOS (ARM): 0x356f14
+     * @note[short] MacOS (Intel): 0x3d7970
+     * @note[short] Windows: 0x37ebc0
+     * @note[short] iOS: 0x1436ec
      * @note[short] Android
      */
     void onQuit(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x356d84
+     * @note[short] MacOS (Intel): 0x3d77c0
      * @note[short] Android
      */
     void onRecordReplays(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x356b88
+     * @note[short] MacOS (Intel): 0x3d75f0
      * @note[short] Android
      */
     void onReplay(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x34da8c
-     * @note[short] MacOS (Intel): 0x3c4800
-     * @note[short] Windows: 0x3686a0
-     * @note[short] iOS: 0x146b60
+     * @note[short] MacOS (ARM): 0x356a74
+     * @note[short] MacOS (Intel): 0x3d74c0
+     * @note[short] Windows: 0x37e410
+     * @note[short] iOS: 0x1434ac
      * @note[short] Android
      */
     void onRestart(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x34d870
-     * @note[short] MacOS (Intel): 0x3c45d0
-     * @note[short] Windows: 0x368740
-     * @note[short] iOS: 0x1469a0
+     * @note[short] MacOS (ARM): 0x35685c
+     * @note[short] MacOS (Intel): 0x3d7290
+     * @note[short] Windows: 0x37e4b0
+     * @note[short] iOS: 0x1432f0
      * @note[short] Android
      */
     void onRestartFull(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x34d950
-     * @note[short] MacOS (Intel): 0x3c46c0
-     * @note[short] Windows: 0x368610
-     * @note[short] iOS: 0x146a48
+     * @note[short] MacOS (ARM): 0x35693c
+     * @note[short] MacOS (Intel): 0x3d7380
+     * @note[short] Windows: 0x37e380
+     * @note[short] iOS: 0x143398
      * @note[short] Android
      */
     void onResume(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x34dac8
-     * @note[short] MacOS (Intel): 0x3c4840
-     * @note[short] Windows: 0x3677d0
-     * @note[short] iOS: 0x146b9c
+     * @note[short] MacOS (ARM): 0x356ab0
+     * @note[short] MacOS (Intel): 0x3d7500
+     * @note[short] Windows: 0x37d540
+     * @note[short] iOS: 0x1434e8
      * @note[short] Android
      */
     void onSettings(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x356b84
+     * @note[short] MacOS (Intel): 0x3d75e0
      * @note[short] Android
      */
     void onTime(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x34d760
-     * @note[short] MacOS (Intel): 0x3c44c0
-     * @note[short] Windows: 0x3687e0
+     * @note[short] MacOS (ARM): 0x356750
+     * @note[short] MacOS (Intel): 0x3d7180
+     * @note[short] Windows: 0x37e550
+     * @note[short] iOS: 0x143210
      * @note[short] Android
      */
     void onTryEdit(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x355dd0
+     * @note[short] MacOS (Intel): 0x3d6820
+     * @note[short] Windows: 0x37d6f0
+     * @note[short] iOS: 0x1428b4
      * @note[short] Android
      */
     void setupProgressBars();
 
     /**
-     * @note[short] MacOS (ARM): 0x34db2c
-     * @note[short] MacOS (Intel): 0x3c48b0
-     * @note[short] Windows: 0x35cd70
-     * @note[short] iOS: 0x146bfc
+     * @note[short] MacOS (ARM): 0x356b14
+     * @note[short] MacOS (Intel): 0x3d7570
+     * @note[short] Windows: 0x372a90
+     * @note[short] iOS: 0x143548
      * @note[short] Android
      */
-    void sfxSliderChanged(cocos2d::CCObject* p0);
+    void sfxSliderChanged(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x34d988
-     * @note[short] MacOS (Intel): 0x3c4700
-     * @note[short] Windows: 0x368c50
-     * @note[short] iOS: 0x146a80
+     * @note[short] MacOS (ARM): 0x356974
+     * @note[short] MacOS (Intel): 0x3d73c0
+     * @note[short] Windows: 0x37e9c0
+     * @note[short] iOS: 0x1433d0
      * @note[short] Android
      */
     void tryQuit(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x356b54
+     * @note[short] MacOS (Intel): 0x3d75b0
      * @note[short] Android
      */
-    TodoReturn tryShowBanner(float p0);
+    void tryShowBanner(float dt);
     bool m_unfocused;
     bool m_tryingQuit;
 };

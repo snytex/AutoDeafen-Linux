@@ -10,54 +10,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(reset) 
 	#endif
 
-	#ifndef GEODE_STATICS_resetDelta
-		#define GEODE_STATICS_resetDelta
-		GEODE_AS_STATIC_FUNCTION(resetDelta) 
-	#endif
-
-	#ifndef GEODE_STATICS_runFollowCommand
-		#define GEODE_STATICS_runFollowCommand
-		GEODE_AS_STATIC_FUNCTION(runFollowCommand) 
-	#endif
-
-	#ifndef GEODE_STATICS_runMoveCommand
-		#define GEODE_STATICS_runMoveCommand
-		GEODE_AS_STATIC_FUNCTION(runMoveCommand) 
-	#endif
-
-	#ifndef GEODE_STATICS_runPlayerFollowCommand
-		#define GEODE_STATICS_runPlayerFollowCommand
-		GEODE_AS_STATIC_FUNCTION(runPlayerFollowCommand) 
-	#endif
-
-	#ifndef GEODE_STATICS_runRotateCommand
-		#define GEODE_STATICS_runRotateCommand
-		GEODE_AS_STATIC_FUNCTION(runRotateCommand) 
-	#endif
-
-	#ifndef GEODE_STATICS_runTransformCommand
-		#define GEODE_STATICS_runTransformCommand
-		GEODE_AS_STATIC_FUNCTION(runTransformCommand) 
-	#endif
-
 	#ifndef GEODE_STATICS_step
 		#define GEODE_STATICS_step
 		GEODE_AS_STATIC_FUNCTION(step) 
 	#endif
 
-	#ifndef GEODE_STATICS_stepTransformCommand
-		#define GEODE_STATICS_stepTransformCommand
-		GEODE_AS_STATIC_FUNCTION(stepTransformCommand) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateAction
 		#define GEODE_STATICS_updateAction
 		GEODE_AS_STATIC_FUNCTION(updateAction) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateEffectAction
-		#define GEODE_STATICS_updateEffectAction
-		GEODE_AS_STATIC_FUNCTION(updateEffectAction) 
 	#endif
 
     
@@ -125,17 +85,18 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GroupCommandObject2, reset, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GroupCommandObject2, resetDelta, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GroupCommandObject2, runFollowCommand, double, double, double)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GroupCommandObject2, runMoveCommand, cocos2d::CCPoint, double, int, double, bool, bool, bool, bool, double, double)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GroupCommandObject2, runPlayerFollowCommand, double, double, int, double, double)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GroupCommandObject2, runRotateCommand, double, double, int, double, bool, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GroupCommandObject2, runTransformCommand, double, int, double)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GroupCommandObject2, step, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GroupCommandObject2, stepTransformCommand, float, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GroupCommandObject2, updateAction, int, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GroupCommandObject2, updateEffectAction, float, int)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x257690, Thiscall, GroupCommandObject2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x257700, Thiscall, GroupCommandObject2, reset, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GroupCommandObject2, resetDelta, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GroupCommandObject2, runFollowCommand, double, double, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GroupCommandObject2, runMoveCommand, cocos2d::CCPoint, double, int, double, bool, bool, bool, bool, double, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GroupCommandObject2, runPlayerFollowCommand, double, double, int, double, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GroupCommandObject2, runRotateCommand, double, double, int, double, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GroupCommandObject2, runTransformCommand, double, int, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x257900, Thiscall, GroupCommandObject2, step, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GroupCommandObject2, stepTransformCommand, float, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2579d0, Thiscall, GroupCommandObject2, updateAction, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GroupCommandObject2, updateEffectAction, float, int)
 		}
 	};
 }

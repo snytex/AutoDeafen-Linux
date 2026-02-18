@@ -55,12 +55,14 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCTransitionFade@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCTransitionFade, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCTransitionFade@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCTransitionFade)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, cocos2d::CCScene*>::func(&cocos2d::CCTransitionFade::create)), Default, cocos2d::CCTransitionFade, create, float, cocos2d::CCScene*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, cocos2d::CCScene*, cocos2d::_ccColor3B const&>::func(&cocos2d::CCTransitionFade::create)), Default, cocos2d::CCTransitionFade, create, float, cocos2d::CCScene*, cocos2d::_ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, cocos2d::CCScene*, cocos2d::ccColor3B const&>::func(&cocos2d::CCTransitionFade::create)), Default, cocos2d::CCTransitionFade, create, float, cocos2d::CCScene*, cocos2d::ccColor3B const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTransitionFade::onEnter)), Thiscall, cocos2d::CCTransitionFade, onEnter, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTransitionFade::onExit)), Thiscall, cocos2d::CCTransitionFade, onExit, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float, cocos2d::CCScene*>::func(&cocos2d::CCTransitionFade::initWithDuration)), Thiscall, cocos2d::CCTransitionFade, initWithDuration, float, cocos2d::CCScene*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float, cocos2d::CCScene*, cocos2d::_ccColor3B const&>::func(&cocos2d::CCTransitionFade::initWithDuration)), Thiscall, cocos2d::CCTransitionFade, initWithDuration, float, cocos2d::CCScene*, cocos2d::_ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float, cocos2d::CCScene*, cocos2d::ccColor3B const&>::func(&cocos2d::CCTransitionFade::initWithDuration)), Thiscall, cocos2d::CCTransitionFade, initWithDuration, float, cocos2d::CCScene*, cocos2d::ccColor3B const&)
 		}
 	};
 }

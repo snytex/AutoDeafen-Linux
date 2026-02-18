@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_transitionToLoadingLayer
 		#define GEODE_STATICS_transitionToLoadingLayer
 		GEODE_AS_STATIC_FUNCTION(transitionToLoadingLayer) 
@@ -23,16 +18,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onEnterTransitionDidFinish
 		#define GEODE_STATICS_onEnterTransitionDidFinish
 		GEODE_AS_STATIC_FUNCTION(onEnterTransitionDidFinish) 
-	#endif
-
-	#ifndef GEODE_STATICS_gameLayerDidUnload
-		#define GEODE_STATICS_gameLayerDidUnload
-		GEODE_AS_STATIC_FUNCTION(gameLayerDidUnload) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
 	#ifndef GEODE_STATICS_loadLevel
@@ -85,13 +70,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLoadingLayer, create, GJGameLevel*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x242890, Default, GJGameLoadingLayer, transitionToLoadingLayer, GJGameLevel*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52db0, Thiscall, GJGameLoadingLayer, onEnter, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x242b20, Thiscall, GJGameLoadingLayer, onEnterTransitionDidFinish, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLoadingLayer, gameLayerDidUnload, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLoadingLayer, init, GJGameLevel*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x242a80, Thiscall, GJGameLoadingLayer, loadLevel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLoadingLayer, create, GJGameLevel*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x248e20, Default, GJGameLoadingLayer, transitionToLoadingLayer, GJGameLevel*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52e20, Thiscall, GJGameLoadingLayer, onEnter, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2490b0, Thiscall, GJGameLoadingLayer, onEnterTransitionDidFinish, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLoadingLayer, gameLayerDidUnload, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLoadingLayer, init, GJGameLevel*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x249010, Thiscall, GJGameLoadingLayer, loadLevel, )
 		}
 	};
 }

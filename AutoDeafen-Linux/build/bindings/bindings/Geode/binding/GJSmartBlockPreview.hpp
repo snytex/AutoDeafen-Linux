@@ -16,57 +16,85 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJSmartBlockPreview, cocos2d::CCNode)
 
     /**
-     * @note[short] Windows: 0x2ae310
+     * @note[short] MacOS (ARM): 0x39b134
+     * @note[short] MacOS (Intel): 0x4287f0
+     * @note[short] Windows: 0x2b59d0
+     * @note[short] iOS: 0x888c
      * @note[short] Android: Rebinded
      */
-    static GJSmartBlockPreview* create(gd::string p0);
+    static GJSmartBlockPreview* create(gd::string key);
 
     /**
-     * @note[short] MacOS (ARM): 0x392550
-     * @note[short] MacOS (Intel): 0x416ac0
-     * @note[short] Windows: 0x2af0b0
+     * @note[short] MacOS (ARM): 0x39becc
+     * @note[short] MacOS (Intel): 0x429530
+     * @note[short] Windows: 0x2b6770
+     * @note[short] iOS: 0x93e4
      * @note[short] Android
      */
-    void addChance(int p0, int p1);
+    void addChance(int count, int total);
 
     /**
+     * @note[short] MacOS (ARM): 0x39bdf4
+     * @note[short] MacOS (Intel): 0x429450
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x9340
      * @note[short] Android
      */
-    void addCount(int p0);
+    void addCount(int count);
 
     /**
-     * @note[short] Windows: 0x2aef30
+     * @note[short] MacOS (ARM): 0x39bc14
+     * @note[short] MacOS (Intel): 0x429280
+     * @note[short] Windows: 0x2b65f0
+     * @note[short] iOS: 0x9164
      * @note[short] Android: Rebinded
      */
-    void addPreview(gd::string p0, gd::string p1, LevelEditorLayer* p2);
+    void addPreview(gd::string key, gd::string data, LevelEditorLayer* layer);
 
     /**
-     * @note[short] Windows: 0x2ae450
-     * @note[short] Android: Rebinded
-     */
-    void addTemplateGuide(gd::string p0, int p1);
-
-    /**
-     * @note[short] Windows: 0x2ae6e0
+     * @note[short] MacOS (ARM): 0x39b5f0
+     * @note[short] MacOS (Intel): 0x428c70
+     * @note[short] Windows: 0x2b5da0
+     * @note[short] iOS: 0x8c9c
      * @note[short] Android
      */
-    cocos2d::CCArray* addTemplateGuide(SmartPrefabResult p0, float p1);
+    cocos2d::CCArray* addTemplateGuide(SmartPrefabResult result, float opacity);
 
     /**
+     * @note[short] MacOS (ARM): 0x39b2e4
+     * @note[short] MacOS (Intel): 0x428970
+     * @note[short] Windows: 0x2b5b10
+     * @note[short] iOS: 0x89ec
+     * @note[short] Android: Rebinded
+     */
+    void addTemplateGuide(gd::string key, int type);
+
+    /**
+     * @note[short] MacOS (ARM): 0x39bda0
+     * @note[short] MacOS (Intel): 0x429400
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x92f0
      * @note[short] Android
      */
     void createInfoLabel();
 
     /**
+     * @note[short] MacOS (ARM): 0x39b270
+     * @note[short] MacOS (Intel): 0x428900
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x8978
      * @note[short] Android: Rebinded
      */
     bool init(gd::string key);
 
     /**
+     * @note[short] MacOS (ARM): 0x39c088
+     * @note[short] MacOS (Intel): 0x4296f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x9550
      * @note[short] Android
      */
-    void toggleSelectItem(bool p0);
+    void toggleSelectItem(bool selected);
     gd::string m_prefabKey;
     cocos2d::CCLabelBMFont* m_infoLabel;
     cocos2d::CCSprite* m_selectSprite;

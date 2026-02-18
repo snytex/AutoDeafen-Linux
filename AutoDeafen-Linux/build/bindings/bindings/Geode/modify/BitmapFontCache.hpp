@@ -42,7 +42,7 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BitmapFontCache, purgeSharedFontCache, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BitmapFontCache, sharedFontCache, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b380, Thiscall, BitmapFontCache, fontWithConfigFile, char const*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b3c0, Thiscall, BitmapFontCache, fontWithConfigFile, char const*, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BitmapFontCache, init, )
 		}
 	};

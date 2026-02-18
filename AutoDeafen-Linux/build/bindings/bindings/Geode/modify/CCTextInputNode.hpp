@@ -65,11 +65,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addTextArea) 
 	#endif
 
-	#ifndef GEODE_STATICS_forceOffset
-		#define GEODE_STATICS_forceOffset
-		GEODE_AS_STATIC_FUNCTION(forceOffset) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -186,14 +181,14 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(forceOffset) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_getTextLabel
-		#define GEODE_CONCEPT_CHECK_getTextLabel
-		GEODE_CONCEPT_FUNCTION_CHECK(getTextLabel) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_getString
 		#define GEODE_CONCEPT_CHECK_getString
 		GEODE_CONCEPT_FUNCTION_CHECK(getString) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getTextLabel
+		#define GEODE_CONCEPT_CHECK_getTextLabel
+		GEODE_CONCEPT_FUNCTION_CHECK(getTextLabel) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_init
@@ -285,28 +280,28 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4f0f0, Default, CCTextInputNode, create, float, float, char const*, char const*, int, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCTextInputNode, create, float, float, char const*, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCTextInputNode, create, float, float, char const*, int, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4f730, Thiscall, CCTextInputNode, visit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x512c0, Thiscall, CCTextInputNode, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4f160, Default, CCTextInputNode, create, float, float, char const*, char const*, int, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4f7a0, Thiscall, CCTextInputNode, visit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x51330, Thiscall, CCTextInputNode, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCTextInputNode, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCTextInputNode, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCTextInputNode, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x514d0, Thiscall, CCTextInputNode, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x50410, Thiscall, CCTextInputNode, textChanged, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x503f0, Thiscall, CCTextInputNode, onClickTrackNode, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x50210, Thiscall, CCTextInputNode, keyboardWillShow, cocos2d::CCIMEKeyboardNotificationInfo&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x50370, Thiscall, CCTextInputNode, keyboardWillHide, cocos2d::CCIMEKeyboardNotificationInfo&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x504a0, Thiscall, CCTextInputNode, onTextFieldInsertText, cocos2d::CCTextFieldTTF*, char const*, int, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x50880, Thiscall, CCTextInputNode, onTextFieldAttachWithIME, cocos2d::CCTextFieldTTF*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x50bb0, Thiscall, CCTextInputNode, onTextFieldDetachWithIME, cocos2d::CCTextFieldTTF*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4f540, Thiscall, CCTextInputNode, addTextArea, TextArea*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCTextInputNode, forceOffset, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCTextInputNode, getTextLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x51540, Thiscall, CCTextInputNode, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x50480, Thiscall, CCTextInputNode, textChanged, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x50460, Thiscall, CCTextInputNode, onClickTrackNode, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x50280, Thiscall, CCTextInputNode, keyboardWillShow, cocos2d::CCIMEKeyboardNotificationInfo&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x503e0, Thiscall, CCTextInputNode, keyboardWillHide, cocos2d::CCIMEKeyboardNotificationInfo&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x50510, Thiscall, CCTextInputNode, onTextFieldInsertText, cocos2d::CCTextFieldTTF*, char const*, int, cocos2d::enumKeyCodes)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x508f0, Thiscall, CCTextInputNode, onTextFieldAttachWithIME, cocos2d::CCTextFieldTTF*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x50c20, Thiscall, CCTextInputNode, onTextFieldDetachWithIME, cocos2d::CCTextFieldTTF*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4f5b0, Thiscall, CCTextInputNode, addTextArea, TextArea*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCTextInputNode, forceOffset, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCTextInputNode, getString, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4f300, Thiscall, CCTextInputNode, init, float, float, char const*, char const*, int, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4fb40, Thiscall, CCTextInputNode, refreshLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCTextInputNode, getTextLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4f370, Thiscall, CCTextInputNode, init, float, float, char const*, char const*, int, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4fbb0, Thiscall, CCTextInputNode, refreshLabel, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCTextInputNode, setAllowedChars, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCTextInputNode, setDelegate, TextInputDelegate*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCTextInputNode, setLabelNormalColor, cocos2d::ccColor3B)
@@ -315,12 +310,12 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCTextInputNode, setMaxLabelLength, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCTextInputNode, setMaxLabelScale, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCTextInputNode, setMaxLabelWidth, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4f7a0, Thiscall, CCTextInputNode, setString, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4f810, Thiscall, CCTextInputNode, setString, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCTextInputNode, updateBlinkLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4fe20, Thiscall, CCTextInputNode, updateBlinkLabelToChar, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x50d60, Thiscall, CCTextInputNode, updateCursorPosition, cocos2d::CCPoint, cocos2d::CCRect)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4f630, Thiscall, CCTextInputNode, updateDefaultFontValues, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4f840, Thiscall, CCTextInputNode, updateLabel, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4fe90, Thiscall, CCTextInputNode, updateBlinkLabelToChar, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x50dd0, Thiscall, CCTextInputNode, updateCursorPosition, cocos2d::CCPoint, cocos2d::CCRect)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4f6a0, Thiscall, CCTextInputNode, updateDefaultFontValues, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4f8b0, Thiscall, CCTextInputNode, updateLabel, gd::string)
 		}
 	};
 }

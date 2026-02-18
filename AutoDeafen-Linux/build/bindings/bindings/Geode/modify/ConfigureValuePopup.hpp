@@ -30,6 +30,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
+	#ifndef GEODE_STATICS_onArrow
+		#define GEODE_STATICS_onArrow
+		GEODE_AS_STATIC_FUNCTION(onArrow) 
+	#endif
+
 	#ifndef GEODE_STATICS_onClose
 		#define GEODE_STATICS_onClose
 		GEODE_AS_STATIC_FUNCTION(onClose) 
@@ -66,9 +71,19 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(textChanged) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_addInfoAlertButton
+		#define GEODE_CONCEPT_CHECK_addInfoAlertButton
+		GEODE_CONCEPT_FUNCTION_CHECK(addInfoAlertButton) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_init
 		#define GEODE_CONCEPT_CHECK_init
 		GEODE_CONCEPT_FUNCTION_CHECK(init) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_onArrow
+		#define GEODE_CONCEPT_CHECK_onArrow
+		GEODE_CONCEPT_FUNCTION_CHECK(onArrow) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_onClose
@@ -95,14 +110,16 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x983a0, Default, ConfigureValuePopup, create, ConfigureValuePopupDelegate*, float, float, float, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x98fb0, Thiscall, ConfigureValuePopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b790, Thiscall, ConfigureValuePopup, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x98de0, Thiscall, ConfigureValuePopup, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x98550, Thiscall, ConfigureValuePopup, init, ConfigureValuePopupDelegate*, float, float, float, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x98f30, Thiscall, ConfigureValuePopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x98d00, Thiscall, ConfigureValuePopup, sliderChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x98d50, Thiscall, ConfigureValuePopup, updateTextInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x98460, Default, ConfigureValuePopup, create, ConfigureValuePopupDelegate*, float, float, float, gd::string, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x995e0, Thiscall, ConfigureValuePopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b850, Thiscall, ConfigureValuePopup, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x99350, Thiscall, ConfigureValuePopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ConfigureValuePopup, addInfoAlertButton, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x98640, Thiscall, ConfigureValuePopup, init, ConfigureValuePopupDelegate*, float, float, float, gd::string, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x990f0, Thiscall, ConfigureValuePopup, onArrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x99560, Thiscall, ConfigureValuePopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x990a0, Thiscall, ConfigureValuePopup, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x99160, Thiscall, ConfigureValuePopup, updateTextInputLabel, )
 		}
 	};
 }

@@ -41,8 +41,8 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ExtendedLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ec90, Thiscall, ExtendedLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ecb0, Thiscall, ExtendedLayer, setPosition, cocos2d::CCPoint const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ed00, Thiscall, ExtendedLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ed20, Thiscall, ExtendedLayer, setPosition, cocos2d::CCPoint const&)
 		}
 	};
 }

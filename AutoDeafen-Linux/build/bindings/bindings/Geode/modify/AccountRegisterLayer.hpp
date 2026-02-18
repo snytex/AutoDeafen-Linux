@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -80,11 +75,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(disableNodes) 
 	#endif
 
-	#ifndef GEODE_STATICS_hideLoadingUI
-		#define GEODE_STATICS_hideLoadingUI
-		GEODE_AS_STATIC_FUNCTION(hideLoadingUI) 
-	#endif
-
 	#ifndef GEODE_STATICS_onClose
 		#define GEODE_STATICS_onClose
 		GEODE_AS_STATIC_FUNCTION(onClose) 
@@ -100,16 +90,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(resetLabel) 
 	#endif
 
-	#ifndef GEODE_STATICS_resetLabels
-		#define GEODE_STATICS_resetLabels
-		GEODE_AS_STATIC_FUNCTION(resetLabels) 
-	#endif
-
-	#ifndef GEODE_STATICS_showLoadingUI
-		#define GEODE_STATICS_showLoadingUI
-		GEODE_AS_STATIC_FUNCTION(showLoadingUI) 
-	#endif
-
 	#ifndef GEODE_STATICS_toggleUI
 		#define GEODE_STATICS_toggleUI
 		GEODE_AS_STATIC_FUNCTION(toggleUI) 
@@ -123,16 +103,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_validEmail
 		#define GEODE_STATICS_validEmail
 		GEODE_AS_STATIC_FUNCTION(validEmail) 
-	#endif
-
-	#ifndef GEODE_STATICS_validPassword
-		#define GEODE_STATICS_validPassword
-		GEODE_AS_STATIC_FUNCTION(validPassword) 
-	#endif
-
-	#ifndef GEODE_STATICS_validUser
-		#define GEODE_STATICS_validUser
-		GEODE_AS_STATIC_FUNCTION(validUser) 
 	#endif
 
     
@@ -285,34 +255,34 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountRegisterLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x78a70, Thiscall, AccountRegisterLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, AccountRegisterLayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7abf0, Thiscall, AccountRegisterLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7a200, Thiscall, AccountRegisterLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountRegisterLayer, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x78aa0, Thiscall, AccountRegisterLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, AccountRegisterLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7ac30, Thiscall, AccountRegisterLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7a240, Thiscall, AccountRegisterLayer, FLAlert_Clicked, FLAlertLayer*, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountRegisterLayer, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7ad50, Thiscall, AccountRegisterLayer, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7ad90, Thiscall, AccountRegisterLayer, textInputClosed, CCTextInputNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountRegisterLayer, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b5c0, Thiscall, AccountRegisterLayer, textInputShouldOffset, CCTextInputNode*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b620, Thiscall, AccountRegisterLayer, textInputReturn, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b670, Thiscall, AccountRegisterLayer, allowTextInput, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x79c90, Thiscall, AccountRegisterLayer, registerAccountFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x79eb0, Thiscall, AccountRegisterLayer, registerAccountFailed, AccountError)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountRegisterLayer, createTextBackground, cocos2d::CCPoint, cocos2d::CCSize)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountRegisterLayer, createTextInput, cocos2d::CCPoint, cocos2d::CCSize, gd::string, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountRegisterLayer, createTextLabel, cocos2d::CCPoint, gd::string, cocos2d::CCSize)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountRegisterLayer, disableNodes, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountRegisterLayer, hideLoadingUI, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountRegisterLayer, onClose, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountRegisterLayer, onSubmit, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountRegisterLayer, resetLabel, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountRegisterLayer, resetLabels, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountRegisterLayer, showLoadingUI, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountRegisterLayer, toggleUI, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountRegisterLayer, updateLabel, AccountError)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountRegisterLayer, validEmail, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountRegisterLayer, validPassword, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountRegisterLayer, validUser, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b600, Thiscall, AccountRegisterLayer, textInputShouldOffset, CCTextInputNode*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b660, Thiscall, AccountRegisterLayer, textInputReturn, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b6b0, Thiscall, AccountRegisterLayer, allowTextInput, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x79cd0, Thiscall, AccountRegisterLayer, registerAccountFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x79ef0, Thiscall, AccountRegisterLayer, registerAccountFailed, AccountError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x799d0, Thiscall, AccountRegisterLayer, createTextBackground, cocos2d::CCPoint, cocos2d::CCSize)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x79ba0, Thiscall, AccountRegisterLayer, createTextInput, cocos2d::CCPoint, cocos2d::CCSize, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x79a90, Thiscall, AccountRegisterLayer, createTextLabel, cocos2d::CCPoint, gd::string, cocos2d::CCSize)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7ac70, Thiscall, AccountRegisterLayer, disableNodes, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountRegisterLayer, hideLoadingUI, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7ac00, Thiscall, AccountRegisterLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7a290, Thiscall, AccountRegisterLayer, onSubmit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7a130, Thiscall, AccountRegisterLayer, resetLabel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountRegisterLayer, resetLabels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountRegisterLayer, showLoadingUI, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7ace0, Thiscall, AccountRegisterLayer, toggleUI, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x79f30, Thiscall, AccountRegisterLayer, updateLabel, AccountError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b6c0, Thiscall, AccountRegisterLayer, validEmail, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountRegisterLayer, validPassword, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountRegisterLayer, validUser, gd::string)
 		}
 	};
 }

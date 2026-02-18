@@ -15,34 +15,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(stateChanged) 
 	#endif
 
-	#ifndef GEODE_STATICS_applyArtistFilters
-		#define GEODE_STATICS_applyArtistFilters
-		GEODE_AS_STATIC_FUNCTION(applyArtistFilters) 
-	#endif
-
 	#ifndef GEODE_STATICS_applyTagFilters
 		#define GEODE_STATICS_applyTagFilters
 		GEODE_AS_STATIC_FUNCTION(applyTagFilters) 
 	#endif
 
-	#ifndef GEODE_STATICS_createArtistFilterObjects
-		#define GEODE_STATICS_createArtistFilterObjects
-		GEODE_AS_STATIC_FUNCTION(createArtistFilterObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_createTagFilterObjects
-		#define GEODE_STATICS_createTagFilterObjects
-		GEODE_AS_STATIC_FUNCTION(createTagFilterObjects) 
-	#endif
-
 	#ifndef GEODE_STATICS_getFilesMatchingSearch
 		#define GEODE_STATICS_getFilesMatchingSearch
 		GEODE_AS_STATIC_FUNCTION(getFilesMatchingSearch) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateFutureCount
-		#define GEODE_STATICS_updateFutureCount
-		GEODE_AS_STATIC_FUNCTION(updateFutureCount) 
 	#endif
 
     
@@ -105,17 +85,17 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x326990, Thiscall, MusicSearchResult, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x33b880, Thiscall, MusicSearchResult, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicSearchResult, create, GJSongType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x331610, Thiscall, MusicSearchResult, updateObjects, AudioSortType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x331600, Thiscall, MusicSearchResult, stateChanged, OptionsObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicSearchResult, applyArtistFilters, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x331530, Thiscall, MusicSearchResult, applyTagFilters, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicSearchResult, createArtistFilterObjects, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicSearchResult, createTagFilterObjects, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x331b60, Thiscall, MusicSearchResult, getFilesMatchingSearch, cocos2d::CCArray*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x347330, Thiscall, MusicSearchResult, updateObjects, AudioSortType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x347320, Thiscall, MusicSearchResult, stateChanged, OptionsObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicSearchResult, applyArtistFilters, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x347250, Thiscall, MusicSearchResult, applyTagFilters, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicSearchResult, createArtistFilterObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicSearchResult, createTagFilterObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x347880, Thiscall, MusicSearchResult, getFilesMatchingSearch, cocos2d::CCArray*, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicSearchResult, init, GJSongType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicSearchResult, updateFutureCount, cocos2d::CCArray*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicSearchResult, updateFutureCount, cocos2d::CCArray*, cocos2d::CCArray*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicSearchResult, updateObjects, )
 		}
 	};

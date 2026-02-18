@@ -10,11 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(animateValue) 
 	#endif
 
-	#ifndef GEODE_STATICS_getValue
-		#define GEODE_STATICS_getValue
-		GEODE_AS_STATIC_FUNCTION(getValue) 
-	#endif
-
 	#ifndef GEODE_STATICS_loadTransitions
 		#define GEODE_STATICS_loadTransitions
 		GEODE_AS_STATIC_FUNCTION(loadTransitions) 
@@ -75,12 +70,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1378e0, Thiscall, EnterEffectInstance, animateValue, int, float, float, float, int, float, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EnterEffectInstance, getValue, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136d00, Thiscall, EnterEffectInstance, loadTransitions, EnterEffectObject*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136b60, Thiscall, EnterEffectInstance, loadValuesFromObject, EnterEffectObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x137d00, Thiscall, EnterEffectInstance, setValue, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x137ad0, Thiscall, EnterEffectInstance, updateTransitions, float, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x2042f0, Thiscall, EnterEffectInstance, EnterEffectObject*, int, int, int, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x139520, Thiscall, EnterEffectInstance, animateValue, int, float, float, float, int, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EnterEffectInstance, getValue, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x138940, Thiscall, EnterEffectInstance, loadTransitions, EnterEffectObject*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1387a0, Thiscall, EnterEffectInstance, loadValuesFromObject, EnterEffectObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x139940, Thiscall, EnterEffectInstance, setValue, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x139710, Thiscall, EnterEffectInstance, updateTransitions, float, GJBaseGameLayer*)
 		}
 	};
 }

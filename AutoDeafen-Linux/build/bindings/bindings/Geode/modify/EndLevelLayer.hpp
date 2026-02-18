@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_keyBackClicked
 		#define GEODE_STATICS_keyBackClicked
 		GEODE_AS_STATIC_FUNCTION(keyBackClicked) 
@@ -65,19 +60,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(goEdit) 
 	#endif
 
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
 	#ifndef GEODE_STATICS_onEdit
 		#define GEODE_STATICS_onEdit
 		GEODE_AS_STATIC_FUNCTION(onEdit) 
-	#endif
-
-	#ifndef GEODE_STATICS_onEveryplay
-		#define GEODE_STATICS_onEveryplay
-		GEODE_AS_STATIC_FUNCTION(onEveryplay) 
 	#endif
 
 	#ifndef GEODE_STATICS_onHideLayer
@@ -295,34 +280,34 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EndLevelLayer, create, PlayLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x133aa0, Thiscall, EndLevelLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x135140, Thiscall, EndLevelLayer, keyDown, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x131260, Thiscall, EndLevelLayer, customSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x133070, Thiscall, EndLevelLayer, showLayer, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EndLevelLayer, create, PlayLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1356d0, Thiscall, EndLevelLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136d70, Thiscall, EndLevelLayer, keyDown, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x132e50, Thiscall, EndLevelLayer, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x134ca0, Thiscall, EndLevelLayer, showLayer, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EndLevelLayer, enterAnimFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EndLevelLayer, keyUp, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x134230, Thiscall, EndLevelLayer, coinEnterFinished, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1341f0, Thiscall, EndLevelLayer, coinEnterFinishedO, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EndLevelLayer, currencyEnterFinished, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EndLevelLayer, diamondEnterFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x132d30, Thiscall, EndLevelLayer, getCoinString, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x135190, Thiscall, EndLevelLayer, getEndText, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1336e0, Thiscall, EndLevelLayer, goEdit, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EndLevelLayer, init, PlayLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1335e0, Thiscall, EndLevelLayer, onEdit, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EndLevelLayer, onEveryplay, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1337b0, Thiscall, EndLevelLayer, onHideLayer, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x132c30, Thiscall, EndLevelLayer, onLevelLeaderboard, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x133460, Thiscall, EndLevelLayer, onMenu, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x133250, Thiscall, EndLevelLayer, onReplay, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x133890, Thiscall, EndLevelLayer, onRestartCheckpoint, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x133fb0, Thiscall, EndLevelLayer, playCoinEffect, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x134560, Thiscall, EndLevelLayer, playCurrencyEffect, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1349f0, Thiscall, EndLevelLayer, playDiamondEffect, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x134e80, Thiscall, EndLevelLayer, playEndEffect, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x133ab0, Thiscall, EndLevelLayer, playStarEffect, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x133e50, Thiscall, EndLevelLayer, starEnterFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EndLevelLayer, keyUp, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x135e60, Thiscall, EndLevelLayer, coinEnterFinished, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x135e20, Thiscall, EndLevelLayer, coinEnterFinishedO, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136510, Thiscall, EndLevelLayer, currencyEnterFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1369a0, Thiscall, EndLevelLayer, diamondEnterFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x134960, Thiscall, EndLevelLayer, getCoinString, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136dc0, Thiscall, EndLevelLayer, getEndText, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x135310, Thiscall, EndLevelLayer, goEdit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EndLevelLayer, init, PlayLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x135210, Thiscall, EndLevelLayer, onEdit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EndLevelLayer, onEveryplay, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1353e0, Thiscall, EndLevelLayer, onHideLayer, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x134860, Thiscall, EndLevelLayer, onLevelLeaderboard, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x135090, Thiscall, EndLevelLayer, onMenu, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x134e80, Thiscall, EndLevelLayer, onReplay, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1354c0, Thiscall, EndLevelLayer, onRestartCheckpoint, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x135be0, Thiscall, EndLevelLayer, playCoinEffect, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136190, Thiscall, EndLevelLayer, playCurrencyEffect, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136620, Thiscall, EndLevelLayer, playDiamondEffect, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136ab0, Thiscall, EndLevelLayer, playEndEffect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1356e0, Thiscall, EndLevelLayer, playStarEffect, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x135a80, Thiscall, EndLevelLayer, starEnterFinished, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EndLevelLayer, tryShowBanner, float)
 		}
 	};

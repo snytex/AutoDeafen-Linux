@@ -14,14 +14,20 @@ public:
     static constexpr auto CLASS_NAME = "UIButtonConfig";
 
     /**
-     * @note[short] Windows: 0x1779e0
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: 0x17a9f0
+     * @note[short] iOS: 0x31b24c
+     * @note[short] Android: Out of line
      */
     void reset();
 
     /**
-     * @note[short] Windows: 0x177a50
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: 0x17aa60
+     * @note[short] iOS: 0x31b2c4
+     * @note[short] Android: Out of line
      */
     void resetOneBtn();
     int m_width;

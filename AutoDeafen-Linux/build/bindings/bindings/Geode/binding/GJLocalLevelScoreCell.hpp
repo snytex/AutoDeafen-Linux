@@ -16,39 +16,48 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(GJLocalLevelScoreCell, TableViewCell)
 
     /**
+     * @note[short] MacOS (ARM): 0x1fb8cc
+     * @note[short] MacOS (Intel): 0x255bd0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-     GJLocalLevelScoreCell(char const* p0, float p1, float p2);
+     GJLocalLevelScoreCell(char const* identifier, float width, float height);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f2cec
-     * @note[short] MacOS (Intel): 0x243bf0
-     * @note[short] Windows: 0x3c7f0
-     * @note[short] iOS: 0x113f6c
+     * @note[short] MacOS (ARM): 0x1fb910
+     * @note[short] MacOS (Intel): 0x255c40
+     * @note[short] Windows: 0x3c830
+     * @note[short] iOS: 0x111300
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x1f2cf8
-     * @note[short] MacOS (Intel): 0x243c10
-     * @note[short] Windows: 0xad710
-     * @note[short] iOS: 0x113f78
+     * @note[short] MacOS (ARM): 0x1fb91c
+     * @note[short] MacOS (Intel): 0x255c60
+     * @note[short] Windows: 0xade20
+     * @note[short] iOS: 0x11130c
      * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): 0x1e96ac
-     * @note[short] MacOS (Intel): 0x239740
-     * @note[short] Windows: 0xb8fd0
+     * @note[short] MacOS (ARM): 0x1f22a8
+     * @note[short] MacOS (Intel): 0x24b700
+     * @note[short] Windows: 0xb9ca0
+     * @note[short] iOS: 0x109540
      * @note[short] Android
      */
-    void loadFromScore(GJLocalScore* p0);
+    void loadFromScore(GJLocalScore* score);
 
     /**
+     * @note[short] MacOS (ARM): 0x1f251c
+     * @note[short] MacOS (Intel): 0x24b930
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x109794
      * @note[short] Android
      */
-    void updateBGColor(int p0);
+    void updateBGColor(int index);
     GJLocalScore* m_localScore;
 };

@@ -16,41 +16,58 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(TimerTriggerGameObject, EffectGameObject)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static TimerTriggerGameObject* create(char const* p0);
+     TimerTriggerGameObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x18bdc8
-     * @note[short] MacOS (Intel): 0x1d1230
-     * @note[short] Windows: 0x4a6690
-     * @note[short] iOS: 0x38cf2c
+     * @note[short] MacOS (ARM): 0x194540
+     * @note[short] MacOS (Intel): 0x1e2d30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3940a8
+     * @note[short] Android
+     */
+    static TimerTriggerGameObject* create(char const* frame);
+
+    /**
+     * @note[short] MacOS (ARM): 0x194668
+     * @note[short] MacOS (Intel): 0x1e2e60
+     * @note[short] Windows: 0x4bf1e0
+     * @note[short] iOS: 0x39417c
      * @note[short] Android: Rebinded
      */
-    virtual void triggerObject(GJBaseGameLayer* p0, int p1, gd::vector<int> const* p2);
+    virtual void triggerObject(GJBaseGameLayer* layer, int uniqueID, gd::vector<int> const* remapKeys);
 
     /**
-     * @note[short] MacOS (ARM): 0x18d660
-     * @note[short] MacOS (Intel): 0x1d3110
-     * @note[short] Windows: 0x4a6e70
-     * @note[short] iOS: 0x38d63c
+     * @note[short] MacOS (ARM): 0x195ea8
+     * @note[short] MacOS (Intel): 0x1e4d80
+     * @note[short] Windows: 0x4bf9c0
+     * @note[short] iOS: 0x3948a0
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x18bed0
-     * @note[short] MacOS (Intel): 0x1d1340
-     * @note[short] Windows: 0x4a67a0
-     * @note[short] iOS: 0x38cfdc
+     * @note[short] MacOS (ARM): 0x194760
+     * @note[short] MacOS (Intel): 0x1e2f60
+     * @note[short] Windows: 0x4bf2f0
+     * @note[short] iOS: 0x39422c
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
+     * @note[short] MacOS (ARM): 0x194620
+     * @note[short] MacOS (Intel): 0x1e2e10
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(char const* p0);
+    bool init(char const* frame);
     double m_startTime;
     double m_targetTime;
     bool m_stopTimeEnabled;

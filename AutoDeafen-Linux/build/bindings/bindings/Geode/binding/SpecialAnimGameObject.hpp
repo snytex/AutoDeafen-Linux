@@ -16,68 +16,85 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SpecialAnimGameObject, EnhancedGameObject)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static SpecialAnimGameObject* create(char const* p0);
+     SpecialAnimGameObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x165528
-     * @note[short] MacOS (Intel): 0x1a2cd0
-     * @note[short] Windows: 0x489380
-     * @note[short] iOS: 0x37b1ac
+     * @note[short] MacOS (ARM): 0x16dcf8
+     * @note[short] MacOS (Intel): 0x1b39c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x382250
+     * @note[short] Android
+     */
+    static SpecialAnimGameObject* create(char const* frame);
+
+    /**
+     * @note[short] MacOS (ARM): 0x16de3c
+     * @note[short] MacOS (Intel): 0x1b3b40
+     * @note[short] Windows: 0x4a1a60
+     * @note[short] iOS: 0x38230c
      * @note[short] Android
      */
     virtual void resetObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x165534
-     * @note[short] MacOS (Intel): 0x1a2cf0
-     * @note[short] Windows: 0x489390
-     * @note[short] iOS: 0x37b1b8
+     * @note[short] MacOS (ARM): 0x16de48
+     * @note[short] MacOS (Intel): 0x1b3b60
+     * @note[short] Windows: 0x4a1a70
+     * @note[short] iOS: 0x382318
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x165594
-     * @note[short] MacOS (Intel): 0x1a2d50
-     * @note[short] Windows: 0x489400
-     * @note[short] iOS: 0x37b218
+     * @note[short] MacOS (ARM): 0x16dea8
+     * @note[short] MacOS (Intel): 0x1b3bc0
+     * @note[short] Windows: 0x4a1ae0
+     * @note[short] iOS: 0x382378
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x165508
-     * @note[short] MacOS (Intel): 0x1a2c90
-     * @note[short] Windows: 0x489340
-     * @note[short] iOS: 0x37b18c
+     * @note[short] MacOS (ARM): 0x16de1c
+     * @note[short] MacOS (Intel): 0x1b3b00
+     * @note[short] Windows: 0x4a1a20
+     * @note[short] iOS: 0x3822ec
      * @note[short] Android
      */
-    virtual void updateMainColor(cocos2d::ccColor3B const& p0);
+    virtual void updateMainColor(cocos2d::ccColor3B const& color);
 
     /**
-     * @note[short] MacOS (ARM): 0x165518
-     * @note[short] MacOS (Intel): 0x1a2cb0
-     * @note[short] Windows: 0x489360
-     * @note[short] iOS: 0x37b19c
+     * @note[short] MacOS (ARM): 0x16de2c
+     * @note[short] MacOS (Intel): 0x1b3b20
+     * @note[short] Windows: 0x4a1a40
+     * @note[short] iOS: 0x3822fc
      * @note[short] Android
      */
-    virtual void updateSecondaryColor(cocos2d::ccColor3B const& p0);
+    virtual void updateSecondaryColor(cocos2d::ccColor3B const& color);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f8eac
-     * @note[short] MacOS (Intel): 0x24b7d0
-     * @note[short] Windows: 0x1a69c0
-     * @note[short] iOS: 0x3487cc
+     * @note[short] MacOS (ARM): 0x201acc
+     * @note[short] MacOS (Intel): 0x25d7a0
+     * @note[short] Windows: 0x1a9940
+     * @note[short] iOS: 0x348dd0
      * @note[short] Android
      */
-    virtual void updateSyncedAnimation(float p0, int p1);
+    virtual void updateSyncedAnimation(float totalTime, int frameIndex);
 
     /**
+     * @note[short] MacOS (ARM): 0x16ddf4
+     * @note[short] MacOS (Intel): 0x1b3ae0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(char const* p0);
+    bool init(char const* frame);
     bool m_skipMainColorUpdate;
     bool m_skipSecondaryColorUpdate;
 };

@@ -16,53 +16,73 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupAreaAnimTriggerPopup, SetupAreaTintTriggerPopup)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static SetupAreaAnimTriggerPopup* create(EnterEffectObject* p0, cocos2d::CCArray* p1, int p2);
+     SetupAreaAnimTriggerPopup();
 
     /**
-     * @note[short] MacOS (ARM): 0x42e564
-     * @note[short] MacOS (Intel): 0x4c8dd0
-     * @note[short] Windows: 0x3fab00
-     * @note[short] iOS: 0x3e8ec
+     * @note[short] MacOS (ARM): 0x436d74
+     * @note[short] MacOS (Intel): 0x4da270
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x38c38
+     * @note[short] Android
+     */
+    static SetupAreaAnimTriggerPopup* create(EnterEffectObject* object, cocos2d::CCArray* objects, int id);
+
+    /**
+     * @note[short] MacOS (ARM): 0x43898c
+     * @note[short] MacOS (Intel): 0x4dc240
+     * @note[short] Windows: 0x4127c0
+     * @note[short] iOS: 0x3a6d8
      * @note[short] Android
      */
     virtual void updateDefaultTriggerValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x42e720
-     * @note[short] MacOS (Intel): 0x4c8f70
-     * @note[short] Windows: 0x3facd0
-     * @note[short] iOS: 0x3ea50
+     * @note[short] MacOS (ARM): 0x438b48
+     * @note[short] MacOS (Intel): 0x4dc3e0
+     * @note[short] Windows: 0x412990
+     * @note[short] iOS: 0x3a844
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] Windows: 0x3fa910
+     * @note[short] MacOS (ARM): 0x4386e0
+     * @note[short] MacOS (Intel): 0x4dbfe0
+     * @note[short] Windows: 0x4125d0
+     * @note[short] iOS: 0x3a444
      * @note[short] Android: Rebinded
      */
-    void createValueControlAdvancedAnim(int p0, gd::string p1, cocos2d::CCPoint p2, float p3, bool p4, InputValueType p5, int p6, bool p7, float min, float max, int p10, int p11, GJInputStyle p12);
+    void createValueControlAdvancedAnim(int property, gd::string label, cocos2d::CCPoint position, float scale, bool noSlider, InputValueType valueType, int length, bool arrows, float min, float max, int page, int group, GJInputStyle inputStyle);
 
     /**
-     * @note[short] MacOS (ARM): 0x42cb08
-     * @note[short] MacOS (Intel): 0x4c6f90
-     * @note[short] Windows: 0x3f91a0
+     * @note[short] MacOS (ARM): 0x436f18
+     * @note[short] MacOS (Intel): 0x4da4d0
+     * @note[short] Windows: 0x410e60
+     * @note[short] iOS: 0x38d20
      * @note[short] Android
      */
-    bool init(EnterEffectObject* p0, cocos2d::CCArray* p1, int p2);
+    bool init(EnterEffectObject* object, cocos2d::CCArray* objects, int id);
 
     /**
-     * @note[short] Windows: 0x3fac60
+     * @note[short] MacOS (ARM): 0x4388e0
+     * @note[short] MacOS (Intel): 0x4dc1c0
+     * @note[short] Windows: 0x412920
+     * @note[short] iOS: 0x3a640
      * @note[short] Android
      */
     void onDeactivateAnimValue(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x42e6ac
-     * @note[short] MacOS (Intel): 0x4c8f00
-     * @note[short] Windows: 0x3fabe0
-     * @note[short] iOS: 0x3e9dc
+     * @note[short] MacOS (ARM): 0x438ad4
+     * @note[short] MacOS (Intel): 0x4dc370
+     * @note[short] Windows: 0x4128a0
+     * @note[short] iOS: 0x3a7d0
      * @note[short] Android
      */
     void updateTargetIDLabel();

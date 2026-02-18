@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void dailyStatusFinished(GJTimedLevelType p0);
+    virtual void dailyStatusFinished(GJTimedLevelType type);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,5 +29,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void dailyStatusFailed(GJTimedLevelType p0, GJErrorCode p1);
+    virtual void dailyStatusFailed(GJTimedLevelType type, GJErrorCode errorType);
 };

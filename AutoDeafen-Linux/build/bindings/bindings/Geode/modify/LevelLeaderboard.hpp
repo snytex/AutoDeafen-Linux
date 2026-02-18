@@ -50,11 +50,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateUserScoreFailed) 
 	#endif
 
-	#ifndef GEODE_STATICS_deleteLocalScores
-		#define GEODE_STATICS_deleteLocalScores
-		GEODE_AS_STATIC_FUNCTION(deleteLocalScores) 
-	#endif
-
 	#ifndef GEODE_STATICS_getLocalScores
 		#define GEODE_STATICS_getLocalScores
 		GEODE_AS_STATIC_FUNCTION(getLocalScores) 
@@ -235,28 +230,28 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ebf80, Default, LevelLeaderboard, create, GJGameLevel*, LevelLeaderboardType, LevelLeaderboardMode)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, LevelLeaderboard, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, LevelLeaderboard, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867a0, Thiscall, LevelLeaderboard, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ee140, Thiscall, LevelLeaderboard, loadLeaderboardFinished, cocos2d::CCArray*, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ee1e0, Thiscall, LevelLeaderboard, loadLeaderboardFailed, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ed570, Thiscall, LevelLeaderboard, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2edb90, Thiscall, LevelLeaderboard, updateUserScoreFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2edba0, Thiscall, LevelLeaderboard, updateUserScoreFailed, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelLeaderboard, deleteLocalScores, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelLeaderboard, getLocalScores, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelLeaderboard, getSpriteButton, gd::string, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*, float, cocos2d::CCPoint, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ec0c0, Thiscall, LevelLeaderboard, init, GJGameLevel*, LevelLeaderboardType, LevelLeaderboardMode)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelLeaderboard, isCorrect, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2ed8c0, Thiscall, LevelLeaderboard, loadScores, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2edd40, Thiscall, LevelLeaderboard, onChangeMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2edca0, Thiscall, LevelLeaderboard, onChangeType, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84620, Thiscall, LevelLeaderboard, onClose, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelLeaderboard, onDeleteLocalScores, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2eddc0, Thiscall, LevelLeaderboard, onUpdate, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelLeaderboard, reloadLeaderboard, LevelLeaderboardType, LevelLeaderboardMode)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelLeaderboard, setupLeaderboard, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3009d0, Default, LevelLeaderboard, create, GJGameLevel*, LevelLeaderboardType, LevelLeaderboardMode)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, LevelLeaderboard, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, LevelLeaderboard, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867f0, Thiscall, LevelLeaderboard, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x302b90, Thiscall, LevelLeaderboard, loadLeaderboardFinished, cocos2d::CCArray*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x302c30, Thiscall, LevelLeaderboard, loadLeaderboardFailed, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x301fc0, Thiscall, LevelLeaderboard, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3025e0, Thiscall, LevelLeaderboard, updateUserScoreFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3025f0, Thiscall, LevelLeaderboard, updateUserScoreFailed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelLeaderboard, deleteLocalScores, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x302140, Thiscall, LevelLeaderboard, getLocalScores, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x301ca0, Thiscall, LevelLeaderboard, getSpriteButton, gd::string, cocos2d::SEL_MenuHandler, cocos2d::CCMenu*, float, cocos2d::CCPoint, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x300b10, Thiscall, LevelLeaderboard, init, GJGameLevel*, LevelLeaderboardType, LevelLeaderboardMode)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x302990, Thiscall, LevelLeaderboard, isCorrect, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x302310, Thiscall, LevelLeaderboard, loadScores, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x302790, Thiscall, LevelLeaderboard, onChangeMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3026f0, Thiscall, LevelLeaderboard, onChangeType, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, LevelLeaderboard, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x301e80, Thiscall, LevelLeaderboard, onDeleteLocalScores, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x302810, Thiscall, LevelLeaderboard, onUpdate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x302600, Thiscall, LevelLeaderboard, reloadLeaderboard, LevelLeaderboardType, LevelLeaderboardMode)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x302d40, Thiscall, LevelLeaderboard, setupLeaderboard, cocos2d::CCArray*)
 		}
 	};
 }

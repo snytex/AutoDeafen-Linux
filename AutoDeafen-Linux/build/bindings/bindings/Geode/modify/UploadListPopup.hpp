@@ -97,13 +97,13 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UploadListPopup, create, GJLevelList*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UploadListPopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f7220, Thiscall, UploadListPopup, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f6cc0, Thiscall, UploadListPopup, listUploadFinished, GJLevelList*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f6e90, Thiscall, UploadListPopup, listUploadFailed, GJLevelList*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f6780, Thiscall, UploadListPopup, init, GJLevelList*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f7280, Thiscall, UploadListPopup, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84620, Thiscall, UploadListPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f71d0, Thiscall, UploadListPopup, onReturnToList, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30bc70, Thiscall, UploadListPopup, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30b710, Thiscall, UploadListPopup, listUploadFinished, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30b8e0, Thiscall, UploadListPopup, listUploadFailed, GJLevelList*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30b1d0, Thiscall, UploadListPopup, init, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30bcd0, Thiscall, UploadListPopup, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, UploadListPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30bc20, Thiscall, UploadListPopup, onReturnToList, cocos2d::CCObject*)
 		}
 	};
 }

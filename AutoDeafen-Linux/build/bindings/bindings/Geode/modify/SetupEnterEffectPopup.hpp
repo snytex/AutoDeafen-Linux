@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_determineStartValues
 		#define GEODE_STATICS_determineStartValues
 		GEODE_AS_STATIC_FUNCTION(determineStartValues) 
@@ -165,21 +160,21 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupEnterEffectPopup, create, EnterEffectObject*, cocos2d::CCArray*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x408580, Thiscall, SetupEnterEffectPopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x408b60, Thiscall, SetupEnterEffectPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f63f0, Thiscall, SetupEnterEffectPopup, updateInputValue, int, float&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f63c0, Thiscall, SetupEnterEffectPopup, updateInputNode, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x408750, Thiscall, SetupEnterEffectPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f6360, Thiscall, SetupEnterEffectPopup, triggerValueFromSliderValue, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f6390, Thiscall, SetupEnterEffectPopup, triggerSliderValueFromValue, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x408a70, Thiscall, SetupEnterEffectPopup, hsvPopupClosed, HSVWidgetPopup*, cocos2d::ccHSVValue)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x406570, Thiscall, SetupEnterEffectPopup, init, EnterEffectObject*, cocos2d::CCArray*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x408910, Thiscall, SetupEnterEffectPopup, onEnterType, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4089f0, Thiscall, SetupEnterEffectPopup, onHSV, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4088a0, Thiscall, SetupEnterEffectPopup, onNextFreeEnterChannel, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f5d70, Thiscall, SetupEnterEffectPopup, onNextFreeEnterEffectID, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x408a90, Thiscall, SetupEnterEffectPopup, updateHSVButton, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupEnterEffectPopup, create, EnterEffectObject*, cocos2d::CCArray*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x420250, Thiscall, SetupEnterEffectPopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x420870, Thiscall, SetupEnterEffectPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40e0b0, Thiscall, SetupEnterEffectPopup, updateInputValue, int, float&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40e080, Thiscall, SetupEnterEffectPopup, updateInputNode, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x420420, Thiscall, SetupEnterEffectPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40e020, Thiscall, SetupEnterEffectPopup, triggerValueFromSliderValue, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40e050, Thiscall, SetupEnterEffectPopup, triggerSliderValueFromValue, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x420780, Thiscall, SetupEnterEffectPopup, hsvPopupClosed, HSVWidgetPopup*, cocos2d::ccHSVValue)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41e240, Thiscall, SetupEnterEffectPopup, init, EnterEffectObject*, cocos2d::CCArray*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x420620, Thiscall, SetupEnterEffectPopup, onEnterType, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x420700, Thiscall, SetupEnterEffectPopup, onHSV, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x420570, Thiscall, SetupEnterEffectPopup, onNextFreeEnterChannel, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40d9f0, Thiscall, SetupEnterEffectPopup, onNextFreeEnterEffectID, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4207a0, Thiscall, SetupEnterEffectPopup, updateHSVButton, )
 		}
 	};
 }

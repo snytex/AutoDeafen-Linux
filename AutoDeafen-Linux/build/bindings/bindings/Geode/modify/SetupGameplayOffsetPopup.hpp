@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateInputValue
 		#define GEODE_STATICS_updateInputValue
 		GEODE_AS_STATIC_FUNCTION(updateInputValue) 
@@ -95,14 +90,14 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupGameplayOffsetPopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42a630, Thiscall, SetupGameplayOffsetPopup, updateInputValue, int, float&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42a610, Thiscall, SetupGameplayOffsetPopup, updateInputNode, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42a5c0, Thiscall, SetupGameplayOffsetPopup, triggerValueFromSliderValue, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42a5f0, Thiscall, SetupGameplayOffsetPopup, triggerSliderValueFromValue, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42a510, Thiscall, SetupGameplayOffsetPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupGameplayOffsetPopup, init, EffectGameObject*, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupGameplayOffsetPopup, onDefaultValues, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupGameplayOffsetPopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x442940, Thiscall, SetupGameplayOffsetPopup, updateInputValue, int, float&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x442920, Thiscall, SetupGameplayOffsetPopup, updateInputNode, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4428d0, Thiscall, SetupGameplayOffsetPopup, triggerValueFromSliderValue, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x442900, Thiscall, SetupGameplayOffsetPopup, triggerSliderValueFromValue, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x442820, Thiscall, SetupGameplayOffsetPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x442040, Thiscall, SetupGameplayOffsetPopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x442770, Thiscall, SetupGameplayOffsetPopup, onDefaultValues, cocos2d::CCObject*)
 		}
 	};
 }

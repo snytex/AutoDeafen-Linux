@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void sortSelectClosed(SelectSFXSortLayer* p0);
+    virtual void sortSelectClosed(SelectSFXSortLayer* layer);
 };

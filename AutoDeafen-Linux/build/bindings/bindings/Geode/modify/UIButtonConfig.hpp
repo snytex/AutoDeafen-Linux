@@ -35,8 +35,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1779e0, Thiscall, UIButtonConfig, reset, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x177a50, Thiscall, UIButtonConfig, resetOneBtn, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17a9f0, Thiscall, UIButtonConfig, reset, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17aa60, Thiscall, UIButtonConfig, resetOneBtn, )
 		}
 	};
 }

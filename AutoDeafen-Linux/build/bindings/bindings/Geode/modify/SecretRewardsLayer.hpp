@@ -35,11 +35,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createSecondaryLayer) 
 	#endif
 
-	#ifndef GEODE_STATICS_fadeInMusic
-		#define GEODE_STATICS_fadeInMusic
-		GEODE_AS_STATIC_FUNCTION(fadeInMusic) 
-	#endif
-
 	#ifndef GEODE_STATICS_fadeInOutMusic
 		#define GEODE_STATICS_fadeInOutMusic
 		GEODE_AS_STATIC_FUNCTION(fadeInOutMusic) 
@@ -53,16 +48,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
-	#ifndef GEODE_STATICS_moveToMainLayer
-		#define GEODE_STATICS_moveToMainLayer
-		GEODE_AS_STATIC_FUNCTION(moveToMainLayer) 
-	#endif
-
-	#ifndef GEODE_STATICS_moveToSecondaryLayer
-		#define GEODE_STATICS_moveToSecondaryLayer
-		GEODE_AS_STATIC_FUNCTION(moveToSecondaryLayer) 
 	#endif
 
 	#ifndef GEODE_STATICS_onBack
@@ -316,37 +301,37 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretRewardsLayer, create, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bb1a0, Default, SecretRewardsLayer, scene, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c0aa0, Thiscall, SecretRewardsLayer, onExit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c0a90, Thiscall, SecretRewardsLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bf570, Thiscall, SecretRewardsLayer, dialogClosed, DialogLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bda10, Thiscall, SecretRewardsLayer, scrollLayerMoved, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bdf70, Thiscall, SecretRewardsLayer, createSecondaryLayer, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretRewardsLayer, fadeInMusic, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretRewardsLayer, fadeInOutMusic, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3be3c0, Thiscall, SecretRewardsLayer, generateChestItems, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d2510, Default, SecretRewardsLayer, scene, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d7e10, Thiscall, SecretRewardsLayer, onExit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d7e00, Thiscall, SecretRewardsLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d68e0, Thiscall, SecretRewardsLayer, dialogClosed, DialogLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d4d80, Thiscall, SecretRewardsLayer, scrollLayerMoved, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d52e0, Thiscall, SecretRewardsLayer, createSecondaryLayer, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretRewardsLayer, fadeInMusic, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d7a30, Thiscall, SecretRewardsLayer, fadeInOutMusic, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d5730, Thiscall, SecretRewardsLayer, generateChestItems, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretRewardsLayer, getPageColor, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretRewardsLayer, goToPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bb300, Thiscall, SecretRewardsLayer, init, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretRewardsLayer, moveToMainLayer, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretRewardsLayer, moveToSecondaryLayer, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c08b0, Thiscall, SecretRewardsLayer, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bdce0, Thiscall, SecretRewardsLayer, onChestType, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c0020, Thiscall, SecretRewardsLayer, onGoldChest, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bedd0, Thiscall, SecretRewardsLayer, onSelectItem, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bf360, Thiscall, SecretRewardsLayer, onShop, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bf760, Thiscall, SecretRewardsLayer, onSpecialItem, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bd950, Thiscall, SecretRewardsLayer, onSwitchPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c0ae0, Thiscall, SecretRewardsLayer, showDialog01, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretRewardsLayer, showDialog03, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c4980, Thiscall, SecretRewardsLayer, showDialogDiamond, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c36f0, Thiscall, SecretRewardsLayer, showDialogMechanic, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d2670, Thiscall, SecretRewardsLayer, init, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretRewardsLayer, moveToMainLayer, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretRewardsLayer, moveToSecondaryLayer, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d7c20, Thiscall, SecretRewardsLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d5050, Thiscall, SecretRewardsLayer, onChestType, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d7390, Thiscall, SecretRewardsLayer, onGoldChest, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d6140, Thiscall, SecretRewardsLayer, onSelectItem, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d66d0, Thiscall, SecretRewardsLayer, onShop, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d6ad0, Thiscall, SecretRewardsLayer, onSpecialItem, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d4cc0, Thiscall, SecretRewardsLayer, onSwitchPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d7e50, Thiscall, SecretRewardsLayer, showDialog01, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d9790, Thiscall, SecretRewardsLayer, showDialog03, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dbcf0, Thiscall, SecretRewardsLayer, showDialogDiamond, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3daa60, Thiscall, SecretRewardsLayer, showDialogMechanic, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretRewardsLayer, showLockedChest, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretRewardsLayer, showShop, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bfb80, Thiscall, SecretRewardsLayer, switchToOpenedState, CCMenuItemSpriteExtra*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bde30, Thiscall, SecretRewardsLayer, updateBackButton, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretRewardsLayer, updateUnlockedGoldLabel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretRewardsLayer, updateUnlockedLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d6ef0, Thiscall, SecretRewardsLayer, switchToOpenedState, CCMenuItemSpriteExtra*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d51a0, Thiscall, SecretRewardsLayer, updateBackButton, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d7aa0, Thiscall, SecretRewardsLayer, updateUnlockedGoldLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d6fd0, Thiscall, SecretRewardsLayer, updateUnlockedLabel, )
 		}
 	};
 }

@@ -45,11 +45,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getThreadMessage) 
 	#endif
 
-	#ifndef GEODE_STATICS_nodeWithTag
-		#define GEODE_STATICS_nodeWithTag
-		GEODE_AS_STATIC_FUNCTION(nodeWithTag) 
-	#endif
-
 	#ifndef GEODE_STATICS_onBack
 		#define GEODE_STATICS_onBack
 		GEODE_AS_STATIC_FUNCTION(onBack) 
@@ -63,11 +58,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_playCoinEffect
 		#define GEODE_STATICS_playCoinEffect
 		GEODE_AS_STATIC_FUNCTION(playCoinEffect) 
-	#endif
-
-	#ifndef GEODE_STATICS_selectAThread
-		#define GEODE_STATICS_selectAThread
-		GEODE_AS_STATIC_FUNCTION(selectAThread) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateMessageLabel
@@ -182,22 +172,22 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer, create, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer, scene, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c5700, Thiscall, SecretLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cabb0, Thiscall, SecretLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c84b0, Thiscall, SecretLayer, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c8600, Thiscall, SecretLayer, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c8600, Thiscall, SecretLayer, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dca70, Thiscall, SecretLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e1f20, Thiscall, SecretLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3df820, Thiscall, SecretLayer, textInputOpened, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3df970, Thiscall, SecretLayer, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3df970, Thiscall, SecretLayer, textChanged, CCTextInputNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c99b0, Thiscall, SecretLayer, getBasicMessage, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c8a50, Thiscall, SecretLayer, getMessage, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c8c40, Thiscall, SecretLayer, getThreadMessage, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer, nodeWithTag, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cab10, Thiscall, SecretLayer, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c6a40, Thiscall, SecretLayer, onSubmit, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ca690, Thiscall, SecretLayer, playCoinEffect, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer, selectAThread, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c89c0, Thiscall, SecretLayer, updateMessageLabel, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c86d0, Thiscall, SecretLayer, updateSearchLabel, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e0d20, Thiscall, SecretLayer, getBasicMessage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dfdc0, Thiscall, SecretLayer, getMessage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dffb0, Thiscall, SecretLayer, getThreadMessage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer, nodeWithTag, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e1e80, Thiscall, SecretLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dddb0, Thiscall, SecretLayer, onSubmit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e1a00, Thiscall, SecretLayer, playCoinEffect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer, selectAThread, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dfd30, Thiscall, SecretLayer, updateMessageLabel, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dfa40, Thiscall, SecretLayer, updateSearchLabel, char const*)
 		}
 	};
 }

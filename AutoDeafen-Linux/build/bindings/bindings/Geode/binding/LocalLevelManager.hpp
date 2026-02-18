@@ -14,144 +14,186 @@ class LocalLevelManager : public GManager {
 public:
     static constexpr auto CLASS_NAME = "LocalLevelManager";
     GEODE_CUSTOM_CONSTRUCTOR_GD(LocalLevelManager, GManager)
-	inline static LocalLevelManager* get() {
-        return LocalLevelManager::sharedState();
-    }
 
     /**
-     * @note[short] MacOS (ARM): 0x511bc0
-     * @note[short] MacOS (Intel): 0x5df020
-     * @note[short] Windows: 0x31b070
-     * @note[short] iOS: 0x1c92a8
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+    static LocalLevelManager* get();
+
+    /**
+     * @note[short] MacOS (ARM): 0x51f8e8
+     * @note[short] MacOS (Intel): 0x5f6810
+     * @note[short] Windows: 0x32ff30
+     * @note[short] iOS: 0x1c857c
      * @note[short] Android
      */
     static LocalLevelManager* sharedState();
 
     /**
-     * @note[short] MacOS (ARM): 0x511d40
-     * @note[short] MacOS (Intel): 0x5df1c0
-     * @note[short] Windows: 0x31b110
-     * @note[short] iOS: 0x1c93c8
+     * @note[short] MacOS (ARM): 0x51fa68
+     * @note[short] MacOS (Intel): 0x5f69b0
+     * @note[short] Windows: 0x32ffd0
+     * @note[short] iOS: 0x1c869c
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x512f54
-     * @note[short] MacOS (Intel): 0x5e0610
-     * @note[short] Windows: 0x31bae0
-     * @note[short] iOS: 0x1c9fd8
+     * @note[short] MacOS (ARM): 0x520c38
+     * @note[short] MacOS (Intel): 0x5f7df0
+     * @note[short] Windows: 0x3309a0
+     * @note[short] iOS: 0x1c92a4
      * @note[short] Android
      */
-    virtual void encodeDataTo(DS_Dictionary* p0);
+    virtual void encodeDataTo(DS_Dictionary* dict);
 
     /**
-     * @note[short] MacOS (ARM): 0x512fac
-     * @note[short] MacOS (Intel): 0x5e0670
-     * @note[short] Windows: 0x31bb40
-     * @note[short] iOS: 0x1ca030
+     * @note[short] MacOS (ARM): 0x520c90
+     * @note[short] MacOS (Intel): 0x5f7e50
+     * @note[short] Windows: 0x330a00
+     * @note[short] iOS: 0x1c92fc
      * @note[short] Android
      */
-    virtual void dataLoaded(DS_Dictionary* p0);
+    virtual void dataLoaded(DS_Dictionary* dict);
 
     /**
-     * @note[short] MacOS (ARM): 0x512ed8
-     * @note[short] MacOS (Intel): 0x5e0580
-     * @note[short] Windows: 0x31ba50
-     * @note[short] iOS: 0x1c9fa0
+     * @note[short] MacOS (ARM): 0x520bbc
+     * @note[short] MacOS (Intel): 0x5f7d60
+     * @note[short] Windows: 0x330910
+     * @note[short] iOS: 0x1c926c
      * @note[short] Android
      */
     virtual void firstLoad();
 
     /**
-     * @note[short] Windows: 0x31b4e0
+     * @note[short] MacOS (ARM): 0x5200e0
+     * @note[short] MacOS (Intel): 0x5f7180
+     * @note[short] Windows: 0x3303a0
+     * @note[short] iOS: 0x1c8a58
      * @note[short] Android
      */
     cocos2d::CCDictionary* getAllLevelsInDict();
 
     /**
+     * @note[short] MacOS (ARM): 0x5202cc
+     * @note[short] MacOS (Intel): 0x5f73b0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1c8b8c
      * @note[short] Android: Rebinded
      */
-    TodoReturn getAllLevelsWithName(gd::string p0);
+    cocos2d::CCArray* getAllLevelsWithName(gd::string name);
 
     /**
-     * @note[short] MacOS (ARM): 0x512cdc
-     * @note[short] MacOS (Intel): 0x5e0390
+     * @note[short] MacOS (ARM): 0x5209c0
+     * @note[short] MacOS (Intel): 0x5f7b70
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1c9dbc
+     * @note[short] iOS: 0x1c9088
      * @note[short] Android
      */
     cocos2d::CCArray* getCreatedLevels(int folder);
 
     /**
-     * @note[short] MacOS (ARM): 0x512e48
-     * @note[short] MacOS (Intel): 0x5e04f0
+     * @note[short] MacOS (ARM): 0x520b2c
+     * @note[short] MacOS (Intel): 0x5f7cd0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1c9f14
+     * @note[short] iOS: 0x1c91e0
      * @note[short] Android
      */
     cocos2d::CCArray* getCreatedLists(int folder);
 
     /**
+     * @note[short] MacOS (ARM): 0x51ff90
+     * @note[short] MacOS (Intel): 0x5f7000
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1c8910
      * @note[short] Android
      */
     cocos2d::CCDictionary* getLevelsInNameGroups();
 
     /**
-     * @note[short] MacOS (ARM): 0x512100
-     * @note[short] MacOS (Intel): 0x5df620
-     * @note[short] Windows: 0x31b3d0
-     * @note[short] iOS: 0x1c9594
+     * @note[short] MacOS (ARM): 0x51fe0c
+     * @note[short] MacOS (Intel): 0x5f6e00
+     * @note[short] Windows: 0x330290
+     * @note[short] iOS: 0x1c8868
      * @note[short] Android
      */
-    gd::string getMainLevelString(int p0);
+    gd::string getMainLevelString(int id);
 
     /**
+     * @note[short] MacOS (ARM): 0x520920
+     * @note[short] MacOS (Intel): 0x5f7ad0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1c8fe8
      * @note[short] Android
      */
-    TodoReturn markLevelsAsUnmodified();
+    void markLevelsAsUnmodified();
 
     /**
+     * @note[short] MacOS (ARM): 0x5207e0
+     * @note[short] MacOS (Intel): 0x5f7980
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1c8efc
      * @note[short] Android
      */
-    TodoReturn moveLevelToTop(GJGameLevel* p0);
+    void moveLevelToTop(GJGameLevel* level);
 
     /**
+     * @note[short] MacOS (ARM): 0x520970
+     * @note[short] MacOS (Intel): 0x5f7b20
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1c9038
      * @note[short] Android
      */
-    TodoReturn reorderLevels();
+    void reorderLevels();
 
     /**
-     * @note[short] iOS: 0x1c9ec4
+     * @note[short] MacOS (ARM): 0x520adc
+     * @note[short] MacOS (Intel): 0x5f7c80
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1c9190
      * @note[short] Android
      */
     void reorderLists();
 
     /**
-     * @note[short] MacOS (ARM): 0x511d80
-     * @note[short] MacOS (Intel): 0x5df200
+     * @note[short] MacOS (ARM): 0x51faa8
+     * @note[short] MacOS (Intel): 0x5f69f0
+     * @note[short] Windows: 0x330010
+     * @note[short] iOS: 0x1c86dc
      * @note[short] Android
      */
-    TodoReturn tryLoadMainLevelString(int p0);
+    void tryLoadMainLevelString(int id);
 
     /**
-     * @note[short] Windows: 0x31b9d0
+     * @note[short] MacOS (ARM): 0x520894
+     * @note[short] MacOS (Intel): 0x5f7a50
+     * @note[short] Windows: 0x330890
+     * @note[short] iOS: 0x1c8f6c
      * @note[short] Android
      */
-    TodoReturn updateLevelOrder();
+    int updateLevelOrder();
 
     /**
-     * @note[short] MacOS (ARM): 0x512700
-     * @note[short] MacOS (Intel): 0x5dfd20
-     * @note[short] Windows: 0x31b640
+     * @note[short] MacOS (ARM): 0x5203f4
+     * @note[short] MacOS (Intel): 0x5f7510
+     * @note[short] Windows: 0x330500
+     * @note[short] iOS: 0x1c8c6c
      * @note[short] Android
      */
-    TodoReturn updateLevelRevision();
+    void updateLevelRevision();
 
     /**
+     * @note[short] MacOS (ARM): 0x520a50
+     * @note[short] MacOS (Intel): 0x5f7c00
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1c9114
      * @note[short] Android
      */
-    TodoReturn updateListOrder();
+    int updateListOrder();
     cocos2d::CCArray* m_localLevels;
     cocos2d::CCArray* m_localLists;
     gd::unordered_map<int, gd::string> m_mainLevels;

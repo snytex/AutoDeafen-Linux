@@ -30,7 +30,7 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x93ec0, Default, CommunityCreditNode, create, int, int, int, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x93f80, Default, CommunityCreditNode, create, int, int, int, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CommunityCreditNode, init, int, int, int, gd::string)
 		}
 	};

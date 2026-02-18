@@ -35,8 +35,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449710, Default, SetupTimerTriggerPopup, create, TimerTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449820, Thiscall, SetupTimerTriggerPopup, init, TimerTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x461d20, Default, SetupTimerTriggerPopup, create, TimerTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x461e30, Thiscall, SetupTimerTriggerPopup, init, TimerTriggerGameObject*, cocos2d::CCArray*)
 		}
 	};
 }

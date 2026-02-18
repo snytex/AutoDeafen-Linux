@@ -16,131 +16,155 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(WorldSelectLayer, cocos2d::CCLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x33a7a4
-     * @note[short] MacOS (Intel): 0x3aed30
+     * @note[short] MacOS (ARM): 0x343550
+     * @note[short] MacOS (Intel): 0x3c1cc0
      * @note[short] Android
      */
-    static WorldSelectLayer* create(int p0);
+    static WorldSelectLayer* create(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x33a6c0
-     * @note[short] MacOS (Intel): 0x3aec20
+     * @note[short] MacOS (ARM): 0x34346c
+     * @note[short] MacOS (Intel): 0x3c1bb0
      * @note[short] Android
      */
-    static cocos2d::CCScene* scene(int p0);
+    static cocos2d::CCScene* scene(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x33c594
-     * @note[short] MacOS (Intel): 0x3b0b30
+     * @note[short] MacOS (ARM): 0x345320
+     * @note[short] MacOS (Intel): 0x3c3a70
      * @note[short] Android
      */
     virtual void onExit();
 
     /**
-     * @note[short] MacOS (ARM): 0x33c4b4
-     * @note[short] MacOS (Intel): 0x3b0a50
+     * @note[short] MacOS (ARM): 0x345250
+     * @note[short] MacOS (Intel): 0x3c39a0
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x33c36c
-     * @note[short] MacOS (Intel): 0x3b0960
+     * @note[short] MacOS (ARM): 0x345108
+     * @note[short] MacOS (Intel): 0x3c38b0
      * @note[short] Android
      */
-    virtual void scrollLayerWillScrollToPage(BoomScrollLayer* p0, int p1);
+    virtual void scrollLayerWillScrollToPage(BoomScrollLayer* layer, int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x33c224
-     * @note[short] MacOS (Intel): 0x3b0870
+     * @note[short] MacOS (ARM): 0x344fc0
+     * @note[short] MacOS (Intel): 0x3c37c0
      * @note[short] Android
      */
-    virtual void scrollLayerScrolledToPage(BoomScrollLayer* p0, int p1);
+    virtual void scrollLayerScrolledToPage(BoomScrollLayer* layer, int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x33c5e4
-     * @note[short] MacOS (Intel): 0x3b0b80
+     * @note[short] MacOS (ARM): 0x345374
+     * @note[short] MacOS (Intel): 0x3c3ac0
      * @note[short] Android
      */
-    virtual void scrollLayerMoved(cocos2d::CCPoint p0);
+    virtual void scrollLayerMoved(cocos2d::CCPoint position);
 
     /**
+     * @note[short] MacOS (ARM): 0x344314
+     * @note[short] MacOS (Intel): 0x3c2b30
      * @note[short] Android
      */
     void animateInActiveIsland();
 
     /**
+     * @note[short] MacOS (ARM): 0x345608
+     * @note[short] MacOS (Intel): 0x3c3d70
      * @note[short] Android
      */
-    cocos2d::ccColor3B colorForPage(int p0);
+    cocos2d::ccColor3B colorForPage(int page);
 
     /**
+     * @note[short] MacOS (ARM): 0x345514
+     * @note[short] MacOS (Intel): 0x3c3c60
      * @note[short] Android
      */
-    cocos2d::ccColor3B getColorValue(int p0, int p1, float p2);
+    cocos2d::ccColor3B getColorValue(int page1, int page2, float progress);
 
     /**
+     * @note[short] MacOS (ARM): 0x3443d8
+     * @note[short] MacOS (Intel): 0x3c2be0
      * @note[short] Android
      */
-    void goToPage(int p0, bool p1);
+    void goToPage(int page, bool instant);
 
     /**
-     * @note[short] MacOS (ARM): 0x33a868
-     * @note[short] MacOS (Intel): 0x3aee20
+     * @note[short] MacOS (ARM): 0x343614
+     * @note[short] MacOS (Intel): 0x3c1db0
      * @note[short] Android
      */
-    bool init(int p0);
+    bool init(int page);
 
     /**
+     * @note[short] MacOS (ARM): 0x343e70
+     * @note[short] MacOS (Intel): 0x3c2640
      * @note[short] Android
      */
     void onBack(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x344f5c
+     * @note[short] MacOS (Intel): 0x3c3760
      * @note[short] Android
      */
     void onFreeLevels(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x343de4
+     * @note[short] MacOS (Intel): 0x3c2590
      * @note[short] Android
      */
     void onGarage(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x343e50
+     * @note[short] MacOS (Intel): 0x3c2610
      * @note[short] Android
      */
     void onNext(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x343e30
+     * @note[short] MacOS (Intel): 0x3c25e0
      * @note[short] Android
      */
     void onPrev(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x33b13c
-     * @note[short] MacOS (Intel): 0x3af740
+     * @note[short] MacOS (ARM): 0x343ed4
+     * @note[short] MacOS (Intel): 0x3c26a0
      * @note[short] Android
      */
     void setupWorlds();
 
     /**
-     * @note[short] MacOS (ARM): 0x33b724
-     * @note[short] MacOS (Intel): 0x3afd60
+     * @note[short] MacOS (ARM): 0x3444bc
+     * @note[short] MacOS (Intel): 0x3c2cc0
      * @note[short] Android
      */
     void showCompleteDialog();
 
     /**
+     * @note[short] MacOS (ARM): 0x344e64
+     * @note[short] MacOS (Intel): 0x3c3660
      * @note[short] Android
      */
     void tryShowAd();
 
     /**
+     * @note[short] MacOS (ARM): 0x344e4c
+     * @note[short] MacOS (Intel): 0x3c3630
      * @note[short] Android
      */
     void unblockButtons();
 
     /**
+     * @note[short] MacOS (ARM): 0x344270
+     * @note[short] MacOS (Intel): 0x3c2ab0
      * @note[short] Android
      */
     void updateArrows();

@@ -35,11 +35,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createToggleButton) 
 	#endif
 
-	#ifndef GEODE_STATICS_exitLayer
-		#define GEODE_STATICS_exitLayer
-		GEODE_AS_STATIC_FUNCTION(exitLayer) 
-	#endif
-
 	#ifndef GEODE_STATICS_onCocos2d
 		#define GEODE_STATICS_onCocos2d
 		GEODE_AS_STATIC_FUNCTION(onCocos2d) 
@@ -88,11 +83,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onTOS
 		#define GEODE_STATICS_onTOS
 		GEODE_AS_STATIC_FUNCTION(onTOS) 
-	#endif
-
-	#ifndef GEODE_STATICS_sendSupportMail
-		#define GEODE_STATICS_sendSupportMail
-		GEODE_AS_STATIC_FUNCTION(sendSupportMail) 
 	#endif
 
     
@@ -201,24 +191,24 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SupportLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4afa10, Thiscall, SupportLayer, customSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b0fb0, Thiscall, SupportLayer, uploadActionFinished, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b10f0, Thiscall, SupportLayer, uploadActionFailed, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b0f70, Thiscall, SupportLayer, onClosePopup, UploadActionPopup*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b1d70, Thiscall, SupportLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b05d0, Thiscall, SupportLayer, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SupportLayer, exitLayer, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b0d10, Thiscall, SupportLayer, onCocos2d, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b1410, Thiscall, SupportLayer, onEmail, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b0e20, Thiscall, SupportLayer, onGetReward, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b1510, Thiscall, SupportLayer, onLinks, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b1180, Thiscall, SupportLayer, onLowDetail, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x296f80, Thiscall, SupportLayer, onPrivacy, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b0d30, Thiscall, SupportLayer, onRequestAccess, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3207c0, Thiscall, SupportLayer, onRobTop, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b0830, Thiscall, SupportLayer, onSFX, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x296fa0, Thiscall, SupportLayer, onTOS, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SupportLayer, sendSupportMail, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c8560, Thiscall, SupportLayer, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c9b00, Thiscall, SupportLayer, uploadActionFinished, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c9cd0, Thiscall, SupportLayer, uploadActionFailed, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c9ac0, Thiscall, SupportLayer, onClosePopup, UploadActionPopup*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ca950, Thiscall, SupportLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c9120, Thiscall, SupportLayer, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SupportLayer, exitLayer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c9860, Thiscall, SupportLayer, onCocos2d, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c9ff0, Thiscall, SupportLayer, onEmail, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c9970, Thiscall, SupportLayer, onGetReward, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ca0f0, Thiscall, SupportLayer, onLinks, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c9d60, Thiscall, SupportLayer, onLowDetail, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29e5e0, Thiscall, SupportLayer, onPrivacy, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c9880, Thiscall, SupportLayer, onRequestAccess, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x335680, Thiscall, SupportLayer, onRobTop, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c9380, Thiscall, SupportLayer, onSFX, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29e600, Thiscall, SupportLayer, onTOS, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SupportLayer, sendSupportMail, )
 		}
 	};
 }

@@ -16,59 +16,64 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupTimeWarpPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] MacOS (ARM): 0x45090c
-     * @note[short] MacOS (Intel): 0x4ef5f0
-     * @note[short] Windows: 0x44ad30
+     * @note[short] MacOS (ARM): 0x45a984
+     * @note[short] MacOS (Intel): 0x502b70
+     * @note[short] Windows: 0x463340
+     * @note[short] iOS: 0x147d7c
      * @note[short] Android
      */
-    static SetupTimeWarpPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupTimeWarpPopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x450fe4
-     * @note[short] MacOS (Intel): 0x4efdd0
-     * @note[short] Windows: 0x44b2c0
-     * @note[short] iOS: 0x14b950
+     * @note[short] MacOS (ARM): 0x45b05c
+     * @note[short] MacOS (Intel): 0x503340
+     * @note[short] Windows: 0x4638d0
+     * @note[short] iOS: 0x148284
      * @note[short] Android
      */
     virtual void determineStartValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x451134
-     * @note[short] MacOS (Intel): 0x4eff60
-     * @note[short] Windows: 0x287920
-     * @note[short] iOS: 0x14ba8c
+     * @note[short] MacOS (ARM): 0x45b1ac
+     * @note[short] MacOS (Intel): 0x5034d0
+     * @note[short] Windows: 0x28f250
+     * @note[short] iOS: 0x1483c0
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x450a9c
-     * @note[short] MacOS (Intel): 0x4ef830
-     * @note[short] Windows: 0x44ae50
+     * @note[short] MacOS (ARM): 0x45ab14
+     * @note[short] MacOS (Intel): 0x502db0
+     * @note[short] Windows: 0x463460
+     * @note[short] iOS: 0x147e5c
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x450eb8
-     * @note[short] MacOS (Intel): 0x4efc70
-     * @note[short] Windows: 0x44b3d0
+     * @note[short] MacOS (ARM): 0x45af30
+     * @note[short] MacOS (Intel): 0x5031e0
+     * @note[short] Windows: 0x4639e0
+     * @note[short] iOS: 0x1481d8
      * @note[short] Android
      */
     void sliderChanged(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4510c8
-     * @note[short] MacOS (Intel): 0x4efed0
+     * @note[short] MacOS (ARM): 0x45b140
+     * @note[short] MacOS (Intel): 0x503440
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x148354
      * @note[short] Android
      */
     void updateTimeWarp();
 
     /**
-     * @note[short] MacOS (ARM): 0x450f94
-     * @note[short] MacOS (Intel): 0x4efd80
-     * @note[short] Windows: 0x44b4a0
+     * @note[short] MacOS (ARM): 0x45b00c
+     * @note[short] MacOS (Intel): 0x5032f0
+     * @note[short] Windows: 0x463ab0
+     * @note[short] iOS: 0x148234
      * @note[short] Android
      */
     void updateTimeWarpLabel();

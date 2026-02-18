@@ -10,11 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(cleanupFlash) 
 	#endif
 
-	#ifndef GEODE_STATICS_fadeAndRemove
-		#define GEODE_STATICS_fadeAndRemove
-		GEODE_AS_STATIC_FUNCTION(fadeAndRemove) 
-	#endif
-
 	#ifndef GEODE_STATICS_playEffect
 		#define GEODE_STATICS_playEffect
 		GEODE_AS_STATIC_FUNCTION(playEffect) 
@@ -77,11 +72,11 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCLightFlash, create, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCLightFlash, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43c80, Thiscall, CCLightFlash, cleanupFlash, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCLightFlash, fadeAndRemove, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x433a0, Thiscall, CCLightFlash, playEffect, cocos2d::CCPoint, cocos2d::ccColor3B, float, float, float, float, float, float, float, float, float, float, float, float, float, float, int, bool, bool, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43c20, Thiscall, CCLightFlash, removeLights, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x438e0, Thiscall, CCLightFlash, showFlash, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43cf0, Thiscall, CCLightFlash, cleanupFlash, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCLightFlash, fadeAndRemove, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43410, Thiscall, CCLightFlash, playEffect, cocos2d::CCPoint, cocos2d::ccColor3B, float, float, float, float, float, float, float, float, float, float, float, float, float, float, int, bool, bool, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43c90, Thiscall, CCLightFlash, removeLights, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43950, Thiscall, CCLightFlash, showFlash, )
 		}
 	};
 }

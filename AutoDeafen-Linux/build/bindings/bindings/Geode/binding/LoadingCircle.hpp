@@ -24,28 +24,28 @@ public:
      LoadingCircle();
 
     /**
-     * @note[short] MacOS (ARM): 0x414ec0
-     * @note[short] MacOS (Intel): 0x4abd70
-     * @note[short] Windows: 0x6b840
-     * @note[short] iOS: 0x392c28
+     * @note[short] MacOS (ARM): 0x41f090
+     * @note[short] MacOS (Intel): 0x4bf100
+     * @note[short] Windows: 0x6b870
+     * @note[short] iOS: 0x399ec8
      * @note[short] Android
      */
     static LoadingCircle* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x414fbc
-     * @note[short] MacOS (Intel): 0x4abee0
-     * @note[short] Windows: 0x6b940
-     * @note[short] iOS: 0x392d14
+     * @note[short] MacOS (ARM): 0x41f18c
+     * @note[short] MacOS (Intel): 0x4bf270
+     * @note[short] Windows: 0x6b970
+     * @note[short] iOS: 0x399fb4
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x415220
-     * @note[short] MacOS (Intel): 0x4ac130
-     * @note[short] Windows: 0x6bbc0
-     * @note[short] iOS: 0x392f78
+     * @note[short] MacOS (ARM): 0x41f3f8
+     * @note[short] MacOS (Intel): 0x4bf4c0
+     * @note[short] Windows: 0x6bbf0
+     * @note[short] iOS: 0x39a220
      * @note[short] Android
      */
     virtual void draw();
@@ -57,7 +57,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual bool ccTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -66,7 +66,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchMoved(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -75,7 +75,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchEnded(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -84,22 +84,22 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchCancelled(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x415230
-     * @note[short] MacOS (Intel): 0x4ac150
-     * @note[short] Windows: 0x6bbe0
-     * @note[short] iOS: 0x392f88
+     * @note[short] MacOS (ARM): 0x41f40c
+     * @note[short] MacOS (Intel): 0x4bf4e0
+     * @note[short] Windows: 0x6bc10
+     * @note[short] iOS: 0x39a234
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x415170
-     * @note[short] MacOS (Intel): 0x4ac0a0
-     * @note[short] Windows: 0x6bb20
-     * @note[short] iOS: 0x392ec4
+     * @note[short] MacOS (ARM): 0x41f344
+     * @note[short] MacOS (Intel): 0x4bf430
+     * @note[short] Windows: 0x6bb50
+     * @note[short] iOS: 0x39a168
      * @note[short] Android
      */
     void fadeAndRemove();
@@ -112,15 +112,21 @@ public:
      * @note[short] Android: Out of line
      */
     void setFade(bool fade);
-	inline void setParentLayer(cocos2d::CCLayer* layer) {
-        m_parentLayer = layer;
-    }
 
     /**
-     * @note[short] MacOS (ARM): 0x415078
-     * @note[short] MacOS (Intel): 0x4abfb0
-     * @note[short] Windows: 0x6ba20
-     * @note[short] iOS: 0x392dd0
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+    void setParentLayer(cocos2d::CCLayer* layer);
+
+    /**
+     * @note[short] MacOS (ARM): 0x41f248
+     * @note[short] MacOS (Intel): 0x4bf340
+     * @note[short] Windows: 0x6ba50
+     * @note[short] iOS: 0x39a070
      * @note[short] Android
      */
     void show();

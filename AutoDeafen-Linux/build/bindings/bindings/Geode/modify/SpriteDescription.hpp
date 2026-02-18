@@ -30,10 +30,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteDescription, createDescription, cocos2d::CCDictionary*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteDescription, createDescription, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteDescription, createDescription, cocos2d::CCDictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41d60, Thiscall, SpriteDescription, initDescription, DS_Dictionary*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteDescription, initDescription, cocos2d::CCDictionary*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41cf0, Thiscall, SpriteDescription, initDescription, DS_Dictionary*)
 		}
 	};
 }

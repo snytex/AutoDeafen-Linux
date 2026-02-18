@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_colorSelectClosed
 		#define GEODE_STATICS_colorSelectClosed
 		GEODE_AS_STATIC_FUNCTION(colorSelectClosed) 
@@ -55,10 +50,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetColorIDPopup, create, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x294cf0, Thiscall, SetColorIDPopup, colorSelectClosed, GJSpecialColorSelect*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetColorIDPopup, init, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetColorIDPopup, onSelectSpecialColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetColorIDPopup, create, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29c350, Thiscall, SetColorIDPopup, colorSelectClosed, GJSpecialColorSelect*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29c100, Thiscall, SetColorIDPopup, init, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29c2e0, Thiscall, SetColorIDPopup, onSelectSpecialColor, cocos2d::CCObject*)
 		}
 	};
 }

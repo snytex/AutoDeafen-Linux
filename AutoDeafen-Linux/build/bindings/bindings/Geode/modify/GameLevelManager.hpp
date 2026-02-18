@@ -25,24 +25,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(acceptFriendRequest) 
 	#endif
 
-	#ifndef GEODE_STATICS_accountIDForUserID
-		#define GEODE_STATICS_accountIDForUserID
-		GEODE_AS_STATIC_FUNCTION(accountIDForUserID) 
-	#endif
-
 	#ifndef GEODE_STATICS_addDLToActive
 		#define GEODE_STATICS_addDLToActive
 		GEODE_AS_STATIC_FUNCTION(addDLToActive) 
-	#endif
-
-	#ifndef GEODE_STATICS_areGauntletsLoaded
-		#define GEODE_STATICS_areGauntletsLoaded
-		GEODE_AS_STATIC_FUNCTION(areGauntletsLoaded) 
-	#endif
-
-	#ifndef GEODE_STATICS_banUser
-		#define GEODE_STATICS_banUser
-		GEODE_AS_STATIC_FUNCTION(banUser) 
 	#endif
 
 	#ifndef GEODE_STATICS_blockUser
@@ -55,19 +40,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(cleanupDailyLevels) 
 	#endif
 
-	#ifndef GEODE_STATICS_createAndGetAccountComments
-		#define GEODE_STATICS_createAndGetAccountComments
-		GEODE_AS_STATIC_FUNCTION(createAndGetAccountComments) 
-	#endif
-
 	#ifndef GEODE_STATICS_createAndGetCommentsFull
 		#define GEODE_STATICS_createAndGetCommentsFull
 		GEODE_AS_STATIC_FUNCTION(createAndGetCommentsFull) 
-	#endif
-
-	#ifndef GEODE_STATICS_createAndGetLevelComments
-		#define GEODE_STATICS_createAndGetLevelComments
-		GEODE_AS_STATIC_FUNCTION(createAndGetLevelComments) 
 	#endif
 
 	#ifndef GEODE_STATICS_createAndGetLevelLists
@@ -100,24 +75,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createNewLevelList) 
 	#endif
 
-	#ifndef GEODE_STATICS_createPageInfo
-		#define GEODE_STATICS_createPageInfo
-		GEODE_AS_STATIC_FUNCTION(createPageInfo) 
-	#endif
-
-	#ifndef GEODE_STATICS_createSmartTemplate
-		#define GEODE_STATICS_createSmartTemplate
-		GEODE_AS_STATIC_FUNCTION(createSmartTemplate) 
-	#endif
-
 	#ifndef GEODE_STATICS_dataLoaded
 		#define GEODE_STATICS_dataLoaded
 		GEODE_AS_STATIC_FUNCTION(dataLoaded) 
-	#endif
-
-	#ifndef GEODE_STATICS_deleteAccountComment
-		#define GEODE_STATICS_deleteAccountComment
-		GEODE_AS_STATIC_FUNCTION(deleteAccountComment) 
 	#endif
 
 	#ifndef GEODE_STATICS_deleteComment
@@ -135,19 +95,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(deleteLevel) 
 	#endif
 
-	#ifndef GEODE_STATICS_deleteLevelComment
-		#define GEODE_STATICS_deleteLevelComment
-		GEODE_AS_STATIC_FUNCTION(deleteLevelComment) 
-	#endif
-
 	#ifndef GEODE_STATICS_deleteLevelList
 		#define GEODE_STATICS_deleteLevelList
 		GEODE_AS_STATIC_FUNCTION(deleteLevelList) 
-	#endif
-
-	#ifndef GEODE_STATICS_deleteSentFriendRequest
-		#define GEODE_STATICS_deleteSentFriendRequest
-		GEODE_AS_STATIC_FUNCTION(deleteSentFriendRequest) 
 	#endif
 
 	#ifndef GEODE_STATICS_deleteServerLevel
@@ -158,11 +108,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_deleteServerLevelList
 		#define GEODE_STATICS_deleteServerLevelList
 		GEODE_AS_STATIC_FUNCTION(deleteServerLevelList) 
-	#endif
-
-	#ifndef GEODE_STATICS_deleteSmartTemplate
-		#define GEODE_STATICS_deleteSmartTemplate
-		GEODE_AS_STATIC_FUNCTION(deleteSmartTemplate) 
 	#endif
 
 	#ifndef GEODE_STATICS_deleteUserMessages
@@ -190,16 +135,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(firstSetup) 
 	#endif
 
-	#ifndef GEODE_STATICS_followUser
-		#define GEODE_STATICS_followUser
-		GEODE_AS_STATIC_FUNCTION(followUser) 
-	#endif
-
-	#ifndef GEODE_STATICS_friendRequestFromAccountID
-		#define GEODE_STATICS_friendRequestFromAccountID
-		GEODE_AS_STATIC_FUNCTION(friendRequestFromAccountID) 
-	#endif
-
 	#ifndef GEODE_STATICS_friendRequestWasRemoved
 		#define GEODE_STATICS_friendRequestWasRemoved
 		GEODE_AS_STATIC_FUNCTION(friendRequestWasRemoved) 
@@ -208,21 +143,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getAccountComments
 		#define GEODE_STATICS_getAccountComments
 		GEODE_AS_STATIC_FUNCTION(getAccountComments) 
-	#endif
-
-	#ifndef GEODE_STATICS_getActiveSmartTemplate
-		#define GEODE_STATICS_getActiveSmartTemplate
-		GEODE_AS_STATIC_FUNCTION(getActiveSmartTemplate) 
-	#endif
-
-	#ifndef GEODE_STATICS_getAllSmartTemplates
-		#define GEODE_STATICS_getAllSmartTemplates
-		GEODE_AS_STATIC_FUNCTION(getAllSmartTemplates) 
-	#endif
-
-	#ifndef GEODE_STATICS_getAllUsedSongIDs
-		#define GEODE_STATICS_getAllUsedSongIDs
-		GEODE_AS_STATIC_FUNCTION(getAllUsedSongIDs) 
 	#endif
 
 	#ifndef GEODE_STATICS_getBasePostString
@@ -240,16 +160,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getCompletedEventLevels) 
 	#endif
 
-	#ifndef GEODE_STATICS_getCompletedGauntletDemons
-		#define GEODE_STATICS_getCompletedGauntletDemons
-		GEODE_AS_STATIC_FUNCTION(getCompletedGauntletDemons) 
-	#endif
-
-	#ifndef GEODE_STATICS_getCompletedGauntletLevels
-		#define GEODE_STATICS_getCompletedGauntletLevels
-		GEODE_AS_STATIC_FUNCTION(getCompletedGauntletLevels) 
-	#endif
-
 	#ifndef GEODE_STATICS_getCompletedLevels
 		#define GEODE_STATICS_getCompletedLevels
 		GEODE_AS_STATIC_FUNCTION(getCompletedLevels) 
@@ -260,29 +170,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getCompletedWeeklyLevels) 
 	#endif
 
-	#ifndef GEODE_STATICS_getDailyTimer
-		#define GEODE_STATICS_getDailyTimer
-		GEODE_AS_STATIC_FUNCTION(getDailyTimer) 
-	#endif
-
-	#ifndef GEODE_STATICS_getDeleteCommentKey
-		#define GEODE_STATICS_getDeleteCommentKey
-		GEODE_AS_STATIC_FUNCTION(getDeleteCommentKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getDeleteMessageKey
-		#define GEODE_STATICS_getDeleteMessageKey
-		GEODE_AS_STATIC_FUNCTION(getDeleteMessageKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_getDemonLevelsString
 		#define GEODE_STATICS_getDemonLevelsString
 		GEODE_AS_STATIC_FUNCTION(getDemonLevelsString) 
-	#endif
-
-	#ifndef GEODE_STATICS_getDescKey
-		#define GEODE_STATICS_getDescKey
-		GEODE_AS_STATIC_FUNCTION(getDescKey) 
 	#endif
 
 	#ifndef GEODE_STATICS_getDifficultyStr
@@ -290,34 +180,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getDifficultyStr) 
 	#endif
 
-	#ifndef GEODE_STATICS_getDiffKey
-		#define GEODE_STATICS_getDiffKey
-		GEODE_AS_STATIC_FUNCTION(getDiffKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getDiffVal
-		#define GEODE_STATICS_getDiffVal
-		GEODE_AS_STATIC_FUNCTION(getDiffVal) 
-	#endif
-
 	#ifndef GEODE_STATICS_getFolderName
 		#define GEODE_STATICS_getFolderName
 		GEODE_AS_STATIC_FUNCTION(getFolderName) 
 	#endif
 
-	#ifndef GEODE_STATICS_getFriendRequestKey
-		#define GEODE_STATICS_getFriendRequestKey
-		GEODE_AS_STATIC_FUNCTION(getFriendRequestKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_getFriendRequests
 		#define GEODE_STATICS_getFriendRequests
 		GEODE_AS_STATIC_FUNCTION(getFriendRequests) 
-	#endif
-
-	#ifndef GEODE_STATICS_getGauntletKey
-		#define GEODE_STATICS_getGauntletKey
-		GEODE_AS_STATIC_FUNCTION(getGauntletKey) 
 	#endif
 
 	#ifndef GEODE_STATICS_getGauntletLevels
@@ -328,16 +198,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getGauntlets
 		#define GEODE_STATICS_getGauntlets
 		GEODE_AS_STATIC_FUNCTION(getGauntlets) 
-	#endif
-
-	#ifndef GEODE_STATICS_getGauntletSearchKey
-		#define GEODE_STATICS_getGauntletSearchKey
-		GEODE_AS_STATIC_FUNCTION(getGauntletSearchKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getGauntletsearchKey
-		#define GEODE_STATICS_getGauntletsearchKey
-		GEODE_AS_STATIC_FUNCTION(getGauntletsearchKey) 
 	#endif
 
 	#ifndef GEODE_STATICS_getGJChallenges
@@ -365,11 +225,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getGJUserInfo) 
 	#endif
 
-	#ifndef GEODE_STATICS_getHighestLevelOrder
-		#define GEODE_STATICS_getHighestLevelOrder
-		GEODE_AS_STATIC_FUNCTION(getHighestLevelOrder) 
-	#endif
-
 	#ifndef GEODE_STATICS_getLeaderboardScores
 		#define GEODE_STATICS_getLeaderboardScores
 		GEODE_AS_STATIC_FUNCTION(getLeaderboardScores) 
@@ -378,16 +233,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getLengthStr
 		#define GEODE_STATICS_getLengthStr
 		GEODE_AS_STATIC_FUNCTION(getLengthStr) 
-	#endif
-
-	#ifndef GEODE_STATICS_getLenKey
-		#define GEODE_STATICS_getLenKey
-		GEODE_AS_STATIC_FUNCTION(getLenKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getLenVal
-		#define GEODE_STATICS_getLenVal
-		GEODE_AS_STATIC_FUNCTION(getLenVal) 
 	#endif
 
 	#ifndef GEODE_STATICS_getLevelComments
@@ -400,14 +245,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getLevelLeaderboard) 
 	#endif
 
-	#ifndef GEODE_STATICS_getLevelLeaderboardKey
-		#define GEODE_STATICS_getLevelLeaderboardKey
-		GEODE_AS_STATIC_FUNCTION(getLevelLeaderboardKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_getLevelLists
 		#define GEODE_STATICS_getLevelLists
 		GEODE_AS_STATIC_FUNCTION(getLevelLists) 
+	#endif
+
+	#ifndef GEODE_STATICS_getLevelRateInfo
+		#define GEODE_STATICS_getLevelRateInfo
+		GEODE_AS_STATIC_FUNCTION(getLevelRateInfo) 
 	#endif
 
 	#ifndef GEODE_STATICS_getLevelSaveData
@@ -415,24 +260,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getLevelSaveData) 
 	#endif
 
-	#ifndef GEODE_STATICS_getLikeAccountItemKey
-		#define GEODE_STATICS_getLikeAccountItemKey
-		GEODE_AS_STATIC_FUNCTION(getLikeAccountItemKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getLikeItemKey
-		#define GEODE_STATICS_getLikeItemKey
-		GEODE_AS_STATIC_FUNCTION(getLikeItemKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_getLocalLevel
 		#define GEODE_STATICS_getLocalLevel
 		GEODE_AS_STATIC_FUNCTION(getLocalLevel) 
-	#endif
-
-	#ifndef GEODE_STATICS_getLocalLevelByName
-		#define GEODE_STATICS_getLocalLevelByName
-		GEODE_AS_STATIC_FUNCTION(getLocalLevelByName) 
 	#endif
 
 	#ifndef GEODE_STATICS_getLocalLevelList
@@ -440,44 +270,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getLocalLevelList) 
 	#endif
 
-	#ifndef GEODE_STATICS_getLowestLevelOrder
-		#define GEODE_STATICS_getLowestLevelOrder
-		GEODE_AS_STATIC_FUNCTION(getLowestLevelOrder) 
-	#endif
-
 	#ifndef GEODE_STATICS_getMainLevel
 		#define GEODE_STATICS_getMainLevel
 		GEODE_AS_STATIC_FUNCTION(getMainLevel) 
 	#endif
 
-	#ifndef GEODE_STATICS_getMapPackKey
-		#define GEODE_STATICS_getMapPackKey
-		GEODE_AS_STATIC_FUNCTION(getMapPackKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_getMapPacks
 		#define GEODE_STATICS_getMapPacks
 		GEODE_AS_STATIC_FUNCTION(getMapPacks) 
-	#endif
-
-	#ifndef GEODE_STATICS_getMessageKey
-		#define GEODE_STATICS_getMessageKey
-		GEODE_AS_STATIC_FUNCTION(getMessageKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getMessagesKey
-		#define GEODE_STATICS_getMessagesKey
-		GEODE_AS_STATIC_FUNCTION(getMessagesKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getNews
-		#define GEODE_STATICS_getNews
-		GEODE_AS_STATIC_FUNCTION(getNews) 
-	#endif
-
-	#ifndef GEODE_STATICS_getNextFreeTemplateID
-		#define GEODE_STATICS_getNextFreeTemplateID
-		GEODE_AS_STATIC_FUNCTION(getNextFreeTemplateID) 
 	#endif
 
 	#ifndef GEODE_STATICS_getNextLevelName
@@ -495,34 +295,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getPageInfo) 
 	#endif
 
-	#ifndef GEODE_STATICS_getPostCommentKey
-		#define GEODE_STATICS_getPostCommentKey
-		GEODE_AS_STATIC_FUNCTION(getPostCommentKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getRateStarsKey
-		#define GEODE_STATICS_getRateStarsKey
-		GEODE_AS_STATIC_FUNCTION(getRateStarsKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getReportKey
-		#define GEODE_STATICS_getReportKey
-		GEODE_AS_STATIC_FUNCTION(getReportKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_getSavedDailyLevel
 		#define GEODE_STATICS_getSavedDailyLevel
 		GEODE_AS_STATIC_FUNCTION(getSavedDailyLevel) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSavedDailyLevelFromLevelID
-		#define GEODE_STATICS_getSavedDailyLevelFromLevelID
-		GEODE_AS_STATIC_FUNCTION(getSavedDailyLevelFromLevelID) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSavedGauntlet
-		#define GEODE_STATICS_getSavedGauntlet
-		GEODE_AS_STATIC_FUNCTION(getSavedGauntlet) 
 	#endif
 
 	#ifndef GEODE_STATICS_getSavedGauntletLevel
@@ -543,16 +318,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getSavedLevels
 		#define GEODE_STATICS_getSavedLevels
 		GEODE_AS_STATIC_FUNCTION(getSavedLevels) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSavedMapPack
-		#define GEODE_STATICS_getSavedMapPack
-		GEODE_AS_STATIC_FUNCTION(getSavedMapPack) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSearchScene
-		#define GEODE_STATICS_getSearchScene
-		GEODE_AS_STATIC_FUNCTION(getSearchScene) 
 	#endif
 
 	#ifndef GEODE_STATICS_getSplitIntFromKey
@@ -580,16 +345,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getStoredUserList) 
 	#endif
 
-	#ifndef GEODE_STATICS_getStoredUserMessage
-		#define GEODE_STATICS_getStoredUserMessage
-		GEODE_AS_STATIC_FUNCTION(getStoredUserMessage) 
-	#endif
-
-	#ifndef GEODE_STATICS_getStoredUserMessageReply
-		#define GEODE_STATICS_getStoredUserMessageReply
-		GEODE_AS_STATIC_FUNCTION(getStoredUserMessageReply) 
-	#endif
-
 	#ifndef GEODE_STATICS_getTimeLeft
 		#define GEODE_STATICS_getTimeLeft
 		GEODE_AS_STATIC_FUNCTION(getTimeLeft) 
@@ -598,16 +353,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getTopArtists
 		#define GEODE_STATICS_getTopArtists
 		GEODE_AS_STATIC_FUNCTION(getTopArtists) 
-	#endif
-
-	#ifndef GEODE_STATICS_getUploadMessageKey
-		#define GEODE_STATICS_getUploadMessageKey
-		GEODE_AS_STATIC_FUNCTION(getUploadMessageKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getUserInfoKey
-		#define GEODE_STATICS_getUserInfoKey
-		GEODE_AS_STATIC_FUNCTION(getUserInfoKey) 
 	#endif
 
 	#ifndef GEODE_STATICS_getUserList
@@ -633,21 +378,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_handleIt
 		#define GEODE_STATICS_handleIt
 		GEODE_AS_STATIC_FUNCTION(handleIt) 
-	#endif
-
-	#ifndef GEODE_STATICS_handleItDelayed
-		#define GEODE_STATICS_handleItDelayed
-		GEODE_AS_STATIC_FUNCTION(handleItDelayed) 
-	#endif
-
-	#ifndef GEODE_STATICS_handleItND
-		#define GEODE_STATICS_handleItND
-		GEODE_AS_STATIC_FUNCTION(handleItND) 
-	#endif
-
-	#ifndef GEODE_STATICS_hasDailyStateBeenLoaded
-		#define GEODE_STATICS_hasDailyStateBeenLoaded
-		GEODE_AS_STATIC_FUNCTION(hasDailyStateBeenLoaded) 
 	#endif
 
 	#ifndef GEODE_STATICS_hasDownloadedLevel
@@ -695,11 +425,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(invalidateRequests) 
 	#endif
 
-	#ifndef GEODE_STATICS_invalidateUserList
-		#define GEODE_STATICS_invalidateUserList
-		GEODE_AS_STATIC_FUNCTION(invalidateUserList) 
-	#endif
-
 	#ifndef GEODE_STATICS_isDLActive
 		#define GEODE_STATICS_isDLActive
 		GEODE_AS_STATIC_FUNCTION(isDLActive) 
@@ -715,11 +440,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(isTimeValid) 
 	#endif
 
-	#ifndef GEODE_STATICS_itemIDFromLikeKey
-		#define GEODE_STATICS_itemIDFromLikeKey
-		GEODE_AS_STATIC_FUNCTION(itemIDFromLikeKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_keyHasTimer
 		#define GEODE_STATICS_keyHasTimer
 		GEODE_AS_STATIC_FUNCTION(keyHasTimer) 
@@ -728,16 +448,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_levelIDFromCommentKey
 		#define GEODE_STATICS_levelIDFromCommentKey
 		GEODE_AS_STATIC_FUNCTION(levelIDFromCommentKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_levelIDFromPostCommentKey
-		#define GEODE_STATICS_levelIDFromPostCommentKey
-		GEODE_AS_STATIC_FUNCTION(levelIDFromPostCommentKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_likeFromLikeKey
-		#define GEODE_STATICS_likeFromLikeKey
-		GEODE_AS_STATIC_FUNCTION(likeFromLikeKey) 
 	#endif
 
 	#ifndef GEODE_STATICS_likeItem
@@ -763,16 +473,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_markLevelAsDownloaded
 		#define GEODE_STATICS_markLevelAsDownloaded
 		GEODE_AS_STATIC_FUNCTION(markLevelAsDownloaded) 
-	#endif
-
-	#ifndef GEODE_STATICS_markLevelAsRatedStars
-		#define GEODE_STATICS_markLevelAsRatedStars
-		GEODE_AS_STATIC_FUNCTION(markLevelAsRatedStars) 
-	#endif
-
-	#ifndef GEODE_STATICS_markLevelAsReported
-		#define GEODE_STATICS_markLevelAsReported
-		GEODE_AS_STATIC_FUNCTION(markLevelAsReported) 
 	#endif
 
 	#ifndef GEODE_STATICS_messageWasRemoved
@@ -810,19 +510,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onDeleteServerLevelCompleted) 
 	#endif
 
-	#ifndef GEODE_STATICS_onDeleteServerLevelListCompleted
-		#define GEODE_STATICS_onDeleteServerLevelListCompleted
-		GEODE_AS_STATIC_FUNCTION(onDeleteServerLevelListCompleted) 
-	#endif
-
 	#ifndef GEODE_STATICS_onDeleteUserMessagesCompleted
 		#define GEODE_STATICS_onDeleteUserMessagesCompleted
 		GEODE_AS_STATIC_FUNCTION(onDeleteUserMessagesCompleted) 
-	#endif
-
-	#ifndef GEODE_STATICS_onDownloadLevelCompleted
-		#define GEODE_STATICS_onDownloadLevelCompleted
-		GEODE_AS_STATIC_FUNCTION(onDownloadLevelCompleted) 
 	#endif
 
 	#ifndef GEODE_STATICS_onDownloadUserMessageCompleted
@@ -890,6 +580,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onGetLevelListsCompleted) 
 	#endif
 
+	#ifndef GEODE_STATICS_onGetLevelRateInfoCompleted
+		#define GEODE_STATICS_onGetLevelRateInfoCompleted
+		GEODE_AS_STATIC_FUNCTION(onGetLevelRateInfoCompleted) 
+	#endif
+
 	#ifndef GEODE_STATICS_onGetLevelSaveDataCompleted
 		#define GEODE_STATICS_onGetLevelSaveDataCompleted
 		GEODE_AS_STATIC_FUNCTION(onGetLevelSaveDataCompleted) 
@@ -898,11 +593,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onGetMapPacksCompleted
 		#define GEODE_STATICS_onGetMapPacksCompleted
 		GEODE_AS_STATIC_FUNCTION(onGetMapPacksCompleted) 
-	#endif
-
-	#ifndef GEODE_STATICS_onGetNewsCompleted
-		#define GEODE_STATICS_onGetNewsCompleted
-		GEODE_AS_STATIC_FUNCTION(onGetNewsCompleted) 
 	#endif
 
 	#ifndef GEODE_STATICS_onGetOnlineLevelsCompleted
@@ -950,11 +640,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onRateStarsCompleted) 
 	#endif
 
-	#ifndef GEODE_STATICS_onReadFriendRequestCompleted
-		#define GEODE_STATICS_onReadFriendRequestCompleted
-		GEODE_AS_STATIC_FUNCTION(onReadFriendRequestCompleted) 
-	#endif
-
 	#ifndef GEODE_STATICS_onRemoveFriendCompleted
 		#define GEODE_STATICS_onRemoveFriendCompleted
 		GEODE_AS_STATIC_FUNCTION(onRemoveFriendCompleted) 
@@ -975,19 +660,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onRestoreItemsCompleted) 
 	#endif
 
-	#ifndef GEODE_STATICS_onSetLevelFeaturedCompleted
-		#define GEODE_STATICS_onSetLevelFeaturedCompleted
-		GEODE_AS_STATIC_FUNCTION(onSetLevelFeaturedCompleted) 
-	#endif
-
 	#ifndef GEODE_STATICS_onSetLevelStarsCompleted
 		#define GEODE_STATICS_onSetLevelStarsCompleted
 		GEODE_AS_STATIC_FUNCTION(onSetLevelStarsCompleted) 
-	#endif
-
-	#ifndef GEODE_STATICS_onSubmitUserInfoCompleted
-		#define GEODE_STATICS_onSubmitUserInfoCompleted
-		GEODE_AS_STATIC_FUNCTION(onSubmitUserInfoCompleted) 
 	#endif
 
 	#ifndef GEODE_STATICS_onSuggestLevelStarsCompleted
@@ -1003,11 +678,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onUpdateDescriptionCompleted
 		#define GEODE_STATICS_onUpdateDescriptionCompleted
 		GEODE_AS_STATIC_FUNCTION(onUpdateDescriptionCompleted) 
-	#endif
-
-	#ifndef GEODE_STATICS_onUpdateLevelCompleted
-		#define GEODE_STATICS_onUpdateLevelCompleted
-		GEODE_AS_STATIC_FUNCTION(onUpdateLevelCompleted) 
 	#endif
 
 	#ifndef GEODE_STATICS_onUpdateUserScoreCompleted
@@ -1030,29 +700,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onUploadLevelCompleted) 
 	#endif
 
-	#ifndef GEODE_STATICS_onUploadLevelListCompleted
-		#define GEODE_STATICS_onUploadLevelListCompleted
-		GEODE_AS_STATIC_FUNCTION(onUploadLevelListCompleted) 
-	#endif
-
 	#ifndef GEODE_STATICS_onUploadUserMessageCompleted
 		#define GEODE_STATICS_onUploadUserMessageCompleted
 		GEODE_AS_STATIC_FUNCTION(onUploadUserMessageCompleted) 
-	#endif
-
-	#ifndef GEODE_STATICS_pageFromCommentKey
-		#define GEODE_STATICS_pageFromCommentKey
-		GEODE_AS_STATIC_FUNCTION(pageFromCommentKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_parseRestoreData
-		#define GEODE_STATICS_parseRestoreData
-		GEODE_AS_STATIC_FUNCTION(parseRestoreData) 
-	#endif
-
-	#ifndef GEODE_STATICS_performNetworkTest
-		#define GEODE_STATICS_performNetworkTest
-		GEODE_AS_STATIC_FUNCTION(performNetworkTest) 
 	#endif
 
 	#ifndef GEODE_STATICS_ProcessHttpRequest
@@ -1120,11 +770,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(requestUserAccess) 
 	#endif
 
-	#ifndef GEODE_STATICS_resetAllTimers
-		#define GEODE_STATICS_resetAllTimers
-		GEODE_AS_STATIC_FUNCTION(resetAllTimers) 
-	#endif
-
 	#ifndef GEODE_STATICS_resetCommentTimersForAccountID
 		#define GEODE_STATICS_resetCommentTimersForAccountID
 		GEODE_AS_STATIC_FUNCTION(resetCommentTimersForAccountID) 
@@ -1133,16 +778,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_resetCommentTimersForLevelID
 		#define GEODE_STATICS_resetCommentTimersForLevelID
 		GEODE_AS_STATIC_FUNCTION(resetCommentTimersForLevelID) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetDailyLevelState
-		#define GEODE_STATICS_resetDailyLevelState
-		GEODE_AS_STATIC_FUNCTION(resetDailyLevelState) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetGauntlets
-		#define GEODE_STATICS_resetGauntlets
-		GEODE_AS_STATIC_FUNCTION(resetGauntlets) 
 	#endif
 
 	#ifndef GEODE_STATICS_resetStoredUserList
@@ -1165,16 +800,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(saveFetchedLevels) 
 	#endif
 
-	#ifndef GEODE_STATICS_saveFetchedMapPacks
-		#define GEODE_STATICS_saveFetchedMapPacks
-		GEODE_AS_STATIC_FUNCTION(saveFetchedMapPacks) 
-	#endif
-
-	#ifndef GEODE_STATICS_saveGauntlet
-		#define GEODE_STATICS_saveGauntlet
-		GEODE_AS_STATIC_FUNCTION(saveGauntlet) 
-	#endif
-
 	#ifndef GEODE_STATICS_saveLevel
 		#define GEODE_STATICS_saveLevel
 		GEODE_AS_STATIC_FUNCTION(saveLevel) 
@@ -1185,29 +810,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(saveLevelList) 
 	#endif
 
-	#ifndef GEODE_STATICS_saveLocalScore
-		#define GEODE_STATICS_saveLocalScore
-		GEODE_AS_STATIC_FUNCTION(saveLocalScore) 
-	#endif
-
-	#ifndef GEODE_STATICS_saveMapPack
-		#define GEODE_STATICS_saveMapPack
-		GEODE_AS_STATIC_FUNCTION(saveMapPack) 
-	#endif
-
-	#ifndef GEODE_STATICS_setActiveSmartTemplate
-		#define GEODE_STATICS_setActiveSmartTemplate
-		GEODE_AS_STATIC_FUNCTION(setActiveSmartTemplate) 
-	#endif
-
 	#ifndef GEODE_STATICS_setDiffVal
 		#define GEODE_STATICS_setDiffVal
 		GEODE_AS_STATIC_FUNCTION(setDiffVal) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFolderName
-		#define GEODE_STATICS_setFolderName
-		GEODE_AS_STATIC_FUNCTION(setFolderName) 
 	#endif
 
 	#ifndef GEODE_STATICS_setLenVal
@@ -1215,49 +820,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(setLenVal) 
 	#endif
 
-	#ifndef GEODE_STATICS_setLevelFeatured
-		#define GEODE_STATICS_setLevelFeatured
-		GEODE_AS_STATIC_FUNCTION(setLevelFeatured) 
-	#endif
-
-	#ifndef GEODE_STATICS_setLevelStars
-		#define GEODE_STATICS_setLevelStars
-		GEODE_AS_STATIC_FUNCTION(setLevelStars) 
-	#endif
-
-	#ifndef GEODE_STATICS_specialFromLikeKey
-		#define GEODE_STATICS_specialFromLikeKey
-		GEODE_AS_STATIC_FUNCTION(specialFromLikeKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_storeCommentsResult
 		#define GEODE_STATICS_storeCommentsResult
 		GEODE_AS_STATIC_FUNCTION(storeCommentsResult) 
 	#endif
 
-	#ifndef GEODE_STATICS_storeDailyLevelState
-		#define GEODE_STATICS_storeDailyLevelState
-		GEODE_AS_STATIC_FUNCTION(storeDailyLevelState) 
-	#endif
-
 	#ifndef GEODE_STATICS_storeSearchResult
 		#define GEODE_STATICS_storeSearchResult
 		GEODE_AS_STATIC_FUNCTION(storeSearchResult) 
-	#endif
-
-	#ifndef GEODE_STATICS_storeUserInfo
-		#define GEODE_STATICS_storeUserInfo
-		GEODE_AS_STATIC_FUNCTION(storeUserInfo) 
-	#endif
-
-	#ifndef GEODE_STATICS_storeUserMessage
-		#define GEODE_STATICS_storeUserMessage
-		GEODE_AS_STATIC_FUNCTION(storeUserMessage) 
-	#endif
-
-	#ifndef GEODE_STATICS_storeUserMessageReply
-		#define GEODE_STATICS_storeUserMessageReply
-		GEODE_AS_STATIC_FUNCTION(storeUserMessageReply) 
 	#endif
 
 	#ifndef GEODE_STATICS_storeUserName
@@ -1285,24 +855,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(tryGetUsername) 
 	#endif
 
-	#ifndef GEODE_STATICS_typeFromCommentKey
-		#define GEODE_STATICS_typeFromCommentKey
-		GEODE_AS_STATIC_FUNCTION(typeFromCommentKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_typeFromLikeKey
-		#define GEODE_STATICS_typeFromLikeKey
-		GEODE_AS_STATIC_FUNCTION(typeFromLikeKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_unblockUser
 		#define GEODE_STATICS_unblockUser
 		GEODE_AS_STATIC_FUNCTION(unblockUser) 
-	#endif
-
-	#ifndef GEODE_STATICS_unfollowUser
-		#define GEODE_STATICS_unfollowUser
-		GEODE_AS_STATIC_FUNCTION(unfollowUser) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateDescription
@@ -1330,19 +885,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateSavedLevelList) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateUsernames
-		#define GEODE_STATICS_updateUsernames
-		GEODE_AS_STATIC_FUNCTION(updateUsernames) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateUserScore
 		#define GEODE_STATICS_updateUserScore
 		GEODE_AS_STATIC_FUNCTION(updateUserScore) 
-	#endif
-
-	#ifndef GEODE_STATICS_uploadAccountComment
-		#define GEODE_STATICS_uploadAccountComment
-		GEODE_AS_STATIC_FUNCTION(uploadAccountComment) 
 	#endif
 
 	#ifndef GEODE_STATICS_uploadComment
@@ -1360,11 +905,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(uploadLevel) 
 	#endif
 
-	#ifndef GEODE_STATICS_uploadLevelComment
-		#define GEODE_STATICS_uploadLevelComment
-		GEODE_AS_STATIC_FUNCTION(uploadLevelComment) 
-	#endif
-
 	#ifndef GEODE_STATICS_uploadLevelList
 		#define GEODE_STATICS_uploadLevelList
 		GEODE_AS_STATIC_FUNCTION(uploadLevelList) 
@@ -1375,11 +915,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(uploadUserMessage) 
 	#endif
 
-	#ifndef GEODE_STATICS_userIDForAccountID
-		#define GEODE_STATICS_userIDForAccountID
-		GEODE_AS_STATIC_FUNCTION(userIDForAccountID) 
-	#endif
-
 	#ifndef GEODE_STATICS_userNameForUserID
 		#define GEODE_STATICS_userNameForUserID
 		GEODE_AS_STATIC_FUNCTION(userNameForUserID) 
@@ -1388,11 +923,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_verifyContainerOnlyHasLevels
 		#define GEODE_STATICS_verifyContainerOnlyHasLevels
 		GEODE_AS_STATIC_FUNCTION(verifyContainerOnlyHasLevels) 
-	#endif
-
-	#ifndef GEODE_STATICS_verifyLevelState
-		#define GEODE_STATICS_verifyLevelState
-		GEODE_AS_STATIC_FUNCTION(verifyLevelState) 
 	#endif
 
 	#ifndef GEODE_STATICS_writeSpecialFilters
@@ -1761,11 +1291,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(getGauntletSearchKey) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_getGauntletsearchKey
-		#define GEODE_CONCEPT_CHECK_getGauntletsearchKey
-		GEODE_CONCEPT_FUNCTION_CHECK(getGauntletsearchKey) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_getGJChallenges
 		#define GEODE_CONCEPT_CHECK_getGJChallenges
 		GEODE_CONCEPT_FUNCTION_CHECK(getGJChallenges) 
@@ -1799,6 +1324,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_getIntForKey
 		#define GEODE_CONCEPT_CHECK_getIntForKey
 		GEODE_CONCEPT_FUNCTION_CHECK(getIntForKey) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getLeaderboardKey
+		#define GEODE_CONCEPT_CHECK_getLeaderboardKey
+		GEODE_CONCEPT_FUNCTION_CHECK(getLeaderboardKey) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_getLeaderboardScores
@@ -1854,6 +1384,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_getLevelLists
 		#define GEODE_CONCEPT_CHECK_getLevelLists
 		GEODE_CONCEPT_FUNCTION_CHECK(getLevelLists) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getLevelRateInfo
+		#define GEODE_CONCEPT_CHECK_getLevelRateInfo
+		GEODE_CONCEPT_FUNCTION_CHECK(getLevelRateInfo) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_getLevelSaveData
@@ -2366,6 +1901,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(onGetLevelListsCompleted) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_onGetLevelRateInfoCompleted
+		#define GEODE_CONCEPT_CHECK_onGetLevelRateInfoCompleted
+		GEODE_CONCEPT_FUNCTION_CHECK(onGetLevelRateInfoCompleted) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_onGetLevelSaveDataCompleted
 		#define GEODE_CONCEPT_CHECK_onGetLevelSaveDataCompleted
 		GEODE_CONCEPT_FUNCTION_CHECK(onGetLevelSaveDataCompleted) 
@@ -2419,6 +1959,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_onRateDemonCompleted
 		#define GEODE_CONCEPT_CHECK_onRateDemonCompleted
 		GEODE_CONCEPT_FUNCTION_CHECK(onRateDemonCompleted) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_onRateLevelAdminCompleted
+		#define GEODE_CONCEPT_CHECK_onRateLevelAdminCompleted
+		GEODE_CONCEPT_FUNCTION_CHECK(onRateLevelAdminCompleted) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_onRateStarsCompleted
@@ -2549,6 +2094,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_rateDemon
 		#define GEODE_CONCEPT_CHECK_rateDemon
 		GEODE_CONCEPT_FUNCTION_CHECK(rateDemon) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_rateLevelAdmin
+		#define GEODE_CONCEPT_CHECK_rateLevelAdmin
+		GEODE_CONCEPT_FUNCTION_CHECK(rateLevelAdmin) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_rateStars
@@ -2811,6 +2361,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(unfollowUser) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_unrateLevelAdmin
+		#define GEODE_CONCEPT_CHECK_unrateLevelAdmin
+		GEODE_CONCEPT_FUNCTION_CHECK(unrateLevelAdmin) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_updateDescription
 		#define GEODE_CONCEPT_CHECK_updateDescription
 		GEODE_CONCEPT_FUNCTION_CHECK(updateDescription) 
@@ -2824,6 +2379,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_updateLevelOrders
 		#define GEODE_CONCEPT_CHECK_updateLevelOrders
 		GEODE_CONCEPT_FUNCTION_CHECK(updateLevelOrders) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_updateLevelRankAdmin
+		#define GEODE_CONCEPT_CHECK_updateLevelRankAdmin
+		GEODE_CONCEPT_FUNCTION_CHECK(updateLevelRankAdmin) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_updateLevelRewards
@@ -2921,309 +2481,314 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, get, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x168140, Default, GameLevelManager, responseToDict, gd::string, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x140b20, Default, GameLevelManager, sharedState, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x142230, Thiscall, GameLevelManager, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15e780, Thiscall, GameLevelManager, acceptFriendRequest, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, accountIDForUserID, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x147a20, Thiscall, GameLevelManager, addDLToActive, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, areGauntletsLoaded, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, banUser, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, blockUser, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1485e0, Thiscall, GameLevelManager, cleanupDailyLevels, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, createAndGetAccountComments, gd::string, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, createAndGetCommentsFull, gd::string, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, createAndGetLevelComments, gd::string, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, createAndGetLevelLists, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1446b0, Thiscall, GameLevelManager, createAndGetLevels, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x144e90, Thiscall, GameLevelManager, createAndGetMapPacks, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x145130, Thiscall, GameLevelManager, createAndGetScores, gd::string, GJScoreType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x142800, Thiscall, GameLevelManager, createNewLevel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1432b0, Thiscall, GameLevelManager, createNewLevelList, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, createPageInfo, int, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, createSmartTemplate, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x149310, Thiscall, GameLevelManager, dataLoaded, DS_Dictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, deleteAccountComment, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, deleteComment, int, CommentType, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15e180, Thiscall, GameLevelManager, deleteFriendRequests, int, cocos2d::CCArray*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x142fe0, Thiscall, GameLevelManager, deleteLevel, GJGameLevel*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, deleteLevelComment, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x143890, Thiscall, GameLevelManager, deleteLevelList, GJLevelList*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, deleteSentFriendRequest, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x152350, Thiscall, GameLevelManager, deleteServerLevel, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, deleteServerLevelList, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, deleteSmartTemplate, GJSmartTemplate*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x158f20, Thiscall, GameLevelManager, deleteUserMessages, GJUserMessage*, cocos2d::CCArray*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14fde0, Thiscall, GameLevelManager, downloadLevel, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, downloadUserMessage, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x148e00, Thiscall, GameLevelManager, encodeDataTo, DS_Dictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, firstSetup, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, followUser, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, friendRequestFromAccountID, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, friendRequestWasRemoved, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16ab90, Default, GameLevelManager, responseToDict, gd::string, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x142d10, Default, GameLevelManager, sharedState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x144290, Thiscall, GameLevelManager, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x161170, Thiscall, GameLevelManager, acceptFriendRequest, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, accountIDForUserID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x149b20, Thiscall, GameLevelManager, addDLToActive, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, areGauntletsLoaded, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, banUser, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x161f00, Thiscall, GameLevelManager, blockUser, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14a6e0, Thiscall, GameLevelManager, cleanupDailyLevels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, createAndGetAccountComments, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15cfe0, Thiscall, GameLevelManager, createAndGetCommentsFull, gd::string, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, createAndGetLevelComments, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x146c30, Thiscall, GameLevelManager, createAndGetLevelLists, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1466f0, Thiscall, GameLevelManager, createAndGetLevels, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x146ed0, Thiscall, GameLevelManager, createAndGetMapPacks, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x147170, Thiscall, GameLevelManager, createAndGetScores, gd::string, GJScoreType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x144870, Thiscall, GameLevelManager, createNewLevel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x145320, Thiscall, GameLevelManager, createNewLevelList, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, createPageInfo, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, createSmartTemplate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14b410, Thiscall, GameLevelManager, dataLoaded, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, deleteAccountComment, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15f070, Thiscall, GameLevelManager, deleteComment, int, CommentType, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x160b70, Thiscall, GameLevelManager, deleteFriendRequests, int, cocos2d::CCArray*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x145050, Thiscall, GameLevelManager, deleteLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, deleteLevelComment, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x145900, Thiscall, GameLevelManager, deleteLevelList, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, deleteSentFriendRequest, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1544e0, Thiscall, GameLevelManager, deleteServerLevel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x150420, Thiscall, GameLevelManager, deleteServerLevelList, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, deleteSmartTemplate, GJSmartTemplate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15b4b0, Thiscall, GameLevelManager, deleteUserMessages, GJUserMessage*, cocos2d::CCArray*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x151e00, Thiscall, GameLevelManager, downloadLevel, int, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15aa80, Thiscall, GameLevelManager, downloadUserMessage, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14af00, Thiscall, GameLevelManager, encodeDataTo, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14ab40, Thiscall, GameLevelManager, firstSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, followUser, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, friendRequestFromAccountID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1633a0, Thiscall, GameLevelManager, friendRequestWasRemoved, int, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getAccountCommentKey, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getAccountComments, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15c870, Thiscall, GameLevelManager, getAccountComments, int, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getActiveDailyID, GJTimedLevelType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getActiveSmartTemplate, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getAllSmartTemplates, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getAllUsedSongIDs, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getAllUsedSongIDs, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14a4b0, Thiscall, GameLevelManager, getBasePostString, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getActiveSmartTemplate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getAllSmartTemplates, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getAllUsedSongIDs, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14c5b0, Thiscall, GameLevelManager, getBasePostString, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getBoolForKey, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getCommentKey, int, int, int, CommentKeyType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getCompletedDailyLevels, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1468c0, Thiscall, GameLevelManager, getCompletedEventLevels, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getCompletedGauntletDemons, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getCompletedGauntletLevels, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x145860, Thiscall, GameLevelManager, getCompletedLevels, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1464b0, Thiscall, GameLevelManager, getCompletedWeeklyLevels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x148700, Thiscall, GameLevelManager, getCompletedDailyLevels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x148900, Thiscall, GameLevelManager, getCompletedEventLevels, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getCompletedGauntletDemons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getCompletedGauntletLevels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1478a0, Thiscall, GameLevelManager, getCompletedLevels, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1484f0, Thiscall, GameLevelManager, getCompletedWeeklyLevels, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getDailyID, GJTimedLevelType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getDailyTimer, GJTimedLevelType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getDeleteCommentKey, int, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getDeleteMessageKey, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1459f0, Thiscall, GameLevelManager, getDemonLevelsString, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getDescKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getDifficultyStr, bool, bool, bool, bool, bool, bool, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getDiffKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getDiffVal, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x148910, Thiscall, GameLevelManager, getFolderName, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getFriendRequestKey, bool, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getFriendRequests, bool, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getGauntletKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14fa90, Thiscall, GameLevelManager, getGauntletLevels, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14f180, Thiscall, GameLevelManager, getGauntlets, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getGauntletSearchKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getGauntletsearchKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x164ad0, Thiscall, GameLevelManager, getGJChallenges, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x165ec0, Thiscall, GameLevelManager, getGJDailyLevelState, GJTimedLevelType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1635e0, Thiscall, GameLevelManager, getGJRewards, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getGJSecretReward, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x157880, Thiscall, GameLevelManager, getGJUserInfo, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getHighestLevelOrder, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getDailyTimer, GJTimedLevelType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getDeleteCommentKey, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getDeleteMessageKey, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x147a30, Thiscall, GameLevelManager, getDemonLevelsString, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getDescKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14d4b0, Thiscall, GameLevelManager, getDifficultyStr, bool, bool, bool, bool, bool, bool, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getDiffKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getDiffVal, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14aa10, Thiscall, GameLevelManager, getFolderName, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getFriendRequestKey, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15fcc0, Thiscall, GameLevelManager, getFriendRequests, bool, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getGauntletKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x151ab0, Thiscall, GameLevelManager, getGauntletLevels, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x151200, Thiscall, GameLevelManager, getGauntlets, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getGauntletSearchKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x167510, Thiscall, GameLevelManager, getGJChallenges, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x168910, Thiscall, GameLevelManager, getGJDailyLevelState, GJTimedLevelType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x166020, Thiscall, GameLevelManager, getGJRewards, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x164ef0, Thiscall, GameLevelManager, getGJSecretReward, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x159e10, Thiscall, GameLevelManager, getGJUserInfo, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getHighestLevelOrder, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getIntForKey, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1554b0, Thiscall, GameLevelManager, getLeaderboardScores, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getLengthStr, bool, bool, bool, bool, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getLenKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getLenVal, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x159870, Thiscall, GameLevelManager, getLevelComments, int, int, int, int, CommentKeyType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getLevelDownloadKey, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getLeaderboardKey, LeaderboardType, LeaderboardStat)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x157980, Thiscall, GameLevelManager, getLeaderboardScores, LeaderboardType, LeaderboardStat)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14d760, Thiscall, GameLevelManager, getLengthStr, bool, bool, bool, bool, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getLenKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getLenVal, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15be00, Thiscall, GameLevelManager, getLevelComments, int, int, int, int, CommentKeyType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getLevelDownloadKey, int, bool, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getLevelKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x155ff0, Thiscall, GameLevelManager, getLevelLeaderboard, GJGameLevel*, LevelLeaderboardType, LevelLeaderboardMode)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getLevelLeaderboardKey, int, LevelLeaderboardType, LevelLeaderboardMode)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x158040, Thiscall, GameLevelManager, getLevelLeaderboard, GJGameLevel*, LevelLeaderboardType, LevelLeaderboardMode)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getLevelLeaderboardKey, int, LevelLeaderboardType, LevelLeaderboardMode)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getLevelListKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14e6e0, Thiscall, GameLevelManager, getLevelLists, GJSearchObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14cd40, Thiscall, GameLevelManager, getLevelSaveData, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getLikeAccountItemKey, LikeItemType, int, bool, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getLikeItemKey, LikeItemType, int, bool, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getLocalLevel, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getLocalLevelByName, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getLocalLevelList, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getLowestLevelOrder, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1423e0, Thiscall, GameLevelManager, getMainLevel, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getMapPackKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14d470, Thiscall, GameLevelManager, getMapPacks, GJSearchObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getMessageKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getMessagesKey, bool, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getNews, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getNextFreeTemplateID, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getNextLevelName, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14bb70, Thiscall, GameLevelManager, getOnlineLevels, GJSearchObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getPageInfo, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getPostCommentKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getRateStarsKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getReportKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x146ba0, Thiscall, GameLevelManager, getSavedDailyLevel, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getSavedDailyLevelFromLevelID, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getSavedGauntlet, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x146c70, Thiscall, GameLevelManager, getSavedGauntletLevel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x150760, Thiscall, GameLevelManager, getLevelLists, GJSearchObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15f860, Thiscall, GameLevelManager, getLevelRateInfo, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14edc0, Thiscall, GameLevelManager, getLevelSaveData, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getLikeAccountItemKey, LikeItemType, int, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getLikeItemKey, LikeItemType, int, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x144800, Thiscall, GameLevelManager, getLocalLevel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getLocalLevelByName, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1452b0, Thiscall, GameLevelManager, getLocalLevelList, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getLowestLevelOrder, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x144450, Thiscall, GameLevelManager, getMainLevel, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getMapPackKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14f4f0, Thiscall, GameLevelManager, getMapPacks, GJSearchObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getMessageKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getMessagesKey, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getNews, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getNextFreeTemplateID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x144b30, Thiscall, GameLevelManager, getNextLevelName, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14dc70, Thiscall, GameLevelManager, getOnlineLevels, GJSearchObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x149970, Thiscall, GameLevelManager, getPageInfo, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getPostCommentKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getRateStarsKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getReportKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x148be0, Thiscall, GameLevelManager, getSavedDailyLevel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getSavedDailyLevelFromLevelID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getSavedGauntlet, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x148cb0, Thiscall, GameLevelManager, getSavedGauntletLevel, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getSavedLevel, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x146ad0, Thiscall, GameLevelManager, getSavedLevel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x148b10, Thiscall, GameLevelManager, getSavedLevel, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getSavedLevelList, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getSavedLevelLists, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x145410, Thiscall, GameLevelManager, getSavedLevels, bool, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getSavedMapPack, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getSearchScene, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getSplitIntFromKey, char const*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getStarLevelsString, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15b420, Thiscall, GameLevelManager, getStoredLevelComments, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x147780, Thiscall, GameLevelManager, getStoredOnlineLevels, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getStoredUserList, UserListType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getStoredUserMessage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getStoredUserMessageReply, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x147dd0, Thiscall, GameLevelManager, getTimeLeft, char const*, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getTopArtists, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x147610, Thiscall, GameLevelManager, getSavedLevelLists, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x147450, Thiscall, GameLevelManager, getSavedLevels, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getSavedMapPack, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getSearchScene, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15d5a0, Thiscall, GameLevelManager, getSplitIntFromKey, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x147c30, Thiscall, GameLevelManager, getStarLevelsString, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15d9b0, Thiscall, GameLevelManager, getStoredLevelComments, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x149880, Thiscall, GameLevelManager, getStoredOnlineLevels, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1630a0, Thiscall, GameLevelManager, getStoredUserList, UserListType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getStoredUserMessage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getStoredUserMessageReply, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x149ed0, Thiscall, GameLevelManager, getTimeLeft, char const*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x158fb0, Thiscall, GameLevelManager, getTopArtists, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getTopArtistsKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getUploadMessageKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, getUserInfoKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15ffa0, Thiscall, GameLevelManager, getUserList, UserListType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x157c30, Thiscall, GameLevelManager, getUserMessages, bool, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1571c0, Thiscall, GameLevelManager, getUsers, GJSearchObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1473c0, Thiscall, GameLevelManager, gotoLevelPage, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x140e00, Thiscall, GameLevelManager, handleIt, bool, gd::string, gd::string, GJHttpType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, handleItDelayed, bool, gd::string, gd::string, GJHttpType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, handleItND, cocos2d::CCNode*, void*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, hasDailyStateBeenLoaded, GJTimedLevelType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x151630, Thiscall, GameLevelManager, hasDownloadedLevel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getUploadMessageKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, getUserInfoKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x162990, Thiscall, GameLevelManager, getUserList, UserListType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15a1c0, Thiscall, GameLevelManager, getUserMessages, bool, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x159750, Thiscall, GameLevelManager, getUsers, GJSearchObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1494c0, Thiscall, GameLevelManager, gotoLevelPage, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x142ff0, Thiscall, GameLevelManager, handleIt, bool, gd::string, gd::string, GJHttpType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, handleItDelayed, bool, gd::string, gd::string, GJHttpType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, handleItND, cocos2d::CCNode*, void*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, hasDailyStateBeenLoaded, GJTimedLevelType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1537b0, Thiscall, GameLevelManager, hasDownloadedLevel, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, hasDownloadedList, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, hasLikedAccountItem, LikeItemType, int, bool, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1623d0, Thiscall, GameLevelManager, hasLikedItem, LikeItemType, int, bool, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x162340, Thiscall, GameLevelManager, hasLikedItemFullCheck, LikeItemType, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x152280, Thiscall, GameLevelManager, hasRatedDemon, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, hasRatedLevelStars, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, hasReportedLevel, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, invalidateMessages, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, invalidateRequests, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x160840, Thiscall, GameLevelManager, invalidateUserList, UserListType, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x147960, Thiscall, GameLevelManager, isDLActive, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x148840, Thiscall, GameLevelManager, isFollowingUser, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x147c90, Thiscall, GameLevelManager, isTimeValid, char const*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x164e10, Thiscall, GameLevelManager, hasLikedAccountItem, LikeItemType, int, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x164e10, Thiscall, GameLevelManager, hasLikedItem, LikeItemType, int, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x164d80, Thiscall, GameLevelManager, hasLikedItemFullCheck, LikeItemType, int, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x154410, Thiscall, GameLevelManager, hasRatedDemon, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x154340, Thiscall, GameLevelManager, hasRatedLevelStars, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16a6b0, Thiscall, GameLevelManager, hasReportedLevel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15bcb0, Thiscall, GameLevelManager, invalidateMessages, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x163560, Thiscall, GameLevelManager, invalidateRequests, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, invalidateUserList, UserListType, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x149a60, Thiscall, GameLevelManager, isDLActive, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14a940, Thiscall, GameLevelManager, isFollowingUser, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x149d90, Thiscall, GameLevelManager, isTimeValid, char const*, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, isUpdateValid, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, itemIDFromLikeKey, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, keyHasTimer, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, levelIDFromCommentKey, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, levelIDFromPostCommentKey, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, likeFromLikeKey, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x161270, Thiscall, GameLevelManager, likeItem, LikeItemType, int, bool, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x148090, Thiscall, GameLevelManager, limitSavedLevels, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x147b90, Thiscall, GameLevelManager, makeTimeStamp, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, markItemAsLiked, LikeItemType, int, bool, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x151510, Thiscall, GameLevelManager, markLevelAsDownloaded, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, itemIDFromLikeKey, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14a020, Thiscall, GameLevelManager, keyHasTimer, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15d6a0, Thiscall, GameLevelManager, levelIDFromCommentKey, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, levelIDFromPostCommentKey, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, likeFromLikeKey, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x163c60, Thiscall, GameLevelManager, likeItem, LikeItemType, int, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14a190, Thiscall, GameLevelManager, limitSavedLevels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x149c90, Thiscall, GameLevelManager, makeTimeStamp, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x164c10, Thiscall, GameLevelManager, markItemAsLiked, LikeItemType, int, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x153690, Thiscall, GameLevelManager, markLevelAsDownloaded, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, markLevelAsRatedDemon, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, markLevelAsRatedStars, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, markLevelAsReported, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, markLevelAsRatedStars, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, markLevelAsReported, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, markListAsDownloaded, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, messageWasRemoved, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onAcceptFriendRequestCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onBanUserCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onBlockUserCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onDeleteCommentCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onDeleteFriendRequestCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onDeleteServerLevelCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onDeleteServerLevelListCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onDeleteUserMessagesCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onDownloadLevelCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onDownloadUserMessageCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onGetAccountCommentsCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15d510, Thiscall, GameLevelManager, onGetFriendRequestsCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onGetGauntletsCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x164f20, Thiscall, GameLevelManager, onGetGJChallengesCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1663a0, Thiscall, GameLevelManager, onGetGJDailyLevelStateCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onGetGJRewardsCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onGetGJSecretRewardCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x157aa0, Thiscall, GameLevelManager, onGetGJUserInfoCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x155b80, Thiscall, GameLevelManager, onGetLeaderboardScoresCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onGetLevelCommentsCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onGetLevelLeaderboardCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14e970, Thiscall, GameLevelManager, onGetLevelListsCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14d020, Thiscall, GameLevelManager, onGetLevelSaveDataCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14d680, Thiscall, GameLevelManager, onGetMapPacksCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onGetNewsCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14c3d0, Thiscall, GameLevelManager, onGetOnlineLevelsCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onGetTopArtistsCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onGetUserListCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onGetUserMessagesCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onGetUsersCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onLikeItemCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x140d10, Thiscall, GameLevelManager, onProcessHttpRequestCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onRateDemonCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onRateStarsCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onReadFriendRequestCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onRemoveFriendCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onReportLevelCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onRequestUserAccessCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onRestoreItemsCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onSetLevelFeaturedCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onSetLevelStarsCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onSubmitUserInfoCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onSuggestLevelStarsCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onUnblockUserCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onUpdateDescriptionCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onUpdateLevelCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x155180, Thiscall, GameLevelManager, onUpdateUserScoreCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15bde0, Thiscall, GameLevelManager, onUploadCommentCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onUploadFriendRequestCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14b1a0, Thiscall, GameLevelManager, onUploadLevelCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onUploadLevelListCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, onUploadUserMessageCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, pageFromCommentKey, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, parseRestoreData, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, performNetworkTest, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x140b70, Thiscall, GameLevelManager, ProcessHttpRequest, gd::string, gd::string, gd::string, GJHttpType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x150350, Thiscall, GameLevelManager, processOnDownloadLevelCompleted, gd::string, gd::string, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x148330, Thiscall, GameLevelManager, purgeUnusedLevels, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x152e80, Thiscall, GameLevelManager, rateDemon, int, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, rateStars, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, readFriendRequest, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x167f10, Thiscall, GameLevelManager, removeDelimiterChars, gd::string, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x147ae0, Thiscall, GameLevelManager, removeDLFromActive, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, removeFriend, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15baf0, Thiscall, GameLevelManager, messageWasRemoved, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x161490, Thiscall, GameLevelManager, onAcceptFriendRequestCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x154a50, Thiscall, GameLevelManager, onBanUserCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x162210, Thiscall, GameLevelManager, onBlockUserCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15f550, Thiscall, GameLevelManager, onDeleteCommentCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x160f70, Thiscall, GameLevelManager, onDeleteFriendRequestCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1548d0, Thiscall, GameLevelManager, onDeleteServerLevelCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, onDeleteServerLevelListCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15b920, Thiscall, GameLevelManager, onDeleteUserMessagesCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, onDownloadLevelCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15acc0, Thiscall, GameLevelManager, onDownloadUserMessageCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15caa0, Thiscall, GameLevelManager, onGetAccountCommentsCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15ff00, Thiscall, GameLevelManager, onGetFriendRequestsCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1514f0, Thiscall, GameLevelManager, onGetGauntletsCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x167970, Thiscall, GameLevelManager, onGetGJChallengesCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x168df0, Thiscall, GameLevelManager, onGetGJDailyLevelStateCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x166790, Thiscall, GameLevelManager, onGetGJRewardsCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1653a0, Thiscall, GameLevelManager, onGetGJSecretRewardCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15a030, Thiscall, GameLevelManager, onGetGJUserInfoCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x157d70, Thiscall, GameLevelManager, onGetLeaderboardScoresCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15c330, Thiscall, GameLevelManager, onGetLevelCommentsCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x158d20, Thiscall, GameLevelManager, onGetLevelLeaderboardCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1509f0, Thiscall, GameLevelManager, onGetLevelListsCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15fb90, Thiscall, GameLevelManager, onGetLevelRateInfoCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14f0a0, Thiscall, GameLevelManager, onGetLevelSaveDataCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14f700, Thiscall, GameLevelManager, onGetMapPacksCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, onGetNewsCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14e4d0, Thiscall, GameLevelManager, onGetOnlineLevelsCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1592d0, Thiscall, GameLevelManager, onGetTopArtistsCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x162ba0, Thiscall, GameLevelManager, onGetUserListCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15a400, Thiscall, GameLevelManager, onGetUserMessagesCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1599b0, Thiscall, GameLevelManager, onGetUsersCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x164270, Thiscall, GameLevelManager, onLikeItemCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x142f00, Thiscall, GameLevelManager, onProcessHttpRequestCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x155780, Thiscall, GameLevelManager, onRateDemonCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, onRateLevelAdminCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x154150, Thiscall, GameLevelManager, onRateStarsCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, onReadFriendRequestCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x161cb0, Thiscall, GameLevelManager, onRemoveFriendCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16a520, Thiscall, GameLevelManager, onReportLevelCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1649a0, Thiscall, GameLevelManager, onRequestUserAccessCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x169b40, Thiscall, GameLevelManager, onRestoreItemsCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, onSetLevelFeaturedCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x155ad0, Thiscall, GameLevelManager, onSetLevelStarsCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, onSubmitUserInfoCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1550b0, Thiscall, GameLevelManager, onSuggestLevelStarsCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x162730, Thiscall, GameLevelManager, onUnblockUserCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x163a00, Thiscall, GameLevelManager, onUpdateDescriptionCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, onUpdateLevelCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x157650, Thiscall, GameLevelManager, onUpdateUserScoreCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15e370, Thiscall, GameLevelManager, onUploadCommentCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1609a0, Thiscall, GameLevelManager, onUploadFriendRequestCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14d2a0, Thiscall, GameLevelManager, onUploadLevelCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, onUploadLevelListCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15b290, Thiscall, GameLevelManager, onUploadUserMessageCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, pageFromCommentKey, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, parseRestoreData, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, performNetworkTest, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x142d60, Thiscall, GameLevelManager, ProcessHttpRequest, gd::string, gd::string, gd::string, GJHttpType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x152370, Thiscall, GameLevelManager, processOnDownloadLevelCompleted, gd::string, gd::string, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14a430, Thiscall, GameLevelManager, purgeUnusedLevels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x155350, Thiscall, GameLevelManager, rateDemon, int, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, rateLevelAdmin, int, int, int, int, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x153ac0, Thiscall, GameLevelManager, rateStars, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x161680, Thiscall, GameLevelManager, readFriendRequest, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16a960, Thiscall, GameLevelManager, removeDelimiterChars, gd::string, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x149be0, Thiscall, GameLevelManager, removeDLFromActive, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x161990, Thiscall, GameLevelManager, removeFriend, int)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, removeLevelDownloadedKeysFromDict, cocos2d::CCDictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, removeUserFromList, int, UserListType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, reportLevel, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, requestUserAccess, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1628e0, Thiscall, GameLevelManager, removeUserFromList, int, UserListType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16a280, Thiscall, GameLevelManager, reportLevel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1646c0, Thiscall, GameLevelManager, requestUserAccess, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, resetAccountComments, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, resetAllTimers, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, resetCommentTimersForAccountID, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15c770, Thiscall, GameLevelManager, resetCommentTimersForLevelID, int, CommentKeyType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, resetDailyLevelState, GJTimedLevelType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, resetGauntlets, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, resetAllTimers, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15eed0, Thiscall, GameLevelManager, resetCommentTimersForAccountID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15ed00, Thiscall, GameLevelManager, resetCommentTimersForLevelID, int, CommentKeyType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, resetDailyLevelState, GJTimedLevelType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, resetGauntlets, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, resetStoredUserInfo, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, resetStoredUserList, UserListType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x147fe0, Thiscall, GameLevelManager, resetTimerForKey, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x163230, Thiscall, GameLevelManager, resetStoredUserList, UserListType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14a0e0, Thiscall, GameLevelManager, resetTimerForKey, char const*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, restoreItems, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, saveFetchedLevelLists, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x144960, Thiscall, GameLevelManager, saveFetchedLevels, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, saveFetchedMapPacks, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, saveGauntlet, GJMapPack*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x146d40, Thiscall, GameLevelManager, saveLevel, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14ee60, Thiscall, GameLevelManager, saveLevelList, GJLevelList*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, saveLocalScore, int, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, saveMapPack, GJMapPack*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, setActiveSmartTemplate, GJSmartTemplate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1469a0, Thiscall, GameLevelManager, saveFetchedLevels, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, saveFetchedMapPacks, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, saveGauntlet, GJMapPack*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x148d80, Thiscall, GameLevelManager, saveLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x150ee0, Thiscall, GameLevelManager, saveLevelList, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, saveLocalScore, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, saveMapPack, GJMapPack*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, setActiveSmartTemplate, GJSmartTemplate*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, setBoolForKey, bool, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, setDiffVal, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, setFolderName, int, gd::string, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16a780, Thiscall, GameLevelManager, setDiffVal, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, setFolderName, int, gd::string, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, setIntForKey, int, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, setLenVal, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, setLevelFeatured, int, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, setLevelStars, int, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, specialFromLikeKey, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, storeCommentsResult, cocos2d::CCArray*, gd::string, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, storeDailyLevelState, int, int, GJTimedLevelType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16a870, Thiscall, GameLevelManager, setLenVal, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, setLevelFeatured, int, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, setLevelStars, int, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, specialFromLikeKey, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15d7b0, Thiscall, GameLevelManager, storeCommentsResult, cocos2d::CCArray*, gd::string, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, storeDailyLevelState, int, int, GJTimedLevelType)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, storeFriendRequest, GJFriendRequest*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x147570, Thiscall, GameLevelManager, storeSearchResult, cocos2d::CCArray*, gd::string, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, storeUserInfo, GJUserScore*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, storeUserMessage, GJUserMessage*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, storeUserMessageReply, int, GJUserMessage*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x143ca0, Thiscall, GameLevelManager, storeUserName, int, int, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1439a0, Thiscall, GameLevelManager, storeUserNames, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, submitUserInfo, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, suggestLevelStars, int, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x144000, Thiscall, GameLevelManager, tryGetUsername, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, typeFromCommentKey, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, typeFromLikeKey, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, unblockUser, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, unfollowUser, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, updateDescription, int, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x151700, Thiscall, GameLevelManager, updateLevel, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x145680, Thiscall, GameLevelManager, updateLevelOrders, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x144380, Thiscall, GameLevelManager, updateLevelRewards, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14ef40, Thiscall, GameLevelManager, updateSavedLevelList, GJLevelList*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, updateUsernames, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x153790, Thiscall, GameLevelManager, updateUserScore, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, uploadAccountComment, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15b510, Thiscall, GameLevelManager, uploadComment, gd::string, CommentType, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15dba0, Thiscall, GameLevelManager, uploadFriendRequest, int, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, uploadLevel, GJGameLevel*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, uploadLevelComment, int, gd::string, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, uploadLevelList, GJLevelList*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1588b0, Thiscall, GameLevelManager, uploadUserMessage, int, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, userIDForAccountID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x149670, Thiscall, GameLevelManager, storeSearchResult, cocos2d::CCArray*, gd::string, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, storeUserInfo, GJUserScore*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, storeUserMessage, GJUserMessage*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, storeUserMessageReply, int, GJUserMessage*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x145d10, Thiscall, GameLevelManager, storeUserName, int, int, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x145a10, Thiscall, GameLevelManager, storeUserNames, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x169e40, Thiscall, GameLevelManager, submitUserInfo, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x154d90, Thiscall, GameLevelManager, suggestLevelStars, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x146070, Thiscall, GameLevelManager, tryGetUsername, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, typeFromCommentKey, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, typeFromLikeKey, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x162410, Thiscall, GameLevelManager, unblockUser, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, unfollowUser, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, unrateLevelAdmin, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1636b0, Thiscall, GameLevelManager, updateDescription, int, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x153880, Thiscall, GameLevelManager, updateLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1476c0, Thiscall, GameLevelManager, updateLevelOrders, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, updateLevelRankAdmin, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1463c0, Thiscall, GameLevelManager, updateLevelRewards, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x150fc0, Thiscall, GameLevelManager, updateSavedLevelList, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, updateUsernames, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x155c60, Thiscall, GameLevelManager, updateUserScore, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, uploadAccountComment, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15daa0, Thiscall, GameLevelManager, uploadComment, gd::string, CommentType, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x160590, Thiscall, GameLevelManager, uploadFriendRequest, int, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14c7c0, Thiscall, GameLevelManager, uploadLevel, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, uploadLevelComment, int, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14fdf0, Thiscall, GameLevelManager, uploadLevelList, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x15ae40, Thiscall, GameLevelManager, uploadUserMessage, int, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, userIDForAccountID, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, userInfoForAccountID, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x143e80, Thiscall, GameLevelManager, userNameForUserID, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, verifyContainerOnlyHasLevels, cocos2d::CCDictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelManager, verifyLevelState, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14b8b0, Thiscall, GameLevelManager, writeSpecialFilters, GJSearchObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x145ef0, Thiscall, GameLevelManager, userNameForUserID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14b1a0, Thiscall, GameLevelManager, verifyContainerOnlyHasLevels, cocos2d::CCDictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelManager, verifyLevelState, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14d9b0, Thiscall, GameLevelManager, writeSpecialFilters, GJSearchObject*)
 		}
 	};
 }

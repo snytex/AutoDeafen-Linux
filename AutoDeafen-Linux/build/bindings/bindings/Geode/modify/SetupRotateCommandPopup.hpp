@@ -105,15 +105,15 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a05c0, Default, SetupRotateCommandPopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a18a0, Thiscall, SetupRotateCommandPopup, updateInputNode, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a18b0, Thiscall, SetupRotateCommandPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a1860, Thiscall, SetupRotateCommandPopup, triggerValueFromSliderValue, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a1890, Thiscall, SetupRotateCommandPopup, triggerSliderValueFromValue, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3110, Thiscall, SetupRotateCommandPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a06d0, Thiscall, SetupRotateCommandPopup, init, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a1c10, Thiscall, SetupRotateCommandPopup, onInfiniteDuration, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a1b30, Thiscall, SetupRotateCommandPopup, updateControlVisibility, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a7c80, Default, SetupRotateCommandPopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a8f60, Thiscall, SetupRotateCommandPopup, updateInputNode, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a8f70, Thiscall, SetupRotateCommandPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a8f20, Thiscall, SetupRotateCommandPopup, triggerValueFromSliderValue, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a8f50, Thiscall, SetupRotateCommandPopup, triggerSliderValueFromValue, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3e30, Thiscall, SetupRotateCommandPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a7d90, Thiscall, SetupRotateCommandPopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a92d0, Thiscall, SetupRotateCommandPopup, onInfiniteDuration, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a91f0, Thiscall, SetupRotateCommandPopup, updateControlVisibility, )
 		}
 	};
 }

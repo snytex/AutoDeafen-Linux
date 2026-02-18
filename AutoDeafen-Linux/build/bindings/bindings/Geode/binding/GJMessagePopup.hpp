@@ -20,114 +20,136 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(GJMessagePopup, FLAlertLayer)
 
     /**
-     * @note[short] Windows: 0x28fd10
+     * @note[short] MacOS (ARM): 0x245794
+     * @note[short] MacOS (Intel): 0x2a6b40
+     * @note[short] Windows: 0x297370
+     * @note[short] iOS: 0x2da1bc
      * @note[short] Android
      */
-    static GJMessagePopup* create(GJUserMessage* p0);
+    static GJMessagePopup* create(GJUserMessage* message);
 
     /**
-     * @note[short] MacOS (ARM): 0x23ce50
-     * @note[short] MacOS (Intel): 0x294c90
-     * @note[short] Windows: 0x84650
-     * @note[short] iOS: 0x2db374
+     * @note[short] MacOS (ARM): 0x246ff4
+     * @note[short] MacOS (Intel): 0x2a84a0
+     * @note[short] Windows: 0x846a0
+     * @note[short] iOS: 0x2db6b4
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x23cecc
-     * @note[short] MacOS (Intel): 0x294d00
-     * @note[short] Windows: 0x2914b0
-     * @note[short] iOS: 0x2db3f0
+     * @note[short] MacOS (ARM): 0x247070
+     * @note[short] MacOS (Intel): 0x2a8510
+     * @note[short] Windows: 0x298b10
+     * @note[short] iOS: 0x2db730
      * @note[short] Android
      */
-    virtual void downloadMessageFinished(GJUserMessage* p0);
+    virtual void downloadMessageFinished(GJUserMessage* message);
 
     /**
-     * @note[short] MacOS (ARM): 0x23cfa4
-     * @note[short] MacOS (Intel): 0x294dc0
-     * @note[short] Windows: 0x291500
-     * @note[short] iOS: 0x2db464
+     * @note[short] MacOS (ARM): 0x247138
+     * @note[short] MacOS (Intel): 0x2a85d0
+     * @note[short] Windows: 0x298b60
+     * @note[short] iOS: 0x2db7a4
      * @note[short] Android
      */
-    virtual void downloadMessageFailed(int p0);
+    virtual void downloadMessageFailed(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x23d05c
-     * @note[short] MacOS (Intel): 0x294e60
-     * @note[short] Windows: 0x291540
-     * @note[short] iOS: 0x2db51c
+     * @note[short] MacOS (ARM): 0x2471e8
+     * @note[short] MacOS (Intel): 0x2a8670
+     * @note[short] Windows: 0x298ba0
+     * @note[short] iOS: 0x2db84c
      * @note[short] Android
      */
-    virtual void uploadActionFinished(int p0, int p1);
+    virtual void uploadActionFinished(int id, int response);
 
     /**
-     * @note[short] MacOS (ARM): 0x23d250
-     * @note[short] MacOS (Intel): 0x295030
-     * @note[short] Windows: 0x2916d0
-     * @note[short] iOS: 0x2db640
+     * @note[short] MacOS (ARM): 0x2473d0
+     * @note[short] MacOS (Intel): 0x2a8840
+     * @note[short] Windows: 0x298d30
+     * @note[short] iOS: 0x2db970
      * @note[short] Android
      */
-    virtual void uploadActionFailed(int p0, int p1);
+    virtual void uploadActionFailed(int id, int response);
 
     /**
-     * @note[short] MacOS (ARM): 0x23d3c0
-     * @note[short] MacOS (Intel): 0x295180
-     * @note[short] Windows: 0x2917a0
-     * @note[short] iOS: 0x2db6dc
+     * @note[short] MacOS (ARM): 0x247540
+     * @note[short] MacOS (Intel): 0x2a8990
+     * @note[short] Windows: 0x298e00
+     * @note[short] iOS: 0x2dba10
      * @note[short] Android
      */
-    virtual void onClosePopup(UploadActionPopup* p0);
+    virtual void onClosePopup(UploadActionPopup* popup);
 
     /**
-     * @note[short] MacOS (ARM): 0x23d4e4
-     * @note[short] MacOS (Intel): 0x295280
-     * @note[short] Windows: 0x291820
-     * @note[short] iOS: 0x2db774
+     * @note[short] MacOS (ARM): 0x24766c
+     * @note[short] MacOS (Intel): 0x2a8a90
+     * @note[short] Windows: 0x298e80
+     * @note[short] iOS: 0x2dbaac
      * @note[short] Android
      */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
+     * @note[short] MacOS (ARM): 0x246f78
+     * @note[short] MacOS (Intel): 0x2a8430
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2db620
      * @note[short] Android
      */
     void blockUser();
 
     /**
-     * @note[short] Windows: 0x28fe50
+     * @note[short] MacOS (ARM): 0x2458bc
+     * @note[short] MacOS (Intel): 0x2a6cc0
+     * @note[short] Windows: 0x2974b0
+     * @note[short] iOS: 0x2da29c
      * @note[short] Android
      */
-    bool init(GJUserMessage* p0);
+    bool init(GJUserMessage* message);
 
     /**
-     * @note[short] MacOS (ARM): 0x23c0a8
-     * @note[short] MacOS (Intel): 0x293e60
-     * @note[short] Windows: 0x290760
-     * @note[short] iOS: 0x2da894
+     * @note[short] MacOS (ARM): 0x24626c
+     * @note[short] MacOS (Intel): 0x2a7680
+     * @note[short] Windows: 0x297dc0
+     * @note[short] iOS: 0x2dabe0
      * @note[short] Android
      */
-    void loadFromGJMessage(GJUserMessage* p0);
+    void loadFromGJMessage(GJUserMessage* message);
 
     /**
-     * @note[short] Windows: 0x291280
+     * @note[short] MacOS (ARM): 0x246a78
+     * @note[short] MacOS (Intel): 0x2a7ee0
+     * @note[short] Windows: 0x2988e0
+     * @note[short] iOS: 0x2db340
      * @note[short] Android
      */
     void onBlock(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x84620
+     * @note[short] MacOS (ARM): 0x246230
+     * @note[short] MacOS (Intel): 0x2a7650
+     * @note[short] Windows: 0x84670
+     * @note[short] iOS: 0x2daba4
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x2910f0
+     * @note[short] MacOS (ARM): 0x246d34
+     * @note[short] MacOS (Intel): 0x2a8180
+     * @note[short] Windows: 0x298750
+     * @note[short] iOS: 0x2db4d0
      * @note[short] Android
      */
     void onRemove(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x290db0
+     * @note[short] MacOS (ARM): 0x24683c
+     * @note[short] MacOS (Intel): 0x2a7c90
+     * @note[short] Windows: 0x298410
+     * @note[short] iOS: 0x2db0f8
      * @note[short] Android
      */
     void onReply(cocos2d::CCObject* sender);

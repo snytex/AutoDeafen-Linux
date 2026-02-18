@@ -15,77 +15,98 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(DrawGridLayer, cocos2d::CCLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0xc4b04
-     * @note[short] MacOS (Intel): 0xdd0d0
-     * @note[short] Windows: 0x2db1f0
-     * @note[short] iOS: 0x3575ac
+     * @note[short] MacOS (ARM): 0xc2e08
+     * @note[short] MacOS (Intel): 0xdcb20
+     * @note[short] Windows: 0x2e8af0
+     * @note[short] iOS: 0x357c7c
      * @note[short] Android
      */
-    static DrawGridLayer* create(cocos2d::CCNode* p0, LevelEditorLayer* p1);
+    static DrawGridLayer* create(cocos2d::CCNode* parent, LevelEditorLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0xd9cd8
-     * @note[short] MacOS (Intel): 0xf5c30
-     * @note[short] Windows: 0x2db6f0
-     * @note[short] iOS: 0x3657b8
+     * @note[short] MacOS (ARM): 0xdff78
+     * @note[short] MacOS (Intel): 0x100fb0
+     * @note[short] Windows: 0x2e8ff0
+     * @note[short] iOS: 0x369804
      * @note[short] Android
      */
-    virtual void update(float p0);
+    virtual void update(float dt);
 
     /**
-     * @note[short] MacOS (ARM): 0xd9de8
-     * @note[short] MacOS (Intel): 0xf5dc0
-     * @note[short] Windows: 0x2db8f0
-     * @note[short] iOS: 0x3658c8
+     * @note[short] MacOS (ARM): 0xe008c
+     * @note[short] MacOS (Intel): 0x101140
+     * @note[short] Windows: 0x2e91f0
+     * @note[short] iOS: 0x369918
      * @note[short] Android
      */
     virtual void draw();
 
     /**
+     * @note[short] MacOS (ARM): 0xce4e8
+     * @note[short] MacOS (Intel): 0xea380
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void addAudioLineObject(AudioLineGuideGameObject* p0);
+    void addAudioLineObject(AudioLineGuideGameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0xce330
+     * @note[short] MacOS (Intel): 0xea200
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x35e26c
      * @note[short] Android
      */
-    void addToEffects(EffectGameObject* p0);
+    void addToEffects(EffectGameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0xce7e0
+     * @note[short] MacOS (Intel): 0xea980
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x35e5ec
      * @note[short] Android
      */
-    void addToGuides(GameObject* p0);
+    void addToGuides(GameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0xce86c
+     * @note[short] MacOS (Intel): 0xeaa00
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x35e678
      * @note[short] Android
      */
-    void addToSpeedObjects(EffectGameObject* p0);
+    void addToSpeedObjects(EffectGameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0xdfeac
+     * @note[short] MacOS (Intel): 0x100ed0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x369744
      * @note[short] Android
      */
-    cocos2d::CCPoint getPortalMinMax(GameObject* p0);
+    cocos2d::CCPoint getPortalMinMax(GameObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0xd9aa0
-     * @note[short] MacOS (Intel): 0xf59b0
-     * @note[short] iOS: 0x3655bc
+     * @note[short] MacOS (ARM): 0xdfd40
+     * @note[short] MacOS (Intel): 0x100d30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x369608
      * @note[short] Android
      */
-    bool init(cocos2d::CCNode* p0, LevelEditorLayer* p1);
+    bool init(cocos2d::CCNode* parent, LevelEditorLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0xc6aa4
-     * @note[short] MacOS (Intel): 0xdf600
-     * @note[short] Windows: 0x2db3d0
-     * @note[short] iOS: 0x358dbc
+     * @note[short] MacOS (ARM): 0xc4d18
+     * @note[short] MacOS (Intel): 0xdefd0
+     * @note[short] Windows: 0x2e8cd0
+     * @note[short] iOS: 0x359434
      * @note[short] Android: Rebinded
      */
-    void loadTimeMarkers(gd::string p0);
+    void loadTimeMarkers(gd::string markers);
 
     /**
-     * @note[short] MacOS (ARM): 0xd449c
-     * @note[short] MacOS (Intel): 0xef340
+     * @note[short] MacOS (ARM): 0xd3974
+     * @note[short] MacOS (Intel): 0xf07e0
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
@@ -93,50 +114,82 @@ public:
     cocos2d::CCPoint posForTime(float time);
 
     /**
+     * @note[short] MacOS (ARM): 0xdff6c
+     * @note[short] MacOS (Intel): 0x100f90
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void postUpdate();
 
     /**
+     * @note[short] MacOS (ARM): 0xce7a8
+     * @note[short] MacOS (Intel): 0xea930
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void removeAudioLineObject(AudioLineGuideGameObject* p0);
+    void removeAudioLineObject(AudioLineGuideGameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0xce778
+     * @note[short] MacOS (Intel): 0xea900
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void removeFromEffects(EffectGameObject* p0);
+    void removeFromEffects(EffectGameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0xce7d4
+     * @note[short] MacOS (Intel): 0xea960
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x35e5e0
      * @note[short] Android
      */
-    void removeFromGuides(GameObject* p0);
+    void removeFromGuides(GameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0xce820
+     * @note[short] MacOS (Intel): 0xea9c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x35e62c
      * @note[short] Android
      */
-    void removeFromSpeedObjects(EffectGameObject* p0);
+    void removeFromSpeedObjects(EffectGameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0xdfe9c
+     * @note[short] MacOS (Intel): 0x100eb0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void sortSpeedObjects();
 
     /**
-     * @note[short] MacOS (ARM): 0xd2ce4
-     * @note[short] MacOS (Intel): 0xed530
+     * @note[short] MacOS (ARM): 0xd23e0
+     * @note[short] MacOS (Intel): 0xeecf0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x360104
+     * @note[short] iOS: 0x3609a8
      * @note[short] Android
      */
     float timeForPos(cocos2d::CCPoint position, int order, int channel, bool songTriggers, bool ignoreWarp, bool ignoreRotate, int id);
 
     /**
+     * @note[short] MacOS (ARM): 0xe007c
+     * @note[short] MacOS (Intel): 0x101120
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x369908
      * @note[short] Android
      */
-    void updateMusicGuideTime(float p0);
+    void updateMusicGuideTime(float time);
 
     /**
+     * @note[short] MacOS (ARM): 0xd2334
+     * @note[short] MacOS (Intel): 0xeec50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x36090c
      * @note[short] Android
      */
     void updateTimeMarkers();

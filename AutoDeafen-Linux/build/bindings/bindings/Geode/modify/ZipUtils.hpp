@@ -25,11 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(base64URLEncode) 
 	#endif
 
-	#ifndef GEODE_STATICS_ccDecodeEncodedPvr
-		#define GEODE_STATICS_ccDecodeEncodedPvr
-		GEODE_AS_STATIC_FUNCTION(ccDecodeEncodedPvr) 
-	#endif
-
 	#ifndef GEODE_STATICS_ccDeflateMemory
 		#define GEODE_STATICS_ccDeflateMemory
 		GEODE_AS_STATIC_FUNCTION(ccDeflateMemory) 
@@ -60,24 +55,19 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(compressString) 
 	#endif
 
-	#ifndef GEODE_STATICS_decompressString2
-		#define GEODE_STATICS_decompressString2
-		GEODE_AS_STATIC_FUNCTION(decompressString2) 
-	#endif
-
 	#ifndef GEODE_STATICS_decompressString
 		#define GEODE_STATICS_decompressString
 		GEODE_AS_STATIC_FUNCTION(decompressString) 
 	#endif
 
+	#ifndef GEODE_STATICS_decompressString2
+		#define GEODE_STATICS_decompressString2
+		GEODE_AS_STATIC_FUNCTION(decompressString2) 
+	#endif
+
 	#ifndef GEODE_STATICS_encryptDecrypt
 		#define GEODE_STATICS_encryptDecrypt
 		GEODE_AS_STATIC_FUNCTION(encryptDecrypt) 
-	#endif
-
-	#ifndef GEODE_STATICS_encryptDecryptWKey
-		#define GEODE_STATICS_encryptDecryptWKey
-		GEODE_AS_STATIC_FUNCTION(encryptDecryptWKey) 
 	#endif
 
 	#ifndef GEODE_STATICS_hexToChar
@@ -111,11 +101,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(base64URLEncode) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_ccDecodeEncodedPvr
-		#define GEODE_CONCEPT_CHECK_ccDecodeEncodedPvr
-		GEODE_CONCEPT_FUNCTION_CHECK(ccDecodeEncodedPvr) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_ccDeflateMemory
 		#define GEODE_CONCEPT_CHECK_ccDeflateMemory
 		GEODE_CONCEPT_FUNCTION_CHECK(ccDeflateMemory) 
@@ -146,14 +131,14 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(compressString) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_decompressString2
-		#define GEODE_CONCEPT_CHECK_decompressString2
-		GEODE_CONCEPT_FUNCTION_CHECK(decompressString2) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_decompressString
 		#define GEODE_CONCEPT_CHECK_decompressString
 		GEODE_CONCEPT_FUNCTION_CHECK(decompressString) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_decompressString2
+		#define GEODE_CONCEPT_CHECK_decompressString2
+		GEODE_CONCEPT_FUNCTION_CHECK(decompressString2) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_encryptDecrypt
@@ -189,17 +174,16 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<gd::string const&, gd::string>::func(&cocos2d::ZipUtils::base64EncodeEnc)), Default, cocos2d::ZipUtils, base64EncodeEnc, gd::string const&, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<gd::string const&>::func(&cocos2d::ZipUtils::base64URLDecode)), Default, cocos2d::ZipUtils, base64URLDecode, gd::string const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<gd::string const&>::func(&cocos2d::ZipUtils::base64URLEncode)), Default, cocos2d::ZipUtils, base64URLEncode, gd::string const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int*, int>::func(&cocos2d::ZipUtils::ccDecodeEncodedPvr)), Default, cocos2d::ZipUtils, ccDecodeEncodedPvr, unsigned int*, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned char*, unsigned int, unsigned char**>::func(&cocos2d::ZipUtils::ccDeflateMemory)), Default, cocos2d::ZipUtils, ccDeflateMemory, unsigned char*, unsigned int, unsigned char**)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, unsigned char**>::func(&cocos2d::ZipUtils::ccInflateCCZFile)), Default, cocos2d::ZipUtils, ccInflateCCZFile, char const*, unsigned char**)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, unsigned char**>::func(&cocos2d::ZipUtils::ccInflateGZipFile)), Default, cocos2d::ZipUtils, ccInflateGZipFile, char const*, unsigned char**)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int, unsigned int, unsigned int, unsigned int>::func(&cocos2d::ZipUtils::ccSetPvrEncryptionKey)), Default, cocos2d::ZipUtils, ccSetPvrEncryptionKey, unsigned int, unsigned int, unsigned int, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int, unsigned int>::func(&cocos2d::ZipUtils::ccSetPvrEncryptionKeyPart)), Default, cocos2d::ZipUtils, ccSetPvrEncryptionKeyPart, int, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<gd::string const&, bool, int>::func(&cocos2d::ZipUtils::compressString)), Default, cocos2d::ZipUtils, compressString, gd::string const&, bool, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned char*, bool, int, int>::func(&cocos2d::ZipUtils::decompressString2)), Default, cocos2d::ZipUtils, decompressString2, unsigned char*, bool, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<gd::string const&, bool, int>::func(&cocos2d::ZipUtils::decompressString)), Default, cocos2d::ZipUtils, decompressString, gd::string const&, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned char*, bool, int, int>::func(&cocos2d::ZipUtils::decompressString2)), Default, cocos2d::ZipUtils, decompressString2, unsigned char*, bool, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<gd::string const&, int>::func(&cocos2d::ZipUtils::encryptDecrypt)), Default, cocos2d::ZipUtils, encryptDecrypt, gd::string const&, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<gd::string const&, gd::string>::func(&cocos2d::ZipUtils::encryptDecryptWKey)), Default, cocos2d::ZipUtils, encryptDecryptWKey, gd::string const&, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(cocos2d::ZipUtils, encryptDecryptWKey, gd::string const&, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<gd::string const&>::func(&cocos2d::ZipUtils::hexToChar)), Default, cocos2d::ZipUtils, hexToChar, gd::string const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<gd::string const&>::func(&cocos2d::ZipUtils::urlDecode)), Default, cocos2d::ZipUtils, urlDecode, gd::string const&)
 		}

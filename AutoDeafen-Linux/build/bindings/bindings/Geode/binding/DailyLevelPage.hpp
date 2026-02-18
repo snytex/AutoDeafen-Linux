@@ -19,197 +19,211 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(DailyLevelPage, FLAlertLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x1d0d8c
-     * @note[short] MacOS (Intel): 0x21e2b0
-     * @note[short] Windows: 0xccfd0
-     * @note[short] iOS: 0x1baec4
+     * @note[short] MacOS (ARM): 0x1d968c
+     * @note[short] MacOS (Intel): 0x2300b0
+     * @note[short] Windows: 0xce400
+     * @note[short] iOS: 0x1b8f18
      * @note[short] Android
      */
-    static DailyLevelPage* create(GJTimedLevelType p0);
+    static DailyLevelPage* create(GJTimedLevelType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d3438
-     * @note[short] MacOS (Intel): 0x220540
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x1bca50
+     * @note[short] MacOS (ARM): 0x1dbd7c
+     * @note[short] MacOS (Intel): 0x232350
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x1baa94
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x1d339c
-     * @note[short] MacOS (Intel): 0x2204b0
-     * @note[short] Windows: 0x86980
-     * @note[short] iOS: 0x1bca44
+     * @note[short] MacOS (ARM): 0x1dbce0
+     * @note[short] MacOS (Intel): 0x2322c0
+     * @note[short] Windows: 0x869d0
+     * @note[short] iOS: 0x1baa88
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x1d3210
-     * @note[short] MacOS (Intel): 0x220310
-     * @note[short] Windows: 0x867a0
-     * @note[short] iOS: 0x1bc8c8
+     * @note[short] MacOS (ARM): 0x1dbb50
+     * @note[short] MacOS (Intel): 0x232120
+     * @note[short] Windows: 0x867f0
+     * @note[short] iOS: 0x1ba908
      * @note[short] Android
      */
     virtual void show();
 
     /**
-     * @note[short] MacOS (ARM): 0x1d3394
-     * @note[short] MacOS (Intel): 0x220490
+     * @note[short] MacOS (ARM): 0x1dbcd8
+     * @note[short] MacOS (Intel): 0x2322a0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1bca3c
-     * @note[short] Android: Out of line
-     */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x1d28e4
-     * @note[short] MacOS (Intel): 0x21f9a0
-     * @note[short] Windows: 0xce560
-     * @note[short] iOS: 0x1bc164
+     * @note[short] iOS: 0x1baa80
      * @note[short] Android
      */
-    virtual void dailyStatusFinished(GJTimedLevelType p0);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d2cd0
-     * @note[short] MacOS (Intel): 0x21fde0
-     * @note[short] Windows: 0xce860
-     * @note[short] iOS: 0x1bc4a8
+     * @note[short] MacOS (ARM): 0x1db1cc
+     * @note[short] MacOS (Intel): 0x231790
+     * @note[short] Windows: 0xcf990
+     * @note[short] iOS: 0x1ba190
      * @note[short] Android
      */
-    virtual void dailyStatusFailed(GJTimedLevelType p0, GJErrorCode p1);
+    virtual void dailyStatusFinished(GJTimedLevelType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d2f0c
-     * @note[short] MacOS (Intel): 0x220030
-     * @note[short] Windows: 0xceb90
-     * @note[short] iOS: 0x1bc67c
+     * @note[short] MacOS (ARM): 0x1db5d8
+     * @note[short] MacOS (Intel): 0x231be0
+     * @note[short] Windows: 0xcfc90
+     * @note[short] iOS: 0x1ba4e0
      * @note[short] Android
      */
-    virtual void levelDownloadFinished(GJGameLevel* p0);
+    virtual void dailyStatusFailed(GJTimedLevelType type, GJErrorCode errorType);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d2fec
-     * @note[short] MacOS (Intel): 0x2200f0
-     * @note[short] Windows: 0xcebf0
-     * @note[short] iOS: 0x1bc6f4
+     * @note[short] MacOS (ARM): 0x1db844
+     * @note[short] MacOS (Intel): 0x231e30
+     * @note[short] Windows: 0xcffc0
+     * @note[short] iOS: 0x1ba6bc
      * @note[short] Android
      */
-    virtual void levelDownloadFailed(int p0);
+    virtual void levelDownloadFinished(GJGameLevel* level);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d3470
-     * @note[short] MacOS (Intel): 0x220580
-     * @note[short] Windows: 0xd06b0
+     * @note[short] MacOS (ARM): 0x1db92c
+     * @note[short] MacOS (Intel): 0x231ef0
+     * @note[short] Windows: 0xd0020
+     * @note[short] iOS: 0x1ba734
      * @note[short] Android
      */
-    void claimLevelReward(DailyLevelNode* p0, GJGameLevel* p1, cocos2d::CCPoint p2);
+    virtual void levelDownloadFailed(int response);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d2700
-     * @note[short] MacOS (Intel): 0x21f7b0
-     * @note[short] Windows: 0xcee40
-     * @note[short] iOS: 0x1bbfc4
+     * @note[short] MacOS (ARM): 0x1dbdb4
+     * @note[short] MacOS (Intel): 0x232390
+     * @note[short] Windows: 0xd1ae0
+     * @note[short] iOS: 0x1baacc
      * @note[short] Android
      */
-    void createDailyNode(GJGameLevel* p0, bool p1, float p2, bool p3);
+    void claimLevelReward(DailyLevelNode* node, GJGameLevel* level, cocos2d::CCPoint position);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d302c
-     * @note[short] MacOS (Intel): 0x220130
-     * @note[short] Windows: 0xced50
-     * @note[short] iOS: 0x1bc734
+     * @note[short] MacOS (ARM): 0x1dafe8
+     * @note[short] MacOS (Intel): 0x2315a0
+     * @note[short] Windows: 0xd0270
+     * @note[short] iOS: 0x1b9ff0
+     * @note[short] Android
+     */
+    void createDailyNode(GJGameLevel* level, bool instant, float delay, bool isNew);
+
+    /**
+     * @note[short] MacOS (ARM): 0x1db96c
+     * @note[short] MacOS (Intel): 0x231f40
+     * @note[short] Windows: 0xd0180
+     * @note[short] iOS: 0x1ba774
      * @note[short] Android
      */
     void createNodeIfLoaded();
 
     /**
-     * @note[short] Windows: 0xceca0
-     * @note[short] iOS: 0x1bc3c4
+     * @note[short] MacOS (ARM): 0x1db4f0
+     * @note[short] MacOS (Intel): 0x231ae0
+     * @note[short] Windows: 0xd00d0
+     * @note[short] iOS: 0x1ba3f8
      * @note[short] Android
      */
     void downloadAndCreateNode();
 
     /**
-     * @note[short] MacOS (ARM): 0x1d2b34
-     * @note[short] MacOS (Intel): 0x21fc20
+     * @note[short] MacOS (ARM): 0x1db438
+     * @note[short] MacOS (Intel): 0x231a20
+     * @note[short] Windows: 0xd0560
+     * @note[short] iOS: 0x1ba344
      * @note[short] Android
      */
-    void exitDailyNode(DailyLevelNode* p0, float p1);
+    void exitDailyNode(DailyLevelNode* node, float delay);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d3198
-     * @note[short] MacOS (Intel): 0x2202a0
+     * @note[short] MacOS (ARM): 0x1dbad8
+     * @note[short] MacOS (Intel): 0x2320b0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1ba894
      * @note[short] Android
      */
     int getDailyTime();
 
     /**
-     * @note[short] MacOS (ARM): 0x1d1e6c
-     * @note[short] MacOS (Intel): 0x21f120
-     * @note[short] Windows: 0xcf200
-     * @note[short] iOS: 0x1bbb24
+     * @note[short] MacOS (ARM): 0x1da76c
+     * @note[short] MacOS (Intel): 0x230f10
+     * @note[short] Windows: 0xd0630
+     * @note[short] iOS: 0x1b9b60
      * @note[short] Android
      */
     gd::string getDailyTimeString(int timeLeft);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d0ebc
-     * @note[short] MacOS (Intel): 0x21e440
-     * @note[short] Windows: 0xcd110
-     * @note[short] iOS: 0x1baf38
+     * @note[short] MacOS (ARM): 0x1d97bc
+     * @note[short] MacOS (Intel): 0x230240
+     * @note[short] Windows: 0xce540
+     * @note[short] iOS: 0x1b8f8c
      * @note[short] Android
      */
-    bool init(GJTimedLevelType p0);
+    bool init(GJTimedLevelType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d1db4
-     * @note[short] MacOS (Intel): 0x21f070
-     * @note[short] Windows: 0x86940
-     * @note[short] iOS: 0x1bba6c
+     * @note[short] MacOS (ARM): 0x1da6b4
+     * @note[short] MacOS (Intel): 0x230e60
+     * @note[short] Windows: 0x86990
+     * @note[short] iOS: 0x1b9aa8
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1d1e00
-     * @note[short] MacOS (Intel): 0x21f0b0
-     * @note[short] Windows: 0xd0bb0
-     * @note[short] iOS: 0x1bbab8
+     * @note[short] MacOS (ARM): 0x1da700
+     * @note[short] MacOS (Intel): 0x230ea0
+     * @note[short] Windows: 0xd1fe0
+     * @note[short] iOS: 0x1b9af4
      * @note[short] Android
      */
     void onTheSafe(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x1dc060
+     * @note[short] MacOS (Intel): 0x232610
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1bad14
      * @note[short] Android
      */
     void refreshDailyPage();
 
     /**
-     * @note[short] MacOS (ARM): 0x1d3620
-     * @note[short] MacOS (Intel): 0x220700
-     * @note[short] Windows: 0xd0980
-     * @note[short] iOS: 0x1bcbdc
+     * @note[short] MacOS (ARM): 0x1dbf6c
+     * @note[short] MacOS (Intel): 0x232510
+     * @note[short] Windows: 0xd1db0
+     * @note[short] iOS: 0x1bac20
      * @note[short] Android
      */
-    void skipDailyLevel(DailyLevelNode* p0, GJGameLevel* p1);
+    void skipDailyLevel(DailyLevelNode* node, GJGameLevel* level);
 
     /**
-     * @note[short] Windows: 0xcec10
+     * @note[short] MacOS (ARM): 0x1db7d4
+     * @note[short] MacOS (Intel): 0x231db0
+     * @note[short] Windows: 0xd0040
+     * @note[short] iOS: 0x1ba64c
      * @note[short] Android
      */
     void tryGetDailyStatus();
 
     /**
-     * @note[short] MacOS (ARM): 0x1d24a8
-     * @note[short] MacOS (Intel): 0x21f570
-     * @note[short] Windows: 0xd0360
-     * @note[short] iOS: 0x1bbe2c
+     * @note[short] MacOS (ARM): 0x1dad8c
+     * @note[short] MacOS (Intel): 0x231360
+     * @note[short] Windows: 0xd1790
+     * @note[short] iOS: 0x1b9e58
      * @note[short] Android
      */
-    void updateTimers(float p0);
+    void updateTimers(float dt);
     cocos2d::CCLabelBMFont* m_timeLabel;
     LoadingCircle* m_timeCircle;
     LoadingCircle* m_nodeCircle;

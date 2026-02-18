@@ -25,64 +25,64 @@ public:
      CustomListView();
 
     /**
-     * @note[short] MacOS (ARM): 0x1df724
-     * @note[short] MacOS (Intel): 0x22eb50
-     * @note[short] Windows: 0xaa010
-     * @note[short] iOS: 0x10364c
-     * @note[short] Android
-     */
-    static CustomListView* create(cocos2d::CCArray* p0, TableViewCellDelegate* p1, float p2, float p3, int p4, BoomListType p5, float p6);
-
-    /**
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    static CustomListView* create(cocos2d::CCArray* entries, BoomListType type, float width, float height);
+    static CustomListView* create(cocos2d::CCArray* entries, BoomListType type, float height, float width);
 
     /**
-     * @note[short] MacOS (ARM): 0x1eb7bc
-     * @note[short] MacOS (Intel): 0x23b7f0
-     * @note[short] Windows: 0xab5c0
-     * @note[short] iOS: 0x10e1ec
+     * @note[short] MacOS (ARM): 0x1e7ea8
+     * @note[short] MacOS (Intel): 0x240610
+     * @note[short] Windows: 0xaa720
+     * @note[short] iOS: 0x10062c
      * @note[short] Android
      */
-    virtual void setupList(float p0);
+    static CustomListView* create(cocos2d::CCArray* entries, TableViewCellDelegate* delegate, float height, float width, int page, BoomListType type, float y);
 
     /**
-     * @note[short] MacOS (ARM): 0x1df834
-     * @note[short] MacOS (Intel): 0x22ec90
-     * @note[short] Windows: 0xaa140
-     * @note[short] iOS: 0x10375c
+     * @note[short] MacOS (ARM): 0x1e8934
+     * @note[short] MacOS (Intel): 0x241820
+     * @note[short] Windows: 0xab500
+     * @note[short] iOS: 0x100e7c
      * @note[short] Android
      */
-    virtual TableViewCell* getListCell(char const* p0);
+    static float getCellHeight(BoomListType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x1e0870
-     * @note[short] MacOS (Intel): 0x230830
-     * @note[short] Windows: 0xaaf00
-     * @note[short] iOS: 0x103ec4
+     * @note[short] MacOS (ARM): 0x1f43d4
+     * @note[short] MacOS (Intel): 0x24d7d0
+     * @note[short] Windows: 0xabcd0
+     * @note[short] iOS: 0x10b59c
      * @note[short] Android
      */
-    virtual void loadCell(TableViewCell* p0, int p1);
+    virtual void setupList(float yOffset);
 
     /**
-     * @note[short] MacOS (ARM): 0x1e01b0
-     * @note[short] MacOS (Intel): 0x22fd60
-     * @note[short] Windows: 0xaadf0
-     * @note[short] iOS: 0x103e9c
+     * @note[short] MacOS (ARM): 0x1e7fb8
+     * @note[short] MacOS (Intel): 0x240750
+     * @note[short] Windows: 0xaa850
+     * @note[short] iOS: 0x10073c
      * @note[short] Android
      */
-    static float getCellHeight(BoomListType p0);
+    virtual TableViewCell* getListCell(char const* identifier);
 
     /**
-     * @note[short] MacOS (ARM): 0x1ebe10
-     * @note[short] MacOS (Intel): 0x23bfe0
-     * @note[short] Windows: 0xabc90
-     * @note[short] iOS: 0x10e7b0
+     * @note[short] MacOS (ARM): 0x1e8ff4
+     * @note[short] MacOS (Intel): 0x2422f0
+     * @note[short] Windows: 0xab610
+     * @note[short] iOS: 0x100ea4
+     * @note[short] Android
+     */
+    virtual void loadCell(TableViewCell* cell, int index);
+
+    /**
+     * @note[short] MacOS (ARM): 0x1f4988
+     * @note[short] MacOS (Intel): 0x24df90
+     * @note[short] Windows: 0xac3a0
+     * @note[short] iOS: 0x10badc
      * @note[short] Android
      */
     void reloadAll();

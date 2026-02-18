@@ -10,21 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(lightningWithStrikePoint) 
 	#endif
 
-	#ifndef GEODE_STATICS_initWithStrikePoint
-		#define GEODE_STATICS_initWithStrikePoint
-		GEODE_AS_STATIC_FUNCTION(initWithStrikePoint) 
-	#endif
-
-	#ifndef GEODE_STATICS_strike
-		#define GEODE_STATICS_strike
-		GEODE_AS_STATIC_FUNCTION(strike) 
-	#endif
-
-	#ifndef GEODE_STATICS_strikeFinished
-		#define GEODE_STATICS_strikeFinished
-		GEODE_AS_STATIC_FUNCTION(strikeFinished) 
-	#endif
-
 	#ifndef GEODE_STATICS_draw
 		#define GEODE_STATICS_draw
 		GEODE_AS_STATIC_FUNCTION(draw) 
@@ -100,35 +85,25 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(setCascadeColorEnabled) 
 	#endif
 
+	#ifndef GEODE_STATICS_initWithStrikePoint
+		#define GEODE_STATICS_initWithStrikePoint
+		GEODE_AS_STATIC_FUNCTION(initWithStrikePoint) 
+	#endif
+
+	#ifndef GEODE_STATICS_strike
+		#define GEODE_STATICS_strike
+		GEODE_AS_STATIC_FUNCTION(strike) 
+	#endif
+
+	#ifndef GEODE_STATICS_strikeFinished
+		#define GEODE_STATICS_strikeFinished
+		GEODE_AS_STATIC_FUNCTION(strikeFinished) 
+	#endif
+
     
 	#ifndef GEODE_CONCEPT_CHECK_lightningWithStrikePoint
 		#define GEODE_CONCEPT_CHECK_lightningWithStrikePoint
 		GEODE_CONCEPT_FUNCTION_CHECK(lightningWithStrikePoint) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_initWithStrikePoint
-		#define GEODE_CONCEPT_CHECK_initWithStrikePoint
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithStrikePoint) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_strike
-		#define GEODE_CONCEPT_CHECK_strike
-		GEODE_CONCEPT_FUNCTION_CHECK(strike) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_strikeFinished
-		#define GEODE_CONCEPT_CHECK_strikeFinished
-		GEODE_CONCEPT_FUNCTION_CHECK(strikeFinished) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_strikeRandom
-		#define GEODE_CONCEPT_CHECK_strikeRandom
-		GEODE_CONCEPT_FUNCTION_CHECK(strikeRandom) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_strikeWithSeed
-		#define GEODE_CONCEPT_CHECK_strikeWithSeed
-		GEODE_CONCEPT_FUNCTION_CHECK(strikeWithSeed) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_draw
@@ -206,6 +181,31 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(setCascadeColorEnabled) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_initWithStrikePoint
+		#define GEODE_CONCEPT_CHECK_initWithStrikePoint
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithStrikePoint) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_strike
+		#define GEODE_CONCEPT_CHECK_strike
+		GEODE_CONCEPT_FUNCTION_CHECK(strike) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_strikeFinished
+		#define GEODE_CONCEPT_CHECK_strikeFinished
+		GEODE_CONCEPT_FUNCTION_CHECK(strikeFinished) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_strikeRandom
+		#define GEODE_CONCEPT_CHECK_strikeRandom
+		GEODE_CONCEPT_FUNCTION_CHECK(strikeRandom) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_strikeWithSeed
+		#define GEODE_CONCEPT_CHECK_strikeWithSeed
+		GEODE_CONCEPT_FUNCTION_CHECK(strikeWithSeed) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::CCLightning> : ModifyBase<ModifyDerive<Der, cocos2d::CCLightning>> {
@@ -215,30 +215,30 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44540, Default, cocos2d::CCLightning, lightningWithStrikePoint, cocos2d::CCPoint, cocos2d::CCPoint, float)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x44470, Thiscall, cocos2d::CCLightning, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(cocos2d::CCLightning, lightningWithStrikePoint, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x439e0, Thiscall, cocos2d::CCLightning, initWithStrikePoint, cocos2d::CCPoint, cocos2d::CCPoint, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x445b0, Default, cocos2d::CCLightning, lightningWithStrikePoint, cocos2d::CCPoint, cocos2d::CCPoint, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44770, Thiscall, cocos2d::CCLightning, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449d0, Thiscall, cocos2d::CCLightning, isOpacityModifyRGB, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449e0, Thiscall, cocos2d::CCLightning, setOpacityModifyRGB, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44980, Thiscall, cocos2d::CCLightning, getOpacity, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44990, Thiscall, cocos2d::CCLightning, getDisplayedOpacity, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449a0, Thiscall, cocos2d::CCLightning, setOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449f0, Thiscall, cocos2d::CCLightning, updateDisplayedOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44a00, Thiscall, cocos2d::CCLightning, isCascadeOpacityEnabled, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44a10, Thiscall, cocos2d::CCLightning, setCascadeOpacityEnabled, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449b0, Thiscall, cocos2d::CCLightning, getColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44a20, Thiscall, cocos2d::CCLightning, getDisplayedColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449c0, Thiscall, cocos2d::CCLightning, setColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44a30, Thiscall, cocos2d::CCLightning, updateDisplayedColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44a40, Thiscall, cocos2d::CCLightning, isCascadeColorEnabled, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44a50, Thiscall, cocos2d::CCLightning, setCascadeColorEnabled, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(cocos2d::CCLightning, initWithStrikePoint, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x44400, Thiscall, cocos2d::CCLightning, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44880, Thiscall, cocos2d::CCLightning, strike, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x448f0, Thiscall, cocos2d::CCLightning, strikeFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44650, Thiscall, cocos2d::CCLightning, initWithStrikePoint, cocos2d::CCPoint, cocos2d::CCPoint, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x448f0, Thiscall, cocos2d::CCLightning, strike, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44960, Thiscall, cocos2d::CCLightning, strikeFinished, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(cocos2d::CCLightning, strikeRandom, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(cocos2d::CCLightning, strikeWithSeed, uint64_t)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44700, Thiscall, cocos2d::CCLightning, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44960, Thiscall, cocos2d::CCLightning, isOpacityModifyRGB, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44970, Thiscall, cocos2d::CCLightning, setOpacityModifyRGB, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44910, Thiscall, cocos2d::CCLightning, getOpacity, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44920, Thiscall, cocos2d::CCLightning, getDisplayedOpacity, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44930, Thiscall, cocos2d::CCLightning, setOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44980, Thiscall, cocos2d::CCLightning, updateDisplayedOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44990, Thiscall, cocos2d::CCLightning, isCascadeOpacityEnabled, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449a0, Thiscall, cocos2d::CCLightning, setCascadeOpacityEnabled, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44940, Thiscall, cocos2d::CCLightning, getColor, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449b0, Thiscall, cocos2d::CCLightning, getDisplayedColor, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44950, Thiscall, cocos2d::CCLightning, setColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449c0, Thiscall, cocos2d::CCLightning, updateDisplayedColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449d0, Thiscall, cocos2d::CCLightning, isCascadeColorEnabled, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449e0, Thiscall, cocos2d::CCLightning, setCascadeColorEnabled, bool)
 		}
 	};
 }

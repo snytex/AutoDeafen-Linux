@@ -13,10 +13,10 @@ class SavedObjectStateRef {
 public:
     static constexpr auto CLASS_NAME = "SavedObjectStateRef";
     GameObject* m_gameObject;
-    double m_unkDouble1;
-    double m_unkDouble2;
-    float m_unkFloat1;
-    float m_unkFloat2;
+    double m_positionX;
+    double m_positionY;
+    float m_rotationXOffset;
+    float m_rotationYOffset;
     float m_addToCustomScaleX;
     float m_addToCustomScaleY;
     float m_unkFloat3;

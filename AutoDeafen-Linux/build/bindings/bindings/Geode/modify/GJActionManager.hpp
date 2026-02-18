@@ -10,31 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_getInternalAction
-		#define GEODE_STATICS_getInternalAction
-		GEODE_AS_STATIC_FUNCTION(getInternalAction) 
-	#endif
-
-	#ifndef GEODE_STATICS_runInternalAction
-		#define GEODE_STATICS_runInternalAction
-		GEODE_AS_STATIC_FUNCTION(runInternalAction) 
-	#endif
-
-	#ifndef GEODE_STATICS_stopAllInternalActions
-		#define GEODE_STATICS_stopAllInternalActions
-		GEODE_AS_STATIC_FUNCTION(stopAllInternalActions) 
-	#endif
-
-	#ifndef GEODE_STATICS_stopInternalAction
-		#define GEODE_STATICS_stopInternalAction
-		GEODE_AS_STATIC_FUNCTION(stopInternalAction) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateInternalActions
-		#define GEODE_STATICS_updateInternalActions
-		GEODE_AS_STATIC_FUNCTION(updateInternalActions) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -81,12 +56,12 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJActionManager, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fb510, Thiscall, GJActionManager, init, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJActionManager, getInternalAction, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJActionManager, runInternalAction, cocos2d::CCAction*, cocos2d::CCNode*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJActionManager, stopAllInternalActions, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJActionManager, stopInternalAction, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJActionManager, updateInternalActions, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x200590, Thiscall, GJActionManager, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJActionManager, getInternalAction, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJActionManager, runInternalAction, cocos2d::CCAction*, cocos2d::CCNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJActionManager, stopAllInternalActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJActionManager, stopInternalAction, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJActionManager, updateInternalActions, float, bool)
 		}
 	};
 }

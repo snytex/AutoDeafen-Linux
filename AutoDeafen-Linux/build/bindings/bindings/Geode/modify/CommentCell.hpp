@@ -25,16 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(FLAlert_Clicked) 
 	#endif
 
-	#ifndef GEODE_STATICS_incrementDislikes
-		#define GEODE_STATICS_incrementDislikes
-		GEODE_AS_STATIC_FUNCTION(incrementDislikes) 
-	#endif
-
-	#ifndef GEODE_STATICS_incrementLikes
-		#define GEODE_STATICS_incrementLikes
-		GEODE_AS_STATIC_FUNCTION(incrementLikes) 
-	#endif
-
 	#ifndef GEODE_STATICS_loadFromComment
 		#define GEODE_STATICS_loadFromComment
 		GEODE_AS_STATIC_FUNCTION(loadFromComment) 
@@ -43,11 +33,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onConfirmDelete
 		#define GEODE_STATICS_onConfirmDelete
 		GEODE_AS_STATIC_FUNCTION(onConfirmDelete) 
-	#endif
-
-	#ifndef GEODE_STATICS_onDelete
-		#define GEODE_STATICS_onDelete
-		GEODE_AS_STATIC_FUNCTION(onDelete) 
 	#endif
 
 	#ifndef GEODE_STATICS_onGoToLevel
@@ -60,11 +45,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onLike) 
 	#endif
 
-	#ifndef GEODE_STATICS_onUndelete
-		#define GEODE_STATICS_onUndelete
-		GEODE_AS_STATIC_FUNCTION(onUndelete) 
-	#endif
-
 	#ifndef GEODE_STATICS_onUnhide
 		#define GEODE_STATICS_onUnhide
 		GEODE_AS_STATIC_FUNCTION(onUnhide) 
@@ -73,11 +53,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onViewProfile
 		#define GEODE_STATICS_onViewProfile
 		GEODE_AS_STATIC_FUNCTION(onViewProfile) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateBGColor
-		#define GEODE_STATICS_updateBGColor
-		GEODE_AS_STATIC_FUNCTION(updateBGColor) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateLabelValues
@@ -175,23 +150,23 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0xb53c0, Thiscall, CommentCell, char const*, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb5460, Thiscall, CommentCell, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xad710, Thiscall, CommentCell, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb7750, Thiscall, CommentCell, likedItem, LikeItemType, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb79c0, Thiscall, CommentCell, FLAlert_Clicked, FLAlertLayer*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CommentCell, incrementDislikes, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CommentCell, incrementLikes, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb5480, Thiscall, CommentCell, loadFromComment, GJComment*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb7850, Thiscall, CommentCell, onConfirmDelete, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CommentCell, onDelete, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb7b20, Thiscall, CommentCell, onGoToLevel, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb75f0, Thiscall, CommentCell, onLike, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CommentCell, onUndelete, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb7b00, Thiscall, CommentCell, onUnhide, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CommentCell, onViewProfile, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CommentCell, updateBGColor, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CommentCell, updateLabelValues, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0xb5b40, Thiscall, CommentCell, char const*, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb5be0, Thiscall, CommentCell, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xade20, Thiscall, CommentCell, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb7f60, Thiscall, CommentCell, likedItem, LikeItemType, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb81d0, Thiscall, CommentCell, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CommentCell, incrementDislikes, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CommentCell, incrementLikes, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb5c00, Thiscall, CommentCell, loadFromComment, GJComment*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb8060, Thiscall, CommentCell, onConfirmDelete, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CommentCell, onDelete, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb8330, Thiscall, CommentCell, onGoToLevel, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb7e00, Thiscall, CommentCell, onLike, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CommentCell, onUndelete, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb8310, Thiscall, CommentCell, onUnhide, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb8190, Thiscall, CommentCell, onViewProfile, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CommentCell, updateBGColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb7fa0, Thiscall, CommentCell, updateLabelValues, )
 		}
 	};
 }

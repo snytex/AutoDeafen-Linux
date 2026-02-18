@@ -16,16 +16,20 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupKeyframeAnimPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x40c970
+     * @note[short] MacOS (ARM): 0x1ac018
+     * @note[short] MacOS (Intel): 0x1fea50
+     * @note[short] Windows: 0x4246f0
+     * @note[short] iOS: 0x1b3d54
      * @note[short] Android
      */
-    static SetupKeyframeAnimPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupKeyframeAnimPopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x1a3d5c
-     * @note[short] MacOS (Intel): 0x1ecdd0
-     * @note[short] Windows: 0x40ca80
+     * @note[short] MacOS (ARM): 0x1ac1a0
+     * @note[short] MacOS (Intel): 0x1fec80
+     * @note[short] Windows: 0x424800
+     * @note[short] iOS: 0x1b3e2c
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 };

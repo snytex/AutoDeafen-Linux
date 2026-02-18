@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void loadFRequestsFinished(cocos2d::CCArray* p0, char const* p1);
+    virtual void loadFRequestsFinished(cocos2d::CCArray* scores, char const* key);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,7 +29,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void loadFRequestsFailed(char const* p0, GJErrorCode p1);
+    virtual void loadFRequestsFailed(char const* key, GJErrorCode errorType);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -38,7 +38,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void setupPageInfo(gd::string p0, char const* p1);
+    virtual void setupPageInfo(gd::string info, char const* key);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -47,5 +47,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void forceReloadRequests(bool p0);
+    virtual void forceReloadRequests(bool sent);
 };

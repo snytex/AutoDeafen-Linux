@@ -10,46 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
-	#ifndef GEODE_STATICS_getScriptAccelerateHandlerEntry
-		#define GEODE_STATICS_getScriptAccelerateHandlerEntry
-		GEODE_AS_STATIC_FUNCTION(getScriptAccelerateHandlerEntry) 
-	#endif
-
-	#ifndef GEODE_STATICS_getScriptKeypadHandlerEntry
-		#define GEODE_STATICS_getScriptKeypadHandlerEntry
-		GEODE_AS_STATIC_FUNCTION(getScriptKeypadHandlerEntry) 
-	#endif
-
-	#ifndef GEODE_STATICS_getScriptTouchHandlerEntry
-		#define GEODE_STATICS_getScriptTouchHandlerEntry
-		GEODE_AS_STATIC_FUNCTION(getScriptTouchHandlerEntry) 
-	#endif
-
-	#ifndef GEODE_STATICS_excuteScriptTouchHandler
-		#define GEODE_STATICS_excuteScriptTouchHandler
-		GEODE_AS_STATIC_FUNCTION(excuteScriptTouchHandler) 
-	#endif
-
-	#ifndef GEODE_STATICS_registerScriptAccelerateHandler
-		#define GEODE_STATICS_registerScriptAccelerateHandler
-		GEODE_AS_STATIC_FUNCTION(registerScriptAccelerateHandler) 
-	#endif
-
-	#ifndef GEODE_STATICS_registerScriptKeypadHandler
-		#define GEODE_STATICS_registerScriptKeypadHandler
-		GEODE_AS_STATIC_FUNCTION(registerScriptKeypadHandler) 
-	#endif
-
-	#ifndef GEODE_STATICS_unregisterScriptAccelerateHandler
-		#define GEODE_STATICS_unregisterScriptAccelerateHandler
-		GEODE_AS_STATIC_FUNCTION(unregisterScriptAccelerateHandler) 
-	#endif
-
-	#ifndef GEODE_STATICS_unregisterScriptKeypadHandler
-		#define GEODE_STATICS_unregisterScriptKeypadHandler
-		GEODE_AS_STATIC_FUNCTION(unregisterScriptKeypadHandler) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -230,50 +190,35 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(keyDown) 
 	#endif
 
+	#ifndef GEODE_STATICS_excuteScriptTouchHandler
+		#define GEODE_STATICS_excuteScriptTouchHandler
+		GEODE_AS_STATIC_FUNCTION(excuteScriptTouchHandler) 
+	#endif
+
+	#ifndef GEODE_STATICS_registerScriptAccelerateHandler
+		#define GEODE_STATICS_registerScriptAccelerateHandler
+		GEODE_AS_STATIC_FUNCTION(registerScriptAccelerateHandler) 
+	#endif
+
+	#ifndef GEODE_STATICS_registerScriptKeypadHandler
+		#define GEODE_STATICS_registerScriptKeypadHandler
+		GEODE_AS_STATIC_FUNCTION(registerScriptKeypadHandler) 
+	#endif
+
+	#ifndef GEODE_STATICS_unregisterScriptAccelerateHandler
+		#define GEODE_STATICS_unregisterScriptAccelerateHandler
+		GEODE_AS_STATIC_FUNCTION(unregisterScriptAccelerateHandler) 
+	#endif
+
+	#ifndef GEODE_STATICS_unregisterScriptKeypadHandler
+		#define GEODE_STATICS_unregisterScriptKeypadHandler
+		GEODE_AS_STATIC_FUNCTION(unregisterScriptKeypadHandler) 
+	#endif
+
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getScriptAccelerateHandlerEntry
-		#define GEODE_CONCEPT_CHECK_getScriptAccelerateHandlerEntry
-		GEODE_CONCEPT_FUNCTION_CHECK(getScriptAccelerateHandlerEntry) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getScriptKeypadHandlerEntry
-		#define GEODE_CONCEPT_CHECK_getScriptKeypadHandlerEntry
-		GEODE_CONCEPT_FUNCTION_CHECK(getScriptKeypadHandlerEntry) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getScriptTouchHandlerEntry
-		#define GEODE_CONCEPT_CHECK_getScriptTouchHandlerEntry
-		GEODE_CONCEPT_FUNCTION_CHECK(getScriptTouchHandlerEntry) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_excuteScriptTouchHandler
-		#define GEODE_CONCEPT_CHECK_excuteScriptTouchHandler
-		GEODE_CONCEPT_FUNCTION_CHECK(excuteScriptTouchHandler) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_registerScriptAccelerateHandler
-		#define GEODE_CONCEPT_CHECK_registerScriptAccelerateHandler
-		GEODE_CONCEPT_FUNCTION_CHECK(registerScriptAccelerateHandler) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_registerScriptKeypadHandler
-		#define GEODE_CONCEPT_CHECK_registerScriptKeypadHandler
-		GEODE_CONCEPT_FUNCTION_CHECK(registerScriptKeypadHandler) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_unregisterScriptAccelerateHandler
-		#define GEODE_CONCEPT_CHECK_unregisterScriptAccelerateHandler
-		GEODE_CONCEPT_FUNCTION_CHECK(unregisterScriptAccelerateHandler) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_unregisterScriptKeypadHandler
-		#define GEODE_CONCEPT_CHECK_unregisterScriptKeypadHandler
-		GEODE_CONCEPT_FUNCTION_CHECK(unregisterScriptKeypadHandler) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_init
@@ -456,6 +401,31 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(keyDown) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_excuteScriptTouchHandler
+		#define GEODE_CONCEPT_CHECK_excuteScriptTouchHandler
+		GEODE_CONCEPT_FUNCTION_CHECK(excuteScriptTouchHandler) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_registerScriptAccelerateHandler
+		#define GEODE_CONCEPT_CHECK_registerScriptAccelerateHandler
+		GEODE_CONCEPT_FUNCTION_CHECK(registerScriptAccelerateHandler) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_registerScriptKeypadHandler
+		#define GEODE_CONCEPT_CHECK_registerScriptKeypadHandler
+		GEODE_CONCEPT_FUNCTION_CHECK(registerScriptKeypadHandler) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_unregisterScriptAccelerateHandler
+		#define GEODE_CONCEPT_CHECK_unregisterScriptAccelerateHandler
+		GEODE_CONCEPT_FUNCTION_CHECK(unregisterScriptAccelerateHandler) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_unregisterScriptKeypadHandler
+		#define GEODE_CONCEPT_CHECK_unregisterScriptKeypadHandler
+		GEODE_CONCEPT_FUNCTION_CHECK(unregisterScriptKeypadHandler) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::CCLayer> : ModifyBase<ModifyDerive<Der, cocos2d::CCLayer>> {
@@ -465,18 +435,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLayer::create)), Default, cocos2d::CCLayer, create, )
 			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCLayer@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCLayer, )
 			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCLayer@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCLayer)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLayer::getScriptAccelerateHandlerEntry)), Thiscall, cocos2d::CCLayer, getScriptAccelerateHandlerEntry, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLayer::getScriptKeypadHandlerEntry)), Thiscall, cocos2d::CCLayer, getScriptKeypadHandlerEntry, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLayer::getScriptTouchHandlerEntry)), Thiscall, cocos2d::CCLayer, getScriptTouchHandlerEntry, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int, cocos2d::CCSet*>::func(&cocos2d::CCLayer::excuteScriptTouchHandler)), Thiscall, cocos2d::CCLayer, excuteScriptTouchHandler, int, cocos2d::CCSet*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int, cocos2d::CCTouch*>::func(&cocos2d::CCLayer::excuteScriptTouchHandler)), Thiscall, cocos2d::CCLayer, excuteScriptTouchHandler, int, cocos2d::CCTouch*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int>::func(&cocos2d::CCLayer::registerScriptAccelerateHandler)), Thiscall, cocos2d::CCLayer, registerScriptAccelerateHandler, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int>::func(&cocos2d::CCLayer::registerScriptKeypadHandler)), Thiscall, cocos2d::CCLayer, registerScriptKeypadHandler, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLayer::unregisterScriptAccelerateHandler)), Thiscall, cocos2d::CCLayer, unregisterScriptAccelerateHandler, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLayer::unregisterScriptKeypadHandler)), Thiscall, cocos2d::CCLayer, unregisterScriptKeypadHandler, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLayer::create)), Default, cocos2d::CCLayer, create, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLayer::init)), Thiscall, cocos2d::CCLayer, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLayer::onEnter)), Thiscall, cocos2d::CCLayer, onEnter, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLayer::onEnterTransitionDidFinish)), Thiscall, cocos2d::CCLayer, onEnterTransitionDidFinish, )
@@ -512,7 +473,13 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCAcceleration*>::func(&cocos2d::CCLayer::didAccelerate)), Thiscall, cocos2d::CCLayer, didAccelerate, cocos2d::CCAcceleration*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLayer::keyBackClicked)), Thiscall, cocos2d::CCLayer, keyBackClicked, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLayer::keyMenuClicked)), Thiscall, cocos2d::CCLayer, keyMenuClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::enumKeyCodes>::func(&cocos2d::CCLayer::keyDown)), Thiscall, cocos2d::CCLayer, keyDown, cocos2d::enumKeyCodes)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::enumKeyCodes, double>::func(&cocos2d::CCLayer::keyDown)), Thiscall, cocos2d::CCLayer, keyDown, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int, cocos2d::CCSet*>::func(&cocos2d::CCLayer::excuteScriptTouchHandler)), Thiscall, cocos2d::CCLayer, excuteScriptTouchHandler, int, cocos2d::CCSet*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int, cocos2d::CCTouch*>::func(&cocos2d::CCLayer::excuteScriptTouchHandler)), Thiscall, cocos2d::CCLayer, excuteScriptTouchHandler, int, cocos2d::CCTouch*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int>::func(&cocos2d::CCLayer::registerScriptAccelerateHandler)), Thiscall, cocos2d::CCLayer, registerScriptAccelerateHandler, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int>::func(&cocos2d::CCLayer::registerScriptKeypadHandler)), Thiscall, cocos2d::CCLayer, registerScriptKeypadHandler, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLayer::unregisterScriptAccelerateHandler)), Thiscall, cocos2d::CCLayer, unregisterScriptAccelerateHandler, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLayer::unregisterScriptKeypadHandler)), Thiscall, cocos2d::CCLayer, unregisterScriptKeypadHandler, )
 		}
 	};
 }

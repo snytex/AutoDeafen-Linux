@@ -55,10 +55,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ea050, Default, SetTargetIDLayer, create, EffectGameObject*, cocos2d::CCArray*, gd::string, gd::string, int, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x287910, Thiscall, SetTargetIDLayer, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ea680, Thiscall, SetTargetIDLayer, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ea1e0, Thiscall, SetTargetIDLayer, init, EffectGameObject*, cocos2d::CCArray*, gd::string, gd::string, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x401cd0, Default, SetTargetIDLayer, create, EffectGameObject*, cocos2d::CCArray*, gd::string, gd::string, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28f240, Thiscall, SetTargetIDLayer, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x402300, Thiscall, SetTargetIDLayer, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x401e60, Thiscall, SetTargetIDLayer, init, EffectGameObject*, cocos2d::CCArray*, gd::string, gd::string, int, int, int)
 		}
 	};
 }

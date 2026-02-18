@@ -10,24 +10,19 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(instance) 
 	#endif
 
+	#ifndef GEODE_STATICS_replaceAllOccurencesOfString
+		#define GEODE_STATICS_replaceAllOccurencesOfString
+		GEODE_AS_STATIC_FUNCTION(replaceAllOccurencesOfString) 
+	#endif
+
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_animLoaded
-		#define GEODE_STATICS_animLoaded
-		GEODE_AS_STATIC_FUNCTION(animLoaded) 
-	#endif
-
 	#ifndef GEODE_STATICS_getDefinition
 		#define GEODE_STATICS_getDefinition
 		GEODE_AS_STATIC_FUNCTION(getDefinition) 
-	#endif
-
-	#ifndef GEODE_STATICS_getGlobalAnimCopy
-		#define GEODE_STATICS_getGlobalAnimCopy
-		GEODE_AS_STATIC_FUNCTION(getGlobalAnimCopy) 
 	#endif
 
 	#ifndef GEODE_STATICS_loadCopiedAnimations
@@ -40,21 +35,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(loadCopiedSets) 
 	#endif
 
-	#ifndef GEODE_STATICS_purgeObjectManager
-		#define GEODE_STATICS_purgeObjectManager
-		GEODE_AS_STATIC_FUNCTION(purgeObjectManager) 
-	#endif
-
-	#ifndef GEODE_STATICS_replaceAllOccurencesOfString
-		#define GEODE_STATICS_replaceAllOccurencesOfString
-		GEODE_AS_STATIC_FUNCTION(replaceAllOccurencesOfString) 
-	#endif
-
-	#ifndef GEODE_STATICS_setLoaded
-		#define GEODE_STATICS_setLoaded
-		GEODE_AS_STATIC_FUNCTION(setLoaded) 
-	#endif
-
 	#ifndef GEODE_STATICS_setup
 		#define GEODE_STATICS_setup
 		GEODE_AS_STATIC_FUNCTION(setup) 
@@ -64,6 +44,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_instance
 		#define GEODE_CONCEPT_CHECK_instance
 		GEODE_CONCEPT_FUNCTION_CHECK(instance) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_replaceAllOccurencesOfString
+		#define GEODE_CONCEPT_CHECK_replaceAllOccurencesOfString
+		GEODE_CONCEPT_FUNCTION_CHECK(replaceAllOccurencesOfString) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_init
@@ -101,11 +86,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(purgeObjectManager) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_replaceAllOccurencesOfString
-		#define GEODE_CONCEPT_CHECK_replaceAllOccurencesOfString
-		GEODE_CONCEPT_FUNCTION_CHECK(replaceAllOccurencesOfString) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_setLoaded
 		#define GEODE_CONCEPT_CHECK_setLoaded
 		GEODE_CONCEPT_FUNCTION_CHECK(setLoaded) 
@@ -125,17 +105,17 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6e3d0, Default, ObjectManager, instance, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6e460, Thiscall, ObjectManager, init, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ObjectManager, animLoaded, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6f870, Thiscall, ObjectManager, getDefinition, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ObjectManager, getGlobalAnimCopy, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6e800, Thiscall, ObjectManager, loadCopiedAnimations, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6ed50, Thiscall, ObjectManager, loadCopiedSets, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ObjectManager, purgeObjectManager, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6f1a0, Default, ObjectManager, replaceAllOccurencesOfString, cocos2d::CCString*, cocos2d::CCString*, cocos2d::CCDictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ObjectManager, setLoaded, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6e4c0, Thiscall, ObjectManager, setup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6e400, Default, ObjectManager, instance, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6f1d0, Default, ObjectManager, replaceAllOccurencesOfString, cocos2d::CCString*, cocos2d::CCString*, cocos2d::CCDictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6e490, Thiscall, ObjectManager, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ObjectManager, animLoaded, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6f8a0, Thiscall, ObjectManager, getDefinition, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ObjectManager, getGlobalAnimCopy, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6e830, Thiscall, ObjectManager, loadCopiedAnimations, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6ed80, Thiscall, ObjectManager, loadCopiedSets, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ObjectManager, purgeObjectManager, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ObjectManager, setLoaded, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6e4f0, Thiscall, ObjectManager, setup, )
 		}
 	};
 }

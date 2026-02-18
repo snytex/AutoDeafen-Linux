@@ -5,19 +5,9 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_setupOptions
 		#define GEODE_STATICS_setupOptions
 		GEODE_AS_STATIC_FUNCTION(setupOptions) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
     
@@ -45,9 +35,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelOptionsLayer2, create, LevelSettingsObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30fe20, Thiscall, LevelOptionsLayer2, setupOptions, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelOptionsLayer2, init, LevelSettingsObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelOptionsLayer2, create, LevelSettingsObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3249d0, Thiscall, LevelOptionsLayer2, setupOptions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelOptionsLayer2, init, LevelSettingsObject*)
 		}
 	};
 }

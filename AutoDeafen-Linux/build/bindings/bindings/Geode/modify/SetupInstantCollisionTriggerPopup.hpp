@@ -65,11 +65,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupInstantCollisionTriggerPopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x402bc0, Thiscall, SetupInstantCollisionTriggerPopup, updateDefaultTriggerValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x402990, Thiscall, SetupInstantCollisionTriggerPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x402270, Thiscall, SetupInstantCollisionTriggerPopup, init, EffectGameObject*, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupInstantCollisionTriggerPopup, updateSpecialNodes, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x418140, Thiscall, SetupInstantCollisionTriggerPopup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x419eb0, Default, SetupInstantCollisionTriggerPopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41a890, Thiscall, SetupInstantCollisionTriggerPopup, updateDefaultTriggerValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41a660, Thiscall, SetupInstantCollisionTriggerPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x419f40, Thiscall, SetupInstantCollisionTriggerPopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41a680, Thiscall, SetupInstantCollisionTriggerPopup, updateSpecialNodes, )
 		}
 	};
 }

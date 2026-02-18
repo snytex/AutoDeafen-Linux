@@ -16,25 +16,29 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupAdvFollowEditPhysicsPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x3ef5a0
+     * @note[short] MacOS (ARM): 0x29a258
+     * @note[short] MacOS (Intel): 0x30a4f0
+     * @note[short] Windows: 0x407220
+     * @note[short] iOS: 0x637f8
      * @note[short] Android
      */
-    static SetupAdvFollowEditPhysicsPopup* create(AdvancedFollowEditObject* p0, cocos2d::CCArray* p1);
+    static SetupAdvFollowEditPhysicsPopup* create(AdvancedFollowEditObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x2902dc
-     * @note[short] MacOS (Intel): 0x2f7630
-     * @note[short] Windows: 0x3f0440
-     * @note[short] iOS: 0x68054
+     * @note[short] MacOS (ARM): 0x29aff0
+     * @note[short] MacOS (Intel): 0x30b590
+     * @note[short] Windows: 0x4080c0
+     * @note[short] iOS: 0x64374
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x28f6cc
-     * @note[short] MacOS (Intel): 0x2f6760
-     * @note[short] Windows: 0x3ef6b0
+     * @note[short] MacOS (ARM): 0x29a3e0
+     * @note[short] MacOS (Intel): 0x30a720
+     * @note[short] Windows: 0x407330
+     * @note[short] iOS: 0x638d0
      * @note[short] Android
      */
-    bool init(AdvancedFollowEditObject* p0, cocos2d::CCArray* p1);
+    bool init(AdvancedFollowEditObject* object, cocos2d::CCArray* objects);
 };

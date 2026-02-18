@@ -65,21 +65,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getTeleportXOff) 
 	#endif
 
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
-	#ifndef GEODE_STATICS_setPositionOverride
-		#define GEODE_STATICS_setPositionOverride
-		GEODE_AS_STATIC_FUNCTION(setPositionOverride) 
-	#endif
-
-	#ifndef GEODE_STATICS_setStartPosOverride
-		#define GEODE_STATICS_setStartPosOverride
-		GEODE_AS_STATIC_FUNCTION(setStartPosOverride) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -165,21 +150,21 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x499670, Default, TeleportPortalObject, create, char const*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x499850, Thiscall, TeleportPortalObject, setPosition, cocos2d::CCPoint const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4999d0, Thiscall, TeleportPortalObject, setRotation, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x499790, Thiscall, TeleportPortalObject, setStartPos, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49a500, Thiscall, TeleportPortalObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x499bc0, Thiscall, TeleportPortalObject, getSaveString, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x499a80, Thiscall, TeleportPortalObject, addToGroup, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x499b30, Thiscall, TeleportPortalObject, removeFromGroup, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38c9f0, Thiscall, TeleportPortalObject, setRotation2, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x499a60, Thiscall, TeleportPortalObject, addToGroup2, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x499a70, Thiscall, TeleportPortalObject, removeFromGroup2, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4998f0, Thiscall, TeleportPortalObject, getTeleportXOff, cocos2d::CCNode*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TeleportPortalObject, init, char const*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TeleportPortalObject, setPositionOverride, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TeleportPortalObject, setStartPosOverride, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b21c0, Default, TeleportPortalObject, create, char const*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b23a0, Thiscall, TeleportPortalObject, setPosition, cocos2d::CCPoint const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b2520, Thiscall, TeleportPortalObject, setRotation, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b22e0, Thiscall, TeleportPortalObject, setStartPos, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b3050, Thiscall, TeleportPortalObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b2710, Thiscall, TeleportPortalObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b25d0, Thiscall, TeleportPortalObject, addToGroup, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b2680, Thiscall, TeleportPortalObject, removeFromGroup, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3840, Thiscall, TeleportPortalObject, setRotation2, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b25b0, Thiscall, TeleportPortalObject, addToGroup2, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b25c0, Thiscall, TeleportPortalObject, removeFromGroup2, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b2440, Thiscall, TeleportPortalObject, getTeleportXOff, cocos2d::CCNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TeleportPortalObject, init, char const*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TeleportPortalObject, setPositionOverride, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TeleportPortalObject, setStartPosOverride, cocos2d::CCPoint)
 		}
 	};
 }

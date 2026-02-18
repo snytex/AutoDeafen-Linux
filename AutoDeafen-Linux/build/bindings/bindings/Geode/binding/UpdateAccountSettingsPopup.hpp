@@ -26,59 +26,64 @@ public:
      UpdateAccountSettingsPopup();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x242078
+     * @note[short] MacOS (Intel): 0x2a2f40
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x2d796c
+     * @note[short] Android: Rebinded
      */
      ~UpdateAccountSettingsPopup();
 
     /**
-     * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x2d7418
+     * @note[short] MacOS (ARM): 0x241420
+     * @note[short] MacOS (Intel): 0x2a21a0
+     * @note[short] Windows: 0x294570
+     * @note[short] iOS: 0x2d716c
      * @note[short] Android: Rebinded
      */
-    static UpdateAccountSettingsPopup* create(GJAccountSettingsLayer* p0, int p1, int p2, int p3, gd::string p4, gd::string p5, gd::string p6);
+    static UpdateAccountSettingsPopup* create(GJAccountSettingsLayer* settingsLayer, int messageStatus, int friendStatus, int commentStatus, gd::string youtubeURL, gd::string twitterURL, gd::string twitchURL, gd::string instagramURL, gd::string tiktokURL, gd::string discordUsername, gd::string customString);
 
     /**
-     * @note[short] MacOS (ARM): 0x238b68
-     * @note[short] MacOS (Intel): 0x2905c0
-     * @note[short] Windows: 0x28db10
-     * @note[short] iOS: 0x2d7f70
+     * @note[short] MacOS (ARM): 0x242d3c
+     * @note[short] MacOS (Intel): 0x2a3e00
+     * @note[short] Windows: 0x295170
+     * @note[short] iOS: 0x2d82d8
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x238964
-     * @note[short] MacOS (Intel): 0x2903b0
-     * @note[short] Windows: 0x28d790
-     * @note[short] iOS: 0x2d7dc0
+     * @note[short] MacOS (ARM): 0x242b38
+     * @note[short] MacOS (Intel): 0x2a3bf0
+     * @note[short] Windows: 0x294f30
+     * @note[short] iOS: 0x2d8128
      * @note[short] Android
      */
     virtual void updateSettingsFinished();
 
     /**
-     * @note[short] MacOS (ARM): 0x238a7c
-     * @note[short] MacOS (Intel): 0x2904d0
-     * @note[short] Windows: 0x28d890
-     * @note[short] iOS: 0x2d7ea4
+     * @note[short] MacOS (ARM): 0x242c50
+     * @note[short] MacOS (Intel): 0x2a3d10
+     * @note[short] Windows: 0x295030
+     * @note[short] iOS: 0x2d820c
      * @note[short] Android
      */
     virtual void updateSettingsFailed();
 
     /**
-     * @note[short] MacOS (ARM): 0x2383a0
-     * @note[short] MacOS (Intel): 0x28fd70
-     * @note[short] Windows: 0x28d200
-     * @note[short] iOS: 0x2d7860
+     * @note[short] MacOS (ARM): 0x242374
+     * @note[short] MacOS (Intel): 0x2a3310
+     * @note[short] Windows: 0x294860
+     * @note[short] iOS: 0x2d7a28
      * @note[short] Android: Rebinded
      */
-    bool init(GJAccountSettingsLayer* p0, int p1, int p2, int p3, gd::string p4, gd::string p5, gd::string p6);
+    bool init(GJAccountSettingsLayer* settingsLayer, int messageStatus, int friendStatus, int commentStatus, gd::string youtubeURL, gd::string twitterURL, gd::string twitchURL, gd::string instagramURL, gd::string tiktokURL, gd::string discordUsername, gd::string customString);
 
     /**
-     * @note[short] Windows: 0x28d950
+     * @note[short] MacOS (ARM): 0x242aa0
+     * @note[short] MacOS (Intel): 0x2a3b60
+     * @note[short] Windows: 0x2950f0
+     * @note[short] iOS: 0x2d8090
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);

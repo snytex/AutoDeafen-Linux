@@ -25,72 +25,82 @@ public:
      ShareListLayer();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x2ecc34
+     * @note[short] MacOS (Intel): 0x361a80
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x247f14
+     * @note[short] Android: Rebinded
      */
      ~ShareListLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x2e16e4
-     * @note[short] MacOS (Intel): 0x34cec0
+     * @note[short] MacOS (ARM): 0x2eb7c4
+     * @note[short] MacOS (Intel): 0x3605f0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x246fb0
      * @note[short] Android
      */
     static ShareListLayer* create(GJLevelList* list);
 
     /**
-     * @note[short] MacOS (ARM): 0x2e43a4
-     * @note[short] MacOS (Intel): 0x34fe60
-     * @note[short] Windows: 0x84650
-     * @note[short] iOS: 0x24836c
+     * @note[short] MacOS (ARM): 0x2ee444
+     * @note[short] MacOS (Intel): 0x3634f0
+     * @note[short] Windows: 0x846a0
+     * @note[short] iOS: 0x2492b4
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x2e2da0
-     * @note[short] MacOS (Intel): 0x34e6b0
-     * @note[short] Windows: 0x2f50d0
+     * @note[short] MacOS (ARM): 0x2ece58
+     * @note[short] MacOS (Intel): 0x361db0
+     * @note[short] Windows: 0x309b20
+     * @note[short] iOS: 0x247fb8
      * @note[short] Android
      */
-    bool init(GJLevelList* p0);
+    bool init(GJLevelList* list);
 
     /**
+     * @note[short] MacOS (ARM): 0x2edf74
+     * @note[short] MacOS (Intel): 0x363010
+     * @note[short] Windows: 0x84670
+     * @note[short] iOS: 0x248f04
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2e4024
-     * @note[short] MacOS (Intel): 0x34faa0
-     * @note[short] Windows: 0x2f6270
+     * @note[short] MacOS (ARM): 0x2ee0c8
+     * @note[short] MacOS (Intel): 0x363140
+     * @note[short] Windows: 0x30acc0
+     * @note[short] iOS: 0x249030
      * @note[short] Android
      */
     void onInfo(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2e3f10
-     * @note[short] MacOS (Intel): 0x34f9a0
-     * @note[short] Windows: 0x2f6530
+     * @note[short] MacOS (ARM): 0x2edfb0
+     * @note[short] MacOS (Intel): 0x363040
+     * @note[short] Windows: 0x30af80
+     * @note[short] iOS: 0x248f40
      * @note[short] Android
      */
     void onShare(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2e40dc
-     * @note[short] MacOS (Intel): 0x34fb50
-     * @note[short] Windows: 0x2f63e0
+     * @note[short] MacOS (ARM): 0x2ee184
+     * @note[short] MacOS (Intel): 0x3631f0
+     * @note[short] Windows: 0x30ae30
+     * @note[short] iOS: 0x2490c8
      * @note[short] Android
      */
     void onUnlisted(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2e41dc
-     * @note[short] MacOS (Intel): 0x34fc50
-     * @note[short] Windows: 0x2f6450
+     * @note[short] MacOS (ARM): 0x2ee280
+     * @note[short] MacOS (Intel): 0x3632e0
+     * @note[short] Windows: 0x30aea0
+     * @note[short] iOS: 0x249138
      * @note[short] Android
      */
     void updateUnlistedF();

@@ -19,178 +19,190 @@ public:
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
+     * @note[short] iOS: 0x405c74
      * @note[short] Android: Out of line
      */
      LevelPage();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x3a749c
+     * @note[short] MacOS (Intel): 0x435210
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x403e1c
+     * @note[short] Android: Rebinded
      */
      ~LevelPage();
 
     /**
-     * @note[short] MacOS (ARM): 0x39b290
-     * @note[short] MacOS (Intel): 0x41fda0
+     * @note[short] MacOS (ARM): 0x3a4bcc
+     * @note[short] MacOS (Intel): 0x432840
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3fa19c
+     * @note[short] iOS: 0x40222c
      * @note[short] Android
      */
     static LevelPage* create(GJGameLevel* level);
 
     /**
-     * @note[short] MacOS (ARM): 0x39fd40
-     * @note[short] MacOS (Intel): 0x424bf0
-     * @note[short] Windows: 0x309700
-     * @note[short] iOS: 0x3fdab4
+     * @note[short] MacOS (ARM): 0x3a9610
+     * @note[short] MacOS (Intel): 0x437640
+     * @note[short] Windows: 0x31e290
+     * @note[short] iOS: 0x405b0c
      * @note[short] Android
      */
-    virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual bool ccTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x39fe48
-     * @note[short] MacOS (Intel): 0x424d10
+     * @note[short] MacOS (ARM): 0x3a9710
+     * @note[short] MacOS (Intel): 0x437760
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3fdbb0
-     * @note[short] Android: Out of line
-     */
-    virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x39fe50
-     * @note[short] MacOS (Intel): 0x424d30
-     * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3fdbb8
-     * @note[short] Android: Out of line
-     */
-    virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x39fe58
-     * @note[short] MacOS (Intel): 0x424d50
-     * @note[short] Windows: 0x71210
-     * @note[short] iOS: 0x3fdbc0
+     * @note[short] iOS: 0x405c10
      * @note[short] Android
      */
-    virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchMoved(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x39fe74
-     * @note[short] MacOS (Intel): 0x424d90
-     * @note[short] Windows: 0x9b1a0
-     * @note[short] iOS: 0x3fdbdc
+     * @note[short] MacOS (ARM): 0x3a9718
+     * @note[short] MacOS (Intel): 0x437780
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x405c18
+     * @note[short] Android
+     */
+    virtual void ccTouchEnded(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
+
+    /**
+     * @note[short] MacOS (ARM): 0x3a9720
+     * @note[short] MacOS (Intel): 0x4377a0
+     * @note[short] Windows: 0x71240
+     * @note[short] iOS: 0x405c20
+     * @note[short] Android
+     */
+    virtual void ccTouchCancelled(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
+
+    /**
+     * @note[short] MacOS (ARM): 0x3a973c
+     * @note[short] MacOS (Intel): 0x4377e0
+     * @note[short] Windows: 0x9b7d0
+     * @note[short] iOS: 0x405c3c
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x39fa78
-     * @note[short] MacOS (Intel): 0x424940
-     * @note[short] Windows: 0x308c10
-     * @note[short] iOS: 0x3fd88c
+     * @note[short] MacOS (ARM): 0x3a9348
+     * @note[short] MacOS (Intel): 0x437390
+     * @note[short] Windows: 0x31d7a0
+     * @note[short] iOS: 0x4058e4
      * @note[short] Android
      */
-    virtual void dialogClosed(DialogLayer* p0);
+    virtual void dialogClosed(DialogLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x39cb1c
-     * @note[short] MacOS (Intel): 0x4215a0
-     * @note[short] Windows: 0x307810
-     * @note[short] iOS: 0x3fb304
+     * @note[short] MacOS (ARM): 0x3a6434
+     * @note[short] MacOS (Intel): 0x434020
+     * @note[short] Windows: 0x31c3a0
+     * @note[short] iOS: 0x403378
      * @note[short] Android
      */
     void addSecretCoin();
 
     /**
-     * @note[short] MacOS (ARM): 0x39ed88
-     * @note[short] MacOS (Intel): 0x423b10
-     * @note[short] Windows: 0x307f20
-     * @note[short] iOS: 0x3fcd1c
+     * @note[short] MacOS (ARM): 0x3a866c
+     * @note[short] MacOS (Intel): 0x436570
+     * @note[short] Windows: 0x31cab0
+     * @note[short] iOS: 0x404d88
      * @note[short] Android
      */
     void addSecretDoor();
 
     /**
-     * @note[short] MacOS (ARM): 0x39dc80
-     * @note[short] MacOS (Intel): 0x422900
-     * @note[short] Windows: 0x305070
-     * @note[short] iOS: 0x3fbe78
+     * @note[short] MacOS (ARM): 0x3a7568
+     * @note[short] MacOS (Intel): 0x435370
+     * @note[short] Windows: 0x319c20
+     * @note[short] iOS: 0x403ee8
      * @note[short] Android
      */
-    bool init(GJGameLevel* p0);
+    bool init(GJGameLevel* level);
 
     /**
-     * @note[short] MacOS (ARM): 0x39d69c
-     * @note[short] MacOS (Intel): 0x422200
-     * @note[short] Windows: 0x309260
-     * @note[short] iOS: 0x3fbac4
+     * @note[short] MacOS (ARM): 0x3a6fa4
+     * @note[short] MacOS (Intel): 0x434c80
+     * @note[short] Windows: 0x31ddf0
+     * @note[short] iOS: 0x403b34
      * @note[short] Android
      */
     void onInfo(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x3a87d8
+     * @note[short] MacOS (Intel): 0x4366e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void onMoreGames(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x39d360
-     * @note[short] MacOS (Intel): 0x421ef0
-     * @note[short] Windows: 0x308cf0
-     * @note[short] iOS: 0x3fb8bc
+     * @note[short] MacOS (ARM): 0x3a6c94
+     * @note[short] MacOS (Intel): 0x434980
+     * @note[short] Windows: 0x31d880
+     * @note[short] iOS: 0x40392c
      * @note[short] Android
      */
     void onPlay(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x39f3a0
-     * @note[short] MacOS (Intel): 0x424140
-     * @note[short] Windows: 0x308130
-     * @note[short] iOS: 0x3fd2c8
+     * @note[short] MacOS (ARM): 0x3a8c74
+     * @note[short] MacOS (Intel): 0x436b90
+     * @note[short] Windows: 0x31ccc0
+     * @note[short] iOS: 0x405324
      * @note[short] Android
      */
     void onSecretDoor(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x39e83c
-     * @note[short] MacOS (Intel): 0x423570
-     * @note[short] Windows: 0x307150
-     * @note[short] iOS: 0x3fc938
+     * @note[short] MacOS (ARM): 0x3a8120
+     * @note[short] MacOS (Intel): 0x435fd0
+     * @note[short] Windows: 0x31bce0
+     * @note[short] iOS: 0x4049a4
      * @note[short] Android
      */
     void onTheTower(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x39ef58
-     * @note[short] MacOS (Intel): 0x423cf0
-     * @note[short] Windows: 0x307a50
+     * @note[short] MacOS (ARM): 0x3a883c
+     * @note[short] MacOS (Intel): 0x436740
+     * @note[short] Windows: 0x31c5e0
+     * @note[short] iOS: 0x404ef4
      * @note[short] Android
      */
     void playCoinEffect();
 
     /**
+     * @note[short] MacOS (ARM): 0x3a9498
+     * @note[short] MacOS (Intel): 0x4374b0
+     * @note[short] Windows: 0x31dc10
+     * @note[short] iOS: 0x405994
      * @note[short] Android
      */
     void playStep2();
 
     /**
-     * @note[short] Windows: 0x309160
+     * @note[short] MacOS (ARM): 0x3a955c
+     * @note[short] MacOS (Intel): 0x437570
+     * @note[short] Windows: 0x31dcf0
+     * @note[short] iOS: 0x405a58
      * @note[short] Android
      */
     void playStep3();
 
     /**
-     * @note[short] MacOS (ARM): 0x39b524
-     * @note[short] MacOS (Intel): 0x420050
-     * @note[short] Windows: 0x305d00
-     * @note[short] iOS: 0x3fa3a0
+     * @note[short] MacOS (ARM): 0x3a4e60
+     * @note[short] MacOS (Intel): 0x432af0
+     * @note[short] Windows: 0x31a8b0
+     * @note[short] iOS: 0x402430
      * @note[short] Android
      */
-    void updateDynamicPage(GJGameLevel* p0);
+    void updateDynamicPage(GJGameLevel* level);
     bool m_isBusy;
     GJGameLevel* m_level;
     cocos2d::CCMenu* m_levelMenu;

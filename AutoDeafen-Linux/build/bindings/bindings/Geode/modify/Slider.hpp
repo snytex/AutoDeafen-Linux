@@ -25,24 +25,19 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(ccTouchEnded) 
 	#endif
 
-	#ifndef GEODE_STATICS_disableSlider
-		#define GEODE_STATICS_disableSlider
-		GEODE_AS_STATIC_FUNCTION(disableSlider) 
-	#endif
-
-	#ifndef GEODE_STATICS_disableTouch
-		#define GEODE_STATICS_disableTouch
-		GEODE_AS_STATIC_FUNCTION(disableTouch) 
-	#endif
-
-	#ifndef GEODE_STATICS_enableSlider
-		#define GEODE_STATICS_enableSlider
-		GEODE_AS_STATIC_FUNCTION(enableSlider) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
+	#endif
+
+	#ifndef GEODE_STATICS_setMaxOffset
+		#define GEODE_STATICS_setMaxOffset
+		GEODE_AS_STATIC_FUNCTION(setMaxOffset) 
+	#endif
+
+	#ifndef GEODE_STATICS_setRotated
+		#define GEODE_STATICS_setRotated
+		GEODE_AS_STATIC_FUNCTION(setRotated) 
 	#endif
 
 	#ifndef GEODE_STATICS_setValue
@@ -50,14 +45,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(setValue) 
 	#endif
 
-	#ifndef GEODE_STATICS_sliderBegan
-		#define GEODE_STATICS_sliderBegan
-		GEODE_AS_STATIC_FUNCTION(sliderBegan) 
-	#endif
-
-	#ifndef GEODE_STATICS_sliderEnded
-		#define GEODE_STATICS_sliderEnded
-		GEODE_AS_STATIC_FUNCTION(sliderEnded) 
+	#ifndef GEODE_STATICS_updateBar
+		#define GEODE_STATICS_updateBar
+		GEODE_AS_STATIC_FUNCTION(updateBar) 
 	#endif
 
     
@@ -170,28 +160,28 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71720, Default, Slider, create, cocos2d::CCNode*, cocos2d::SEL_MenuHandler, char const*, char const*, char const*, char const*, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(Slider, create, cocos2d::CCNode*, cocos2d::SEL_MenuHandler)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(Slider, create, cocos2d::CCNode*, cocos2d::SEL_MenuHandler, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71d10, Thiscall, Slider, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71d50, Thiscall, Slider, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71d30, Thiscall, Slider, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(Slider, disableSlider, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(Slider, disableTouch, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(Slider, enableSlider, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71750, Default, Slider, create, cocos2d::CCNode*, cocos2d::SEL_MenuHandler, char const*, char const*, char const*, char const*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71d40, Thiscall, Slider, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71d80, Thiscall, Slider, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71d60, Thiscall, Slider, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(Slider, disableSlider, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(Slider, disableTouch, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(Slider, enableSlider, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(Slider, getLiveDragging, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(Slider, getThumb, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(Slider, getValue, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(Slider, hideGroove, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71850, Thiscall, Slider, init, cocos2d::CCNode*, cocos2d::SEL_MenuHandler, char const*, char const*, char const*, char const*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71880, Thiscall, Slider, init, cocos2d::CCNode*, cocos2d::SEL_MenuHandler, char const*, char const*, char const*, char const*, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(Slider, setBarVisibility, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(Slider, setLiveDragging, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(Slider, setMaxOffset, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(Slider, setRotated, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71c00, Thiscall, Slider, setValue, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(Slider, sliderBegan, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(Slider, sliderEnded, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(Slider, updateBar, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71e40, Thiscall, Slider, setMaxOffset, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71da0, Thiscall, Slider, setRotated, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71c30, Thiscall, Slider, setValue, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(Slider, sliderBegan, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(Slider, sliderEnded, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71cc0, Thiscall, Slider, updateBar, )
 		}
 	};
 }

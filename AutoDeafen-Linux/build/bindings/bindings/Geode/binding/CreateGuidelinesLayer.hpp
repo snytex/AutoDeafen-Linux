@@ -17,210 +17,229 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(CreateGuidelinesLayer, FLAlertLayer)
 
     /**
-     * @note[short] Windows: 0x98fd0
-     * @note[short] Android: Rebinded
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: 0x99600
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
      CreateGuidelinesLayer();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
-     * @note[short] Windows: 0x99120
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] MacOS (ARM): 0x46257c
+     * @note[short] MacOS (Intel): 0x50aec0
+     * @note[short] Windows: 0x99750
+     * @note[short] iOS: 0x7c1dc
+     * @note[short] Android: Rebinded
      */
      ~CreateGuidelinesLayer();
 
     /**
+     * @note[short] MacOS (ARM): 0x462810
+     * @note[short] MacOS (Intel): 0x50b230
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x7c2a4
      * @note[short] Android
      */
-    static CreateGuidelinesLayer* create(CustomSongDelegate* p0, AudioGuidelinesType p1);
+    static CreateGuidelinesLayer* create(CustomSongDelegate* delegate, AudioGuidelinesType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x457810
-     * @note[short] MacOS (Intel): 0x4f6f90
-     * @note[short] Windows: 0x9adf0
-     * @note[short] iOS: 0x81c38
+     * @note[short] MacOS (ARM): 0x464594
+     * @note[short] MacOS (Intel): 0x50cff0
+     * @note[short] Windows: 0x9b420
+     * @note[short] iOS: 0x7dc5c
      * @note[short] Android
      */
-    virtual void update(float p0);
+    virtual void update(float dt);
 
     /**
-     * @note[short] MacOS (ARM): 0x457a68
-     * @note[short] MacOS (Intel): 0x4f7200
-     * @note[short] Windows: 0x9b0c0
-     * @note[short] iOS: 0x81e38
+     * @note[short] MacOS (ARM): 0x4647f0
+     * @note[short] MacOS (Intel): 0x50d260
+     * @note[short] Windows: 0x9b6f0
+     * @note[short] iOS: 0x7de5c
      * @note[short] Android
      */
-    virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual bool ccTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x457b90
-     * @note[short] MacOS (Intel): 0x4f72f0
+     * @note[short] MacOS (ARM): 0x464920
+     * @note[short] MacOS (Intel): 0x50d350
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x81ee4
-     * @note[short] Android: Out of line
-     */
-    virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x457b98
-     * @note[short] MacOS (Intel): 0x4f7310
-     * @note[short] Windows: 0x9b140
-     * @note[short] iOS: 0x81eec
+     * @note[short] iOS: 0x7df0c
      * @note[short] Android
      */
-    virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchMoved(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x457c68
-     * @note[short] MacOS (Intel): 0x4f73b0
-     * @note[short] Windows: 0x71210
-     * @note[short] iOS: 0x81fb4
+     * @note[short] MacOS (ARM): 0x464928
+     * @note[short] MacOS (Intel): 0x50d370
+     * @note[short] Windows: 0x9b770
+     * @note[short] iOS: 0x7df14
      * @note[short] Android
      */
-    virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchEnded(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x457c84
-     * @note[short] MacOS (Intel): 0x4f73f0
-     * @note[short] Windows: 0x9b1a0
-     * @note[short] iOS: 0x81fd0
+     * @note[short] MacOS (ARM): 0x464a08
+     * @note[short] MacOS (Intel): 0x50d430
+     * @note[short] Windows: 0x71240
+     * @note[short] iOS: 0x7dfe4
+     * @note[short] Android
+     */
+    virtual void ccTouchCancelled(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
+
+    /**
+     * @note[short] MacOS (ARM): 0x464a24
+     * @note[short] MacOS (Intel): 0x50d470
+     * @note[short] Windows: 0x9b7d0
+     * @note[short] iOS: 0x7e000
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x4579e4
-     * @note[short] MacOS (Intel): 0x4f7160
-     * @note[short] Windows: 0x9b040
-     * @note[short] iOS: 0x81db4
+     * @note[short] MacOS (ARM): 0x46476c
+     * @note[short] MacOS (Intel): 0x50d1c0
+     * @note[short] Windows: 0x9b670
+     * @note[short] iOS: 0x7ddd8
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x457cbc
-     * @note[short] MacOS (Intel): 0x4f7430
-     * @note[short] Windows: 0x9b1f0
-     * @note[short] iOS: 0x82008
+     * @note[short] MacOS (ARM): 0x464a5c
+     * @note[short] MacOS (Intel): 0x50d4b0
+     * @note[short] Windows: 0x9b820
+     * @note[short] iOS: 0x7e038
      * @note[short] Android
      */
-    virtual void keyDown(cocos2d::enumKeyCodes p0);
+    virtual void keyDown(cocos2d::enumKeyCodes key, double timestamp);
 
     /**
-     * @note[short] MacOS (ARM): 0x4578d8
-     * @note[short] MacOS (Intel): 0x4f7060
-     * @note[short] Windows: 0x9af60
-     * @note[short] iOS: 0x81ce0
+     * @note[short] MacOS (ARM): 0x464660
+     * @note[short] MacOS (Intel): 0x50d0c0
+     * @note[short] Windows: 0x9b590
+     * @note[short] iOS: 0x7dd04
      * @note[short] Android
      */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x4579a8
-     * @note[short] MacOS (Intel): 0x4f7130
-     * @note[short] Windows: 0x84620
-     * @note[short] iOS: 0x81d78
+     * @note[short] MacOS (ARM): 0x464730
+     * @note[short] MacOS (Intel): 0x50d190
+     * @note[short] Windows: 0x84670
+     * @note[short] iOS: 0x7dd9c
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x457d00
-     * @note[short] MacOS (Intel): 0x4f7480
+     * @note[short] MacOS (ARM): 0x464aa0
+     * @note[short] MacOS (Intel): 0x50d500
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x8204c
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x7e07c
+     * @note[short] Android
      */
-    virtual void keyUp(cocos2d::enumKeyCodes p0);
+    virtual void keyUp(cocos2d::enumKeyCodes key, double timestamp);
 
     /**
-     * @note[short] MacOS (ARM): 0x456ea4
-     * @note[short] MacOS (Intel): 0x4f6610
-     * @note[short] Windows: 0x9a6a0
-     * @note[short] iOS: 0x814f4
+     * @note[short] MacOS (ARM): 0x463b68
+     * @note[short] MacOS (Intel): 0x50c680
+     * @note[short] Windows: 0x9acd0
+     * @note[short] iOS: 0x7d520
      * @note[short] Android
      */
     virtual void playMusic();
 
     /**
-     * @note[short] MacOS (ARM): 0x457a20
-     * @note[short] MacOS (Intel): 0x4f71b0
-     * @note[short] Windows: 0x9b060
-     * @note[short] iOS: 0x81df0
+     * @note[short] MacOS (ARM): 0x4647a8
+     * @note[short] MacOS (Intel): 0x50d210
+     * @note[short] Windows: 0x9b690
+     * @note[short] iOS: 0x7de14
      * @note[short] Android
      */
     virtual void registerTouch();
 
     /**
-     * @note[short] MacOS (ARM): 0x457820
-     * @note[short] MacOS (Intel): 0x4f6fb0
-     * @note[short] Windows: 0x9ae10
-     * @note[short] iOS: 0x81c48
+     * @note[short] MacOS (ARM): 0x4645a4
+     * @note[short] MacOS (Intel): 0x50d010
+     * @note[short] Windows: 0x9b440
+     * @note[short] iOS: 0x7dc6c
      * @note[short] Android
      */
     virtual void onInfo(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x456d90
-     * @note[short] MacOS (Intel): 0x4f6500
-     * @note[short] Windows: 0x9a510
-     * @note[short] iOS: 0x813e4
+     * @note[short] MacOS (ARM): 0x463a54
+     * @note[short] MacOS (Intel): 0x50c570
+     * @note[short] Windows: 0x9ab40
+     * @note[short] iOS: 0x7d410
      * @note[short] Android
      */
     virtual void onRecord(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x456f44
-     * @note[short] MacOS (Intel): 0x4f66a0
-     * @note[short] Windows: 0x9a800
-     * @note[short] iOS: 0x81584
+     * @note[short] MacOS (ARM): 0x463c08
+     * @note[short] MacOS (Intel): 0x50c710
+     * @note[short] Windows: 0x9ae30
+     * @note[short] iOS: 0x7d5b0
      * @note[short] Android
      */
     virtual void recordingDidStop();
 
     /**
-     * @note[short] MacOS (ARM): 0x456ce8
-     * @note[short] MacOS (Intel): 0x4f6470
+     * @note[short] MacOS (ARM): 0x4639ac
+     * @note[short] MacOS (Intel): 0x50c4e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x7d35c
      * @note[short] Android
      */
     void doClearGuidelines();
 
     /**
-     * @note[short] Windows: 0x9aa90
+     * @note[short] MacOS (ARM): 0x463f50
+     * @note[short] MacOS (Intel): 0x50ca60
+     * @note[short] Windows: 0x9b0c0
+     * @note[short] iOS: 0x7d8a8
      * @note[short] Android: Rebinded
      */
-    gd::string getMergedRecordString(gd::string p0, gd::string p1);
+    gd::string getMergedRecordString(gd::string str1, gd::string str2);
 
     /**
-     * @note[short] MacOS (ARM): 0x455c70
-     * @note[short] MacOS (Intel): 0x4f5320
-     * @note[short] Windows: 0x991e0
+     * @note[short] MacOS (ARM): 0x46293c
+     * @note[short] MacOS (Intel): 0x50b3b0
+     * @note[short] Windows: 0x99810
+     * @note[short] iOS: 0x7c384
      * @note[short] Android
      */
-    bool init(CustomSongDelegate* p0, AudioGuidelinesType p1);
+    bool init(CustomSongDelegate* delegate, AudioGuidelinesType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x456b0c
-     * @note[short] MacOS (Intel): 0x4f6280
-     * @note[short] Windows: 0x9a3e0
+     * @note[short] MacOS (ARM): 0x4637d4
+     * @note[short] MacOS (Intel): 0x50c2f0
+     * @note[short] Windows: 0x9aa10
+     * @note[short] iOS: 0x7d1a8
      * @note[short] Android
      */
     void onClearGuidelines(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x9a730
+     * @note[short] MacOS (ARM): 0x4638a4
+     * @note[short] MacOS (Intel): 0x50c3c0
+     * @note[short] Windows: 0x9ad60
+     * @note[short] iOS: 0x7d254
      * @note[short] Android
      */
     void onStop(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x9ad10
+     * @note[short] MacOS (ARM): 0x463904
+     * @note[short] MacOS (Intel): 0x50c420
+     * @note[short] Windows: 0x9b340
+     * @note[short] iOS: 0x7d2b4
      * @note[short] Android
      */
-    void toggleItems(bool p0);
+    void toggleItems(bool visible);
     CustomSongDelegate* m_delegate;
     CCTextInputNode* m_offsetInput;
     cocos2d::CCArray* m_nonRecordingObjects;

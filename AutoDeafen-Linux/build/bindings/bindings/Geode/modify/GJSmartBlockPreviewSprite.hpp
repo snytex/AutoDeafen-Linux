@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -45,9 +40,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJSmartBlockPreviewSprite, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x77db0, Thiscall, GJSmartBlockPreviewSprite, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2af2b0, Thiscall, GJSmartBlockPreviewSprite, visit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSmartBlockPreviewSprite, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x77de0, Thiscall, GJSmartBlockPreviewSprite, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b6970, Thiscall, GJSmartBlockPreviewSprite, visit, )
 		}
 	};
 }

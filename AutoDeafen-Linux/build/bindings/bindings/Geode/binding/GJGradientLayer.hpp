@@ -24,18 +24,19 @@ public:
      GJGradientLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x104788
-     * @note[short] MacOS (Intel): 0x1290e0
+     * @note[short] MacOS (ARM): 0x10e658
+     * @note[short] MacOS (Intel): 0x1393e0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1efc90
      * @note[short] Android
      */
     static GJGradientLayer* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x128178
-     * @note[short] MacOS (Intel): 0x154550
-     * @note[short] Windows: 0x242810
-     * @note[short] iOS: 0x20b450
+     * @note[short] MacOS (ARM): 0x1329fc
+     * @note[short] MacOS (Intel): 0x165190
+     * @note[short] Windows: 0x248da0
+     * @note[short] iOS: 0x20915c
      * @note[short] Android
      */
     virtual bool init();

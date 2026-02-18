@@ -18,90 +18,95 @@ public:
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
+     * @note[short] iOS: 0x3fc83c
      * @note[short] Android: Out of line
      */
      GJScaleControl();
 
     /**
-     * @note[short] MacOS (ARM): 0xd3e0
-     * @note[short] MacOS (Intel): 0xbfe0
+     * @note[short] MacOS (ARM): 0xa46c
+     * @note[short] MacOS (Intel): 0xb980
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3c6ff4
      * @note[short] Android
      */
     static GJScaleControl* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x49688
-     * @note[short] MacOS (Intel): 0x52280
-     * @note[short] Windows: 0x127cc0
-     * @note[short] iOS: 0x3f2c10
+     * @note[short] MacOS (ARM): 0x46d70
+     * @note[short] MacOS (Intel): 0x51f80
+     * @note[short] Windows: 0x129a70
+     * @note[short] iOS: 0x3fac78
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x49cc0
-     * @note[short] MacOS (Intel): 0x52930
-     * @note[short] Windows: 0x1287b0
-     * @note[short] iOS: 0x3f31a4
+     * @note[short] MacOS (ARM): 0x473a8
+     * @note[short] MacOS (Intel): 0x52630
+     * @note[short] Windows: 0x12a560
+     * @note[short] iOS: 0x3fb20c
      * @note[short] Android
      */
-    virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual bool ccTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x49e5c
-     * @note[short] MacOS (Intel): 0x52b20
-     * @note[short] Windows: 0x1289c0
-     * @note[short] iOS: 0x3f3330
+     * @note[short] MacOS (ARM): 0x47534
+     * @note[short] MacOS (Intel): 0x52810
+     * @note[short] Windows: 0x12a770
+     * @note[short] iOS: 0x3fb398
      * @note[short] Android
      */
-    virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchMoved(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x4a2a0
-     * @note[short] MacOS (Intel): 0x52ff0
-     * @note[short] Windows: 0x128de0
-     * @note[short] iOS: 0x3f3684
+     * @note[short] MacOS (ARM): 0x4796c
+     * @note[short] MacOS (Intel): 0x52cc0
+     * @note[short] Windows: 0x12ab90
+     * @note[short] iOS: 0x3fb6e0
      * @note[short] Android
      */
-    virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchEnded(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x4a3c8
-     * @note[short] MacOS (Intel): 0x53150
-     * @note[short] Windows: 0x71210
-     * @note[short] iOS: 0x3f37ac
+     * @note[short] MacOS (ARM): 0x47aa4
+     * @note[short] MacOS (Intel): 0x52e20
+     * @note[short] Windows: 0x71240
+     * @note[short] iOS: 0x3fb808
      * @note[short] Android
      */
-    virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchCancelled(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
+     * @note[short] MacOS (ARM): 0x37138
+     * @note[short] MacOS (Intel): 0x3ee10
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void finishTouch();
 
     /**
-     * @note[short] MacOS (ARM): 0x3a07c
-     * @note[short] MacOS (Intel): 0x3f670
-     * @note[short] Windows: 0x128190
-     * @note[short] iOS: 0x3e76f0
+     * @note[short] MacOS (ARM): 0x372a0
+     * @note[short] MacOS (Intel): 0x3efe0
+     * @note[short] Windows: 0x129f40
+     * @note[short] iOS: 0x3ef3e8
      * @note[short] Android: Rebinded
      */
-    void loadValues(GameObject* p0, cocos2d::CCArray* p1, gd::unordered_map<int, GameObjectEditorState>& p2);
+    void loadValues(GameObject* object, cocos2d::CCArray* objects, gd::unordered_map<int, GameObjectEditorState>& editorStates);
 
     /**
-     * @note[short] MacOS (ARM): 0x49a6c
-     * @note[short] MacOS (Intel): 0x52690
-     * @note[short] Windows: 0x128100
-     * @note[short] iOS: 0x3f2ff4
+     * @note[short] MacOS (ARM): 0x47154
+     * @note[short] MacOS (Intel): 0x52390
+     * @note[short] Windows: 0x129eb0
+     * @note[short] iOS: 0x3fb05c
      * @note[short] Android
      */
     void onToggleLockScale(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x49c44
-     * @note[short] MacOS (Intel): 0x52860
+     * @note[short] MacOS (ARM): 0x4732c
+     * @note[short] MacOS (Intel): 0x52560
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
@@ -109,51 +114,53 @@ public:
     float scaleFromValue(float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x49c80
-     * @note[short] MacOS (Intel): 0x528a0
+     * @note[short] MacOS (ARM): 0x47368
+     * @note[short] MacOS (Intel): 0x525a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    float skewFromValue(float p0);
+    float skewFromValue(float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x49adc
-     * @note[short] MacOS (Intel): 0x526f0
-     * @note[short] Windows: 0x1287a0
-     * @note[short] iOS: 0x3f3064
+     * @note[short] MacOS (ARM): 0x471c4
+     * @note[short] MacOS (Intel): 0x523f0
+     * @note[short] Windows: 0x12a550
+     * @note[short] iOS: 0x3fb0cc
      * @note[short] Android
      */
     void sliderChanged(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x49b0c
-     * @note[short] MacOS (Intel): 0x52740
-     * @note[short] Windows: 0x128f20
-     * @note[short] iOS: 0x3f306c
+     * @note[short] MacOS (ARM): 0x471f4
+     * @note[short] MacOS (Intel): 0x52440
+     * @note[short] Windows: 0x12acd0
+     * @note[short] iOS: 0x3fb0d4
      * @note[short] Android
      */
     void updateLabelX(float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x49bdc
-     * @note[short] MacOS (Intel): 0x52800
-     * @note[short] Windows: 0x129020
-     * @note[short] iOS: 0x3f313c
+     * @note[short] MacOS (ARM): 0x472c4
+     * @note[short] MacOS (Intel): 0x52500
+     * @note[short] Windows: 0x12add0
+     * @note[short] iOS: 0x3fb1a4
      * @note[short] Android
      */
     void updateLabelXY(float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x49b74
-     * @note[short] MacOS (Intel): 0x527a0
-     * @note[short] Windows: 0x128fa0
-     * @note[short] iOS: 0x3f30d4
+     * @note[short] MacOS (ARM): 0x4725c
+     * @note[short] MacOS (Intel): 0x524a0
+     * @note[short] Windows: 0x12ad50
+     * @note[short] iOS: 0x3fb13c
      * @note[short] Android
      */
     void updateLabelY(float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x49c98
-     * @note[short] MacOS (Intel): 0x528f0
+     * @note[short] MacOS (ARM): 0x47380
+     * @note[short] MacOS (Intel): 0x525f0
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
@@ -161,9 +168,13 @@ public:
     float valueFromScale(float scale);
 
     /**
+     * @note[short] MacOS (ARM): 0x471cc
+     * @note[short] MacOS (Intel): 0x52400
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    float valueFromSkew(float p0);
+    float valueFromSkew(float value);
     Slider* m_sliderX;
     Slider* m_sliderY;
     Slider* m_sliderXY;

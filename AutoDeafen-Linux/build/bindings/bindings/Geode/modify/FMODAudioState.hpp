@@ -15,7 +15,7 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x52e40, Thiscall, FMODAudioState, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x52e70, Thiscall, FMODAudioState, )
 		}
 	};
 }

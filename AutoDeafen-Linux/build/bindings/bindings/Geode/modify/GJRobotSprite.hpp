@@ -100,17 +100,17 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29efd0, Default, GJRobotSprite, create, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29fcc0, Thiscall, GJRobotSprite, setOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a03b0, Thiscall, GJRobotSprite, hideSecondary, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a6690, Default, GJRobotSprite, create, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a7380, Thiscall, GJRobotSprite, setOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a7a70, Thiscall, GJRobotSprite, hideSecondary, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRobotSprite, hideGlow, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29f080, Thiscall, GJRobotSprite, init, int, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRobotSprite, init, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a6740, Thiscall, GJRobotSprite, init, int, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRobotSprite, showGlow, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRobotSprite, updateColor01, cocos2d::ccColor3B)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRobotSprite, updateColor02, cocos2d::ccColor3B)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29f810, Thiscall, GJRobotSprite, updateColors, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29fdc0, Thiscall, GJRobotSprite, updateFrame, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a6ed0, Thiscall, GJRobotSprite, updateColors, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a7480, Thiscall, GJRobotSprite, updateFrame, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRobotSprite, updateGlowColor, cocos2d::ccColor3B, bool)
 		}
 	};

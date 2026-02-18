@@ -35,49 +35,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(goToPage) 
 	#endif
 
-	#ifndef GEODE_STATICS_incrementCountForPage
-		#define GEODE_STATICS_incrementCountForPage
-		GEODE_AS_STATIC_FUNCTION(incrementCountForPage) 
-	#endif
-
-	#ifndef GEODE_STATICS_infoKey
-		#define GEODE_STATICS_infoKey
-		GEODE_AS_STATIC_FUNCTION(infoKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_layerForPage
 		#define GEODE_STATICS_layerForPage
 		GEODE_AS_STATIC_FUNCTION(layerForPage) 
 	#endif
 
-	#ifndef GEODE_STATICS_layerKey
-		#define GEODE_STATICS_layerKey
-		GEODE_AS_STATIC_FUNCTION(layerKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_nextPosition
-		#define GEODE_STATICS_nextPosition
-		GEODE_AS_STATIC_FUNCTION(nextPosition) 
-	#endif
-
-	#ifndef GEODE_STATICS_objectKey
-		#define GEODE_STATICS_objectKey
-		GEODE_AS_STATIC_FUNCTION(objectKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_objectsForPage
-		#define GEODE_STATICS_objectsForPage
-		GEODE_AS_STATIC_FUNCTION(objectsForPage) 
-	#endif
-
 	#ifndef GEODE_STATICS_onClose
 		#define GEODE_STATICS_onClose
 		GEODE_AS_STATIC_FUNCTION(onClose) 
-	#endif
-
-	#ifndef GEODE_STATICS_onInfo
-		#define GEODE_STATICS_onInfo
-		GEODE_AS_STATIC_FUNCTION(onInfo) 
 	#endif
 
 	#ifndef GEODE_STATICS_onNextPage
@@ -88,16 +53,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onPrevPage
 		#define GEODE_STATICS_onPrevPage
 		GEODE_AS_STATIC_FUNCTION(onPrevPage) 
-	#endif
-
-	#ifndef GEODE_STATICS_onToggle
-		#define GEODE_STATICS_onToggle
-		GEODE_AS_STATIC_FUNCTION(onToggle) 
-	#endif
-
-	#ifndef GEODE_STATICS_pageKey
-		#define GEODE_STATICS_pageKey
-		GEODE_AS_STATIC_FUNCTION(pageKey) 
 	#endif
 
     
@@ -205,25 +160,25 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b81d0, Default, KeybindingsLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b82c0, Thiscall, KeybindingsLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, KeybindingsLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b8bd0, Thiscall, KeybindingsLayer, addKeyPair, char const*, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b8f80, Thiscall, KeybindingsLayer, countForPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b9220, Thiscall, KeybindingsLayer, goToPage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsLayer, incrementCountForPage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsLayer, infoKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b9050, Thiscall, KeybindingsLayer, layerForPage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsLayer, layerKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsLayer, nextPosition, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsLayer, objectKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsLayer, objectsForPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84620, Thiscall, KeybindingsLayer, onClose, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsLayer, onInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b9200, Thiscall, KeybindingsLayer, onNextPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b9210, Thiscall, KeybindingsLayer, onPrevPage, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsLayer, onToggle, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(KeybindingsLayer, pageKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bf8a0, Default, KeybindingsLayer, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bf990, Thiscall, KeybindingsLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, KeybindingsLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c02a0, Thiscall, KeybindingsLayer, addKeyPair, char const*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c0650, Thiscall, KeybindingsLayer, countForPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c08f0, Thiscall, KeybindingsLayer, goToPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(KeybindingsLayer, incrementCountForPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(KeybindingsLayer, infoKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c0720, Thiscall, KeybindingsLayer, layerForPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(KeybindingsLayer, layerKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(KeybindingsLayer, nextPosition, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(KeybindingsLayer, objectKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(KeybindingsLayer, objectsForPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, KeybindingsLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(KeybindingsLayer, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c08d0, Thiscall, KeybindingsLayer, onNextPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c08e0, Thiscall, KeybindingsLayer, onPrevPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(KeybindingsLayer, onToggle, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(KeybindingsLayer, pageKey, int)
 		}
 	};
 }

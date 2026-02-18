@@ -30,11 +30,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(ccTouchCancelled) 
 	#endif
 
-	#ifndef GEODE_STATICS_finishTouch
-		#define GEODE_STATICS_finishTouch
-		GEODE_AS_STATIC_FUNCTION(finishTouch) 
-	#endif
-
 	#ifndef GEODE_STATICS_loadValues
 		#define GEODE_STATICS_loadValues
 		GEODE_AS_STATIC_FUNCTION(loadValues) 
@@ -43,11 +38,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onToggleLockScale
 		#define GEODE_STATICS_onToggleLockScale
 		GEODE_AS_STATIC_FUNCTION(onToggleLockScale) 
-	#endif
-
-	#ifndef GEODE_STATICS_skewFromValue
-		#define GEODE_STATICS_skewFromValue
-		GEODE_AS_STATIC_FUNCTION(skewFromValue) 
 	#endif
 
 	#ifndef GEODE_STATICS_sliderChanged
@@ -68,11 +58,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateLabelY
 		#define GEODE_STATICS_updateLabelY
 		GEODE_AS_STATIC_FUNCTION(updateLabelY) 
-	#endif
-
-	#ifndef GEODE_STATICS_valueFromSkew
-		#define GEODE_STATICS_valueFromSkew
-		GEODE_AS_STATIC_FUNCTION(valueFromSkew) 
 	#endif
 
     
@@ -171,22 +156,22 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJScaleControl, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x127cc0, Thiscall, GJScaleControl, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1287b0, Thiscall, GJScaleControl, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1289c0, Thiscall, GJScaleControl, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x128de0, Thiscall, GJScaleControl, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71210, Thiscall, GJScaleControl, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJScaleControl, finishTouch, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x128190, Thiscall, GJScaleControl, loadValues, GameObject*, cocos2d::CCArray*, gd::unordered_map<int, GameObjectEditorState>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x128100, Thiscall, GJScaleControl, onToggleLockScale, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x129a70, Thiscall, GJScaleControl, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12a560, Thiscall, GJScaleControl, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12a770, Thiscall, GJScaleControl, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12ab90, Thiscall, GJScaleControl, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71240, Thiscall, GJScaleControl, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJScaleControl, finishTouch, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x129f40, Thiscall, GJScaleControl, loadValues, GameObject*, cocos2d::CCArray*, gd::unordered_map<int, GameObjectEditorState>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x129eb0, Thiscall, GJScaleControl, onToggleLockScale, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJScaleControl, scaleFromValue, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJScaleControl, skewFromValue, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1287a0, Thiscall, GJScaleControl, sliderChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x128f20, Thiscall, GJScaleControl, updateLabelX, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x129020, Thiscall, GJScaleControl, updateLabelXY, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x128fa0, Thiscall, GJScaleControl, updateLabelY, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJScaleControl, skewFromValue, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12a550, Thiscall, GJScaleControl, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12acd0, Thiscall, GJScaleControl, updateLabelX, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12add0, Thiscall, GJScaleControl, updateLabelXY, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12ad50, Thiscall, GJScaleControl, updateLabelY, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJScaleControl, valueFromScale, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJScaleControl, valueFromSkew, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJScaleControl, valueFromSkew, float)
 		}
 	};
 }

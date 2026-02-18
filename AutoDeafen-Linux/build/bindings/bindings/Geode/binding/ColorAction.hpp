@@ -15,91 +15,139 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(ColorAction, cocos2d::CCObject)
 
     /**
-     * @note[short] MacOS (ARM): 0x268edc
-     * @note[short] MacOS (Intel): 0x2c5030
-     * @note[short] Windows: 0x251b40
-     * @note[short] iOS: 0x10ea4
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x174d8
+     * @note[short] Android: Out of line
+     */
+     ColorAction();
+
+    /**
+     * @note[short] MacOS (ARM): 0x273b18
+     * @note[short] MacOS (Intel): 0x2d9500
+     * @note[short] Windows: 0x258ea0
+     * @note[short] iOS: 0xd468
      * @note[short] Android
      */
     static ColorAction* create();
 
     /**
+     * @note[short] MacOS (ARM): 0x273cc8
+     * @note[short] MacOS (Intel): 0x2d9700
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    static ColorAction* create(cocos2d::ccColor3B p0, bool p1, int p2);
+    static ColorAction* create(cocos2d::ccColor3B color, bool blending, int playerColor);
 
     /**
+     * @note[short] MacOS (ARM): 0x273d90
+     * @note[short] MacOS (Intel): 0x2d97f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    static ColorAction* create(cocos2d::ccColor3B p0, cocos2d::ccColor3B p1, float p2, double p3, bool p4, int p5, float p6, float p7);
+    static ColorAction* create(cocos2d::ccColor3B fromColor, cocos2d::ccColor3B toColor, float duration, double unused, bool blending);
 
     /**
+     * @note[short] MacOS (ARM): 0x273bd8
+     * @note[short] MacOS (Intel): 0x2d95e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xd488
      * @note[short] Android
      */
-    static ColorAction* create(cocos2d::ccColor3B p0, cocos2d::ccColor3B p1, float p2, double p3, bool p4);
+    static ColorAction* create(cocos2d::ccColor3B fromColor, cocos2d::ccColor3B toColor, float duration, double unused, bool blending, int playerColor, float fromOpacity, float toOpacity);
 
     /**
+     * @note[short] MacOS (ARM): 0x2768a8
+     * @note[short] MacOS (Intel): 0x2dc130
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn getCopy();
+    ColorAction* getCopy();
 
     /**
+     * @note[short] MacOS (ARM): 0x273e70
+     * @note[short] MacOS (Intel): 0x2d98f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(cocos2d::ccColor3B p0, cocos2d::ccColor3B p1, float p2, double p3, bool p4, int p5, float p6, float p7);
+    bool init(cocos2d::ccColor3B fromColor, cocos2d::ccColor3B toColor, float duration, double unused, bool blending, int playerColor, float fromOpacity, float toOpacity);
 
     /**
+     * @note[short] MacOS (ARM): 0x273fac
+     * @note[short] MacOS (Intel): 0x2d9a60
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xd634
      * @note[short] Android
      */
     bool isInUse();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x2740d0
+     * @note[short] MacOS (Intel): 0x2d9b70
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0xd718
+     * @note[short] Android
      */
     void loadFromState(CAState& state);
 
     /**
+     * @note[short] MacOS (ARM): 0x273fa0
+     * @note[short] MacOS (Intel): 0x2d9a40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xd628
      * @note[short] Android
      */
-    TodoReturn resetAction();
+    void resetAction();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x274044
+     * @note[short] MacOS (Intel): 0x2d9ad0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0xd68c
+     * @note[short] Android
      */
     void saveToState(CAState& state);
 
     /**
-     * @note[short] Windows: 0x252800
+     * @note[short] MacOS (ARM): 0x275f30
+     * @note[short] MacOS (Intel): 0x2dba40
+     * @note[short] Windows: 0x259b60
+     * @note[short] iOS: 0xdf28
      * @note[short] Android: Rebinded
      */
-    void setupFromMap(gd::map<gd::string, gd::string>& p0);
+    void setupFromMap(gd::map<gd::string, gd::string>& setup);
 
     /**
-     * @note[short] MacOS (ARM): 0x26b258
-     * @note[short] MacOS (Intel): 0x2c7390
-     * @note[short] Windows: 0x252720
+     * @note[short] MacOS (ARM): 0x275eb4
+     * @note[short] MacOS (Intel): 0x2db9d0
+     * @note[short] Windows: 0x259a80
+     * @note[short] iOS: 0xdeac
      * @note[short] Android: Rebinded
      */
-    void setupFromString(gd::string p0);
+    void setupFromString(gd::string setup);
 
     /**
-     * @note[short] Windows: 0x251c30
+     * @note[short] MacOS (ARM): 0x273ea0
+     * @note[short] MacOS (Intel): 0x2d9930
+     * @note[short] Windows: 0x258f90
+     * @note[short] iOS: 0xd534
      * @note[short] Android
      */
-    void step(float p0);
+    void step(float dt);
 
     /**
+     * @note[short] MacOS (ARM): 0x27401c
+     * @note[short] MacOS (Intel): 0x2d9ab0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void updateCustomColor(cocos2d::ccColor3B p0, cocos2d::ccColor3B p1);
+    void updateCustomColor(cocos2d::ccColor3B color1, cocos2d::ccColor3B color2);
     bool m_stepFinished;
     bool m_paused;
     cocos2d::ccColor3B m_color;

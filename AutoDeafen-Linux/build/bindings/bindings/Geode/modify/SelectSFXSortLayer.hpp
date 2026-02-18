@@ -61,10 +61,10 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SelectSFXSortLayer, create, AudioSortType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, SelectSFXSortLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x468b50, Thiscall, SelectSFXSortLayer, init, AudioSortType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SelectSFXSortLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4691d0, Thiscall, SelectSFXSortLayer, onSelect, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, SelectSFXSortLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x481030, Thiscall, SelectSFXSortLayer, init, AudioSortType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, SelectSFXSortLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4816b0, Thiscall, SelectSFXSortLayer, onSelect, cocos2d::CCObject*)
 		}
 	};
 }

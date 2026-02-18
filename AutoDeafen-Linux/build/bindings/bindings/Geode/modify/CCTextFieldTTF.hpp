@@ -10,16 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(textFieldWithPlaceHolder) 
 	#endif
 
-	#ifndef GEODE_STATICS_initWithPlaceHolder
-		#define GEODE_STATICS_initWithPlaceHolder
-		GEODE_AS_STATIC_FUNCTION(initWithPlaceHolder) 
-	#endif
-
-	#ifndef GEODE_STATICS_setDelegate
-		#define GEODE_STATICS_setDelegate
-		GEODE_AS_STATIC_FUNCTION(setDelegate) 
-	#endif
-
 	#ifndef GEODE_STATICS_draw
 		#define GEODE_STATICS_draw
 		GEODE_AS_STATIC_FUNCTION(draw) 
@@ -95,25 +85,25 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(deleteBackward) 
 	#endif
 
+	#ifndef GEODE_STATICS_deleteForward
+		#define GEODE_STATICS_deleteForward
+		GEODE_AS_STATIC_FUNCTION(deleteForward) 
+	#endif
+
 	#ifndef GEODE_STATICS_getContentText
 		#define GEODE_STATICS_getContentText
 		GEODE_AS_STATIC_FUNCTION(getContentText) 
+	#endif
+
+	#ifndef GEODE_STATICS_initWithPlaceHolder
+		#define GEODE_STATICS_initWithPlaceHolder
+		GEODE_AS_STATIC_FUNCTION(initWithPlaceHolder) 
 	#endif
 
     
 	#ifndef GEODE_CONCEPT_CHECK_textFieldWithPlaceHolder
 		#define GEODE_CONCEPT_CHECK_textFieldWithPlaceHolder
 		GEODE_CONCEPT_FUNCTION_CHECK(textFieldWithPlaceHolder) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_initWithPlaceHolder
-		#define GEODE_CONCEPT_CHECK_initWithPlaceHolder
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithPlaceHolder) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setDelegate
-		#define GEODE_CONCEPT_CHECK_setDelegate
-		GEODE_CONCEPT_FUNCTION_CHECK(setDelegate) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_draw
@@ -191,9 +181,19 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(deleteBackward) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_deleteForward
+		#define GEODE_CONCEPT_CHECK_deleteForward
+		GEODE_CONCEPT_FUNCTION_CHECK(deleteForward) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_getContentText
 		#define GEODE_CONCEPT_CHECK_getContentText
 		GEODE_CONCEPT_FUNCTION_CHECK(getContentText) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_initWithPlaceHolder
+		#define GEODE_CONCEPT_CHECK_initWithPlaceHolder
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithPlaceHolder) 
 	#endif
 
 
@@ -207,11 +207,8 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCTextFieldTTF@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCTextFieldTTF, )
 			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCTextFieldTTF@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCTextFieldTTF)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<const char*, const cocos2d::CCSize&, cocos2d::CCTextAlignment, const char*, float>::func(&cocos2d::CCTextFieldTTF::textFieldWithPlaceHolder)), Default, cocos2d::CCTextFieldTTF, textFieldWithPlaceHolder, const char*, const cocos2d::CCSize&, cocos2d::CCTextAlignment, const char*, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<const char*, const char*, float>::func(&cocos2d::CCTextFieldTTF::textFieldWithPlaceHolder)), Default, cocos2d::CCTextFieldTTF, textFieldWithPlaceHolder, const char*, const char*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<const char*, const cocos2d::CCSize&, cocos2d::CCTextAlignment, const char*, float>::func(&cocos2d::CCTextFieldTTF::initWithPlaceHolder)), Thiscall, cocos2d::CCTextFieldTTF, initWithPlaceHolder, const char*, const cocos2d::CCSize&, cocos2d::CCTextAlignment, const char*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<const char*, const char*, float>::func(&cocos2d::CCTextFieldTTF::initWithPlaceHolder)), Thiscall, cocos2d::CCTextFieldTTF, initWithPlaceHolder, const char*, const char*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTextFieldDelegate*>::func(&cocos2d::CCTextFieldTTF::setDelegate)), Thiscall, cocos2d::CCTextFieldTTF, setDelegate, cocos2d::CCTextFieldDelegate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<const char*, const cocos2d::CCSize&, cocos2d::CCTextAlignment, const char*, float>::func(&cocos2d::CCTextFieldTTF::textFieldWithPlaceHolder)), Default, cocos2d::CCTextFieldTTF, textFieldWithPlaceHolder, const char*, const cocos2d::CCSize&, cocos2d::CCTextAlignment, const char*, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTextFieldTTF::draw)), Thiscall, cocos2d::CCTextFieldTTF, draw, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTextFieldTTF::getColorSpaceHolder)), Thiscall, cocos2d::CCTextFieldTTF, getColorSpaceHolder, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<const cocos2d::ccColor3B&>::func(&cocos2d::CCTextFieldTTF::setColorSpaceHolder)), Thiscall, cocos2d::CCTextFieldTTF, setColorSpaceHolder, const cocos2d::ccColor3B&)
@@ -227,7 +224,10 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTextFieldTTF::canDetachWithIME)), Thiscall, cocos2d::CCTextFieldTTF, canDetachWithIME, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<const char*, int, cocos2d::enumKeyCodes>::func(&cocos2d::CCTextFieldTTF::insertText)), Thiscall, cocos2d::CCTextFieldTTF, insertText, const char*, int, cocos2d::enumKeyCodes)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTextFieldTTF::deleteBackward)), Thiscall, cocos2d::CCTextFieldTTF, deleteBackward, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTextFieldTTF::deleteForward)), Thiscall, cocos2d::CCTextFieldTTF, deleteForward, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTextFieldTTF::getContentText)), Thiscall, cocos2d::CCTextFieldTTF, getContentText, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<const char*, const char*, float>::func(&cocos2d::CCTextFieldTTF::initWithPlaceHolder)), Thiscall, cocos2d::CCTextFieldTTF, initWithPlaceHolder, const char*, const char*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<const char*, const cocos2d::CCSize&, cocos2d::CCTextAlignment, const char*, float>::func(&cocos2d::CCTextFieldTTF::initWithPlaceHolder)), Thiscall, cocos2d::CCTextFieldTTF, initWithPlaceHolder, const char*, const cocos2d::CCSize&, cocos2d::CCTextAlignment, const char*, float)
 		}
 	};
 }

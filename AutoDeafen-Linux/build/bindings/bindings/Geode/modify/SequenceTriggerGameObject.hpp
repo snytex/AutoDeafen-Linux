@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -33,31 +28,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getSaveString
 		#define GEODE_STATICS_getSaveString
 		GEODE_AS_STATIC_FUNCTION(getSaveString) 
-	#endif
-
-	#ifndef GEODE_STATICS_addCount
-		#define GEODE_STATICS_addCount
-		GEODE_AS_STATIC_FUNCTION(addCount) 
-	#endif
-
-	#ifndef GEODE_STATICS_addTarget
-		#define GEODE_STATICS_addTarget
-		GEODE_AS_STATIC_FUNCTION(addTarget) 
-	#endif
-
-	#ifndef GEODE_STATICS_deleteTarget
-		#define GEODE_STATICS_deleteTarget
-		GEODE_AS_STATIC_FUNCTION(deleteTarget) 
-	#endif
-
-	#ifndef GEODE_STATICS_reorderTarget
-		#define GEODE_STATICS_reorderTarget
-		GEODE_AS_STATIC_FUNCTION(reorderTarget) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateSequenceTotalCount
-		#define GEODE_STATICS_updateSequenceTotalCount
-		GEODE_AS_STATIC_FUNCTION(updateSequenceTotalCount) 
 	#endif
 
     
@@ -125,17 +95,17 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SequenceTriggerGameObject, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49bcd0, Thiscall, SequenceTriggerGameObject, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49bcf0, Thiscall, SequenceTriggerGameObject, resetObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49bd20, Thiscall, SequenceTriggerGameObject, triggerObject, GJBaseGameLayer*, int, gd::vector<int> const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49c140, Thiscall, SequenceTriggerGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49c470, Thiscall, SequenceTriggerGameObject, getSaveString, GJBaseGameLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SequenceTriggerGameObject, addCount, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SequenceTriggerGameObject, addTarget, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SequenceTriggerGameObject, deleteTarget, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SequenceTriggerGameObject, reorderTarget, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SequenceTriggerGameObject, updateSequenceTotalCount, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SequenceTriggerGameObject, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b4820, Thiscall, SequenceTriggerGameObject, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b4840, Thiscall, SequenceTriggerGameObject, resetObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b4870, Thiscall, SequenceTriggerGameObject, triggerObject, GJBaseGameLayer*, int, gd::vector<int> const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b4c90, Thiscall, SequenceTriggerGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b4fc0, Thiscall, SequenceTriggerGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SequenceTriggerGameObject, addCount, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SequenceTriggerGameObject, addTarget, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SequenceTriggerGameObject, deleteTarget, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SequenceTriggerGameObject, reorderTarget, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SequenceTriggerGameObject, updateSequenceTotalCount, )
 		}
 	};
 }

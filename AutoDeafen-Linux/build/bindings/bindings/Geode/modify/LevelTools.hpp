@@ -10,29 +10,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(artistForAudio) 
 	#endif
 
-	#ifndef GEODE_STATICS_base64DecodeString
-		#define GEODE_STATICS_base64DecodeString
-		GEODE_AS_STATIC_FUNCTION(base64DecodeString) 
-	#endif
-
-	#ifndef GEODE_STATICS_base64EncodeString
-		#define GEODE_STATICS_base64EncodeString
-		GEODE_AS_STATIC_FUNCTION(base64EncodeString) 
-	#endif
-
-	#ifndef GEODE_STATICS_createStarPackDict
-		#define GEODE_STATICS_createStarPackDict
-		GEODE_AS_STATIC_FUNCTION(createStarPackDict) 
-	#endif
-
 	#ifndef GEODE_STATICS_fbURLForArtist
 		#define GEODE_STATICS_fbURLForArtist
 		GEODE_AS_STATIC_FUNCTION(fbURLForArtist) 
-	#endif
-
-	#ifndef GEODE_STATICS_getAudioBPM
-		#define GEODE_STATICS_getAudioBPM
-		GEODE_AS_STATIC_FUNCTION(getAudioBPM) 
 	#endif
 
 	#ifndef GEODE_STATICS_getAudioFileName
@@ -60,6 +40,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getLevelList) 
 	#endif
 
+	#ifndef GEODE_STATICS_getSongObject
+		#define GEODE_STATICS_getSongObject
+		GEODE_AS_STATIC_FUNCTION(getSongObject) 
+	#endif
+
 	#ifndef GEODE_STATICS_moveTriggerObjectsToArray
 		#define GEODE_STATICS_moveTriggerObjectsToArray
 		GEODE_AS_STATIC_FUNCTION(moveTriggerObjectsToArray) 
@@ -73,11 +58,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_ngURLForArtist
 		#define GEODE_STATICS_ngURLForArtist
 		GEODE_AS_STATIC_FUNCTION(ngURLForArtist) 
-	#endif
-
-	#ifndef GEODE_STATICS_offsetBPMForTrack
-		#define GEODE_STATICS_offsetBPMForTrack
-		GEODE_AS_STATIC_FUNCTION(offsetBPMForTrack) 
 	#endif
 
 	#ifndef GEODE_STATICS_posForTimeInternal
@@ -100,19 +80,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(timeForPos) 
 	#endif
 
-	#ifndef GEODE_STATICS_toggleDebugLogging
-		#define GEODE_STATICS_toggleDebugLogging
-		GEODE_AS_STATIC_FUNCTION(toggleDebugLogging) 
-	#endif
-
 	#ifndef GEODE_STATICS_urlForAudio
 		#define GEODE_STATICS_urlForAudio
 		GEODE_AS_STATIC_FUNCTION(urlForAudio) 
-	#endif
-
-	#ifndef GEODE_STATICS_valueForSpeedMod
-		#define GEODE_STATICS_valueForSpeedMod
-		GEODE_AS_STATIC_FUNCTION(valueForSpeedMod) 
 	#endif
 
 	#ifndef GEODE_STATICS_verifyLevelIntegrity
@@ -280,35 +250,35 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x314320, Default, LevelTools, artistForAudio, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelTools, base64DecodeString, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelTools, base64EncodeString, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelTools, createStarPackDict, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x316430, Default, LevelTools, fbURLForArtist, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelTools, getAudioBPM, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x313750, Default, LevelTools, getAudioFileName, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x316950, Default, LevelTools, getAudioString, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x312bd0, Default, LevelTools, getAudioTitle, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x329040, Default, LevelTools, artistForAudio, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelTools, base64DecodeString, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelTools, base64EncodeString, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelTools, createStarPackDict, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32b150, Default, LevelTools, fbURLForArtist, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelTools, getAudioBPM, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x328470, Default, LevelTools, getAudioFileName, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32b650, Default, LevelTools, getAudioString, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3278f0, Default, LevelTools, getAudioTitle, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelTools, getLastGameplayReversed, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelTools, getLastGameplayRotated, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelTools, getLastTimewarp, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x310320, Default, LevelTools, getLevel, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelTools, getLevelList, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelTools, getSongObject, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelTools, moveTriggerObjectsToArray, cocos2d::CCArray*, cocos2d::CCDictionary*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3143f0, Default, LevelTools, nameForArtist, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x315a10, Default, LevelTools, ngURLForArtist, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelTools, offsetBPMForTrack, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x325040, Default, LevelTools, getLevel, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x324f00, Default, LevelTools, getLevelList, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32d200, Default, LevelTools, getSongObject, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32d5e0, Default, LevelTools, moveTriggerObjectsToArray, cocos2d::CCArray*, cocos2d::CCDictionary*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x329110, Default, LevelTools, nameForArtist, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32a730, Default, LevelTools, ngURLForArtist, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelTools, offsetBPMForTrack, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelTools, posForTime, float, cocos2d::CCArray*, int, bool, int&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x317ea0, Default, LevelTools, posForTimeInternal, float, cocos2d::CCArray*, int, bool, bool, bool, int&, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3187f0, Default, LevelTools, sortChannelOrderObjects, cocos2d::CCArray*, cocos2d::CCDictionary*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x318a70, Default, LevelTools, sortSpeedObjects, cocos2d::CCArray*, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3174c0, Default, LevelTools, timeForPos, cocos2d::CCPoint, cocos2d::CCArray*, int, int, int, bool, bool, bool, bool, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelTools, toggleDebugLogging, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3146f0, Default, LevelTools, urlForAudio, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelTools, valueForSpeedMod, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x318500, Default, LevelTools, verifyLevelIntegrity, gd::string, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x315eb0, Default, LevelTools, ytURLForArtist, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32cba0, Default, LevelTools, posForTimeInternal, float, cocos2d::CCArray*, int, bool, bool, bool, int&, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32d6b0, Default, LevelTools, sortChannelOrderObjects, cocos2d::CCArray*, cocos2d::CCDictionary*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32d930, Default, LevelTools, sortSpeedObjects, cocos2d::CCArray*, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32c1c0, Default, LevelTools, timeForPos, cocos2d::CCPoint, cocos2d::CCArray*, int, int, int, bool, bool, bool, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelTools, toggleDebugLogging, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x329410, Default, LevelTools, urlForAudio, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelTools, valueForSpeedMod, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32d3c0, Default, LevelTools, verifyLevelIntegrity, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32abd0, Default, LevelTools, ytURLForArtist, int)
 		}
 	};
 }

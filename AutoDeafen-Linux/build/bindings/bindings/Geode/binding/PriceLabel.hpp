@@ -15,31 +15,39 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(PriceLabel, cocos2d::CCNode)
 
     /**
+     * @note[short] MacOS (ARM): 0x41f6f8
+     * @note[short] MacOS (Intel): 0x4bf7e0
      * @note[short] Android
      */
-    static PriceLabel* create(int p0);
+    static PriceLabel* create(int price);
 
     /**
-     * @note[short] MacOS (ARM): 0x415640
-     * @note[short] MacOS (Intel): 0x4ac570
+     * @note[short] MacOS (ARM): 0x41f81c
+     * @note[short] MacOS (Intel): 0x4bf900
      * @note[short] Android
      */
-    bool init(int p0);
+    bool init(int price);
 
     /**
+     * @note[short] MacOS (ARM): 0x41fa38
+     * @note[short] MacOS (Intel): 0x4bfb40
      * @note[short] Android
      */
-    void setColor(cocos2d::ccColor3B p0);
+    void setColor(cocos2d::ccColor3B color);
 
     /**
+     * @note[short] MacOS (ARM): 0x41fa90
+     * @note[short] MacOS (Intel): 0x4bfb90
      * @note[short] Android
      */
-    void setOpacity(float p0);
+    void setOpacity(float opacity);
 
     /**
+     * @note[short] MacOS (ARM): 0x41f904
+     * @note[short] MacOS (Intel): 0x4bf9e0
      * @note[short] Android
      */
-    void setPrice(int p0);
+    void setPrice(int price);
     cocos2d::CCLabelBMFont* m_priceLabel;
     cocos2d::CCSprite* m_coinSprite;
 };

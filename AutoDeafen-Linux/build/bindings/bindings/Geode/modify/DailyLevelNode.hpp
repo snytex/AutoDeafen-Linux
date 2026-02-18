@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_FLAlert_Clicked
 		#define GEODE_STATICS_FLAlert_Clicked
 		GEODE_AS_STATIC_FUNCTION(FLAlert_Clicked) 
@@ -33,11 +28,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_showSkipButton
 		#define GEODE_STATICS_showSkipButton
 		GEODE_AS_STATIC_FUNCTION(showSkipButton) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateTimeLabel
-		#define GEODE_STATICS_updateTimeLabel
-		GEODE_AS_STATIC_FUNCTION(updateTimeLabel) 
 	#endif
 
     
@@ -85,13 +75,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DailyLevelNode, create, GJGameLevel*, DailyLevelPage*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd1c30, Thiscall, DailyLevelNode, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd0c90, Thiscall, DailyLevelNode, init, GJGameLevel*, DailyLevelPage*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd18f0, Thiscall, DailyLevelNode, onClaimReward, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd1a10, Thiscall, DailyLevelNode, onSkipLevel, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd1890, Thiscall, DailyLevelNode, showSkipButton, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DailyLevelNode, updateTimeLabel, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DailyLevelNode, create, GJGameLevel*, DailyLevelPage*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd3160, Thiscall, DailyLevelNode, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd20c0, Thiscall, DailyLevelNode, init, GJGameLevel*, DailyLevelPage*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd2e20, Thiscall, DailyLevelNode, onClaimReward, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd2f40, Thiscall, DailyLevelNode, onSkipLevel, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd2dc0, Thiscall, DailyLevelNode, showSkipButton, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DailyLevelNode, updateTimeLabel, gd::string)
 		}
 	};
 }

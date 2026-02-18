@@ -50,11 +50,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(queueRefreshBanner) 
 	#endif
 
-	#ifndef GEODE_STATICS_setupAds
-		#define GEODE_STATICS_setupAds
-		GEODE_AS_STATIC_FUNCTION(setupAds) 
-	#endif
-
 	#ifndef GEODE_STATICS_showDebug
 		#define GEODE_STATICS_showDebug
 		GEODE_AS_STATIC_FUNCTION(showDebug) 
@@ -154,7 +149,7 @@ namespace geode::modifier {
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AdToolbox, hasCachedRewardedVideo, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AdToolbox, isShowingAd, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AdToolbox, queueRefreshBanner, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AdToolbox, setupAds, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AdToolbox, setupAds, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AdToolbox, showDebug, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AdToolbox, showInterstitial, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AdToolbox, showRewardedVideo, )

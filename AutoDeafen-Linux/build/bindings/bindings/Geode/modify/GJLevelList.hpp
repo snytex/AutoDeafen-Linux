@@ -30,24 +30,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(completedLevels) 
 	#endif
 
-	#ifndef GEODE_STATICS_createWithCoder
-		#define GEODE_STATICS_createWithCoder
-		GEODE_AS_STATIC_FUNCTION(createWithCoder) 
-	#endif
-
 	#ifndef GEODE_STATICS_dataLoaded
 		#define GEODE_STATICS_dataLoaded
 		GEODE_AS_STATIC_FUNCTION(dataLoaded) 
-	#endif
-
-	#ifndef GEODE_STATICS_duplicateListLevels
-		#define GEODE_STATICS_duplicateListLevels
-		GEODE_AS_STATIC_FUNCTION(duplicateListLevels) 
-	#endif
-
-	#ifndef GEODE_STATICS_frameForListDifficulty
-		#define GEODE_STATICS_frameForListDifficulty
-		GEODE_AS_STATIC_FUNCTION(frameForListDifficulty) 
 	#endif
 
 	#ifndef GEODE_STATICS_getListLevelsArray
@@ -60,19 +45,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getUnpackedDescription) 
 	#endif
 
-	#ifndef GEODE_STATICS_handleStatsConflict
-		#define GEODE_STATICS_handleStatsConflict
-		GEODE_AS_STATIC_FUNCTION(handleStatsConflict) 
-	#endif
-
 	#ifndef GEODE_STATICS_hasMatchingLevels
 		#define GEODE_STATICS_hasMatchingLevels
 		GEODE_AS_STATIC_FUNCTION(hasMatchingLevels) 
-	#endif
-
-	#ifndef GEODE_STATICS_orderForLevel
-		#define GEODE_STATICS_orderForLevel
-		GEODE_AS_STATIC_FUNCTION(orderForLevel) 
 	#endif
 
 	#ifndef GEODE_STATICS_parseListLevels
@@ -80,29 +55,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(parseListLevels) 
 	#endif
 
-	#ifndef GEODE_STATICS_removeLevelFromList
-		#define GEODE_STATICS_removeLevelFromList
-		GEODE_AS_STATIC_FUNCTION(removeLevelFromList) 
-	#endif
-
 	#ifndef GEODE_STATICS_reorderLevel
 		#define GEODE_STATICS_reorderLevel
 		GEODE_AS_STATIC_FUNCTION(reorderLevel) 
 	#endif
 
-	#ifndef GEODE_STATICS_reorderLevelStep
-		#define GEODE_STATICS_reorderLevelStep
-		GEODE_AS_STATIC_FUNCTION(reorderLevelStep) 
-	#endif
-
 	#ifndef GEODE_STATICS_showListInfo
 		#define GEODE_STATICS_showListInfo
 		GEODE_AS_STATIC_FUNCTION(showListInfo) 
-	#endif
-
-	#ifndef GEODE_STATICS_totalLevels
-		#define GEODE_STATICS_totalLevels
-		GEODE_AS_STATIC_FUNCTION(totalLevels) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateLevelsString
@@ -114,6 +74,16 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_createWithCoder
+		#define GEODE_CONCEPT_CHECK_createWithCoder
+		GEODE_CONCEPT_FUNCTION_CHECK(createWithCoder) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_frameForListDifficulty
+		#define GEODE_CONCEPT_CHECK_frameForListDifficulty
+		GEODE_CONCEPT_FUNCTION_CHECK(frameForListDifficulty) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_encodeWithCoder
@@ -141,11 +111,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(completedLevels) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_createWithCoder
-		#define GEODE_CONCEPT_CHECK_createWithCoder
-		GEODE_CONCEPT_FUNCTION_CHECK(createWithCoder) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_dataLoaded
 		#define GEODE_CONCEPT_CHECK_dataLoaded
 		GEODE_CONCEPT_FUNCTION_CHECK(dataLoaded) 
@@ -154,11 +119,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_duplicateListLevels
 		#define GEODE_CONCEPT_CHECK_duplicateListLevels
 		GEODE_CONCEPT_FUNCTION_CHECK(duplicateListLevels) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_frameForListDifficulty
-		#define GEODE_CONCEPT_CHECK_frameForListDifficulty
-		GEODE_CONCEPT_FUNCTION_CHECK(frameForListDifficulty) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_getListLevelsArray
@@ -230,29 +190,29 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x173760, Default, GJLevelList, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x172e70, Default, GJLevelList, create, cocos2d::CCDictionary*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x174ff0, Thiscall, GJLevelList, encodeWithCoder, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x176770, Default, GJLevelList, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x175e80, Default, GJLevelList, create, cocos2d::CCDictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJLevelList, createWithCoder, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJLevelList, frameForListDifficulty, int, DifficultyIconType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x178000, Thiscall, GJLevelList, encodeWithCoder, DS_Dictionary*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJLevelList, canEncode, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1738f0, Thiscall, GJLevelList, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x173ee0, Thiscall, GJLevelList, addLevelToList, GJGameLevel*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJLevelList, completedLevels, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJLevelList, createWithCoder, DS_Dictionary*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x174cd0, Thiscall, GJLevelList, dataLoaded, DS_Dictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJLevelList, duplicateListLevels, GJLevelList*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJLevelList, frameForListDifficulty, int, DifficultyIconType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x174160, Thiscall, GJLevelList, getListLevelsArray, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x173b80, Thiscall, GJLevelList, getUnpackedDescription, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJLevelList, handleStatsConflict, GJLevelList*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x173970, Thiscall, GJLevelList, hasMatchingLevels, GJLevelList*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJLevelList, orderForLevel, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x173c40, Thiscall, GJLevelList, parseListLevels, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJLevelList, removeLevelFromList, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x174070, Thiscall, GJLevelList, reorderLevel, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJLevelList, reorderLevelStep, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x174900, Thiscall, GJLevelList, showListInfo, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJLevelList, totalLevels, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJLevelList, updateLevelsString, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x176900, Thiscall, GJLevelList, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x176ef0, Thiscall, GJLevelList, addLevelToList, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x177870, Thiscall, GJLevelList, completedLevels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x177ce0, Thiscall, GJLevelList, dataLoaded, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJLevelList, duplicateListLevels, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x177170, Thiscall, GJLevelList, getListLevelsArray, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x176b90, Thiscall, GJLevelList, getUnpackedDescription, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJLevelList, handleStatsConflict, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x176980, Thiscall, GJLevelList, hasMatchingLevels, GJLevelList*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJLevelList, orderForLevel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x176c50, Thiscall, GJLevelList, parseListLevels, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJLevelList, removeLevelFromList, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x177080, Thiscall, GJLevelList, reorderLevel, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJLevelList, reorderLevelStep, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x177910, Thiscall, GJLevelList, showListInfo, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJLevelList, totalLevels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x177760, Thiscall, GJLevelList, updateLevelsString, )
 		}
 	};
 }

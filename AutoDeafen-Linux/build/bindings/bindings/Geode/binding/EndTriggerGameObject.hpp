@@ -16,45 +16,58 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(EndTriggerGameObject, EffectGameObject)
 
     /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     EndTriggerGameObject();
+
+    /**
+     * @note[short] MacOS (ARM): 0x18ed44
+     * @note[short] MacOS (Intel): 0x1dbaf0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x391e7c
      * @note[short] Android
      */
     static EndTriggerGameObject* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x1864c4
-     * @note[short] MacOS (Intel): 0x1ca130
-     * @note[short] Windows: 0x4a4110
-     * @note[short] iOS: 0x38ad10
+     * @note[short] MacOS (ARM): 0x18ee0c
+     * @note[short] MacOS (Intel): 0x1dbbb0
+     * @note[short] Windows: 0x4bcc60
+     * @note[short] iOS: 0x391f38
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x186514
-     * @note[short] MacOS (Intel): 0x1ca180
-     * @note[short] Windows: 0x4a4180
-     * @note[short] iOS: 0x38ad60
+     * @note[short] MacOS (ARM): 0x18ee5c
+     * @note[short] MacOS (Intel): 0x1dbc00
+     * @note[short] Windows: 0x4bccd0
+     * @note[short] iOS: 0x391f88
      * @note[short] Android: Rebinded
      */
-    virtual void triggerObject(GJBaseGameLayer* p0, int p1, gd::vector<int> const* p2);
+    virtual void triggerObject(GJBaseGameLayer* layer, int uniqueID, gd::vector<int> const* remapKeys);
 
     /**
-     * @note[short] MacOS (ARM): 0x1870ac
-     * @note[short] MacOS (Intel): 0x1caf50
-     * @note[short] Windows: 0x4a45b0
-     * @note[short] iOS: 0x38b0ec
+     * @note[short] MacOS (ARM): 0x18f9d8
+     * @note[short] MacOS (Intel): 0x1dca20
+     * @note[short] Windows: 0x4bd100
+     * @note[short] iOS: 0x392320
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x1865f0
-     * @note[short] MacOS (Intel): 0x1ca260
-     * @note[short] Windows: 0x4a4270
-     * @note[short] iOS: 0x38adec
+     * @note[short] MacOS (ARM): 0x18ef28
+     * @note[short] MacOS (Intel): 0x1dbcd0
+     * @note[short] Windows: 0x4bcdc0
+     * @note[short] iOS: 0x392014
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
     bool m_noEffects;
     bool m_noSFX;
     bool m_instant;

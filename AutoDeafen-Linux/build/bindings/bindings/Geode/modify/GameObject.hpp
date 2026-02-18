@@ -330,11 +330,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addColorSpriteToSelf) 
 	#endif
 
-	#ifndef GEODE_STATICS_addCustomBlackChild
-		#define GEODE_STATICS_addCustomBlackChild
-		GEODE_AS_STATIC_FUNCTION(addCustomBlackChild) 
-	#endif
-
 	#ifndef GEODE_STATICS_addCustomChild
 		#define GEODE_STATICS_addCustomChild
 		GEODE_AS_STATIC_FUNCTION(addCustomChild) 
@@ -355,11 +350,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addGlow) 
 	#endif
 
-	#ifndef GEODE_STATICS_addInternalChild
-		#define GEODE_STATICS_addInternalChild
-		GEODE_AS_STATIC_FUNCTION(addInternalChild) 
-	#endif
-
 	#ifndef GEODE_STATICS_addInternalCustomColorChild
 		#define GEODE_STATICS_addInternalCustomColorChild
 		GEODE_AS_STATIC_FUNCTION(addInternalCustomColorChild) 
@@ -370,26 +360,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addInternalGlowChild) 
 	#endif
 
-	#ifndef GEODE_STATICS_addNewSlope01
-		#define GEODE_STATICS_addNewSlope01
-		GEODE_AS_STATIC_FUNCTION(addNewSlope01) 
-	#endif
-
-	#ifndef GEODE_STATICS_addNewSlope01Glow
-		#define GEODE_STATICS_addNewSlope01Glow
-		GEODE_AS_STATIC_FUNCTION(addNewSlope01Glow) 
-	#endif
-
-	#ifndef GEODE_STATICS_addNewSlope02
-		#define GEODE_STATICS_addNewSlope02
-		GEODE_AS_STATIC_FUNCTION(addNewSlope02) 
-	#endif
-
-	#ifndef GEODE_STATICS_addNewSlope02Glow
-		#define GEODE_STATICS_addNewSlope02Glow
-		GEODE_AS_STATIC_FUNCTION(addNewSlope02Glow) 
-	#endif
-
 	#ifndef GEODE_STATICS_addRotation
 		#define GEODE_STATICS_addRotation
 		GEODE_AS_STATIC_FUNCTION(addRotation) 
@@ -398,56 +368,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_addToColorGroup
 		#define GEODE_STATICS_addToColorGroup
 		GEODE_AS_STATIC_FUNCTION(addToColorGroup) 
-	#endif
-
-	#ifndef GEODE_STATICS_addToCustomScaleX
-		#define GEODE_STATICS_addToCustomScaleX
-		GEODE_AS_STATIC_FUNCTION(addToCustomScaleX) 
-	#endif
-
-	#ifndef GEODE_STATICS_addToCustomScaleY
-		#define GEODE_STATICS_addToCustomScaleY
-		GEODE_AS_STATIC_FUNCTION(addToCustomScaleY) 
-	#endif
-
-	#ifndef GEODE_STATICS_addToOpacityGroup
-		#define GEODE_STATICS_addToOpacityGroup
-		GEODE_AS_STATIC_FUNCTION(addToOpacityGroup) 
-	#endif
-
-	#ifndef GEODE_STATICS_addToTempOffset
-		#define GEODE_STATICS_addToTempOffset
-		GEODE_AS_STATIC_FUNCTION(addToTempOffset) 
-	#endif
-
-	#ifndef GEODE_STATICS_assignUniqueID
-		#define GEODE_STATICS_assignUniqueID
-		GEODE_AS_STATIC_FUNCTION(assignUniqueID) 
-	#endif
-
-	#ifndef GEODE_STATICS_belongsToGroup
-		#define GEODE_STATICS_belongsToGroup
-		GEODE_AS_STATIC_FUNCTION(belongsToGroup) 
-	#endif
-
-	#ifndef GEODE_STATICS_calculateOrientedBox
-		#define GEODE_STATICS_calculateOrientedBox
-		GEODE_AS_STATIC_FUNCTION(calculateOrientedBox) 
-	#endif
-
-	#ifndef GEODE_STATICS_canChangeCustomColor
-		#define GEODE_STATICS_canChangeCustomColor
-		GEODE_AS_STATIC_FUNCTION(canChangeCustomColor) 
-	#endif
-
-	#ifndef GEODE_STATICS_canChangeMainColor
-		#define GEODE_STATICS_canChangeMainColor
-		GEODE_AS_STATIC_FUNCTION(canChangeMainColor) 
-	#endif
-
-	#ifndef GEODE_STATICS_canChangeSecondaryColor
-		#define GEODE_STATICS_canChangeSecondaryColor
-		GEODE_AS_STATIC_FUNCTION(canChangeSecondaryColor) 
 	#endif
 
 	#ifndef GEODE_STATICS_colorForMode
@@ -475,11 +395,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createAndAddParticle) 
 	#endif
 
-	#ifndef GEODE_STATICS_createColorGroupContainer
-		#define GEODE_STATICS_createColorGroupContainer
-		GEODE_AS_STATIC_FUNCTION(createColorGroupContainer) 
-	#endif
-
 	#ifndef GEODE_STATICS_createGlow
 		#define GEODE_STATICS_createGlow
 		GEODE_AS_STATIC_FUNCTION(createGlow) 
@@ -490,49 +405,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createGroupContainer) 
 	#endif
 
-	#ifndef GEODE_STATICS_createOpacityGroupContainer
-		#define GEODE_STATICS_createOpacityGroupContainer
-		GEODE_AS_STATIC_FUNCTION(createOpacityGroupContainer) 
-	#endif
-
-	#ifndef GEODE_STATICS_createSpriteColor
-		#define GEODE_STATICS_createSpriteColor
-		GEODE_AS_STATIC_FUNCTION(createSpriteColor) 
-	#endif
-
 	#ifndef GEODE_STATICS_determineSlopeDirection
 		#define GEODE_STATICS_determineSlopeDirection
 		GEODE_AS_STATIC_FUNCTION(determineSlopeDirection) 
-	#endif
-
-	#ifndef GEODE_STATICS_didScaleXChange
-		#define GEODE_STATICS_didScaleXChange
-		GEODE_AS_STATIC_FUNCTION(didScaleXChange) 
-	#endif
-
-	#ifndef GEODE_STATICS_didScaleYChange
-		#define GEODE_STATICS_didScaleYChange
-		GEODE_AS_STATIC_FUNCTION(didScaleYChange) 
-	#endif
-
-	#ifndef GEODE_STATICS_dirtifyObjectPos
-		#define GEODE_STATICS_dirtifyObjectPos
-		GEODE_AS_STATIC_FUNCTION(dirtifyObjectPos) 
-	#endif
-
-	#ifndef GEODE_STATICS_dirtifyObjectRect
-		#define GEODE_STATICS_dirtifyObjectRect
-		GEODE_AS_STATIC_FUNCTION(dirtifyObjectRect) 
-	#endif
-
-	#ifndef GEODE_STATICS_disableObject
-		#define GEODE_STATICS_disableObject
-		GEODE_AS_STATIC_FUNCTION(disableObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_dontCountTowardsLimit
-		#define GEODE_STATICS_dontCountTowardsLimit
-		GEODE_AS_STATIC_FUNCTION(dontCountTowardsLimit) 
 	#endif
 
 	#ifndef GEODE_STATICS_duplicateAttributes
@@ -550,34 +425,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(duplicateValues) 
 	#endif
 
-	#ifndef GEODE_STATICS_editorColorForCustomMode
-		#define GEODE_STATICS_editorColorForCustomMode
-		GEODE_AS_STATIC_FUNCTION(editorColorForCustomMode) 
-	#endif
-
 	#ifndef GEODE_STATICS_editorColorForMode
 		#define GEODE_STATICS_editorColorForMode
 		GEODE_AS_STATIC_FUNCTION(editorColorForMode) 
 	#endif
 
-	#ifndef GEODE_STATICS_fastRotateObject
-		#define GEODE_STATICS_fastRotateObject
-		GEODE_AS_STATIC_FUNCTION(fastRotateObject) 
-	#endif
-
 	#ifndef GEODE_STATICS_getActiveColorForMode
 		#define GEODE_STATICS_getActiveColorForMode
 		GEODE_AS_STATIC_FUNCTION(getActiveColorForMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_getBallFrame
-		#define GEODE_STATICS_getBallFrame
-		GEODE_AS_STATIC_FUNCTION(getBallFrame) 
-	#endif
-
-	#ifndef GEODE_STATICS_getBoundingRect
-		#define GEODE_STATICS_getBoundingRect
-		GEODE_AS_STATIC_FUNCTION(getBoundingRect) 
 	#endif
 
 	#ifndef GEODE_STATICS_getBoxOffset
@@ -590,19 +445,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getColorFrame) 
 	#endif
 
-	#ifndef GEODE_STATICS_getColorIndex
-		#define GEODE_STATICS_getColorIndex
-		GEODE_AS_STATIC_FUNCTION(getColorIndex) 
-	#endif
-
 	#ifndef GEODE_STATICS_getColorKey
 		#define GEODE_STATICS_getColorKey
 		GEODE_AS_STATIC_FUNCTION(getColorKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getCustomZLayer
-		#define GEODE_STATICS_getCustomZLayer
-		GEODE_AS_STATIC_FUNCTION(getCustomZLayer) 
 	#endif
 
 	#ifndef GEODE_STATICS_getGlowFrame
@@ -610,49 +455,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getGlowFrame) 
 	#endif
 
-	#ifndef GEODE_STATICS_getGroupDisabled
-		#define GEODE_STATICS_getGroupDisabled
-		GEODE_AS_STATIC_FUNCTION(getGroupDisabled) 
-	#endif
-
-	#ifndef GEODE_STATICS_getGroupString
-		#define GEODE_STATICS_getGroupString
-		GEODE_AS_STATIC_FUNCTION(getGroupString) 
-	#endif
-
-	#ifndef GEODE_STATICS_getLastPosition
-		#define GEODE_STATICS_getLastPosition
-		GEODE_AS_STATIC_FUNCTION(getLastPosition) 
-	#endif
-
-	#ifndef GEODE_STATICS_getMainColor
-		#define GEODE_STATICS_getMainColor
-		GEODE_AS_STATIC_FUNCTION(getMainColor) 
-	#endif
-
-	#ifndef GEODE_STATICS_getMainColorMode
-		#define GEODE_STATICS_getMainColorMode
-		GEODE_AS_STATIC_FUNCTION(getMainColorMode) 
-	#endif
-
 	#ifndef GEODE_STATICS_getObjectDirection
 		#define GEODE_STATICS_getObjectDirection
 		GEODE_AS_STATIC_FUNCTION(getObjectDirection) 
-	#endif
-
-	#ifndef GEODE_STATICS_getObjectRadius
-		#define GEODE_STATICS_getObjectRadius
-		GEODE_AS_STATIC_FUNCTION(getObjectRadius) 
-	#endif
-
-	#ifndef GEODE_STATICS_getObjectRectPointer
-		#define GEODE_STATICS_getObjectRectPointer
-		GEODE_AS_STATIC_FUNCTION(getObjectRectPointer) 
-	#endif
-
-	#ifndef GEODE_STATICS_getOuterObjectRect
-		#define GEODE_STATICS_getOuterObjectRect
-		GEODE_AS_STATIC_FUNCTION(getOuterObjectRect) 
 	#endif
 
 	#ifndef GEODE_STATICS_getParentMode
@@ -670,44 +475,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getScalePosDelta) 
 	#endif
 
-	#ifndef GEODE_STATICS_getSecondaryColor
-		#define GEODE_STATICS_getSecondaryColor
-		GEODE_AS_STATIC_FUNCTION(getSecondaryColor) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSecondaryColorMode
-		#define GEODE_STATICS_getSecondaryColorMode
-		GEODE_AS_STATIC_FUNCTION(getSecondaryColorMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSlopeAngle
-		#define GEODE_STATICS_getSlopeAngle
-		GEODE_AS_STATIC_FUNCTION(getSlopeAngle) 
-	#endif
-
-	#ifndef GEODE_STATICS_getUnmodifiedPosition
-		#define GEODE_STATICS_getUnmodifiedPosition
-		GEODE_AS_STATIC_FUNCTION(getUnmodifiedPosition) 
-	#endif
-
-	#ifndef GEODE_STATICS_groupColor
-		#define GEODE_STATICS_groupColor
-		GEODE_AS_STATIC_FUNCTION(groupColor) 
-	#endif
-
 	#ifndef GEODE_STATICS_groupOpacityMod
 		#define GEODE_STATICS_groupOpacityMod
 		GEODE_AS_STATIC_FUNCTION(groupOpacityMod) 
-	#endif
-
-	#ifndef GEODE_STATICS_groupWasDisabled
-		#define GEODE_STATICS_groupWasDisabled
-		GEODE_AS_STATIC_FUNCTION(groupWasDisabled) 
-	#endif
-
-	#ifndef GEODE_STATICS_groupWasEnabled
-		#define GEODE_STATICS_groupWasEnabled
-		GEODE_AS_STATIC_FUNCTION(groupWasEnabled) 
 	#endif
 
 	#ifndef GEODE_STATICS_ignoreEditorDuration
@@ -715,44 +485,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(ignoreEditorDuration) 
 	#endif
 
-	#ifndef GEODE_STATICS_ignoreEnter
-		#define GEODE_STATICS_ignoreEnter
-		GEODE_AS_STATIC_FUNCTION(ignoreEnter) 
-	#endif
-
-	#ifndef GEODE_STATICS_ignoreFade
-		#define GEODE_STATICS_ignoreFade
-		GEODE_AS_STATIC_FUNCTION(ignoreFade) 
-	#endif
-
-	#ifndef GEODE_STATICS_isBasicEnterEffect
-		#define GEODE_STATICS_isBasicEnterEffect
-		GEODE_AS_STATIC_FUNCTION(isBasicEnterEffect) 
-	#endif
-
 	#ifndef GEODE_STATICS_isBasicTrigger
 		#define GEODE_STATICS_isBasicTrigger
 		GEODE_AS_STATIC_FUNCTION(isBasicTrigger) 
-	#endif
-
-	#ifndef GEODE_STATICS_isColorObject
-		#define GEODE_STATICS_isColorObject
-		GEODE_AS_STATIC_FUNCTION(isColorObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_isColorTrigger
-		#define GEODE_STATICS_isColorTrigger
-		GEODE_AS_STATIC_FUNCTION(isColorTrigger) 
-	#endif
-
-	#ifndef GEODE_STATICS_isConfigurablePortal
-		#define GEODE_STATICS_isConfigurablePortal
-		GEODE_AS_STATIC_FUNCTION(isConfigurablePortal) 
-	#endif
-
-	#ifndef GEODE_STATICS_isEditorSpawnableTrigger
-		#define GEODE_STATICS_isEditorSpawnableTrigger
-		GEODE_AS_STATIC_FUNCTION(isEditorSpawnableTrigger) 
 	#endif
 
 	#ifndef GEODE_STATICS_isFacingDown
@@ -765,11 +500,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(isFacingLeft) 
 	#endif
 
-	#ifndef GEODE_STATICS_isSettingsObject
-		#define GEODE_STATICS_isSettingsObject
-		GEODE_AS_STATIC_FUNCTION(isSettingsObject) 
-	#endif
-
 	#ifndef GEODE_STATICS_isSpawnableTrigger
 		#define GEODE_STATICS_isSpawnableTrigger
 		GEODE_AS_STATIC_FUNCTION(isSpawnableTrigger) 
@@ -780,16 +510,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(isSpecialObject) 
 	#endif
 
-	#ifndef GEODE_STATICS_isSpeedObject
-		#define GEODE_STATICS_isSpeedObject
-		GEODE_AS_STATIC_FUNCTION(isSpeedObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_isStoppableTrigger
-		#define GEODE_STATICS_isStoppableTrigger
-		GEODE_AS_STATIC_FUNCTION(isStoppableTrigger) 
-	#endif
-
 	#ifndef GEODE_STATICS_isTrigger
 		#define GEODE_STATICS_isTrigger
 		GEODE_AS_STATIC_FUNCTION(isTrigger) 
@@ -798,21 +518,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_loadGroupsFromString
 		#define GEODE_STATICS_loadGroupsFromString
 		GEODE_AS_STATIC_FUNCTION(loadGroupsFromString) 
-	#endif
-
-	#ifndef GEODE_STATICS_makeInvisible
-		#define GEODE_STATICS_makeInvisible
-		GEODE_AS_STATIC_FUNCTION(makeInvisible) 
-	#endif
-
-	#ifndef GEODE_STATICS_makeVisible
-		#define GEODE_STATICS_makeVisible
-		GEODE_AS_STATIC_FUNCTION(makeVisible) 
-	#endif
-
-	#ifndef GEODE_STATICS_opacityModForMode
-		#define GEODE_STATICS_opacityModForMode
-		GEODE_AS_STATIC_FUNCTION(opacityModForMode) 
 	#endif
 
 	#ifndef GEODE_STATICS_parentForZLayer
@@ -845,99 +550,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(playShineEffect) 
 	#endif
 
-	#ifndef GEODE_STATICS_quickUpdatePosition2
-		#define GEODE_STATICS_quickUpdatePosition2
-		GEODE_AS_STATIC_FUNCTION(quickUpdatePosition2) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeColorSprite
-		#define GEODE_STATICS_removeColorSprite
-		GEODE_AS_STATIC_FUNCTION(removeColorSprite) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeGlow
-		#define GEODE_STATICS_removeGlow
-		GEODE_AS_STATIC_FUNCTION(removeGlow) 
-	#endif
-
-	#ifndef GEODE_STATICS_reorderColorSprite
-		#define GEODE_STATICS_reorderColorSprite
-		GEODE_AS_STATIC_FUNCTION(reorderColorSprite) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetColorGroups
-		#define GEODE_STATICS_resetColorGroups
-		GEODE_AS_STATIC_FUNCTION(resetColorGroups) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetGroupDisabled
-		#define GEODE_STATICS_resetGroupDisabled
-		GEODE_AS_STATIC_FUNCTION(resetGroupDisabled) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetGroups
-		#define GEODE_STATICS_resetGroups
-		GEODE_AS_STATIC_FUNCTION(resetGroups) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetMainColorMode
-		#define GEODE_STATICS_resetMainColorMode
-		GEODE_AS_STATIC_FUNCTION(resetMainColorMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetMID
-		#define GEODE_STATICS_resetMID
-		GEODE_AS_STATIC_FUNCTION(resetMID) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetMoveOffset
-		#define GEODE_STATICS_resetMoveOffset
-		GEODE_AS_STATIC_FUNCTION(resetMoveOffset) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetSecondaryColorMode
-		#define GEODE_STATICS_resetSecondaryColorMode
-		GEODE_AS_STATIC_FUNCTION(resetSecondaryColorMode) 
-	#endif
-
 	#ifndef GEODE_STATICS_setAreaOpacity
 		#define GEODE_STATICS_setAreaOpacity
 		GEODE_AS_STATIC_FUNCTION(setAreaOpacity) 
-	#endif
-
-	#ifndef GEODE_STATICS_setDefaultMainColorMode
-		#define GEODE_STATICS_setDefaultMainColorMode
-		GEODE_AS_STATIC_FUNCTION(setDefaultMainColorMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_setDefaultSecondaryColorMode
-		#define GEODE_STATICS_setDefaultSecondaryColorMode
-		GEODE_AS_STATIC_FUNCTION(setDefaultSecondaryColorMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_setGlowOpacity
-		#define GEODE_STATICS_setGlowOpacity
-		GEODE_AS_STATIC_FUNCTION(setGlowOpacity) 
-	#endif
-
-	#ifndef GEODE_STATICS_setLastPosition
-		#define GEODE_STATICS_setLastPosition
-		GEODE_AS_STATIC_FUNCTION(setLastPosition) 
-	#endif
-
-	#ifndef GEODE_STATICS_setMainColorMode
-		#define GEODE_STATICS_setMainColorMode
-		GEODE_AS_STATIC_FUNCTION(setMainColorMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_setSecondaryColorMode
-		#define GEODE_STATICS_setSecondaryColorMode
-		GEODE_AS_STATIC_FUNCTION(setSecondaryColorMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_setupColorSprite
-		#define GEODE_STATICS_setupColorSprite
-		GEODE_AS_STATIC_FUNCTION(setupColorSprite) 
 	#endif
 
 	#ifndef GEODE_STATICS_setupPixelScale
@@ -960,26 +575,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(shouldLockX) 
 	#endif
 
-	#ifndef GEODE_STATICS_shouldNotHideAnimFreeze
-		#define GEODE_STATICS_shouldNotHideAnimFreeze
-		GEODE_AS_STATIC_FUNCTION(shouldNotHideAnimFreeze) 
-	#endif
-
-	#ifndef GEODE_STATICS_shouldShowPickupEffects
-		#define GEODE_STATICS_shouldShowPickupEffects
-		GEODE_AS_STATIC_FUNCTION(shouldShowPickupEffects) 
-	#endif
-
-	#ifndef GEODE_STATICS_slopeFloorTop
-		#define GEODE_STATICS_slopeFloorTop
-		GEODE_AS_STATIC_FUNCTION(slopeFloorTop) 
-	#endif
-
-	#ifndef GEODE_STATICS_slopeWallLeft
-		#define GEODE_STATICS_slopeWallLeft
-		GEODE_AS_STATIC_FUNCTION(slopeWallLeft) 
-	#endif
-
 	#ifndef GEODE_STATICS_slopeYPos
 		#define GEODE_STATICS_slopeYPos
 		GEODE_AS_STATIC_FUNCTION(slopeYPos) 
@@ -988,11 +583,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_spawnDefaultPickupParticle
 		#define GEODE_STATICS_spawnDefaultPickupParticle
 		GEODE_AS_STATIC_FUNCTION(spawnDefaultPickupParticle) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateCustomColorType
-		#define GEODE_STATICS_updateCustomColorType
-		GEODE_AS_STATIC_FUNCTION(updateCustomColorType) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateCustomScaleX
@@ -1005,24 +595,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateCustomScaleY) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateHSVState
-		#define GEODE_STATICS_updateHSVState
-		GEODE_AS_STATIC_FUNCTION(updateHSVState) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateIsOriented
 		#define GEODE_STATICS_updateIsOriented
 		GEODE_AS_STATIC_FUNCTION(updateIsOriented) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateMainColorOnly
-		#define GEODE_STATICS_updateMainColorOnly
-		GEODE_AS_STATIC_FUNCTION(updateMainColorOnly) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateMainOpacity
-		#define GEODE_STATICS_updateMainOpacity
-		GEODE_AS_STATIC_FUNCTION(updateMainOpacity) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateObjectEditorColor
@@ -1030,34 +605,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateObjectEditorColor) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateSecondaryColorOnly
-		#define GEODE_STATICS_updateSecondaryColorOnly
-		GEODE_AS_STATIC_FUNCTION(updateSecondaryColorOnly) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateSecondaryOpacity
-		#define GEODE_STATICS_updateSecondaryOpacity
-		GEODE_AS_STATIC_FUNCTION(updateSecondaryOpacity) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateStartPos
 		#define GEODE_STATICS_updateStartPos
 		GEODE_AS_STATIC_FUNCTION(updateStartPos) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateUnmodifiedPositions
-		#define GEODE_STATICS_updateUnmodifiedPositions
-		GEODE_AS_STATIC_FUNCTION(updateUnmodifiedPositions) 
-	#endif
-
-	#ifndef GEODE_STATICS_usesFreezeAnimation
-		#define GEODE_STATICS_usesFreezeAnimation
-		GEODE_AS_STATIC_FUNCTION(usesFreezeAnimation) 
-	#endif
-
-	#ifndef GEODE_STATICS_usesSpecialAnimation
-		#define GEODE_STATICS_usesSpecialAnimation
-		GEODE_AS_STATIC_FUNCTION(usesSpecialAnimation) 
 	#endif
 
     
@@ -1071,9 +621,19 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(createWithKey) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_isBasicEnterEffect
+		#define GEODE_CONCEPT_CHECK_isBasicEnterEffect
+		GEODE_CONCEPT_FUNCTION_CHECK(isBasicEnterEffect) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_objectFromVector
 		#define GEODE_CONCEPT_CHECK_objectFromVector
 		GEODE_CONCEPT_FUNCTION_CHECK(objectFromVector) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_resetMID
+		#define GEODE_CONCEPT_CHECK_resetMID
+		GEODE_CONCEPT_FUNCTION_CHECK(resetMID) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_update
@@ -1691,6 +1251,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(deselectObject) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_destroyObject
+		#define GEODE_CONCEPT_CHECK_destroyObject
+		GEODE_CONCEPT_FUNCTION_CHECK(destroyObject) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_determineSlopeDirection
 		#define GEODE_CONCEPT_CHECK_determineSlopeDirection
 		GEODE_CONCEPT_FUNCTION_CHECK(determineSlopeDirection) 
@@ -1941,11 +1506,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(init) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_isBasicEnterEffect
-		#define GEODE_CONCEPT_CHECK_isBasicEnterEffect
-		GEODE_CONCEPT_FUNCTION_CHECK(isBasicEnterEffect) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_isBasicTrigger
 		#define GEODE_CONCEPT_CHECK_isBasicTrigger
 		GEODE_CONCEPT_FUNCTION_CHECK(isBasicTrigger) 
@@ -2104,11 +1664,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_resetMainColorMode
 		#define GEODE_CONCEPT_CHECK_resetMainColorMode
 		GEODE_CONCEPT_FUNCTION_CHECK(resetMainColorMode) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_resetMID
-		#define GEODE_CONCEPT_CHECK_resetMID
-		GEODE_CONCEPT_FUNCTION_CHECK(resetMID) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_resetMoveOffset
@@ -2305,75 +1860,78 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x135ba0, Thiscall, GameObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18aca0, Default, GameObject, createWithFrame, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x188850, Default, GameObject, createWithKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19a260, Default, GameObject, objectFromVector, gd::vector<gd::string>&, gd::vector<void*>&, GJBaseGameLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x1377e0, Thiscall, GameObject, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x18b6b0, Thiscall, GameObject)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18dc20, Default, GameObject, createWithFrame, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18b7d0, Default, GameObject, createWithKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, isBasicEnterEffect, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19d1e0, Default, GameObject, objectFromVector, gd::vector<gd::string>&, gd::vector<void*>&, GJBaseGameLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, resetMID, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, update, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1952d0, Thiscall, GameObject, setScaleX, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1953b0, Thiscall, GameObject, setScaleY, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1954a0, Thiscall, GameObject, setScale, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x194be0, Thiscall, GameObject, setPosition, cocos2d::CCPoint const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x195cd0, Thiscall, GameObject, setVisible, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x194e80, Thiscall, GameObject, setRotation, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x194fd0, Thiscall, GameObject, setRotationX, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x195120, Thiscall, GameObject, setRotationY, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x195880, Thiscall, GameObject, setOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18ad30, Thiscall, GameObject, initWithTexture, cocos2d::CCTexture2D*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19de40, Thiscall, GameObject, setChildColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x195240, Thiscall, GameObject, setFlipX, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x195280, Thiscall, GameObject, setFlipY, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198250, Thiscall, GameObject, setScaleX, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198330, Thiscall, GameObject, setScaleY, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198420, Thiscall, GameObject, setScale, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x197b60, Thiscall, GameObject, setPosition, cocos2d::CCPoint const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198c50, Thiscall, GameObject, setVisible, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x197e00, Thiscall, GameObject, setRotation, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x197f50, Thiscall, GameObject, setRotationX, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1980a0, Thiscall, GameObject, setRotationY, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198800, Thiscall, GameObject, setOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18dcb0, Thiscall, GameObject, initWithTexture, cocos2d::CCTexture2D*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a0dc0, Thiscall, GameObject, setChildColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1981c0, Thiscall, GameObject, setFlipX, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198200, Thiscall, GameObject, setFlipY, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, firstSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18dea0, Thiscall, GameObject, customSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1abf80, Thiscall, GameObject, setupCustomSprites, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198dd0, Thiscall, GameObject, addMainSpriteToParent, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18d750, Thiscall, GameObject, resetObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x190e20, Thiscall, GameObject, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1aef00, Thiscall, GameObject, setupCustomSprites, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19bd50, Thiscall, GameObject, addMainSpriteToParent, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1906d0, Thiscall, GameObject, resetObject, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, triggerObject, GJBaseGameLayer*, int, gd::vector<int> const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18db60, Thiscall, GameObject, activateObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18dc10, Thiscall, GameObject, deactivateObject, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1946d0, Thiscall, GameObject, transferObjectRect, cocos2d::CCRect&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x194720, Thiscall, GameObject, getObjectRect, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x194740, Thiscall, GameObject, getObjectRect, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1948d0, Thiscall, GameObject, getObjectRect2, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x194970, Thiscall, GameObject, getObjectTextureRect, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x194ba0, Thiscall, GameObject, getRealPosition, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18d5d0, Thiscall, GameObject, setStartPos, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18d9a0, Thiscall, GameObject, updateStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x190ae0, Thiscall, GameObject, activateObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x190b90, Thiscall, GameObject, deactivateObject, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x197650, Thiscall, GameObject, transferObjectRect, cocos2d::CCRect&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1976a0, Thiscall, GameObject, getObjectRect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1976c0, Thiscall, GameObject, getObjectRect, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x197850, Thiscall, GameObject, getObjectRect2, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1978f0, Thiscall, GameObject, getObjectTextureRect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x197b20, Thiscall, GameObject, getRealPosition, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x190550, Thiscall, GameObject, setStartPos, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x190920, Thiscall, GameObject, updateStartValues, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19bd50, Thiscall, GameObject, getSaveString, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x195df0, Thiscall, GameObject, claimParticle, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x196320, Thiscall, GameObject, unclaimParticle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19ecd0, Thiscall, GameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198d70, Thiscall, GameObject, claimParticle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1992a0, Thiscall, GameObject, unclaimParticle, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, particleWasActivated, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x195220, Thiscall, GameObject, isFlipX, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x195230, Thiscall, GameObject, isFlipY, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x195590, Thiscall, GameObject, setRScaleX, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1955d0, Thiscall, GameObject, setRScaleY, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x195610, Thiscall, GameObject, setRScale, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x195650, Thiscall, GameObject, getRScaleX, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x195690, Thiscall, GameObject, getRScaleY, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x194df0, Thiscall, GameObject, setRRotation, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1981a0, Thiscall, GameObject, isFlipX, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1981b0, Thiscall, GameObject, isFlipY, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198510, Thiscall, GameObject, setRScaleX, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198550, Thiscall, GameObject, setRScaleY, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198590, Thiscall, GameObject, setRScale, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1985d0, Thiscall, GameObject, getRScaleX, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198610, Thiscall, GameObject, getRScaleY, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x197d70, Thiscall, GameObject, setRRotation, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, triggerActivated, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19db00, Thiscall, GameObject, setObjectColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19ddf0, Thiscall, GameObject, setGlowColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x196410, Thiscall, GameObject, restoreObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a0a80, Thiscall, GameObject, setObjectColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a0d70, Thiscall, GameObject, setGlowColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x199390, Thiscall, GameObject, restoreObject, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, animationTriggered, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19dec0, Thiscall, GameObject, selectObject, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a0e40, Thiscall, GameObject, selectObject, cocos2d::ccColor3B)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, activatedByPlayer, PlayerObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, hasBeenActivatedByPlayer, PlayerObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, hasBeenActivated, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19e590, Thiscall, GameObject, getOrientedBox, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19e5f0, Thiscall, GameObject, updateOrientedBox, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19e570, Thiscall, GameObject, getObjectRotation, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19eff0, Thiscall, GameObject, updateMainColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19f000, Thiscall, GameObject, updateSecondaryColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x199810, Thiscall, GameObject, addToGroup, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x199930, Thiscall, GameObject, removeFromGroup, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19d950, Thiscall, GameObject, saveActiveColors, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x135fe0, Thiscall, GameObject, spawnXPosition, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1510, Thiscall, GameObject, getOrientedBox, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1570, Thiscall, GameObject, updateOrientedBox, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a14f0, Thiscall, GameObject, getObjectRotation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1f70, Thiscall, GameObject, updateMainColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1f80, Thiscall, GameObject, updateSecondaryColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19c790, Thiscall, GameObject, addToGroup, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19c8b0, Thiscall, GameObject, removeFromGroup, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a08d0, Thiscall, GameObject, saveActiveColors, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x137c20, Thiscall, GameObject, spawnXPosition, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, canAllowMultiActivate, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, blendModeChanged, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19dce0, Thiscall, GameObject, updateParticleColor, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x195b20, Thiscall, GameObject, updateParticleOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a0c60, Thiscall, GameObject, updateParticleColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198aa0, Thiscall, GameObject, updateParticleOpacity, unsigned char)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, updateMainParticleOpacity, unsigned char)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, updateSecondaryParticleOpacity, unsigned char)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, canReverse, )
@@ -2387,179 +1945,178 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, canMultiActivate, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, updateTextKerning, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getTextKerning, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136000, Thiscall, GameObject, getObjectRectDirty, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136010, Thiscall, GameObject, setObjectRectDirty, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136020, Thiscall, GameObject, getOrientedRectDirty, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136030, Thiscall, GameObject, setOrientedRectDirty, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136040, Thiscall, GameObject, getType, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136050, Thiscall, GameObject, setType, GameObjectType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x136060, Thiscall, GameObject, getStartPos, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18b830, Thiscall, GameObject, addColorSprite, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x199040, Thiscall, GameObject, addColorSpriteToParent, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x199240, Thiscall, GameObject, addColorSpriteToSelf, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addCustomBlackChild, gd::string, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x194330, Thiscall, GameObject, addCustomChild, gd::string, cocos2d::CCPoint, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addCustomColorChild, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addEmptyGlow, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18af60, Thiscall, GameObject, addGlow, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addInternalChild, cocos2d::CCSprite*, gd::string, cocos2d::CCPoint, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addInternalCustomColorChild, gd::string, cocos2d::CCPoint, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addInternalGlowChild, gd::string, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addNewSlope01, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addNewSlope01Glow, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addNewSlope02, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addNewSlope02Glow, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addRotation, float, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addRotation, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addToColorGroup, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addToCustomScaleX, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addToCustomScaleY, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addToOpacityGroup, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, addToTempOffset, double, double)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, assignUniqueID, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, belongsToGroup, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, calculateOrientedBox, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, canChangeCustomColor, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, canChangeMainColor, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, canChangeSecondaryColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x137c40, Thiscall, GameObject, getObjectRectDirty, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x137c50, Thiscall, GameObject, setObjectRectDirty, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x137c60, Thiscall, GameObject, getOrientedRectDirty, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x137c70, Thiscall, GameObject, setOrientedRectDirty, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x137c80, Thiscall, GameObject, getType, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x137c90, Thiscall, GameObject, setType, GameObjectType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x137ca0, Thiscall, GameObject, getStartPos, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18e7b0, Thiscall, GameObject, addColorSprite, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19bfc0, Thiscall, GameObject, addColorSpriteToParent, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19c1c0, Thiscall, GameObject, addColorSpriteToSelf, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, addCustomBlackChild, gd::string, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1972b0, Thiscall, GameObject, addCustomChild, gd::string, cocos2d::CCPoint, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x197370, Thiscall, GameObject, addCustomColorChild, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18e660, Thiscall, GameObject, addEmptyGlow, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18dee0, Thiscall, GameObject, addGlow, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, addInternalChild, cocos2d::CCSprite*, gd::string, cocos2d::CCPoint, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1974b0, Thiscall, GameObject, addInternalCustomColorChild, gd::string, cocos2d::CCPoint, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x197580, Thiscall, GameObject, addInternalGlowChild, gd::string, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, addNewSlope01, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, addNewSlope01Glow, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, addNewSlope02, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, addNewSlope02Glow, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x197cd0, Thiscall, GameObject, addRotation, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, addRotation, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19c9d0, Thiscall, GameObject, addToColorGroup, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, addToCustomScaleX, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, addToCustomScaleY, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, addToOpacityGroup, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, addToTempOffset, double, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, assignUniqueID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, belongsToGroup, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, calculateOrientedBox, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, canChangeCustomColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, canChangeMainColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, canChangeSecondaryColor, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, canRotateFree, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19f010, Thiscall, GameObject, colorForMode, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, commonInteractiveSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18ad70, Thiscall, GameObject, commonSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1999c0, Thiscall, GameObject, copyGroups, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x195ba0, Thiscall, GameObject, createAndAddParticle, int, char const*, int, cocos2d::tCCPositionType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, createColorGroupContainer, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, createGlow, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x199740, Thiscall, GameObject, createGroupContainer, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, createOpacityGroupContainer, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, createSpriteColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1f90, Thiscall, GameObject, colorForMode, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x196d80, Thiscall, GameObject, commonInteractiveSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18dcf0, Thiscall, GameObject, commonSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19c940, Thiscall, GameObject, copyGroups, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198b20, Thiscall, GameObject, createAndAddParticle, int, char const*, int, cocos2d::tCCPositionType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, createColorGroupContainer, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18e6d0, Thiscall, GameObject, createGlow, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19c6c0, Thiscall, GameObject, createGroupContainer, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, createOpacityGroupContainer, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, createSpriteColor, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, deselectObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x199340, Thiscall, GameObject, determineSlopeDirection, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, didScaleXChange, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, didScaleYChange, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, dirtifyObjectPos, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, dirtifyObjectRect, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, disableObject, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, dontCountTowardsLimit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19ed00, Thiscall, GameObject, duplicateAttributes, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, duplicateColorMode, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19ee40, Thiscall, GameObject, duplicateValues, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, editorColorForCustomMode, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19e0a0, Thiscall, GameObject, editorColorForMode, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, fastRotateObject, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19f140, Thiscall, GameObject, getActiveColorForMode, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getBallFrame, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getBoundingRect, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getBoxOffset, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getColorFrame, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getColorIndex, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x199db0, Thiscall, GameObject, getColorKey, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getCustomZLayer, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getGlowFrame, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getGroupDisabled, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, destroyObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19c2c0, Thiscall, GameObject, determineSlopeDirection, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, didScaleXChange, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, didScaleYChange, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, dirtifyObjectPos, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, dirtifyObjectRect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, disableObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, dontCountTowardsLimit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1c80, Thiscall, GameObject, duplicateAttributes, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1ba0, Thiscall, GameObject, duplicateColorMode, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1dc0, Thiscall, GameObject, duplicateValues, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, editorColorForCustomMode, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1020, Thiscall, GameObject, editorColorForMode, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, fastRotateObject, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a20c0, Thiscall, GameObject, getActiveColorForMode, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getBallFrame, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getBoundingRect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a17d0, Thiscall, GameObject, getBoxOffset, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1903d0, Thiscall, GameObject, getColorFrame, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getColorIndex, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19cd30, Thiscall, GameObject, getColorKey, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getCustomZLayer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x190490, Thiscall, GameObject, getGlowFrame, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getGroupDisabled, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getGroupID, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getGroupString, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getLastPosition, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getMainColor, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getMainColorMode, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1995a0, Thiscall, GameObject, getObjectDirection, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getObjectRadius, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getObjectRectPointer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getGroupString, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getLastPosition, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getMainColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getMainColorMode, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19c520, Thiscall, GameObject, getObjectDirection, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getObjectRadius, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getObjectRectPointer, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getObjectZLayer, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getObjectZOrder, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getOuterObjectRect, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getParentMode, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19eb30, Thiscall, GameObject, getRelativeSpriteColor, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getScalePosDelta, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getSecondaryColor, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getSecondaryColorMode, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getSlopeAngle, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, getUnmodifiedPosition, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, groupColor, cocos2d::ccColor3B const&, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x199d30, Thiscall, GameObject, groupOpacityMod, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, groupWasDisabled, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, groupWasEnabled, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getOuterObjectRect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19ab30, Thiscall, GameObject, getParentMode, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1ab0, Thiscall, GameObject, getRelativeSpriteColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19c5a0, Thiscall, GameObject, getScalePosDelta, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getSecondaryColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getSecondaryColorMode, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getSlopeAngle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, getUnmodifiedPosition, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, groupColor, cocos2d::ccColor3B const&, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19ccb0, Thiscall, GameObject, groupOpacityMod, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, groupWasDisabled, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, groupWasEnabled, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, hasSecondaryColor, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a0180, Thiscall, GameObject, ignoreEditorDuration, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, ignoreEnter, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, ignoreFade, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a3100, Thiscall, GameObject, ignoreEditorDuration, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, ignoreEnter, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, ignoreFade, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, init, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, isBasicEnterEffect, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, isBasicTrigger, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, isColorObject, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, isColorTrigger, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, isConfigurablePortal, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, isEditorSpawnableTrigger, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19e990, Thiscall, GameObject, isFacingDown, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19ea50, Thiscall, GameObject, isFacingLeft, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, isSettingsObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19f730, Thiscall, GameObject, isSpawnableTrigger, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, isSpecialObject, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, isSpeedObject, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, isStoppableTrigger, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19f2c0, Thiscall, GameObject, isTrigger, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x199b50, Thiscall, GameObject, loadGroupsFromString, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, makeInvisible, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, makeVisible, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, opacityModForMode, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198f60, Thiscall, GameObject, parentForZLayer, int, bool, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, perspectiveColorFrame, char const*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, perspectiveFrame, char const*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a7520, Thiscall, GameObject, playDestroyObjectAnim, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a7040, Thiscall, GameObject, playPickupAnimation, cocos2d::CCSprite*, float, float, float, float, float, float, float, float, bool, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a6f50, Thiscall, GameObject, playPickupAnimation, cocos2d::CCSprite*, float, float, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x196430, Thiscall, GameObject, playShineEffect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a35f0, Thiscall, GameObject, isBasicTrigger, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, isColorObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, isColorTrigger, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, isConfigurablePortal, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, isEditorSpawnableTrigger, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1910, Thiscall, GameObject, isFacingDown, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a19d0, Thiscall, GameObject, isFacingLeft, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, isSettingsObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a26b0, Thiscall, GameObject, isSpawnableTrigger, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a2ac0, Thiscall, GameObject, isSpecialObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, isSpeedObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, isStoppableTrigger, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a2240, Thiscall, GameObject, isTrigger, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19cad0, Thiscall, GameObject, loadGroupsFromString, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, makeInvisible, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, makeVisible, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, opacityModForMode, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19bee0, Thiscall, GameObject, parentForZLayer, int, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1aeed0, Thiscall, GameObject, perspectiveColorFrame, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1aed90, Thiscall, GameObject, perspectiveFrame, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1aa4a0, Thiscall, GameObject, playDestroyObjectAnim, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a9ed0, Thiscall, GameObject, playPickupAnimation, cocos2d::CCSprite*, float, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a9fc0, Thiscall, GameObject, playPickupAnimation, cocos2d::CCSprite*, float, float, float, float, float, float, float, float, bool, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1993b0, Thiscall, GameObject, playShineEffect, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, quickUpdatePosition, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, quickUpdatePosition2, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, removeColorSprite, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, removeGlow, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, reorderColorSprite, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, resetColorGroups, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, resetGroupDisabled, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, resetGroups, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, resetMainColorMode, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, resetMID, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, resetMoveOffset, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, quickUpdatePosition2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, removeColorSprite, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, removeGlow, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, reorderColorSprite, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, resetColorGroups, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, resetGroupDisabled, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, resetGroups, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, resetMainColorMode, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, resetMoveOffset, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, resetRScaleForced, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, resetSecondaryColorMode, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, setAreaOpacity, float, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, resetSecondaryColorMode, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198770, Thiscall, GameObject, setAreaOpacity, float, float, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, setCustomZLayer, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, setDefaultMainColorMode, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, setDefaultSecondaryColorMode, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, setGlowOpacity, unsigned char)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, setLastPosition, cocos2d::CCPoint const&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, setMainColorMode, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, setSecondaryColorMode, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, setupColorSprite, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, setupPixelScale, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, setupSpriteSize, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18dd00, Thiscall, GameObject, shouldBlendColor, GJSpriteColor*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, shouldLockX, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, shouldNotHideAnimFreeze, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, shouldShowPickupEffects, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, slopeFloorTop, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, slopeWallLeft, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, slopeYPos, cocos2d::CCRect)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19e430, Thiscall, GameObject, slopeYPos, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, slopeYPos, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, spawnDefaultPickupParticle, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, setDefaultMainColorMode, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, setDefaultSecondaryColorMode, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, setGlowOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, setLastPosition, cocos2d::CCPoint const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, setMainColorMode, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, setSecondaryColorMode, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, setupColorSprite, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1c3300, Thiscall, GameObject, setupPixelScale, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a36a0, Thiscall, GameObject, setupSpriteSize, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x190c80, Thiscall, GameObject, shouldBlendColor, GJSpriteColor*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x196e40, Thiscall, GameObject, shouldLockX, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, shouldNotHideAnimFreeze, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, shouldShowPickupEffects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, slopeFloorTop, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, slopeWallLeft, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, slopeYPos, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, slopeYPos, cocos2d::CCRect)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a13b0, Thiscall, GameObject, slopeYPos, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1aa260, Thiscall, GameObject, spawnDefaultPickupParticle, GJBaseGameLayer*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, updateBlendMode, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, updateCustomColorType, short)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1956d0, Thiscall, GameObject, updateCustomScaleX, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x195760, Thiscall, GameObject, updateCustomScaleY, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, updateHSVState, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19e7b0, Thiscall, GameObject, updateIsOriented, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, updateMainColor, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, updateMainColorOnly, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, updateMainOpacity, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x19e370, Thiscall, GameObject, updateObjectEditorColor, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, updateSecondaryColor, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, updateSecondaryColorOnly, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, updateSecondaryOpacity, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18d670, Thiscall, GameObject, updateStartPos, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, updateUnmodifiedPositions, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, usesFreezeAnimation, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameObject, usesSpecialAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, updateCustomColorType, short)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x198650, Thiscall, GameObject, updateCustomScaleX, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1986e0, Thiscall, GameObject, updateCustomScaleY, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, updateHSVState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a1730, Thiscall, GameObject, updateIsOriented, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, updateMainColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, updateMainColorOnly, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, updateMainOpacity, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a12f0, Thiscall, GameObject, updateObjectEditorColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, updateSecondaryColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, updateSecondaryColorOnly, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, updateSecondaryOpacity, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1905f0, Thiscall, GameObject, updateStartPos, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, updateUnmodifiedPositions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, usesFreezeAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameObject, usesSpecialAnimation, )
 		}
 	};
 }

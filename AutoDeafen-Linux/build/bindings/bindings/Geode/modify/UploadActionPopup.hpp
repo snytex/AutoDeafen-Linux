@@ -80,13 +80,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28db20, Default, UploadActionPopup, create, UploadPopupDelegate*, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28e320, Thiscall, UploadActionPopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x295180, Default, UploadActionPopup, create, UploadPopupDelegate*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x295980, Thiscall, UploadActionPopup, keyBackClicked, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UploadActionPopup, closePopup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28dc60, Thiscall, UploadActionPopup, init, UploadPopupDelegate*, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28e2d0, Thiscall, UploadActionPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28e1d0, Thiscall, UploadActionPopup, showFailMessage, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28e0c0, Thiscall, UploadActionPopup, showSuccessMessage, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2952c0, Thiscall, UploadActionPopup, init, UploadPopupDelegate*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x295930, Thiscall, UploadActionPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x295830, Thiscall, UploadActionPopup, showFailMessage, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x295720, Thiscall, UploadActionPopup, showSuccessMessage, gd::string)
 		}
 	};
 }

@@ -25,26 +25,35 @@ public:
     static constexpr auto CLASS_NAME = "GJGameState";
 
     /**
+     * @note[short] MacOS (ARM): 0xe9f0c
+     * @note[short] MacOS (Intel): 0x10e120
+     * @note[short] Windows: 0x205460
+     * @note[short] iOS: 0x1d9cec
      * @note[short] Android
      */
-    TodoReturn controlTweenAction(int p0, int p1, GJActionCommand p2);
+    void controlTweenAction(int uniqueID, int controlID, GJActionCommand command);
 
     /**
-     * @note[short] Windows: 0x200400
+     * @note[short] MacOS (ARM): 0xea43c
+     * @note[short] MacOS (Intel): 0x10e7c0
+     * @note[short] Windows: 0x205660
+     * @note[short] iOS: 0x1d9f74
      * @note[short] Android
      */
-    GameObjectPhysics& getGameObjectPhysics(GameObject* p0);
+    GameObjectPhysics& getGameObjectPhysics(GameObject* object);
 
     /**
-     * @note[short] Windows: 0x200290
-     * @note[short] iOS: 0x1dacdc
+     * @note[short] MacOS (ARM): 0xea328
+     * @note[short] MacOS (Intel): 0x10e690
+     * @note[short] Windows: 0x2054f0
+     * @note[short] iOS: 0x1d9eb4
      * @note[short] Android
      */
-    TodoReturn processStateTriggers();
+    void processStateTriggers();
 
     /**
-     * @note[short] MacOS (ARM): 0xdfb0c
-     * @note[short] MacOS (Intel): 0xfcd00
+     * @note[short] MacOS (ARM): 0xe9ee4
+     * @note[short] MacOS (Intel): 0x10e0f0
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
@@ -52,24 +61,31 @@ public:
     void stopTweenAction(int action);
 
     /**
-     * @note[short] MacOS (ARM): 0xdfa70
-     * @note[short] MacOS (Intel): 0xfcc50
-     * @note[short] Windows: 0x200140
-     * @note[short] iOS: 0x1daa70
+     * @note[short] MacOS (ARM): 0xe9e48
+     * @note[short] MacOS (Intel): 0x10e040
+     * @note[short] Windows: 0x2053a0
+     * @note[short] iOS: 0x1d9c50
      * @note[short] Android
      */
     void tweenValue(float from, float to, int action, float duration, int easing, float rate, int uniqueID, int controlID);
 
     /**
+     * @note[short] MacOS (ARM): 0xea274
+     * @note[short] MacOS (Intel): 0x10e570
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1d9e00
      * @note[short] Android
      */
-    TodoReturn updateTweenAction(float p0, int p1);
+    void updateTweenAction(float value, int action);
 
     /**
-     * @note[short] iOS: 0x1daba8
+     * @note[short] MacOS (ARM): 0xea07c
+     * @note[short] MacOS (Intel): 0x10e290
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1d9d88
      * @note[short] Android
      */
-    TodoReturn updateTweenActions(float p0);
+    void updateTweenActions(float tweenValue);
     float m_cameraZoom;
     float m_targetCameraZoom;
     cocos2d::CCPoint m_cameraOffset;
@@ -142,6 +158,7 @@ public:
     float m_targetCameraAngle;
     bool m_playerStreakBlend;
     float m_timeWarp;
+    float m_queuedTimeWarp;
     float m_timeWarpRelated;
     int m_currentChannel;
     int m_rotateChannel;
@@ -150,15 +167,15 @@ public:
     double m_totalTime;
     double m_levelTime;
     double m_unkDouble3;
-    int m_unkUint2;
+    unsigned int m_commandIndex;
     float m_unkUint3;
-    int m_currentProgress;
-    float m_unkUint4;
+    unsigned int m_currentProgress;
+    int m_unkUint4;
     int m_unkUint5;
-    float m_unkUint6;
-    float m_unkUint7;
-    GameObject* m_unkGameObjPtr1;
-    GameObject* m_unkGameObjPtr2;
+    int m_unkUint6;
+    int m_unkUint7;
+    GameObject* m_lastActivatedPortal1;
+    GameObject* m_lastActivatedPortal2;
     cocos2d::CCPoint m_cameraPosition;
     bool m_unkBool10;
     float m_levelFlipping;
@@ -178,12 +195,12 @@ public:
     int m_unkUint12;
     cocos2d::CCPoint m_cameraStepDiff;
     float m_unkFloat10;
-    unsigned int m_timeModRelated;
+    float m_timeModRelated;
     bool m_timeModRelated2;
     gd::map<std::pair<int, int>, int> m_unkMapPairIntIntInt;
     float m_unkUint13;
     cocos2d::CCPoint m_unkPoint32;
-    cocos2d::CCPoint m_unkPoint33;
+    cocos2d::CCPoint m_cameraPosition2;
     bool m_unkBool20;
     bool m_unkBool21;
     bool m_unkBool22;
@@ -193,26 +210,26 @@ public:
     float m_cameraShakeFactor;
     float m_unkUint15;
     float m_unkUint16;
-    uint64_t m_unkUint64_1;
+    double m_unkUint64_1;
     cocos2d::CCPoint m_unkPoint34;
     unsigned int m_dualRelated;
     gd::unordered_map<int, EnhancedGameObject*> m_stateObjects;
     gd::map<std::pair<GJGameEvent, int>, gd::vector<EventTriggerInstance>> m_unkMapPairGJGameEventIntVectorEventTriggerInstance;
     gd::map<std::pair<GJGameEvent, int>, int> m_unkMapPairGJGameEventIntInt;
-    gd::unordered_map<int, gd::vector<EnterEffectInstance>> m_unorderedMapEnterEffectInstanceVectors1;
-    gd::unordered_map<int, gd::vector<EnterEffectInstance>> m_unorderedMapEnterEffectInstanceVectors2;
-    gd::vector<int> m_unkVecInt1;
-    gd::vector<int> m_unkVecInt2;
-    gd::vector<EnterEffectInstance> m_enterEffectInstances1;
-    gd::vector<EnterEffectInstance> m_enterEffectInstances2;
-    gd::vector<EnterEffectInstance> m_enterEffectInstances3;
-    gd::vector<EnterEffectInstance> m_enterEffectInstances4;
-    gd::vector<EnterEffectInstance> m_enterEffectInstances5;
-    gd::unordered_set<int> m_unkUnorderedSet1;
+    gd::unordered_map<int, gd::vector<EnterEffectInstance>> m_enterEffectInstanceVectors;
+    gd::unordered_map<int, gd::vector<EnterEffectInstance>> m_exitEffectInstanceVectors;
+    gd::vector<int> m_enterChannelMap;
+    gd::vector<int> m_exitChannelMap;
+    gd::vector<EnterEffectInstance> m_moveEffectInstances;
+    gd::vector<EnterEffectInstance> m_rotateEffectInstances;
+    gd::vector<EnterEffectInstance> m_scaleEffectInstances;
+    gd::vector<EnterEffectInstance> m_fadeEffectInstances;
+    gd::vector<EnterEffectInstance> m_tintEffectInstances;
+    gd::unordered_set<int> m_unsortedAreaEffects;
     bool m_unkBool27;
     gd::vector<AdvancedFollowInstance> m_advanceFollowInstances;
-    gd::vector<DynamicObjectAction> m_dynamicObjActions1;
-    gd::vector<DynamicObjectAction> m_dynamicObjActions2;
+    gd::vector<DynamicObjectAction> m_dynamicMoveActions;
+    gd::vector<DynamicObjectAction> m_dynamicRotateActions;
     bool m_unkBool28;
     bool m_unkBool29;
     float m_unkUint17;

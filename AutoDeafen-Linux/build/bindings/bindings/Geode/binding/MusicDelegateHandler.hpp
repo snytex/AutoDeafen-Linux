@@ -24,15 +24,21 @@ public:
      MusicDelegateHandler();
 
     /**
+     * @note[short] MacOS (ARM): 0x4d5208
+     * @note[short] MacOS (Intel): 0x589e70
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x153448
      * @note[short] Android
      */
-    static MusicDelegateHandler* create(MusicDownloadDelegate* p0);
+    static MusicDelegateHandler* create(MusicDownloadDelegate* delegate);
 
     /**
+     * @note[short] MacOS (ARM): 0x4d5298
+     * @note[short] MacOS (Intel): 0x589ef0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(MusicDownloadDelegate* p0);
+    bool init(MusicDownloadDelegate* delegate);
     MusicDownloadDelegate* m_delegate;
 };

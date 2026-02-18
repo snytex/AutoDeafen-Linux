@@ -135,19 +135,19 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47a130, Default, SongInfoLayer, create, gd::string, gd::string, gd::string, gd::string, gd::string, gd::string, int, gd::string, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x479f20, Default, SongInfoLayer, create, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, SongInfoLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47a450, Thiscall, SongInfoLayer, init, gd::string, gd::string, gd::string, gd::string, gd::string, gd::string, int, gd::string, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SongInfoLayer, onBPM, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SongInfoLayer, onClose, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SongInfoLayer, onDownload, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SongInfoLayer, onFB, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SongInfoLayer, onMenuMusic, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SongInfoLayer, onNG, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SongInfoLayer, onPracticeMusic, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SongInfoLayer, onYT, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SongInfoLayer, showCustomMusicUnlockInfo, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x492400, Default, SongInfoLayer, create, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x492610, Default, SongInfoLayer, create, gd::string, gd::string, gd::string, gd::string, gd::string, gd::string, int, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, SongInfoLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x492930, Thiscall, SongInfoLayer, init, gd::string, gd::string, gd::string, gd::string, gd::string, gd::string, int, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x494500, Thiscall, SongInfoLayer, onBPM, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, SongInfoLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x494440, Thiscall, SongInfoLayer, onDownload, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4944d0, Thiscall, SongInfoLayer, onFB, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4942b0, Thiscall, SongInfoLayer, onMenuMusic, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x494470, Thiscall, SongInfoLayer, onNG, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x494380, Thiscall, SongInfoLayer, onPracticeMusic, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4944a0, Thiscall, SongInfoLayer, onYT, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x493c50, Thiscall, SongInfoLayer, showCustomMusicUnlockInfo, )
 		}
 	};
 }

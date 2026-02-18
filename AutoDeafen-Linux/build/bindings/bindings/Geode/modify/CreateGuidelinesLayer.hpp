@@ -75,11 +75,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(recordingDidStop) 
 	#endif
 
-	#ifndef GEODE_STATICS_doClearGuidelines
-		#define GEODE_STATICS_doClearGuidelines
-		GEODE_AS_STATIC_FUNCTION(doClearGuidelines) 
-	#endif
-
 	#ifndef GEODE_STATICS_getMergedRecordString
 		#define GEODE_STATICS_getMergedRecordString
 		GEODE_AS_STATIC_FUNCTION(getMergedRecordString) 
@@ -230,31 +225,31 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x98fd0, Thiscall, CreateGuidelinesLayer, )
-			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x99120, Thiscall, CreateGuidelinesLayer)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x99600, Thiscall, CreateGuidelinesLayer, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x99750, Thiscall, CreateGuidelinesLayer)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreateGuidelinesLayer, create, CustomSongDelegate*, AudioGuidelinesType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9adf0, Thiscall, CreateGuidelinesLayer, update, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b0c0, Thiscall, CreateGuidelinesLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b420, Thiscall, CreateGuidelinesLayer, update, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b6f0, Thiscall, CreateGuidelinesLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreateGuidelinesLayer, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b140, Thiscall, CreateGuidelinesLayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71210, Thiscall, CreateGuidelinesLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b1a0, Thiscall, CreateGuidelinesLayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b040, Thiscall, CreateGuidelinesLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b1f0, Thiscall, CreateGuidelinesLayer, keyDown, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9af60, Thiscall, CreateGuidelinesLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84620, Thiscall, CreateGuidelinesLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreateGuidelinesLayer, keyUp, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9a6a0, Thiscall, CreateGuidelinesLayer, playMusic, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b060, Thiscall, CreateGuidelinesLayer, registerTouch, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9ae10, Thiscall, CreateGuidelinesLayer, onInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9a510, Thiscall, CreateGuidelinesLayer, onRecord, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9a800, Thiscall, CreateGuidelinesLayer, recordingDidStop, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreateGuidelinesLayer, doClearGuidelines, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9aa90, Thiscall, CreateGuidelinesLayer, getMergedRecordString, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x991e0, Thiscall, CreateGuidelinesLayer, init, CustomSongDelegate*, AudioGuidelinesType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9a3e0, Thiscall, CreateGuidelinesLayer, onClearGuidelines, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9a730, Thiscall, CreateGuidelinesLayer, onStop, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9ad10, Thiscall, CreateGuidelinesLayer, toggleItems, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b770, Thiscall, CreateGuidelinesLayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71240, Thiscall, CreateGuidelinesLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b7d0, Thiscall, CreateGuidelinesLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b670, Thiscall, CreateGuidelinesLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b820, Thiscall, CreateGuidelinesLayer, keyDown, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b590, Thiscall, CreateGuidelinesLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, CreateGuidelinesLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreateGuidelinesLayer, keyUp, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9acd0, Thiscall, CreateGuidelinesLayer, playMusic, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b690, Thiscall, CreateGuidelinesLayer, registerTouch, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b440, Thiscall, CreateGuidelinesLayer, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9ab40, Thiscall, CreateGuidelinesLayer, onRecord, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9ae30, Thiscall, CreateGuidelinesLayer, recordingDidStop, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreateGuidelinesLayer, doClearGuidelines, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b0c0, Thiscall, CreateGuidelinesLayer, getMergedRecordString, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x99810, Thiscall, CreateGuidelinesLayer, init, CustomSongDelegate*, AudioGuidelinesType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9aa10, Thiscall, CreateGuidelinesLayer, onClearGuidelines, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9ad60, Thiscall, CreateGuidelinesLayer, onStop, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b340, Thiscall, CreateGuidelinesLayer, toggleItems, bool)
 		}
 	};
 }

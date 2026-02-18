@@ -50,7 +50,7 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6d810, Default, TextStyleSection, create, int, int, TextStyleType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6d840, Default, TextStyleSection, create, int, int, TextStyleType)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TextStyleSection, createColoredSection, cocos2d::ccColor3B, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TextStyleSection, createDelaySection, int, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TextStyleSection, createInstantSection, int, int, float)

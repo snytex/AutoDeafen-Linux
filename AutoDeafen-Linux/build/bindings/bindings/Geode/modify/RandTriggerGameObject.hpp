@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -28,16 +23,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getSaveString
 		#define GEODE_STATICS_getSaveString
 		GEODE_AS_STATIC_FUNCTION(getSaveString) 
-	#endif
-
-	#ifndef GEODE_STATICS_getRandomGroupID
-		#define GEODE_STATICS_getRandomGroupID
-		GEODE_AS_STATIC_FUNCTION(getRandomGroupID) 
-	#endif
-
-	#ifndef GEODE_STATICS_getTotalChance
-		#define GEODE_STATICS_getTotalChance
-		GEODE_AS_STATIC_FUNCTION(getTotalChance) 
 	#endif
 
     
@@ -85,13 +70,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(RandTriggerGameObject, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49b670, Thiscall, RandTriggerGameObject, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49b690, Thiscall, RandTriggerGameObject, triggerObject, GJBaseGameLayer*, int, gd::vector<int> const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49b860, Thiscall, RandTriggerGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49ba60, Thiscall, RandTriggerGameObject, getSaveString, GJBaseGameLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(RandTriggerGameObject, getRandomGroupID, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(RandTriggerGameObject, getTotalChance, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RandTriggerGameObject, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b41c0, Thiscall, RandTriggerGameObject, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b41e0, Thiscall, RandTriggerGameObject, triggerObject, GJBaseGameLayer*, int, gd::vector<int> const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b43b0, Thiscall, RandTriggerGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b45b0, Thiscall, RandTriggerGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RandTriggerGameObject, getRandomGroupID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RandTriggerGameObject, getTotalChance, )
 		}
 	};
 }

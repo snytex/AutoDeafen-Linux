@@ -15,12 +15,19 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(CCURLObject, cocos2d::CCObject)
 
     /**
-     * @note[short] Windows: 0x1782a0
+     * @note[short] MacOS (ARM): 0x2fff74
+     * @note[short] MacOS (Intel): 0x3768e0
+     * @note[short] Windows: 0x17b2c0
+     * @note[short] iOS: 0x311b9c
      * @note[short] Android: Rebinded
      */
     static CCURLObject* create(gd::string name, gd::string url);
 
     /**
+     * @note[short] MacOS (ARM): 0x3000f0
+     * @note[short] MacOS (Intel): 0x376a50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
     bool init(gd::string name, gd::string url);

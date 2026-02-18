@@ -16,42 +16,67 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SFXTriggerGameObject, EffectGameObject)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: 0x496310
+     * @note[short] iOS: 0x399b58
+     * @note[short] Android: Out of line
      */
-    static SFXTriggerGameObject* create(char const* p0);
+     SFXTriggerGameObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x17c1dc
-     * @note[short] MacOS (Intel): 0x1be340
-     * @note[short] Windows: 0x49efd0
-     * @note[short] iOS: 0x385ed0
+     * @note[short] MacOS (ARM): 0x18074c
+     * @note[short] MacOS (Intel): 0x1c9b80
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x38bfcc
+     * @note[short] Android
+     */
+    static SFXTriggerGameObject* create(char const* frame);
+
+    /**
+     * @note[short] MacOS (ARM): 0x184ea0
+     * @note[short] MacOS (Intel): 0x1cfa40
+     * @note[short] Windows: 0x4b7b20
+     * @note[short] iOS: 0x38d2c4
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x177b40
-     * @note[short] MacOS (Intel): 0x1b8850
-     * @note[short] Windows: 0x49da70
-     * @note[short] iOS: 0x384d08
+     * @note[short] MacOS (ARM): 0x180914
+     * @note[short] MacOS (Intel): 0x1c9d90
+     * @note[short] Windows: 0x4b65c0
+     * @note[short] iOS: 0x38c0b8
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
+     * @note[short] MacOS (ARM): 0x1808f4
+     * @note[short] MacOS (Intel): 0x1c9d70
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x38c098
      * @note[short] Android
      */
     int getSFXRefID();
 
     /**
+     * @note[short] MacOS (ARM): 0x1808c0
+     * @note[short] MacOS (Intel): 0x1c9d40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x38c064
      * @note[short] Android
      */
     int getUniqueSFXID();
 
     /**
+     * @note[short] MacOS (ARM): 0x180878
+     * @note[short] MacOS (Intel): 0x1c9cf0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(char const* p0);
+    bool init(char const* frame);
     gd::string m_soundPath;
     int m_soundID;
     float m_pitch;

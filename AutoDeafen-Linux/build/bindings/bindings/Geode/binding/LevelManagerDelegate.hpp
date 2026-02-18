@@ -38,7 +38,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void loadLevelsFinished(cocos2d::CCArray* levels, char const* key, int p2);
+    virtual void loadLevelsFinished(cocos2d::CCArray* levels, char const* key, int type);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -47,7 +47,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void loadLevelsFailed(char const* key, int p1);
+    virtual void loadLevelsFailed(char const* key, int type);
 
     /**
      * @note[short] MacOS (ARM): Out of line

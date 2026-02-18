@@ -16,26 +16,28 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(GJMoreGamesLayer, GJDropDownLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x69376c
-     * @note[short] MacOS (Intel): 0x77eca0
-     * @note[short] Windows: 0x278610
+     * @note[short] MacOS (ARM): 0x69d090
+     * @note[short] MacOS (Intel): 0x794d10
+     * @note[short] Windows: 0x27ff40
+     * @note[short] iOS: 0x64ca8
      * @note[short] Android
      */
     static GJMoreGamesLayer* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x693ed4
-     * @note[short] MacOS (Intel): 0x77f500
-     * @note[short] Windows: 0x278cf0
-     * @note[short] iOS: 0x6911c
+     * @note[short] MacOS (ARM): 0x69d770
+     * @note[short] MacOS (Intel): 0x7954f0
+     * @note[short] Windows: 0x280620
+     * @note[short] iOS: 0x652ac
      * @note[short] Android
      */
     virtual void customSetup();
 
     /**
-     * @note[short] MacOS (ARM): 0x693ac8
-     * @note[short] MacOS (Intel): 0x77f0f0
-     * @note[short] Windows: 0x278950
+     * @note[short] MacOS (ARM): 0x69d3e0
+     * @note[short] MacOS (Intel): 0x795150
+     * @note[short] Windows: 0x280280
+     * @note[short] iOS: 0x64ee4
      * @note[short] Android
      */
     cocos2d::CCArray* getMoreGamesList();

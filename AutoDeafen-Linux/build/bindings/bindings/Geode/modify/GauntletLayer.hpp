@@ -111,15 +111,15 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GauntletLayer, create, GauntletType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f2920, Default, GauntletLayer, scene, GauntletType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f4f50, Thiscall, GauntletLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f3440, Thiscall, GauntletLayer, loadLevelsFinished, cocos2d::CCArray*, char const*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f3650, Thiscall, GauntletLayer, loadLevelsFailed, char const*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f2c50, Thiscall, GauntletLayer, init, GauntletType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f4f00, Thiscall, GauntletLayer, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f4880, Thiscall, GauntletLayer, onLevel, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f3850, Thiscall, GauntletLayer, setupGauntlet, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f48f0, Thiscall, GauntletLayer, unlockActiveItem, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f5df0, Default, GauntletLayer, scene, GauntletType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f8460, Thiscall, GauntletLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f6930, Thiscall, GauntletLayer, loadLevelsFinished, cocos2d::CCArray*, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f6b40, Thiscall, GauntletLayer, loadLevelsFailed, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f6140, Thiscall, GauntletLayer, init, GauntletType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f8410, Thiscall, GauntletLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f7d90, Thiscall, GauntletLayer, onLevel, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f6d40, Thiscall, GauntletLayer, setupGauntlet, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f7e00, Thiscall, GauntletLayer, unlockActiveItem, )
 		}
 	};
 }

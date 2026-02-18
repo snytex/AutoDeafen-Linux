@@ -35,8 +35,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fdcd0, Default, SearchButton, create, char const*, char const*, float, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fdda0, Thiscall, SearchButton, init, char const*, char const*, float, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x312880, Default, SearchButton, create, char const*, char const*, float, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x312950, Thiscall, SearchButton, init, char const*, char const*, float, char const*)
 		}
 	};
 }

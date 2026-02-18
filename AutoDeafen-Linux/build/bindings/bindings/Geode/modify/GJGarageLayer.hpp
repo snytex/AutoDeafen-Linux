@@ -5,6 +5,11 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
+	#ifndef GEODE_STATICS_descriptionForUnlock
+		#define GEODE_STATICS_descriptionForUnlock
+		GEODE_AS_STATIC_FUNCTION(descriptionForUnlock) 
+	#endif
+
 	#ifndef GEODE_STATICS_scene
 		#define GEODE_STATICS_scene
 		GEODE_AS_STATIC_FUNCTION(scene) 
@@ -70,24 +75,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(rewardedVideoFinished) 
 	#endif
 
-	#ifndef GEODE_STATICS_achievementForUnlock
-		#define GEODE_STATICS_achievementForUnlock
-		GEODE_AS_STATIC_FUNCTION(achievementForUnlock) 
-	#endif
-
-	#ifndef GEODE_STATICS_descriptionForUnlock
-		#define GEODE_STATICS_descriptionForUnlock
-		GEODE_AS_STATIC_FUNCTION(descriptionForUnlock) 
-	#endif
-
 	#ifndef GEODE_STATICS_getItems
 		#define GEODE_STATICS_getItems
 		GEODE_AS_STATIC_FUNCTION(getItems) 
-	#endif
-
-	#ifndef GEODE_STATICS_getLockFrame
-		#define GEODE_STATICS_getLockFrame
-		GEODE_AS_STATIC_FUNCTION(getLockFrame) 
 	#endif
 
 	#ifndef GEODE_STATICS_onArrow
@@ -155,11 +145,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(playRainbowEffect) 
 	#endif
 
-	#ifndef GEODE_STATICS_playShadowEffect
-		#define GEODE_STATICS_playShadowEffect
-		GEODE_AS_STATIC_FUNCTION(playShadowEffect) 
-	#endif
-
 	#ifndef GEODE_STATICS_selectTab
 		#define GEODE_STATICS_selectTab
 		GEODE_AS_STATIC_FUNCTION(selectTab) 
@@ -180,27 +165,22 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(setupSpecialPage) 
 	#endif
 
-	#ifndef GEODE_STATICS_titleForUnlock
-		#define GEODE_STATICS_titleForUnlock
-		GEODE_AS_STATIC_FUNCTION(titleForUnlock) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleGlow
-		#define GEODE_STATICS_toggleGlow
-		GEODE_AS_STATIC_FUNCTION(toggleGlow) 
-	#endif
-
 	#ifndef GEODE_STATICS_updatePlayerColors
 		#define GEODE_STATICS_updatePlayerColors
 		GEODE_AS_STATIC_FUNCTION(updatePlayerColors) 
 	#endif
 
-	#ifndef GEODE_STATICS_updatePlayerName
-		#define GEODE_STATICS_updatePlayerName
-		GEODE_AS_STATIC_FUNCTION(updatePlayerName) 
+    
+	#ifndef GEODE_CONCEPT_CHECK_achievementForUnlock
+		#define GEODE_CONCEPT_CHECK_achievementForUnlock
+		GEODE_CONCEPT_FUNCTION_CHECK(achievementForUnlock) 
 	#endif
 
-    
+	#ifndef GEODE_CONCEPT_CHECK_descriptionForUnlock
+		#define GEODE_CONCEPT_CHECK_descriptionForUnlock
+		GEODE_CONCEPT_FUNCTION_CHECK(descriptionForUnlock) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_node
 		#define GEODE_CONCEPT_CHECK_node
 		GEODE_CONCEPT_FUNCTION_CHECK(node) 
@@ -209,6 +189,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_scene
 		#define GEODE_CONCEPT_CHECK_scene
 		GEODE_CONCEPT_FUNCTION_CHECK(scene) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_titleForUnlock
+		#define GEODE_CONCEPT_CHECK_titleForUnlock
+		GEODE_CONCEPT_FUNCTION_CHECK(titleForUnlock) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_init
@@ -269,16 +254,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_rewardedVideoFinished
 		#define GEODE_CONCEPT_CHECK_rewardedVideoFinished
 		GEODE_CONCEPT_FUNCTION_CHECK(rewardedVideoFinished) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_achievementForUnlock
-		#define GEODE_CONCEPT_CHECK_achievementForUnlock
-		GEODE_CONCEPT_FUNCTION_CHECK(achievementForUnlock) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_descriptionForUnlock
-		#define GEODE_CONCEPT_CHECK_descriptionForUnlock
-		GEODE_CONCEPT_FUNCTION_CHECK(descriptionForUnlock) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_getItems
@@ -386,11 +361,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(showUnlockPopupNew) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_titleForUnlock
-		#define GEODE_CONCEPT_CHECK_titleForUnlock
-		GEODE_CONCEPT_FUNCTION_CHECK(titleForUnlock) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_toggleGlow
 		#define GEODE_CONCEPT_CHECK_toggleGlow
 		GEODE_CONCEPT_FUNCTION_CHECK(toggleGlow) 
@@ -415,48 +385,48 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGarageLayer, achievementForUnlock, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x278310, Default, GJGarageLayer, descriptionForUnlock, int, UnlockType)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGarageLayer, node, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26b5b0, Default, GJGarageLayer, scene, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26b770, Thiscall, GJGarageLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2718f0, Thiscall, GJGarageLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26d390, Thiscall, GJGarageLayer, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26d580, Thiscall, GJGarageLayer, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3060, Thiscall, GJGarageLayer, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3110, Thiscall, GJGarageLayer, listButtonBarSwitchedPage, ListButtonBar*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x270320, Thiscall, GJGarageLayer, showUnlockPopup, int, UnlockType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x270ff0, Thiscall, GJGarageLayer, updateRate, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x270bc0, Thiscall, GJGarageLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x270e20, Thiscall, GJGarageLayer, dialogClosed, DialogLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x270170, Thiscall, GJGarageLayer, playerColorChanged, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26d380, Thiscall, GJGarageLayer, rewardedVideoFinished, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGarageLayer, achievementForUnlock, int, UnlockType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x270a30, Thiscall, GJGarageLayer, descriptionForUnlock, int, UnlockType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26ee50, Thiscall, GJGarageLayer, getItems, IconType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26ef10, Thiscall, GJGarageLayer, getItems, int, int, IconType, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGarageLayer, getLockFrame, int, UnlockType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26e590, Thiscall, GJGarageLayer, onArrow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x271750, Thiscall, GJGarageLayer, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26d190, Thiscall, GJGarageLayer, onInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26e690, Thiscall, GJGarageLayer, onNavigate, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x271570, Thiscall, GJGarageLayer, onPaint, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x272e90, Default, GJGarageLayer, scene, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGarageLayer, titleForUnlock, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x273050, Thiscall, GJGarageLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2791d0, Thiscall, GJGarageLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x274c70, Thiscall, GJGarageLayer, textInputOpened, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x274e60, Thiscall, GJGarageLayer, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3d80, Thiscall, GJGarageLayer, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3e30, Thiscall, GJGarageLayer, listButtonBarSwitchedPage, ListButtonBar*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x277c00, Thiscall, GJGarageLayer, showUnlockPopup, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2788d0, Thiscall, GJGarageLayer, updateRate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2784a0, Thiscall, GJGarageLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x278700, Thiscall, GJGarageLayer, dialogClosed, DialogLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x277a50, Thiscall, GJGarageLayer, playerColorChanged, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x274c60, Thiscall, GJGarageLayer, rewardedVideoFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x276730, Thiscall, GJGarageLayer, getItems, IconType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2767f0, Thiscall, GJGarageLayer, getItems, int, int, IconType, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGarageLayer, getLockFrame, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x275e70, Thiscall, GJGarageLayer, onArrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x279030, Thiscall, GJGarageLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x274a70, Thiscall, GJGarageLayer, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x275f70, Thiscall, GJGarageLayer, onNavigate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x278e50, Thiscall, GJGarageLayer, onPaint, cocos2d::CCObject*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGarageLayer, onRewardedVideo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26f890, Thiscall, GJGarageLayer, onSelect, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26e6c0, Thiscall, GJGarageLayer, onSelectTab, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x271420, Thiscall, GJGarageLayer, onShards, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2716f0, Thiscall, GJGarageLayer, onShop, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x270120, Thiscall, GJGarageLayer, onSpecial, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26ff30, Thiscall, GJGarageLayer, onToggleItem, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x271230, Thiscall, GJGarageLayer, playRainbowEffect, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGarageLayer, playShadowEffect, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26e6f0, Thiscall, GJGarageLayer, selectTab, IconType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26d930, Thiscall, GJGarageLayer, setupIconSelect, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26e7b0, Thiscall, GJGarageLayer, setupPage, int, IconType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26f1e0, Thiscall, GJGarageLayer, setupSpecialPage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x277170, Thiscall, GJGarageLayer, onSelect, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x275fa0, Thiscall, GJGarageLayer, onSelectTab, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x278d00, Thiscall, GJGarageLayer, onShards, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x278fd0, Thiscall, GJGarageLayer, onShop, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x277a00, Thiscall, GJGarageLayer, onSpecial, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x277810, Thiscall, GJGarageLayer, onToggleItem, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x278b10, Thiscall, GJGarageLayer, playRainbowEffect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGarageLayer, playShadowEffect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x275fd0, Thiscall, GJGarageLayer, selectTab, IconType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x275210, Thiscall, GJGarageLayer, setupIconSelect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x276090, Thiscall, GJGarageLayer, setupPage, int, IconType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x276ac0, Thiscall, GJGarageLayer, setupSpecialPage, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGarageLayer, showUnlockPopupNew, int, UnlockType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGarageLayer, titleForUnlock, int, UnlockType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGarageLayer, toggleGlow, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2701a0, Thiscall, GJGarageLayer, updatePlayerColors, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGarageLayer, updatePlayerName, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGarageLayer, toggleGlow, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x277a80, Thiscall, GJGarageLayer, updatePlayerColors, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGarageLayer, updatePlayerName, char const*)
 		}
 	};
 }

@@ -15,22 +15,28 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GameObjectCopy, cocos2d::CCObject)
 
     /**
-     * @note[short] MacOS (ARM): 0xca710
-     * @note[short] MacOS (Intel): 0xe3820
-     * @note[short] Windows: 0x2db040
+     * @note[short] MacOS (ARM): 0xc8a08
+     * @note[short] MacOS (Intel): 0xe3230
+     * @note[short] Windows: 0x2e8940
+     * @note[short] iOS: 0x35c1d8
      * @note[short] Android
      */
-    static GameObjectCopy* create(GameObject* p0);
+    static GameObjectCopy* create(GameObject* object);
 
     /**
+     * @note[short] MacOS (ARM): 0xdfb40
+     * @note[short] MacOS (Intel): 0x100a60
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x36945c
      * @note[short] Android
      */
-    bool init(GameObject* p0);
+    bool init(GameObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0xca828
-     * @note[short] MacOS (Intel): 0xe3940
-     * @note[short] Windows: 0x2db140
+     * @note[short] MacOS (ARM): 0xc8b20
+     * @note[short] MacOS (Intel): 0xe3350
+     * @note[short] Windows: 0x2e8a40
+     * @note[short] iOS: 0x35c264
      * @note[short] Android
      */
     void resetObject();

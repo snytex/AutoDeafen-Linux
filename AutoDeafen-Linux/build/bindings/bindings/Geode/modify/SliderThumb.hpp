@@ -56,11 +56,11 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SliderThumb, create, cocos2d::CCNode*, cocos2d::SEL_MenuHandler, char const*, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x712b0, Thiscall, SliderThumb, getValue, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x712e0, Thiscall, SliderThumb, getValue, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SliderThumb, init, cocos2d::CCNode*, cocos2d::SEL_MenuHandler, char const*, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SliderThumb, setMaxOffset, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SliderThumb, setRotated, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71340, Thiscall, SliderThumb, setValue, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71370, Thiscall, SliderThumb, setValue, float)
 		}
 	};
 }

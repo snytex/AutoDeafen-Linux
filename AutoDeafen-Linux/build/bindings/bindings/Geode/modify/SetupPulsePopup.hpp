@@ -40,11 +40,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(colorSelectClosed) 
 	#endif
 
-	#ifndef GEODE_STATICS_getColorValue
-		#define GEODE_STATICS_getColorValue
-		GEODE_AS_STATIC_FUNCTION(getColorValue) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -110,11 +105,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onUpdateCustomColor) 
 	#endif
 
-	#ifndef GEODE_STATICS_selectColor
-		#define GEODE_STATICS_selectColor
-		GEODE_AS_STATIC_FUNCTION(selectColor) 
-	#endif
-
 	#ifndef GEODE_STATICS_sliderChanged
 		#define GEODE_STATICS_sliderChanged
 		GEODE_AS_STATIC_FUNCTION(sliderChanged) 
@@ -123,11 +113,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateColorLabels
 		#define GEODE_STATICS_updateColorLabels
 		GEODE_AS_STATIC_FUNCTION(updateColorLabels) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateColorValue
-		#define GEODE_STATICS_updateColorValue
-		GEODE_AS_STATIC_FUNCTION(updateColorValue) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateCopyColor
@@ -178,21 +163,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateHoldTime
 		#define GEODE_STATICS_updateHoldTime
 		GEODE_AS_STATIC_FUNCTION(updateHoldTime) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateHSVValue
-		#define GEODE_STATICS_updateHSVValue
-		GEODE_AS_STATIC_FUNCTION(updateHSVValue) 
-	#endif
-
-	#ifndef GEODE_STATICS_updatePulseMode
-		#define GEODE_STATICS_updatePulseMode
-		GEODE_AS_STATIC_FUNCTION(updatePulseMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_updatePulseTargetType
-		#define GEODE_STATICS_updatePulseTargetType
-		GEODE_AS_STATIC_FUNCTION(updatePulseTargetType) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateTargetID
@@ -420,47 +390,47 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41f250, Default, SetupPulsePopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423fa0, Thiscall, SetupPulsePopup, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x422ef0, Thiscall, SetupPulsePopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423cb0, Thiscall, SetupPulsePopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x424150, Thiscall, SetupPulsePopup, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423e90, Thiscall, SetupPulsePopup, colorValueChanged, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x437520, Default, SetupPulsePopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43c270, Thiscall, SetupPulsePopup, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43b1c0, Thiscall, SetupPulsePopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43bf80, Thiscall, SetupPulsePopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43c420, Thiscall, SetupPulsePopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43c160, Thiscall, SetupPulsePopup, colorValueChanged, cocos2d::ccColor3B)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupPulsePopup, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423720, Thiscall, SetupPulsePopup, colorSelectClosed, GJSpecialColorSelect*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupPulsePopup, getColorValue, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41f430, Thiscall, SetupPulsePopup, init, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90d60, Thiscall, SetupPulsePopup, onCopy, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423380, Thiscall, SetupPulsePopup, onExclusive, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423410, Thiscall, SetupPulsePopup, onGroupMainOnly, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423500, Thiscall, SetupPulsePopup, onGroupSecondaryOnly, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423560, Thiscall, SetupPulsePopup, onHSVLegacyMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90de0, Thiscall, SetupPulsePopup, onPaste, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x422aa0, Thiscall, SetupPulsePopup, onSelectPulseMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423680, Thiscall, SetupPulsePopup, onSelectSpecialColor, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4236d0, Thiscall, SetupPulsePopup, onSelectSpecialTargetID, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x422cd0, Thiscall, SetupPulsePopup, onSelectTargetMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4240e0, Thiscall, SetupPulsePopup, onUpdateCopyColor, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x424050, Thiscall, SetupPulsePopup, onUpdateCustomColor, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupPulsePopup, selectColor, cocos2d::ccColor3B)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4238c0, Thiscall, SetupPulsePopup, sliderChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4248f0, Thiscall, SetupPulsePopup, updateColorLabels, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupPulsePopup, updateColorValue, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x424b90, Thiscall, SetupPulsePopup, updateCopyColor, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x424d40, Thiscall, SetupPulsePopup, updateCopyColorTextInputLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x422830, Thiscall, SetupPulsePopup, updateFadeInLabel, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423b00, Thiscall, SetupPulsePopup, updateFadeInTime, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4229d0, Thiscall, SetupPulsePopup, updateFadeOutLabel, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423c20, Thiscall, SetupPulsePopup, updateFadeOutTime, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423470, Thiscall, SetupPulsePopup, updateGroupMainOnly, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4235f0, Thiscall, SetupPulsePopup, updateGroupSecondaryOnly, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x422900, Thiscall, SetupPulsePopup, updateHoldLabel, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423b90, Thiscall, SetupPulsePopup, updateHoldTime, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupPulsePopup, updateHSVValue, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupPulsePopup, updatePulseMode, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupPulsePopup, updatePulseTargetType, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x424ad0, Thiscall, SetupPulsePopup, updateTargetID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x424c20, Thiscall, SetupPulsePopup, updateTextInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43b9f0, Thiscall, SetupPulsePopup, colorSelectClosed, GJSpecialColorSelect*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupPulsePopup, getColorValue, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x437700, Thiscall, SetupPulsePopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90e20, Thiscall, SetupPulsePopup, onCopy, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43b650, Thiscall, SetupPulsePopup, onExclusive, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43b6e0, Thiscall, SetupPulsePopup, onGroupMainOnly, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43b7d0, Thiscall, SetupPulsePopup, onGroupSecondaryOnly, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43b830, Thiscall, SetupPulsePopup, onHSVLegacyMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90ea0, Thiscall, SetupPulsePopup, onPaste, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43ad70, Thiscall, SetupPulsePopup, onSelectPulseMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43b950, Thiscall, SetupPulsePopup, onSelectSpecialColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43b9a0, Thiscall, SetupPulsePopup, onSelectSpecialTargetID, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43afa0, Thiscall, SetupPulsePopup, onSelectTargetMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43c3b0, Thiscall, SetupPulsePopup, onUpdateCopyColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43c320, Thiscall, SetupPulsePopup, onUpdateCustomColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupPulsePopup, selectColor, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43bb90, Thiscall, SetupPulsePopup, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43cbc0, Thiscall, SetupPulsePopup, updateColorLabels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupPulsePopup, updateColorValue, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43ce60, Thiscall, SetupPulsePopup, updateCopyColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43d010, Thiscall, SetupPulsePopup, updateCopyColorTextInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43ab00, Thiscall, SetupPulsePopup, updateFadeInLabel, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43bdd0, Thiscall, SetupPulsePopup, updateFadeInTime, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43aca0, Thiscall, SetupPulsePopup, updateFadeOutLabel, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43bef0, Thiscall, SetupPulsePopup, updateFadeOutTime, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43b740, Thiscall, SetupPulsePopup, updateGroupMainOnly, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43b8c0, Thiscall, SetupPulsePopup, updateGroupSecondaryOnly, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43abd0, Thiscall, SetupPulsePopup, updateHoldLabel, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43be60, Thiscall, SetupPulsePopup, updateHoldTime, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupPulsePopup, updateHSVValue, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupPulsePopup, updatePulseMode, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupPulsePopup, updatePulseTargetType, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43cda0, Thiscall, SetupPulsePopup, updateTargetID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x43cef0, Thiscall, SetupPulsePopup, updateTextInputLabel, )
 		}
 	};
 }

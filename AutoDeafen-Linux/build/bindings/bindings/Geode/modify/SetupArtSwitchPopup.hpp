@@ -55,10 +55,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x459210, Default, SetupArtSwitchPopup, create, ArtTriggerGameObject*, cocos2d::CCArray*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x459ed0, Thiscall, SetupArtSwitchPopup, selectArtClosed, SelectArtLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4594d0, Thiscall, SetupArtSwitchPopup, init, ArtTriggerGameObject*, cocos2d::CCArray*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x459e80, Thiscall, SetupArtSwitchPopup, onArt, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x471780, Default, SetupArtSwitchPopup, create, ArtTriggerGameObject*, cocos2d::CCArray*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x472440, Thiscall, SetupArtSwitchPopup, selectArtClosed, SelectArtLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x471a40, Thiscall, SetupArtSwitchPopup, init, ArtTriggerGameObject*, cocos2d::CCArray*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4723f0, Thiscall, SetupArtSwitchPopup, onArt, cocos2d::CCObject*)
 		}
 	};
 }

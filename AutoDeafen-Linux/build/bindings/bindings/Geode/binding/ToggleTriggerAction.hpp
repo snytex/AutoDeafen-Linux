@@ -12,6 +12,24 @@
 class ToggleTriggerAction {
 public:
     static constexpr auto CLASS_NAME = "ToggleTriggerAction";
+
+    /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     ToggleTriggerAction();
+
+    /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     ToggleTriggerAction(int targetID, bool activateGroup, gd::vector<int> const& remapKeys, int uniqueID, int controlID);
     bool m_disabled;
     int m_targetGroupID;
     bool m_activateGroup;

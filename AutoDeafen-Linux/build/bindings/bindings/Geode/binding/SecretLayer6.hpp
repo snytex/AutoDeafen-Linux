@@ -15,43 +15,43 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(SecretLayer6, cocos2d::CCLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x3db37c
-     * @note[short] MacOS (Intel): 0x46bd70
+     * @note[short] MacOS (ARM): 0x3e4f04
+     * @note[short] MacOS (Intel): 0x47eac0
      * @note[short] Android
      */
     static SecretLayer6* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x3db2c0
-     * @note[short] MacOS (Intel): 0x46bca0
+     * @note[short] MacOS (ARM): 0x3e4e48
+     * @note[short] MacOS (Intel): 0x47e9f0
      * @note[short] Android
      */
     static cocos2d::CCScene* scene();
 
     /**
-     * @note[short] MacOS (ARM): 0x3db420
-     * @note[short] MacOS (Intel): 0x46be20
+     * @note[short] MacOS (ARM): 0x3e4fa8
+     * @note[short] MacOS (Intel): 0x47eb70
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x3dbf78
-     * @note[short] MacOS (Intel): 0x46caa0
+     * @note[short] MacOS (ARM): 0x3e5ae4
+     * @note[short] MacOS (Intel): 0x47f7e0
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x3db8a4
-     * @note[short] MacOS (Intel): 0x46c2e0
+     * @note[short] MacOS (ARM): 0x3e542c
+     * @note[short] MacOS (Intel): 0x47f040
      * @note[short] Android
      */
     void onBack(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3db8f4
-     * @note[short] MacOS (Intel): 0x46c330
+     * @note[short] MacOS (ARM): 0x3e547c
+     * @note[short] MacOS (Intel): 0x47f090
      * @note[short] Android
      */
     void startGame01();

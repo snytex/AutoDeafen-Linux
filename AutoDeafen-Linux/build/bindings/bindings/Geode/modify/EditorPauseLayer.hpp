@@ -25,11 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(FLAlert_Clicked) 
 	#endif
 
-	#ifndef GEODE_STATICS_doResetUnused
-		#define GEODE_STATICS_doResetUnused
-		GEODE_AS_STATIC_FUNCTION(doResetUnused) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -63,11 +58,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onCreateLoop
 		#define GEODE_STATICS_onCreateLoop
 		GEODE_AS_STATIC_FUNCTION(onCreateLoop) 
-	#endif
-
-	#ifndef GEODE_STATICS_onCreateTemplate
-		#define GEODE_STATICS_onCreateTemplate
-		GEODE_AS_STATIC_FUNCTION(onCreateTemplate) 
 	#endif
 
 	#ifndef GEODE_STATICS_onExitEditor
@@ -185,11 +175,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(toggleDebugDraw) 
 	#endif
 
-	#ifndef GEODE_STATICS_toggleEditorBackground
-		#define GEODE_STATICS_toggleEditorBackground
-		GEODE_AS_STATIC_FUNCTION(toggleEditorBackground) 
-	#endif
-
 	#ifndef GEODE_STATICS_toggleEditorColorMode
 		#define GEODE_STATICS_toggleEditorColorMode
 		GEODE_AS_STATIC_FUNCTION(toggleEditorColorMode) 
@@ -205,26 +190,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(toggleEditorGround) 
 	#endif
 
-	#ifndef GEODE_STATICS_toggleEffectDuration
-		#define GEODE_STATICS_toggleEffectDuration
-		GEODE_AS_STATIC_FUNCTION(toggleEffectDuration) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleEffectLines
-		#define GEODE_STATICS_toggleEffectLines
-		GEODE_AS_STATIC_FUNCTION(toggleEffectLines) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleFollowPlayer
-		#define GEODE_STATICS_toggleFollowPlayer
-		GEODE_AS_STATIC_FUNCTION(toggleFollowPlayer) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleGridOnTop
-		#define GEODE_STATICS_toggleGridOnTop
-		GEODE_AS_STATIC_FUNCTION(toggleGridOnTop) 
-	#endif
-
 	#ifndef GEODE_STATICS_toggleHideInvisible
 		#define GEODE_STATICS_toggleHideInvisible
 		GEODE_AS_STATIC_FUNCTION(toggleHideInvisible) 
@@ -233,11 +198,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_toggleIgnoreDamage
 		#define GEODE_STATICS_toggleIgnoreDamage
 		GEODE_AS_STATIC_FUNCTION(toggleIgnoreDamage) 
-	#endif
-
-	#ifndef GEODE_STATICS_togglePlaytestMusic
-		#define GEODE_STATICS_togglePlaytestMusic
-		GEODE_AS_STATIC_FUNCTION(togglePlaytestMusic) 
 	#endif
 
 	#ifndef GEODE_STATICS_togglePreviewAnim
@@ -253,11 +213,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_togglePreviewShaders
 		#define GEODE_STATICS_togglePreviewShaders
 		GEODE_AS_STATIC_FUNCTION(togglePreviewShaders) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleRecordOrder
-		#define GEODE_STATICS_toggleRecordOrder
-		GEODE_AS_STATIC_FUNCTION(toggleRecordOrder) 
 	#endif
 
 	#ifndef GEODE_STATICS_toggleSelectFilter
@@ -571,61 +526,61 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorPauseLayer, create, LevelEditorLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd0c0, Thiscall, EditorPauseLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd0d0, Thiscall, EditorPauseLayer, keyDown, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd9020, Thiscall, EditorPauseLayer, customSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcfa0, Thiscall, EditorPauseLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorPauseLayer, doResetUnused, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd8990, Thiscall, EditorPauseLayer, init, LevelEditorLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdb9e0, Thiscall, EditorPauseLayer, onAlignX, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdba10, Thiscall, EditorPauseLayer, onAlignY, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdb7b0, Thiscall, EditorPauseLayer, onBuildHelper, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdb7f0, Thiscall, EditorPauseLayer, onCopyWColor, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdb760, Thiscall, EditorPauseLayer, onCreateExtras, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdb7d0, Thiscall, EditorPauseLayer, onCreateLoop, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorPauseLayer, onCreateTemplate, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcd60, Thiscall, EditorPauseLayer, onExitEditor, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdce30, Thiscall, EditorPauseLayer, onExitNoSave, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd050, Thiscall, EditorPauseLayer, onHelp, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdba40, Thiscall, EditorPauseLayer, onKeybindings, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdb830, Thiscall, EditorPauseLayer, onNewGroupX, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdb850, Thiscall, EditorPauseLayer, onNewGroupY, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdb390, Thiscall, EditorPauseLayer, onOptions, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdb810, Thiscall, EditorPauseLayer, onPasteWColor, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdb790, Thiscall, EditorPauseLayer, onReGroup, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdb5c0, Thiscall, EditorPauseLayer, onResetUnusedColors, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdc140, Thiscall, EditorPauseLayer, onResume, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcbf0, Thiscall, EditorPauseLayer, onSave, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcd20, Thiscall, EditorPauseLayer, onSaveAndExit, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdc9a0, Thiscall, EditorPauseLayer, onSaveAndPlay, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdb870, Thiscall, EditorPauseLayer, onSelectAll, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdb9a0, Thiscall, EditorPauseLayer, onSelectAllLeft, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdb9c0, Thiscall, EditorPauseLayer, onSelectAllRight, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorPauseLayer, onSong, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdb720, Thiscall, EditorPauseLayer, onUnlockAllLayers, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdca20, Thiscall, EditorPauseLayer, playStep2, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcb50, Thiscall, EditorPauseLayer, playStep3, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdc310, Thiscall, EditorPauseLayer, saveLevel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdbdd0, Thiscall, EditorPauseLayer, toggleDebugDraw, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorPauseLayer, toggleEditorBackground, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorPauseLayer, toggleEditorColorMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdbee0, Thiscall, EditorPauseLayer, toggleEditorGrid, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdbe20, Thiscall, EditorPauseLayer, toggleEditorGround, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorPauseLayer, toggleEffectDuration, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorPauseLayer, toggleEffectLines, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorPauseLayer, toggleFollowPlayer, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorPauseLayer, toggleGridOnTop, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdbb10, Thiscall, EditorPauseLayer, toggleHideInvisible, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdba60, Thiscall, EditorPauseLayer, toggleIgnoreDamage, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorPauseLayer, togglePlaytestMusic, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdbc10, Thiscall, EditorPauseLayer, togglePreviewAnim, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdbb60, Thiscall, EditorPauseLayer, togglePreviewParticles, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdbbc0, Thiscall, EditorPauseLayer, togglePreviewShaders, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorPauseLayer, toggleRecordOrder, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdbf90, Thiscall, EditorPauseLayer, toggleSelectFilter, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdbf30, Thiscall, EditorPauseLayer, toggleShowObjectInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdb4e0, Thiscall, EditorPauseLayer, uncheckAllPortals, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EditorPauseLayer, updateSongButton, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xde600, Thiscall, EditorPauseLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xde610, Thiscall, EditorPauseLayer, keyDown, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xda550, Thiscall, EditorPauseLayer, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xde4e0, Thiscall, EditorPauseLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorPauseLayer, doResetUnused, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd9ec0, Thiscall, EditorPauseLayer, init, LevelEditorLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcf10, Thiscall, EditorPauseLayer, onAlignX, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcf40, Thiscall, EditorPauseLayer, onAlignY, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcce0, Thiscall, EditorPauseLayer, onBuildHelper, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcd20, Thiscall, EditorPauseLayer, onCopyWColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcc90, Thiscall, EditorPauseLayer, onCreateExtras, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcd00, Thiscall, EditorPauseLayer, onCreateLoop, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorPauseLayer, onCreateTemplate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xde2a0, Thiscall, EditorPauseLayer, onExitEditor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xde370, Thiscall, EditorPauseLayer, onExitNoSave, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xde590, Thiscall, EditorPauseLayer, onHelp, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcf70, Thiscall, EditorPauseLayer, onKeybindings, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcd60, Thiscall, EditorPauseLayer, onNewGroupX, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcd80, Thiscall, EditorPauseLayer, onNewGroupY, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdc8c0, Thiscall, EditorPauseLayer, onOptions, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcd40, Thiscall, EditorPauseLayer, onPasteWColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdccc0, Thiscall, EditorPauseLayer, onReGroup, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcaf0, Thiscall, EditorPauseLayer, onResetUnusedColors, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd670, Thiscall, EditorPauseLayer, onResume, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xde130, Thiscall, EditorPauseLayer, onSave, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xde260, Thiscall, EditorPauseLayer, onSaveAndExit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xddee0, Thiscall, EditorPauseLayer, onSaveAndPlay, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcda0, Thiscall, EditorPauseLayer, onSelectAll, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdced0, Thiscall, EditorPauseLayer, onSelectAllLeft, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcef0, Thiscall, EditorPauseLayer, onSelectAllRight, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd510, Thiscall, EditorPauseLayer, onSong, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcc50, Thiscall, EditorPauseLayer, onUnlockAllLayers, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xddf60, Thiscall, EditorPauseLayer, playStep2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xde090, Thiscall, EditorPauseLayer, playStep3, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd840, Thiscall, EditorPauseLayer, saveLevel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd300, Thiscall, EditorPauseLayer, toggleDebugDraw, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorPauseLayer, toggleEditorBackground, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcfe0, Thiscall, EditorPauseLayer, toggleEditorColorMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd410, Thiscall, EditorPauseLayer, toggleEditorGrid, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd350, Thiscall, EditorPauseLayer, toggleEditorGround, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorPauseLayer, toggleEffectDuration, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorPauseLayer, toggleEffectLines, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorPauseLayer, toggleFollowPlayer, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorPauseLayer, toggleGridOnTop, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd040, Thiscall, EditorPauseLayer, toggleHideInvisible, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcf90, Thiscall, EditorPauseLayer, toggleIgnoreDamage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorPauseLayer, togglePlaytestMusic, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd140, Thiscall, EditorPauseLayer, togglePreviewAnim, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd090, Thiscall, EditorPauseLayer, togglePreviewParticles, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd0f0, Thiscall, EditorPauseLayer, togglePreviewShaders, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EditorPauseLayer, toggleRecordOrder, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd4c0, Thiscall, EditorPauseLayer, toggleSelectFilter, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd460, Thiscall, EditorPauseLayer, toggleShowObjectInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdca10, Thiscall, EditorPauseLayer, uncheckAllPortals, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdd5c0, Thiscall, EditorPauseLayer, updateSongButton, )
 		}
 	};
 }

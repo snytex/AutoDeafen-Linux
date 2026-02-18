@@ -65,8 +65,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, float, float>::func(&cocos2d::CCSkewTo::create)), Default, cocos2d::CCSkewTo, create, float, float, float)
 			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCSkewTo@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCSkewTo, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, float, float>::func(&cocos2d::CCSkewTo::create)), Default, cocos2d::CCSkewTo, create, float, float, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCZone*>::func(&cocos2d::CCSkewTo::copyWithZone)), Thiscall, cocos2d::CCSkewTo, copyWithZone, cocos2d::CCZone*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCSkewTo::update)), Thiscall, cocos2d::CCSkewTo, update, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCNode*>::func(&cocos2d::CCSkewTo::startWithTarget)), Thiscall, cocos2d::CCSkewTo, startWithTarget, cocos2d::CCNode*)

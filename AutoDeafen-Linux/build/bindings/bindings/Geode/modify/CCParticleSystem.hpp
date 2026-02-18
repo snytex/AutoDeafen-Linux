@@ -15,326 +15,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createWithTotalParticles) 
 	#endif
 
-	#ifndef GEODE_STATICS_initParticle
-		#define GEODE_STATICS_initParticle
-		GEODE_AS_STATIC_FUNCTION(initParticle) 
-	#endif
-
-	#ifndef GEODE_STATICS_initWithDictionary
-		#define GEODE_STATICS_initWithDictionary
-		GEODE_AS_STATIC_FUNCTION(initWithDictionary) 
-	#endif
-
-	#ifndef GEODE_STATICS_initWithFile
-		#define GEODE_STATICS_initWithFile
-		GEODE_AS_STATIC_FUNCTION(initWithFile) 
-	#endif
-
-	#ifndef GEODE_STATICS_getAtlasIndex
-		#define GEODE_STATICS_getAtlasIndex
-		GEODE_AS_STATIC_FUNCTION(getAtlasIndex) 
-	#endif
-
-	#ifndef GEODE_STATICS_getDontCleanupOnFinish
-		#define GEODE_STATICS_getDontCleanupOnFinish
-		GEODE_AS_STATIC_FUNCTION(getDontCleanupOnFinish) 
-	#endif
-
-	#ifndef GEODE_STATICS_getDynamicRotationIsDir
-		#define GEODE_STATICS_getDynamicRotationIsDir
-		GEODE_AS_STATIC_FUNCTION(getDynamicRotationIsDir) 
-	#endif
-
-	#ifndef GEODE_STATICS_getEndRGBVarSync
-		#define GEODE_STATICS_getEndRGBVarSync
-		GEODE_AS_STATIC_FUNCTION(getEndRGBVarSync) 
-	#endif
-
-	#ifndef GEODE_STATICS_getFadeInTime
-		#define GEODE_STATICS_getFadeInTime
-		GEODE_AS_STATIC_FUNCTION(getFadeInTime) 
-	#endif
-
-	#ifndef GEODE_STATICS_getFadeInTimeVar
-		#define GEODE_STATICS_getFadeInTimeVar
-		GEODE_AS_STATIC_FUNCTION(getFadeInTimeVar) 
-	#endif
-
-	#ifndef GEODE_STATICS_getFadeOutTime
-		#define GEODE_STATICS_getFadeOutTime
-		GEODE_AS_STATIC_FUNCTION(getFadeOutTime) 
-	#endif
-
-	#ifndef GEODE_STATICS_getFadeOutTimeVar
-		#define GEODE_STATICS_getFadeOutTimeVar
-		GEODE_AS_STATIC_FUNCTION(getFadeOutTimeVar) 
-	#endif
-
-	#ifndef GEODE_STATICS_getFrictionPos
-		#define GEODE_STATICS_getFrictionPos
-		GEODE_AS_STATIC_FUNCTION(getFrictionPos) 
-	#endif
-
-	#ifndef GEODE_STATICS_getFrictionPosVar
-		#define GEODE_STATICS_getFrictionPosVar
-		GEODE_AS_STATIC_FUNCTION(getFrictionPosVar) 
-	#endif
-
-	#ifndef GEODE_STATICS_getFrictionRot
-		#define GEODE_STATICS_getFrictionRot
-		GEODE_AS_STATIC_FUNCTION(getFrictionRot) 
-	#endif
-
-	#ifndef GEODE_STATICS_getFrictionRotVar
-		#define GEODE_STATICS_getFrictionRotVar
-		GEODE_AS_STATIC_FUNCTION(getFrictionRotVar) 
-	#endif
-
-	#ifndef GEODE_STATICS_getFrictionSize
-		#define GEODE_STATICS_getFrictionSize
-		GEODE_AS_STATIC_FUNCTION(getFrictionSize) 
-	#endif
-
-	#ifndef GEODE_STATICS_getFrictionSizeVar
-		#define GEODE_STATICS_getFrictionSizeVar
-		GEODE_AS_STATIC_FUNCTION(getFrictionSizeVar) 
-	#endif
-
-	#ifndef GEODE_STATICS_getOrderSensitive
-		#define GEODE_STATICS_getOrderSensitive
-		GEODE_AS_STATIC_FUNCTION(getOrderSensitive) 
-	#endif
-
-	#ifndef GEODE_STATICS_getRespawn
-		#define GEODE_STATICS_getRespawn
-		GEODE_AS_STATIC_FUNCTION(getRespawn) 
-	#endif
-
-	#ifndef GEODE_STATICS_getRespawnVar
-		#define GEODE_STATICS_getRespawnVar
-		GEODE_AS_STATIC_FUNCTION(getRespawnVar) 
-	#endif
-
-	#ifndef GEODE_STATICS_getStartRGBVarSync
-		#define GEODE_STATICS_getStartRGBVarSync
-		GEODE_AS_STATIC_FUNCTION(getStartRGBVarSync) 
-	#endif
-
-	#ifndef GEODE_STATICS_getStartRadiusEqualToEnd
-		#define GEODE_STATICS_getStartRadiusEqualToEnd
-		GEODE_AS_STATIC_FUNCTION(getStartRadiusEqualToEnd) 
-	#endif
-
-	#ifndef GEODE_STATICS_getStartSizeEqualToEnd
-		#define GEODE_STATICS_getStartSizeEqualToEnd
-		GEODE_AS_STATIC_FUNCTION(getStartSizeEqualToEnd) 
-	#endif
-
-	#ifndef GEODE_STATICS_getStartSpinEqualToEnd
-		#define GEODE_STATICS_getStartSpinEqualToEnd
-		GEODE_AS_STATIC_FUNCTION(getStartSpinEqualToEnd) 
-	#endif
-
-	#ifndef GEODE_STATICS_getTimeElapsed
-		#define GEODE_STATICS_getTimeElapsed
-		GEODE_AS_STATIC_FUNCTION(getTimeElapsed) 
-	#endif
-
-	#ifndef GEODE_STATICS_getUseUniformColorMode
-		#define GEODE_STATICS_getUseUniformColorMode
-		GEODE_AS_STATIC_FUNCTION(getUseUniformColorMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_getUsingSchedule
-		#define GEODE_STATICS_getUsingSchedule
-		GEODE_AS_STATIC_FUNCTION(getUsingSchedule) 
-	#endif
-
-	#ifndef GEODE_STATICS_getWasRemoved
-		#define GEODE_STATICS_getWasRemoved
-		GEODE_AS_STATIC_FUNCTION(getWasRemoved) 
-	#endif
-
-	#ifndef GEODE_STATICS_setAtlasIndex
-		#define GEODE_STATICS_setAtlasIndex
-		GEODE_AS_STATIC_FUNCTION(setAtlasIndex) 
-	#endif
-
-	#ifndef GEODE_STATICS_setDontCleanupOnFinish
-		#define GEODE_STATICS_setDontCleanupOnFinish
-		GEODE_AS_STATIC_FUNCTION(setDontCleanupOnFinish) 
-	#endif
-
-	#ifndef GEODE_STATICS_setDynamicRotationIsDir
-		#define GEODE_STATICS_setDynamicRotationIsDir
-		GEODE_AS_STATIC_FUNCTION(setDynamicRotationIsDir) 
-	#endif
-
-	#ifndef GEODE_STATICS_setEndAlpha
-		#define GEODE_STATICS_setEndAlpha
-		GEODE_AS_STATIC_FUNCTION(setEndAlpha) 
-	#endif
-
-	#ifndef GEODE_STATICS_setEndRGBVarSync
-		#define GEODE_STATICS_setEndRGBVarSync
-		GEODE_AS_STATIC_FUNCTION(setEndRGBVarSync) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFadeInTime
-		#define GEODE_STATICS_setFadeInTime
-		GEODE_AS_STATIC_FUNCTION(setFadeInTime) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFadeInTimeVar
-		#define GEODE_STATICS_setFadeInTimeVar
-		GEODE_AS_STATIC_FUNCTION(setFadeInTimeVar) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFadeOutTime
-		#define GEODE_STATICS_setFadeOutTime
-		GEODE_AS_STATIC_FUNCTION(setFadeOutTime) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFadeOutTimeVar
-		#define GEODE_STATICS_setFadeOutTimeVar
-		GEODE_AS_STATIC_FUNCTION(setFadeOutTimeVar) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFrictionPos
-		#define GEODE_STATICS_setFrictionPos
-		GEODE_AS_STATIC_FUNCTION(setFrictionPos) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFrictionPosVar
-		#define GEODE_STATICS_setFrictionPosVar
-		GEODE_AS_STATIC_FUNCTION(setFrictionPosVar) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFrictionRot
-		#define GEODE_STATICS_setFrictionRot
-		GEODE_AS_STATIC_FUNCTION(setFrictionRot) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFrictionRotVar
-		#define GEODE_STATICS_setFrictionRotVar
-		GEODE_AS_STATIC_FUNCTION(setFrictionRotVar) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFrictionSize
-		#define GEODE_STATICS_setFrictionSize
-		GEODE_AS_STATIC_FUNCTION(setFrictionSize) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFrictionSizeVar
-		#define GEODE_STATICS_setFrictionSizeVar
-		GEODE_AS_STATIC_FUNCTION(setFrictionSizeVar) 
-	#endif
-
-	#ifndef GEODE_STATICS_setOrderSensitive
-		#define GEODE_STATICS_setOrderSensitive
-		GEODE_AS_STATIC_FUNCTION(setOrderSensitive) 
-	#endif
-
-	#ifndef GEODE_STATICS_setRespawn
-		#define GEODE_STATICS_setRespawn
-		GEODE_AS_STATIC_FUNCTION(setRespawn) 
-	#endif
-
-	#ifndef GEODE_STATICS_setRespawnVar
-		#define GEODE_STATICS_setRespawnVar
-		GEODE_AS_STATIC_FUNCTION(setRespawnVar) 
-	#endif
-
-	#ifndef GEODE_STATICS_setStartAlpha
-		#define GEODE_STATICS_setStartAlpha
-		GEODE_AS_STATIC_FUNCTION(setStartAlpha) 
-	#endif
-
-	#ifndef GEODE_STATICS_setStartRGBVarSync
-		#define GEODE_STATICS_setStartRGBVarSync
-		GEODE_AS_STATIC_FUNCTION(setStartRGBVarSync) 
-	#endif
-
-	#ifndef GEODE_STATICS_setStartRadiusEqualToEnd
-		#define GEODE_STATICS_setStartRadiusEqualToEnd
-		GEODE_AS_STATIC_FUNCTION(setStartRadiusEqualToEnd) 
-	#endif
-
-	#ifndef GEODE_STATICS_setStartSizeEqualToEnd
-		#define GEODE_STATICS_setStartSizeEqualToEnd
-		GEODE_AS_STATIC_FUNCTION(setStartSizeEqualToEnd) 
-	#endif
-
-	#ifndef GEODE_STATICS_setStartSpinEqualToEnd
-		#define GEODE_STATICS_setStartSpinEqualToEnd
-		GEODE_AS_STATIC_FUNCTION(setStartSpinEqualToEnd) 
-	#endif
-
-	#ifndef GEODE_STATICS_setUsingSchedule
-		#define GEODE_STATICS_setUsingSchedule
-		GEODE_AS_STATIC_FUNCTION(setUsingSchedule) 
-	#endif
-
-	#ifndef GEODE_STATICS_setWasRemoved
-		#define GEODE_STATICS_setWasRemoved
-		GEODE_AS_STATIC_FUNCTION(setWasRemoved) 
-	#endif
-
-	#ifndef GEODE_STATICS_addParticle
-		#define GEODE_STATICS_addParticle
-		GEODE_AS_STATIC_FUNCTION(addParticle) 
-	#endif
-
-	#ifndef GEODE_STATICS_calculateWorldSpace
-		#define GEODE_STATICS_calculateWorldSpace
-		GEODE_AS_STATIC_FUNCTION(calculateWorldSpace) 
-	#endif
-
-	#ifndef GEODE_STATICS_isFull
-		#define GEODE_STATICS_isFull
-		GEODE_AS_STATIC_FUNCTION(isFull) 
-	#endif
-
-	#ifndef GEODE_STATICS_loadDefaults
-		#define GEODE_STATICS_loadDefaults
-		GEODE_AS_STATIC_FUNCTION(loadDefaults) 
-	#endif
-
-	#ifndef GEODE_STATICS_loadScaledDefaults
-		#define GEODE_STATICS_loadScaledDefaults
-		GEODE_AS_STATIC_FUNCTION(loadScaledDefaults) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetSystem
-		#define GEODE_STATICS_resetSystem
-		GEODE_AS_STATIC_FUNCTION(resetSystem) 
-	#endif
-
-	#ifndef GEODE_STATICS_resumeSystem
-		#define GEODE_STATICS_resumeSystem
-		GEODE_AS_STATIC_FUNCTION(resumeSystem) 
-	#endif
-
-	#ifndef GEODE_STATICS_saveDefaults
-		#define GEODE_STATICS_saveDefaults
-		GEODE_AS_STATIC_FUNCTION(saveDefaults) 
-	#endif
-
-	#ifndef GEODE_STATICS_stopSystem
-		#define GEODE_STATICS_stopSystem
-		GEODE_AS_STATIC_FUNCTION(stopSystem) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleUniformColorMode
-		#define GEODE_STATICS_toggleUniformColorMode
-		GEODE_AS_STATIC_FUNCTION(toggleUniformColorMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateVisible
-		#define GEODE_STATICS_updateVisible
-		GEODE_AS_STATIC_FUNCTION(updateVisible) 
-	#endif
-
 	#ifndef GEODE_STATICS_update
 		#define GEODE_STATICS_update
 		GEODE_AS_STATIC_FUNCTION(update) 
@@ -840,6 +520,81 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(setTexture) 
 	#endif
 
+	#ifndef GEODE_STATICS_addParticle
+		#define GEODE_STATICS_addParticle
+		GEODE_AS_STATIC_FUNCTION(addParticle) 
+	#endif
+
+	#ifndef GEODE_STATICS_calculateWorldSpace
+		#define GEODE_STATICS_calculateWorldSpace
+		GEODE_AS_STATIC_FUNCTION(calculateWorldSpace) 
+	#endif
+
+	#ifndef GEODE_STATICS_getParticleDrawCost
+		#define GEODE_STATICS_getParticleDrawCost
+		GEODE_AS_STATIC_FUNCTION(getParticleDrawCost) 
+	#endif
+
+	#ifndef GEODE_STATICS_getTimeElapsed
+		#define GEODE_STATICS_getTimeElapsed
+		GEODE_AS_STATIC_FUNCTION(getTimeElapsed) 
+	#endif
+
+	#ifndef GEODE_STATICS_initParticle
+		#define GEODE_STATICS_initParticle
+		GEODE_AS_STATIC_FUNCTION(initParticle) 
+	#endif
+
+	#ifndef GEODE_STATICS_initWithDictionary
+		#define GEODE_STATICS_initWithDictionary
+		GEODE_AS_STATIC_FUNCTION(initWithDictionary) 
+	#endif
+
+	#ifndef GEODE_STATICS_initWithFile
+		#define GEODE_STATICS_initWithFile
+		GEODE_AS_STATIC_FUNCTION(initWithFile) 
+	#endif
+
+	#ifndef GEODE_STATICS_isFull
+		#define GEODE_STATICS_isFull
+		GEODE_AS_STATIC_FUNCTION(isFull) 
+	#endif
+
+	#ifndef GEODE_STATICS_loadDefaults
+		#define GEODE_STATICS_loadDefaults
+		GEODE_AS_STATIC_FUNCTION(loadDefaults) 
+	#endif
+
+	#ifndef GEODE_STATICS_loadScaledDefaults
+		#define GEODE_STATICS_loadScaledDefaults
+		GEODE_AS_STATIC_FUNCTION(loadScaledDefaults) 
+	#endif
+
+	#ifndef GEODE_STATICS_resetSystem
+		#define GEODE_STATICS_resetSystem
+		GEODE_AS_STATIC_FUNCTION(resetSystem) 
+	#endif
+
+	#ifndef GEODE_STATICS_resumeSystem
+		#define GEODE_STATICS_resumeSystem
+		GEODE_AS_STATIC_FUNCTION(resumeSystem) 
+	#endif
+
+	#ifndef GEODE_STATICS_saveDefaults
+		#define GEODE_STATICS_saveDefaults
+		GEODE_AS_STATIC_FUNCTION(saveDefaults) 
+	#endif
+
+	#ifndef GEODE_STATICS_stopSystem
+		#define GEODE_STATICS_stopSystem
+		GEODE_AS_STATIC_FUNCTION(stopSystem) 
+	#endif
+
+	#ifndef GEODE_STATICS_updateVisible
+		#define GEODE_STATICS_updateVisible
+		GEODE_AS_STATIC_FUNCTION(updateVisible) 
+	#endif
+
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -849,326 +604,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_createWithTotalParticles
 		#define GEODE_CONCEPT_CHECK_createWithTotalParticles
 		GEODE_CONCEPT_FUNCTION_CHECK(createWithTotalParticles) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_initParticle
-		#define GEODE_CONCEPT_CHECK_initParticle
-		GEODE_CONCEPT_FUNCTION_CHECK(initParticle) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_initWithDictionary
-		#define GEODE_CONCEPT_CHECK_initWithDictionary
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithDictionary) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_initWithFile
-		#define GEODE_CONCEPT_CHECK_initWithFile
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithFile) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getAtlasIndex
-		#define GEODE_CONCEPT_CHECK_getAtlasIndex
-		GEODE_CONCEPT_FUNCTION_CHECK(getAtlasIndex) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getDontCleanupOnFinish
-		#define GEODE_CONCEPT_CHECK_getDontCleanupOnFinish
-		GEODE_CONCEPT_FUNCTION_CHECK(getDontCleanupOnFinish) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getDynamicRotationIsDir
-		#define GEODE_CONCEPT_CHECK_getDynamicRotationIsDir
-		GEODE_CONCEPT_FUNCTION_CHECK(getDynamicRotationIsDir) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getEndRGBVarSync
-		#define GEODE_CONCEPT_CHECK_getEndRGBVarSync
-		GEODE_CONCEPT_FUNCTION_CHECK(getEndRGBVarSync) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getFadeInTime
-		#define GEODE_CONCEPT_CHECK_getFadeInTime
-		GEODE_CONCEPT_FUNCTION_CHECK(getFadeInTime) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getFadeInTimeVar
-		#define GEODE_CONCEPT_CHECK_getFadeInTimeVar
-		GEODE_CONCEPT_FUNCTION_CHECK(getFadeInTimeVar) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getFadeOutTime
-		#define GEODE_CONCEPT_CHECK_getFadeOutTime
-		GEODE_CONCEPT_FUNCTION_CHECK(getFadeOutTime) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getFadeOutTimeVar
-		#define GEODE_CONCEPT_CHECK_getFadeOutTimeVar
-		GEODE_CONCEPT_FUNCTION_CHECK(getFadeOutTimeVar) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getFrictionPos
-		#define GEODE_CONCEPT_CHECK_getFrictionPos
-		GEODE_CONCEPT_FUNCTION_CHECK(getFrictionPos) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getFrictionPosVar
-		#define GEODE_CONCEPT_CHECK_getFrictionPosVar
-		GEODE_CONCEPT_FUNCTION_CHECK(getFrictionPosVar) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getFrictionRot
-		#define GEODE_CONCEPT_CHECK_getFrictionRot
-		GEODE_CONCEPT_FUNCTION_CHECK(getFrictionRot) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getFrictionRotVar
-		#define GEODE_CONCEPT_CHECK_getFrictionRotVar
-		GEODE_CONCEPT_FUNCTION_CHECK(getFrictionRotVar) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getFrictionSize
-		#define GEODE_CONCEPT_CHECK_getFrictionSize
-		GEODE_CONCEPT_FUNCTION_CHECK(getFrictionSize) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getFrictionSizeVar
-		#define GEODE_CONCEPT_CHECK_getFrictionSizeVar
-		GEODE_CONCEPT_FUNCTION_CHECK(getFrictionSizeVar) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getOrderSensitive
-		#define GEODE_CONCEPT_CHECK_getOrderSensitive
-		GEODE_CONCEPT_FUNCTION_CHECK(getOrderSensitive) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getRespawn
-		#define GEODE_CONCEPT_CHECK_getRespawn
-		GEODE_CONCEPT_FUNCTION_CHECK(getRespawn) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getRespawnVar
-		#define GEODE_CONCEPT_CHECK_getRespawnVar
-		GEODE_CONCEPT_FUNCTION_CHECK(getRespawnVar) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getStartRGBVarSync
-		#define GEODE_CONCEPT_CHECK_getStartRGBVarSync
-		GEODE_CONCEPT_FUNCTION_CHECK(getStartRGBVarSync) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getStartRadiusEqualToEnd
-		#define GEODE_CONCEPT_CHECK_getStartRadiusEqualToEnd
-		GEODE_CONCEPT_FUNCTION_CHECK(getStartRadiusEqualToEnd) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getStartSizeEqualToEnd
-		#define GEODE_CONCEPT_CHECK_getStartSizeEqualToEnd
-		GEODE_CONCEPT_FUNCTION_CHECK(getStartSizeEqualToEnd) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getStartSpinEqualToEnd
-		#define GEODE_CONCEPT_CHECK_getStartSpinEqualToEnd
-		GEODE_CONCEPT_FUNCTION_CHECK(getStartSpinEqualToEnd) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getTimeElapsed
-		#define GEODE_CONCEPT_CHECK_getTimeElapsed
-		GEODE_CONCEPT_FUNCTION_CHECK(getTimeElapsed) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getUseUniformColorMode
-		#define GEODE_CONCEPT_CHECK_getUseUniformColorMode
-		GEODE_CONCEPT_FUNCTION_CHECK(getUseUniformColorMode) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getUsingSchedule
-		#define GEODE_CONCEPT_CHECK_getUsingSchedule
-		GEODE_CONCEPT_FUNCTION_CHECK(getUsingSchedule) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getWasRemoved
-		#define GEODE_CONCEPT_CHECK_getWasRemoved
-		GEODE_CONCEPT_FUNCTION_CHECK(getWasRemoved) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setAtlasIndex
-		#define GEODE_CONCEPT_CHECK_setAtlasIndex
-		GEODE_CONCEPT_FUNCTION_CHECK(setAtlasIndex) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setDontCleanupOnFinish
-		#define GEODE_CONCEPT_CHECK_setDontCleanupOnFinish
-		GEODE_CONCEPT_FUNCTION_CHECK(setDontCleanupOnFinish) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setDynamicRotationIsDir
-		#define GEODE_CONCEPT_CHECK_setDynamicRotationIsDir
-		GEODE_CONCEPT_FUNCTION_CHECK(setDynamicRotationIsDir) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setEndAlpha
-		#define GEODE_CONCEPT_CHECK_setEndAlpha
-		GEODE_CONCEPT_FUNCTION_CHECK(setEndAlpha) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setEndRGBVarSync
-		#define GEODE_CONCEPT_CHECK_setEndRGBVarSync
-		GEODE_CONCEPT_FUNCTION_CHECK(setEndRGBVarSync) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setFadeInTime
-		#define GEODE_CONCEPT_CHECK_setFadeInTime
-		GEODE_CONCEPT_FUNCTION_CHECK(setFadeInTime) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setFadeInTimeVar
-		#define GEODE_CONCEPT_CHECK_setFadeInTimeVar
-		GEODE_CONCEPT_FUNCTION_CHECK(setFadeInTimeVar) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setFadeOutTime
-		#define GEODE_CONCEPT_CHECK_setFadeOutTime
-		GEODE_CONCEPT_FUNCTION_CHECK(setFadeOutTime) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setFadeOutTimeVar
-		#define GEODE_CONCEPT_CHECK_setFadeOutTimeVar
-		GEODE_CONCEPT_FUNCTION_CHECK(setFadeOutTimeVar) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setFrictionPos
-		#define GEODE_CONCEPT_CHECK_setFrictionPos
-		GEODE_CONCEPT_FUNCTION_CHECK(setFrictionPos) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setFrictionPosVar
-		#define GEODE_CONCEPT_CHECK_setFrictionPosVar
-		GEODE_CONCEPT_FUNCTION_CHECK(setFrictionPosVar) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setFrictionRot
-		#define GEODE_CONCEPT_CHECK_setFrictionRot
-		GEODE_CONCEPT_FUNCTION_CHECK(setFrictionRot) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setFrictionRotVar
-		#define GEODE_CONCEPT_CHECK_setFrictionRotVar
-		GEODE_CONCEPT_FUNCTION_CHECK(setFrictionRotVar) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setFrictionSize
-		#define GEODE_CONCEPT_CHECK_setFrictionSize
-		GEODE_CONCEPT_FUNCTION_CHECK(setFrictionSize) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setFrictionSizeVar
-		#define GEODE_CONCEPT_CHECK_setFrictionSizeVar
-		GEODE_CONCEPT_FUNCTION_CHECK(setFrictionSizeVar) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setOrderSensitive
-		#define GEODE_CONCEPT_CHECK_setOrderSensitive
-		GEODE_CONCEPT_FUNCTION_CHECK(setOrderSensitive) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setRespawn
-		#define GEODE_CONCEPT_CHECK_setRespawn
-		GEODE_CONCEPT_FUNCTION_CHECK(setRespawn) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setRespawnVar
-		#define GEODE_CONCEPT_CHECK_setRespawnVar
-		GEODE_CONCEPT_FUNCTION_CHECK(setRespawnVar) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setStartAlpha
-		#define GEODE_CONCEPT_CHECK_setStartAlpha
-		GEODE_CONCEPT_FUNCTION_CHECK(setStartAlpha) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setStartRGBVarSync
-		#define GEODE_CONCEPT_CHECK_setStartRGBVarSync
-		GEODE_CONCEPT_FUNCTION_CHECK(setStartRGBVarSync) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setStartRadiusEqualToEnd
-		#define GEODE_CONCEPT_CHECK_setStartRadiusEqualToEnd
-		GEODE_CONCEPT_FUNCTION_CHECK(setStartRadiusEqualToEnd) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setStartSizeEqualToEnd
-		#define GEODE_CONCEPT_CHECK_setStartSizeEqualToEnd
-		GEODE_CONCEPT_FUNCTION_CHECK(setStartSizeEqualToEnd) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setStartSpinEqualToEnd
-		#define GEODE_CONCEPT_CHECK_setStartSpinEqualToEnd
-		GEODE_CONCEPT_FUNCTION_CHECK(setStartSpinEqualToEnd) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setUsingSchedule
-		#define GEODE_CONCEPT_CHECK_setUsingSchedule
-		GEODE_CONCEPT_FUNCTION_CHECK(setUsingSchedule) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setWasRemoved
-		#define GEODE_CONCEPT_CHECK_setWasRemoved
-		GEODE_CONCEPT_FUNCTION_CHECK(setWasRemoved) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_addParticle
-		#define GEODE_CONCEPT_CHECK_addParticle
-		GEODE_CONCEPT_FUNCTION_CHECK(addParticle) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_calculateWorldSpace
-		#define GEODE_CONCEPT_CHECK_calculateWorldSpace
-		GEODE_CONCEPT_FUNCTION_CHECK(calculateWorldSpace) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_isFull
-		#define GEODE_CONCEPT_CHECK_isFull
-		GEODE_CONCEPT_FUNCTION_CHECK(isFull) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_loadDefaults
-		#define GEODE_CONCEPT_CHECK_loadDefaults
-		GEODE_CONCEPT_FUNCTION_CHECK(loadDefaults) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_loadScaledDefaults
-		#define GEODE_CONCEPT_CHECK_loadScaledDefaults
-		GEODE_CONCEPT_FUNCTION_CHECK(loadScaledDefaults) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_resetSystem
-		#define GEODE_CONCEPT_CHECK_resetSystem
-		GEODE_CONCEPT_FUNCTION_CHECK(resetSystem) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_resumeSystem
-		#define GEODE_CONCEPT_CHECK_resumeSystem
-		GEODE_CONCEPT_FUNCTION_CHECK(resumeSystem) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_saveDefaults
-		#define GEODE_CONCEPT_CHECK_saveDefaults
-		GEODE_CONCEPT_FUNCTION_CHECK(saveDefaults) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_stopSystem
-		#define GEODE_CONCEPT_CHECK_stopSystem
-		GEODE_CONCEPT_FUNCTION_CHECK(stopSystem) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_toggleUniformColorMode
-		#define GEODE_CONCEPT_CHECK_toggleUniformColorMode
-		GEODE_CONCEPT_FUNCTION_CHECK(toggleUniformColorMode) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_updateVisible
-		#define GEODE_CONCEPT_CHECK_updateVisible
-		GEODE_CONCEPT_FUNCTION_CHECK(updateVisible) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_update
@@ -1676,6 +1111,81 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(setTexture) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_addParticle
+		#define GEODE_CONCEPT_CHECK_addParticle
+		GEODE_CONCEPT_FUNCTION_CHECK(addParticle) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_calculateWorldSpace
+		#define GEODE_CONCEPT_CHECK_calculateWorldSpace
+		GEODE_CONCEPT_FUNCTION_CHECK(calculateWorldSpace) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getParticleDrawCost
+		#define GEODE_CONCEPT_CHECK_getParticleDrawCost
+		GEODE_CONCEPT_FUNCTION_CHECK(getParticleDrawCost) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getTimeElapsed
+		#define GEODE_CONCEPT_CHECK_getTimeElapsed
+		GEODE_CONCEPT_FUNCTION_CHECK(getTimeElapsed) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_initParticle
+		#define GEODE_CONCEPT_CHECK_initParticle
+		GEODE_CONCEPT_FUNCTION_CHECK(initParticle) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_initWithDictionary
+		#define GEODE_CONCEPT_CHECK_initWithDictionary
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithDictionary) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_initWithFile
+		#define GEODE_CONCEPT_CHECK_initWithFile
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithFile) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_isFull
+		#define GEODE_CONCEPT_CHECK_isFull
+		GEODE_CONCEPT_FUNCTION_CHECK(isFull) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_loadDefaults
+		#define GEODE_CONCEPT_CHECK_loadDefaults
+		GEODE_CONCEPT_FUNCTION_CHECK(loadDefaults) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_loadScaledDefaults
+		#define GEODE_CONCEPT_CHECK_loadScaledDefaults
+		GEODE_CONCEPT_FUNCTION_CHECK(loadScaledDefaults) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_resetSystem
+		#define GEODE_CONCEPT_CHECK_resetSystem
+		GEODE_CONCEPT_FUNCTION_CHECK(resetSystem) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_resumeSystem
+		#define GEODE_CONCEPT_CHECK_resumeSystem
+		GEODE_CONCEPT_FUNCTION_CHECK(resumeSystem) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_saveDefaults
+		#define GEODE_CONCEPT_CHECK_saveDefaults
+		GEODE_CONCEPT_FUNCTION_CHECK(saveDefaults) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_stopSystem
+		#define GEODE_CONCEPT_CHECK_stopSystem
+		GEODE_CONCEPT_FUNCTION_CHECK(stopSystem) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_updateVisible
+		#define GEODE_CONCEPT_CHECK_updateVisible
+		GEODE_CONCEPT_FUNCTION_CHECK(updateVisible) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::CCParticleSystem> : ModifyBase<ModifyDerive<Der, cocos2d::CCParticleSystem>> {
@@ -1685,75 +1195,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCParticleSystem::create)), Default, cocos2d::CCParticleSystem, create, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int>::func(&cocos2d::CCParticleSystem::createWithTotalParticles)), Default, cocos2d::CCParticleSystem, createWithTotalParticles, unsigned int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::sCCParticle*>::func(&cocos2d::CCParticleSystem::initParticle)), Thiscall, cocos2d::CCParticleSystem, initParticle, cocos2d::sCCParticle*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCDictionary*, char const*, bool>::func(&cocos2d::CCParticleSystem::initWithDictionary)), Thiscall, cocos2d::CCParticleSystem, initWithDictionary, cocos2d::CCDictionary*, char const*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCDictionary*, bool>::func(&cocos2d::CCParticleSystem::initWithDictionary)), Thiscall, cocos2d::CCParticleSystem, initWithDictionary, cocos2d::CCDictionary*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, bool>::func(&cocos2d::CCParticleSystem::initWithFile)), Thiscall, cocos2d::CCParticleSystem, initWithFile, char const*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getAtlasIndex)), Thiscall, cocos2d::CCParticleSystem, getAtlasIndex, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getDontCleanupOnFinish)), Thiscall, cocos2d::CCParticleSystem, getDontCleanupOnFinish, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getDynamicRotationIsDir)), Thiscall, cocos2d::CCParticleSystem, getDynamicRotationIsDir, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getEndRGBVarSync)), Thiscall, cocos2d::CCParticleSystem, getEndRGBVarSync, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getFadeInTime)), Thiscall, cocos2d::CCParticleSystem, getFadeInTime, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getFadeInTimeVar)), Thiscall, cocos2d::CCParticleSystem, getFadeInTimeVar, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getFadeOutTime)), Thiscall, cocos2d::CCParticleSystem, getFadeOutTime, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getFadeOutTimeVar)), Thiscall, cocos2d::CCParticleSystem, getFadeOutTimeVar, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getFrictionPos)), Thiscall, cocos2d::CCParticleSystem, getFrictionPos, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getFrictionPosVar)), Thiscall, cocos2d::CCParticleSystem, getFrictionPosVar, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getFrictionRot)), Thiscall, cocos2d::CCParticleSystem, getFrictionRot, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getFrictionRotVar)), Thiscall, cocos2d::CCParticleSystem, getFrictionRotVar, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getFrictionSize)), Thiscall, cocos2d::CCParticleSystem, getFrictionSize, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getFrictionSizeVar)), Thiscall, cocos2d::CCParticleSystem, getFrictionSizeVar, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getOrderSensitive)), Thiscall, cocos2d::CCParticleSystem, getOrderSensitive, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getRespawn)), Thiscall, cocos2d::CCParticleSystem, getRespawn, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getRespawnVar)), Thiscall, cocos2d::CCParticleSystem, getRespawnVar, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getStartRGBVarSync)), Thiscall, cocos2d::CCParticleSystem, getStartRGBVarSync, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getStartRadiusEqualToEnd)), Thiscall, cocos2d::CCParticleSystem, getStartRadiusEqualToEnd, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getStartSizeEqualToEnd)), Thiscall, cocos2d::CCParticleSystem, getStartSizeEqualToEnd, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getStartSpinEqualToEnd)), Thiscall, cocos2d::CCParticleSystem, getStartSpinEqualToEnd, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getTimeElapsed)), Thiscall, cocos2d::CCParticleSystem, getTimeElapsed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getUseUniformColorMode)), Thiscall, cocos2d::CCParticleSystem, getUseUniformColorMode, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getUsingSchedule)), Thiscall, cocos2d::CCParticleSystem, getUsingSchedule, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getWasRemoved)), Thiscall, cocos2d::CCParticleSystem, getWasRemoved, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int>::func(&cocos2d::CCParticleSystem::setAtlasIndex)), Thiscall, cocos2d::CCParticleSystem, setAtlasIndex, unsigned int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCParticleSystem::setDontCleanupOnFinish)), Thiscall, cocos2d::CCParticleSystem, setDontCleanupOnFinish, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCParticleSystem::setDynamicRotationIsDir)), Thiscall, cocos2d::CCParticleSystem, setDynamicRotationIsDir, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setEndAlpha)), Thiscall, cocos2d::CCParticleSystem, setEndAlpha, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCParticleSystem::setEndRGBVarSync)), Thiscall, cocos2d::CCParticleSystem, setEndRGBVarSync, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setFadeInTime)), Thiscall, cocos2d::CCParticleSystem, setFadeInTime, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setFadeInTimeVar)), Thiscall, cocos2d::CCParticleSystem, setFadeInTimeVar, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setFadeOutTime)), Thiscall, cocos2d::CCParticleSystem, setFadeOutTime, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setFadeOutTimeVar)), Thiscall, cocos2d::CCParticleSystem, setFadeOutTimeVar, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setFrictionPos)), Thiscall, cocos2d::CCParticleSystem, setFrictionPos, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setFrictionPosVar)), Thiscall, cocos2d::CCParticleSystem, setFrictionPosVar, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setFrictionRot)), Thiscall, cocos2d::CCParticleSystem, setFrictionRot, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setFrictionRotVar)), Thiscall, cocos2d::CCParticleSystem, setFrictionRotVar, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setFrictionSize)), Thiscall, cocos2d::CCParticleSystem, setFrictionSize, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setFrictionSizeVar)), Thiscall, cocos2d::CCParticleSystem, setFrictionSizeVar, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCParticleSystem::setOrderSensitive)), Thiscall, cocos2d::CCParticleSystem, setOrderSensitive, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setRespawn)), Thiscall, cocos2d::CCParticleSystem, setRespawn, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setRespawnVar)), Thiscall, cocos2d::CCParticleSystem, setRespawnVar, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setStartAlpha)), Thiscall, cocos2d::CCParticleSystem, setStartAlpha, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCParticleSystem::setStartRGBVarSync)), Thiscall, cocos2d::CCParticleSystem, setStartRGBVarSync, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCParticleSystem::setStartRadiusEqualToEnd)), Thiscall, cocos2d::CCParticleSystem, setStartRadiusEqualToEnd, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCParticleSystem::setStartSizeEqualToEnd)), Thiscall, cocos2d::CCParticleSystem, setStartSizeEqualToEnd, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCParticleSystem::setStartSpinEqualToEnd)), Thiscall, cocos2d::CCParticleSystem, setStartSpinEqualToEnd, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCParticleSystem::setUsingSchedule)), Thiscall, cocos2d::CCParticleSystem, setUsingSchedule, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCParticleSystem::setWasRemoved)), Thiscall, cocos2d::CCParticleSystem, setWasRemoved, bool)
 			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCParticleSystem@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCParticleSystem, )
 			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCParticleSystem@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCParticleSystem)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::addParticle)), Thiscall, cocos2d::CCParticleSystem, addParticle, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::calculateWorldSpace)), Thiscall, cocos2d::CCParticleSystem, calculateWorldSpace, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::isFull)), Thiscall, cocos2d::CCParticleSystem, isFull, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::loadDefaults)), Thiscall, cocos2d::CCParticleSystem, loadDefaults, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::loadScaledDefaults)), Thiscall, cocos2d::CCParticleSystem, loadScaledDefaults, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::resetSystem)), Thiscall, cocos2d::CCParticleSystem, resetSystem, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::resumeSystem)), Thiscall, cocos2d::CCParticleSystem, resumeSystem, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::saveDefaults)), Thiscall, cocos2d::CCParticleSystem, saveDefaults, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::stopSystem)), Thiscall, cocos2d::CCParticleSystem, stopSystem, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCParticleSystem::toggleUniformColorMode)), Thiscall, cocos2d::CCParticleSystem, toggleUniformColorMode, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::updateVisible)), Thiscall, cocos2d::CCParticleSystem, updateVisible, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCParticleSystem::create)), Default, cocos2d::CCParticleSystem, create, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int>::func(&cocos2d::CCParticleSystem::createWithTotalParticles)), Default, cocos2d::CCParticleSystem, createWithTotalParticles, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::update)), Thiscall, cocos2d::CCParticleSystem, update, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::init)), Thiscall, cocos2d::CCParticleSystem, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setScaleX)), Thiscall, cocos2d::CCParticleSystem, setScaleX, float)
@@ -1819,13 +1264,13 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getEndSizeVar)), Thiscall, cocos2d::CCParticleSystem, getEndSizeVar, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setEndSizeVar)), Thiscall, cocos2d::CCParticleSystem, setEndSizeVar, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getStartColor)), Thiscall, cocos2d::CCParticleSystem, getStartColor, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccColor4F const&>::func(&cocos2d::CCParticleSystem::setStartColor)), Thiscall, cocos2d::CCParticleSystem, setStartColor, cocos2d::_ccColor4F const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccColor4F const&>::func(&cocos2d::CCParticleSystem::setStartColor)), Thiscall, cocos2d::CCParticleSystem, setStartColor, cocos2d::ccColor4F const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getStartColorVar)), Thiscall, cocos2d::CCParticleSystem, getStartColorVar, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccColor4F const&>::func(&cocos2d::CCParticleSystem::setStartColorVar)), Thiscall, cocos2d::CCParticleSystem, setStartColorVar, cocos2d::_ccColor4F const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccColor4F const&>::func(&cocos2d::CCParticleSystem::setStartColorVar)), Thiscall, cocos2d::CCParticleSystem, setStartColorVar, cocos2d::ccColor4F const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getEndColor)), Thiscall, cocos2d::CCParticleSystem, getEndColor, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccColor4F const&>::func(&cocos2d::CCParticleSystem::setEndColor)), Thiscall, cocos2d::CCParticleSystem, setEndColor, cocos2d::_ccColor4F const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccColor4F const&>::func(&cocos2d::CCParticleSystem::setEndColor)), Thiscall, cocos2d::CCParticleSystem, setEndColor, cocos2d::ccColor4F const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getEndColorVar)), Thiscall, cocos2d::CCParticleSystem, getEndColorVar, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccColor4F const&>::func(&cocos2d::CCParticleSystem::setEndColorVar)), Thiscall, cocos2d::CCParticleSystem, setEndColorVar, cocos2d::_ccColor4F const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccColor4F const&>::func(&cocos2d::CCParticleSystem::setEndColorVar)), Thiscall, cocos2d::CCParticleSystem, setEndColorVar, cocos2d::ccColor4F const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getStartSpin)), Thiscall, cocos2d::CCParticleSystem, getStartSpin, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::setStartSpin)), Thiscall, cocos2d::CCParticleSystem, setStartSpin, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getStartSpinVar)), Thiscall, cocos2d::CCParticleSystem, getStartSpinVar, )
@@ -1851,10 +1296,26 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::postStep)), Thiscall, cocos2d::CCParticleSystem, postStep, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::updateWithNoTime)), Thiscall, cocos2d::CCParticleSystem, updateWithNoTime, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::updateBlendFunc)), Thiscall, cocos2d::CCParticleSystem, updateBlendFunc, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccBlendFunc>::func(&cocos2d::CCParticleSystem::setBlendFunc)), Thiscall, cocos2d::CCParticleSystem, setBlendFunc, cocos2d::_ccBlendFunc)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccBlendFunc>::func(&cocos2d::CCParticleSystem::setBlendFunc)), Thiscall, cocos2d::CCParticleSystem, setBlendFunc, cocos2d::ccBlendFunc)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getBlendFunc)), Thiscall, cocos2d::CCParticleSystem, getBlendFunc, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getTexture)), Thiscall, cocos2d::CCParticleSystem, getTexture, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCTexture2D*>::func(&cocos2d::CCParticleSystem::setTexture)), Thiscall, cocos2d::CCParticleSystem, setTexture, cocos2d::CCTexture2D*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::addParticle)), Thiscall, cocos2d::CCParticleSystem, addParticle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::calculateWorldSpace)), Thiscall, cocos2d::CCParticleSystem, calculateWorldSpace, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getParticleDrawCost)), Thiscall, cocos2d::CCParticleSystem, getParticleDrawCost, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::getTimeElapsed)), Thiscall, cocos2d::CCParticleSystem, getTimeElapsed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::sCCParticle*>::func(&cocos2d::CCParticleSystem::initParticle)), Thiscall, cocos2d::CCParticleSystem, initParticle, cocos2d::sCCParticle*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCDictionary*, bool>::func(&cocos2d::CCParticleSystem::initWithDictionary)), Thiscall, cocos2d::CCParticleSystem, initWithDictionary, cocos2d::CCDictionary*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCDictionary*, char const*, bool>::func(&cocos2d::CCParticleSystem::initWithDictionary)), Thiscall, cocos2d::CCParticleSystem, initWithDictionary, cocos2d::CCDictionary*, char const*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, bool>::func(&cocos2d::CCParticleSystem::initWithFile)), Thiscall, cocos2d::CCParticleSystem, initWithFile, char const*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::isFull)), Thiscall, cocos2d::CCParticleSystem, isFull, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::loadDefaults)), Thiscall, cocos2d::CCParticleSystem, loadDefaults, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCParticleSystem::loadScaledDefaults)), Thiscall, cocos2d::CCParticleSystem, loadScaledDefaults, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::resetSystem)), Thiscall, cocos2d::CCParticleSystem, resetSystem, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::resumeSystem)), Thiscall, cocos2d::CCParticleSystem, resumeSystem, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::saveDefaults)), Thiscall, cocos2d::CCParticleSystem, saveDefaults, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::stopSystem)), Thiscall, cocos2d::CCParticleSystem, stopSystem, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCParticleSystem::updateVisible)), Thiscall, cocos2d::CCParticleSystem, updateVisible, )
 		}
 	};
 }

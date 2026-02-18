@@ -10,6 +10,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
+	#ifndef GEODE_STATICS_createWithCoder
+		#define GEODE_STATICS_createWithCoder
+		GEODE_AS_STATIC_FUNCTION(createWithCoder) 
+	#endif
+
 	#ifndef GEODE_STATICS_encodeWithCoder
 		#define GEODE_STATICS_encodeWithCoder
 		GEODE_AS_STATIC_FUNCTION(encodeWithCoder) 
@@ -20,19 +25,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addTags) 
 	#endif
 
-	#ifndef GEODE_STATICS_containsTag
-		#define GEODE_STATICS_containsTag
-		GEODE_AS_STATIC_FUNCTION(containsTag) 
-	#endif
-
-	#ifndef GEODE_STATICS_createWithCoder
-		#define GEODE_STATICS_createWithCoder
-		GEODE_AS_STATIC_FUNCTION(createWithCoder) 
-	#endif
-
 	#ifndef GEODE_STATICS_getArtistNames
 		#define GEODE_STATICS_getArtistNames
 		GEODE_AS_STATIC_FUNCTION(getArtistNames) 
+	#endif
+
+	#ifndef GEODE_STATICS_getExtraArtistCount
+		#define GEODE_STATICS_getExtraArtistCount
+		GEODE_AS_STATIC_FUNCTION(getExtraArtistCount) 
 	#endif
 
 	#ifndef GEODE_STATICS_getTagsString
@@ -45,15 +45,15 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateArtists
-		#define GEODE_STATICS_updateArtists
-		GEODE_AS_STATIC_FUNCTION(updateArtists) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_createWithCoder
+		#define GEODE_CONCEPT_CHECK_createWithCoder
+		GEODE_CONCEPT_FUNCTION_CHECK(createWithCoder) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_encodeWithCoder
@@ -76,14 +76,19 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(containsTag) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_createWithCoder
-		#define GEODE_CONCEPT_CHECK_createWithCoder
-		GEODE_CONCEPT_FUNCTION_CHECK(createWithCoder) 
+	#ifndef GEODE_CONCEPT_CHECK_copyValues
+		#define GEODE_CONCEPT_CHECK_copyValues
+		GEODE_CONCEPT_FUNCTION_CHECK(copyValues) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_getArtistNames
 		#define GEODE_CONCEPT_CHECK_getArtistNames
 		GEODE_CONCEPT_FUNCTION_CHECK(getArtistNames) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getExtraArtistCount
+		#define GEODE_CONCEPT_CHECK_getExtraArtistCount
+		GEODE_CONCEPT_FUNCTION_CHECK(getExtraArtistCount) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_getTagsString
@@ -110,18 +115,20 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32f0d0, Default, SongInfoObject, create, cocos2d::CCDictionary*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3300c0, Default, SongInfoObject, create, int, gd::string, gd::string, int, float, gd::string, gd::string, gd::string, int, gd::string, bool, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32ef70, Default, SongInfoObject, create, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3309a0, Thiscall, SongInfoObject, encodeWithCoder, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3448b0, Default, SongInfoObject, create, cocos2d::CCDictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x344730, Default, SongInfoObject, create, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x345bf0, Default, SongInfoObject, create, int, gd::string, gd::string, int, float, gd::string, gd::string, gd::string, gd::string, int, gd::string, bool, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x346250, Default, SongInfoObject, createWithCoder, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3465b0, Thiscall, SongInfoObject, encodeWithCoder, DS_Dictionary*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SongInfoObject, canEncode, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SongInfoObject, addTags, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SongInfoObject, containsTag, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x330690, Default, SongInfoObject, createWithCoder, DS_Dictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SongInfoObject, getArtistNames, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SongInfoObject, getTagsString, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3302f0, Thiscall, SongInfoObject, init, int, gd::string, gd::string, int, float, gd::string, gd::string, gd::string, int, gd::string, bool, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SongInfoObject, updateArtists, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x346c70, Thiscall, SongInfoObject, addTags, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SongInfoObject, containsTag, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SongInfoObject, copyValues, SongInfoObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3467b0, Thiscall, SongInfoObject, getArtistNames, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x346c00, Thiscall, SongInfoObject, getExtraArtistCount, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x346e60, Thiscall, SongInfoObject, getTagsString, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x345e60, Thiscall, SongInfoObject, init, int, gd::string, gd::string, int, float, gd::string, gd::string, gd::string, gd::string, int, gd::string, bool, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SongInfoObject, updateArtists, gd::string)
 		}
 	};
 }

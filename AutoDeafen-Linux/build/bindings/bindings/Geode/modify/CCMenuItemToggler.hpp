@@ -40,6 +40,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(selectedTouch) 
 	#endif
 
+	#ifndef GEODE_STATICS_setSizeMult
+		#define GEODE_STATICS_setSizeMult
+		GEODE_AS_STATIC_FUNCTION(setSizeMult) 
+	#endif
+
 	#ifndef GEODE_STATICS_toggle
 		#define GEODE_STATICS_toggle
 		GEODE_AS_STATIC_FUNCTION(toggle) 
@@ -145,22 +150,22 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x451e0, Default, CCMenuItemToggler, create, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45250, Default, CCMenuItemToggler, create, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMenuItemToggler, createWithSize, const char*, const char*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMenuItemToggler, createWithStandardSprites, cocos2d::CCObject*, cocos2d::SEL_MenuHandler, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45490, Thiscall, CCMenuItemToggler, activate, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45440, Thiscall, CCMenuItemToggler, selected, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x454e0, Thiscall, CCMenuItemToggler, unselected, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45530, Thiscall, CCMenuItemToggler, setEnabled, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45500, Thiscall, CCMenuItemToggler, activate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x454b0, Thiscall, CCMenuItemToggler, selected, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45550, Thiscall, CCMenuItemToggler, unselected, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x455a0, Thiscall, CCMenuItemToggler, setEnabled, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMenuItemToggler, activeItem, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMenuItemToggler, init, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMenuItemToggler, isOn, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMenuItemToggler, isToggled, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45580, Thiscall, CCMenuItemToggler, normalTouch, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x455a0, Thiscall, CCMenuItemToggler, selectedTouch, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x455f0, Thiscall, CCMenuItemToggler, normalTouch, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45610, Thiscall, CCMenuItemToggler, selectedTouch, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMenuItemToggler, setClickable, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMenuItemToggler, setSizeMult, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x455c0, Thiscall, CCMenuItemToggler, toggle, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45480, Thiscall, CCMenuItemToggler, setSizeMult, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45630, Thiscall, CCMenuItemToggler, toggle, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMenuItemToggler, toggleWithCallback, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMenuItemToggler, updateSprite, )
 		}

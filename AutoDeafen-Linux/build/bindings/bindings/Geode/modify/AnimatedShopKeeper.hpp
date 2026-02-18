@@ -56,10 +56,10 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AnimatedShopKeeper, create, ShopType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a8840, Thiscall, AnimatedShopKeeper, animationFinished, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2aff00, Thiscall, AnimatedShopKeeper, animationFinished, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AnimatedShopKeeper, init, ShopType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a8520, Thiscall, AnimatedShopKeeper, playReactAnimation, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a87b0, Thiscall, AnimatedShopKeeper, startAnimating, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2afbe0, Thiscall, AnimatedShopKeeper, playReactAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2afe70, Thiscall, AnimatedShopKeeper, startAnimating, )
 		}
 	};
 }

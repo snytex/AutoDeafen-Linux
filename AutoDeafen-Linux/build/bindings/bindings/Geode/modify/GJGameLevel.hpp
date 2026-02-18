@@ -35,24 +35,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(copyLevelInfo) 
 	#endif
 
-	#ifndef GEODE_STATICS_createWithCoder
-		#define GEODE_STATICS_createWithCoder
-		GEODE_AS_STATIC_FUNCTION(createWithCoder) 
-	#endif
-
 	#ifndef GEODE_STATICS_dataLoaded
 		#define GEODE_STATICS_dataLoaded
 		GEODE_AS_STATIC_FUNCTION(dataLoaded) 
-	#endif
-
-	#ifndef GEODE_STATICS_demonIconForDifficulty
-		#define GEODE_STATICS_demonIconForDifficulty
-		GEODE_AS_STATIC_FUNCTION(demonIconForDifficulty) 
-	#endif
-
-	#ifndef GEODE_STATICS_generateSettingsString
-		#define GEODE_STATICS_generateSettingsString
-		GEODE_AS_STATIC_FUNCTION(generateSettingsString) 
 	#endif
 
 	#ifndef GEODE_STATICS_getAudioFileName
@@ -75,19 +60,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getLastBuildPageForTab) 
 	#endif
 
-	#ifndef GEODE_STATICS_getLengthKey
-		#define GEODE_STATICS_getLengthKey
-		GEODE_AS_STATIC_FUNCTION(getLengthKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_getListSnapshot
 		#define GEODE_STATICS_getListSnapshot
 		GEODE_AS_STATIC_FUNCTION(getListSnapshot) 
-	#endif
-
-	#ifndef GEODE_STATICS_getNormalPercent
-		#define GEODE_STATICS_getNormalPercent
-		GEODE_AS_STATIC_FUNCTION(getNormalPercent) 
 	#endif
 
 	#ifndef GEODE_STATICS_getSongName
@@ -105,21 +80,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(handleStatsConflict) 
 	#endif
 
-	#ifndef GEODE_STATICS_levelWasAltered
-		#define GEODE_STATICS_levelWasAltered
-		GEODE_AS_STATIC_FUNCTION(levelWasAltered) 
-	#endif
-
-	#ifndef GEODE_STATICS_levelWasSubmitted
-		#define GEODE_STATICS_levelWasSubmitted
-		GEODE_AS_STATIC_FUNCTION(levelWasSubmitted) 
-	#endif
-
-	#ifndef GEODE_STATICS_parseSettingsString
-		#define GEODE_STATICS_parseSettingsString
-		GEODE_AS_STATIC_FUNCTION(parseSettingsString) 
-	#endif
-
 	#ifndef GEODE_STATICS_saveNewScore
 		#define GEODE_STATICS_saveNewScore
 		GEODE_AS_STATIC_FUNCTION(saveNewScore) 
@@ -133,101 +93,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_scoreStringToVector
 		#define GEODE_STATICS_scoreStringToVector
 		GEODE_AS_STATIC_FUNCTION(scoreStringToVector) 
-	#endif
-
-	#ifndef GEODE_STATICS_scoreVectorToString
-		#define GEODE_STATICS_scoreVectorToString
-		GEODE_AS_STATIC_FUNCTION(scoreVectorToString) 
-	#endif
-
-	#ifndef GEODE_STATICS_setAccountID
-		#define GEODE_STATICS_setAccountID
-		GEODE_AS_STATIC_FUNCTION(setAccountID) 
-	#endif
-
-	#ifndef GEODE_STATICS_setAttempts
-		#define GEODE_STATICS_setAttempts
-		GEODE_AS_STATIC_FUNCTION(setAttempts) 
-	#endif
-
-	#ifndef GEODE_STATICS_setAttemptTime
-		#define GEODE_STATICS_setAttemptTime
-		GEODE_AS_STATIC_FUNCTION(setAttemptTime) 
-	#endif
-
-	#ifndef GEODE_STATICS_setClicks
-		#define GEODE_STATICS_setClicks
-		GEODE_AS_STATIC_FUNCTION(setClicks) 
-	#endif
-
-	#ifndef GEODE_STATICS_setCoinsVerified
-		#define GEODE_STATICS_setCoinsVerified
-		GEODE_AS_STATIC_FUNCTION(setCoinsVerified) 
-	#endif
-
-	#ifndef GEODE_STATICS_setDailyID
-		#define GEODE_STATICS_setDailyID
-		GEODE_AS_STATIC_FUNCTION(setDailyID) 
-	#endif
-
-	#ifndef GEODE_STATICS_setDemon
-		#define GEODE_STATICS_setDemon
-		GEODE_AS_STATIC_FUNCTION(setDemon) 
-	#endif
-
-	#ifndef GEODE_STATICS_setJumps
-		#define GEODE_STATICS_setJumps
-		GEODE_AS_STATIC_FUNCTION(setJumps) 
-	#endif
-
-	#ifndef GEODE_STATICS_setLastBuildPageForTab
-		#define GEODE_STATICS_setLastBuildPageForTab
-		GEODE_AS_STATIC_FUNCTION(setLastBuildPageForTab) 
-	#endif
-
-	#ifndef GEODE_STATICS_setLevelID
-		#define GEODE_STATICS_setLevelID
-		GEODE_AS_STATIC_FUNCTION(setLevelID) 
-	#endif
-
-	#ifndef GEODE_STATICS_setNewNormalPercent
-		#define GEODE_STATICS_setNewNormalPercent
-		GEODE_AS_STATIC_FUNCTION(setNewNormalPercent) 
-	#endif
-
-	#ifndef GEODE_STATICS_setNewNormalPercent2
-		#define GEODE_STATICS_setNewNormalPercent2
-		GEODE_AS_STATIC_FUNCTION(setNewNormalPercent2) 
-	#endif
-
-	#ifndef GEODE_STATICS_setNormalPercent
-		#define GEODE_STATICS_setNormalPercent
-		GEODE_AS_STATIC_FUNCTION(setNormalPercent) 
-	#endif
-
-	#ifndef GEODE_STATICS_setObjectCount
-		#define GEODE_STATICS_setObjectCount
-		GEODE_AS_STATIC_FUNCTION(setObjectCount) 
-	#endif
-
-	#ifndef GEODE_STATICS_setOriginalLevel
-		#define GEODE_STATICS_setOriginalLevel
-		GEODE_AS_STATIC_FUNCTION(setOriginalLevel) 
-	#endif
-
-	#ifndef GEODE_STATICS_setPassword
-		#define GEODE_STATICS_setPassword
-		GEODE_AS_STATIC_FUNCTION(setPassword) 
-	#endif
-
-	#ifndef GEODE_STATICS_setStars
-		#define GEODE_STATICS_setStars
-		GEODE_AS_STATIC_FUNCTION(setStars) 
-	#endif
-
-	#ifndef GEODE_STATICS_shouldCheatReset
-		#define GEODE_STATICS_shouldCheatReset
-		GEODE_AS_STATIC_FUNCTION(shouldCheatReset) 
 	#endif
 
 	#ifndef GEODE_STATICS_storeNewLocalScore
@@ -244,6 +109,21 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_createWithCoder
+		#define GEODE_CONCEPT_CHECK_createWithCoder
+		GEODE_CONCEPT_FUNCTION_CHECK(createWithCoder) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_demonIconForDifficulty
+		#define GEODE_CONCEPT_CHECK_demonIconForDifficulty
+		GEODE_CONCEPT_FUNCTION_CHECK(demonIconForDifficulty) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getLengthKey
+		#define GEODE_CONCEPT_CHECK_getLengthKey
+		GEODE_CONCEPT_FUNCTION_CHECK(getLengthKey) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_lengthKeyToString
@@ -276,19 +156,9 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(copyLevelInfo) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_createWithCoder
-		#define GEODE_CONCEPT_CHECK_createWithCoder
-		GEODE_CONCEPT_FUNCTION_CHECK(createWithCoder) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_dataLoaded
 		#define GEODE_CONCEPT_CHECK_dataLoaded
 		GEODE_CONCEPT_FUNCTION_CHECK(dataLoaded) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_demonIconForDifficulty
-		#define GEODE_CONCEPT_CHECK_demonIconForDifficulty
-		GEODE_CONCEPT_FUNCTION_CHECK(demonIconForDifficulty) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_generateSettingsString
@@ -316,11 +186,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(getLastBuildPageForTab) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_getLengthKey
-		#define GEODE_CONCEPT_CHECK_getLengthKey
-		GEODE_CONCEPT_FUNCTION_CHECK(getLengthKey) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_getListSnapshot
 		#define GEODE_CONCEPT_CHECK_getListSnapshot
 		GEODE_CONCEPT_FUNCTION_CHECK(getListSnapshot) 
@@ -344,6 +209,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_handleStatsConflict
 		#define GEODE_CONCEPT_CHECK_handleStatsConflict
 		GEODE_CONCEPT_FUNCTION_CHECK(handleStatsConflict) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_isPlatformer
+		#define GEODE_CONCEPT_CHECK_isPlatformer
+		GEODE_CONCEPT_FUNCTION_CHECK(isPlatformer) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_levelWasAltered
@@ -490,55 +360,57 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x169b40, Default, GJGameLevel, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1683e0, Default, GJGameLevel, create, cocos2d::CCDictionary*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16a0d0, Default, GJGameLevel, lengthKeyToString, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16c090, Thiscall, GJGameLevel, encodeWithCoder, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x141590, Thiscall, GJGameLevel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16ae30, Default, GJGameLevel, create, cocos2d::CCDictionary*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, createWithCoder, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, demonIconForDifficulty, DemonDifficultyType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, getLengthKey, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16cbd0, Default, GJGameLevel, lengthKeyToString, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16ef00, Thiscall, GJGameLevel, encodeWithCoder, DS_Dictionary*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, canEncode, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x169ba0, Thiscall, GJGameLevel, init, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, areCoinsVerified, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16aaa0, Thiscall, GJGameLevel, copyLevelInfo, GJGameLevel*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, createWithCoder, DS_Dictionary*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16b150, Thiscall, GJGameLevel, dataLoaded, DS_Dictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, demonIconForDifficulty, DemonDifficultyType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, generateSettingsString, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16a3f0, Thiscall, GJGameLevel, getAudioFileName, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16a230, Thiscall, GJGameLevel, getAverageDifficulty, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16a2a0, Thiscall, GJGameLevel, getCoinKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, getLastBuildPageForTab, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, getLengthKey, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, getListSnapshot, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, getNormalPercent, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, getSongName, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16d150, Thiscall, GJGameLevel, getUnpackedLevelDescription, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16cc80, Thiscall, GJGameLevel, handleStatsConflict, GJGameLevel*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, levelWasAltered, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, levelWasSubmitted, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, parseSettingsString, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, saveNewScore, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x169db0, Thiscall, GJGameLevel, savePercentage, int, bool, int, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, scoreStringToVector, gd::string&, gd::vector<int>&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, scoreVectorToString, gd::vector<int>&, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setAccountID, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setAttempts, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setAttemptTime, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setClicks, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setCoinsVerified, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setDailyID, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setDemon, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setJumps, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setLastBuildPageForTab, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setLevelID, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setNewNormalPercent, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setNewNormalPercent2, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setNormalPercent, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setObjectCount, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setOriginalLevel, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setPassword, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, setStars, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, shouldCheatReset, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, storeNewLocalScore, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameLevel, unverifyCoins, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16c6a0, Thiscall, GJGameLevel, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16ff40, Thiscall, GJGameLevel, areCoinsVerified, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16d810, Thiscall, GJGameLevel, copyLevelInfo, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16dec0, Thiscall, GJGameLevel, dataLoaded, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, generateSettingsString, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16cef0, Thiscall, GJGameLevel, getAudioFileName, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16cd30, Thiscall, GJGameLevel, getAverageDifficulty, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16cda0, Thiscall, GJGameLevel, getCoinKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16ce20, Thiscall, GJGameLevel, getLastBuildPageForTab, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16db30, Thiscall, GJGameLevel, getListSnapshot, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, getNormalPercent, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16cfb0, Thiscall, GJGameLevel, getSongName, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x170060, Thiscall, GJGameLevel, getUnpackedLevelDescription, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16fb60, Thiscall, GJGameLevel, handleStatsConflict, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, isPlatformer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, levelWasAltered, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, levelWasSubmitted, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, parseSettingsString, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16d230, Thiscall, GJGameLevel, saveNewScore, int, int, int, int, int, gd::string, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16c8b0, Thiscall, GJGameLevel, savePercentage, int, bool, int, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16d680, Thiscall, GJGameLevel, scoreStringToVector, gd::string&, gd::vector<int>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, scoreVectorToString, gd::vector<int>&, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setAccountID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setAttempts, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setAttemptTime, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setClicks, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setCoinsVerified, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setDailyID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setDemon, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setJumps, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setLastBuildPageForTab, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setLevelID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setNewNormalPercent, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setNewNormalPercent2, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setNormalPercent, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setObjectCount, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setOriginalLevel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setPassword, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, setStars, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameLevel, shouldCheatReset, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16d400, Thiscall, GJGameLevel, storeNewLocalScore, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x16ffa0, Thiscall, GJGameLevel, unverifyCoins, )
 		}
 	};
 }

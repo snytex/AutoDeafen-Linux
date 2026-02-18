@@ -140,11 +140,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onSpeed) 
 	#endif
 
-	#ifndef GEODE_STATICS_showPicker
-		#define GEODE_STATICS_showPicker
-		GEODE_AS_STATIC_FUNCTION(showPicker) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateColorSprite
 		#define GEODE_STATICS_updateColorSprite
 		GEODE_AS_STATIC_FUNCTION(updateColorSprite) 
@@ -325,37 +320,37 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x309ca0, Default, LevelSettingsLayer, create, LevelSettingsObject*, LevelEditorLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30c750, Thiscall, LevelSettingsLayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30d5f0, Thiscall, LevelSettingsLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3110, Thiscall, LevelSettingsLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30ce80, Thiscall, LevelSettingsLayer, colorSelectClosed, cocos2d::CCNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30d2a0, Thiscall, LevelSettingsLayer, selectArtClosed, SelectArtLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30c5d0, Thiscall, LevelSettingsLayer, selectSettingClosed, SelectSettingLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b790, Thiscall, LevelSettingsLayer, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30ca80, Thiscall, LevelSettingsLayer, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30c7d0, Thiscall, LevelSettingsLayer, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x309e90, Thiscall, LevelSettingsLayer, init, LevelSettingsObject*, LevelEditorLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30d060, Thiscall, LevelSettingsLayer, onBGArt, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30cc50, Thiscall, LevelSettingsLayer, onClose, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelSettingsLayer, onCol, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelSettingsLayer, onDisable, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30d130, Thiscall, LevelSettingsLayer, onFGArt, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30c3a0, Thiscall, LevelSettingsLayer, onGameplayMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30d0b0, Thiscall, LevelSettingsLayer, onGArt, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30cd90, Thiscall, LevelSettingsLayer, onLiveEdit, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30c570, Thiscall, LevelSettingsLayer, onMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30ca40, Thiscall, LevelSettingsLayer, onOptionToggle, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelSettingsLayer, onSelectFont, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31e830, Default, LevelSettingsLayer, create, LevelSettingsObject*, LevelEditorLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3212e0, Thiscall, LevelSettingsLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x322180, Thiscall, LevelSettingsLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3e30, Thiscall, LevelSettingsLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321a10, Thiscall, LevelSettingsLayer, colorSelectClosed, cocos2d::CCNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321e30, Thiscall, LevelSettingsLayer, selectArtClosed, SelectArtLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321160, Thiscall, LevelSettingsLayer, selectSettingClosed, SelectSettingLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b850, Thiscall, LevelSettingsLayer, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321610, Thiscall, LevelSettingsLayer, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321360, Thiscall, LevelSettingsLayer, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31ea20, Thiscall, LevelSettingsLayer, init, LevelSettingsObject*, LevelEditorLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321bf0, Thiscall, LevelSettingsLayer, onBGArt, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3217e0, Thiscall, LevelSettingsLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3219e0, Thiscall, LevelSettingsLayer, onCol, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3215b0, Thiscall, LevelSettingsLayer, onDisable, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321cc0, Thiscall, LevelSettingsLayer, onFGArt, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320f30, Thiscall, LevelSettingsLayer, onGameplayMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321c40, Thiscall, LevelSettingsLayer, onGArt, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321920, Thiscall, LevelSettingsLayer, onLiveEdit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321100, Thiscall, LevelSettingsLayer, onMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3215d0, Thiscall, LevelSettingsLayer, onOptionToggle, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321d10, Thiscall, LevelSettingsLayer, onSelectFont, cocos2d::CCObject*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelSettingsLayer, onSelectMode, cocos2d::CCObject*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelSettingsLayer, onSelectSpeed, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30c4b0, Thiscall, LevelSettingsLayer, onSettings, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30cde0, Thiscall, LevelSettingsLayer, onShowPicker, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30c520, Thiscall, LevelSettingsLayer, onSpeed, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelSettingsLayer, showPicker, ColorAction*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30cf00, Thiscall, LevelSettingsLayer, updateColorSprite, ColorChannelSprite*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30ce90, Thiscall, LevelSettingsLayer, updateColorSprites, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30c3e0, Thiscall, LevelSettingsLayer, updateGameplayModeButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321040, Thiscall, LevelSettingsLayer, onSettings, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321970, Thiscall, LevelSettingsLayer, onShowPicker, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3210b0, Thiscall, LevelSettingsLayer, onSpeed, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelSettingsLayer, showPicker, ColorAction*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321a90, Thiscall, LevelSettingsLayer, updateColorSprite, ColorChannelSprite*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321a20, Thiscall, LevelSettingsLayer, updateColorSprites, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x320f70, Thiscall, LevelSettingsLayer, updateGameplayModeButtons, )
 		}
 	};
 }

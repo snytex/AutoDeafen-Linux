@@ -40,26 +40,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(willSwitchToScene) 
 	#endif
 
-	#ifndef GEODE_STATICS_bgScale
-		#define GEODE_STATICS_bgScale
-		GEODE_AS_STATIC_FUNCTION(bgScale) 
-	#endif
-
-	#ifndef GEODE_STATICS_checkSound
-		#define GEODE_STATICS_checkSound
-		GEODE_AS_STATIC_FUNCTION(checkSound) 
-	#endif
-
-	#ifndef GEODE_STATICS_hideLoadingCircle
-		#define GEODE_STATICS_hideLoadingCircle
-		GEODE_AS_STATIC_FUNCTION(hideLoadingCircle) 
-	#endif
-
-	#ifndef GEODE_STATICS_loadingIsFinished
-		#define GEODE_STATICS_loadingIsFinished
-		GEODE_AS_STATIC_FUNCTION(loadingIsFinished) 
-	#endif
-
 	#ifndef GEODE_STATICS_musicTest
 		#define GEODE_STATICS_musicTest
 		GEODE_AS_STATIC_FUNCTION(musicTest) 
@@ -85,19 +65,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(resumeSound) 
 	#endif
 
-	#ifndef GEODE_STATICS_setIdleTimerDisabled
-		#define GEODE_STATICS_setIdleTimerDisabled
-		GEODE_AS_STATIC_FUNCTION(setIdleTimerDisabled) 
-	#endif
-
 	#ifndef GEODE_STATICS_setupGLView
 		#define GEODE_STATICS_setupGLView
 		GEODE_AS_STATIC_FUNCTION(setupGLView) 
-	#endif
-
-	#ifndef GEODE_STATICS_showLoadingCircle
-		#define GEODE_STATICS_showLoadingCircle
-		GEODE_AS_STATIC_FUNCTION(showLoadingCircle) 
 	#endif
 
     
@@ -211,25 +181,25 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AppDelegate, get, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x829f0, Thiscall, AppDelegate, applicationDidFinishLaunching, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82da0, Thiscall, AppDelegate, applicationDidEnterBackground, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82e20, Thiscall, AppDelegate, applicationWillEnterForeground, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82d40, Thiscall, AppDelegate, applicationWillBecomeActive, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82d90, Thiscall, AppDelegate, applicationWillResignActive, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x834b0, Thiscall, AppDelegate, trySaveGame, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x83590, Thiscall, AppDelegate, willSwitchToScene, cocos2d::CCScene*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AppDelegate, bgScale, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AppDelegate, checkSound, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AppDelegate, hideLoadingCircle, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AppDelegate, loadingIsFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x83370, Thiscall, AppDelegate, musicTest, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82ff0, Thiscall, AppDelegate, pauseGame, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x830d0, Thiscall, AppDelegate, pauseSound, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82560, Thiscall, AppDelegate, platformShutdown, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x83270, Thiscall, AppDelegate, resumeSound, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AppDelegate, setIdleTimerDisabled, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82580, Thiscall, AppDelegate, setupGLView, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AppDelegate, showLoadingCircle, bool, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82a40, Thiscall, AppDelegate, applicationDidFinishLaunching, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82df0, Thiscall, AppDelegate, applicationDidEnterBackground, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82e70, Thiscall, AppDelegate, applicationWillEnterForeground, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82d90, Thiscall, AppDelegate, applicationWillBecomeActive, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x82de0, Thiscall, AppDelegate, applicationWillResignActive, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x83500, Thiscall, AppDelegate, trySaveGame, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x835e0, Thiscall, AppDelegate, willSwitchToScene, cocos2d::CCScene*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AppDelegate, bgScale, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AppDelegate, checkSound, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AppDelegate, hideLoadingCircle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AppDelegate, loadingIsFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x833c0, Thiscall, AppDelegate, musicTest, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x83040, Thiscall, AppDelegate, pauseGame, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x83120, Thiscall, AppDelegate, pauseSound, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x825b0, Thiscall, AppDelegate, platformShutdown, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x832c0, Thiscall, AppDelegate, resumeSound, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AppDelegate, setIdleTimerDisabled, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x825d0, Thiscall, AppDelegate, setupGLView, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AppDelegate, showLoadingCircle, bool, bool, bool)
 		}
 	};
 }

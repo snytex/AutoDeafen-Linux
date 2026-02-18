@@ -25,11 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onTouch) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateBGColor
-		#define GEODE_STATICS_updateBGColor
-		GEODE_AS_STATIC_FUNCTION(updateBGColor) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_init
 		#define GEODE_CONCEPT_CHECK_init
@@ -65,11 +60,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c7f0, Thiscall, GameCell, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cbf0, Thiscall, GameCell, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c800, Thiscall, GameCell, loadFromString, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cbc0, Thiscall, GameCell, onTouch, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameCell, updateBGColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c830, Thiscall, GameCell, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cc30, Thiscall, GameCell, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c840, Thiscall, GameCell, loadFromString, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cc00, Thiscall, GameCell, onTouch, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameCell, updateBGColor, int)
 		}
 	};
 }

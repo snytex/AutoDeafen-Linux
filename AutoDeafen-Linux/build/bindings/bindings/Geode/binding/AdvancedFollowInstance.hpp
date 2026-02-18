@@ -12,7 +12,25 @@
 class AdvancedFollowInstance {
 public:
     static constexpr auto CLASS_NAME = "AdvancedFollowInstance";
-    GameObject* m_gameObject;
+
+    /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     AdvancedFollowInstance();
+
+    /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     AdvancedFollowInstance(AdvancedFollowTriggerObject* object, int groupID, int targetID, int otherID, int unknown, int controlID);
+    AdvancedFollowTriggerObject* m_gameObject;
     int m_group;
     int m_objectKey;
     int m_controlId;

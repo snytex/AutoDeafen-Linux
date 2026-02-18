@@ -15,21 +15,21 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJListLayer, cocos2d::CCLayerColor)
 
     /**
-     * @note[short] MacOS (ARM): 0x4eff60
-     * @note[short] MacOS (Intel): 0x5b9e00
-     * @note[short] Windows: 0x277e70
-     * @note[short] iOS: 0x838dc
+     * @note[short] MacOS (ARM): 0x4feb80
+     * @note[short] MacOS (Intel): 0x5d25e0
+     * @note[short] Windows: 0x27f7a0
+     * @note[short] iOS: 0x7f904
      * @note[short] Android
      */
-    static GJListLayer* create(BoomListView* p0, char const* p1, cocos2d::ccColor4B p2, float p3, float p4, int p5);
+    static GJListLayer* create(BoomListView* listView, char const* title, cocos2d::ccColor4B color, float width, float height, int type);
 
     /**
-     * @note[short] MacOS (ARM): 0x4f0054
-     * @note[short] MacOS (Intel): 0x5b9f10
-     * @note[short] Windows: 0x277fa0
-     * @note[short] iOS: 0x839d0
+     * @note[short] MacOS (ARM): 0x4fec74
+     * @note[short] MacOS (Intel): 0x5d26f0
+     * @note[short] Windows: 0x27f8d0
+     * @note[short] iOS: 0x7f9f8
      * @note[short] Android
      */
-    bool init(BoomListView* p0, char const* p1, cocos2d::ccColor4B p2, float p3, float p4, int p5);
+    bool init(BoomListView* listView, char const* title, cocos2d::ccColor4B color, float width, float height, int type);
     BoomListView* m_listView;
 };

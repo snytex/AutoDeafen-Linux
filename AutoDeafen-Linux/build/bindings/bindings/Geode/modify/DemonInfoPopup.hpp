@@ -65,11 +65,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3afc90, Default, DemonInfoPopup, create, int, int, int, int, int, int, int, int, int, int, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3af8c0, Default, DemonInfoPopup, createFromString, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, DemonInfoPopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3afdf0, Thiscall, DemonInfoPopup, init, int, int, int, int, int, int, int, int, int, int, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84620, Thiscall, DemonInfoPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c7050, Default, DemonInfoPopup, create, int, int, int, int, int, int, int, int, int, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c6c80, Default, DemonInfoPopup, createFromString, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, DemonInfoPopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c71b0, Thiscall, DemonInfoPopup, init, int, int, int, int, int, int, int, int, int, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, DemonInfoPopup, onClose, cocos2d::CCObject*)
 		}
 	};
 }

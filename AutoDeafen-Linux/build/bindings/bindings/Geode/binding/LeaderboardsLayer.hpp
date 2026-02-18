@@ -15,173 +15,226 @@ class LeaderboardsLayer : public cocos2d::CCLayer, public LeaderboardManagerDele
 public:
     static constexpr auto CLASS_NAME = "LeaderboardsLayer";
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(LeaderboardsLayer, cocos2d::CCLayer)
-	inline LeaderboardsLayer() {
-        m_list = nullptr;
-        m_userScores = nullptr;
-        m_state = LeaderboardState::Default;
-        m_topBtn = nullptr;
-        m_globalBtn = nullptr;
-        m_creatorsBtn = nullptr;
-        m_friendsBtn = nullptr;
-        m_circle = nullptr;
-        m_noInternet = nullptr;
-        m_tabs = nullptr;
-    }
 
     /**
-     * @note[short] MacOS (ARM): 0x45bf64
-     * @note[short] MacOS (Intel): 0x4fc3a0
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3a9128
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     LeaderboardsLayer();
+
+    /**
+     * @note[short] MacOS (ARM): 0x4689d4
+     * @note[short] MacOS (Intel): 0x511f70
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3b0388
+     * @note[short] Android: Rebinded
+     */
+     ~LeaderboardsLayer();
+
+    /**
+     * @note[short] MacOS (ARM): 0x468ba0
+     * @note[short] MacOS (Intel): 0x512210
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3b04ac
      * @note[short] Android
      */
-    static LeaderboardsLayer* create(LeaderboardState state);
+    static LeaderboardsLayer* create(LeaderboardType type, LeaderboardStat stat);
 
     /**
-     * @note[short] MacOS (ARM): 0x45be78
-     * @note[short] MacOS (Intel): 0x4fc270
+     * @note[short] MacOS (ARM): 0x468aa8
+     * @note[short] MacOS (Intel): 0x5120d0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3a90dc
+     * @note[short] iOS: 0x3b0450
      * @note[short] Android
      */
-    static cocos2d::CCScene* scene(LeaderboardState state);
+    static cocos2d::CCScene* scene(LeaderboardType type, LeaderboardStat stat);
 
     /**
-     * @note[short] MacOS (ARM): 0x45dbec
-     * @note[short] MacOS (Intel): 0x4fe1a0
-     * @note[short] Windows: 0x2bbf50
-     * @note[short] iOS: 0x3aa800
+     * @note[short] MacOS (ARM): 0x46ab90
+     * @note[short] MacOS (Intel): 0x5141e0
+     * @note[short] Windows: 0x2c4150
+     * @note[short] iOS: 0x3b20d4
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x45db94
-     * @note[short] MacOS (Intel): 0x4fe140
-     * @note[short] Windows: 0x2bbea0
-     * @note[short] iOS: 0x3aa7a8
+     * @note[short] MacOS (ARM): 0x46ab38
+     * @note[short] MacOS (Intel): 0x514180
+     * @note[short] Windows: 0x2c40a0
+     * @note[short] iOS: 0x3b207c
      * @note[short] Android
      */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x45d1b4
-     * @note[short] MacOS (Intel): 0x4fd6b0
-     * @note[short] Windows: 0x2bb1f0
-     * @note[short] iOS: 0x3aa26c
+     * @note[short] MacOS (ARM): 0x46a4f0
+     * @note[short] MacOS (Intel): 0x513bf0
+     * @note[short] Windows: 0x2c3830
+     * @note[short] iOS: 0x3b1cf8
      * @note[short] Android
      */
     virtual void updateUserScoreFinished();
 
     /**
-     * @note[short] MacOS (ARM): 0x45d1ec
-     * @note[short] MacOS (Intel): 0x4fd710
-     * @note[short] Windows: 0x2bb210
-     * @note[short] iOS: 0x3aa2a4
+     * @note[short] MacOS (ARM): 0x46a530
+     * @note[short] MacOS (Intel): 0x513c50
+     * @note[short] Windows: 0x2c3860
+     * @note[short] iOS: 0x3b1d38
      * @note[short] Android
      */
     virtual void updateUserScoreFailed();
 
     /**
-     * @note[short] MacOS (ARM): 0x45d294
-     * @note[short] MacOS (Intel): 0x4fd7b0
-     * @note[short] Windows: 0x2bb220
-     * @note[short] iOS: 0x3aa300
+     * @note[short] MacOS (ARM): 0x46a5d8
+     * @note[short] MacOS (Intel): 0x513cf0
+     * @note[short] Windows: 0x2c3870
+     * @note[short] iOS: 0x3b1d94
      * @note[short] Android
      */
-    virtual void loadLeaderboardFinished(cocos2d::CCArray* p0, char const* p1);
+    virtual void loadLeaderboardFinished(cocos2d::CCArray* scores, char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x45d924
-     * @note[short] MacOS (Intel): 0x4fdeb0
-     * @note[short] Windows: 0x2bb2b0
-     * @note[short] iOS: 0x3aa638
+     * @note[short] MacOS (ARM): 0x46a880
+     * @note[short] MacOS (Intel): 0x513f40
+     * @note[short] Windows: 0x2c3930
+     * @note[short] iOS: 0x3b1f2c
      * @note[short] Android
      */
-    virtual void loadLeaderboardFailed(char const* p0);
+    virtual void loadLeaderboardFailed(char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x45c030
-     * @note[short] MacOS (Intel): 0x4fc4a0
-     * @note[short] Windows: 0x2b9cd0
-     * @note[short] iOS: 0x3a91e8
+     * @note[short] MacOS (ARM): 0x468c84
+     * @note[short] MacOS (Intel): 0x512320
+     * @note[short] Windows: 0x2c13c0
+     * @note[short] iOS: 0x3b0580
      * @note[short] Android
      */
-    bool init(LeaderboardState p0);
+    bool init(LeaderboardType type, LeaderboardStat stat);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): 0x46a7bc
+     * @note[short] MacOS (Intel): 0x513e50
+     * @note[short] Windows: 0x2c3a50
+     * @note[short] iOS: 0x3b1e68
+     * @note[short] Android: Rebinded
      */
-    bool isCorrect(char const* p0);
+    bool isCorrect(gd::string key);
 
     /**
-     * @note[short] Windows: 0x2bbed0
+     * @note[short] MacOS (ARM): 0x469f98
+     * @note[short] MacOS (Intel): 0x513680
+     * @note[short] Windows: 0x2c40d0
+     * @note[short] iOS: 0x3b17a0
      * @note[short] Android
      */
     void onBack(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x46a038
+     * @note[short] MacOS (Intel): 0x513730
+     * @note[short] Windows: 0x2c3240
+     * @note[short] iOS: 0x3b1840
      * @note[short] Android
      */
     void onCreators(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x46a01c
+     * @note[short] MacOS (Intel): 0x513710
+     * @note[short] Windows: 0x2c3220
+     * @note[short] iOS: 0x3b1824
      * @note[short] Android
      */
     void onGlobal(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x45c5c0
-     * @note[short] MacOS (Intel): 0x4fca80
+     * @note[short] MacOS (ARM): 0x46958c
+     * @note[short] MacOS (Intel): 0x512c70
+     * @note[short] Windows: 0x2c3ba0
+     * @note[short] iOS: 0x3b0e5c
      * @note[short] Android
      */
     void onInfo(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x46a054
+     * @note[short] MacOS (Intel): 0x513750
+     * @note[short] Windows: 0x2c31b0
+     * @note[short] iOS: 0x3b185c
+     * @note[short] Android
+     */
+    void onStat(cocos2d::CCObject* sender);
+
+    /**
+     * @note[short] MacOS (ARM): 0x469fe4
+     * @note[short] MacOS (Intel): 0x5136d0
+     * @note[short] Windows: 0x2c31e0
+     * @note[short] iOS: 0x3b17ec
      * @note[short] Android
      */
     void onTop(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x46a000
+     * @note[short] MacOS (Intel): 0x5136f0
+     * @note[short] Windows: 0x2c3200
+     * @note[short] iOS: 0x3b1808
      * @note[short] Android
      */
     void onWeek(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x2bac80
+     * @note[short] MacOS (ARM): 0x46a1c4
+     * @note[short] MacOS (Intel): 0x5138c0
+     * @note[short] Windows: 0x2c3100
+     * @note[short] iOS: 0x3b19cc
      * @note[short] Android
      */
     void refreshTabs();
 
     /**
-     * @note[short] MacOS (ARM): 0x45cc24
-     * @note[short] MacOS (Intel): 0x4fd0f0
-     * @note[short] Windows: 0x2badb0
+     * @note[short] MacOS (ARM): 0x469dec
+     * @note[short] MacOS (Intel): 0x5134e0
+     * @note[short] Windows: 0x2c3260
+     * @note[short] iOS: 0x3b1608
      * @note[short] Android
      */
-    void selectLeaderboard(LeaderboardState p0);
+    void selectLeaderboard(LeaderboardType type, LeaderboardStat stat);
 
     /**
-     * @note[short] Windows: 0x2bab20
+     * @note[short] MacOS (ARM): 0x46a08c
+     * @note[short] MacOS (Intel): 0x513780
+     * @note[short] Windows: 0x2c2fa0
+     * @note[short] iOS: 0x3b1894
      * @note[short] Android
      */
-    void setupLevelBrowser(cocos2d::CCArray* p0);
+    void setupLevelBrowser(cocos2d::CCArray* scores);
 
     /**
-     * @note[short] MacOS (ARM): 0x45c848
-     * @note[short] MacOS (Intel): 0x4fccd0
+     * @note[short] MacOS (ARM): 0x469810
+     * @note[short] MacOS (Intel): 0x512eb0
+     * @note[short] Windows: 0x2c2660
+     * @note[short] iOS: 0x3b1030
      * @note[short] Android
      */
-    TodoReturn setupTabs();
+    void setupTabs();
 
     /**
-     * @note[short] Windows: 0x2bb000
+     * @note[short] MacOS (ARM): 0x46a268
+     * @note[short] MacOS (Intel): 0x513960
+     * @note[short] Windows: 0x2c35a0
+     * @note[short] iOS: 0x3b1a70
      * @note[short] Android
      */
     void toggleTabButtons();
     GJListLayer* m_list;
     cocos2d::CCArray* m_userScores;
-    LeaderboardState m_state;
+    LeaderboardType m_type;
+    LeaderboardStat m_stat;
     CCMenuItemToggler* m_topBtn;
     CCMenuItemToggler* m_globalBtn;
     CCMenuItemToggler* m_creatorsBtn;
@@ -189,4 +242,5 @@ public:
     LoadingCircle* m_circle;
     TextArea* m_noInternet;
     cocos2d::CCArray* m_tabs;
+    cocos2d::CCArray* m_modeButtons;
 };

@@ -135,18 +135,18 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x137fc0, Default, FollowRewardPage, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1380e0, Thiscall, FollowRewardPage, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, FollowRewardPage, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, FollowRewardPage, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867a0, Thiscall, FollowRewardPage, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13b5f0, Thiscall, FollowRewardPage, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13a330, Thiscall, FollowRewardPage, rewardedVideoFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x139e00, Thiscall, FollowRewardPage, updateRate, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(FollowRewardPage, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x139c00, Default, FollowRewardPage, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x139d20, Thiscall, FollowRewardPage, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, FollowRewardPage, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, FollowRewardPage, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867f0, Thiscall, FollowRewardPage, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13d230, Thiscall, FollowRewardPage, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13bf70, Thiscall, FollowRewardPage, rewardedVideoFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13ba40, Thiscall, FollowRewardPage, updateRate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, FollowRewardPage, onClose, cocos2d::CCObject*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(FollowRewardPage, onRewardedVideo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13a340, Thiscall, FollowRewardPage, onSpecialItem, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13b510, Thiscall, FollowRewardPage, switchToOpenedState, CCMenuItemSpriteExtra*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13bf80, Thiscall, FollowRewardPage, onSpecialItem, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13d150, Thiscall, FollowRewardPage, switchToOpenedState, CCMenuItemSpriteExtra*)
 		}
 	};
 }

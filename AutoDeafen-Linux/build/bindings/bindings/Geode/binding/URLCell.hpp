@@ -16,46 +16,57 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(URLCell, TableViewCell)
 
     /**
+     * @note[short] MacOS (ARM): 0x1fe934
+     * @note[short] MacOS (Intel): 0x259680
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-     URLCell(char const* p0, float p1, float p2);
+     URLCell(char const* identifier, float width, float height);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f5dc8
-     * @note[short] MacOS (Intel): 0x2476e0
-     * @note[short] Windows: 0x3c7f0
-     * @note[short] iOS: 0x115ca4
+     * @note[short] MacOS (ARM): 0x1fe978
+     * @note[short] MacOS (Intel): 0x2596f0
+     * @note[short] Windows: 0x3c830
+     * @note[short] iOS: 0x113004
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x1f5e38
-     * @note[short] MacOS (Intel): 0x247750
-     * @note[short] Windows: 0xad710
-     * @note[short] iOS: 0x115d00
+     * @note[short] MacOS (ARM): 0x1fe9e0
+     * @note[short] MacOS (Intel): 0x259760
+     * @note[short] Windows: 0xade20
+     * @note[short] iOS: 0x113058
      * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): 0x1e5cbc
-     * @note[short] MacOS (Intel): 0x235b20
-     * @note[short] Windows: 0xbf530
-     * @note[short] iOS: 0x108a64
+     * @note[short] MacOS (ARM): 0x1ee4fc
+     * @note[short] MacOS (Intel): 0x247590
+     * @note[short] Windows: 0xc0250
+     * @note[short] iOS: 0x105a48
      * @note[short] Android
      */
-    void loadFromObject(CCURLObject* p0);
+    void loadFromObject(CCURLObject* object);
 
     /**
-     * @note[short] Windows: 0xbf760
+     * @note[short] MacOS (ARM): 0x1fe984
+     * @note[short] MacOS (Intel): 0x259710
+     * @note[short] Windows: 0xc0480
+     * @note[short] iOS: 0x113010
      * @note[short] Android
      */
     void onURL(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x1ee6d4
+     * @note[short] MacOS (Intel): 0x247760
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x105c14
      * @note[short] Android
      */
-    void updateBGColor(int p0);
+    void updateBGColor(int index);
     CCURLObject* m_urlObject;
 };

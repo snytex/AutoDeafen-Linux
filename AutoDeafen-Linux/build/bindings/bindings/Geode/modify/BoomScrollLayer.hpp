@@ -40,21 +40,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(registerWithTouchDispatcher) 
 	#endif
 
-	#ifndef GEODE_STATICS_addPage
-		#define GEODE_STATICS_addPage
-		GEODE_AS_STATIC_FUNCTION(addPage) 
-	#endif
-
-	#ifndef GEODE_STATICS_cancelAndStoleTouch
-		#define GEODE_STATICS_cancelAndStoleTouch
-		GEODE_AS_STATIC_FUNCTION(cancelAndStoleTouch) 
-	#endif
-
-	#ifndef GEODE_STATICS_claimTouch
-		#define GEODE_STATICS_claimTouch
-		GEODE_AS_STATIC_FUNCTION(claimTouch) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -80,24 +65,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(pageNumberForPosition) 
 	#endif
 
-	#ifndef GEODE_STATICS_removePage
-		#define GEODE_STATICS_removePage
-		GEODE_AS_STATIC_FUNCTION(removePage) 
-	#endif
-
-	#ifndef GEODE_STATICS_removePageWithNumber
-		#define GEODE_STATICS_removePageWithNumber
-		GEODE_AS_STATIC_FUNCTION(removePageWithNumber) 
-	#endif
-
 	#ifndef GEODE_STATICS_repositionPagesLooped
 		#define GEODE_STATICS_repositionPagesLooped
 		GEODE_AS_STATIC_FUNCTION(repositionPagesLooped) 
-	#endif
-
-	#ifndef GEODE_STATICS_selectPage
-		#define GEODE_STATICS_selectPage
-		GEODE_AS_STATIC_FUNCTION(selectPage) 
 	#endif
 
 	#ifndef GEODE_STATICS_setupDynamicScrolling
@@ -285,39 +255,39 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d060, Default, BoomScrollLayer, create, cocos2d::CCArray*, int, bool, cocos2d::CCArray*, DynamicScrollDelegate*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomScrollLayer, create, cocos2d::CCArray*, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dbd0, Thiscall, BoomScrollLayer, visit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e710, Thiscall, BoomScrollLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e7c0, Thiscall, BoomScrollLayer, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3eaf0, Thiscall, BoomScrollLayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e630, Thiscall, BoomScrollLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e5a0, Thiscall, BoomScrollLayer, registerWithTouchDispatcher, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(BoomScrollLayer, addPage, cocos2d::CCLayer*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(BoomScrollLayer, addPage, cocos2d::CCLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(BoomScrollLayer, cancelAndStoleTouch, cocos2d::CCTouch*, cocos2d::CCEvent*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(BoomScrollLayer, claimTouch, cocos2d::CCTouch*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d0a0, Default, BoomScrollLayer, create, cocos2d::CCArray*, int, bool, cocos2d::CCArray*, DynamicScrollDelegate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dc20, Thiscall, BoomScrollLayer, visit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e760, Thiscall, BoomScrollLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e820, Thiscall, BoomScrollLayer, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3eb60, Thiscall, BoomScrollLayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e680, Thiscall, BoomScrollLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e5f0, Thiscall, BoomScrollLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomScrollLayer, addPage, cocos2d::CCLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomScrollLayer, addPage, cocos2d::CCLayer*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomScrollLayer, cancelAndStoleTouch, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomScrollLayer, claimTouch, cocos2d::CCTouch*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomScrollLayer, getPage, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomScrollLayer, getRelativePageForNum, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomScrollLayer, getRelativePosForPage, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomScrollLayer, getTotalPages, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d230, Thiscall, BoomScrollLayer, init, cocos2d::CCArray*, int, bool, cocos2d::CCArray*, DynamicScrollDelegate*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ddc0, Thiscall, BoomScrollLayer, instantMoveToPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dea0, Thiscall, BoomScrollLayer, moveToPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dc30, Thiscall, BoomScrollLayer, moveToPageEnded, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dcc0, Thiscall, BoomScrollLayer, pageNumberForPosition, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d280, Thiscall, BoomScrollLayer, init, cocos2d::CCArray*, int, bool, cocos2d::CCArray*, DynamicScrollDelegate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3de10, Thiscall, BoomScrollLayer, instantMoveToPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3def0, Thiscall, BoomScrollLayer, moveToPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dc80, Thiscall, BoomScrollLayer, moveToPageEnded, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dd10, Thiscall, BoomScrollLayer, pageNumberForPosition, cocos2d::CCPoint)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomScrollLayer, positionForPageWithNumber, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomScrollLayer, quickUpdate, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(BoomScrollLayer, removePage, cocos2d::CCLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(BoomScrollLayer, removePageWithNumber, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e060, Thiscall, BoomScrollLayer, repositionPagesLooped, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(BoomScrollLayer, selectPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomScrollLayer, removePage, cocos2d::CCLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomScrollLayer, removePageWithNumber, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e0b0, Thiscall, BoomScrollLayer, repositionPagesLooped, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomScrollLayer, selectPage, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomScrollLayer, setDotScale, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomScrollLayer, setPagesIndicatorPosition, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d5a0, Thiscall, BoomScrollLayer, setupDynamicScrolling, cocos2d::CCArray*, DynamicScrollDelegate*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3db60, Thiscall, BoomScrollLayer, togglePageIndicators, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d960, Thiscall, BoomScrollLayer, updateDots, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d840, Thiscall, BoomScrollLayer, updatePages, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d5f0, Thiscall, BoomScrollLayer, setupDynamicScrolling, cocos2d::CCArray*, DynamicScrollDelegate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3dbb0, Thiscall, BoomScrollLayer, togglePageIndicators, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d9b0, Thiscall, BoomScrollLayer, updateDots, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d890, Thiscall, BoomScrollLayer, updatePages, )
 		}
 	};
 }

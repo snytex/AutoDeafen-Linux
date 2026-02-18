@@ -16,32 +16,38 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(FileSaveManager, GManager)
 
     /**
+     * @note[short] MacOS (ARM): 0x61b4
+     * @note[short] MacOS (Intel): 0x6ce0
      * @note[short] Android
      */
     static FileSaveManager* sharedState();
 
     /**
-     * @note[short] MacOS (ARM): 0x91d4
-     * @note[short] MacOS (Intel): 0x73b0
+     * @note[short] MacOS (ARM): 0x623c
+     * @note[short] MacOS (Intel): 0x6d70
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x9204
-     * @note[short] MacOS (Intel): 0x73e0
+     * @note[short] MacOS (ARM): 0x626c
+     * @note[short] MacOS (Intel): 0x6da0
      * @note[short] Android
      */
     virtual void firstLoad();
 
     /**
+     * @note[short] MacOS (ARM): 0x6734
+     * @note[short] MacOS (Intel): 0x72a0
      * @note[short] Android
      */
     cocos2d::CCDictionary* getStoreData();
 
     /**
+     * @note[short] MacOS (ARM): 0x6260
+     * @note[short] MacOS (Intel): 0x6d90
      * @note[short] Android
      */
-    void loadDataFromFile(char const* p0);
+    void loadDataFromFile(char const* filename);
     cocos2d::CCDictionary* m_storeData;
 };

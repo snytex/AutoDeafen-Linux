@@ -24,21 +24,21 @@ public:
      PointNode();
 
     /**
-     * @note[short] MacOS (ARM): 0x90144
-     * @note[short] MacOS (Intel): 0x9d620
+     * @note[short] MacOS (ARM): 0x8e2fc
+     * @note[short] MacOS (Intel): 0x9d9c0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x61d5c
+     * @note[short] iOS: 0x5e098
      * @note[short] Android
      */
-    static PointNode* create(cocos2d::CCPoint p0);
+    static PointNode* create(cocos2d::CCPoint point);
 
     /**
-     * @note[short] MacOS (ARM): 0x90478
-     * @note[short] MacOS (Intel): 0x9d9a0
+     * @note[short] MacOS (ARM): 0x8e638
+     * @note[short] MacOS (Intel): 0x9dd40
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(cocos2d::CCPoint p0);
+    bool init(cocos2d::CCPoint point);
     cocos2d::CCPoint m_point;
 };

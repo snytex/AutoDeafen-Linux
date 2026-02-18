@@ -20,6 +20,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(keyBackClicked) 
 	#endif
 
+	#ifndef GEODE_STATICS_rewardedVideoFinished
+		#define GEODE_STATICS_rewardedVideoFinished
+		GEODE_AS_STATIC_FUNCTION(rewardedVideoFinished) 
+	#endif
+
 	#ifndef GEODE_STATICS_scrollLayerWillScrollToPage
 		#define GEODE_STATICS_scrollLayerWillScrollToPage
 		GEODE_AS_STATIC_FUNCTION(scrollLayerWillScrollToPage) 
@@ -80,6 +85,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onRefresh) 
 	#endif
 
+	#ifndef GEODE_STATICS_playUnlockAnimation
+		#define GEODE_STATICS_playUnlockAnimation
+		GEODE_AS_STATIC_FUNCTION(playUnlockAnimation) 
+	#endif
+
 	#ifndef GEODE_STATICS_setupGauntlets
 		#define GEODE_STATICS_setupGauntlets
 		GEODE_AS_STATIC_FUNCTION(setupGauntlets) 
@@ -88,6 +98,21 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_unblockPlay
 		#define GEODE_STATICS_unblockPlay
 		GEODE_AS_STATIC_FUNCTION(unblockPlay) 
+	#endif
+
+	#ifndef GEODE_STATICS_unlockAnimationFinished
+		#define GEODE_STATICS_unlockAnimationFinished
+		GEODE_AS_STATIC_FUNCTION(unlockAnimationFinished) 
+	#endif
+
+	#ifndef GEODE_STATICS_unlockAnimationStep2
+		#define GEODE_STATICS_unlockAnimationStep2
+		GEODE_AS_STATIC_FUNCTION(unlockAnimationStep2) 
+	#endif
+
+	#ifndef GEODE_STATICS_unlockAnimationStep3
+		#define GEODE_STATICS_unlockAnimationStep3
+		GEODE_AS_STATIC_FUNCTION(unlockAnimationStep3) 
 	#endif
 
     
@@ -109,6 +134,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_keyBackClicked
 		#define GEODE_CONCEPT_CHECK_keyBackClicked
 		GEODE_CONCEPT_FUNCTION_CHECK(keyBackClicked) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_rewardedVideoFinished
+		#define GEODE_CONCEPT_CHECK_rewardedVideoFinished
+		GEODE_CONCEPT_FUNCTION_CHECK(rewardedVideoFinished) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_scrollLayerWillScrollToPage
@@ -171,14 +201,39 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(onRefresh) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_playUnlockAnimation
+		#define GEODE_CONCEPT_CHECK_playUnlockAnimation
+		GEODE_CONCEPT_FUNCTION_CHECK(playUnlockAnimation) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_setupGauntlets
 		#define GEODE_CONCEPT_CHECK_setupGauntlets
 		GEODE_CONCEPT_FUNCTION_CHECK(setupGauntlets) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_showUnlockGauntlet
+		#define GEODE_CONCEPT_CHECK_showUnlockGauntlet
+		GEODE_CONCEPT_FUNCTION_CHECK(showUnlockGauntlet) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_unblockPlay
 		#define GEODE_CONCEPT_CHECK_unblockPlay
 		GEODE_CONCEPT_FUNCTION_CHECK(unblockPlay) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_unlockAnimationFinished
+		#define GEODE_CONCEPT_CHECK_unlockAnimationFinished
+		GEODE_CONCEPT_FUNCTION_CHECK(unlockAnimationFinished) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_unlockAnimationStep2
+		#define GEODE_CONCEPT_CHECK_unlockAnimationStep2
+		GEODE_CONCEPT_FUNCTION_CHECK(unlockAnimationStep2) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_unlockAnimationStep3
+		#define GEODE_CONCEPT_CHECK_unlockAnimationStep3
+		GEODE_CONCEPT_FUNCTION_CHECK(unlockAnimationStep3) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_updateArrows
@@ -196,23 +251,29 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GauntletSelectLayer, create, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f5570, Default, GauntletSelectLayer, scene, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f7920, Thiscall, GauntletSelectLayer, onExit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f7180, Thiscall, GauntletSelectLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f7090, Thiscall, GauntletSelectLayer, scrollLayerWillScrollToPage, BoomScrollLayer*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f7090, Thiscall, GauntletSelectLayer, scrollLayerScrolledToPage, BoomScrollLayer*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f6470, Thiscall, GauntletSelectLayer, loadLevelsFinished, cocos2d::CCArray*, char const*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f6620, Thiscall, GauntletSelectLayer, loadLevelsFailed, char const*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f6f20, Thiscall, GauntletSelectLayer, goToPage, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f56a0, Thiscall, GauntletSelectLayer, init, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f70d0, Thiscall, GauntletSelectLayer, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f6210, Thiscall, GauntletSelectLayer, onInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f6ee0, Thiscall, GauntletSelectLayer, onNext, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f7190, Thiscall, GauntletSelectLayer, onPlay, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f6f00, Thiscall, GauntletSelectLayer, onPrev, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f6350, Thiscall, GauntletSelectLayer, onRefresh, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f6790, Thiscall, GauntletSelectLayer, setupGauntlets, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f7080, Thiscall, GauntletSelectLayer, unblockPlay, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f8ae0, Default, GauntletSelectLayer, scene, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fb030, Thiscall, GauntletSelectLayer, onExit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fa760, Thiscall, GauntletSelectLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fafc0, Thiscall, GauntletSelectLayer, rewardedVideoFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fa660, Thiscall, GauntletSelectLayer, scrollLayerWillScrollToPage, BoomScrollLayer*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fa660, Thiscall, GauntletSelectLayer, scrollLayerScrolledToPage, BoomScrollLayer*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f99f0, Thiscall, GauntletSelectLayer, loadLevelsFinished, cocos2d::CCArray*, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f9bb0, Thiscall, GauntletSelectLayer, loadLevelsFailed, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fa4f0, Thiscall, GauntletSelectLayer, goToPage, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f8c30, Thiscall, GauntletSelectLayer, init, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fa6a0, Thiscall, GauntletSelectLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f9790, Thiscall, GauntletSelectLayer, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fa4b0, Thiscall, GauntletSelectLayer, onNext, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fa770, Thiscall, GauntletSelectLayer, onPlay, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fa4d0, Thiscall, GauntletSelectLayer, onPrev, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f98d0, Thiscall, GauntletSelectLayer, onRefresh, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fb080, Thiscall, GauntletSelectLayer, playUnlockAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f9d30, Thiscall, GauntletSelectLayer, setupGauntlets, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GauntletSelectLayer, showUnlockGauntlet, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fa650, Thiscall, GauntletSelectLayer, unblockPlay, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fc0e0, Thiscall, GauntletSelectLayer, unlockAnimationFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fb660, Thiscall, GauntletSelectLayer, unlockAnimationStep2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1fba00, Thiscall, GauntletSelectLayer, unlockAnimationStep3, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GauntletSelectLayer, updateArrows, )
 		}
 	};

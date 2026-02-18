@@ -15,47 +15,49 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJChestSprite, cocos2d::CCSprite)
 
     /**
-     * @note[short] MacOS (ARM): 0x1bfc94
-     * @note[short] MacOS (Intel): 0x20b1d0
-     * @note[short] Windows: 0x3ba270
+     * @note[short] MacOS (ARM): 0x1c7bf4
+     * @note[short] MacOS (Intel): 0x21cc80
+     * @note[short] Windows: 0x3d15e0
+     * @note[short] iOS: 0x1c5b20
      * @note[short] Android
      */
-    static GJChestSprite* create(int p0);
+    static GJChestSprite* create(int chestType);
 
     /**
-     * @note[short] MacOS (ARM): 0x1c2724
-     * @note[short] MacOS (Intel): 0x20df10
-     * @note[short] Windows: 0x3ba400
-     * @note[short] iOS: 0x1c8f68
+     * @note[short] MacOS (ARM): 0x1ca6f0
+     * @note[short] MacOS (Intel): 0x21f990
+     * @note[short] Windows: 0x3d1770
+     * @note[short] iOS: 0x1c824c
      * @note[short] Android
      */
-    virtual void setOpacity(unsigned char p0);
+    virtual void setOpacity(unsigned char opacity);
 
     /**
-     * @note[short] MacOS (ARM): 0x1c2650
-     * @note[short] MacOS (Intel): 0x20de20
-     * @note[short] Windows: 0x3ba340
-     * @note[short] iOS: 0x1c8e98
+     * @note[short] MacOS (ARM): 0x1ca618
+     * @note[short] MacOS (Intel): 0x21f8a0
+     * @note[short] Windows: 0x3d16b0
+     * @note[short] iOS: 0x1c8178
      * @note[short] Android
      */
-    virtual void setColor(cocos2d::ccColor3B const& p0);
+    virtual void setColor(cocos2d::ccColor3B const& color);
 
     /**
-     * @note[short] MacOS (ARM): 0x1c25ec
-     * @note[short] MacOS (Intel): 0x20ddc0
+     * @note[short] MacOS (ARM): 0x1ca5bc
+     * @note[short] MacOS (Intel): 0x21f850
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1c8114
      * @note[short] Android
      */
     bool init(int chestType);
 
     /**
-     * @note[short] MacOS (ARM): 0x1c103c
-     * @note[short] MacOS (Intel): 0x20c800
-     * @note[short] Windows: 0x3ba470
-     * @note[short] iOS: 0x1c7a00
+     * @note[short] MacOS (ARM): 0x1c9000
+     * @note[short] MacOS (Intel): 0x21e2a0
+     * @note[short] Windows: 0x3d17e0
+     * @note[short] iOS: 0x1c6cbc
      * @note[short] Android
      */
-    void switchToState(ChestSpriteState p0, bool p1);
+    void switchToState(ChestSpriteState state, bool noGlow);
     int m_chestType;
     ChestSpriteState m_spriteState;
     bool m_dark;

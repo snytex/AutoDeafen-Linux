@@ -43,7 +43,7 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GraphicsReloadLayer, create, cocos2d::TextureQuality, cocos2d::CCSize, bool, bool, bool, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GraphicsReloadLayer, scene, cocos2d::TextureQuality, cocos2d::CCSize, bool, bool, bool, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GraphicsReloadLayer, init, cocos2d::TextureQuality, cocos2d::CCSize, bool, bool, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x366490, Thiscall, GraphicsReloadLayer, performReload, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x37c200, Thiscall, GraphicsReloadLayer, performReload, )
 		}
 	};
 }

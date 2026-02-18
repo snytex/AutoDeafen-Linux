@@ -26,52 +26,64 @@ public:
      ShareLevelSettingsLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x21ac5c
-     * @note[short] MacOS (Intel): 0x26f7e0
+     * @note[short] MacOS (ARM): 0x223594
+     * @note[short] MacOS (Intel): 0x281640
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x2753e8
+     * @note[short] iOS: 0x276258
      * @note[short] Android
      */
     static ShareLevelSettingsLayer* create(GJGameLevel* level);
 
     /**
-     * @note[short] MacOS (ARM): 0x21c6d0
-     * @note[short] MacOS (Intel): 0x271520
-     * @note[short] Windows: 0x4799c0
-     * @note[short] iOS: 0x276b68
+     * @note[short] MacOS (ARM): 0x224ffc
+     * @note[short] MacOS (Intel): 0x283370
+     * @note[short] Windows: 0x491ea0
+     * @note[short] iOS: 0x2779d0
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x21b9b8
-     * @note[short] MacOS (Intel): 0x270760
-     * @note[short] Windows: 0x478c00
-     * @note[short] iOS: 0x27603c
+     * @note[short] MacOS (ARM): 0x2242f4
+     * @note[short] MacOS (Intel): 0x2825b0
+     * @note[short] Windows: 0x4910e0
+     * @note[short] iOS: 0x276eb0
      * @note[short] Android
      */
-    bool init(GJGameLevel* p0);
+    bool init(GJGameLevel* level);
 
     /**
-     * @note[short] Windows: 0x479940
+     * @note[short] MacOS (ARM): 0x224cf4
+     * @note[short] MacOS (Intel): 0x283020
+     * @note[short] Windows: 0x491e20
+     * @note[short] iOS: 0x277798
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x21c440
-     * @note[short] MacOS (Intel): 0x271250
-     * @note[short] Windows: 0x479620
+     * @note[short] MacOS (ARM): 0x224d70
+     * @note[short] MacOS (Intel): 0x2830a0
+     * @note[short] Windows: 0x491b00
+     * @note[short] iOS: 0x277814
      * @note[short] Android
      */
     void onUnlisted(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x224f2c
+     * @note[short] MacOS (Intel): 0x283290
+     * @note[short] Windows: 0x491d20
+     * @note[short] iOS: 0x277900
      * @note[short] Android
      */
     void onUnlistedFriendsOnly(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x224f40
+     * @note[short] MacOS (Intel): 0x2832b0
+     * @note[short] Windows: 0x491d40
+     * @note[short] iOS: 0x277914
      * @note[short] Android
      */
     void updateSettingsState();

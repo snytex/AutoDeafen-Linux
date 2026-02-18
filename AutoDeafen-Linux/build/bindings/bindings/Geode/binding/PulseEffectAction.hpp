@@ -14,16 +14,28 @@ public:
     static constexpr auto CLASS_NAME = "PulseEffectAction";
 
     /**
+     * @note[short] MacOS (ARM): 0x273abc
+     * @note[short] MacOS (Intel): 0x2d9490
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     bool isFinished();
 
     /**
+     * @note[short] MacOS (ARM): 0x273a04
+     * @note[short] MacOS (Intel): 0x2d93b0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xd3f8
      * @note[short] Android
      */
     void step(float delta);
 
     /**
+     * @note[short] MacOS (ARM): 0x273a74
+     * @note[short] MacOS (Intel): 0x2d9430
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     float valueForDelta(float currentTime, float fadeInTime, float holdTime, float fadeOutTime);

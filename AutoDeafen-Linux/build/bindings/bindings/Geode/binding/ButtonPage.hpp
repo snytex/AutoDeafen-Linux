@@ -15,13 +15,29 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(ButtonPage, cocos2d::CCLayer)
 
     /**
-     * @note[short] iOS: 0x419250
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static ButtonPage* create(cocos2d::CCArray* p0, cocos2d::CCPoint p1, int p2, float p3);
+     ButtonPage();
 
     /**
+     * @note[short] MacOS (ARM): 0x50cf90
+     * @note[short] MacOS (Intel): 0x5e23b0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x421408
      * @note[short] Android
      */
-    bool init(cocos2d::CCArray* p0, cocos2d::CCPoint p1, int p2, float p3);
+    static ButtonPage* create(cocos2d::CCArray* objects, cocos2d::CCPoint position, int rows, float spacing);
+
+    /**
+     * @note[short] MacOS (ARM): 0x50d13c
+     * @note[short] MacOS (Intel): 0x5e25a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x421550
+     * @note[short] Android
+     */
+    bool init(cocos2d::CCArray* objects, cocos2d::CCPoint position, int rows, float spacing);
 };

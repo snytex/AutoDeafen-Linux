@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void loginAccountFinished(int p0, int p1);
+    virtual void loginAccountFinished(int accountID, int userID);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,5 +29,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void loginAccountFailed(AccountError p0);
+    virtual void loginAccountFailed(AccountError errorType);
 };

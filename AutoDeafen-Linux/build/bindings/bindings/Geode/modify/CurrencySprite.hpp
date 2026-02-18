@@ -25,11 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_initWithSprite
-		#define GEODE_STATICS_initWithSprite
-		GEODE_AS_STATIC_FUNCTION(initWithSprite) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -70,13 +65,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x9f3c0, Thiscall, CurrencySprite, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x9fad0, Thiscall, CurrencySprite, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CurrencySprite, create, CurrencySpriteType, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa44b0, Default, CurrencySprite, createWithSprite, cocos2d::CCSprite*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CurrencySprite, rewardToSpriteType, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa4780, Default, CurrencySprite, spriteTypeToStat, CurrencySpriteType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa2cd0, Thiscall, CurrencySprite, init, CurrencySpriteType, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CurrencySprite, initWithSprite, cocos2d::CCSprite*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa4bc0, Default, CurrencySprite, createWithSprite, cocos2d::CCSprite*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa4de0, Default, CurrencySprite, rewardToSpriteType, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa4e90, Default, CurrencySprite, spriteTypeToStat, CurrencySpriteType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xa33e0, Thiscall, CurrencySprite, init, CurrencySpriteType, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CurrencySprite, initWithSprite, cocos2d::CCSprite*)
 		}
 	};
 }

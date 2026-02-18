@@ -15,79 +15,100 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(ObjectManager, cocos2d::CCNode)
 
     /**
-     * @note[short] MacOS (ARM): 0x694044
-     * @note[short] MacOS (Intel): 0x77f670
-     * @note[short] Windows: 0x6e3d0
-     * @note[short] iOS: 0x24c1dc
+     * @note[short] MacOS (ARM): 0x69d8e0
+     * @note[short] MacOS (Intel): 0x795660
+     * @note[short] Windows: 0x6e400
+     * @note[short] iOS: 0x24d0e8
      * @note[short] Android
      */
     static ObjectManager* instance();
 
     /**
-     * @note[short] MacOS (ARM): 0x69410c
-     * @note[short] MacOS (Intel): 0x77f750
-     * @note[short] Windows: 0x6e460
-     * @note[short] iOS: 0x24c270
+     * @note[short] MacOS (ARM): 0x69e67c
+     * @note[short] MacOS (Intel): 0x796490
+     * @note[short] Windows: 0x6f1d0
+     * @note[short] iOS: 0x24d8a0
+     * @note[short] Android
+     */
+    static cocos2d::CCDictionary* replaceAllOccurencesOfString(cocos2d::CCString* target, cocos2d::CCString* replacement, cocos2d::CCDictionary* dict);
+
+    /**
+     * @note[short] MacOS (ARM): 0x69d9a8
+     * @note[short] MacOS (Intel): 0x795740
+     * @note[short] Windows: 0x6e490
+     * @note[short] iOS: 0x24d17c
      * @note[short] Android
      */
     virtual bool init();
 
     /**
+     * @note[short] MacOS (ARM): 0x69f3c8
+     * @note[short] MacOS (Intel): 0x797370
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x24de48
      * @note[short] Android
      */
     bool animLoaded(char const* anim);
 
     /**
-     * @note[short] MacOS (ARM): 0x695a18
-     * @note[short] MacOS (Intel): 0x7811e0
-     * @note[short] Windows: 0x6f870
-     * @note[short] iOS: 0x24ce50
+     * @note[short] MacOS (ARM): 0x69f1c0
+     * @note[short] MacOS (Intel): 0x7971a0
+     * @note[short] Windows: 0x6f8a0
+     * @note[short] iOS: 0x24dd5c
      * @note[short] Android
      */
     cocos2d::CCDictionary* getDefinition(char const* definitionKey);
 
     /**
-     * @note[short] iOS: 0x24c8ec
+     * @note[short] MacOS (ARM): 0x69e53c
+     * @note[short] MacOS (Intel): 0x796380
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x24d7f8
      * @note[short] Android
      */
     cocos2d::CCDictionary* getGlobalAnimCopy(char const* anim);
 
     /**
-     * @note[short] Windows: 0x6e800
-     * @note[short] iOS: 0x24c2c0
+     * @note[short] MacOS (ARM): 0x69d9f8
+     * @note[short] MacOS (Intel): 0x7957a0
+     * @note[short] Windows: 0x6e830
+     * @note[short] iOS: 0x24d1cc
      * @note[short] Android
      */
     void loadCopiedAnimations();
 
     /**
-     * @note[short] MacOS (ARM): 0x6945cc
-     * @note[short] MacOS (Intel): 0x77fb60
-     * @note[short] Windows: 0x6ed50
-     * @note[short] iOS: 0x24c4d4
+     * @note[short] MacOS (ARM): 0x69de64
+     * @note[short] MacOS (Intel): 0x795c10
+     * @note[short] Windows: 0x6ed80
+     * @note[short] iOS: 0x24d3e0
      * @note[short] Android
      */
     void loadCopiedSets();
 
     /**
+     * @note[short] MacOS (ARM): 0x69d97c
+     * @note[short] MacOS (Intel): 0x795710
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x24d150
      * @note[short] Android
      */
     void purgeObjectManager();
 
     /**
-     * @note[short] Windows: 0x6f1a0
-     * @note[short] Android
-     */
-    static cocos2d::CCDictionary* replaceAllOccurencesOfString(cocos2d::CCString* p0, cocos2d::CCString* p1, cocos2d::CCDictionary* p2);
-
-    /**
+     * @note[short] MacOS (ARM): 0x69f2c4
+     * @note[short] MacOS (Intel): 0x797280
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x24ddc8
      * @note[short] Android
      */
     void setLoaded(char const* objectName);
 
     /**
-     * @note[short] MacOS (ARM): 0x694934
-     * @note[short] MacOS (Intel): 0x77ff10
-     * @note[short] Windows: 0x6e4c0
+     * @note[short] MacOS (ARM): 0x69e1b0
+     * @note[short] MacOS (Intel): 0x795fb0
+     * @note[short] Windows: 0x6e4f0
+     * @note[short] iOS: 0x24d5e8
      * @note[short] Android
      */
     void setup();

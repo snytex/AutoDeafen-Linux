@@ -15,15 +15,28 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(ExplodeItemSprite, cocos2d::CCSprite)
 
     /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     ExplodeItemSprite();
+
+    /**
+     * @note[short] MacOS (ARM): 0x1bfdf4
+     * @note[short] MacOS (Intel): 0x2145f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x5d310
      * @note[short] Android
      */
     static ExplodeItemSprite* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x1b8200
-     * @note[short] MacOS (Intel): 0x202eb0
-     * @note[short] Windows: 0x36f5c0
-     * @note[short] iOS: 0x6132c
+     * @note[short] MacOS (ARM): 0x1c0188
+     * @note[short] MacOS (Intel): 0x214a10
+     * @note[short] Windows: 0x385330
+     * @note[short] iOS: 0x5d674
      * @note[short] Android
      */
     virtual bool init();

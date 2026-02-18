@@ -5,6 +5,11 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
+	#ifndef GEODE_STATICS_addTorch
+		#define GEODE_STATICS_addTorch
+		GEODE_AS_STATIC_FUNCTION(addTorch) 
+	#endif
+
 	#ifndef GEODE_STATICS_scene
 		#define GEODE_STATICS_scene
 		GEODE_AS_STATIC_FUNCTION(scene) 
@@ -35,11 +40,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addGodRay) 
 	#endif
 
-	#ifndef GEODE_STATICS_addTorch
-		#define GEODE_STATICS_addTorch
-		GEODE_AS_STATIC_FUNCTION(addTorch) 
-	#endif
-
 	#ifndef GEODE_STATICS_fadeInsideTower
 		#define GEODE_STATICS_fadeInsideTower
 		GEODE_AS_STATIC_FUNCTION(fadeInsideTower) 
@@ -66,6 +66,11 @@ namespace geode::modifier {
 	#endif
 
     
+	#ifndef GEODE_CONCEPT_CHECK_addTorch
+		#define GEODE_CONCEPT_CHECK_addTorch
+		GEODE_CONCEPT_FUNCTION_CHECK(addTorch) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
@@ -99,11 +104,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_addGodRay
 		#define GEODE_CONCEPT_CHECK_addGodRay
 		GEODE_CONCEPT_FUNCTION_CHECK(addGodRay) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_addTorch
-		#define GEODE_CONCEPT_CHECK_addTorch
-		GEODE_CONCEPT_FUNCTION_CHECK(addTorch) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_fadeInsideTower
@@ -140,19 +140,19 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c5890, Default, LevelAreaLayer, addTorch, cocos2d::CCNode*, cocos2d::CCPoint, int, float, int, bool, int, cocos2d::CCArray*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelAreaLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bc0c0, Default, LevelAreaLayer, scene, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bc1d0, Thiscall, LevelAreaLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2be1c0, Thiscall, LevelAreaLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bd3b0, Thiscall, LevelAreaLayer, dialogClosed, DialogLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2be170, Thiscall, LevelAreaLayer, onExit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bdd20, Thiscall, LevelAreaLayer, addGodRay, float, float, float, float, float, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bd690, Default, LevelAreaLayer, addTorch, cocos2d::CCNode*, cocos2d::CCPoint, int, float, int, bool, int, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bd530, Thiscall, LevelAreaLayer, fadeInsideTower, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2be0c0, Thiscall, LevelAreaLayer, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bd3c0, Thiscall, LevelAreaLayer, onClickDoor, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bd5e0, Thiscall, LevelAreaLayer, onEnterTower, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bd080, Thiscall, LevelAreaLayer, showDialog, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c42c0, Default, LevelAreaLayer, scene, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c43d0, Thiscall, LevelAreaLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c63c0, Thiscall, LevelAreaLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c55b0, Thiscall, LevelAreaLayer, dialogClosed, DialogLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c6370, Thiscall, LevelAreaLayer, onExit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c5f20, Thiscall, LevelAreaLayer, addGodRay, float, float, float, float, float, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c5730, Thiscall, LevelAreaLayer, fadeInsideTower, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c62c0, Thiscall, LevelAreaLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c55c0, Thiscall, LevelAreaLayer, onClickDoor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c57e0, Thiscall, LevelAreaLayer, onEnterTower, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c5280, Thiscall, LevelAreaLayer, showDialog, )
 		}
 	};
 }

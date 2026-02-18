@@ -105,15 +105,15 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40d4a0, Default, SetupKeyframePopup, create, KeyframeGameObject*, cocos2d::CCArray*, LevelEditorLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40f180, Thiscall, SetupKeyframePopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40e990, Thiscall, SetupKeyframePopup, onCustomButton, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40e8b0, Thiscall, SetupKeyframePopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40e8d0, Thiscall, SetupKeyframePopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40d5e0, Thiscall, SetupKeyframePopup, init, KeyframeGameObject*, cocos2d::CCArray*, LevelEditorLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40f090, Thiscall, SetupKeyframePopup, onTimeMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40edf0, Thiscall, SetupKeyframePopup, refreshPreviewArt, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40f0f0, Thiscall, SetupKeyframePopup, updateTimeModeButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425220, Default, SetupKeyframePopup, create, KeyframeGameObject*, cocos2d::CCArray*, LevelEditorLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x426f00, Thiscall, SetupKeyframePopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x426710, Thiscall, SetupKeyframePopup, onCustomButton, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x426630, Thiscall, SetupKeyframePopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x426650, Thiscall, SetupKeyframePopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425360, Thiscall, SetupKeyframePopup, init, KeyframeGameObject*, cocos2d::CCArray*, LevelEditorLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x426e10, Thiscall, SetupKeyframePopup, onTimeMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x426b70, Thiscall, SetupKeyframePopup, refreshPreviewArt, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x426e70, Thiscall, SetupKeyframePopup, updateTimeModeButtons, )
 		}
 	};
 }

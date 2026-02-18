@@ -85,13 +85,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x448220, Default, SetupTeleportPopup, create, TeleportPortalObject*, cocos2d::CCArray*, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x287910, Thiscall, SetupTeleportPopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4494c0, Thiscall, SetupTeleportPopup, updateDefaultTriggerValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4494f0, Thiscall, SetupTeleportPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x448360, Thiscall, SetupTeleportPopup, init, TeleportPortalObject*, cocos2d::CCArray*, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4495f0, Thiscall, SetupTeleportPopup, onTeleportGravity, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449680, Thiscall, SetupTeleportPopup, updateTeleportGravityState, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x460830, Default, SetupTeleportPopup, create, TeleportPortalObject*, cocos2d::CCArray*, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28f240, Thiscall, SetupTeleportPopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x461ad0, Thiscall, SetupTeleportPopup, updateDefaultTriggerValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x461b00, Thiscall, SetupTeleportPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x460970, Thiscall, SetupTeleportPopup, init, TeleportPortalObject*, cocos2d::CCArray*, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x461c00, Thiscall, SetupTeleportPopup, onTeleportGravity, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x461c90, Thiscall, SetupTeleportPopup, updateTeleportGravityState, int)
 		}
 	};
 }

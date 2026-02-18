@@ -45,9 +45,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x458970, Default, SetupForceBlockPopup, create, ForceBlockGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4591a0, Thiscall, SetupForceBlockPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x458a80, Thiscall, SetupForceBlockPopup, init, ForceBlockGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x470ee0, Default, SetupForceBlockPopup, create, ForceBlockGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x471710, Thiscall, SetupForceBlockPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x470ff0, Thiscall, SetupForceBlockPopup, init, ForceBlockGameObject*, cocos2d::CCArray*)
 		}
 	};
 }

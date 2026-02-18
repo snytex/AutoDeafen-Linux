@@ -15,318 +15,472 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJGameLevel, cocos2d::CCNode)
 
     /**
-     * @note[short] MacOS (ARM): 0x473d34
-     * @note[short] MacOS (Intel): 0x5168e0
-     * @note[short] Windows: 0x169b40
-     * @note[short] iOS: 0x9637c
+     * @note[short] MacOS (ARM): 0x4b2c00
+     * @note[short] MacOS (Intel): 0x563bf0
+     * @note[short] Windows: 0x141590
+     * @note[short] iOS: 0xb2650
+     * @note[short] Android: Out of line
+     */
+     GJGameLevel();
+
+    /**
+     * @note[short] MacOS (ARM): 0x4aae78
+     * @note[short] MacOS (Intel): 0x55b090
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xac324
+     * @note[short] Android: Rebinded
+     */
+     ~GJGameLevel();
+
+    /**
+     * @note[short] MacOS (ARM): 0x480ac0
+     * @note[short] MacOS (Intel): 0x52c890
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x926e0
      * @note[short] Android
      */
     static GJGameLevel* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x4760f0
-     * @note[short] MacOS (Intel): 0x519030
-     * @note[short] Windows: 0x1683e0
-     * @note[short] iOS: 0x978ec
+     * @note[short] MacOS (ARM): 0x482e48
+     * @note[short] MacOS (Intel): 0x52efa0
+     * @note[short] Windows: 0x16ae30
+     * @note[short] iOS: 0x93c10
      * @note[short] Android
      */
-    static GJGameLevel* create(cocos2d::CCDictionary* p0, bool p1);
+    static GJGameLevel* create(cocos2d::CCDictionary* dict, bool download);
 
     /**
-     * @note[short] MacOS (ARM): 0x49e59c
-     * @note[short] MacOS (Intel): 0x5457e0
-     * @note[short] Windows: 0x16a0d0
-     * @note[short] iOS: 0xb0008
+     * @note[short] MacOS (ARM): 0x4ad0d8
+     * @note[short] MacOS (Intel): 0x55d880
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xadd14
+     * @note[short] Android
+     */
+    static GJGameLevel* createWithCoder(DS_Dictionary* dict);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4aece8
+     * @note[short] MacOS (Intel): 0x55f710
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xaf890
+     * @note[short] Android
+     */
+    static int demonIconForDifficulty(DemonDifficultyType type);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4ab738
+     * @note[short] MacOS (Intel): 0x55bc60
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xacaac
+     * @note[short] Android
+     */
+    static int getLengthKey(int length, bool platformer);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4ab774
+     * @note[short] MacOS (Intel): 0x55bca0
+     * @note[short] Windows: 0x16cbd0
+     * @note[short] iOS: 0xacae8
      * @note[short] Android
      */
     static gd::string lengthKeyToString(int key);
 
     /**
-     * @note[short] MacOS (ARM): 0x4a0bd0
-     * @note[short] MacOS (Intel): 0x5482f0
-     * @note[short] Windows: 0x16c090
-     * @note[short] iOS: 0xb2118
+     * @note[short] MacOS (ARM): 0x4ae088
+     * @note[short] MacOS (Intel): 0x55ea40
+     * @note[short] Windows: 0x16ef00
+     * @note[short] iOS: 0xaec20
      * @note[short] Android
      */
-    virtual void encodeWithCoder(DS_Dictionary* p0);
+    virtual void encodeWithCoder(DS_Dictionary* dict);
 
     /**
-     * @note[short] MacOS (ARM): 0x4a1674
-     * @note[short] MacOS (Intel): 0x548e40
+     * @note[short] MacOS (ARM): 0x4aebcc
+     * @note[short] MacOS (Intel): 0x55f600
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0xb2bb0
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0xaf780
+     * @note[short] Android
      */
     virtual bool canEncode();
 
     /**
-     * @note[short] MacOS (ARM): 0x49de78
-     * @note[short] MacOS (Intel): 0x544f30
-     * @note[short] Windows: 0x169ba0
-     * @note[short] iOS: 0xaf984
+     * @note[short] MacOS (ARM): 0x4ab0a0
+     * @note[short] MacOS (Intel): 0x55b3d0
+     * @note[short] Windows: 0x16c6a0
+     * @note[short] iOS: 0xac4a8
      * @note[short] Android
      */
     virtual bool init();
 
     /**
+     * @note[short] MacOS (ARM): 0x4aebd4
+     * @note[short] MacOS (Intel): 0x55f610
+     * @note[short] Windows: 0x16ff40
+     * @note[short] iOS: 0xaf788
      * @note[short] Android
      */
     bool areCoinsVerified();
 
     /**
-     * @note[short] MacOS (ARM): 0x49f54c
-     * @note[short] MacOS (Intel): 0x5468b0
-     * @note[short] Windows: 0x16aaa0
-     * @note[short] iOS: 0xb0cf8
+     * @note[short] MacOS (ARM): 0x4ac9ac
+     * @note[short] MacOS (Intel): 0x55cee0
+     * @note[short] Windows: 0x16d810
+     * @note[short] iOS: 0xad774
      * @note[short] Android
      */
-    void copyLevelInfo(GJGameLevel* p0);
+    void copyLevelInfo(GJGameLevel* level);
 
     /**
-     * @note[short] MacOS (ARM): 0x49fcbc
-     * @note[short] MacOS (Intel): 0x547250
-     * @note[short] iOS: 0xb12c4
+     * @note[short] MacOS (ARM): 0x4ad15c
+     * @note[short] MacOS (Intel): 0x55d8f0
+     * @note[short] Windows: 0x16dec0
+     * @note[short] iOS: 0xadd44
      * @note[short] Android
      */
-    static GJGameLevel* createWithCoder(DS_Dictionary* p0);
+    void dataLoaded(DS_Dictionary* dict);
 
     /**
-     * @note[short] MacOS (ARM): 0x49fd40
-     * @note[short] MacOS (Intel): 0x5472c0
-     * @note[short] Windows: 0x16b150
-     * @note[short] iOS: 0xb12f4
+     * @note[short] MacOS (ARM): 0x4abce4
+     * @note[short] MacOS (Intel): 0x55c1d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void dataLoaded(DS_Dictionary* p0);
+    gd::string generateSettingsString();
 
     /**
-     * @note[short] MacOS (ARM): 0x4a1794
-     * @note[short] MacOS (Intel): 0x548f50
-     * @note[short] Android
-     */
-    int demonIconForDifficulty(DemonDifficultyType p0);
-
-    /**
-     * @note[short] Android
-     */
-    TodoReturn generateSettingsString();
-
-    /**
-     * @note[short] MacOS (ARM): 0x49e8d8
-     * @note[short] MacOS (Intel): 0x545b00
-     * @note[short] Windows: 0x16a3f0
-     * @note[short] iOS: 0xb0188
+     * @note[short] MacOS (ARM): 0x4abacc
+     * @note[short] MacOS (Intel): 0x55bfe0
+     * @note[short] Windows: 0x16cef0
+     * @note[short] iOS: 0xacc68
      * @note[short] Android
      */
     gd::string getAudioFileName();
 
     /**
-     * @note[short] MacOS (ARM): 0x49e674
-     * @note[short] MacOS (Intel): 0x545880
-     * @note[short] Windows: 0x16a230
-     * @note[short] iOS: 0xb0034
+     * @note[short] MacOS (ARM): 0x4ab864
+     * @note[short] MacOS (Intel): 0x55bd70
+     * @note[short] Windows: 0x16cd30
+     * @note[short] iOS: 0xacb14
      * @note[short] Android
      */
     int getAverageDifficulty();
 
     /**
-     * @note[short] MacOS (ARM): 0x48f96c
-     * @note[short] MacOS (Intel): 0x535eb0
-     * @note[short] Windows: 0x16a2a0
-     * @note[short] iOS: 0xa76cc
+     * @note[short] MacOS (ARM): 0x49cb1c
+     * @note[short] MacOS (Intel): 0x54c470
+     * @note[short] Windows: 0x16cda0
+     * @note[short] iOS: 0xa3fc4
      * @note[short] Android
      */
     char const* getCoinKey(int coinNumber);
 
     /**
+     * @note[short] MacOS (ARM): 0x4ab890
+     * @note[short] MacOS (Intel): 0x55bdc0
+     * @note[short] Windows: 0x16ce20
+     * @note[short] iOS: 0xacb40
      * @note[short] Android
      */
-    TodoReturn getLastBuildPageForTab(int p0);
+    int getLastBuildPageForTab(int tab);
 
     /**
-     * @note[short] MacOS (ARM): 0x49e560
-     * @note[short] MacOS (Intel): 0x5457a0
+     * @note[short] MacOS (ARM): 0x4acdd8
+     * @note[short] MacOS (Intel): 0x55d4d0
+     * @note[short] Windows: 0x16db30
+     * @note[short] iOS: 0xada58
      * @note[short] Android
      */
-    const char* getLengthKey(int length, bool platformer);
+    GJGameLevel* getListSnapshot();
 
     /**
-     * @note[short] Android
-     */
-    TodoReturn getListSnapshot();
-
-    /**
+     * @note[short] MacOS (ARM): 0x4813b8
+     * @note[short] MacOS (Intel): 0x52d210
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x92cd4
      * @note[short] Android
      */
     int getNormalPercent();
 
     /**
+     * @note[short] MacOS (ARM): 0x4abbfc
+     * @note[short] MacOS (Intel): 0x55c100
+     * @note[short] Windows: 0x16cfb0
+     * @note[short] iOS: 0xacd08
      * @note[short] Android
      */
-    TodoReturn getSongName();
+    gd::string getSongName();
 
     /**
-     * @note[short] MacOS (ARM): 0x4a16d8
-     * @note[short] MacOS (Intel): 0x548eb0
-     * @note[short] Windows: 0x16d150
-     * @note[short] iOS: 0xb2c14
+     * @note[short] MacOS (ARM): 0x4aec30
+     * @note[short] MacOS (Intel): 0x55f670
+     * @note[short] Windows: 0x170060
+     * @note[short] iOS: 0xaf7e4
      * @note[short] Android
      */
     gd::string getUnpackedLevelDescription();
 
     /**
-     * @note[short] MacOS (ARM): 0x482228
-     * @note[short] MacOS (Intel): 0x526870
-     * @note[short] Windows: 0x16cc80
-     * @note[short] iOS: 0x9f82c
+     * @note[short] MacOS (ARM): 0x48f0f8
+     * @note[short] MacOS (Intel): 0x53c950
+     * @note[short] Windows: 0x16fb60
+     * @note[short] iOS: 0x9bc6c
      * @note[short] Android
      */
-    void handleStatsConflict(GJGameLevel* p0);
-	inline bool isPlatformer() {
-        return m_levelLength == 5;
-    }
+    void handleStatsConflict(GJGameLevel* level);
 
     /**
-     * @note[short] MacOS (ARM): 0x49e000
-     * @note[short] MacOS (Intel): 0x545150
+     * @note[short] MacOS (ARM): 0x489ba0
+     * @note[short] MacOS (Intel): 0x536c80
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x984ac
+     * @note[short] Android
+     */
+    bool isPlatformer();
+
+    /**
+     * @note[short] MacOS (ARM): 0x4ab20c
+     * @note[short] MacOS (Intel): 0x55b5f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xac63c
      * @note[short] Android
      */
     void levelWasAltered();
 
     /**
+     * @note[short] MacOS (ARM): 0x490d18
+     * @note[short] MacOS (Intel): 0x53e880
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn levelWasSubmitted();
+    void levelWasSubmitted();
 
     /**
+     * @note[short] MacOS (ARM): 0x4ab09c
+     * @note[short] MacOS (Intel): 0x55b3c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-    TodoReturn parseSettingsString(gd::string p0);
+    void parseSettingsString(gd::string str);
 
     /**
-     * @note[short] iOS: 0xb0314
-     * @note[short] Android
+     * @note[short] MacOS (ARM): 0x4abe54
+     * @note[short] MacOS (Intel): 0x55c330
+     * @note[short] Windows: 0x16d230
+     * @note[short] iOS: 0xacdf0
+     * @note[short] Android: Rebinded
      */
-    void saveNewScore(int p0, int p1);
+    void saveNewScore(int value, int type, int p2, int p3, int p4, gd::string p5, bool p6);
 
     /**
-     * @note[short] MacOS (ARM): 0x49e170
-     * @note[short] MacOS (Intel): 0x545320
-     * @note[short] Windows: 0x169db0
-     * @note[short] iOS: 0xafc44
+     * @note[short] MacOS (ARM): 0x4ab368
+     * @note[short] MacOS (Intel): 0x55b7d0
+     * @note[short] Windows: 0x16c8b0
+     * @note[short] iOS: 0xac744
      * @note[short] Android
      */
     void savePercentage(int percent, bool isPracticeMode, int clicks, int attempts, bool isChkValid);
 
     /**
+     * @note[short] MacOS (ARM): 0x4ac4a0
+     * @note[short] MacOS (Intel): 0x55c910
+     * @note[short] Windows: 0x16d680
+     * @note[short] iOS: 0xad080
      * @note[short] Android: Rebinded
      */
-    TodoReturn scoreStringToVector(gd::string& p0, gd::vector<int>& p1);
+    void scoreStringToVector(gd::string& str, gd::vector<int>& vec);
 
     /**
+     * @note[short] MacOS (ARM): 0x4ac6c4
+     * @note[short] MacOS (Intel): 0x55cb80
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xad2dc
      * @note[short] Android: Rebinded
      */
-    TodoReturn scoreVectorToString(gd::vector<int>& p0, int p1);
+    gd::string scoreVectorToString(gd::vector<int>& vec, int type);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setAccountID(int p0);
+    void setAccountID(int id);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setAttempts(int p0);
+    void setAttempts(int attempts);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setAttemptTime(int p0);
+    void setAttemptTime(int time);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setClicks(int p0);
+    void setClicks(int clicks);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setCoinsVerified(int p0);
+    void setCoinsVerified(int coinsVerified);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setDailyID(int p0);
+    void setDailyID(int id);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setDemon(int p0);
+    void setDemon(int demon);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setJumps(int p0);
+    void setJumps(int jumps);
 
     /**
+     * @note[short] MacOS (ARM): 0x4ab9a8
+     * @note[short] MacOS (Intel): 0x55bec0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xacbc8
      * @note[short] Android
      */
-    void setLastBuildPageForTab(int p0, int p1);
+    void setLastBuildPageForTab(int tab, int page);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setLevelID(int p0);
+    void setLevelID(int levelID);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setNewNormalPercent(int p0);
+    void setNewNormalPercent(int percent);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setNewNormalPercent2(int p0);
+    void setNewNormalPercent2(int percent);
 
     /**
+     * @note[short] MacOS (ARM): 0x482acc
+     * @note[short] MacOS (Intel): 0x52ebf0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void setNormalPercent(int p0);
+    void setNormalPercent(int percent);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setObjectCount(int p0);
+    void setObjectCount(int count);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setOriginalLevel(int p0);
+    void setOriginalLevel(int id);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setPassword(int p0);
+    void setPassword(int password);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setStars(int p0);
+    void setStars(int stars);
 
     /**
+     * @note[short] MacOS (ARM): 0x482a84
+     * @note[short] MacOS (Intel): 0x52ebb0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn shouldCheatReset();
+    bool shouldCheatReset();
 
     /**
+     * @note[short] MacOS (ARM): 0x4ac240
+     * @note[short] MacOS (Intel): 0x55c740
+     * @note[short] Windows: 0x16d400
+     * @note[short] iOS: 0xacf54
      * @note[short] Android
      */
-    TodoReturn storeNewLocalScore(int p0, int p1);
+    void storeNewLocalScore(int value, int type);
 
     /**
+     * @note[short] MacOS (ARM): 0x4ab2e8
+     * @note[short] MacOS (Intel): 0x55b720
+     * @note[short] Windows: 0x16ffa0
+     * @note[short] iOS: 0xac6c4
      * @note[short] Android
      */
-    TodoReturn unverifyCoins();
+    void unverifyCoins();
     cocos2d::CCDictionary* m_lastBuildSave;
     geode::SeedValueRSV m_levelID;
     gd::string m_levelName;
@@ -336,9 +490,9 @@ public:
     gd::string m_recordString;
     gd::string m_uploadDate;
     gd::string m_updateDate;
-    gd::string m_unkString1;
-    gd::string m_unkString2;
-    cocos2d::CCPoint m_unkPoint;
+    gd::string m_lockedEditorLayers;
+    gd::string m_savedCameraPositions;
+    cocos2d::CCPoint m_previewLock;
     geode::SeedValueRSV m_userID;
     geode::SeedValueRSV m_accountID;
     GJDifficulty m_difficulty;
@@ -409,14 +563,14 @@ public:
     int m_minStarRatings;
     int m_demonVotes;
     int m_rateStars;
-    int m_rateFeature;
+    bool m_rateFeature;
     gd::string m_rateUser;
     bool m_dontSave;
     bool m_levelNotDownloaded;
     int m_requiredCoins;
     bool m_isUnlocked;
     cocos2d::CCPoint m_lastCameraPos;
-    float m_fastEditorZoom;
+    float m_lastEditorZoom;
     int m_lastBuildTab;
     int m_lastBuildPage;
     int m_lastBuildGroupID;
@@ -431,10 +585,20 @@ public:
     int m_listPosition;
     gd::string m_songIDs;
     gd::string m_sfxIDs;
-    int m_54;
+    int m_songSize;
     int m_bestTime;
+    int m_unk518;
+    int m_unk51c;
+    int m_unk520;
+    gd::string m_inputsTime;
     int m_bestPoints;
-    int m_k111;
-    gd::string m_unkString3;
-    gd::string m_unkString4;
+    int m_unk54c;
+    int m_unk550;
+    int m_unk554;
+    gd::string m_inputsPoints;
+    int m_platformerSeed;
+    gd::string m_localBestTimes;
+    gd::string m_localBestPoints;
+    bool m_savedTime;
+    bool m_savedPoints;
 };

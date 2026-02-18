@@ -25,74 +25,74 @@ public:
      SliderTouchLogic();
 
     /**
-     * @note[short] MacOS (ARM): 0x289840
-     * @note[short] MacOS (Intel): 0x2ef7b0
+     * @note[short] MacOS (ARM): 0x294650
+     * @note[short] MacOS (Intel): 0x303ac0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x2eec80
+     * @note[short] iOS: 0x2eef60
      * @note[short] Android
      */
-    static SliderTouchLogic* create(cocos2d::CCNode* p0, cocos2d::SEL_MenuHandler p1, char const* p2, char const* p3, float p4);
+    static SliderTouchLogic* create(cocos2d::CCNode* target, cocos2d::SEL_MenuHandler selector, char const* thumb, char const* thumbSel, float scale);
 
     /**
-     * @note[short] MacOS (ARM): 0x289cc8
-     * @note[short] MacOS (Intel): 0x2efc70
-     * @note[short] Windows: 0x714b0
-     * @note[short] iOS: 0x2eeeb0
+     * @note[short] MacOS (ARM): 0x294ad8
+     * @note[short] MacOS (Intel): 0x303f70
+     * @note[short] Windows: 0x714e0
+     * @note[short] iOS: 0x2ef190
      * @note[short] Android
      */
-    virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual bool ccTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x289edc
-     * @note[short] MacOS (Intel): 0x2efea0
-     * @note[short] Windows: 0x715a0
-     * @note[short] iOS: 0x2eefa8
+     * @note[short] MacOS (ARM): 0x294cec
+     * @note[short] MacOS (Intel): 0x3041a0
+     * @note[short] Windows: 0x715d0
+     * @note[short] iOS: 0x2ef288
      * @note[short] Android
      */
-    virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchMoved(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x289e2c
-     * @note[short] MacOS (Intel): 0x2efde0
-     * @note[short] Windows: 0x71560
-     * @note[short] iOS: 0x2eef58
+     * @note[short] MacOS (ARM): 0x294c3c
+     * @note[short] MacOS (Intel): 0x3040e0
+     * @note[short] Windows: 0x71590
+     * @note[short] iOS: 0x2ef238
      * @note[short] Android
      */
-    virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchEnded(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x28a160
-     * @note[short] MacOS (Intel): 0x2f01a0
-     * @note[short] Windows: 0x716d0
-     * @note[short] iOS: 0x2ef108
+     * @note[short] MacOS (ARM): 0x294f74
+     * @note[short] MacOS (Intel): 0x304490
+     * @note[short] Windows: 0x71700
+     * @note[short] iOS: 0x2ef3ec
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x28998c
-     * @note[short] MacOS (Intel): 0x2ef8f0
+     * @note[short] MacOS (ARM): 0x29479c
+     * @note[short] MacOS (Intel): 0x303c00
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x2eedc4
+     * @note[short] iOS: 0x2ef0a4
      * @note[short] Android
      */
-    bool init(cocos2d::CCNode* p0, cocos2d::SEL_MenuHandler p1, char const* p2, char const* p3, float p4);
+    bool init(cocos2d::CCNode* target, cocos2d::SEL_MenuHandler selector, char const* thumb, char const* thumbSel, float scale);
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x294918
+     * @note[short] MacOS (Intel): 0x303d90
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] Android
      */
     void setMaxOffset(float offset);
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x294a04
+     * @note[short] MacOS (Intel): 0x303e90
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] Android
      */
     void setRotated(bool rotated);
     float m_unknownUnused;

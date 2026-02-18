@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_triggerObject
 		#define GEODE_STATICS_triggerObject
 		GEODE_AS_STATIC_FUNCTION(triggerObject) 
@@ -23,11 +18,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getSaveString
 		#define GEODE_STATICS_getSaveString
 		GEODE_AS_STATIC_FUNCTION(getSaveString) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateTriggerControlFrame
@@ -75,12 +65,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TriggerControlGameObject, create, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4aa7d0, Thiscall, TriggerControlGameObject, triggerObject, GJBaseGameLayer*, int, gd::vector<int> const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4aa6e0, Thiscall, TriggerControlGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4aa480, Thiscall, TriggerControlGameObject, getSaveString, GJBaseGameLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TriggerControlGameObject, init, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4aa800, Thiscall, TriggerControlGameObject, updateTriggerControlFrame, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TriggerControlGameObject, create, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c3320, Thiscall, TriggerControlGameObject, triggerObject, GJBaseGameLayer*, int, gd::vector<int> const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c3230, Thiscall, TriggerControlGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c2fd0, Thiscall, TriggerControlGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TriggerControlGameObject, init, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c3350, Thiscall, TriggerControlGameObject, updateTriggerControlFrame, )
 		}
 	};
 }

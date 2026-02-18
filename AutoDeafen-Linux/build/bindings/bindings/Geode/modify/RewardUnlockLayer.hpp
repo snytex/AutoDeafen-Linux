@@ -150,21 +150,21 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b6950, Default, RewardUnlockLayer, create, int, RewardsPage*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cdcc0, Default, RewardUnlockLayer, create, int, RewardsPage*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RewardUnlockLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ba210, Thiscall, RewardUnlockLayer, currencyWillExit, CurrencyRewardLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b7850, Thiscall, RewardUnlockLayer, connectionTimeout, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b6a80, Thiscall, RewardUnlockLayer, init, int, RewardsPage*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d1580, Thiscall, RewardUnlockLayer, currencyWillExit, CurrencyRewardLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cebc0, Thiscall, RewardUnlockLayer, connectionTimeout, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cddf0, Thiscall, RewardUnlockLayer, init, int, RewardsPage*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RewardUnlockLayer, labelEnterFinishedO, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ba220, Thiscall, RewardUnlockLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b78b0, Thiscall, RewardUnlockLayer, playDropSound, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(RewardUnlockLayer, playLabelEffect, int, int, cocos2d::CCSprite*, cocos2d::CCPoint, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b7a70, Thiscall, RewardUnlockLayer, playRewardEffect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d1590, Thiscall, RewardUnlockLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cec20, Thiscall, RewardUnlockLayer, playDropSound, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d04f0, Thiscall, RewardUnlockLayer, playLabelEffect, int, int, cocos2d::CCSprite*, cocos2d::CCPoint, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cede0, Thiscall, RewardUnlockLayer, playRewardEffect, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RewardUnlockLayer, readyToCollect, GJRewardItem*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b9110, Thiscall, RewardUnlockLayer, showCloseButton, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b7790, Thiscall, RewardUnlockLayer, showCollectReward, GJRewardItem*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b7950, Thiscall, RewardUnlockLayer, step2, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b7a50, Thiscall, RewardUnlockLayer, step3, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d0480, Thiscall, RewardUnlockLayer, showCloseButton, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ceb00, Thiscall, RewardUnlockLayer, showCollectReward, GJRewardItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cecc0, Thiscall, RewardUnlockLayer, step2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cedc0, Thiscall, RewardUnlockLayer, step3, )
 		}
 	};
 }

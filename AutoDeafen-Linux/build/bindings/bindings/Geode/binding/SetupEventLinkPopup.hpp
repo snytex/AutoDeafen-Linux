@@ -16,28 +16,38 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupEventLinkPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x44d830
+     * @note[short] MacOS (ARM): 0x4c4e10
+     * @note[short] MacOS (Intel): 0x577380
+     * @note[short] Windows: 0x465e40
+     * @note[short] iOS: 0x406e98
      * @note[short] Android
      */
-    static SetupEventLinkPopup* create(EventLinkTrigger* p0, cocos2d::CCArray* p1);
+    static SetupEventLinkPopup* create(EventLinkTrigger* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4b6fa8
-     * @note[short] MacOS (Intel): 0x560620
-     * @note[short] Windows: 0x44d940
-     * @note[short] iOS: 0x3fef1c
+     * @note[short] MacOS (ARM): 0x4c4f98
+     * @note[short] MacOS (Intel): 0x5775b0
+     * @note[short] Windows: 0x465f50
+     * @note[short] iOS: 0x406f70
      * @note[short] Android
      */
-    bool init(EventLinkTrigger* p0, cocos2d::CCArray* p1);
+    bool init(EventLinkTrigger* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] Windows: 0x44deb0
+     * @note[short] MacOS (ARM): 0x4c5460
+     * @note[short] MacOS (Intel): 0x577b20
+     * @note[short] Windows: 0x4664c0
+     * @note[short] iOS: 0x40739c
      * @note[short] Android
      */
     void onSelectEvent(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x4c56f0
+     * @note[short] MacOS (Intel): 0x577e70
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x4074e8
      * @note[short] Android: Rebinded
      */
-    void updateEventIDs(gd::set<int>& p0);
+    void updateEventIDs(gd::set<int>& eventIDs);
 };

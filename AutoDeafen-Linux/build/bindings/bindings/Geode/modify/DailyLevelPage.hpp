@@ -70,11 +70,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(exitDailyNode) 
 	#endif
 
-	#ifndef GEODE_STATICS_getDailyTime
-		#define GEODE_STATICS_getDailyTime
-		GEODE_AS_STATIC_FUNCTION(getDailyTime) 
-	#endif
-
 	#ifndef GEODE_STATICS_getDailyTimeString
 		#define GEODE_STATICS_getDailyTimeString
 		GEODE_AS_STATIC_FUNCTION(getDailyTimeString) 
@@ -93,11 +88,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onTheSafe
 		#define GEODE_STATICS_onTheSafe
 		GEODE_AS_STATIC_FUNCTION(onTheSafe) 
-	#endif
-
-	#ifndef GEODE_STATICS_refreshDailyPage
-		#define GEODE_STATICS_refreshDailyPage
-		GEODE_AS_STATIC_FUNCTION(refreshDailyPage) 
 	#endif
 
 	#ifndef GEODE_STATICS_skipDailyLevel
@@ -240,29 +230,29 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xccfd0, Default, DailyLevelPage, create, GJTimedLevelType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, DailyLevelPage, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x86980, Thiscall, DailyLevelPage, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867a0, Thiscall, DailyLevelPage, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xce400, Default, DailyLevelPage, create, GJTimedLevelType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, DailyLevelPage, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x869d0, Thiscall, DailyLevelPage, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867f0, Thiscall, DailyLevelPage, show, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DailyLevelPage, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xce560, Thiscall, DailyLevelPage, dailyStatusFinished, GJTimedLevelType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xce860, Thiscall, DailyLevelPage, dailyStatusFailed, GJTimedLevelType, GJErrorCode)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xceb90, Thiscall, DailyLevelPage, levelDownloadFinished, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcebf0, Thiscall, DailyLevelPage, levelDownloadFailed, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd06b0, Thiscall, DailyLevelPage, claimLevelReward, DailyLevelNode*, GJGameLevel*, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcee40, Thiscall, DailyLevelPage, createDailyNode, GJGameLevel*, bool, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xced50, Thiscall, DailyLevelPage, createNodeIfLoaded, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xceca0, Thiscall, DailyLevelPage, downloadAndCreateNode, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DailyLevelPage, exitDailyNode, DailyLevelNode*, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DailyLevelPage, getDailyTime, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcf200, Thiscall, DailyLevelPage, getDailyTimeString, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcd110, Thiscall, DailyLevelPage, init, GJTimedLevelType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x86940, Thiscall, DailyLevelPage, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd0bb0, Thiscall, DailyLevelPage, onTheSafe, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(DailyLevelPage, refreshDailyPage, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd0980, Thiscall, DailyLevelPage, skipDailyLevel, DailyLevelNode*, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcec10, Thiscall, DailyLevelPage, tryGetDailyStatus, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd0360, Thiscall, DailyLevelPage, updateTimers, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcf990, Thiscall, DailyLevelPage, dailyStatusFinished, GJTimedLevelType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcfc90, Thiscall, DailyLevelPage, dailyStatusFailed, GJTimedLevelType, GJErrorCode)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcffc0, Thiscall, DailyLevelPage, levelDownloadFinished, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd0020, Thiscall, DailyLevelPage, levelDownloadFailed, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd1ae0, Thiscall, DailyLevelPage, claimLevelReward, DailyLevelNode*, GJGameLevel*, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd0270, Thiscall, DailyLevelPage, createDailyNode, GJGameLevel*, bool, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd0180, Thiscall, DailyLevelPage, createNodeIfLoaded, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd00d0, Thiscall, DailyLevelPage, downloadAndCreateNode, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd0560, Thiscall, DailyLevelPage, exitDailyNode, DailyLevelNode*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DailyLevelPage, getDailyTime, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd0630, Thiscall, DailyLevelPage, getDailyTimeString, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xce540, Thiscall, DailyLevelPage, init, GJTimedLevelType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x86990, Thiscall, DailyLevelPage, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd1fe0, Thiscall, DailyLevelPage, onTheSafe, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DailyLevelPage, refreshDailyPage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd1db0, Thiscall, DailyLevelPage, skipDailyLevel, DailyLevelNode*, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd0040, Thiscall, DailyLevelPage, tryGetDailyStatus, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd1790, Thiscall, DailyLevelPage, updateTimers, float)
 		}
 	};
 }

@@ -17,128 +17,154 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(CollisionBlockPopup, FLAlertLayer)
 
     /**
-     * @note[short] Windows: 0x8a8d0
+     * @note[short] MacOS (ARM): 0x227480
+     * @note[short] MacOS (Intel): 0x285c00
+     * @note[short] Windows: 0x8a920
+     * @note[short] iOS: 0x84b38
      * @note[short] Android
      */
-    static CollisionBlockPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static CollisionBlockPopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x220028
-     * @note[short] MacOS (Intel): 0x2753b0
-     * @note[short] Windows: 0x8bb20
-     * @note[short] iOS: 0x89a70
+     * @note[short] MacOS (ARM): 0x2289c8
+     * @note[short] MacOS (Intel): 0x2872c0
+     * @note[short] Windows: 0x8bbe0
+     * @note[short] iOS: 0x859f0
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x21ffdc
-     * @note[short] MacOS (Intel): 0x275350
-     * @note[short] Windows: 0x8ba30
-     * @note[short] iOS: 0x89a24
+     * @note[short] MacOS (ARM): 0x22897c
+     * @note[short] MacOS (Intel): 0x287260
+     * @note[short] Windows: 0x8baf0
+     * @note[short] iOS: 0x859a4
      * @note[short] Android
      */
     virtual void show();
 
     /**
-     * @note[short] MacOS (ARM): 0x21fe7c
-     * @note[short] MacOS (Intel): 0x275190
-     * @note[short] Windows: 0x8b790
-     * @note[short] iOS: 0x89988
+     * @note[short] MacOS (ARM): 0x228820
+     * @note[short] MacOS (Intel): 0x2870b0
+     * @note[short] Windows: 0x8b850
+     * @note[short] iOS: 0x85908
      * @note[short] Android
      */
-    virtual void textInputClosed(CCTextInputNode* p0);
+    virtual void textInputClosed(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x21fe98
-     * @note[short] MacOS (Intel): 0x2751d0
-     * @note[short] Windows: 0x8b7a0
-     * @note[short] iOS: 0x899a4
+     * @note[short] MacOS (ARM): 0x22883c
+     * @note[short] MacOS (Intel): 0x2870f0
+     * @note[short] Windows: 0x8b860
+     * @note[short] iOS: 0x85924
      * @note[short] Android
      */
-    virtual void textChanged(CCTextInputNode* p0);
+    virtual void textChanged(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x220034
-     * @note[short] MacOS (Intel): 0x2753e0
-     * @note[short] Windows: 0x7b5c0
-     * @note[short] iOS: 0x89a7c
+     * @note[short] MacOS (ARM): 0x2289d4
+     * @note[short] MacOS (Intel): 0x2872f0
+     * @note[short] Windows: 0x7b600
+     * @note[short] iOS: 0x859fc
      * @note[short] Android
      */
-    virtual void textInputShouldOffset(CCTextInputNode* p0, float p1);
+    virtual void textInputShouldOffset(CCTextInputNode* node, float yOffset);
 
     /**
-     * @note[short] MacOS (ARM): 0x220104
-     * @note[short] MacOS (Intel): 0x2754a0
-     * @note[short] Windows: 0x7b620
-     * @note[short] iOS: 0x89ae8
+     * @note[short] MacOS (ARM): 0x228aa4
+     * @note[short] MacOS (Intel): 0x2873b0
+     * @note[short] Windows: 0x7b660
+     * @note[short] iOS: 0x85a68
      * @note[short] Android
      */
-    virtual void textInputReturn(CCTextInputNode* p0);
+    virtual void textInputReturn(CCTextInputNode* node);
 
     /**
+     * @note[short] MacOS (ARM): 0x22852c
+     * @note[short] MacOS (Intel): 0x286dd0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-    CCMenuItemToggler* createToggleButton(gd::string p0, cocos2d::SEL_MenuHandler p1, bool p2, cocos2d::CCMenu* p3, cocos2d::CCPoint p4);
+    CCMenuItemToggler* createToggleButton(gd::string label, cocos2d::SEL_MenuHandler selector, bool toggled, cocos2d::CCMenu* menu, cocos2d::CCPoint position);
 
     /**
+     * @note[short] MacOS (ARM): 0x227f38
+     * @note[short] MacOS (Intel): 0x286740
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x8550c
      * @note[short] Android
      */
     void determineStartValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x21ec48
-     * @note[short] MacOS (Intel): 0x273e80
-     * @note[short] Windows: 0x8a9f0
-     * @note[short] iOS: 0x88cd0
+     * @note[short] MacOS (ARM): 0x2275a8
+     * @note[short] MacOS (Intel): 0x285d60
+     * @note[short] Windows: 0x8aa40
+     * @note[short] iOS: 0x84c14
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x21f6a4
-     * @note[short] MacOS (Intel): 0x274950
-     * @note[short] Windows: 0x8ba80
-     * @note[short] iOS: 0x8967c
+     * @note[short] MacOS (ARM): 0x227ff0
+     * @note[short] MacOS (Intel): 0x286810
+     * @note[short] Windows: 0x8bb40
+     * @note[short] iOS: 0x855c0
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x8b550
+     * @note[short] MacOS (ARM): 0x228444
+     * @note[short] MacOS (Intel): 0x286cd0
+     * @note[short] Windows: 0x8b5a0
+     * @note[short] iOS: 0x85794
      * @note[short] Android
      */
     void onDynamicBlock(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x21f87c
-     * @note[short] MacOS (Intel): 0x274b60
-     * @note[short] Windows: 0x8b600
-     * @note[short] iOS: 0x89734
+     * @note[short] MacOS (ARM): 0x228228
+     * @note[short] MacOS (Intel): 0x286a90
+     * @note[short] Windows: 0x8b650
+     * @note[short] iOS: 0x856b0
      * @note[short] Android
      */
     void onItemIDArrow(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x8b650
+     * @note[short] MacOS (ARM): 0x2280c0
+     * @note[short] MacOS (Intel): 0x2868f0
+     * @note[short] Windows: 0x8b6a0
+     * @note[short] iOS: 0x85634
      * @note[short] Android
      */
     void onNextItemID(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x8b890
+     * @note[short] MacOS (ARM): 0x228728
+     * @note[short] MacOS (Intel): 0x286f90
+     * @note[short] Windows: 0x8b950
+     * @note[short] iOS: 0x85810
      * @note[short] Android
      */
     void updateEditorLabel();
 
     /**
-     * @note[short] Windows: 0x8b990
+     * @note[short] MacOS (ARM): 0x2287a0
+     * @note[short] MacOS (Intel): 0x287010
+     * @note[short] Windows: 0x8ba50
+     * @note[short] iOS: 0x85888
      * @note[short] Android
      */
     void updateItemID();
 
     /**
-     * @note[short] Windows: 0x8b910
+     * @note[short] MacOS (ARM): 0x228340
+     * @note[short] MacOS (Intel): 0x286bc0
+     * @note[short] Windows: 0x8b9d0
+     * @note[short] iOS: 0x85704
      * @note[short] Android
      */
     void updateTextInputLabel();

@@ -25,91 +25,100 @@ public:
      ShardsPage();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x424bb8
+     * @note[short] MacOS (Intel): 0x4c56c0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x3a1aa8
+     * @note[short] Android: Rebinded
      */
      ~ShardsPage();
 
     /**
-     * @note[short] MacOS (ARM): 0x41ac58
-     * @note[short] MacOS (Intel): 0x4b26e0
+     * @note[short] MacOS (ARM): 0x424ddc
+     * @note[short] MacOS (Intel): 0x4c59f0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3a1b4c
      * @note[short] Android
      */
     static ShardsPage* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x41ad58
-     * @note[short] MacOS (Intel): 0x4b2820
-     * @note[short] Windows: 0x471620
-     * @note[short] iOS: 0x39a9e4
+     * @note[short] MacOS (ARM): 0x424edc
+     * @note[short] MacOS (Intel): 0x4c5b30
+     * @note[short] Windows: 0x489b00
+     * @note[short] iOS: 0x3a1c08
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x41ca28
-     * @note[short] MacOS (Intel): 0x4b47d0
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x39c3c8
+     * @note[short] MacOS (ARM): 0x426bc8
+     * @note[short] MacOS (Intel): 0x4c7a20
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x3a3608
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x41c9ac
-     * @note[short] MacOS (Intel): 0x4b4760
-     * @note[short] Windows: 0x84650
-     * @note[short] iOS: 0x39c34c
+     * @note[short] MacOS (ARM): 0x426b4c
+     * @note[short] MacOS (Intel): 0x4c79b0
+     * @note[short] Windows: 0x846a0
+     * @note[short] iOS: 0x3a358c
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x41c824
-     * @note[short] MacOS (Intel): 0x4b45d0
-     * @note[short] Windows: 0x867a0
-     * @note[short] iOS: 0x39c1d8
+     * @note[short] MacOS (ARM): 0x4269c0
+     * @note[short] MacOS (Intel): 0x4c7820
+     * @note[short] Windows: 0x867f0
+     * @note[short] iOS: 0x3a3414
      * @note[short] Android
      */
     virtual void show();
 
     /**
+     * @note[short] MacOS (ARM): 0x426b48
+     * @note[short] MacOS (Intel): 0x4c79a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    void FLAlert_Clicked(FLAlertLayer* alert, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x41c6d8
-     * @note[short] MacOS (Intel): 0x4b4480
-     * @note[short] iOS: 0x39c094
+     * @note[short] MacOS (ARM): 0x426874
+     * @note[short] MacOS (Intel): 0x4c76e0
+     * @note[short] Windows: 0x48cb70
+     * @note[short] iOS: 0x3a32d0
      * @note[short] Android
      */
-    void goToPage(int p0);
+    void goToPage(int page);
 
     /**
-     * @note[short] Windows: 0x84620
+     * @note[short] MacOS (ARM): 0x4267c0
+     * @note[short] MacOS (Intel): 0x4c7640
+     * @note[short] Windows: 0x84670
+     * @note[short] iOS: 0x3a321c
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x41c660
-     * @note[short] MacOS (Intel): 0x4b4410
-     * @note[short] Windows: 0x474610
-     * @note[short] iOS: 0x39c01c
+     * @note[short] MacOS (ARM): 0x4267fc
+     * @note[short] MacOS (Intel): 0x4c7670
+     * @note[short] Windows: 0x48caf0
+     * @note[short] iOS: 0x3a3258
      * @note[short] Android
      */
     void onIconInfo(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x41c698
-     * @note[short] MacOS (Intel): 0x4b4440
-     * @note[short] Windows: 0x474650
-     * @note[short] iOS: 0x39c054
+     * @note[short] MacOS (ARM): 0x426834
+     * @note[short] MacOS (Intel): 0x4c76a0
+     * @note[short] Windows: 0x48cb30
+     * @note[short] iOS: 0x3a3290
      * @note[short] Android
      */
     void onSwitchPage(cocos2d::CCObject* sender);

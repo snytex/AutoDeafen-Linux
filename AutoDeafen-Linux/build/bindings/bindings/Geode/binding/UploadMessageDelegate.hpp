@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void uploadMessageFinished(int p0);
+    virtual void uploadMessageFinished(int accountID);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,5 +29,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void uploadMessageFailed(int p0);
+    virtual void uploadMessageFailed(int accountID);
 };

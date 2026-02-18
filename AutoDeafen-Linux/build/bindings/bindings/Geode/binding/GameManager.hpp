@@ -26,330 +26,430 @@ public:
     static GameManager* get();
 
     /**
-     * @note[short] MacOS (ARM): 0x2f60ec
-     * @note[short] MacOS (Intel): 0x363400
-     * @note[short] Windows: 0x178480
-     * @note[short] iOS: 0x311de4
+     * @note[short] MacOS (ARM): 0x300128
+     * @note[short] MacOS (Intel): 0x376a80
+     * @note[short] Windows: 0x17b4a0
+     * @note[short] iOS: 0x311ce8
      * @note[short] Android
      */
     static GameManager* sharedState();
 
     /**
-     * @note[short] MacOS (ARM): 0x308ae4
-     * @note[short] MacOS (Intel): 0x3785d0
-     * @note[short] Windows: 0x186c40
-     * @note[short] iOS: 0x31d65c
+     * @note[short] MacOS (ARM): 0x312910
+     * @note[short] MacOS (Intel): 0x38bb20
+     * @note[short] Windows: 0x189bc0
+     * @note[short] iOS: 0x31d358
      * @note[short] Android
      */
-    virtual void update(float p0);
+    virtual void update(float dt);
 
     /**
-     * @note[short] MacOS (ARM): 0x2f6158
-     * @note[short] MacOS (Intel): 0x363460
-     * @note[short] Windows: 0x1784d0
-     * @note[short] iOS: 0x311e44
+     * @note[short] MacOS (ARM): 0x300194
+     * @note[short] MacOS (Intel): 0x376ae0
+     * @note[short] Windows: 0x17b4f0
+     * @note[short] iOS: 0x311d48
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x307eec
-     * @note[short] MacOS (Intel): 0x3779c0
-     * @note[short] Windows: 0x186050
-     * @note[short] iOS: 0x31ce28
+     * @note[short] MacOS (ARM): 0x311d34
+     * @note[short] MacOS (Intel): 0x38af20
+     * @note[short] Windows: 0x188fb0
+     * @note[short] iOS: 0x31cb0c
      * @note[short] Android
      */
-    virtual void encodeDataTo(DS_Dictionary* p0);
+    virtual void encodeDataTo(DS_Dictionary* dict);
 
     /**
-     * @note[short] MacOS (ARM): 0x306384
-     * @note[short] MacOS (Intel): 0x375ba0
-     * @note[short] Windows: 0x183b40
-     * @note[short] iOS: 0x31b6a4
+     * @note[short] MacOS (ARM): 0x310294
+     * @note[short] MacOS (Intel): 0x389140
+     * @note[short] Windows: 0x186a90
+     * @note[short] iOS: 0x31b408
      * @note[short] Android
      */
-    virtual void dataLoaded(DS_Dictionary* p0);
+    virtual void dataLoaded(DS_Dictionary* dict);
 
     /**
-     * @note[short] MacOS (ARM): 0x3076a8
-     * @note[short] MacOS (Intel): 0x377060
-     * @note[short] Windows: 0x185750
-     * @note[short] iOS: 0x31c908
+     * @note[short] MacOS (ARM): 0x311520
+     * @note[short] MacOS (Intel): 0x38a600
+     * @note[short] Windows: 0x1886b0
+     * @note[short] iOS: 0x31c5f8
      * @note[short] Android
      */
     virtual void firstLoad();
 
     /**
-     * @note[short] MacOS (ARM): 0x302bd8
-     * @note[short] MacOS (Intel): 0x3717e0
+     * @note[short] MacOS (ARM): 0x30cb20
+     * @note[short] MacOS (Intel): 0x384e20
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3198f0
+     * @note[short] iOS: 0x319740
      * @note[short] Android
      */
     void accountStatusChanged();
 
     /**
-     * @note[short] MacOS (ARM): 0x2feb3c
-     * @note[short] MacOS (Intel): 0x36d480
-     * @note[short] Windows: 0x17ea70
-     * @note[short] iOS: 0x31781c
+     * @note[short] MacOS (ARM): 0x308b74
+     * @note[short] MacOS (Intel): 0x380b80
+     * @note[short] Windows: 0x181a90
+     * @note[short] iOS: 0x317640
      * @note[short] Android
      */
-    int activeIconForType(IconType p0);
+    int activeIconForType(IconType type);
 
     /**
+     * @note[short] MacOS (ARM): 0x20a000
+     * @note[short] MacOS (Intel): 0x266460
+     * @note[short] Windows: 0x1aeb60
+     * @note[short] iOS: 0x34f588
      * @note[short] Android: Rebinded
      */
-    TodoReturn addCustomAnimationFrame(int p0, int p1, gd::string p2, gd::string p3);
+    void addCustomAnimationFrame(int objectID, int frameIndex, gd::string mainFrame, gd::string detailFrame);
 
     /**
+     * @note[short] MacOS (ARM): 0x20a118
+     * @note[short] MacOS (Intel): 0x266590
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn addDuplicateLastFrame(int p0);
+    void addDuplicateLastFrame(int objectID);
 
     /**
+     * @note[short] MacOS (ARM): 0x209d90
+     * @note[short] MacOS (Intel): 0x2661e0
+     * @note[short] Windows: 0x1ae9f0
+     * @note[short] iOS: 0x34f3e4
      * @note[short] Android: Rebinded
      */
-    TodoReturn addGameAnimation(int p0, int p1, float p2, gd::string p3, gd::string p4, int p5);
+    void addGameAnimation(int objectID, int frames, float frameTime, gd::string mainAnimFrame, gd::string detailAnimFrame, int defaultFrame);
 
     /**
+     * @note[short] MacOS (ARM): 0x30951c
+     * @note[short] MacOS (Intel): 0x3818c0
      * @note[short] Android
      */
-    TodoReturn addIconDelegate(cocos2d::CCObject* p0, int p1);
+    void addIconDelegate(cocos2d::CCObject* delegate, int key);
 
     /**
-     * @note[short] MacOS (ARM): 0x302400
-     * @note[short] MacOS (Intel): 0x370fd0
-     * @note[short] Windows: 0x1807d0
-     * @note[short] iOS: 0x319548
+     * @note[short] MacOS (ARM): 0x30c39c
+     * @note[short] MacOS (Intel): 0x384670
+     * @note[short] Windows: 0x1837f0
+     * @note[short] iOS: 0x319398
      * @note[short] Android: Rebinded
      */
     void addNewCustomObject(gd::string str);
 
     /**
+     * @note[short] MacOS (ARM): 0x30e288
+     * @note[short] MacOS (Intel): 0x386b30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn addToGJLog(cocos2d::CCString* p0);
+    void addToGJLog(cocos2d::CCString* str);
 
     /**
+     * @note[short] MacOS (ARM): 0x31295c
+     * @note[short] MacOS (Intel): 0x38bb70
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x31d384
      * @note[short] Android
      */
     void applicationDidEnterBackground();
 
     /**
-     * @note[short] Windows: 0x186cd0
+     * @note[short] MacOS (ARM): 0x312960
+     * @note[short] MacOS (Intel): 0x38bb80
+     * @note[short] Windows: 0x189c50
+     * @note[short] iOS: 0x31d388
      * @note[short] Android
      */
-    TodoReturn applicationWillEnterForeground();
+    void applicationWillEnterForeground();
 
     /**
-     * @note[short] MacOS (ARM): 0x2f6240
-     * @note[short] MacOS (Intel): 0x363550
-     * @note[short] iOS: 0x311f24
+     * @note[short] MacOS (ARM): 0x300268
+     * @note[short] MacOS (Intel): 0x376bd0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x311e14
      * @note[short] Android
      */
     void calculateBaseKeyForIcons();
 
     /**
+     * @note[short] MacOS (ARM): 0x308258
+     * @note[short] MacOS (Intel): 0x380300
      * @note[short] Android
      */
-    TodoReturn canShowRewardedVideo();
+    bool canShowRewardedVideo();
 
     /**
+     * @note[short] MacOS (ARM): 0x303330
+     * @note[short] MacOS (Intel): 0x379f60
+     * @note[short] Windows: 0x17e1c0
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn checkSteamAchievementUnlock();
+    void checkSteamAchievementUnlock();
 
     /**
-     * @note[short] MacOS (ARM): 0x2fcce8
-     * @note[short] MacOS (Intel): 0x36b860
-     * @note[short] Windows: 0x1811b0
-     * @note[short] iOS: 0x316a40
+     * @note[short] MacOS (ARM): 0x306d84
+     * @note[short] MacOS (Intel): 0x37eeb0
+     * @note[short] Windows: 0x1841d0
+     * @note[short] iOS: 0x3168dc
      * @note[short] Android
      */
     void checkUsedIcons();
 
     /**
-     * @note[short] Android: Rebinded
-     */
-    TodoReturn claimItemsResponse(gd::string p0);
-
-    /**
-     * @note[short] Android
-     */
-    TodoReturn clearGJLog();
-
-    /**
-     * @note[short] MacOS (ARM): 0x2fdae8
-     * @note[short] MacOS (Intel): 0x36c520
-     * @note[short] Windows: 0x17e330
-     * @note[short] iOS: 0x316f24
-     * @note[short] Android
-     */
-    cocos2d::ccColor3B colorForIdx(int p0);
-
-    /**
-     * @note[short] Android
-     */
-    TodoReturn colorForPos(int p0);
-
-    /**
-     * @note[short] Windows: 0x179790
-     * @note[short] Android
-     */
-    gd::string colorKey(int p0, UnlockType p1);
-
-    /**
-     * @note[short] MacOS (ARM): 0x2f8464
-     * @note[short] MacOS (Intel): 0x365aa0
-     * @note[short] Windows: 0x17a1d0
-     * @note[short] Android: Rebinded
-     */
-    void completedAchievement(gd::string p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x2febfc
-     * @note[short] MacOS (Intel): 0x36d6f0
-     * @note[short] Windows: 0x17ebe0
-     * @note[short] iOS: 0x3178fc
-     * @note[short] Android
-     */
-    int countForType(IconType p0);
-
-    /**
-     * @note[short] Android
-     */
-    TodoReturn defaultFrameForAnimation(int p0);
-
-    /**
-     * @note[short] Android
-     */
-    TodoReturn defaultYOffsetForBG2(int p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x308a38
-     * @note[short] MacOS (Intel): 0x378540
+     * @note[short] MacOS (ARM): 0x307b04
+     * @note[short] MacOS (Intel): 0x37fb60
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x31d618
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Rebinded
+     */
+    void claimItemsResponse(gd::string str);
+
+    /**
+     * @note[short] MacOS (ARM): 0x30e290
+     * @note[short] MacOS (Intel): 0x386b50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x31a5e0
+     * @note[short] Android
+     */
+    void clearGJLog();
+
+    /**
+     * @note[short] MacOS (ARM): 0x307b08
+     * @note[short] MacOS (Intel): 0x37fb70
+     * @note[short] Windows: 0x181350
+     * @note[short] iOS: 0x316d48
+     * @note[short] Android
+     */
+    cocos2d::ccColor3B colorForIdx(int index);
+
+    /**
+     * @note[short] MacOS (ARM): 0x307fd4
+     * @note[short] MacOS (Intel): 0x380030
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    int colorForPos(int pos);
+
+    /**
+     * @note[short] MacOS (ARM): 0x301680
+     * @note[short] MacOS (Intel): 0x378320
+     * @note[short] Windows: 0x17c7b0
+     * @note[short] iOS: 0x312d24
+     * @note[short] Android
+     */
+    gd::string colorKey(int id, UnlockType type);
+
+    /**
+     * @note[short] MacOS (ARM): 0x30253c
+     * @note[short] MacOS (Intel): 0x3790e0
+     * @note[short] Windows: 0x17d1f0
+     * @note[short] iOS: 0x3136dc
+     * @note[short] Android: Rebinded
+     */
+    void completedAchievement(gd::string key);
+
+    /**
+     * @note[short] MacOS (ARM): 0x308c84
+     * @note[short] MacOS (Intel): 0x380df0
+     * @note[short] Windows: 0x181c00
+     * @note[short] iOS: 0x317750
+     * @note[short] Android
+     */
+    int countForType(IconType type);
+
+    /**
+     * @note[short] MacOS (ARM): 0x201d2c
+     * @note[short] MacOS (Intel): 0x25d9c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    int defaultFrameForAnimation(int objectID);
+
+    /**
+     * @note[short] MacOS (ARM): 0x312860
+     * @note[short] MacOS (Intel): 0x38ba90
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x31d310
      * @note[short] Android
      */
     void didExitPlayscene();
 
     /**
+     * @note[short] MacOS (ARM): 0x312834
+     * @note[short] MacOS (Intel): 0x38ba60
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x31d2e4
      * @note[short] Android
      */
     void doQuickSave();
 
     /**
-     * @note[short] MacOS (ARM): 0x304e14
-     * @note[short] MacOS (Intel): 0x374330
-     * @note[short] Windows: 0x183540
+     * @note[short] MacOS (ARM): 0x30ecf4
+     * @note[short] MacOS (Intel): 0x3878b0
+     * @note[short] Windows: 0x186490
+     * @note[short] iOS: 0x31a98c
      * @note[short] Android
      */
-    TodoReturn dpadConfigToString(UIButtonConfig& p0);
+    gd::string dpadConfigToString(UIButtonConfig& config);
 
     /**
+     * @note[short] MacOS (ARM): 0x307af0
+     * @note[short] MacOS (Intel): 0x37fb20
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn eventUnlockFeature(char const* p0);
+    void eventUnlockFeature(char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x2f6a1c
-     * @note[short] MacOS (Intel): 0x363ca0
-     * @note[short] Windows: 0x178a90
-     * @note[short] iOS: 0x312450
+     * @note[short] MacOS (ARM): 0x300a40
+     * @note[short] MacOS (Intel): 0x3772f0
+     * @note[short] Windows: 0x17bab0
+     * @note[short] iOS: 0x3122dc
      * @note[short] Android
      */
     void fadeInMenuMusic();
 
     /**
-     * @note[short] MacOS (ARM): 0x2f6b18
-     * @note[short] MacOS (Intel): 0x363d80
-     * @note[short] Windows: 0x178b80
-     * @note[short] iOS: 0x3124e0
+     * @note[short] MacOS (ARM): 0x300b38
+     * @note[short] MacOS (Intel): 0x3773d0
+     * @note[short] Windows: 0x17bba0
+     * @note[short] iOS: 0x31236c
      * @note[short] Android: Rebinded
      */
-    void fadeInMusic(gd::string p0);
+    void fadeInMusic(gd::string path);
 
     /**
+     * @note[short] MacOS (ARM): 0x30b078
+     * @note[short] MacOS (Intel): 0x383440
+     * @note[short] Windows: 0x182950
+     * @note[short] iOS: 0x318574
      * @note[short] Android
      */
-    TodoReturn finishedLoadingBGAsync(cocos2d::CCObject* p0);
+    void finishedLoadingBGAsync(cocos2d::CCObject* obj);
 
     /**
+     * @note[short] MacOS (ARM): 0x30b700
+     * @note[short] MacOS (Intel): 0x383a80
+     * @note[short] Windows: 0x182df0
+     * @note[short] iOS: 0x318bec
      * @note[short] Android
      */
-    TodoReturn finishedLoadingGAsync(int p0);
+    void finishedLoadingGAsync(int index);
 
     /**
+     * @note[short] MacOS (ARM): 0x30b668
+     * @note[short] MacOS (Intel): 0x383a00
+     * @note[short] Windows: 0x182d70
+     * @note[short] iOS: 0x318b54
      * @note[short] Android
      */
-    TodoReturn finishedLoadingGAsync1(cocos2d::CCObject* p0);
+    void finishedLoadingGAsync1(cocos2d::CCObject* obj);
 
     /**
+     * @note[short] MacOS (ARM): 0x30b6b4
+     * @note[short] MacOS (Intel): 0x383a40
+     * @note[short] Windows: 0x182db0
+     * @note[short] iOS: 0x318ba0
      * @note[short] Android
      */
-    TodoReturn finishedLoadingGAsync2(cocos2d::CCObject* p0);
+    void finishedLoadingGAsync2(cocos2d::CCObject* obj);
 
     /**
+     * @note[short] MacOS (ARM): 0x309690
+     * @note[short] MacOS (Intel): 0x381a80
      * @note[short] Android
      */
-    TodoReturn finishedLoadingIconAsync(cocos2d::CCObject* p0);
+    void finishedLoadingIconAsync(cocos2d::CCObject* obj);
 
     /**
+     * @note[short] MacOS (ARM): 0x30b3a0
+     * @note[short] MacOS (Intel): 0x383730
+     * @note[short] Windows: 0x182b90
+     * @note[short] iOS: 0x31889c
      * @note[short] Android
      */
-    TodoReturn finishedLoadingMGAsync(int p0);
+    void finishedLoadingMGAsync(int index);
 
     /**
+     * @note[short] MacOS (ARM): 0x30b308
+     * @note[short] MacOS (Intel): 0x3836b0
+     * @note[short] Windows: 0x182b10
+     * @note[short] iOS: 0x318804
      * @note[short] Android
      */
-    TodoReturn finishedLoadingMGAsync1(cocos2d::CCObject* p0);
+    void finishedLoadingMGAsync1(cocos2d::CCObject* obj);
 
     /**
+     * @note[short] MacOS (ARM): 0x30b354
+     * @note[short] MacOS (Intel): 0x3836f0
+     * @note[short] Windows: 0x182b50
+     * @note[short] iOS: 0x318850
      * @note[short] Android
      */
-    TodoReturn finishedLoadingMGAsync2(cocos2d::CCObject* p0);
+    void finishedLoadingMGAsync2(cocos2d::CCObject* obj);
 
     /**
-     * @note[short] MacOS (ARM): 0x2fe874
-     * @note[short] MacOS (Intel): 0x36d1e0
-     * @note[short] iOS: 0x317578
+     * @note[short] MacOS (ARM): 0x3088ac
+     * @note[short] MacOS (Intel): 0x3808d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x31739c
      * @note[short] Android
      */
     void followTwitch();
 
     /**
-     * @note[short] MacOS (ARM): 0x2fe774
-     * @note[short] MacOS (Intel): 0x36d100
-     * @note[short] iOS: 0x317480
+     * @note[short] MacOS (ARM): 0x3087ac
+     * @note[short] MacOS (Intel): 0x3807f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3172a4
      * @note[short] Android
      */
     void followTwitter();
 
     /**
-     * @note[short] Android
-     */
-    TodoReturn framesForAnimation(int p0);
-
-    /**
-     * @note[short] Android
-     */
-    TodoReturn frameTimeForAnimation(int p0);
-
-    /**
-     * @note[short] Android
-     */
-    TodoReturn generateSecretNumber();
-
-    /**
-     * @note[short] MacOS (ARM): 0x3017dc
-     * @note[short] MacOS (Intel): 0x370460
+     * @note[short] MacOS (ARM): 0x201f04
+     * @note[short] MacOS (Intel): 0x25dbc0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x318e30
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    const char* getBGTexture(int id);
+    int framesForAnimation(int objectID);
+
+    /**
+     * @note[short] MacOS (ARM): 0x201f34
+     * @note[short] MacOS (Intel): 0x25dbf0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    float frameTimeForAnimation(int objectID);
+
+    /**
+     * @note[short] MacOS (ARM): 0x30e0cc
+     * @note[short] MacOS (Intel): 0x3868c0
+     * @note[short] Windows: 0x185cf0
+     * @note[short] iOS: 0x31a548
+     * @note[short] Android
+     */
+    int generateSecretNumber();
+
+    /**
+     * @note[short] MacOS (ARM): 0x30b79c
+     * @note[short] MacOS (Intel): 0x383b20
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x318c88
+     * @note[short] Android
+     */
+    const char* getBGTexture(int index);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -361,17 +461,22 @@ public:
     LevelEditorLayer* getEditorLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x300d14
-     * @note[short] MacOS (Intel): 0x36fa00
-     * @note[short] iOS: 0x318378
+     * @note[short] MacOS (ARM): 0x30acd0
+     * @note[short] MacOS (Intel): 0x3830d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3181d0
      * @note[short] Android
      */
-    void getFontFile(int p0);
+    const char* getFontFile(int index);
 
     /**
+     * @note[short] MacOS (ARM): 0x30ad3c
+     * @note[short] MacOS (Intel): 0x383120
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x31823c
      * @note[short] Android
      */
-    TodoReturn getFontTexture(int p0);
+    const char* getFontTexture(int index);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -383,13 +488,13 @@ public:
     GJBaseGameLayer* getGameLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x2f6894
-     * @note[short] MacOS (Intel): 0x363b40
-     * @note[short] Windows: 0x1800f0
-     * @note[short] iOS: 0x312374
+     * @note[short] MacOS (ARM): 0x3008a0
+     * @note[short] MacOS (Intel): 0x3771a0
+     * @note[short] Windows: 0x183110
+     * @note[short] iOS: 0x312200
      * @note[short] Android
      */
-    bool getGameVariable(char const* p0);
+    bool getGameVariable(char const* key);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -401,29 +506,31 @@ public:
     bool getGameVariableDefault(const char* key, bool defaultValue);
 
     /**
-     * @note[short] MacOS (ARM): 0x301874
-     * @note[short] MacOS (Intel): 0x370500
+     * @note[short] MacOS (ARM): 0x30b834
+     * @note[short] MacOS (Intel): 0x383bc0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x318d20
      * @note[short] Android
      */
-    char const* getGTexture(int p0);
+    const char* getGTexture(int index);
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x30ab30
+     * @note[short] MacOS (Intel): 0x382f10
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3182c0
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x318114
+     * @note[short] Android
      */
     int getIconRequestID();
 
     /**
-     * @note[short] MacOS (ARM): 0x3020bc
-     * @note[short] MacOS (Intel): 0x370ca0
-     * @note[short] Windows: 0x1806f0
-     * @note[short] iOS: 0x319324
+     * @note[short] MacOS (ARM): 0x30c050
+     * @note[short] MacOS (Intel): 0x384330
+     * @note[short] Windows: 0x183710
+     * @note[short] iOS: 0x319174
      * @note[short] Android
      */
-    int getIntGameVariable(char const* p0);
+    int getIntGameVariable(char const* key);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -435,33 +542,46 @@ public:
     int getIntGameVariableDefault(const char* key, int defaultValue);
 
     /**
-     * @note[short] MacOS (ARM): 0x2f63c0
-     * @note[short] MacOS (Intel): 0x3636f0
-     * @note[short] Windows: 0x178700
-     * @note[short] iOS: 0x312078
+     * @note[short] MacOS (ARM): 0x3003e8
+     * @note[short] MacOS (Intel): 0x376d70
+     * @note[short] Windows: 0x17b720
+     * @note[short] iOS: 0x311f04
      * @note[short] Android
      */
     gd::string getMenuMusicFile();
 
     /**
+     * @note[short] MacOS (ARM): 0x30b7e8
+     * @note[short] MacOS (Intel): 0x383b70
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x318cd4
      * @note[short] Android
      */
-    TodoReturn getMGTexture(int p0);
+    const char* getMGTexture(int index);
 
     /**
+     * @note[short] MacOS (ARM): 0x30c174
+     * @note[short] MacOS (Intel): 0x384440
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x319208
      * @note[short] Android
      */
-    TodoReturn getNextUniqueObjectKey();
+    int getNextUniqueObjectKey();
 
     /**
+     * @note[short] MacOS (ARM): 0x30c26c
+     * @note[short] MacOS (Intel): 0x384530
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3192c4
      * @note[short] Android
      */
-    TodoReturn getNextUsedKey(int p0, bool p1);
+    int getNextUsedKey(int index, bool up);
 
     /**
-     * @note[short] MacOS (ARM): 0x302280
-     * @note[short] MacOS (Intel): 0x370e40
-     * @note[short] iOS: 0x319428
+     * @note[short] MacOS (ARM): 0x30c220
+     * @note[short] MacOS (Intel): 0x3844e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x319278
      * @note[short] Android
      */
     cocos2d::CCArray* getOrderedCustomObjectKeys();
@@ -620,291 +740,360 @@ public:
     PlayLayer* getPlayLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x2f6540
-     * @note[short] MacOS (Intel): 0x363850
-     * @note[short] iOS: 0x312140
+     * @note[short] MacOS (ARM): 0x30055c
+     * @note[short] MacOS (Intel): 0x376ec0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x311fcc
      * @note[short] Android
      */
-    TodoReturn getPracticeMusicFile();
+    gd::string getPracticeMusicFile();
 
     /**
-     * @note[short] MacOS (ARM): 0x301df0
-     * @note[short] MacOS (Intel): 0x370a10
-     * @note[short] Windows: 0x180480
-     * @note[short] iOS: 0x319198
+     * @note[short] MacOS (ARM): 0x30bd78
+     * @note[short] MacOS (Intel): 0x3840b0
+     * @note[short] Windows: 0x1834a0
+     * @note[short] iOS: 0x318fe8
      * @note[short] Android
      */
-    bool getUGV(char const* p0);
+    bool getUGV(char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x2f7a94
-     * @note[short] MacOS (Intel): 0x3650e0
-     * @note[short] Windows: 0x179980
-     * @note[short] iOS: 0x313158
+     * @note[short] MacOS (ARM): 0x301aa4
+     * @note[short] MacOS (Intel): 0x378750
+     * @note[short] Windows: 0x17c9a0
+     * @note[short] iOS: 0x312ff8
      * @note[short] Android: Rebinded
      */
-    void getUnlockForAchievement(gd::string p0, int& p1, UnlockType& p2);
+    void getUnlockForAchievement(gd::string key, int& id, UnlockType& type);
 
     /**
+     * @note[short] MacOS (ARM): 0x30b43c
+     * @note[short] MacOS (Intel): 0x3837d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn groundHasSecondaryColor(int p0);
+    bool groundHasSecondaryColor(int index);
 
     /**
+     * @note[short] MacOS (ARM): 0x309a4c
+     * @note[short] MacOS (Intel): 0x381e40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn iconAndTypeForKey(int p0, int& p1, int& p2);
+    void iconAndTypeForKey(int key, int& id, int& type);
 
     /**
-     * @note[short] Windows: 0x1792b0
+     * @note[short] MacOS (ARM): 0x301028
+     * @note[short] MacOS (Intel): 0x377a50
+     * @note[short] Windows: 0x17c2d0
+     * @note[short] iOS: 0x312814
      * @note[short] Android
      */
-    gd::string iconKey(int p0, IconType p1);
+    gd::string iconKey(int id, IconType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x2f7498
-     * @note[short] MacOS (Intel): 0x364990
-     * @note[short] Windows: 0x1795c0
-     * @note[short] iOS: 0x312cb0
+     * @note[short] MacOS (ARM): 0x3014ac
+     * @note[short] MacOS (Intel): 0x377ff0
+     * @note[short] Windows: 0x17c5e0
+     * @note[short] iOS: 0x312b10
      * @note[short] Android
      */
-    UnlockType iconTypeToUnlockType(IconType p0);
+    UnlockType iconTypeToUnlockType(IconType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x2f78a8
-     * @note[short] MacOS (Intel): 0x364f40
-     * @note[short] Windows: 0x1798c0
-     * @note[short] iOS: 0x312fb8
+     * @note[short] MacOS (ARM): 0x3018b0
+     * @note[short] MacOS (Intel): 0x3785c0
+     * @note[short] Windows: 0x17c8e0
+     * @note[short] iOS: 0x312e58
      * @note[short] Android
      */
-    bool isColorUnlocked(int p0, UnlockType p1);
+    bool isColorUnlocked(int id, UnlockType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x2fec84
-     * @note[short] MacOS (Intel): 0x36d8f0
+     * @note[short] MacOS (ARM): 0x308d60
+     * @note[short] MacOS (Intel): 0x381000
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x31782c
      * @note[short] Android
      */
-    bool isIconLoaded(int p0, int p1);
+    bool isIconLoaded(int id, int type);
 
     /**
-     * @note[short] MacOS (ARM): 0x2f7388
-     * @note[short] MacOS (Intel): 0x3648d0
-     * @note[short] Windows: 0x1794e0
-     * @note[short] iOS: 0x312be8
+     * @note[short] MacOS (ARM): 0x301398
+     * @note[short] MacOS (Intel): 0x377f30
+     * @note[short] Windows: 0x17c500
+     * @note[short] iOS: 0x312a48
      * @note[short] Android
      */
-    bool isIconUnlocked(int p0, IconType p1);
+    bool isIconUnlocked(int id, IconType type);
 
     /**
+     * @note[short] MacOS (ARM): 0x307af8
+     * @note[short] MacOS (Intel): 0x37fb40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn itemPurchased(char const* p0);
+    void itemPurchased(char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x2fe8f4
-     * @note[short] MacOS (Intel): 0x36d250
-     * @note[short] iOS: 0x3175f4
+     * @note[short] MacOS (ARM): 0x30892c
+     * @note[short] MacOS (Intel): 0x380940
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x317418
      * @note[short] Android
      */
     void joinDiscord();
 
     /**
-     * @note[short] MacOS (ARM): 0x2fe974
-     * @note[short] MacOS (Intel): 0x36d2c0
-     * @note[short] iOS: 0x317670
+     * @note[short] MacOS (ARM): 0x3089ac
+     * @note[short] MacOS (Intel): 0x3809b0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x317494
      * @note[short] Android
      */
     void joinReddit();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x308e34
+     * @note[short] MacOS (Intel): 0x3810e0
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
-     */
-    int keyForIcon(int iconIdx, int iconEnum);
-
-    /**
      * @note[short] Android
      */
-    TodoReturn levelIsPremium(int p0, int p1);
+    int keyForIcon(int id, int type);
 
     /**
-     * @note[short] MacOS (ARM): 0x2fe6f4
-     * @note[short] MacOS (Intel): 0x36d090
-     * @note[short] iOS: 0x317404
+     * @note[short] MacOS (ARM): 0x307afc
+     * @note[short] MacOS (Intel): 0x37fb50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    bool levelIsPremium(int unk1, int unk2);
+
+    /**
+     * @note[short] MacOS (ARM): 0x30872c
+     * @note[short] MacOS (Intel): 0x380780
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x317228
      * @note[short] Android
      */
     void likeFacebook();
 
     /**
-     * @note[short] MacOS (ARM): 0x300f5c
-     * @note[short] MacOS (Intel): 0x36fc40
-     * @note[short] Windows: 0x17f880
-     * @note[short] iOS: 0x3185c0
+     * @note[short] MacOS (ARM): 0x30af28
+     * @note[short] MacOS (Intel): 0x383300
+     * @note[short] Windows: 0x1828a0
+     * @note[short] iOS: 0x318424
      * @note[short] Android
      */
-    void loadBackground(int p0);
+    void loadBackground(int index);
 
     /**
-     * @note[short] Android
-     */
-    void loadBackgroundAsync(int p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x300de4
-     * @note[short] MacOS (Intel): 0x36fac0
+     * @note[short] MacOS (ARM): 0x30afcc
+     * @note[short] MacOS (Intel): 0x3833b0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x318448
+     * @note[short] iOS: 0x3184c8
+     * @note[short] Android
+     */
+    void loadBackgroundAsync(int index);
+
+    /**
+     * @note[short] MacOS (ARM): 0x30ada8
+     * @note[short] MacOS (Intel): 0x383170
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3182a8
      * @note[short] Android
      */
     void loadDeathEffect(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x305914
-     * @note[short] MacOS (Intel): 0x375010
+     * @note[short] MacOS (ARM): 0x30f7ec
+     * @note[short] MacOS (Intel): 0x3885e0
+     * @note[short] Windows: 0x186780
+     * @note[short] iOS: 0x31af70
      * @note[short] Android: Rebinded
      */
-    TodoReturn loadDpadFromString(UIButtonConfig& p0, gd::string p1);
+    void loadDpadFromString(UIButtonConfig& config, gd::string str);
 
     /**
+     * @note[short] MacOS (ARM): 0x30f3e8
+     * @note[short] MacOS (Intel): 0x3881a0
+     * @note[short] Windows: 0x1861e0
+     * @note[short] iOS: 0x31ac74
      * @note[short] Android
      */
-    TodoReturn loadDPadLayout(int p0, bool p1);
+    void loadDPadLayout(int index, bool dual);
 
     /**
-     * @note[short] MacOS (ARM): 0x300c70
-     * @note[short] MacOS (Intel): 0x36f960
+     * @note[short] MacOS (ARM): 0x30ac24
+     * @note[short] MacOS (Intel): 0x383020
+     * @note[short] Windows: 0x1827f0
+     * @note[short] iOS: 0x318128
      * @note[short] Android
      */
-    void loadFont(int p0);
+    void loadFont(int index);
 
     /**
-     * @note[short] MacOS (ARM): 0x301484
-     * @note[short] MacOS (Intel): 0x370120
-     * @note[short] Windows: 0x17fc30
+     * @note[short] MacOS (ARM): 0x30b44c
+     * @note[short] MacOS (Intel): 0x3837e0
+     * @note[short] Windows: 0x182c50
+     * @note[short] iOS: 0x318938
      * @note[short] Android
      */
-    void loadGround(int p0);
+    void loadGround(int index);
 
     /**
+     * @note[short] MacOS (ARM): 0x30b560
+     * @note[short] MacOS (Intel): 0x383900
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x318a4c
      * @note[short] Android
      */
-    void loadGroundAsync(int p0);
+    void loadGroundAsync(int index);
 
     /**
-     * @note[short] MacOS (ARM): 0x2ffaf4
-     * @note[short] MacOS (Intel): 0x36e7f0
-     * @note[short] Windows: 0x17ecf0
-     * @note[short] iOS: 0x317bac
+     * @note[short] MacOS (ARM): 0x309b04
+     * @note[short] MacOS (Intel): 0x381eb0
+     * @note[short] Windows: 0x181d10
+     * @note[short] iOS: 0x317a34
      * @note[short] Android
      */
-    cocos2d::CCTexture2D* loadIcon(int p0, int p1, int p2);
+    cocos2d::CCTexture2D* loadIcon(int id, int type, int requestID);
 
     /**
+     * @note[short] MacOS (ARM): 0x308e48
+     * @note[short] MacOS (Intel): 0x381100
      * @note[short] Android
      */
-    TodoReturn loadIconAsync(int p0, int p1, int p2, cocos2d::CCObject* p3);
+    void loadIconAsync(int id, int type, int requestID, cocos2d::CCObject* delegate);
 
     /**
-     * @note[short] MacOS (ARM): 0x301148
-     * @note[short] MacOS (Intel): 0x36fe10
-     * @note[short] Windows: 0x17f9e0
+     * @note[short] MacOS (ARM): 0x30b114
+     * @note[short] MacOS (Intel): 0x3834d0
+     * @note[short] Windows: 0x182a00
+     * @note[short] iOS: 0x318610
      * @note[short] Android
      */
-    void loadMiddleground(int p0);
+    void loadMiddleground(int index);
 
     /**
+     * @note[short] MacOS (ARM): 0x30b214
+     * @note[short] MacOS (Intel): 0x3835d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x318710
      * @note[short] Android
      */
-    void loadMiddlegroundAsync(int p0);
+    void loadMiddlegroundAsync(int index);
 
     /**
-     * @note[short] MacOS (ARM): 0x306228
-     * @note[short] MacOS (Intel): 0x375a90
+     * @note[short] MacOS (ARM): 0x310138
+     * @note[short] MacOS (Intel): 0x389030
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x31b3c0
      * @note[short] Android
      */
     void loadVideoSettings();
 
     /**
+     * @note[short] MacOS (ARM): 0x301a30
+     * @note[short] MacOS (Intel): 0x3786f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x312f94
      * @note[short] Android
      */
-    TodoReturn lockColor(int p0, UnlockType p1);
+    void lockColor(int id, UnlockType type);
 
     /**
+     * @note[short] MacOS (ARM): 0x30160c
+     * @note[short] MacOS (Intel): 0x3782c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x312cc0
      * @note[short] Android
      */
-    TodoReturn lockIcon(int p0, IconType p1);
+    void lockIcon(int id, IconType type);
 
     /**
+     * @note[short] MacOS (ARM): 0x30ab44
+     * @note[short] MacOS (Intel): 0x382f30
      * @note[short] Android
      */
-    TodoReturn logLoadedIconInfo();
+    void logLoadedIconInfo();
 
     /**
+     * @note[short] MacOS (ARM): 0x308a2c
+     * @note[short] MacOS (Intel): 0x380a20
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x317510
      * @note[short] Android
      */
     void openEditorGuide();
 
     /**
-     * @note[short] MacOS (ARM): 0x2f66b4
-     * @note[short] MacOS (Intel): 0x3639a0
-     * @note[short] Windows: 0x178810
-     * @note[short] iOS: 0x312208
+     * @note[short] MacOS (ARM): 0x3006c4
+     * @note[short] MacOS (Intel): 0x377000
+     * @note[short] Windows: 0x17b830
+     * @note[short] iOS: 0x312094
      * @note[short] Android
      */
     void playMenuMusic();
 
     /**
-     * @note[short] Windows: 0x178ca0
-     * @note[short] iOS: 0x31260c
+     * @note[short] MacOS (ARM): 0x300c70
+     * @note[short] MacOS (Intel): 0x3774f0
+     * @note[short] Windows: 0x17bcc0
+     * @note[short] iOS: 0x312494
      * @note[short] Android
      */
-    int playSFXTrigger(SFXTriggerGameObject* p0);
+    int playSFXTrigger(SFXTriggerGameObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x305c54
-     * @note[short] MacOS (Intel): 0x375340
-     * @note[short] Windows: 0x183aa0
+     * @note[short] MacOS (ARM): 0x30fb2c
+     * @note[short] MacOS (Intel): 0x3888e0
+     * @note[short] Windows: 0x1869f0
+     * @note[short] iOS: 0x31b1b8
      * @note[short] Android
      */
     void prepareDPadSettings();
 
     /**
+     * @note[short] MacOS (ARM): 0x30e28c
+     * @note[short] MacOS (Intel): 0x386b40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x31a5dc
      * @note[short] Android
      */
-    TodoReturn printGJLog();
+    void printGJLog();
 
     /**
-     * @note[short] MacOS (ARM): 0x3092fc
-     * @note[short] MacOS (Intel): 0x378db0
+     * @note[short] MacOS (ARM): 0x31316c
+     * @note[short] MacOS (Intel): 0x38c2f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x31d870
      * @note[short] Android
      */
     void queueReloadMenu();
 
     /**
+     * @note[short] MacOS (ARM): 0x3086f8
+     * @note[short] MacOS (Intel): 0x380750
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3171f4
      * @note[short] Android
      */
-    TodoReturn rateGame();
+    void rateGame();
 
     /**
-     * @note[short] MacOS (ARM): 0x3032cc
-     * @note[short] MacOS (Intel): 0x372010
-     * @note[short] Windows: 0x181ba0
-     * @note[short] iOS: 0x319eac
+     * @note[short] MacOS (ARM): 0x30d280
+     * @note[short] MacOS (Intel): 0x385630
+     * @note[short] Windows: 0x184bc0
+     * @note[short] iOS: 0x319c70
      * @note[short] Android: Rebinded
      */
-    void recountUserStats(gd::string p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x309444
-     * @note[short] MacOS (Intel): 0x378ee0
-     * @note[short] Windows: 0x187490
-     * @note[short] iOS: 0x31dbbc
-     * @note[short] Android
-     */
-    void reloadAll(bool switchingModes, bool toFullscreen, bool borderless, bool fix, bool unused);
+    void recountUserStats(gd::string str);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -916,186 +1105,257 @@ public:
     void reloadAll(bool switchingModes, bool toFullscreen, bool unused);
 
     /**
-     * @note[short] MacOS (ARM): 0x3094e8
-     * @note[short] MacOS (Intel): 0x378f90
-     * @note[short] Windows: 0x187540
-     * @note[short] iOS: 0x31dc60
+     * @note[short] MacOS (ARM): 0x3132b4
+     * @note[short] MacOS (Intel): 0x38c420
+     * @note[short] Windows: 0x18a410
+     * @note[short] iOS: 0x31d910
+     * @note[short] Android
+     */
+    void reloadAll(bool switchingModes, bool toFullscreen, bool borderless, bool fix, bool unused);
+
+    /**
+     * @note[short] MacOS (ARM): 0x313358
+     * @note[short] MacOS (Intel): 0x38c4d0
+     * @note[short] Windows: 0x18a4c0
+     * @note[short] iOS: 0x31d9b4
      * @note[short] Android
      */
     void reloadAllStep2();
 
     /**
+     * @note[short] MacOS (ARM): 0x313444
+     * @note[short] MacOS (Intel): 0x38c5e0
+     * @note[short] Windows: 0x18a620
+     * @note[short] iOS: 0x31daa0
      * @note[short] Android
      */
     void reloadAllStep3();
 
     /**
+     * @note[short] MacOS (ARM): 0x3134cc
+     * @note[short] MacOS (Intel): 0x38c660
+     * @note[short] Windows: 0x18a730
+     * @note[short] iOS: 0x31db28
      * @note[short] Android
      */
     void reloadAllStep4();
 
     /**
-     * @note[short] MacOS (ARM): 0x3096c0
-     * @note[short] MacOS (Intel): 0x379180
-     * @note[short] Windows: 0x187850
-     * @note[short] iOS: 0x31de38
+     * @note[short] MacOS (ARM): 0x313538
+     * @note[short] MacOS (Intel): 0x38c6c0
+     * @note[short] Windows: 0x18a7d0
+     * @note[short] iOS: 0x31db94
      * @note[short] Android
      */
     void reloadAllStep5();
 
     /**
-     * @note[short] MacOS (ARM): 0x309370
-     * @note[short] MacOS (Intel): 0x378e10
-     * @note[short] Windows: 0x187460
+     * @note[short] MacOS (ARM): 0x3131e0
+     * @note[short] MacOS (Intel): 0x38c350
+     * @note[short] Windows: 0x18a3e0
+     * @note[short] iOS: 0x31d8e0
      * @note[short] Android
      */
     void reloadMenu();
 
     /**
+     * @note[short] MacOS (ARM): 0x30ca14
+     * @note[short] MacOS (Intel): 0x384d30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3196c0
      * @note[short] Android
      */
-    TodoReturn removeCustomObject(int p0);
+    void removeCustomObject(int key);
 
     /**
+     * @note[short] MacOS (ARM): 0x30a7b8
+     * @note[short] MacOS (Intel): 0x382b90
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x317f48
      * @note[short] Android
      */
-    TodoReturn removeIconDelegate(int p0);
+    void removeIconDelegate(int requestID);
 
     /**
+     * @note[short] MacOS (ARM): 0x30c6b8
+     * @note[short] MacOS (Intel): 0x384990
+     * @note[short] Windows: 0x183ac0
+     * @note[short] iOS: 0x3194ec
      * @note[short] Android
      */
-    TodoReturn reorderKey(int p0, bool p1);
+    int reorderKey(int index, bool up);
 
     /**
-     * @note[short] MacOS (ARM): 0x2f9160
-     * @note[short] MacOS (Intel): 0x366830
-     * @note[short] Windows: 0x17afd0
-     * @note[short] iOS: 0x313e4c
+     * @note[short] MacOS (ARM): 0x303214
+     * @note[short] MacOS (Intel): 0x379e40
+     * @note[short] Windows: 0x17dff0
+     * @note[short] iOS: 0x313cec
      * @note[short] Android
      */
-    void reportAchievementWithID(char const* p0, int p1, bool p2);
+    void reportAchievementWithID(char const* key, int percent, bool dontNotify);
 
     /**
-     * @note[short] MacOS (ARM): 0x2f87b4
-     * @note[short] MacOS (Intel): 0x365da0
-     * @note[short] Windows: 0x17a5f0
-     * @note[short] iOS: 0x313a44
+     * @note[short] MacOS (ARM): 0x30288c
+     * @note[short] MacOS (Intel): 0x3793e0
+     * @note[short] Windows: 0x17d610
+     * @note[short] iOS: 0x3138d0
      * @note[short] Android
      */
     void reportPercentageForLevel(int levelID, int percentage, bool isPlatformer);
 
     /**
-     * @note[short] MacOS (ARM): 0x2f8614
-     * @note[short] MacOS (Intel): 0x365c30
-     * @note[short] Windows: 0x17a390
+     * @note[short] MacOS (ARM): 0x3026ec
+     * @note[short] MacOS (Intel): 0x379270
+     * @note[short] Windows: 0x17d3b0
+     * @note[short] iOS: 0x3137c4
      * @note[short] Android: Rebinded
      */
-    void resetAchievement(gd::string p0);
+    void resetAchievement(gd::string key);
 
     /**
+     * @note[short] MacOS (ARM): 0x307ff8
+     * @note[short] MacOS (Intel): 0x380060
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn resetAdTimer();
+    void resetAdTimer();
 
     /**
+     * @note[short] MacOS (ARM): 0x30cb30
+     * @note[short] MacOS (Intel): 0x384e40
+     * @note[short] Windows: 0x183ea0
+     * @note[short] iOS: 0x319750
      * @note[short] Android
      */
-    TodoReturn resetAllIcons();
+    void resetAllIcons();
 
     /**
+     * @note[short] MacOS (ARM): 0x3064f8
+     * @note[short] MacOS (Intel): 0x37e5a0
+     * @note[short] Windows: 0x180b70
+     * @note[short] iOS: 0x3162a4
      * @note[short] Android
      */
-    TodoReturn resetCoinUnlocks();
+    void resetCoinUnlocks();
 
     /**
+     * @note[short] MacOS (ARM): 0x30fe98
+     * @note[short] MacOS (Intel): 0x388cd0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x31b374
      * @note[short] Android
      */
-    TodoReturn resetDPadSettings(bool p0);
+    void resetDPadSettings(bool dual);
 
     /**
-     * @note[short] MacOS (ARM): 0x309710
-     * @note[short] MacOS (Intel): 0x3791c0
-     * @note[short] Windows: 0x187890
-     * @note[short] iOS: 0x31de78
+     * @note[short] MacOS (ARM): 0x31358c
+     * @note[short] MacOS (Intel): 0x38c700
+     * @note[short] Windows: 0x18a810
+     * @note[short] iOS: 0x31dbd8
      * @note[short] Android
      */
-    cocos2d::CCSize resolutionForKey(int p0);
+    cocos2d::CCSize resolutionForKey(int key);
 
     /**
+     * @note[short] MacOS (ARM): 0x308228
+     * @note[short] MacOS (Intel): 0x3802c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn resumeAudio();
+    void resumeAudio();
 
     /**
+     * @note[short] MacOS (ARM): 0x3081a4
+     * @note[short] MacOS (Intel): 0x380250
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn resumeAudioDelayed();
+    void resumeAudioDelayed();
 
     /**
-     * @note[short] MacOS (ARM): 0x308f8c
-     * @note[short] MacOS (Intel): 0x3789d0
-     * @note[short] Windows: 0x187030
-     * @note[short] iOS: 0x31d818
+     * @note[short] MacOS (ARM): 0x312dd0
+     * @note[short] MacOS (Intel): 0x38bf20
+     * @note[short] Windows: 0x189fb0
+     * @note[short] iOS: 0x31d52c
      * @note[short] Android
      */
-    void returnToLastScene(GJGameLevel* p0);
+    void returnToLastScene(GJGameLevel* level);
 
     /**
+     * @note[short] MacOS (ARM): 0x3082c0
+     * @note[short] MacOS (Intel): 0x380350
      * @note[short] Android
      */
-    TodoReturn rewardedVideoAdFinished(int p0);
+    void rewardedVideoAdFinished(int unused);
 
     /**
+     * @note[short] MacOS (ARM): 0x308404
+     * @note[short] MacOS (Intel): 0x380470
      * @note[short] Android
      */
-    TodoReturn rewardedVideoHidden();
+    void rewardedVideoHidden();
 
     /**
+     * @note[short] MacOS (ARM): 0x308380
+     * @note[short] MacOS (Intel): 0x380400
      * @note[short] Android
      */
-    TodoReturn rewardedVideoHiddenDelayed();
+    void rewardedVideoHiddenDelayed();
 
     /**
-     * @note[short] MacOS (ARM): 0x309298
-     * @note[short] MacOS (Intel): 0x378d40
-     * @note[short] Windows: 0x1873e0
-     * @note[short] iOS: 0x31dab8
+     * @note[short] MacOS (ARM): 0x31310c
+     * @note[short] MacOS (Intel): 0x38c280
+     * @note[short] Windows: 0x18a360
+     * @note[short] iOS: 0x31d80c
      * @note[short] Android
      */
     bool safePopScene();
 
     /**
+     * @note[short] MacOS (ARM): 0x308014
+     * @note[short] MacOS (Intel): 0x3800a0
      * @note[short] Android
      */
-    TodoReturn saveAdTimer();
+    void saveAdTimer();
 
     /**
+     * @note[short] MacOS (ARM): 0x30e298
+     * @note[short] MacOS (Intel): 0x386b70
+     * @note[short] Windows: 0x185e20
+     * @note[short] iOS: 0x31a5e8
      * @note[short] Android
      */
-    TodoReturn saveDPadLayout(int p0, bool p1);
+    void saveDPadLayout(int index, bool dual);
 
     /**
-     * @note[short] MacOS (ARM): 0x3018c0
-     * @note[short] MacOS (Intel): 0x370550
-     * @note[short] Windows: 0x17fe90
-     * @note[short] iOS: 0x318f14
+     * @note[short] MacOS (ARM): 0x30b880
+     * @note[short] MacOS (Intel): 0x383c10
+     * @note[short] Windows: 0x182eb0
+     * @note[short] iOS: 0x318d6c
      * @note[short] Android
      */
-    void setGameVariable(char const* p0, bool p1);
+    void setGameVariable(char const* key, bool value);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setHasRatingPower(int p0);
+    void setHasRatingPower(int hasRP);
 
     /**
-     * @note[short] MacOS (ARM): 0x301f7c
-     * @note[short] MacOS (Intel): 0x370b70
-     * @note[short] Windows: 0x1805f0
-     * @note[short] iOS: 0x319274
+     * @note[short] MacOS (ARM): 0x30bf1c
+     * @note[short] MacOS (Intel): 0x384200
+     * @note[short] Windows: 0x183610
+     * @note[short] iOS: 0x3190c4
      * @note[short] Android
      */
-    void setIntGameVariable(char const* p0, int p1);
+    void setIntGameVariable(char const* key, int value);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -1242,214 +1502,301 @@ public:
     void setPlayerSwing(int id);
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    void setPlayerUserID(int p0);
+    void setPlayerUserID(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x301c3c
-     * @note[short] MacOS (Intel): 0x370890
-     * @note[short] Windows: 0x180320
-     * @note[short] iOS: 0x3190a8
+     * @note[short] MacOS (ARM): 0x30bbd4
+     * @note[short] MacOS (Intel): 0x383f40
+     * @note[short] Windows: 0x183340
+     * @note[short] iOS: 0x318efc
      * @note[short] Android
      */
-    void setUGV(char const* p0, bool p1);
+    void setUGV(char const* key, bool value);
 
     /**
-     * @note[short] MacOS (ARM): 0x1fa990
-     * @note[short] MacOS (Intel): 0x24d5f0
-     * @note[short] Windows: 0x1a8870
-     * @note[short] iOS: 0x349e78
+     * @note[short] MacOS (ARM): 0x203598
+     * @note[short] MacOS (Intel): 0x25f5b0
+     * @note[short] Windows: 0x1ab7f0
+     * @note[short] iOS: 0x34a450
      * @note[short] Android
      */
     void setupGameAnimations();
 
     /**
-     * @note[short] MacOS (ARM): 0x2ff040
-     * @note[short] MacOS (Intel): 0x36dcb0
-     * @note[short] Windows: 0x17f470
-     * @note[short] iOS: 0x317a00
+     * @note[short] MacOS (ARM): 0x309110
+     * @note[short] MacOS (Intel): 0x3813d0
+     * @note[short] Windows: 0x182490
+     * @note[short] iOS: 0x317888
      * @note[short] Android
      */
-    gd::string sheetNameForIcon(int p0, int p1);
+    gd::string sheetNameForIcon(int id, int type);
 
     /**
+     * @note[short] MacOS (ARM): 0x308000
+     * @note[short] MacOS (Intel): 0x380080
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn shortenAdTimer(float p0);
+    void shortenAdTimer(float time);
 
     /**
+     * @note[short] MacOS (ARM): 0x308070
+     * @note[short] MacOS (Intel): 0x380100
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn shouldShowInterstitial(int p0, int p1, int p2);
+    bool shouldShowInterstitial(int unk1, int unk2, int unk3);
 
     /**
+     * @note[short] MacOS (ARM): 0x308078
+     * @note[short] MacOS (Intel): 0x380110
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void showInterstitial();
+    bool showInterstitial();
 
     /**
+     * @note[short] MacOS (ARM): 0x308124
+     * @note[short] MacOS (Intel): 0x3801c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void showInterstitialForced();
+    bool showInterstitialForced();
 
     /**
+     * @note[short] MacOS (ARM): 0x307ff0
+     * @note[short] MacOS (Intel): 0x380050
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void showMainMenuAd();
+    bool showMainMenuAd();
 
     /**
-     * @note[short] MacOS (ARM): 0x2f6378
-     * @note[short] MacOS (Intel): 0x3636a0
+     * @note[short] MacOS (ARM): 0x3003a0
+     * @note[short] MacOS (Intel): 0x376d20
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x311ebc
      * @note[short] Android
      */
     void startUpdate();
 
     /**
-     * @note[short] MacOS (ARM): 0x3025a0
-     * @note[short] MacOS (Intel): 0x371170
-     * @note[short] Windows: 0x180950
-     * @note[short] iOS: 0x3195f0
+     * @note[short] MacOS (ARM): 0x30c530
+     * @note[short] MacOS (Intel): 0x384800
+     * @note[short] Windows: 0x183970
+     * @note[short] iOS: 0x319440
      * @note[short] Android
      */
     gd::string stringForCustomObject(int customObjectID);
 
     /**
-     * @note[short] MacOS (ARM): 0x2fe7f4
-     * @note[short] MacOS (Intel): 0x36d170
-     * @note[short] iOS: 0x3174fc
+     * @note[short] MacOS (ARM): 0x30882c
+     * @note[short] MacOS (Intel): 0x380860
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x317320
      * @note[short] Android
      */
     void subYouTube();
 
     /**
+     * @note[short] MacOS (ARM): 0x30c704
+     * @note[short] MacOS (Intel): 0x3849c0
+     * @note[short] Windows: 0x183bc0
+     * @note[short] iOS: 0x319538
      * @note[short] Android
      */
-    TodoReturn switchCustomObjects(int p0, int p1);
+    void switchCustomObjects(int key1, int key2);
 
     /**
+     * @note[short] MacOS (ARM): 0x313210
+     * @note[short] MacOS (Intel): 0x38c380
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn switchScreenMode(bool p0, bool p1, bool p2, bool p3);
+    void switchScreenMode(bool fullscreen, bool borderless, bool fix, bool unused);
 
     /**
+     * @note[short] MacOS (ARM): 0x308a58
+     * @note[short] MacOS (Intel): 0x380a50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x31753c
      * @note[short] Android
      */
     void syncPlatformAchievements();
 
     /**
-     * @note[short] MacOS (ARM): 0x301b54
-     * @note[short] MacOS (Intel): 0x3707d0
-     * @note[short] Windows: 0x180270
-     * @note[short] iOS: 0x319068
+     * @note[short] MacOS (ARM): 0x30baf0
+     * @note[short] MacOS (Intel): 0x383e80
+     * @note[short] Windows: 0x183290
+     * @note[short] iOS: 0x318ebc
      * @note[short] Android
      */
-    bool toggleGameVariable(char const* p0);
+    bool toggleGameVariable(char const* key);
 
     /**
+     * @note[short] MacOS (ARM): 0x308080
+     * @note[short] MacOS (Intel): 0x380120
      * @note[short] Android
      */
-    TodoReturn tryCacheAd();
+    void tryCacheAd();
 
     /**
+     * @note[short] MacOS (ARM): 0x30806c
+     * @note[short] MacOS (Intel): 0x3800f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn tryShowInterstitial(int p0, int p1, int p2);
+    void tryShowInterstitial(int unk1, int unk2, int unk3);
 
     /**
+     * @note[short] MacOS (ARM): 0x30ae90
+     * @note[short] MacOS (Intel): 0x383260
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x31838c
      * @note[short] Android
      */
-    TodoReturn unloadBackground();
+    void unloadBackground();
 
     /**
-     * @note[short] MacOS (ARM): 0x30016c
-     * @note[short] MacOS (Intel): 0x36ee80
-     * @note[short] Windows: 0x17f050
-     * @note[short] iOS: 0x317ea4
+     * @note[short] MacOS (ARM): 0x30a158
+     * @note[short] MacOS (Intel): 0x382530
+     * @note[short] Windows: 0x182070
+     * @note[short] iOS: 0x317d1c
      * @note[short] Android
      */
-    void unloadIcon(int p0, int p1, int p2);
+    void unloadIcon(int id, int type, int requestID);
 
     /**
-     * @note[short] MacOS (ARM): 0x3008e4
-     * @note[short] MacOS (Intel): 0x36f5c0
-     * @note[short] Windows: 0x17f310
-     * @note[short] iOS: 0x3181c0
+     * @note[short] MacOS (ARM): 0x30a8ac
+     * @note[short] MacOS (Intel): 0x382c80
+     * @note[short] Windows: 0x182330
+     * @note[short] iOS: 0x318024
      * @note[short] Android
      */
-    void unloadIcons(int p0);
+    void unloadIcons(int requestID);
 
     /**
+     * @note[short] MacOS (ARM): 0x301984
+     * @note[short] MacOS (Intel): 0x378660
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x312efc
      * @note[short] Android
      */
-    TodoReturn unlockColor(int p0, UnlockType p1);
+    void unlockColor(int id, UnlockType type);
 
     /**
+     * @note[short] MacOS (ARM): 0x307af4
+     * @note[short] MacOS (Intel): 0x37fb30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn unlockedPremium();
+    void unlockedPremium();
 
     /**
+     * @note[short] MacOS (ARM): 0x301560
+     * @note[short] MacOS (Intel): 0x378230
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x312c28
      * @note[short] Android
      */
-    void unlockIcon(int p0, IconType p1);
+    void unlockIcon(int id, IconType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x2f7528
-     * @note[short] MacOS (Intel): 0x364ba0
-     * @note[short] Windows: 0x1796e0
-     * @note[short] iOS: 0x312d64
+     * @note[short] MacOS (ARM): 0x30153c
+     * @note[short] MacOS (Intel): 0x378210
+     * @note[short] Windows: 0x17c700
+     * @note[short] iOS: 0x312c04
      * @note[short] Android
      */
-    IconType unlockTypeToIconType(int p0);
+    IconType unlockTypeToIconType(int type);
 
     /**
-     * @note[short] MacOS (ARM): 0x3099c4
-     * @note[short] MacOS (Intel): 0x379480
-     * @note[short] Windows: 0x187cc0
+     * @note[short] MacOS (ARM): 0x313840
+     * @note[short] MacOS (Intel): 0x38c9d0
+     * @note[short] Windows: 0x18ac40
+     * @note[short] iOS: 0x31dd80
      * @note[short] Android
      */
     void updateCustomFPS();
 
     /**
+     * @note[short] MacOS (ARM): 0x3086b4
+     * @note[short] MacOS (Intel): 0x380700
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3171b0
      * @note[short] Android
      */
-    TodoReturn updateMusic();
+    void updateMusic();
 
     /**
-     * @note[short] MacOS (ARM): 0x2f93b0
-     * @note[short] MacOS (Intel): 0x366a80
+     * @note[short] MacOS (ARM): 0x303458
+     * @note[short] MacOS (Intel): 0x37a080
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x313d94
      * @note[short] Android
      */
     void verifyAchievementUnlocks();
 
     /**
-     * @note[short] Windows: 0x17b580
+     * @note[short] MacOS (ARM): 0x303664
+     * @note[short] MacOS (Intel): 0x37a2a0
+     * @note[short] Windows: 0x17e5a0
+     * @note[short] iOS: 0x313efc
      * @note[short] Android
      */
     void verifyCoinUnlocks();
 
     /**
+     * @note[short] MacOS (ARM): 0x303604
+     * @note[short] MacOS (Intel): 0x37a240
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x313ea4
      * @note[short] Android
      */
-    TodoReturn verifyStarUnlocks();
+    void verifyStarUnlocks();
 
     /**
+     * @note[short] MacOS (ARM): 0x30777c
+     * @note[short] MacOS (Intel): 0x37f760
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn verifySyncedCoins();
+    void verifySyncedCoins();
 
     /**
+     * @note[short] MacOS (ARM): 0x308170
+     * @note[short] MacOS (Intel): 0x380220
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn videoAdHidden();
+    void videoAdHidden();
 
     /**
+     * @note[short] MacOS (ARM): 0x30812c
+     * @note[short] MacOS (Intel): 0x3801d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn videoAdShowed();
-    cocos2d::CCDictionary* m_unkAnimationDict;
-    cocos2d::CCDictionary* m_unkAnimationDict2;
+    void videoAdShowed();
+    cocos2d::CCDictionary* m_mainFramesForAnimation;
+    cocos2d::CCDictionary* m_detailFramesForAnimation;
     cocos2d::CCDictionary* m_frameTimeForAnimation;
     cocos2d::CCDictionary* m_framesForAnimation;
     cocos2d::CCDictionary* m_defaultFrames;
@@ -1477,17 +1824,17 @@ public:
     PlayLayer* m_playLayer;
     LevelEditorLayer* m_levelEditorLayer;
     GJBaseGameLayer* m_gameLayer;
-    void* m_unkPtr;
+    LevelSelectLayer* m_levelSelectLayer;
     MenuLayer* m_menuLayer;
     bool m_inMenuLayer;
-    void* m_unknownVariable;
-    bool m_unknownBool3;
-    bool m_unknownPlayLayerBool;
+    void* m_premiumPopup;
+    bool m_firstSetup;
+    bool m_showedMenu;
     bool m_unknownBool4;
     bool m_unknownBool5;
     gd::string m_playerUDID;
     gd::string m_playerName;
-    bool m_scoreUpdated;
+    bool m_scoreValid;
     geode::SeedValueRSV m_playerUserID;
     float m_bgVolume;
     float m_sfxVolume;
@@ -1500,8 +1847,8 @@ public:
     bool m_clickedDiscord;
     bool m_clickedReddit;
     double m_socialsDuration;
-    bool m_showedAd;
-    bool m_unknownBool;
+    bool m_musicPaused;
+    bool m_isParticleObject;
     bool m_editorEnabled;
     int m_sceneEnum;
     bool m_searchObjectBool;
@@ -1554,7 +1901,7 @@ public:
     bool m_loadingG;
     bool m_loadingG1;
     bool m_finishedLoadingG1;
-    bool m_shouldLoadG1;
+    bool m_finishedLoadingG2;
     bool m_finishedLoadingMG1;
     bool m_finishedLoadingMG2;
     int m_sessionAttempts;
@@ -1588,7 +1935,7 @@ public:
     gd::vector<int> m_keyStartForIcon;
     gd::map<int, gd::vector<cocos2d::CCObject*>> m_iconDelegates;
     int m_iconRequestID;
-    cocos2d::CCArray* m_unkArray;
+    cocos2d::CCArray* m_gjLog;
     RewardedVideoDelegate* m_rewardedVideoDelegate;
     SearchType m_localSearchType;
     SearchType m_savedSearchType;

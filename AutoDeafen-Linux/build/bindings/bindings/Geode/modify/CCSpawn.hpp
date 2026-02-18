@@ -15,11 +15,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createWithTwoActions) 
 	#endif
 
-	#ifndef GEODE_STATICS_initWithTwoActions
-		#define GEODE_STATICS_initWithTwoActions
-		GEODE_AS_STATIC_FUNCTION(initWithTwoActions) 
-	#endif
-
 	#ifndef GEODE_STATICS_copyWithZone
 		#define GEODE_STATICS_copyWithZone
 		GEODE_AS_STATIC_FUNCTION(copyWithZone) 
@@ -45,6 +40,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(reverse) 
 	#endif
 
+	#ifndef GEODE_STATICS_initWithTwoActions
+		#define GEODE_STATICS_initWithTwoActions
+		GEODE_AS_STATIC_FUNCTION(initWithTwoActions) 
+	#endif
+
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -54,11 +54,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_createWithTwoActions
 		#define GEODE_CONCEPT_CHECK_createWithTwoActions
 		GEODE_CONCEPT_FUNCTION_CHECK(createWithTwoActions) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_initWithTwoActions
-		#define GEODE_CONCEPT_CHECK_initWithTwoActions
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithTwoActions) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_copyWithZone
@@ -86,6 +81,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(reverse) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_initWithTwoActions
+		#define GEODE_CONCEPT_CHECK_initWithTwoActions
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithTwoActions) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::CCSpawn> : ModifyBase<ModifyDerive<Der, cocos2d::CCSpawn>> {
@@ -95,15 +95,16 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCSpawn@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCSpawn)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCArray*>::func(&cocos2d::CCSpawn::create)), Default, cocos2d::CCSpawn, create, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCFiniteTimeAction*, ...>::func(&cocos2d::CCSpawn::create)), Default, cocos2d::CCSpawn, create, cocos2d::CCFiniteTimeAction*, ...)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(cocos2d::CCSpawn, create, cocos2d::CCFiniteTimeAction*, ...)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCFiniteTimeAction*, cocos2d::CCFiniteTimeAction*>::func(&cocos2d::CCSpawn::createWithTwoActions)), Default, cocos2d::CCSpawn, createWithTwoActions, cocos2d::CCFiniteTimeAction*, cocos2d::CCFiniteTimeAction*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCFiniteTimeAction*, cocos2d::CCFiniteTimeAction*>::func(&cocos2d::CCSpawn::initWithTwoActions)), Thiscall, cocos2d::CCSpawn, initWithTwoActions, cocos2d::CCFiniteTimeAction*, cocos2d::CCFiniteTimeAction*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCZone*>::func(&cocos2d::CCSpawn::copyWithZone)), Thiscall, cocos2d::CCSpawn, copyWithZone, cocos2d::CCZone*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCSpawn::update)), Thiscall, cocos2d::CCSpawn, update, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCNode*>::func(&cocos2d::CCSpawn::startWithTarget)), Thiscall, cocos2d::CCSpawn, startWithTarget, cocos2d::CCNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCSpawn::stop)), Thiscall, cocos2d::CCSpawn, stop, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCSpawn::reverse)), Thiscall, cocos2d::CCSpawn, reverse, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCFiniteTimeAction*, cocos2d::CCFiniteTimeAction*>::func(&cocos2d::CCSpawn::initWithTwoActions)), Thiscall, cocos2d::CCSpawn, initWithTwoActions, cocos2d::CCFiniteTimeAction*, cocos2d::CCFiniteTimeAction*)
 		}
 	};
 }

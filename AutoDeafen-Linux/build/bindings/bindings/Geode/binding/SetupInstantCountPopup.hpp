@@ -16,121 +16,145 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupInstantCountPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] MacOS (ARM): 0x5047c4
-     * @note[short] MacOS (Intel): 0x5d0770
-     * @note[short] Windows: 0x40a520
-     * @note[short] iOS: 0x1bdc18
+     * @note[short] MacOS (ARM): 0x512d98
+     * @note[short] MacOS (Intel): 0x5e8a10
+     * @note[short] Windows: 0x422270
+     * @note[short] iOS: 0x1bbd9c
      * @note[short] Android
      */
-    static SetupInstantCountPopup* create(CountTriggerGameObject* p0, cocos2d::CCArray* p1);
+    static SetupInstantCountPopup* create(CountTriggerGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x505b58
-     * @note[short] MacOS (Intel): 0x5d1dc0
-     * @note[short] Windows: 0x40b590
-     * @note[short] iOS: 0x1bebe0
+     * @note[short] MacOS (ARM): 0x51410c
+     * @note[short] MacOS (Intel): 0x5ea020
+     * @note[short] Windows: 0x4232e0
+     * @note[short] iOS: 0x1bcd64
      * @note[short] Android
      */
     virtual void determineStartValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x506090
-     * @note[short] MacOS (Intel): 0x5d23f0
-     * @note[short] Windows: 0x402140
-     * @note[short] iOS: 0x1befc0
+     * @note[short] MacOS (ARM): 0x5145fc
+     * @note[short] MacOS (Intel): 0x5ea610
+     * @note[short] Windows: 0x419e10
+     * @note[short] iOS: 0x1bd140
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x505e14
-     * @note[short] MacOS (Intel): 0x5d2100
-     * @note[short] Windows: 0x40b740
-     * @note[short] iOS: 0x1bee80
+     * @note[short] MacOS (ARM): 0x5143b4
+     * @note[short] MacOS (Intel): 0x5ea340
+     * @note[short] Windows: 0x423490
+     * @note[short] iOS: 0x1bd004
      * @note[short] Android
      */
-    virtual void textChanged(CCTextInputNode* p0);
+    virtual void textChanged(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x504958
-     * @note[short] MacOS (Intel): 0x5d09c0
-     * @note[short] Windows: 0x40a660
-     * @note[short] iOS: 0x1bdd00
+     * @note[short] MacOS (ARM): 0x512f2c
+     * @note[short] MacOS (Intel): 0x5e8c60
+     * @note[short] Windows: 0x4223b0
+     * @note[short] iOS: 0x1bbe84
      * @note[short] Android
      */
-    bool init(CountTriggerGameObject* p0, cocos2d::CCArray* p1);
+    bool init(CountTriggerGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] Windows: 0x40ba90
+     * @note[short] MacOS (ARM): 0x514050
+     * @note[short] MacOS (Intel): 0x5e9f40
+     * @note[short] Windows: 0x4237e0
+     * @note[short] iOS: 0x1bcca8
      * @note[short] Android
      */
     void onCountType(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x401660
+     * @note[short] MacOS (ARM): 0x513fd8
+     * @note[short] MacOS (Intel): 0x5e9eb0
+     * @note[short] Windows: 0x419330
+     * @note[short] iOS: 0x1bcc30
      * @note[short] Android
      */
     void onEnableGroup(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x5055c8
-     * @note[short] MacOS (Intel): 0x5d1780
-     * @note[short] Windows: 0x404580
-     * @note[short] iOS: 0x1be868
+     * @note[short] MacOS (ARM): 0x513b9c
+     * @note[short] MacOS (Intel): 0x5e9a10
+     * @note[short] Windows: 0x41c250
+     * @note[short] iOS: 0x1bc9e8
      * @note[short] Android
      */
     void onTargetCountArrow(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x505658
-     * @note[short] MacOS (Intel): 0x5d1830
-     * @note[short] Windows: 0x40b700
-     * @note[short] iOS: 0x1be8b4
+     * @note[short] MacOS (ARM): 0x513c2c
+     * @note[short] MacOS (Intel): 0x5e9ac0
+     * @note[short] Windows: 0x423450
+     * @note[short] iOS: 0x1bca34
      * @note[short] Android
      */
     void onTargetID2Arrow(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x505520
-     * @note[short] MacOS (Intel): 0x5d16c0
-     * @note[short] Windows: 0x4045c0
-     * @note[short] iOS: 0x1be814
+     * @note[short] MacOS (ARM): 0x513af4
+     * @note[short] MacOS (Intel): 0x5e9950
+     * @note[short] Windows: 0x41c290
+     * @note[short] iOS: 0x1bc994
      * @note[short] Android
      */
     void onTargetIDArrow(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x401eb0
+     * @note[short] MacOS (ARM): 0x513ed4
+     * @note[short] MacOS (Intel): 0x5e9da0
+     * @note[short] Windows: 0x419b80
+     * @note[short] iOS: 0x1bcba0
      * @note[short] Android
      */
     void updateCountTextInputLabel();
 
     /**
-     * @note[short] Windows: 0x401f30
+     * @note[short] MacOS (ARM): 0x5142b0
+     * @note[short] MacOS (Intel): 0x5ea200
+     * @note[short] Windows: 0x419c00
+     * @note[short] iOS: 0x1bcf00
      * @note[short] Android
      */
     void updateItemID();
 
     /**
-     * @note[short] Windows: 0x4048d0
+     * @note[short] MacOS (ARM): 0x513ccc
+     * @note[short] MacOS (Intel): 0x5e9b80
+     * @note[short] Windows: 0x41c5a0
+     * @note[short] iOS: 0x1bca80
      * @note[short] Android
      */
     void updateItemIDInputLabel();
 
     /**
-     * @note[short] Windows: 0x404aa0
+     * @note[short] MacOS (ARM): 0x514244
+     * @note[short] MacOS (Intel): 0x5ea180
+     * @note[short] Windows: 0x41c770
+     * @note[short] iOS: 0x1bce94
      * @note[short] Android
      */
     void updateTargetCount();
 
     /**
-     * @note[short] Windows: 0x40b9c0
+     * @note[short] MacOS (ARM): 0x514330
+     * @note[short] MacOS (Intel): 0x5ea2a0
+     * @note[short] Windows: 0x423710
+     * @note[short] iOS: 0x1bcf80
      * @note[short] Android
      */
     void updateTargetID();
 
     /**
-     * @note[short] Windows: 0x404950
+     * @note[short] MacOS (ARM): 0x513dd0
+     * @note[short] MacOS (Intel): 0x5e9c90
+     * @note[short] Windows: 0x41c620
+     * @note[short] iOS: 0x1bcb10
      * @note[short] Android
      */
     void updateTargetIDInputLabel();

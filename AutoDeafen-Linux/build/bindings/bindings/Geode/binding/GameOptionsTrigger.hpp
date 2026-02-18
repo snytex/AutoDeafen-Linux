@@ -16,32 +16,49 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(GameOptionsTrigger, EffectGameObject)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static GameOptionsTrigger* create(char const* p0);
+     GameOptionsTrigger();
 
     /**
-     * @note[short] MacOS (ARM): 0x162644
-     * @note[short] MacOS (Intel): 0x19fa20
-     * @note[short] Windows: 0x486d70
-     * @note[short] iOS: 0x3792b0
+     * @note[short] MacOS (ARM): 0x169724
+     * @note[short] MacOS (Intel): 0x1ae830
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x37fd28
+     * @note[short] Android
+     */
+    static GameOptionsTrigger* create(char const* frame);
+
+    /**
+     * @note[short] MacOS (ARM): 0x16b000
+     * @note[short] MacOS (Intel): 0x1b08b0
+     * @note[short] Windows: 0x49f450
+     * @note[short] iOS: 0x380448
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x160e08
-     * @note[short] MacOS (Intel): 0x19db40
-     * @note[short] Windows: 0x486600
-     * @note[short] iOS: 0x378c58
+     * @note[short] MacOS (ARM): 0x169840
+     * @note[short] MacOS (Intel): 0x1ae960
+     * @note[short] Windows: 0x49ece0
+     * @note[short] iOS: 0x37fdf0
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
+     * @note[short] MacOS (ARM): 0x1697f8
+     * @note[short] MacOS (Intel): 0x1ae910
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(char const* p0);
+    bool init(char const* frame);
     GameOptionsSetting m_streakAdditive;
     GameOptionsSetting m_unlinkDualGravity;
     GameOptionsSetting m_hideGround;

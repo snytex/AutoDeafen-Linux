@@ -20,81 +20,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(purgeCachedData) 
 	#endif
 
-	#ifndef GEODE_STATICS_initWithString
-		#define GEODE_STATICS_initWithString
-		GEODE_AS_STATIC_FUNCTION(initWithString) 
-	#endif
-
-	#ifndef GEODE_STATICS_getConfiguration
-		#define GEODE_STATICS_getConfiguration
-		GEODE_AS_STATIC_FUNCTION(getConfiguration) 
-	#endif
-
-	#ifndef GEODE_STATICS_getExtraKerning
-		#define GEODE_STATICS_getExtraKerning
-		GEODE_AS_STATIC_FUNCTION(getExtraKerning) 
-	#endif
-
-	#ifndef GEODE_STATICS_getFntFile
-		#define GEODE_STATICS_getFntFile
-		GEODE_AS_STATIC_FUNCTION(getFntFile) 
-	#endif
-
-	#ifndef GEODE_STATICS_getIsBatched
-		#define GEODE_STATICS_getIsBatched
-		GEODE_AS_STATIC_FUNCTION(getIsBatched) 
-	#endif
-
-	#ifndef GEODE_STATICS_getLetterPosXLeft
-		#define GEODE_STATICS_getLetterPosXLeft
-		GEODE_AS_STATIC_FUNCTION(getLetterPosXLeft) 
-	#endif
-
-	#ifndef GEODE_STATICS_getLetterPosXRight
-		#define GEODE_STATICS_getLetterPosXRight
-		GEODE_AS_STATIC_FUNCTION(getLetterPosXRight) 
-	#endif
-
-	#ifndef GEODE_STATICS_getTargetArray
-		#define GEODE_STATICS_getTargetArray
-		GEODE_AS_STATIC_FUNCTION(getTargetArray) 
-	#endif
-
-	#ifndef GEODE_STATICS_setExtraKerning
-		#define GEODE_STATICS_setExtraKerning
-		GEODE_AS_STATIC_FUNCTION(setExtraKerning) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFntFile
-		#define GEODE_STATICS_setFntFile
-		GEODE_AS_STATIC_FUNCTION(setFntFile) 
-	#endif
-
-	#ifndef GEODE_STATICS_setIsBatched
-		#define GEODE_STATICS_setIsBatched
-		GEODE_AS_STATIC_FUNCTION(setIsBatched) 
-	#endif
-
-	#ifndef GEODE_STATICS_setTargetArray
-		#define GEODE_STATICS_setTargetArray
-		GEODE_AS_STATIC_FUNCTION(setTargetArray) 
-	#endif
-
-	#ifndef GEODE_STATICS_createFontChars
-		#define GEODE_STATICS_createFontChars
-		GEODE_AS_STATIC_FUNCTION(createFontChars) 
-	#endif
-
-	#ifndef GEODE_STATICS_kerningAmountForFirst
-		#define GEODE_STATICS_kerningAmountForFirst
-		GEODE_AS_STATIC_FUNCTION(kerningAmountForFirst) 
-	#endif
-
-	#ifndef GEODE_STATICS_limitLabelWidth
-		#define GEODE_STATICS_limitLabelWidth
-		GEODE_AS_STATIC_FUNCTION(limitLabelWidth) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -225,6 +150,51 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateDisplayedOpacity) 
 	#endif
 
+	#ifndef GEODE_STATICS_createFontChars
+		#define GEODE_STATICS_createFontChars
+		GEODE_AS_STATIC_FUNCTION(createFontChars) 
+	#endif
+
+	#ifndef GEODE_STATICS_getConfiguration
+		#define GEODE_STATICS_getConfiguration
+		GEODE_AS_STATIC_FUNCTION(getConfiguration) 
+	#endif
+
+	#ifndef GEODE_STATICS_getFntFile
+		#define GEODE_STATICS_getFntFile
+		GEODE_AS_STATIC_FUNCTION(getFntFile) 
+	#endif
+
+	#ifndef GEODE_STATICS_getLetterPosXLeft
+		#define GEODE_STATICS_getLetterPosXLeft
+		GEODE_AS_STATIC_FUNCTION(getLetterPosXLeft) 
+	#endif
+
+	#ifndef GEODE_STATICS_getLetterPosXRight
+		#define GEODE_STATICS_getLetterPosXRight
+		GEODE_AS_STATIC_FUNCTION(getLetterPosXRight) 
+	#endif
+
+	#ifndef GEODE_STATICS_initWithString
+		#define GEODE_STATICS_initWithString
+		GEODE_AS_STATIC_FUNCTION(initWithString) 
+	#endif
+
+	#ifndef GEODE_STATICS_kerningAmountForFirst
+		#define GEODE_STATICS_kerningAmountForFirst
+		GEODE_AS_STATIC_FUNCTION(kerningAmountForFirst) 
+	#endif
+
+	#ifndef GEODE_STATICS_limitLabelWidth
+		#define GEODE_STATICS_limitLabelWidth
+		GEODE_AS_STATIC_FUNCTION(limitLabelWidth) 
+	#endif
+
+	#ifndef GEODE_STATICS_setFntFile
+		#define GEODE_STATICS_setFntFile
+		GEODE_AS_STATIC_FUNCTION(setFntFile) 
+	#endif
+
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -239,81 +209,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_purgeCachedData
 		#define GEODE_CONCEPT_CHECK_purgeCachedData
 		GEODE_CONCEPT_FUNCTION_CHECK(purgeCachedData) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_initWithString
-		#define GEODE_CONCEPT_CHECK_initWithString
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithString) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getConfiguration
-		#define GEODE_CONCEPT_CHECK_getConfiguration
-		GEODE_CONCEPT_FUNCTION_CHECK(getConfiguration) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getExtraKerning
-		#define GEODE_CONCEPT_CHECK_getExtraKerning
-		GEODE_CONCEPT_FUNCTION_CHECK(getExtraKerning) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getFntFile
-		#define GEODE_CONCEPT_CHECK_getFntFile
-		GEODE_CONCEPT_FUNCTION_CHECK(getFntFile) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getIsBatched
-		#define GEODE_CONCEPT_CHECK_getIsBatched
-		GEODE_CONCEPT_FUNCTION_CHECK(getIsBatched) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getLetterPosXLeft
-		#define GEODE_CONCEPT_CHECK_getLetterPosXLeft
-		GEODE_CONCEPT_FUNCTION_CHECK(getLetterPosXLeft) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getLetterPosXRight
-		#define GEODE_CONCEPT_CHECK_getLetterPosXRight
-		GEODE_CONCEPT_FUNCTION_CHECK(getLetterPosXRight) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getTargetArray
-		#define GEODE_CONCEPT_CHECK_getTargetArray
-		GEODE_CONCEPT_FUNCTION_CHECK(getTargetArray) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setExtraKerning
-		#define GEODE_CONCEPT_CHECK_setExtraKerning
-		GEODE_CONCEPT_FUNCTION_CHECK(setExtraKerning) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setFntFile
-		#define GEODE_CONCEPT_CHECK_setFntFile
-		GEODE_CONCEPT_FUNCTION_CHECK(setFntFile) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setIsBatched
-		#define GEODE_CONCEPT_CHECK_setIsBatched
-		GEODE_CONCEPT_FUNCTION_CHECK(setIsBatched) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setTargetArray
-		#define GEODE_CONCEPT_CHECK_setTargetArray
-		GEODE_CONCEPT_FUNCTION_CHECK(setTargetArray) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_createFontChars
-		#define GEODE_CONCEPT_CHECK_createFontChars
-		GEODE_CONCEPT_FUNCTION_CHECK(createFontChars) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_kerningAmountForFirst
-		#define GEODE_CONCEPT_CHECK_kerningAmountForFirst
-		GEODE_CONCEPT_FUNCTION_CHECK(kerningAmountForFirst) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_limitLabelWidth
-		#define GEODE_CONCEPT_CHECK_limitLabelWidth
-		GEODE_CONCEPT_FUNCTION_CHECK(limitLabelWidth) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_init
@@ -446,6 +341,51 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(updateDisplayedOpacity) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_createFontChars
+		#define GEODE_CONCEPT_CHECK_createFontChars
+		GEODE_CONCEPT_FUNCTION_CHECK(createFontChars) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getConfiguration
+		#define GEODE_CONCEPT_CHECK_getConfiguration
+		GEODE_CONCEPT_FUNCTION_CHECK(getConfiguration) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getFntFile
+		#define GEODE_CONCEPT_CHECK_getFntFile
+		GEODE_CONCEPT_FUNCTION_CHECK(getFntFile) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getLetterPosXLeft
+		#define GEODE_CONCEPT_CHECK_getLetterPosXLeft
+		GEODE_CONCEPT_FUNCTION_CHECK(getLetterPosXLeft) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getLetterPosXRight
+		#define GEODE_CONCEPT_CHECK_getLetterPosXRight
+		GEODE_CONCEPT_FUNCTION_CHECK(getLetterPosXRight) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_initWithString
+		#define GEODE_CONCEPT_CHECK_initWithString
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithString) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_kerningAmountForFirst
+		#define GEODE_CONCEPT_CHECK_kerningAmountForFirst
+		GEODE_CONCEPT_FUNCTION_CHECK(kerningAmountForFirst) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_limitLabelWidth
+		#define GEODE_CONCEPT_CHECK_limitLabelWidth
+		GEODE_CONCEPT_FUNCTION_CHECK(limitLabelWidth) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setFntFile
+		#define GEODE_CONCEPT_CHECK_setFntFile
+		GEODE_CONCEPT_FUNCTION_CHECK(setFntFile) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::CCLabelBMFont> : ModifyBase<ModifyDerive<Der, cocos2d::CCLabelBMFont>> {
@@ -456,29 +396,14 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCLabelBMFont@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCLabelBMFont, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCLabelBMFont@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCLabelBMFont)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::create)), Default, cocos2d::CCLabelBMFont, create, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*>::func(&cocos2d::CCLabelBMFont::create)), Default, cocos2d::CCLabelBMFont, create, char const*, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*, float>::func(&cocos2d::CCLabelBMFont::create)), Default, cocos2d::CCLabelBMFont, create, char const*, char const*, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*, float, cocos2d::CCTextAlignment>::func(&cocos2d::CCLabelBMFont::create)), Default, cocos2d::CCLabelBMFont, create, char const*, char const*, float, cocos2d::CCTextAlignment)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*, float, cocos2d::CCTextAlignment, cocos2d::CCPoint>::func(&cocos2d::CCLabelBMFont::create)), Default, cocos2d::CCLabelBMFont, create, char const*, char const*, float, cocos2d::CCTextAlignment, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::create)), Default, cocos2d::CCLabelBMFont, create, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*, cocos2d::CCArray*, int>::func(&cocos2d::CCLabelBMFont::createBatched)), Default, cocos2d::CCLabelBMFont, createBatched, char const*, char const*, cocos2d::CCArray*, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::purgeCachedData)), Default, cocos2d::CCLabelBMFont, purgeCachedData, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*, float, cocos2d::CCTextAlignment, cocos2d::CCPoint>::func(&cocos2d::CCLabelBMFont::initWithString)), Thiscall, cocos2d::CCLabelBMFont, initWithString, char const*, char const*, float, cocos2d::CCTextAlignment, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::getConfiguration)), Thiscall, cocos2d::CCLabelBMFont, getConfiguration, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::getExtraKerning)), Thiscall, cocos2d::CCLabelBMFont, getExtraKerning, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::getFntFile)), Thiscall, cocos2d::CCLabelBMFont, getFntFile, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::getIsBatched)), Thiscall, cocos2d::CCLabelBMFont, getIsBatched, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCSprite*, float, bool>::func(&cocos2d::CCLabelBMFont::getLetterPosXLeft)), Thiscall, cocos2d::CCLabelBMFont, getLetterPosXLeft, cocos2d::CCSprite*, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCSprite*, float, bool>::func(&cocos2d::CCLabelBMFont::getLetterPosXRight)), Thiscall, cocos2d::CCLabelBMFont, getLetterPosXRight, cocos2d::CCSprite*, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::getTargetArray)), Thiscall, cocos2d::CCLabelBMFont, getTargetArray, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int>::func(&cocos2d::CCLabelBMFont::setExtraKerning)), Thiscall, cocos2d::CCLabelBMFont, setExtraKerning, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCLabelBMFont::setFntFile)), Thiscall, cocos2d::CCLabelBMFont, setFntFile, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCLabelBMFont::setIsBatched)), Thiscall, cocos2d::CCLabelBMFont, setIsBatched, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCArray*>::func(&cocos2d::CCLabelBMFont::setTargetArray)), Thiscall, cocos2d::CCLabelBMFont, setTargetArray, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::createFontChars)), Thiscall, cocos2d::CCLabelBMFont, createFontChars, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned short, unsigned short>::func(&cocos2d::CCLabelBMFont::kerningAmountForFirst)), Thiscall, cocos2d::CCLabelBMFont, kerningAmountForFirst, unsigned short, unsigned short)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, float, float>::func(&cocos2d::CCLabelBMFont::limitLabelWidth)), Thiscall, cocos2d::CCLabelBMFont, limitLabelWidth, float, float, float)
-			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCLabelBMFont@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCLabelBMFont)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::init)), Thiscall, cocos2d::CCLabelBMFont, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCLabelBMFont::setScaleX)), Thiscall, cocos2d::CCLabelBMFont, setScaleX, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCLabelBMFont::setScaleY)), Thiscall, cocos2d::CCLabelBMFont, setScaleY, float)
@@ -493,7 +418,7 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCLabelBMFont::setWidth)), Thiscall, cocos2d::CCLabelBMFont, setWidth, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<bool>::func(&cocos2d::CCLabelBMFont::setLineBreakWithoutSpace)), Thiscall, cocos2d::CCLabelBMFont, setLineBreakWithoutSpace, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<unsigned short*, bool>::func(&cocos2d::CCLabelBMFont::setString)), Thiscall, cocos2d::CCLabelBMFont, setString, unsigned short*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccColor3B const&>::func(&cocos2d::CCLabelBMFont::setColor)), Thiscall, cocos2d::CCLabelBMFont, setColor, cocos2d::_ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccColor3B const&>::func(&cocos2d::CCLabelBMFont::setColor)), Thiscall, cocos2d::CCLabelBMFont, setColor, cocos2d::ccColor3B const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::getColor)), Thiscall, cocos2d::CCLabelBMFont, getColor, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::getDisplayedColor)), Thiscall, cocos2d::CCLabelBMFont, getDisplayedColor, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::getDisplayedOpacity)), Thiscall, cocos2d::CCLabelBMFont, getDisplayedOpacity, )
@@ -503,10 +428,19 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::isOpacityModifyRGB)), Thiscall, cocos2d::CCLabelBMFont, isOpacityModifyRGB, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::isCascadeColorEnabled)), Thiscall, cocos2d::CCLabelBMFont, isCascadeColorEnabled, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<bool>::func(&cocos2d::CCLabelBMFont::setCascadeColorEnabled)), Thiscall, cocos2d::CCLabelBMFont, setCascadeColorEnabled, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccColor3B const&>::func(&cocos2d::CCLabelBMFont::updateDisplayedColor)), Thiscall, cocos2d::CCLabelBMFont, updateDisplayedColor, cocos2d::_ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccColor3B const&>::func(&cocos2d::CCLabelBMFont::updateDisplayedColor)), Thiscall, cocos2d::CCLabelBMFont, updateDisplayedColor, cocos2d::ccColor3B const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::isCascadeOpacityEnabled)), Thiscall, cocos2d::CCLabelBMFont, isCascadeOpacityEnabled, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<bool>::func(&cocos2d::CCLabelBMFont::setCascadeOpacityEnabled)), Thiscall, cocos2d::CCLabelBMFont, setCascadeOpacityEnabled, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<unsigned char>::func(&cocos2d::CCLabelBMFont::updateDisplayedOpacity)), Thiscall, cocos2d::CCLabelBMFont, updateDisplayedOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::createFontChars)), Thiscall, cocos2d::CCLabelBMFont, createFontChars, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::getConfiguration)), Thiscall, cocos2d::CCLabelBMFont, getConfiguration, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelBMFont::getFntFile)), Thiscall, cocos2d::CCLabelBMFont, getFntFile, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCSprite*, float, bool>::func(&cocos2d::CCLabelBMFont::getLetterPosXLeft)), Thiscall, cocos2d::CCLabelBMFont, getLetterPosXLeft, cocos2d::CCSprite*, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCSprite*, float, bool>::func(&cocos2d::CCLabelBMFont::getLetterPosXRight)), Thiscall, cocos2d::CCLabelBMFont, getLetterPosXRight, cocos2d::CCSprite*, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*, float, cocos2d::CCTextAlignment, cocos2d::CCPoint>::func(&cocos2d::CCLabelBMFont::initWithString)), Thiscall, cocos2d::CCLabelBMFont, initWithString, char const*, char const*, float, cocos2d::CCTextAlignment, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned short, unsigned short>::func(&cocos2d::CCLabelBMFont::kerningAmountForFirst)), Thiscall, cocos2d::CCLabelBMFont, kerningAmountForFirst, unsigned short, unsigned short)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, float, float>::func(&cocos2d::CCLabelBMFont::limitLabelWidth)), Thiscall, cocos2d::CCLabelBMFont, limitLabelWidth, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCLabelBMFont::setFntFile)), Thiscall, cocos2d::CCLabelBMFont, setFntFile, char const*)
 		}
 	};
 }

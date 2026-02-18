@@ -15,113 +15,121 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(CurrencyRewardLayer, cocos2d::CCLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x6a36f8
-     * @note[short] MacOS (Intel): 0x78ff00
-     * @note[short] Windows: 0x9f500
-     * @note[short] iOS: 0x31e9b4
+     * @note[short] MacOS (ARM): 0x6aca80
+     * @note[short] MacOS (Intel): 0x7a5b40
+     * @note[short] Windows: 0x9fc10
+     * @note[short] iOS: 0x31e6e8
      * @note[short] Android
      */
-    static CurrencyRewardLayer* create(int orbs, int stars, int moons, int diamonds, CurrencySpriteType demonKey, int keyCount, CurrencySpriteType shardType, int shardsCount, cocos2d::CCPoint position, CurrencyRewardType rewardType, float p10, float time);
+    static CurrencyRewardLayer* create(int orbs, int stars, int moons, int diamonds, CurrencySpriteType demonKey, int keyCount, CurrencySpriteType shardType, int shardsCount, cocos2d::CCPoint position, CurrencyRewardType rewardType, float yOffset, float time);
 
     /**
-     * @note[short] MacOS (ARM): 0x6a64a8
-     * @note[short] MacOS (Intel): 0x792fd0
-     * @note[short] Windows: 0xa2230
-     * @note[short] iOS: 0x3212a4
+     * @note[short] MacOS (ARM): 0x6af904
+     * @note[short] MacOS (Intel): 0x7a8b50
+     * @note[short] Windows: 0xa2940
+     * @note[short] iOS: 0x320fa4
      * @note[short] Android
      */
-    virtual void update(float p0);
+    virtual void update(float dt);
 
     /**
-     * @note[short] MacOS (ARM): 0x6a57c0
-     * @note[short] MacOS (Intel): 0x792130
+     * @note[short] MacOS (ARM): 0x6aec30
+     * @note[short] MacOS (Intel): 0x7a7d50
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3203e8
      * @note[short] Android
      */
     void createObjects(CurrencySpriteType type, int count, cocos2d::CCPoint position, float time);
 
     /**
-     * @note[short] MacOS (ARM): 0x6a5884
-     * @note[short] MacOS (Intel): 0x7921d0
-     * @note[short] Windows: 0xa1520
-     * @note[short] iOS: 0x320790
+     * @note[short] MacOS (ARM): 0x6aecf4
+     * @note[short] MacOS (Intel): 0x7a7df0
+     * @note[short] Windows: 0xa1c30
+     * @note[short] iOS: 0x3204ac
      * @note[short] Android
      */
-    void createObjectsFull(CurrencySpriteType p0, int p1, cocos2d::CCSprite* p2, cocos2d::CCPoint p3, float p4);
+    void createObjectsFull(CurrencySpriteType type, int count, cocos2d::CCSprite* sprite, cocos2d::CCPoint position, float time);
 
     /**
-     * @note[short] MacOS (ARM): 0x6a5828
-     * @note[short] MacOS (Intel): 0x792180
+     * @note[short] MacOS (ARM): 0x6aec98
+     * @note[short] MacOS (Intel): 0x7a7da0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x320734
+     * @note[short] iOS: 0x320450
      * @note[short] Android
      */
     void createUnlockObject(cocos2d::CCSprite* sprite, cocos2d::CCPoint position, float time);
 
     /**
-     * @note[short] MacOS (ARM): 0x6a6b18
-     * @note[short] MacOS (Intel): 0x793700
+     * @note[short] MacOS (ARM): 0x6aff54
+     * @note[short] MacOS (Intel): 0x7a9280
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x321540
      * @note[short] Android
      */
     void incrementCount(int count);
 
     /**
-     * @note[short] MacOS (ARM): 0x6a6f08
-     * @note[short] MacOS (Intel): 0x793b50
+     * @note[short] MacOS (ARM): 0x6b0344
+     * @note[short] MacOS (Intel): 0x7a9700
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x321864
      * @note[short] Android
      */
     void incrementDiamondsCount(int count);
 
     /**
-     * @note[short] MacOS (ARM): 0x6a6db8
-     * @note[short] MacOS (Intel): 0x7939e0
+     * @note[short] MacOS (ARM): 0x6b01f4
+     * @note[short] MacOS (Intel): 0x7a9580
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x321758
      * @note[short] Android
      */
     void incrementMoonsCount(int count);
 
     /**
-     * @note[short] MacOS (ARM): 0x6a71a8
-     * @note[short] MacOS (Intel): 0x793e30
+     * @note[short] MacOS (ARM): 0x6b05e4
+     * @note[short] MacOS (Intel): 0x7a9a00
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x321a7c
      * @note[short] Android
      */
     void incrementSpecialCount1(int count);
 
     /**
-     * @note[short] MacOS (ARM): 0x6a7058
-     * @note[short] MacOS (Intel): 0x793cc0
+     * @note[short] MacOS (ARM): 0x6b0494
+     * @note[short] MacOS (Intel): 0x7a9880
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x321970
      * @note[short] Android
      */
     void incrementSpecialCount2(int count);
 
     /**
-     * @note[short] MacOS (ARM): 0x6a6c68
-     * @note[short] MacOS (Intel): 0x793870
+     * @note[short] MacOS (ARM): 0x6b00a4
+     * @note[short] MacOS (Intel): 0x7a9400
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x32164c
      * @note[short] Android
      */
     void incrementStarsCount(int count);
 
     /**
-     * @note[short] MacOS (ARM): 0x6a3800
-     * @note[short] MacOS (Intel): 0x78ffe0
-     * @note[short] Windows: 0x9f750
-     * @note[short] iOS: 0x31eabc
+     * @note[short] MacOS (ARM): 0x6acb88
+     * @note[short] MacOS (Intel): 0x7a5c20
+     * @note[short] Windows: 0x9fe60
+     * @note[short] iOS: 0x31e7f0
      * @note[short] Android
      */
-    bool init(int orbs, int stars, int moons, int diamonds, CurrencySpriteType demonKey, int keyCount, CurrencySpriteType shardType, int shardsCount, cocos2d::CCPoint position, CurrencyRewardType rewardType, float p10, float time);
+    bool init(int orbs, int stars, int moons, int diamonds, CurrencySpriteType demonKey, int keyCount, CurrencySpriteType shardType, int shardsCount, cocos2d::CCPoint position, CurrencyRewardType rewardType, float yOffset, float time);
 
     /**
-     * @note[short] MacOS (ARM): 0x6a72f8
-     * @note[short] MacOS (Intel): 0x793fa0
-     * @note[short] Windows: 0xa2c00
+     * @note[short] MacOS (ARM): 0x6b0734
+     * @note[short] MacOS (Intel): 0x7a9b80
+     * @note[short] Windows: 0xa3310
+     * @note[short] iOS: 0x321b88
      * @note[short] Android
      */
-    void pulseSprite(cocos2d::CCSprite* p0);
+    void pulseSprite(cocos2d::CCSprite* sprite);
     CurrencyRewardDelegate* m_delegate;
     cocos2d::CCArray* m_objects;
     cocos2d::CCLabelBMFont* m_orbsLabel;

@@ -20,166 +20,186 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(MPLobbyLayer, cocos2d::CCLayer)
 
     /**
+     * @note[short] MacOS (ARM): 0x3f881c
+     * @note[short] MacOS (Intel): 0x493ba0
      * @note[short] Android
      */
-    static MPLobbyLayer* create(int p0);
+    static MPLobbyLayer* create(int type);
 
     /**
+     * @note[short] MacOS (ARM): 0x3f872c
+     * @note[short] MacOS (Intel): 0x493a60
      * @note[short] Android
      */
-    static cocos2d::CCScene* scene(int p0);
+    static cocos2d::CCScene* scene(int type);
 
     /**
-     * @note[short] MacOS (ARM): 0x3eedb0
-     * @note[short] MacOS (Intel): 0x480e20
+     * @note[short] MacOS (ARM): 0x3f8c9c
+     * @note[short] MacOS (Intel): 0x494030
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x3ef4f0
-     * @note[short] MacOS (Intel): 0x481620
+     * @note[short] MacOS (ARM): 0x3f93cc
+     * @note[short] MacOS (Intel): 0x494830
      * @note[short] Android
      */
-    virtual void keyDown(cocos2d::enumKeyCodes p0);
+    virtual void keyDown(cocos2d::enumKeyCodes key, double timestamp);
 
     /**
-     * @note[short] MacOS (ARM): 0x3eef10
-     * @note[short] MacOS (Intel): 0x480fa0
+     * @note[short] MacOS (ARM): 0x3f8dfc
+     * @note[short] MacOS (Intel): 0x4941b0
      * @note[short] Android
      */
-    virtual void joinLobbyFinished(int p0);
+    virtual void joinLobbyFinished(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x3ef334
-     * @note[short] MacOS (Intel): 0x481450
+     * @note[short] MacOS (ARM): 0x3f9210
+     * @note[short] MacOS (Intel): 0x494660
      * @note[short] Android
      */
-    virtual void joinLobbyFailed(int p0, GJMPErrorCode p1);
+    virtual void joinLobbyFailed(int id, GJMPErrorCode errorType);
 
     /**
-     * @note[short] MacOS (ARM): 0x3ef22c
-     * @note[short] MacOS (Intel): 0x481320
+     * @note[short] MacOS (ARM): 0x3f9108
+     * @note[short] MacOS (Intel): 0x494510
      * @note[short] Android
      */
     virtual void updateComments();
 
     /**
-     * @note[short] MacOS (ARM): 0x3ef31c
-     * @note[short] MacOS (Intel): 0x481430
+     * @note[short] MacOS (ARM): 0x3f91f8
+     * @note[short] MacOS (Intel): 0x494640
      * @note[short] Android
      */
-    virtual void didUploadMPComment(int p0);
+    virtual void didUploadMPComment(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x3ef448
-     * @note[short] MacOS (Intel): 0x481550
+     * @note[short] MacOS (ARM): 0x3f9324
+     * @note[short] MacOS (Intel): 0x494760
      * @note[short] Android
      */
-    virtual void textInputOpened(CCTextInputNode* p0);
+    virtual void textInputOpened(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x3ef450
-     * @note[short] MacOS (Intel): 0x481570
+     * @note[short] MacOS (ARM): 0x3f932c
+     * @note[short] MacOS (Intel): 0x494780
      * @note[short] Android
      */
-    virtual void textInputClosed(CCTextInputNode* p0);
+    virtual void textInputClosed(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x3ef458
-     * @note[short] MacOS (Intel): 0x481590
+     * @note[short] MacOS (ARM): 0x3f9334
+     * @note[short] MacOS (Intel): 0x4947a0
      * @note[short] Android
      */
-    virtual void textChanged(CCTextInputNode* p0);
+    virtual void textChanged(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x3ef514
-     * @note[short] MacOS (Intel): 0x481660
+     * @note[short] MacOS (ARM): 0x3f93f0
+     * @note[short] MacOS (Intel): 0x494870
      * @note[short] Android
      */
-    virtual void keyUp(cocos2d::enumKeyCodes p0);
+    virtual void keyUp(cocos2d::enumKeyCodes key, double timestamp);
 
     /**
-     * @note[short] MacOS (ARM): 0x3ef460
-     * @note[short] MacOS (Intel): 0x4815b0
+     * @note[short] MacOS (ARM): 0x3f933c
+     * @note[short] MacOS (Intel): 0x4947c0
      * @note[short] Android
      */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x3ef51c
-     * @note[short] MacOS (Intel): 0x481680
+     * @note[short] MacOS (ARM): 0x3f93f8
+     * @note[short] MacOS (Intel): 0x494890
      * @note[short] Android
      */
-    virtual void uploadActionFinished(int p0, int p1);
+    virtual void uploadActionFinished(int id, int response);
 
     /**
-     * @note[short] MacOS (ARM): 0x3ef748
-     * @note[short] MacOS (Intel): 0x4818b0
+     * @note[short] MacOS (ARM): 0x3f9620
+     * @note[short] MacOS (Intel): 0x494ab0
      * @note[short] Android
      */
-    virtual void uploadActionFailed(int p0, int p1);
+    virtual void uploadActionFailed(int id, int response);
 
     /**
-     * @note[short] MacOS (ARM): 0x3ef90c
-     * @note[short] MacOS (Intel): 0x481a60
+     * @note[short] MacOS (ARM): 0x3f97d8
+     * @note[short] MacOS (Intel): 0x494c60
      * @note[short] Android
      */
-    virtual void onClosePopup(UploadActionPopup* p0);
+    virtual void onClosePopup(UploadActionPopup* popup);
 
     /**
+     * @note[short] MacOS (ARM): 0x3f88f4
+     * @note[short] MacOS (Intel): 0x493cc0
      * @note[short] Android
      */
-    bool init(int p0);
+    bool init(int type);
 
     /**
+     * @note[short] MacOS (ARM): 0x3f8c58
+     * @note[short] MacOS (Intel): 0x493ff0
      * @note[short] Android
      */
     void onBack(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3eeaa0
-     * @note[short] MacOS (Intel): 0x480b40
+     * @note[short] MacOS (ARM): 0x3f897c
+     * @note[short] MacOS (Intel): 0x493d50
      * @note[short] Android
      */
     void onBtn1(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x3f8a78
+     * @note[short] MacOS (Intel): 0x493e50
      * @note[short] Android
      */
     void onBtn2(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x3f8a7c
+     * @note[short] MacOS (Intel): 0x493e60
      * @note[short] Android
      */
     void onBtn3(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x3f8a80
+     * @note[short] MacOS (Intel): 0x493e70
      * @note[short] Android
      */
     void onComment(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x3f894c
+     * @note[short] MacOS (Intel): 0x493d20
      * @note[short] Android
      */
     void onUpdateLobby();
 
     /**
+     * @note[short] MacOS (ARM): 0x3f8b74
+     * @note[short] MacOS (Intel): 0x493f10
      * @note[short] Android
      */
     void postComment();
 
     /**
-     * @note[short] MacOS (ARM): 0x3eee3c
-     * @note[short] MacOS (Intel): 0x480eb0
+     * @note[short] MacOS (ARM): 0x3f8d28
+     * @note[short] MacOS (Intel): 0x4940c0
      * @note[short] Android
      */
     void tryExitLobby();
 
     /**
+     * @note[short] MacOS (ARM): 0x3f88f8
+     * @note[short] MacOS (Intel): 0x493cd0
      * @note[short] Android
      */
-    void updateLobby(float p0);
+    void updateLobby(float delay);
     int m_lobbyID;
     cocos2d::CCLabelBMFont* m_lobbyLabel;
     UploadActionPopup* m_uploadPopup;

@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void colorSelectClosed(cocos2d::CCNode* p0);
+    virtual void colorSelectClosed(cocos2d::CCNode* popup);
 };

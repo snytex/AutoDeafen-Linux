@@ -40,16 +40,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onZLayer) 
 	#endif
 
-	#ifndef GEODE_STATICS_sliderChanged
-		#define GEODE_STATICS_sliderChanged
-		GEODE_AS_STATIC_FUNCTION(sliderChanged) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateBlending
-		#define GEODE_STATICS_updateBlending
-		GEODE_AS_STATIC_FUNCTION(updateBlending) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateBlendingLabel
 		#define GEODE_STATICS_updateBlendingLabel
 		GEODE_AS_STATIC_FUNCTION(updateBlendingLabel) 
@@ -141,18 +131,18 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupGradientPopup, create, GradientTriggerObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x409e70, Thiscall, SetupGradientPopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x409f80, Thiscall, SetupGradientPopup, onPlusButton, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40a000, Thiscall, SetupGradientPopup, updateToggleItem, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40a410, Thiscall, SetupGradientPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x408d10, Thiscall, SetupGradientPopup, init, GradientTriggerObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40a2c0, Thiscall, SetupGradientPopup, onBlending, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40a1a0, Thiscall, SetupGradientPopup, onZLayer, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupGradientPopup, sliderChanged, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupGradientPopup, updateBlending, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40a380, Thiscall, SetupGradientPopup, updateBlendingLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40a090, Thiscall, SetupGradientPopup, updateGradientLabels, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40a230, Thiscall, SetupGradientPopup, updateZLayerButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x421b80, Thiscall, SetupGradientPopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x421c90, Thiscall, SetupGradientPopup, onPlusButton, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x421d50, Thiscall, SetupGradientPopup, updateToggleItem, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x422160, Thiscall, SetupGradientPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x420a20, Thiscall, SetupGradientPopup, init, GradientTriggerObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x422010, Thiscall, SetupGradientPopup, onBlending, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x421ef0, Thiscall, SetupGradientPopup, onZLayer, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupGradientPopup, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupGradientPopup, updateBlending, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4220d0, Thiscall, SetupGradientPopup, updateBlendingLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x421de0, Thiscall, SetupGradientPopup, updateGradientLabels, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x421f80, Thiscall, SetupGradientPopup, updateZLayerButtons, )
 		}
 	};
 }

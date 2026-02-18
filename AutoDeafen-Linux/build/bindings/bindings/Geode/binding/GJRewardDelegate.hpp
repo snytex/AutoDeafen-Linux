@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void rewardsStatusFinished(int p0);
+    virtual void rewardsStatusFinished(int type);
 
     /**
      * @note[short] MacOS (ARM): Out of line

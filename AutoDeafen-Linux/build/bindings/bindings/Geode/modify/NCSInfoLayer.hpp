@@ -91,13 +91,13 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(NCSInfoLayer, create, CustomSongLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, NCSInfoLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc56c0, Thiscall, NCSInfoLayer, init, CustomSongLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84620, Thiscall, NCSInfoLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc5f10, Thiscall, NCSInfoLayer, onLibrary, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc5eb0, Thiscall, NCSInfoLayer, onNCS, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc5ed0, Thiscall, NCSInfoLayer, onNCSIO, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc5ef0, Thiscall, NCSInfoLayer, onNCSUsage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, NCSInfoLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc63e0, Thiscall, NCSInfoLayer, init, CustomSongLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, NCSInfoLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc6c30, Thiscall, NCSInfoLayer, onLibrary, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc6bd0, Thiscall, NCSInfoLayer, onNCS, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc6bf0, Thiscall, NCSInfoLayer, onNCSIO, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc6c10, Thiscall, NCSInfoLayer, onNCSUsage, cocos2d::CCObject*)
 		}
 	};
 }

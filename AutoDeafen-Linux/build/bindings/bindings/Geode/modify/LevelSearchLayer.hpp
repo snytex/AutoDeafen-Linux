@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_scene
 		#define GEODE_STATICS_scene
 		GEODE_AS_STATIC_FUNCTION(scene) 
@@ -63,16 +58,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_confirmClearFilters
 		#define GEODE_STATICS_confirmClearFilters
 		GEODE_AS_STATIC_FUNCTION(confirmClearFilters) 
-	#endif
-
-	#ifndef GEODE_STATICS_getLevelLenKey
-		#define GEODE_STATICS_getLevelLenKey
-		GEODE_AS_STATIC_FUNCTION(getLevelLenKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSearchDiffKey
-		#define GEODE_STATICS_getSearchDiffKey
-		GEODE_AS_STATIC_FUNCTION(getSearchDiffKey) 
 	#endif
 
 	#ifndef GEODE_STATICS_getSearchObject
@@ -261,6 +246,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(confirmClearFilters) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_getDiffKey
+		#define GEODE_CONCEPT_CHECK_getDiffKey
+		GEODE_CONCEPT_FUNCTION_CHECK(getDiffKey) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_getLevelLenKey
 		#define GEODE_CONCEPT_CHECK_getLevelLenKey
 		GEODE_CONCEPT_FUNCTION_CHECK(getLevelLenKey) 
@@ -274,6 +264,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_getSearchObject
 		#define GEODE_CONCEPT_CHECK_getSearchObject
 		GEODE_CONCEPT_FUNCTION_CHECK(getSearchObject) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getTimeKey
+		#define GEODE_CONCEPT_CHECK_getTimeKey
+		GEODE_CONCEPT_FUNCTION_CHECK(getTimeKey) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_init
@@ -334,6 +329,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_onMostRecent
 		#define GEODE_CONCEPT_CHECK_onMostRecent
 		GEODE_CONCEPT_FUNCTION_CHECK(onMostRecent) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_onPasteClipboard
+		#define GEODE_CONCEPT_CHECK_onPasteClipboard
+		GEODE_CONCEPT_FUNCTION_CHECK(onPasteClipboard) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_onSearch
@@ -410,46 +410,48 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelSearchLayer, create, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f75f0, Default, LevelSearchLayer, scene, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fdcc0, Thiscall, LevelSearchLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fad00, Thiscall, LevelSearchLayer, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fae50, Thiscall, LevelSearchLayer, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fae50, Thiscall, LevelSearchLayer, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2facc0, Thiscall, LevelSearchLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f97f0, Thiscall, LevelSearchLayer, demonFilterSelectClosed, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelSearchLayer, checkDiff, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelSearchLayer, checkTime, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f9ca0, Thiscall, LevelSearchLayer, clearFilters, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelSearchLayer, confirmClearFilters, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x14b660, Thiscall, LevelSearchLayer, getLevelLenKey, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelSearchLayer, getSearchDiffKey, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fb290, Thiscall, LevelSearchLayer, getSearchObject, SearchType, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f7740, Thiscall, LevelSearchLayer, init, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fd040, Thiscall, LevelSearchLayer, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fd000, Thiscall, LevelSearchLayer, onClearFreeSearch, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelSearchLayer, create, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30c040, Default, LevelSearchLayer, scene, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x312870, Thiscall, LevelSearchLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30f7f0, Thiscall, LevelSearchLayer, textInputOpened, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30f940, Thiscall, LevelSearchLayer, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30f940, Thiscall, LevelSearchLayer, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30f7b0, Thiscall, LevelSearchLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30e2e0, Thiscall, LevelSearchLayer, demonFilterSelectClosed, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x311e90, Thiscall, LevelSearchLayer, checkDiff, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x312450, Thiscall, LevelSearchLayer, checkTime, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30e790, Thiscall, LevelSearchLayer, clearFilters, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30e670, Thiscall, LevelSearchLayer, confirmClearFilters, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelSearchLayer, getDiffKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelSearchLayer, getLevelLenKey, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelSearchLayer, getSearchDiffKey, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30fd80, Thiscall, LevelSearchLayer, getSearchObject, SearchType, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelSearchLayer, getTimeKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30c190, Thiscall, LevelSearchLayer, init, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x311bf0, Thiscall, LevelSearchLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x311bb0, Thiscall, LevelSearchLayer, onClearFreeSearch, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelSearchLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fcac0, Thiscall, LevelSearchLayer, onFollowed, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fca00, Thiscall, LevelSearchLayer, onFriends, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fc940, Thiscall, LevelSearchLayer, onLatestStars, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fc7c0, Thiscall, LevelSearchLayer, onMagic, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f9a80, Thiscall, LevelSearchLayer, onMoreOptions, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fc4c0, Thiscall, LevelSearchLayer, onMostDownloaded, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fc580, Thiscall, LevelSearchLayer, onMostLikes, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fc880, Thiscall, LevelSearchLayer, onMostRecent, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fcb80, Thiscall, LevelSearchLayer, onSearch, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f9a30, Thiscall, LevelSearchLayer, onSearchMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fcdc0, Thiscall, LevelSearchLayer, onSearchUser, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f9690, Thiscall, LevelSearchLayer, onSpecialDemon, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelSearchLayer, onStarAward, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fc640, Thiscall, LevelSearchLayer, onSuggested, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fc700, Thiscall, LevelSearchLayer, onTrending, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fd3c0, Thiscall, LevelSearchLayer, toggleDifficulty, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fd720, Thiscall, LevelSearchLayer, toggleDifficultyNum, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fd0b0, Thiscall, LevelSearchLayer, toggleStar, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelSearchLayer, toggleTime, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2fdb30, Thiscall, LevelSearchLayer, toggleTimeNum, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2faf20, Thiscall, LevelSearchLayer, updateSearchLabel, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3115b0, Thiscall, LevelSearchLayer, onFollowed, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3114f0, Thiscall, LevelSearchLayer, onFriends, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x311430, Thiscall, LevelSearchLayer, onLatestStars, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3112b0, Thiscall, LevelSearchLayer, onMagic, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30e570, Thiscall, LevelSearchLayer, onMoreOptions, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x310fb0, Thiscall, LevelSearchLayer, onMostDownloaded, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x311070, Thiscall, LevelSearchLayer, onMostLikes, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x311370, Thiscall, LevelSearchLayer, onMostRecent, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x311730, Thiscall, LevelSearchLayer, onSearch, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30e520, Thiscall, LevelSearchLayer, onSearchMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x311970, Thiscall, LevelSearchLayer, onSearchUser, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30e180, Thiscall, LevelSearchLayer, onSpecialDemon, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x311670, Thiscall, LevelSearchLayer, onStarAward, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x311130, Thiscall, LevelSearchLayer, onSuggested, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3111f0, Thiscall, LevelSearchLayer, onTrending, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x311f70, Thiscall, LevelSearchLayer, toggleDifficulty, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3122d0, Thiscall, LevelSearchLayer, toggleDifficultyNum, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x311c60, Thiscall, LevelSearchLayer, toggleStar, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x312530, Thiscall, LevelSearchLayer, toggleTime, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3126e0, Thiscall, LevelSearchLayer, toggleTimeNum, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30fa10, Thiscall, LevelSearchLayer, updateSearchLabel, char const*)
 		}
 	};
 }

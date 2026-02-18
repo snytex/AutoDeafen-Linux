@@ -65,11 +65,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x447580, Default, SetupStaticCameraPopup, create, CameraTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x448090, Thiscall, SetupStaticCameraPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42a510, Thiscall, SetupStaticCameraPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x447690, Thiscall, SetupStaticCameraPopup, init, CameraTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4480b0, Thiscall, SetupStaticCameraPopup, updateState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45fb90, Default, SetupStaticCameraPopup, create, CameraTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4606a0, Thiscall, SetupStaticCameraPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x442820, Thiscall, SetupStaticCameraPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45fca0, Thiscall, SetupStaticCameraPopup, init, CameraTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4606c0, Thiscall, SetupStaticCameraPopup, updateState, )
 		}
 	};
 }

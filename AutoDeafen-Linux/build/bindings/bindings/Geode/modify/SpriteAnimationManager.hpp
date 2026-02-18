@@ -5,6 +5,11 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
+	#ifndef GEODE_STATICS_createAnimations
+		#define GEODE_STATICS_createAnimations
+		GEODE_AS_STATIC_FUNCTION(createAnimations) 
+	#endif
+
 	#ifndef GEODE_STATICS_animationFinished
 		#define GEODE_STATICS_animationFinished
 		GEODE_AS_STATIC_FUNCTION(animationFinished) 
@@ -15,19 +20,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(callAnimationFinished) 
 	#endif
 
-	#ifndef GEODE_STATICS_createAnimations
-		#define GEODE_STATICS_createAnimations
-		GEODE_AS_STATIC_FUNCTION(createAnimations) 
-	#endif
-
 	#ifndef GEODE_STATICS_executeAnimation
 		#define GEODE_STATICS_executeAnimation
 		GEODE_AS_STATIC_FUNCTION(executeAnimation) 
-	#endif
-
-	#ifndef GEODE_STATICS_finishAnimation
-		#define GEODE_STATICS_finishAnimation
-		GEODE_AS_STATIC_FUNCTION(finishAnimation) 
 	#endif
 
 	#ifndef GEODE_STATICS_getPrio
@@ -50,16 +45,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(overridePrio) 
 	#endif
 
-	#ifndef GEODE_STATICS_playSound
-		#define GEODE_STATICS_playSound
-		GEODE_AS_STATIC_FUNCTION(playSound) 
-	#endif
-
-	#ifndef GEODE_STATICS_playSoundForAnimation
-		#define GEODE_STATICS_playSoundForAnimation
-		GEODE_AS_STATIC_FUNCTION(playSoundForAnimation) 
-	#endif
-
 	#ifndef GEODE_STATICS_queueAnimation
 		#define GEODE_STATICS_queueAnimation
 		GEODE_AS_STATIC_FUNCTION(queueAnimation) 
@@ -70,32 +55,12 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(runAnimation) 
 	#endif
 
-	#ifndef GEODE_STATICS_runQueuedAnimation
-		#define GEODE_STATICS_runQueuedAnimation
-		GEODE_AS_STATIC_FUNCTION(runQueuedAnimation) 
-	#endif
-
 	#ifndef GEODE_STATICS_storeAnimation
 		#define GEODE_STATICS_storeAnimation
 		GEODE_AS_STATIC_FUNCTION(storeAnimation) 
 	#endif
 
-	#ifndef GEODE_STATICS_switchToFirstFrameOfAnimation
-		#define GEODE_STATICS_switchToFirstFrameOfAnimation
-		GEODE_AS_STATIC_FUNCTION(switchToFirstFrameOfAnimation) 
-	#endif
-
     
-	#ifndef GEODE_CONCEPT_CHECK_animationFinished
-		#define GEODE_CONCEPT_CHECK_animationFinished
-		GEODE_CONCEPT_FUNCTION_CHECK(animationFinished) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_callAnimationFinished
-		#define GEODE_CONCEPT_CHECK_callAnimationFinished
-		GEODE_CONCEPT_FUNCTION_CHECK(callAnimationFinished) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_createAnimations
 		#define GEODE_CONCEPT_CHECK_createAnimations
 		GEODE_CONCEPT_FUNCTION_CHECK(createAnimations) 
@@ -104,6 +69,16 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_createWithOwner
 		#define GEODE_CONCEPT_CHECK_createWithOwner
 		GEODE_CONCEPT_FUNCTION_CHECK(createWithOwner) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_animationFinished
+		#define GEODE_CONCEPT_CHECK_animationFinished
+		GEODE_CONCEPT_FUNCTION_CHECK(animationFinished) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_callAnimationFinished
+		#define GEODE_CONCEPT_CHECK_callAnimationFinished
+		GEODE_CONCEPT_FUNCTION_CHECK(callAnimationFinished) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_doCleanup
@@ -215,29 +190,29 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x745f0, Thiscall, SpriteAnimationManager, animationFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x74640, Thiscall, SpriteAnimationManager, callAnimationFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x72fa0, Default, SpriteAnimationManager, createAnimations, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x72fd0, Default, SpriteAnimationManager, createAnimations, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteAnimationManager, createWithOwner, CCAnimatedSprite*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x74620, Thiscall, SpriteAnimationManager, animationFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x74670, Thiscall, SpriteAnimationManager, callAnimationFinished, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteAnimationManager, doCleanup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x73f30, Thiscall, SpriteAnimationManager, executeAnimation, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SpriteAnimationManager, finishAnimation, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x73f60, Thiscall, SpriteAnimationManager, executeAnimation, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteAnimationManager, finishAnimation, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteAnimationManager, getAnimType, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x74720, Thiscall, SpriteAnimationManager, getPrio, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x72360, Thiscall, SpriteAnimationManager, initWithOwner, CCAnimatedSprite*, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x725d0, Thiscall, SpriteAnimationManager, loadAnimations, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x74750, Thiscall, SpriteAnimationManager, getPrio, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x72390, Thiscall, SpriteAnimationManager, initWithOwner, CCAnimatedSprite*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x72600, Thiscall, SpriteAnimationManager, loadAnimations, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteAnimationManager, offsetCurrentAnimation, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x74420, Thiscall, SpriteAnimationManager, overridePrio, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SpriteAnimationManager, playSound, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SpriteAnimationManager, playSoundForAnimation, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x74510, Thiscall, SpriteAnimationManager, queueAnimation, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x74450, Thiscall, SpriteAnimationManager, overridePrio, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteAnimationManager, playSound, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteAnimationManager, playSoundForAnimation, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x74540, Thiscall, SpriteAnimationManager, queueAnimation, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteAnimationManager, resetAnimState, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x73dd0, Thiscall, SpriteAnimationManager, runAnimation, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SpriteAnimationManager, runQueuedAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x73e00, Thiscall, SpriteAnimationManager, runAnimation, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteAnimationManager, runQueuedAnimation, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteAnimationManager, stopAnimations, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x73b60, Thiscall, SpriteAnimationManager, storeAnimation, cocos2d::CCAnimate*, cocos2d::CCAnimate*, gd::string, int, spriteMode, cocos2d::CCSpriteFrame*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x73b90, Thiscall, SpriteAnimationManager, storeAnimation, cocos2d::CCAnimate*, cocos2d::CCAnimate*, gd::string, int, spriteMode, cocos2d::CCSpriteFrame*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteAnimationManager, storeSoundForAnimation, cocos2d::CCString*, gd::string, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SpriteAnimationManager, switchToFirstFrameOfAnimation, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteAnimationManager, switchToFirstFrameOfAnimation, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpriteAnimationManager, updateAnimationSpeed, float)
 		}
 	};

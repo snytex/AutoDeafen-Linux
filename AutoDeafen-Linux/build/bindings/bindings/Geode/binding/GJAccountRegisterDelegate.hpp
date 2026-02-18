@@ -29,5 +29,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void registerAccountFailed(AccountError p0);
+    virtual void registerAccountFailed(AccountError errorType);
 };

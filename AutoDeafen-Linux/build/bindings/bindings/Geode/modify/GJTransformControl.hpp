@@ -30,31 +30,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(ccTouchCancelled) 
 	#endif
 
-	#ifndef GEODE_STATICS_calculateRotationOffset
-		#define GEODE_STATICS_calculateRotationOffset
-		GEODE_AS_STATIC_FUNCTION(calculateRotationOffset) 
-	#endif
-
-	#ifndef GEODE_STATICS_finishTouch
-		#define GEODE_STATICS_finishTouch
-		GEODE_AS_STATIC_FUNCTION(finishTouch) 
-	#endif
-
-	#ifndef GEODE_STATICS_loadFromState
-		#define GEODE_STATICS_loadFromState
-		GEODE_AS_STATIC_FUNCTION(loadFromState) 
-	#endif
-
-	#ifndef GEODE_STATICS_loadValues
-		#define GEODE_STATICS_loadValues
-		GEODE_AS_STATIC_FUNCTION(loadValues) 
-	#endif
-
-	#ifndef GEODE_STATICS_logCurrentZeroPos
-		#define GEODE_STATICS_logCurrentZeroPos
-		GEODE_AS_STATIC_FUNCTION(logCurrentZeroPos) 
-	#endif
-
 	#ifndef GEODE_STATICS_onToggleLockScale
 		#define GEODE_STATICS_onToggleLockScale
 		GEODE_AS_STATIC_FUNCTION(onToggleLockScale) 
@@ -65,29 +40,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(refreshControl) 
 	#endif
 
-	#ifndef GEODE_STATICS_saveToState
-		#define GEODE_STATICS_saveToState
-		GEODE_AS_STATIC_FUNCTION(saveToState) 
-	#endif
-
 	#ifndef GEODE_STATICS_scaleButtons
 		#define GEODE_STATICS_scaleButtons
 		GEODE_AS_STATIC_FUNCTION(scaleButtons) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateAnchorSprite
-		#define GEODE_STATICS_updateAnchorSprite
-		GEODE_AS_STATIC_FUNCTION(updateAnchorSprite) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateButtons
 		#define GEODE_STATICS_updateButtons
 		GEODE_AS_STATIC_FUNCTION(updateButtons) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateMinMaxPositions
-		#define GEODE_STATICS_updateMinMaxPositions
-		GEODE_AS_STATIC_FUNCTION(updateMinMaxPositions) 
 	#endif
 
     
@@ -201,25 +161,25 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJTransformControl, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1290a0, Thiscall, GJTransformControl, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12a730, Thiscall, GJTransformControl, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12a900, Thiscall, GJTransformControl, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12ae60, Thiscall, GJTransformControl, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71210, Thiscall, GJTransformControl, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12ae50, Thiscall, GJTransformControl, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12c4e0, Thiscall, GJTransformControl, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12c6b0, Thiscall, GJTransformControl, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12cc10, Thiscall, GJTransformControl, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71240, Thiscall, GJTransformControl, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJTransformControl, applyRotation, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJTransformControl, calculateRotationOffset, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJTransformControl, finishTouch, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJTransformControl, loadFromState, GJTransformState&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJTransformControl, loadValues, GameObject*, cocos2d::CCArray*, gd::unordered_map<int, GameObjectEditorState>&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJTransformControl, logCurrentZeroPos, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x129780, Thiscall, GJTransformControl, onToggleLockScale, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1295f0, Thiscall, GJTransformControl, refreshControl, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJTransformControl, saveToState, GJTransformState&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x129810, Thiscall, GJTransformControl, scaleButtons, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJTransformControl, calculateRotationOffset, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJTransformControl, finishTouch, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJTransformControl, loadFromState, GJTransformState&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJTransformControl, loadValues, GameObject*, cocos2d::CCArray*, gd::unordered_map<int, GameObjectEditorState>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJTransformControl, logCurrentZeroPos, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12b530, Thiscall, GJTransformControl, onToggleLockScale, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12b3a0, Thiscall, GJTransformControl, refreshControl, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJTransformControl, saveToState, GJTransformState&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12b5c0, Thiscall, GJTransformControl, scaleButtons, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJTransformControl, spriteByTag, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJTransformControl, updateAnchorSprite, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1298d0, Thiscall, GJTransformControl, updateButtons, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJTransformControl, updateMinMaxPositions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJTransformControl, updateAnchorSprite, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12b680, Thiscall, GJTransformControl, updateButtons, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJTransformControl, updateMinMaxPositions, )
 		}
 	};
 }

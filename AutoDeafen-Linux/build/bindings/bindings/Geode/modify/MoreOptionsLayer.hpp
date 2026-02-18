@@ -50,44 +50,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(goToPage) 
 	#endif
 
-	#ifndef GEODE_STATICS_incrementCountForPage
-		#define GEODE_STATICS_incrementCountForPage
-		GEODE_AS_STATIC_FUNCTION(incrementCountForPage) 
-	#endif
-
-	#ifndef GEODE_STATICS_infoKey
-		#define GEODE_STATICS_infoKey
-		GEODE_AS_STATIC_FUNCTION(infoKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_layerForPage
 		#define GEODE_STATICS_layerForPage
 		GEODE_AS_STATIC_FUNCTION(layerForPage) 
 	#endif
 
-	#ifndef GEODE_STATICS_layerKey
-		#define GEODE_STATICS_layerKey
-		GEODE_AS_STATIC_FUNCTION(layerKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_nextPosition
-		#define GEODE_STATICS_nextPosition
-		GEODE_AS_STATIC_FUNCTION(nextPosition) 
-	#endif
-
-	#ifndef GEODE_STATICS_objectKey
-		#define GEODE_STATICS_objectKey
-		GEODE_AS_STATIC_FUNCTION(objectKey) 
-	#endif
-
 	#ifndef GEODE_STATICS_objectsForPage
 		#define GEODE_STATICS_objectsForPage
 		GEODE_AS_STATIC_FUNCTION(objectsForPage) 
-	#endif
-
-	#ifndef GEODE_STATICS_offsetToNextPage
-		#define GEODE_STATICS_offsetToNextPage
-		GEODE_AS_STATIC_FUNCTION(offsetToNextPage) 
 	#endif
 
 	#ifndef GEODE_STATICS_onClose
@@ -98,16 +68,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onFMODDebug
 		#define GEODE_STATICS_onFMODDebug
 		GEODE_AS_STATIC_FUNCTION(onFMODDebug) 
-	#endif
-
-	#ifndef GEODE_STATICS_onGPSignIn
-		#define GEODE_STATICS_onGPSignIn
-		GEODE_AS_STATIC_FUNCTION(onGPSignIn) 
-	#endif
-
-	#ifndef GEODE_STATICS_onGPSignOut
-		#define GEODE_STATICS_onGPSignOut
-		GEODE_AS_STATIC_FUNCTION(onGPSignOut) 
 	#endif
 
 	#ifndef GEODE_STATICS_onInfo
@@ -143,16 +103,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onToggle
 		#define GEODE_STATICS_onToggle
 		GEODE_AS_STATIC_FUNCTION(onToggle) 
-	#endif
-
-	#ifndef GEODE_STATICS_pageKey
-		#define GEODE_STATICS_pageKey
-		GEODE_AS_STATIC_FUNCTION(pageKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleGP
-		#define GEODE_STATICS_toggleGP
-		GEODE_AS_STATIC_FUNCTION(toggleGP) 
 	#endif
 
     
@@ -321,36 +271,36 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreOptionsLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35da20, Thiscall, MoreOptionsLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x360c90, Thiscall, MoreOptionsLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b5c0, Thiscall, MoreOptionsLayer, textInputShouldOffset, CCTextInputNode*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b620, Thiscall, MoreOptionsLayer, textInputReturn, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x360ca0, Thiscall, MoreOptionsLayer, googlePlaySignedIn, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3607f0, Thiscall, MoreOptionsLayer, dropDownLayerWillClose, GJDropDownLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35ee10, Thiscall, MoreOptionsLayer, addToggle, char const*, char const*, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, countForPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35f890, Thiscall, MoreOptionsLayer, goToPage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, incrementCountForPage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, infoKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, layerForPage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, layerKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, nextPosition, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, objectKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, objectsForPage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, offsetToNextPage, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x360b30, Thiscall, MoreOptionsLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3606a0, Thiscall, MoreOptionsLayer, onFMODDebug, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, onGPSignIn, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, onGPSignOut, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, onInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdba40, Thiscall, MoreOptionsLayer, onKeybindings, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, onNextPage, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, onParental, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, onPrevPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x360630, Thiscall, MoreOptionsLayer, onSongBrowser, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x35fe30, Thiscall, MoreOptionsLayer, onToggle, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, pageKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MoreOptionsLayer, toggleGP, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x373740, Thiscall, MoreOptionsLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x376a00, Thiscall, MoreOptionsLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b600, Thiscall, MoreOptionsLayer, textInputShouldOffset, CCTextInputNode*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b660, Thiscall, MoreOptionsLayer, textInputReturn, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x376a10, Thiscall, MoreOptionsLayer, googlePlaySignedIn, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x376560, Thiscall, MoreOptionsLayer, dropDownLayerWillClose, GJDropDownLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x374b80, Thiscall, MoreOptionsLayer, addToggle, char const*, char const*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3751e0, Thiscall, MoreOptionsLayer, countForPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x375600, Thiscall, MoreOptionsLayer, goToPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreOptionsLayer, incrementCountForPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreOptionsLayer, infoKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x375440, Thiscall, MoreOptionsLayer, layerForPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreOptionsLayer, layerKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreOptionsLayer, nextPosition, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreOptionsLayer, objectKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3752b0, Thiscall, MoreOptionsLayer, objectsForPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreOptionsLayer, offsetToNextPage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3768a0, Thiscall, MoreOptionsLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x376410, Thiscall, MoreOptionsLayer, onFMODDebug, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreOptionsLayer, onGPSignIn, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreOptionsLayer, onGPSignOut, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3766c0, Thiscall, MoreOptionsLayer, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xdcf70, Thiscall, MoreOptionsLayer, onKeybindings, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3755e0, Thiscall, MoreOptionsLayer, onNextPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3765b0, Thiscall, MoreOptionsLayer, onParental, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3755f0, Thiscall, MoreOptionsLayer, onPrevPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3763a0, Thiscall, MoreOptionsLayer, onSongBrowser, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x375ba0, Thiscall, MoreOptionsLayer, onToggle, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreOptionsLayer, pageKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MoreOptionsLayer, toggleGP, )
 		}
 	};
 }

@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void colorSelectClosed(GJSpecialColorSelect* p0, int p1);
+    virtual void colorSelectClosed(GJSpecialColorSelect* select, int id);
 };

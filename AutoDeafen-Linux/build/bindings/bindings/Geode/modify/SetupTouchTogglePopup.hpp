@@ -135,18 +135,18 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44b5e0, Default, SetupTouchTogglePopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44c350, Thiscall, SetupTouchTogglePopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44c880, Thiscall, SetupTouchTogglePopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44c760, Thiscall, SetupTouchTogglePopup, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44b720, Thiscall, SetupTouchTogglePopup, init, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44c6a0, Thiscall, SetupTouchTogglePopup, onControlMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44c540, Thiscall, SetupTouchTogglePopup, onDualTouchMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44c4b0, Thiscall, SetupTouchTogglePopup, onHoldMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fbf70, Thiscall, SetupTouchTogglePopup, onTargetIDArrow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44c5d0, Thiscall, SetupTouchTogglePopup, onTouchMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fc130, Thiscall, SetupTouchTogglePopup, updateTargetID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fc0b0, Thiscall, SetupTouchTogglePopup, updateTextInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x463bf0, Default, SetupTouchTogglePopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x464960, Thiscall, SetupTouchTogglePopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x464e90, Thiscall, SetupTouchTogglePopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x464d70, Thiscall, SetupTouchTogglePopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x463d30, Thiscall, SetupTouchTogglePopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x464cb0, Thiscall, SetupTouchTogglePopup, onControlMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x464b50, Thiscall, SetupTouchTogglePopup, onDualTouchMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x464ac0, Thiscall, SetupTouchTogglePopup, onHoldMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413c30, Thiscall, SetupTouchTogglePopup, onTargetIDArrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x464be0, Thiscall, SetupTouchTogglePopup, onTouchMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413df0, Thiscall, SetupTouchTogglePopup, updateTargetID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413d70, Thiscall, SetupTouchTogglePopup, updateTextInputLabel, )
 		}
 	};
 }

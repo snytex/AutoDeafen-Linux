@@ -16,46 +16,54 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(TutorialPopup, FLAlertLayer)
 
     /**
+     * @note[short] MacOS (ARM): 0x500248
+     * @note[short] MacOS (Intel): 0x5d41d0
      * @note[short] Android: Rebinded
      */
-    static TutorialPopup* create(gd::string p0);
+    static TutorialPopup* create(gd::string frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x4f1a04
-     * @note[short] MacOS (Intel): 0x5bbe00
+     * @note[short] MacOS (ARM): 0x500630
+     * @note[short] MacOS (Intel): 0x5d45e0
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x4f1ad8
-     * @note[short] MacOS (Intel): 0x5bbed0
+     * @note[short] MacOS (ARM): 0x50070c
+     * @note[short] MacOS (Intel): 0x5d46b0
      * @note[short] Android
      */
     virtual void show();
 
     /**
+     * @note[short] MacOS (ARM): 0x500768
+     * @note[short] MacOS (Intel): 0x5d4700
      * @note[short] Android
      */
     void animateMenu();
 
     /**
+     * @note[short] MacOS (ARM): 0x5005c4
+     * @note[short] MacOS (Intel): 0x5d4580
      * @note[short] Android
      */
     void closeTutorial(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4f17a0
-     * @note[short] MacOS (Intel): 0x5bbba0
+     * @note[short] MacOS (ARM): 0x5003c8
+     * @note[short] MacOS (Intel): 0x5d4380
      * @note[short] Android: Rebinded
      */
-    bool init(gd::string p0);
+    bool init(gd::string frame);
 
     /**
+     * @note[short] MacOS (ARM): 0x5007d8
+     * @note[short] MacOS (Intel): 0x5d4770
      * @note[short] Android
      */
-    void registerForCallback(cocos2d::SEL_MenuHandler p0, cocos2d::CCNode* p1);
-    gd::string m_unk298;
+    void registerForCallback(cocos2d::SEL_MenuHandler selector, cocos2d::CCNode* target);
+    gd::string m_currentSprite;
     bool m_callbackRegistered;
     cocos2d::SEL_MenuHandler m_callbackSelector;
     cocos2d::CCNode* m_targetNode;

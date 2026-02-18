@@ -15,27 +15,28 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(CCNodeContainer, cocos2d::CCNode)
 
     /**
-     * @note[short] MacOS (ARM): 0xe4920
-     * @note[short] MacOS (Intel): 0x102b20
-     * @note[short] Windows: 0x242710
+     * @note[short] MacOS (ARM): 0xeeba4
+     * @note[short] MacOS (Intel): 0x113de0
+     * @note[short] Windows: 0x248ca0
+     * @note[short] iOS: 0x1dd754
      * @note[short] Android
      */
     static CCNodeContainer* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x128138
-     * @note[short] MacOS (Intel): 0x154510
-     * @note[short] Windows: 0x77db0
-     * @note[short] iOS: 0x20b410
+     * @note[short] MacOS (ARM): 0x1329bc
+     * @note[short] MacOS (Intel): 0x165150
+     * @note[short] Windows: 0x77de0
+     * @note[short] iOS: 0x20911c
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x12813c
-     * @note[short] MacOS (Intel): 0x154520
-     * @note[short] Windows: 0x2427e0
-     * @note[short] iOS: 0x20b414
+     * @note[short] MacOS (ARM): 0x1329c0
+     * @note[short] MacOS (Intel): 0x165160
+     * @note[short] Windows: 0x248d70
+     * @note[short] iOS: 0x209120
      * @note[short] Android
      */
     virtual void visit();

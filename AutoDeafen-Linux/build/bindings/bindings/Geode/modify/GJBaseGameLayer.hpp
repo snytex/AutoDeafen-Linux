@@ -5,6 +5,16 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
+	#ifndef GEODE_STATICS_convertToClosestDirection
+		#define GEODE_STATICS_convertToClosestDirection
+		GEODE_AS_STATIC_FUNCTION(convertToClosestDirection) 
+	#endif
+
+	#ifndef GEODE_STATICS_gameEventToString
+		#define GEODE_STATICS_gameEventToString
+		GEODE_AS_STATIC_FUNCTION(gameEventToString) 
+	#endif
+
 	#ifndef GEODE_STATICS_update
 		#define GEODE_STATICS_update
 		GEODE_AS_STATIC_FUNCTION(update) 
@@ -130,11 +140,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addKeyframe) 
 	#endif
 
-	#ifndef GEODE_STATICS_activateCustomRing
-		#define GEODE_STATICS_activateCustomRing
-		GEODE_AS_STATIC_FUNCTION(activateCustomRing) 
-	#endif
-
 	#ifndef GEODE_STATICS_activateEventTrigger
 		#define GEODE_STATICS_activateEventTrigger
 		GEODE_AS_STATIC_FUNCTION(activateEventTrigger) 
@@ -150,11 +155,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(activateItemEditTrigger) 
 	#endif
 
-	#ifndef GEODE_STATICS_activateObjectControlTrigger
-		#define GEODE_STATICS_activateObjectControlTrigger
-		GEODE_AS_STATIC_FUNCTION(activateObjectControlTrigger) 
-	#endif
-
 	#ifndef GEODE_STATICS_activatePersistentItemTrigger
 		#define GEODE_STATICS_activatePersistentItemTrigger
 		GEODE_AS_STATIC_FUNCTION(activatePersistentItemTrigger) 
@@ -163,11 +163,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_activatePlayerControlTrigger
 		#define GEODE_STATICS_activatePlayerControlTrigger
 		GEODE_AS_STATIC_FUNCTION(activatePlayerControlTrigger) 
-	#endif
-
-	#ifndef GEODE_STATICS_activateResetTrigger
-		#define GEODE_STATICS_activateResetTrigger
-		GEODE_AS_STATIC_FUNCTION(activateResetTrigger) 
 	#endif
 
 	#ifndef GEODE_STATICS_activateSFXEditTrigger
@@ -210,21 +205,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addGuideArt) 
 	#endif
 
-	#ifndef GEODE_STATICS_addObjectCounter
-		#define GEODE_STATICS_addObjectCounter
-		GEODE_AS_STATIC_FUNCTION(addObjectCounter) 
-	#endif
-
-	#ifndef GEODE_STATICS_addPickupTrigger
-		#define GEODE_STATICS_addPickupTrigger
-		GEODE_AS_STATIC_FUNCTION(addPickupTrigger) 
-	#endif
-
-	#ifndef GEODE_STATICS_addPoints
-		#define GEODE_STATICS_addPoints
-		GEODE_AS_STATIC_FUNCTION(addPoints) 
-	#endif
-
 	#ifndef GEODE_STATICS_addProximityVolumeEffect
 		#define GEODE_STATICS_addProximityVolumeEffect
 		GEODE_AS_STATIC_FUNCTION(addProximityVolumeEffect) 
@@ -235,19 +215,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addRemapTargets) 
 	#endif
 
-	#ifndef GEODE_STATICS_addToGroupParents
-		#define GEODE_STATICS_addToGroupParents
-		GEODE_AS_STATIC_FUNCTION(addToGroupParents) 
-	#endif
-
 	#ifndef GEODE_STATICS_addToGroups
 		#define GEODE_STATICS_addToGroups
 		GEODE_AS_STATIC_FUNCTION(addToGroups) 
-	#endif
-
-	#ifndef GEODE_STATICS_addToObjectsToShow
-		#define GEODE_STATICS_addToObjectsToShow
-		GEODE_AS_STATIC_FUNCTION(addToObjectsToShow) 
 	#endif
 
 	#ifndef GEODE_STATICS_addUIObject
@@ -260,26 +230,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(animateInDualGroundNew) 
 	#endif
 
-	#ifndef GEODE_STATICS_animateInGroundNew
-		#define GEODE_STATICS_animateInGroundNew
-		GEODE_AS_STATIC_FUNCTION(animateInGroundNew) 
-	#endif
-
-	#ifndef GEODE_STATICS_animateOutGroundNew
-		#define GEODE_STATICS_animateOutGroundNew
-		GEODE_AS_STATIC_FUNCTION(animateOutGroundNew) 
-	#endif
-
-	#ifndef GEODE_STATICS_animatePortalY
-		#define GEODE_STATICS_animatePortalY
-		GEODE_AS_STATIC_FUNCTION(animatePortalY) 
-	#endif
-
-	#ifndef GEODE_STATICS_applyLevelSettings
-		#define GEODE_STATICS_applyLevelSettings
-		GEODE_AS_STATIC_FUNCTION(applyLevelSettings) 
-	#endif
-
 	#ifndef GEODE_STATICS_applyRemap
 		#define GEODE_STATICS_applyRemap
 		GEODE_AS_STATIC_FUNCTION(applyRemap) 
@@ -290,34 +240,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(applySFXEditTrigger) 
 	#endif
 
-	#ifndef GEODE_STATICS_applyShake
-		#define GEODE_STATICS_applyShake
-		GEODE_AS_STATIC_FUNCTION(applyShake) 
-	#endif
-
 	#ifndef GEODE_STATICS_assignNewStickyGroups
 		#define GEODE_STATICS_assignNewStickyGroups
 		GEODE_AS_STATIC_FUNCTION(assignNewStickyGroups) 
-	#endif
-
-	#ifndef GEODE_STATICS_asyncBGLoaded
-		#define GEODE_STATICS_asyncBGLoaded
-		GEODE_AS_STATIC_FUNCTION(asyncBGLoaded) 
-	#endif
-
-	#ifndef GEODE_STATICS_asyncGLoaded
-		#define GEODE_STATICS_asyncGLoaded
-		GEODE_AS_STATIC_FUNCTION(asyncGLoaded) 
-	#endif
-
-	#ifndef GEODE_STATICS_asyncMGLoaded
-		#define GEODE_STATICS_asyncMGLoaded
-		GEODE_AS_STATIC_FUNCTION(asyncMGLoaded) 
-	#endif
-
-	#ifndef GEODE_STATICS_atlasValue
-		#define GEODE_STATICS_atlasValue
-		GEODE_AS_STATIC_FUNCTION(atlasValue) 
 	#endif
 
 	#ifndef GEODE_STATICS_bumpPlayer
@@ -325,9 +250,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(bumpPlayer) 
 	#endif
 
-	#ifndef GEODE_STATICS_buttonIDToButton
-		#define GEODE_STATICS_buttonIDToButton
-		GEODE_AS_STATIC_FUNCTION(buttonIDToButton) 
+	#ifndef GEODE_STATICS_buttonIsRelevant
+		#define GEODE_STATICS_buttonIsRelevant
+		GEODE_AS_STATIC_FUNCTION(buttonIsRelevant) 
 	#endif
 
 	#ifndef GEODE_STATICS_calculateColorGroups
@@ -343,11 +268,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_canProcessSFX
 		#define GEODE_STATICS_canProcessSFX
 		GEODE_AS_STATIC_FUNCTION(canProcessSFX) 
-	#endif
-
-	#ifndef GEODE_STATICS_canTouchObject
-		#define GEODE_STATICS_canTouchObject
-		GEODE_AS_STATIC_FUNCTION(canTouchObject) 
 	#endif
 
 	#ifndef GEODE_STATICS_checkCameraLimitAfterTeleport
@@ -395,29 +315,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(claimRotationAction) 
 	#endif
 
-	#ifndef GEODE_STATICS_clearActivatedAudioTriggers
-		#define GEODE_STATICS_clearActivatedAudioTriggers
-		GEODE_AS_STATIC_FUNCTION(clearActivatedAudioTriggers) 
-	#endif
-
-	#ifndef GEODE_STATICS_clearPickedUpItems
-		#define GEODE_STATICS_clearPickedUpItems
-		GEODE_AS_STATIC_FUNCTION(clearPickedUpItems) 
-	#endif
-
-	#ifndef GEODE_STATICS_collectedObject
-		#define GEODE_STATICS_collectedObject
-		GEODE_AS_STATIC_FUNCTION(collectedObject) 
-	#endif
-
 	#ifndef GEODE_STATICS_collisionCheckObjects
 		#define GEODE_STATICS_collisionCheckObjects
 		GEODE_AS_STATIC_FUNCTION(collisionCheckObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_controlAdvancedFollowCommand
-		#define GEODE_STATICS_controlAdvancedFollowCommand
-		GEODE_AS_STATIC_FUNCTION(controlAdvancedFollowCommand) 
 	#endif
 
 	#ifndef GEODE_STATICS_controlAreaEffect
@@ -430,29 +330,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(controlAreaEffectWithID) 
 	#endif
 
-	#ifndef GEODE_STATICS_controlDynamicCommand
-		#define GEODE_STATICS_controlDynamicCommand
-		GEODE_AS_STATIC_FUNCTION(controlDynamicCommand) 
-	#endif
-
-	#ifndef GEODE_STATICS_controlDynamicMoveCommand
-		#define GEODE_STATICS_controlDynamicMoveCommand
-		GEODE_AS_STATIC_FUNCTION(controlDynamicMoveCommand) 
-	#endif
-
-	#ifndef GEODE_STATICS_controlDynamicRotateCommand
-		#define GEODE_STATICS_controlDynamicRotateCommand
-		GEODE_AS_STATIC_FUNCTION(controlDynamicRotateCommand) 
-	#endif
-
 	#ifndef GEODE_STATICS_controlEventLink
 		#define GEODE_STATICS_controlEventLink
 		GEODE_AS_STATIC_FUNCTION(controlEventLink) 
-	#endif
-
-	#ifndef GEODE_STATICS_controlGradientTrigger
-		#define GEODE_STATICS_controlGradientTrigger
-		GEODE_AS_STATIC_FUNCTION(controlGradientTrigger) 
 	#endif
 
 	#ifndef GEODE_STATICS_controlTriggersInGroup
@@ -463,11 +343,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_controlTriggersWithControlID
 		#define GEODE_STATICS_controlTriggersWithControlID
 		GEODE_AS_STATIC_FUNCTION(controlTriggersWithControlID) 
-	#endif
-
-	#ifndef GEODE_STATICS_convertToClosestDirection
-		#define GEODE_STATICS_convertToClosestDirection
-		GEODE_AS_STATIC_FUNCTION(convertToClosestDirection) 
 	#endif
 
 	#ifndef GEODE_STATICS_createBackground
@@ -483,11 +358,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_createMiddleground
 		#define GEODE_STATICS_createMiddleground
 		GEODE_AS_STATIC_FUNCTION(createMiddleground) 
-	#endif
-
-	#ifndef GEODE_STATICS_createNewKeyframeAnim
-		#define GEODE_STATICS_createNewKeyframeAnim
-		GEODE_AS_STATIC_FUNCTION(createNewKeyframeAnim) 
 	#endif
 
 	#ifndef GEODE_STATICS_createParticle
@@ -520,19 +390,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(destroyObject) 
 	#endif
 
-	#ifndef GEODE_STATICS_enterDualMode
-		#define GEODE_STATICS_enterDualMode
-		GEODE_AS_STATIC_FUNCTION(enterDualMode) 
-	#endif
-
 	#ifndef GEODE_STATICS_exitStaticCamera
 		#define GEODE_STATICS_exitStaticCamera
 		GEODE_AS_STATIC_FUNCTION(exitStaticCamera) 
-	#endif
-
-	#ifndef GEODE_STATICS_flipFinished
-		#define GEODE_STATICS_flipFinished
-		GEODE_AS_STATIC_FUNCTION(flipFinished) 
 	#endif
 
 	#ifndef GEODE_STATICS_flipGravity
@@ -545,11 +405,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(flipObjects) 
 	#endif
 
-	#ifndef GEODE_STATICS_gameEventToString
-		#define GEODE_STATICS_gameEventToString
-		GEODE_AS_STATIC_FUNCTION(gameEventToString) 
-	#endif
-
 	#ifndef GEODE_STATICS_gameEventTriggered
 		#define GEODE_STATICS_gameEventTriggered
 		GEODE_AS_STATIC_FUNCTION(gameEventTriggered) 
@@ -558,16 +413,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_generateEnterEasingBuffer
 		#define GEODE_STATICS_generateEnterEasingBuffer
 		GEODE_AS_STATIC_FUNCTION(generateEnterEasingBuffer) 
-	#endif
-
-	#ifndef GEODE_STATICS_generateEnterEasingBuffers
-		#define GEODE_STATICS_generateEnterEasingBuffers
-		GEODE_AS_STATIC_FUNCTION(generateEnterEasingBuffers) 
-	#endif
-
-	#ifndef GEODE_STATICS_generatePickupAnimRandVal
-		#define GEODE_STATICS_generatePickupAnimRandVal
-		GEODE_AS_STATIC_FUNCTION(generatePickupAnimRandVal) 
 	#endif
 
 	#ifndef GEODE_STATICS_generateSpawnRemap
@@ -585,34 +430,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(generateVisibilityGroups) 
 	#endif
 
-	#ifndef GEODE_STATICS_getActiveOrderSpawnObjects
-		#define GEODE_STATICS_getActiveOrderSpawnObjects
-		GEODE_AS_STATIC_FUNCTION(getActiveOrderSpawnObjects) 
-	#endif
-
 	#ifndef GEODE_STATICS_getAreaObjectValue
 		#define GEODE_STATICS_getAreaObjectValue
 		GEODE_AS_STATIC_FUNCTION(getAreaObjectValue) 
-	#endif
-
-	#ifndef GEODE_STATICS_getCameraEdgeValue
-		#define GEODE_STATICS_getCameraEdgeValue
-		GEODE_AS_STATIC_FUNCTION(getCameraEdgeValue) 
-	#endif
-
-	#ifndef GEODE_STATICS_getCapacityString
-		#define GEODE_STATICS_getCapacityString
-		GEODE_AS_STATIC_FUNCTION(getCapacityString) 
-	#endif
-
-	#ifndef GEODE_STATICS_getCenterGroupObject
-		#define GEODE_STATICS_getCenterGroupObject
-		GEODE_AS_STATIC_FUNCTION(getCenterGroupObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_getCustomEnterEffects
-		#define GEODE_STATICS_getCustomEnterEffects
-		GEODE_AS_STATIC_FUNCTION(getCustomEnterEffects) 
 	#endif
 
 	#ifndef GEODE_STATICS_getEasedAreaValue
@@ -620,24 +440,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getEasedAreaValue) 
 	#endif
 
-	#ifndef GEODE_STATICS_getEnterEasingKey
-		#define GEODE_STATICS_getEnterEasingKey
-		GEODE_AS_STATIC_FUNCTION(getEnterEasingKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getEnterEasingValue
-		#define GEODE_STATICS_getEnterEasingValue
-		GEODE_AS_STATIC_FUNCTION(getEnterEasingValue) 
-	#endif
-
 	#ifndef GEODE_STATICS_getFollowSpeedVal
 		#define GEODE_STATICS_getFollowSpeedVal
 		GEODE_AS_STATIC_FUNCTION(getFollowSpeedVal) 
-	#endif
-
-	#ifndef GEODE_STATICS_getGroundHeight
-		#define GEODE_STATICS_getGroundHeight
-		GEODE_AS_STATIC_FUNCTION(getGroundHeight) 
 	#endif
 
 	#ifndef GEODE_STATICS_getGroundHeightForMode
@@ -648,16 +453,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getGroup
 		#define GEODE_STATICS_getGroup
 		GEODE_AS_STATIC_FUNCTION(getGroup) 
-	#endif
-
-	#ifndef GEODE_STATICS_getGroupParent
-		#define GEODE_STATICS_getGroupParent
-		GEODE_AS_STATIC_FUNCTION(getGroupParent) 
-	#endif
-
-	#ifndef GEODE_STATICS_getGroupParentsString
-		#define GEODE_STATICS_getGroupParentsString
-		GEODE_AS_STATIC_FUNCTION(getGroupParentsString) 
 	#endif
 
 	#ifndef GEODE_STATICS_getItemValue
@@ -685,16 +480,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getModifiedDelta) 
 	#endif
 
-	#ifndef GEODE_STATICS_getMoveTargetDelta
-		#define GEODE_STATICS_getMoveTargetDelta
-		GEODE_AS_STATIC_FUNCTION(getMoveTargetDelta) 
-	#endif
-
-	#ifndef GEODE_STATICS_getOtherPlayer
-		#define GEODE_STATICS_getOtherPlayer
-		GEODE_AS_STATIC_FUNCTION(getOtherPlayer) 
-	#endif
-
 	#ifndef GEODE_STATICS_getParticleKey
 		#define GEODE_STATICS_getParticleKey
 		GEODE_AS_STATIC_FUNCTION(getParticleKey) 
@@ -705,79 +490,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getParticleKey2) 
 	#endif
 
-	#ifndef GEODE_STATICS_getPlayerButtonID
-		#define GEODE_STATICS_getPlayerButtonID
-		GEODE_AS_STATIC_FUNCTION(getPlayerButtonID) 
-	#endif
-
-	#ifndef GEODE_STATICS_getPlayTimerFullSeconds
-		#define GEODE_STATICS_getPlayTimerFullSeconds
-		GEODE_AS_STATIC_FUNCTION(getPlayTimerFullSeconds) 
-	#endif
-
-	#ifndef GEODE_STATICS_getPlayTimerMilli
-		#define GEODE_STATICS_getPlayTimerMilli
-		GEODE_AS_STATIC_FUNCTION(getPlayTimerMilli) 
-	#endif
-
-	#ifndef GEODE_STATICS_getPortalTarget
-		#define GEODE_STATICS_getPortalTarget
-		GEODE_AS_STATIC_FUNCTION(getPortalTarget) 
-	#endif
-
-	#ifndef GEODE_STATICS_getPortalTargetPos
-		#define GEODE_STATICS_getPortalTargetPos
-		GEODE_AS_STATIC_FUNCTION(getPortalTargetPos) 
-	#endif
-
 	#ifndef GEODE_STATICS_getRecordString
 		#define GEODE_STATICS_getRecordString
 		GEODE_AS_STATIC_FUNCTION(getRecordString) 
 	#endif
 
-	#ifndef GEODE_STATICS_getRotateCommandTargets
-		#define GEODE_STATICS_getRotateCommandTargets
-		GEODE_AS_STATIC_FUNCTION(getRotateCommandTargets) 
-	#endif
-
 	#ifndef GEODE_STATICS_getSavedPosition
 		#define GEODE_STATICS_getSavedPosition
 		GEODE_AS_STATIC_FUNCTION(getSavedPosition) 
-	#endif
-
-	#ifndef GEODE_STATICS_getScaledGroundHeight
-		#define GEODE_STATICS_getScaledGroundHeight
-		GEODE_AS_STATIC_FUNCTION(getScaledGroundHeight) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSingleGroupObject
-		#define GEODE_STATICS_getSingleGroupObject
-		GEODE_AS_STATIC_FUNCTION(getSingleGroupObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSpecialKey
-		#define GEODE_STATICS_getSpecialKey
-		GEODE_AS_STATIC_FUNCTION(getSpecialKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getTargetFlyCameraY
-		#define GEODE_STATICS_getTargetFlyCameraY
-		GEODE_AS_STATIC_FUNCTION(getTargetFlyCameraY) 
-	#endif
-
-	#ifndef GEODE_STATICS_getTargetGroup
-		#define GEODE_STATICS_getTargetGroup
-		GEODE_AS_STATIC_FUNCTION(getTargetGroup) 
-	#endif
-
-	#ifndef GEODE_STATICS_getTargetGroupOrigin
-		#define GEODE_STATICS_getTargetGroupOrigin
-		GEODE_AS_STATIC_FUNCTION(getTargetGroupOrigin) 
-	#endif
-
-	#ifndef GEODE_STATICS_gravBumpPlayer
-		#define GEODE_STATICS_gravBumpPlayer
-		GEODE_AS_STATIC_FUNCTION(gravBumpPlayer) 
 	#endif
 
 	#ifndef GEODE_STATICS_groupStickyObjects
@@ -790,11 +510,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(handleButton) 
 	#endif
 
-	#ifndef GEODE_STATICS_hasItem
-		#define GEODE_STATICS_hasItem
-		GEODE_AS_STATIC_FUNCTION(hasItem) 
-	#endif
-
 	#ifndef GEODE_STATICS_hasUniqueCoin
 		#define GEODE_STATICS_hasUniqueCoin
 		GEODE_AS_STATIC_FUNCTION(hasUniqueCoin) 
@@ -803,11 +518,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_increaseBatchNodeCapacity
 		#define GEODE_STATICS_increaseBatchNodeCapacity
 		GEODE_AS_STATIC_FUNCTION(increaseBatchNodeCapacity) 
-	#endif
-
-	#ifndef GEODE_STATICS_isPlayer2Button
-		#define GEODE_STATICS_isPlayer2Button
-		GEODE_AS_STATIC_FUNCTION(isPlayer2Button) 
 	#endif
 
 	#ifndef GEODE_STATICS_lightningFlash
@@ -850,19 +560,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(modifyGroupPhysics) 
 	#endif
 
-	#ifndef GEODE_STATICS_modifyObjectPhysics
-		#define GEODE_STATICS_modifyObjectPhysics
-		GEODE_AS_STATIC_FUNCTION(modifyObjectPhysics) 
-	#endif
-
 	#ifndef GEODE_STATICS_moveAreaObject
 		#define GEODE_STATICS_moveAreaObject
 		GEODE_AS_STATIC_FUNCTION(moveAreaObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_moveObject
-		#define GEODE_STATICS_moveObject
-		GEODE_AS_STATIC_FUNCTION(moveObject) 
 	#endif
 
 	#ifndef GEODE_STATICS_moveObjects
@@ -870,19 +570,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(moveObjects) 
 	#endif
 
-	#ifndef GEODE_STATICS_moveObjectsSilent
-		#define GEODE_STATICS_moveObjectsSilent
-		GEODE_AS_STATIC_FUNCTION(moveObjectsSilent) 
-	#endif
-
 	#ifndef GEODE_STATICS_moveObjectToStaticGroup
 		#define GEODE_STATICS_moveObjectToStaticGroup
 		GEODE_AS_STATIC_FUNCTION(moveObjectToStaticGroup) 
-	#endif
-
-	#ifndef GEODE_STATICS_objectIntersectsCircle
-		#define GEODE_STATICS_objectIntersectsCircle
-		GEODE_AS_STATIC_FUNCTION(objectIntersectsCircle) 
 	#endif
 
 	#ifndef GEODE_STATICS_objectTypeToGameEvent
@@ -910,39 +600,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(pauseAudio) 
 	#endif
 
-	#ifndef GEODE_STATICS_performMathOperation
-		#define GEODE_STATICS_performMathOperation
-		GEODE_AS_STATIC_FUNCTION(performMathOperation) 
-	#endif
-
-	#ifndef GEODE_STATICS_performMathRounding
-		#define GEODE_STATICS_performMathRounding
-		GEODE_AS_STATIC_FUNCTION(performMathRounding) 
-	#endif
-
 	#ifndef GEODE_STATICS_pickupItem
 		#define GEODE_STATICS_pickupItem
 		GEODE_AS_STATIC_FUNCTION(pickupItem) 
 	#endif
 
-	#ifndef GEODE_STATICS_playAnimationCommand
-		#define GEODE_STATICS_playAnimationCommand
-		GEODE_AS_STATIC_FUNCTION(playAnimationCommand) 
-	#endif
-
 	#ifndef GEODE_STATICS_playerCircleCollision
 		#define GEODE_STATICS_playerCircleCollision
 		GEODE_AS_STATIC_FUNCTION(playerCircleCollision) 
-	#endif
-
-	#ifndef GEODE_STATICS_playerIntersectsCircle
-		#define GEODE_STATICS_playerIntersectsCircle
-		GEODE_AS_STATIC_FUNCTION(playerIntersectsCircle) 
-	#endif
-
-	#ifndef GEODE_STATICS_playerTouchedObject
-		#define GEODE_STATICS_playerTouchedObject
-		GEODE_AS_STATIC_FUNCTION(playerTouchedObject) 
 	#endif
 
 	#ifndef GEODE_STATICS_playerTouchedRing
@@ -955,11 +620,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(playerTouchedTrigger) 
 	#endif
 
-	#ifndef GEODE_STATICS_playerWasTouchingObject
-		#define GEODE_STATICS_playerWasTouchingObject
-		GEODE_AS_STATIC_FUNCTION(playerWasTouchingObject) 
-	#endif
-
 	#ifndef GEODE_STATICS_playerWillSwitchMode
 		#define GEODE_STATICS_playerWillSwitchMode
 		GEODE_AS_STATIC_FUNCTION(playerWillSwitchMode) 
@@ -970,19 +630,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(playExitDualEffect) 
 	#endif
 
-	#ifndef GEODE_STATICS_playFlashEffect
-		#define GEODE_STATICS_playFlashEffect
-		GEODE_AS_STATIC_FUNCTION(playFlashEffect) 
-	#endif
-
 	#ifndef GEODE_STATICS_playKeyframeAnimation
 		#define GEODE_STATICS_playKeyframeAnimation
 		GEODE_AS_STATIC_FUNCTION(playKeyframeAnimation) 
-	#endif
-
-	#ifndef GEODE_STATICS_playSpeedParticle
-		#define GEODE_STATICS_playSpeedParticle
-		GEODE_AS_STATIC_FUNCTION(playSpeedParticle) 
 	#endif
 
 	#ifndef GEODE_STATICS_positionForShaderTarget
@@ -998,16 +648,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_prepareSavePositionObjects
 		#define GEODE_STATICS_prepareSavePositionObjects
 		GEODE_AS_STATIC_FUNCTION(prepareSavePositionObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_prepareTransformParent
-		#define GEODE_STATICS_prepareTransformParent
-		GEODE_AS_STATIC_FUNCTION(prepareTransformParent) 
-	#endif
-
-	#ifndef GEODE_STATICS_preResumeGame
-		#define GEODE_STATICS_preResumeGame
-		GEODE_AS_STATIC_FUNCTION(preResumeGame) 
 	#endif
 
 	#ifndef GEODE_STATICS_preUpdateVisibility
@@ -1040,11 +680,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(processAreaEffects) 
 	#endif
 
-	#ifndef GEODE_STATICS_processAreaFadeGroupAction
-		#define GEODE_STATICS_processAreaFadeGroupAction
-		GEODE_AS_STATIC_FUNCTION(processAreaFadeGroupAction) 
-	#endif
-
 	#ifndef GEODE_STATICS_processAreaMoveGroupAction
 		#define GEODE_STATICS_processAreaMoveGroupAction
 		GEODE_AS_STATIC_FUNCTION(processAreaMoveGroupAction) 
@@ -1063,11 +698,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_processAreaTransformGroupAction
 		#define GEODE_STATICS_processAreaTransformGroupAction
 		GEODE_AS_STATIC_FUNCTION(processAreaTransformGroupAction) 
-	#endif
-
-	#ifndef GEODE_STATICS_processAreaVisualActions
-		#define GEODE_STATICS_processAreaVisualActions
-		GEODE_AS_STATIC_FUNCTION(processAreaVisualActions) 
 	#endif
 
 	#ifndef GEODE_STATICS_processCommands
@@ -1140,29 +770,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(processSongState) 
 	#endif
 
-	#ifndef GEODE_STATICS_processStateObjects
-		#define GEODE_STATICS_processStateObjects
-		GEODE_AS_STATIC_FUNCTION(processStateObjects) 
-	#endif
-
 	#ifndef GEODE_STATICS_processTransformActions
 		#define GEODE_STATICS_processTransformActions
 		GEODE_AS_STATIC_FUNCTION(processTransformActions) 
-	#endif
-
-	#ifndef GEODE_STATICS_reAddToStickyGroup
-		#define GEODE_STATICS_reAddToStickyGroup
-		GEODE_AS_STATIC_FUNCTION(reAddToStickyGroup) 
-	#endif
-
-	#ifndef GEODE_STATICS_recordAction
-		#define GEODE_STATICS_recordAction
-		GEODE_AS_STATIC_FUNCTION(recordAction) 
-	#endif
-
-	#ifndef GEODE_STATICS_rectIntersectsCircle
-		#define GEODE_STATICS_rectIntersectsCircle
-		GEODE_AS_STATIC_FUNCTION(rectIntersectsCircle) 
 	#endif
 
 	#ifndef GEODE_STATICS_refreshCounterLabels
@@ -1175,49 +785,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(refreshKeyframeAnims) 
 	#endif
 
-	#ifndef GEODE_STATICS_regenerateEnterEasingBuffers
-		#define GEODE_STATICS_regenerateEnterEasingBuffers
-		GEODE_AS_STATIC_FUNCTION(regenerateEnterEasingBuffers) 
-	#endif
-
-	#ifndef GEODE_STATICS_registerSpawnRemap
-		#define GEODE_STATICS_registerSpawnRemap
-		GEODE_AS_STATIC_FUNCTION(registerSpawnRemap) 
-	#endif
-
-	#ifndef GEODE_STATICS_registerStateObject
-		#define GEODE_STATICS_registerStateObject
-		GEODE_AS_STATIC_FUNCTION(registerStateObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeBackground
-		#define GEODE_STATICS_removeBackground
-		GEODE_AS_STATIC_FUNCTION(removeBackground) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeCustomEnterEffects
-		#define GEODE_STATICS_removeCustomEnterEffects
-		GEODE_AS_STATIC_FUNCTION(removeCustomEnterEffects) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeFromGroupParents
-		#define GEODE_STATICS_removeFromGroupParents
-		GEODE_AS_STATIC_FUNCTION(removeFromGroupParents) 
-	#endif
-
 	#ifndef GEODE_STATICS_removeFromGroups
 		#define GEODE_STATICS_removeFromGroups
 		GEODE_AS_STATIC_FUNCTION(removeFromGroups) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeFromStickyGroup
-		#define GEODE_STATICS_removeFromStickyGroup
-		GEODE_AS_STATIC_FUNCTION(removeFromStickyGroup) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeGroundLayer
-		#define GEODE_STATICS_removeGroundLayer
-		GEODE_AS_STATIC_FUNCTION(removeGroundLayer) 
 	#endif
 
 	#ifndef GEODE_STATICS_removeGroupParent
@@ -1225,39 +795,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(removeGroupParent) 
 	#endif
 
-	#ifndef GEODE_STATICS_removeKeyframe
-		#define GEODE_STATICS_removeKeyframe
-		GEODE_AS_STATIC_FUNCTION(removeKeyframe) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeMiddleground
-		#define GEODE_STATICS_removeMiddleground
-		GEODE_AS_STATIC_FUNCTION(removeMiddleground) 
-	#endif
-
 	#ifndef GEODE_STATICS_removeObjectFromSection
 		#define GEODE_STATICS_removeObjectFromSection
 		GEODE_AS_STATIC_FUNCTION(removeObjectFromSection) 
 	#endif
 
-	#ifndef GEODE_STATICS_removePlayer2
-		#define GEODE_STATICS_removePlayer2
-		GEODE_AS_STATIC_FUNCTION(removePlayer2) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeTemporaryParticles
-		#define GEODE_STATICS_removeTemporaryParticles
-		GEODE_AS_STATIC_FUNCTION(removeTemporaryParticles) 
-	#endif
-
-	#ifndef GEODE_STATICS_reorderObjectSection
-		#define GEODE_STATICS_reorderObjectSection
-		GEODE_AS_STATIC_FUNCTION(reorderObjectSection) 
-	#endif
-
-	#ifndef GEODE_STATICS_reparentObject
-		#define GEODE_STATICS_reparentObject
-		GEODE_AS_STATIC_FUNCTION(reparentObject) 
+	#ifndef GEODE_STATICS_removeReleasedButtons
+		#define GEODE_STATICS_removeReleasedButtons
+		GEODE_AS_STATIC_FUNCTION(removeReleasedButtons) 
 	#endif
 
 	#ifndef GEODE_STATICS_resetActiveEnterEffects
@@ -1285,19 +830,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(resetGradientLayers) 
 	#endif
 
-	#ifndef GEODE_STATICS_resetGroupCounters
-		#define GEODE_STATICS_resetGroupCounters
-		GEODE_AS_STATIC_FUNCTION(resetGroupCounters) 
-	#endif
-
 	#ifndef GEODE_STATICS_resetLevelVariables
 		#define GEODE_STATICS_resetLevelVariables
 		GEODE_AS_STATIC_FUNCTION(resetLevelVariables) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetMoveOptimizedValue
-		#define GEODE_STATICS_resetMoveOptimizedValue
-		GEODE_AS_STATIC_FUNCTION(resetMoveOptimizedValue) 
 	#endif
 
 	#ifndef GEODE_STATICS_resetPlayer
@@ -1305,9 +840,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(resetPlayer) 
 	#endif
 
-	#ifndef GEODE_STATICS_resetSongTriggerValues
-		#define GEODE_STATICS_resetSongTriggerValues
-		GEODE_AS_STATIC_FUNCTION(resetSongTriggerValues) 
+	#ifndef GEODE_STATICS_resetRecord
+		#define GEODE_STATICS_resetRecord
+		GEODE_AS_STATIC_FUNCTION(resetRecord) 
 	#endif
 
 	#ifndef GEODE_STATICS_resetSpawnChannelIndex
@@ -1318,26 +853,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_resetStaticCamera
 		#define GEODE_STATICS_resetStaticCamera
 		GEODE_AS_STATIC_FUNCTION(resetStaticCamera) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetStoppedAreaObjects
-		#define GEODE_STATICS_resetStoppedAreaObjects
-		GEODE_AS_STATIC_FUNCTION(resetStoppedAreaObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_restoreAllUIObjects
-		#define GEODE_STATICS_restoreAllUIObjects
-		GEODE_AS_STATIC_FUNCTION(restoreAllUIObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_restoreDefaultGameplayOffsetX
-		#define GEODE_STATICS_restoreDefaultGameplayOffsetX
-		GEODE_AS_STATIC_FUNCTION(restoreDefaultGameplayOffsetX) 
-	#endif
-
-	#ifndef GEODE_STATICS_restoreDefaultGameplayOffsetY
-		#define GEODE_STATICS_restoreDefaultGameplayOffsetY
-		GEODE_AS_STATIC_FUNCTION(restoreDefaultGameplayOffsetY) 
 	#endif
 
 	#ifndef GEODE_STATICS_restoreRemap
@@ -1380,11 +895,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(setupLevelStart) 
 	#endif
 
-	#ifndef GEODE_STATICS_setupReplay
-		#define GEODE_STATICS_setupReplay
-		GEODE_AS_STATIC_FUNCTION(setupReplay) 
-	#endif
-
 	#ifndef GEODE_STATICS_shakeCamera
 		#define GEODE_STATICS_shakeCamera
 		GEODE_AS_STATIC_FUNCTION(shakeCamera) 
@@ -1393,11 +903,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_shouldExitHackedLevel
 		#define GEODE_STATICS_shouldExitHackedLevel
 		GEODE_AS_STATIC_FUNCTION(shouldExitHackedLevel) 
-	#endif
-
-	#ifndef GEODE_STATICS_sortAllGroupsX
-		#define GEODE_STATICS_sortAllGroupsX
-		GEODE_AS_STATIC_FUNCTION(sortAllGroupsX) 
 	#endif
 
 	#ifndef GEODE_STATICS_sortGroups
@@ -1415,11 +920,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(sortStickyGroups) 
 	#endif
 
-	#ifndef GEODE_STATICS_spawnGroupTriggered
-		#define GEODE_STATICS_spawnGroupTriggered
-		GEODE_AS_STATIC_FUNCTION(spawnGroupTriggered) 
-	#endif
-
 	#ifndef GEODE_STATICS_spawnObjectsInOrder
 		#define GEODE_STATICS_spawnObjectsInOrder
 		GEODE_AS_STATIC_FUNCTION(spawnObjectsInOrder) 
@@ -1435,11 +935,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(spawnParticleTrigger) 
 	#endif
 
-	#ifndef GEODE_STATICS_spawnPlayer2
-		#define GEODE_STATICS_spawnPlayer2
-		GEODE_AS_STATIC_FUNCTION(spawnPlayer2) 
-	#endif
-
 	#ifndef GEODE_STATICS_speedForShaderTarget
 		#define GEODE_STATICS_speedForShaderTarget
 		GEODE_AS_STATIC_FUNCTION(speedForShaderTarget) 
@@ -1450,39 +945,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(staticObjectsInRect) 
 	#endif
 
-	#ifndef GEODE_STATICS_stopAllGroundActions
-		#define GEODE_STATICS_stopAllGroundActions
-		GEODE_AS_STATIC_FUNCTION(stopAllGroundActions) 
-	#endif
-
-	#ifndef GEODE_STATICS_stopCameraShake
-		#define GEODE_STATICS_stopCameraShake
-		GEODE_AS_STATIC_FUNCTION(stopCameraShake) 
-	#endif
-
 	#ifndef GEODE_STATICS_stopCustomEnterEffect
 		#define GEODE_STATICS_stopCustomEnterEffect
 		GEODE_AS_STATIC_FUNCTION(stopCustomEnterEffect) 
-	#endif
-
-	#ifndef GEODE_STATICS_stopSFXTrigger
-		#define GEODE_STATICS_stopSFXTrigger
-		GEODE_AS_STATIC_FUNCTION(stopSFXTrigger) 
-	#endif
-
-	#ifndef GEODE_STATICS_swapBackground
-		#define GEODE_STATICS_swapBackground
-		GEODE_AS_STATIC_FUNCTION(swapBackground) 
-	#endif
-
-	#ifndef GEODE_STATICS_swapGround
-		#define GEODE_STATICS_swapGround
-		GEODE_AS_STATIC_FUNCTION(swapGround) 
-	#endif
-
-	#ifndef GEODE_STATICS_swapMiddleground
-		#define GEODE_STATICS_swapMiddleground
-		GEODE_AS_STATIC_FUNCTION(swapMiddleground) 
 	#endif
 
 	#ifndef GEODE_STATICS_switchToRobotMode
@@ -1510,11 +975,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(teleportPlayer) 
 	#endif
 
-	#ifndef GEODE_STATICS_testInstantCountTrigger
-		#define GEODE_STATICS_testInstantCountTrigger
-		GEODE_AS_STATIC_FUNCTION(testInstantCountTrigger) 
-	#endif
-
 	#ifndef GEODE_STATICS_toggleAudioVisualizer
 		#define GEODE_STATICS_toggleAudioVisualizer
 		GEODE_AS_STATIC_FUNCTION(toggleAudioVisualizer) 
@@ -1535,19 +995,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(toggleGroup) 
 	#endif
 
-	#ifndef GEODE_STATICS_togglePlayerStreakBlend
-		#define GEODE_STATICS_togglePlayerStreakBlend
-		GEODE_AS_STATIC_FUNCTION(togglePlayerStreakBlend) 
-	#endif
-
 	#ifndef GEODE_STATICS_transformAreaObjects
 		#define GEODE_STATICS_transformAreaObjects
 		GEODE_AS_STATIC_FUNCTION(transformAreaObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_triggerAdvancedFollowCommand
-		#define GEODE_STATICS_triggerAdvancedFollowCommand
-		GEODE_AS_STATIC_FUNCTION(triggerAdvancedFollowCommand) 
 	#endif
 
 	#ifndef GEODE_STATICS_triggerAdvancedFollowEditCommand
@@ -1560,16 +1010,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(triggerAreaEffect) 
 	#endif
 
-	#ifndef GEODE_STATICS_triggerAreaEffectAnimation
-		#define GEODE_STATICS_triggerAreaEffectAnimation
-		GEODE_AS_STATIC_FUNCTION(triggerAreaEffectAnimation) 
-	#endif
-
-	#ifndef GEODE_STATICS_triggerDynamicMoveCommand
-		#define GEODE_STATICS_triggerDynamicMoveCommand
-		GEODE_AS_STATIC_FUNCTION(triggerDynamicMoveCommand) 
-	#endif
-
 	#ifndef GEODE_STATICS_triggerDynamicRotateCommand
 		#define GEODE_STATICS_triggerDynamicRotateCommand
 		GEODE_AS_STATIC_FUNCTION(triggerDynamicRotateCommand) 
@@ -1580,19 +1020,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(triggerGradientCommand) 
 	#endif
 
-	#ifndef GEODE_STATICS_triggerGravityChange
-		#define GEODE_STATICS_triggerGravityChange
-		GEODE_AS_STATIC_FUNCTION(triggerGravityChange) 
-	#endif
-
 	#ifndef GEODE_STATICS_triggerMoveCommand
 		#define GEODE_STATICS_triggerMoveCommand
 		GEODE_AS_STATIC_FUNCTION(triggerMoveCommand) 
-	#endif
-
-	#ifndef GEODE_STATICS_triggerRotateCommand
-		#define GEODE_STATICS_triggerRotateCommand
-		GEODE_AS_STATIC_FUNCTION(triggerRotateCommand) 
 	#endif
 
 	#ifndef GEODE_STATICS_triggerShaderCommand
@@ -1605,11 +1035,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(triggerTransformCommand) 
 	#endif
 
-	#ifndef GEODE_STATICS_tryGetGroupParent
-		#define GEODE_STATICS_tryGetGroupParent
-		GEODE_AS_STATIC_FUNCTION(tryGetGroupParent) 
-	#endif
-
 	#ifndef GEODE_STATICS_tryGetMainObject
 		#define GEODE_STATICS_tryGetMainObject
 		GEODE_AS_STATIC_FUNCTION(tryGetMainObject) 
@@ -1618,11 +1043,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_tryGetObject
 		#define GEODE_STATICS_tryGetObject
 		GEODE_AS_STATIC_FUNCTION(tryGetObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_tryResumeAudio
-		#define GEODE_STATICS_tryResumeAudio
-		GEODE_AS_STATIC_FUNCTION(tryResumeAudio) 
 	#endif
 
 	#ifndef GEODE_STATICS_unclaimParticle
@@ -1635,21 +1055,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(ungroupStickyObjects) 
 	#endif
 
-	#ifndef GEODE_STATICS_unlinkAllEvents
-		#define GEODE_STATICS_unlinkAllEvents
-		GEODE_AS_STATIC_FUNCTION(unlinkAllEvents) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateActiveEnterEffect
-		#define GEODE_STATICS_updateActiveEnterEffect
-		GEODE_AS_STATIC_FUNCTION(updateActiveEnterEffect) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateAllObjectSection
-		#define GEODE_STATICS_updateAllObjectSection
-		GEODE_AS_STATIC_FUNCTION(updateAllObjectSection) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateAreaObjectLastValues
 		#define GEODE_STATICS_updateAreaObjectLastValues
 		GEODE_AS_STATIC_FUNCTION(updateAreaObjectLastValues) 
@@ -1660,11 +1065,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateAudioVisualizer) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateBGArtSpeed
-		#define GEODE_STATICS_updateBGArtSpeed
-		GEODE_AS_STATIC_FUNCTION(updateBGArtSpeed) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateCamera
 		#define GEODE_STATICS_updateCamera
 		GEODE_AS_STATIC_FUNCTION(updateCamera) 
@@ -1673,11 +1073,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateCameraBGArt
 		#define GEODE_STATICS_updateCameraBGArt
 		GEODE_AS_STATIC_FUNCTION(updateCameraBGArt) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateCameraEdge
-		#define GEODE_STATICS_updateCameraEdge
-		GEODE_AS_STATIC_FUNCTION(updateCameraEdge) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateCameraOffsetX
@@ -1710,24 +1105,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateEnterEffects) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateExtendedCollision
-		#define GEODE_STATICS_updateExtendedCollision
-		GEODE_AS_STATIC_FUNCTION(updateExtendedCollision) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateExtraGameLayers
 		#define GEODE_STATICS_updateExtraGameLayers
 		GEODE_AS_STATIC_FUNCTION(updateExtraGameLayers) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateGameplayOffsetX
-		#define GEODE_STATICS_updateGameplayOffsetX
-		GEODE_AS_STATIC_FUNCTION(updateGameplayOffsetX) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateGameplayOffsetY
-		#define GEODE_STATICS_updateGameplayOffsetY
-		GEODE_AS_STATIC_FUNCTION(updateGameplayOffsetY) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateGradientLayers
@@ -1745,16 +1125,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateGuideArt) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateInternalCamOffsetX
-		#define GEODE_STATICS_updateInternalCamOffsetX
-		GEODE_AS_STATIC_FUNCTION(updateInternalCamOffsetX) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateInternalCamOffsetY
-		#define GEODE_STATICS_updateInternalCamOffsetY
-		GEODE_AS_STATIC_FUNCTION(updateInternalCamOffsetY) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateKeyframeOrder
 		#define GEODE_STATICS_updateKeyframeOrder
 		GEODE_AS_STATIC_FUNCTION(updateKeyframeOrder) 
@@ -1763,11 +1133,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateLayerCapacity
 		#define GEODE_STATICS_updateLayerCapacity
 		GEODE_AS_STATIC_FUNCTION(updateLayerCapacity) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateLegacyLayerCapacity
-		#define GEODE_STATICS_updateLegacyLayerCapacity
-		GEODE_AS_STATIC_FUNCTION(updateLegacyLayerCapacity) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateLevelColors
@@ -1780,19 +1145,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateMaxGameplayY) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateMGArtSpeed
-		#define GEODE_STATICS_updateMGArtSpeed
-		GEODE_AS_STATIC_FUNCTION(updateMGArtSpeed) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateMGOffsetY
 		#define GEODE_STATICS_updateMGOffsetY
 		GEODE_AS_STATIC_FUNCTION(updateMGOffsetY) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateOBB2
-		#define GEODE_STATICS_updateOBB2
-		GEODE_AS_STATIC_FUNCTION(updateOBB2) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateParticles
@@ -1813,21 +1168,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateProximityVolumeEffects
 		#define GEODE_STATICS_updateProximityVolumeEffects
 		GEODE_AS_STATIC_FUNCTION(updateProximityVolumeEffects) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateQueuedLabels
-		#define GEODE_STATICS_updateQueuedLabels
-		GEODE_AS_STATIC_FUNCTION(updateQueuedLabels) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateReplay
-		#define GEODE_STATICS_updateReplay
-		GEODE_AS_STATIC_FUNCTION(updateReplay) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateSavePositionObjects
-		#define GEODE_STATICS_updateSavePositionObjects
-		GEODE_AS_STATIC_FUNCTION(updateSavePositionObjects) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateShaderLayer
@@ -1855,11 +1195,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateStaticCameraPosToGroup) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateTimeMod
-		#define GEODE_STATICS_updateTimeMod
-		GEODE_AS_STATIC_FUNCTION(updateTimeMod) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateTimerLabels
 		#define GEODE_STATICS_updateTimerLabels
 		GEODE_AS_STATIC_FUNCTION(updateTimerLabels) 
@@ -1881,6 +1216,16 @@ namespace geode::modifier {
 	#endif
 
     
+	#ifndef GEODE_CONCEPT_CHECK_convertToClosestDirection
+		#define GEODE_CONCEPT_CHECK_convertToClosestDirection
+		GEODE_CONCEPT_FUNCTION_CHECK(convertToClosestDirection) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_gameEventToString
+		#define GEODE_CONCEPT_CHECK_gameEventToString
+		GEODE_CONCEPT_FUNCTION_CHECK(gameEventToString) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_get
 		#define GEODE_CONCEPT_CHECK_get
 		GEODE_CONCEPT_FUNCTION_CHECK(get) 
@@ -1959,6 +1304,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_toggleGroupTriggered
 		#define GEODE_CONCEPT_CHECK_toggleGroupTriggered
 		GEODE_CONCEPT_FUNCTION_CHECK(toggleGroupTriggered) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_checkSpawnAbuse
+		#define GEODE_CONCEPT_CHECK_checkSpawnAbuse
+		GEODE_CONCEPT_FUNCTION_CHECK(checkSpawnAbuse) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_spawnGroup
@@ -2154,6 +1504,16 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_toggleMusicInPractice
 		#define GEODE_CONCEPT_CHECK_toggleMusicInPractice
 		GEODE_CONCEPT_FUNCTION_CHECK(toggleMusicInPractice) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_processCheckpoints
+		#define GEODE_CONCEPT_CHECK_processCheckpoints
+		GEODE_CONCEPT_FUNCTION_CHECK(processCheckpoints) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_resetLevel
+		#define GEODE_CONCEPT_CHECK_resetLevel
+		GEODE_CONCEPT_FUNCTION_CHECK(resetLevel) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_activateCustomRing
@@ -2356,6 +1716,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(buttonIDToButton) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_buttonIsRelevant
+		#define GEODE_CONCEPT_CHECK_buttonIsRelevant
+		GEODE_CONCEPT_FUNCTION_CHECK(buttonIsRelevant) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_calculateColorGroups
 		#define GEODE_CONCEPT_CHECK_calculateColorGroups
 		GEODE_CONCEPT_FUNCTION_CHECK(calculateColorGroups) 
@@ -2501,9 +1866,9 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(controlTriggersWithControlID) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_convertToClosestDirection
-		#define GEODE_CONCEPT_CHECK_convertToClosestDirection
-		GEODE_CONCEPT_FUNCTION_CHECK(convertToClosestDirection) 
+	#ifndef GEODE_CONCEPT_CHECK_countCollectedUserCoins
+		#define GEODE_CONCEPT_CHECK_countCollectedUserCoins
+		GEODE_CONCEPT_FUNCTION_CHECK(countCollectedUserCoins) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_createBackground
@@ -2579,11 +1944,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_flipObjects
 		#define GEODE_CONCEPT_CHECK_flipObjects
 		GEODE_CONCEPT_FUNCTION_CHECK(flipObjects) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_gameEventToString
-		#define GEODE_CONCEPT_CHECK_gameEventToString
-		GEODE_CONCEPT_FUNCTION_CHECK(gameEventToString) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_gameEventTriggered
@@ -2776,6 +2136,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(getPortalTargetPos) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_getRecordExtra
+		#define GEODE_CONCEPT_CHECK_getRecordExtra
+		GEODE_CONCEPT_FUNCTION_CHECK(getRecordExtra) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_getRecordString
 		#define GEODE_CONCEPT_CHECK_getRecordString
 		GEODE_CONCEPT_FUNCTION_CHECK(getRecordString) 
@@ -2859,6 +2224,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_increaseBatchNodeCapacity
 		#define GEODE_CONCEPT_CHECK_increaseBatchNodeCapacity
 		GEODE_CONCEPT_FUNCTION_CHECK(increaseBatchNodeCapacity) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_isButtonAllowed
+		#define GEODE_CONCEPT_CHECK_isButtonAllowed
+		GEODE_CONCEPT_FUNCTION_CHECK(isButtonAllowed) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_isFlipping
@@ -3191,6 +2561,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(processQueuedButtons) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_processReplayCheckpoint
+		#define GEODE_CONCEPT_CHECK_processReplayCheckpoint
+		GEODE_CONCEPT_FUNCTION_CHECK(processReplayCheckpoint) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_processRotationActions
 		#define GEODE_CONCEPT_CHECK_processRotationActions
 		GEODE_CONCEPT_FUNCTION_CHECK(processRotationActions) 
@@ -3224,6 +2599,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_queueButton
 		#define GEODE_CONCEPT_CHECK_queueButton
 		GEODE_CONCEPT_FUNCTION_CHECK(queueButton) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_queueTimeWarp
+		#define GEODE_CONCEPT_CHECK_queueTimeWarp
+		GEODE_CONCEPT_FUNCTION_CHECK(queueTimeWarp) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_reAddToStickyGroup
@@ -3321,6 +2701,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(removePlayer2) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_removeReleasedButtons
+		#define GEODE_CONCEPT_CHECK_removeReleasedButtons
+		GEODE_CONCEPT_FUNCTION_CHECK(removeReleasedButtons) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_removeTemporaryParticles
 		#define GEODE_CONCEPT_CHECK_removeTemporaryParticles
 		GEODE_CONCEPT_FUNCTION_CHECK(removeTemporaryParticles) 
@@ -3379,6 +2764,16 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_resetPlayer
 		#define GEODE_CONCEPT_CHECK_resetPlayer
 		GEODE_CONCEPT_FUNCTION_CHECK(resetPlayer) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_resetRecord
+		#define GEODE_CONCEPT_CHECK_resetRecord
+		GEODE_CONCEPT_FUNCTION_CHECK(resetRecord) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_resetRecordFull
+		#define GEODE_CONCEPT_CHECK_resetRecordFull
+		GEODE_CONCEPT_FUNCTION_CHECK(resetRecordFull) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_resetSongTriggerValues
@@ -3474,6 +2869,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_shouldExitHackedLevel
 		#define GEODE_CONCEPT_CHECK_shouldExitHackedLevel
 		GEODE_CONCEPT_FUNCTION_CHECK(shouldExitHackedLevel) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_shouldUseSubstepForButton
+		#define GEODE_CONCEPT_CHECK_shouldUseSubstepForButton
+		GEODE_CONCEPT_FUNCTION_CHECK(shouldUseSubstepForButton) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_sortAllGroupsX
@@ -3990,12 +3390,14 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x2c7b10, Thiscall, GJBaseGameLayer, )
-			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x200540, Thiscall, GJBaseGameLayer)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x2cfef0, Thiscall, GJBaseGameLayer, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x2057a0, Thiscall, GJBaseGameLayer)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22e8b0, Default, GJBaseGameLayer, convertToClosestDirection, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x232720, Default, GJBaseGameLayer, gameEventToString, GJGameEvent)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, get, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x232100, Thiscall, GJBaseGameLayer, update, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x201cc0, Thiscall, GJBaseGameLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x240950, Thiscall, GJBaseGameLayer, visit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x237850, Thiscall, GJBaseGameLayer, update, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x206f30, Thiscall, GJBaseGameLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x246ee0, Thiscall, GJBaseGameLayer, visit, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, postUpdate, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, checkForEnd, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, testTime, )
@@ -4003,22 +3405,22 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateAttemptTime, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateVisibility, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, playerTookDamage, PlayerObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x231ce0, Thiscall, GJBaseGameLayer, opacityForObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x237430, Thiscall, GJBaseGameLayer, opacityForObject, GameObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, addToSpeedObjects, EffectGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x213c90, Thiscall, GJBaseGameLayer, objectsCollided, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21e5c0, Thiscall, GJBaseGameLayer, updateColor, cocos2d::ccColor3B&, float, int, bool, float, cocos2d::ccHSVValue&, int, bool, EffectGameObject*, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21e7a0, Thiscall, GJBaseGameLayer, toggleGroupTriggered, int, bool, gd::vector<int> const&, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2156a0, Thiscall, GJBaseGameLayer, spawnGroup, int, bool, double, gd::vector<int> const&, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x215b50, Thiscall, GJBaseGameLayer, spawnObject, GameObject*, double, gd::vector<int> const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x219170, Thiscall, GJBaseGameLayer, objectsCollided, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x223970, Thiscall, GJBaseGameLayer, updateColor, cocos2d::ccColor3B&, float, int, bool, float, cocos2d::ccHSVValue&, int, bool, EffectGameObject*, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x223b50, Thiscall, GJBaseGameLayer, toggleGroupTriggered, int, bool, gd::vector<int> const&, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21ab80, Thiscall, GJBaseGameLayer, spawnGroup, int, bool, double, gd::vector<int> const&, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21b030, Thiscall, GJBaseGameLayer, spawnObject, GameObject*, double, gd::vector<int> const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, activateEndTrigger, int, bool, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, activatePlatformerEndTrigger, EndTriggerGameObject*, gd::vector<int> const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, toggleGlitter, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, destroyPlayer, PlayerObject*, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20b4d0, Thiscall, GJBaseGameLayer, updateDebugDraw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x221220, Thiscall, GJBaseGameLayer, addToSection, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21ec20, Thiscall, GJBaseGameLayer, addToGroup, GameObject*, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21eda0, Thiscall, GJBaseGameLayer, removeFromGroup, GameObject*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x222c70, Thiscall, GJBaseGameLayer, updateObjectSection, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x210800, Thiscall, GJBaseGameLayer, updateDebugDraw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x226500, Thiscall, GJBaseGameLayer, addToSection, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x223fd0, Thiscall, GJBaseGameLayer, addToGroup, GameObject*, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x224150, Thiscall, GJBaseGameLayer, removeFromGroup, GameObject*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x227f50, Thiscall, GJBaseGameLayer, updateObjectSection, GameObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateDisabledObjectsLastPos, cocos2d::CCArray*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, toggleGroundVisibility, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, toggleMGVisibility, bool)
@@ -4026,398 +3428,406 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, timeForPos, cocos2d::CCPoint, int, int, bool, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, posForTime, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, resetSPTriggered, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x230720, Thiscall, GJBaseGameLayer, updateScreenRotation, float, bool, bool, float, int, float, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x212c80, Thiscall, GJBaseGameLayer, reverseDirection, EffectGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x212ce0, Thiscall, GJBaseGameLayer, rotateGameplay, RotateGameplayGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x235e80, Thiscall, GJBaseGameLayer, updateScreenRotation, float, bool, bool, float, int, float, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x218160, Thiscall, GJBaseGameLayer, reverseDirection, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2181c0, Thiscall, GJBaseGameLayer, rotateGameplay, RotateGameplayGameObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, didRotateGameplay, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x230a00, Thiscall, GJBaseGameLayer, updateTimeWarp, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2309f0, Thiscall, GJBaseGameLayer, updateTimeWarp, GameObject*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x230a50, Thiscall, GJBaseGameLayer, applyTimeWarp, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x236150, Thiscall, GJBaseGameLayer, updateTimeWarp, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2361a0, Thiscall, GJBaseGameLayer, applyTimeWarp, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, playGravityEffect, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, manualUpdateObjectColors, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23a7f0, Thiscall, GJBaseGameLayer, createCustomParticle, gd::string const&, cocos2d::ParticleStruct const&, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23aaf0, Thiscall, GJBaseGameLayer, claimCustomParticle, gd::string const&, cocos2d::ParticleStruct const&, int, int, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23acf0, Thiscall, GJBaseGameLayer, unclaimCustomParticle, gd::string const&, cocos2d::CCParticleSystemQuad*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23c8a0, Thiscall, GJBaseGameLayer, activatedAudioTrigger, SFXTriggerGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x240530, Thiscall, GJBaseGameLayer, checkpointActivated, CheckpointGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x240d80, Thiscall, GJBaseGameLayer, createCustomParticle, gd::string const&, cocos2d::ParticleStruct const&, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x241080, Thiscall, GJBaseGameLayer, claimCustomParticle, gd::string const&, cocos2d::ParticleStruct const&, int, int, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x241280, Thiscall, GJBaseGameLayer, unclaimCustomParticle, gd::string const&, cocos2d::CCParticleSystemQuad*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x242e30, Thiscall, GJBaseGameLayer, activatedAudioTrigger, SFXTriggerGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x246ac0, Thiscall, GJBaseGameLayer, checkpointActivated, CheckpointGameObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, flipArt, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22e420, Thiscall, GJBaseGameLayer, addKeyframe, KeyframeGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x233b80, Thiscall, GJBaseGameLayer, addKeyframe, KeyframeGameObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateTimeLabel, int, int, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, checkSnapshot, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, toggleProgressbar, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, toggleInfoLabel, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, removeAllCheckpoints, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, toggleMusicInPractice, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, activateCustomRing, RingObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23c8c0, Thiscall, GJBaseGameLayer, activatedAudioTrigger, SFXTriggerGameObject*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22c9c0, Thiscall, GJBaseGameLayer, activateEventTrigger, EventLinkTrigger*, gd::vector<int> const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22eed0, Thiscall, GJBaseGameLayer, activateItemCompareTrigger, ItemTriggerGameObject*, gd::vector<int> const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22eaf0, Thiscall, GJBaseGameLayer, activateItemEditTrigger, ItemTriggerGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, activateObjectControlTrigger, ObjectControlGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22f2e0, Thiscall, GJBaseGameLayer, activatePersistentItemTrigger, ItemTriggerGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, activatePlayerControlTrigger, PlayerControlGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, activateResetTrigger, EffectGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23b8c0, Thiscall, GJBaseGameLayer, activateSFXEditTrigger, SFXTriggerGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23b6c0, Thiscall, GJBaseGameLayer, activateSFXTrigger, SFXTriggerGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23b3b0, Thiscall, GJBaseGameLayer, activateSongEditTrigger, SongTriggerGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23b030, Thiscall, GJBaseGameLayer, activateSongTrigger, SongTriggerGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22f700, Thiscall, GJBaseGameLayer, activateTimerTrigger, TimerTriggerGameObject*, gd::vector<int> const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2221a0, Thiscall, GJBaseGameLayer, addAreaEffect, EnterEffectObject*, gd::vector<EnterEffectInstance>*, GJAreaActionType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, addCustomEnterEffect, EnterEffectObject*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23f940, Thiscall, GJBaseGameLayer, addGuideArt, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, addObjectCounter, LabelGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, addPickupTrigger, CountTriggerGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, addPoints, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, addProximityVolumeEffect, int, int, SFXTriggerGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, addRemapTargets, gd::set<int>&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, addToGroupParents, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21eb90, Thiscall, GJBaseGameLayer, addToGroups, GameObject*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, addToObjectsToShow, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x220c70, Thiscall, GJBaseGameLayer, addUIObject, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20deb0, Thiscall, GJBaseGameLayer, animateInDualGroundNew, GameObject*, float, bool, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, animateInGroundNew, bool, float, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, animateOutGroundNew, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, animatePortalY, float, float, float, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, applyLevelSettings, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x215ce0, Thiscall, GJBaseGameLayer, applyRemap, EffectGameObject*, gd::vector<int> const&, gd::unordered_map<int, int>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23bba0, Thiscall, GJBaseGameLayer, applySFXEditTrigger, int, int, SFXTriggerGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, applyShake, cocos2d::CCPoint&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21f990, Thiscall, GJBaseGameLayer, assignNewStickyGroups, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, asyncBGLoaded, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, asyncGLoaded, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, asyncMGLoaded, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, atlasValue, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2124f0, Thiscall, GJBaseGameLayer, bumpPlayer, PlayerObject*, EffectGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, buttonIDToButton, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, calculateColorGroups, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, processCheckpoints, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, resetLevel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, activateCustomRing, RingObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x242e50, Thiscall, GJBaseGameLayer, activatedAudioTrigger, SFXTriggerGameObject*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x232110, Thiscall, GJBaseGameLayer, activateEventTrigger, EventLinkTrigger*, gd::vector<int> const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x234630, Thiscall, GJBaseGameLayer, activateItemCompareTrigger, ItemTriggerGameObject*, gd::vector<int> const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x234250, Thiscall, GJBaseGameLayer, activateItemEditTrigger, ItemTriggerGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, activateObjectControlTrigger, ObjectControlGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x234a40, Thiscall, GJBaseGameLayer, activatePersistentItemTrigger, ItemTriggerGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2174e0, Thiscall, GJBaseGameLayer, activatePlayerControlTrigger, PlayerControlGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, activateResetTrigger, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x241e50, Thiscall, GJBaseGameLayer, activateSFXEditTrigger, SFXTriggerGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x241c50, Thiscall, GJBaseGameLayer, activateSFXTrigger, SFXTriggerGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x241940, Thiscall, GJBaseGameLayer, activateSongEditTrigger, SongTriggerGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2415c0, Thiscall, GJBaseGameLayer, activateSongTrigger, SongTriggerGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x234e60, Thiscall, GJBaseGameLayer, activateTimerTrigger, TimerTriggerGameObject*, gd::vector<int> const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x227480, Thiscall, GJBaseGameLayer, addAreaEffect, EnterEffectObject*, gd::vector<EnterEffectInstance>*, GJAreaActionType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20e400, Thiscall, GJBaseGameLayer, addCustomEnterEffect, EnterEffectObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x245ed0, Thiscall, GJBaseGameLayer, addGuideArt, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, addObjectCounter, LabelGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, addPickupTrigger, CountTriggerGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, addPoints, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x242430, Thiscall, GJBaseGameLayer, addProximityVolumeEffect, int, int, SFXTriggerGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20dbd0, Thiscall, GJBaseGameLayer, addRemapTargets, gd::set<int>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, addToGroupParents, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x223f40, Thiscall, GJBaseGameLayer, addToGroups, GameObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, addToObjectsToShow, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x225f50, Thiscall, GJBaseGameLayer, addUIObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x213370, Thiscall, GJBaseGameLayer, animateInDualGroundNew, GameObject*, float, bool, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, animateInGroundNew, bool, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, animateOutGroundNew, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, animatePortalY, float, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, applyLevelSettings, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21b1c0, Thiscall, GJBaseGameLayer, applyRemap, EffectGameObject*, gd::vector<int> const&, gd::unordered_map<int, int>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x242130, Thiscall, GJBaseGameLayer, applySFXEditTrigger, int, int, SFXTriggerGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, applyShake, cocos2d::CCPoint&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x224d40, Thiscall, GJBaseGameLayer, assignNewStickyGroups, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, asyncBGLoaded, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, asyncGLoaded, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, asyncMGLoaded, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, atlasValue, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2179d0, Thiscall, GJBaseGameLayer, bumpPlayer, PlayerObject*, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, buttonIDToButton, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x231e80, Thiscall, GJBaseGameLayer, buttonIsRelevant, PlayerButtonCommand const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20e0b0, Thiscall, GJBaseGameLayer, calculateColorGroups, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, cameraMoveX, float, float, float, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, cameraMoveY, float, float, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2123e0, Thiscall, GJBaseGameLayer, canBeActivatedByPlayer, PlayerObject*, EffectGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, canProcessSFX, SFXTriggerState&, gd::unordered_map<int, int>&, gd::unordered_map<int, float>&, gd::vector<SFXTriggerState>&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, canTouchObject, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2340b0, Thiscall, GJBaseGameLayer, checkCameraLimitAfterTeleport, PlayerObject*, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, checkCollision, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2139e0, Thiscall, GJBaseGameLayer, checkCollisionBlocks, EffectGameObject*, gd::vector<EffectGameObject*>*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20e330, Thiscall, GJBaseGameLayer, checkCollisions, PlayerObject*, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x233de0, Thiscall, GJBaseGameLayer, checkRepellPlayer, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x215410, Thiscall, GJBaseGameLayer, checkSpawnObjects, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, claimMoveAction, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, claimParticle, gd::string, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, claimRotationAction, int, int, float&, float&, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, clearActivatedAudioTriggers, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, clearPickedUpItems, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, collectedObject, EffectGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20f480, Thiscall, GJBaseGameLayer, collisionCheckObjects, PlayerObject*, gd::vector<GameObject*>*, int, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, controlAdvancedFollowCommand, AdvancedFollowTriggerObject*, int, GJActionCommand)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, controlAreaEffect, EnterEffectObject*, gd::vector<EnterEffectInstance>*, GJActionCommand)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, controlAreaEffectWithID, int, int, GJActionCommand)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, controlDynamicCommand, EffectGameObject*, int, gd::vector<DynamicObjectAction>&, GJActionCommand)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, controlDynamicMoveCommand, EffectGameObject*, int, GJActionCommand)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, controlDynamicRotateCommand, EffectGameObject*, int, GJActionCommand)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, controlEventLink, int, int, GJActionCommand)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, controlGradientTrigger, GradientTriggerObject*, GJActionCommand)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x218de0, Thiscall, GJBaseGameLayer, controlTriggersInGroup, int, GJActionCommand)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x219370, Thiscall, GJBaseGameLayer, controlTriggersWithControlID, int, GJActionCommand)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2295d0, Default, GJBaseGameLayer, convertToClosestDirection, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2064e0, Thiscall, GJBaseGameLayer, createBackground, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x206920, Thiscall, GJBaseGameLayer, createGroundLayer, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2067a0, Thiscall, GJBaseGameLayer, createMiddleground, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, createNewKeyframeAnim, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, createParticle, int, char const*, int, cocos2d::tCCPositionType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x205fd0, Thiscall, GJBaseGameLayer, createPlayer, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x212e90, Thiscall, GJBaseGameLayer, createPlayerCollisionBlock, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x209960, Thiscall, GJBaseGameLayer, createTextLayers, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, damagingObjectsInRect, cocos2d::CCRect, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x210bb0, Thiscall, GJBaseGameLayer, destroyObject, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, enterDualMode, GameObject*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2390e0, Thiscall, GJBaseGameLayer, exitStaticCamera, bool, bool, float, int, float, bool, float, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, flipFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20d640, Thiscall, GJBaseGameLayer, flipGravity, PlayerObject*, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, flipObjects, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, gameEventToString, GJGameEvent)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22c8a0, Thiscall, GJBaseGameLayer, gameEventTriggered, GJGameEvent, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x209710, Thiscall, GJBaseGameLayer, generateEnterEasingBuffer, int, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, generateEnterEasingBuffers, EnterEffectObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, generatePickupAnimRandVal, GameObject*, float&, float&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x218c00, Thiscall, GJBaseGameLayer, generateSpawnRemap, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21fab0, Thiscall, GJBaseGameLayer, generateTargetGroups, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22c1e0, Thiscall, GJBaseGameLayer, generateVisibilityGroups, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getActiveOrderSpawnObjects, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x222d90, Thiscall, GJBaseGameLayer, getAreaObjectValue, EnterEffectInstance*, GameObject*, cocos2d::CCPoint&, bool&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2178c0, Thiscall, GJBaseGameLayer, canBeActivatedByPlayer, PlayerObject*, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2431a0, Thiscall, GJBaseGameLayer, canProcessSFX, SFXTriggerState&, gd::unordered_map<int, int>&, gd::unordered_map<int, float>&, gd::vector<SFXTriggerState>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, canTouchObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x239ba0, Thiscall, GJBaseGameLayer, checkCameraLimitAfterTeleport, PlayerObject*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x219090, Thiscall, GJBaseGameLayer, checkCollision, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x218ec0, Thiscall, GJBaseGameLayer, checkCollisionBlocks, EffectGameObject*, gd::vector<EffectGameObject*>*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2137f0, Thiscall, GJBaseGameLayer, checkCollisions, PlayerObject*, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2398d0, Thiscall, GJBaseGameLayer, checkRepellPlayer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21a8f0, Thiscall, GJBaseGameLayer, checkSpawnObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22dbe0, Thiscall, GJBaseGameLayer, claimMoveAction, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2409d0, Thiscall, GJBaseGameLayer, claimParticle, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22d9a0, Thiscall, GJBaseGameLayer, claimRotationAction, int, int, float&, float&, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, clearActivatedAudioTriggers, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, clearPickedUpItems, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, collectedObject, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x214960, Thiscall, GJBaseGameLayer, collisionCheckObjects, PlayerObject*, gd::vector<GameObject*>*, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, controlAdvancedFollowCommand, AdvancedFollowTriggerObject*, int, GJActionCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2279f0, Thiscall, GJBaseGameLayer, controlAreaEffect, EnterEffectObject*, gd::vector<EnterEffectInstance>*, GJActionCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2277f0, Thiscall, GJBaseGameLayer, controlAreaEffectWithID, int, int, GJActionCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, controlDynamicCommand, EffectGameObject*, int, gd::vector<DynamicObjectAction>&, GJActionCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, controlDynamicMoveCommand, EffectGameObject*, int, GJActionCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, controlDynamicRotateCommand, EffectGameObject*, int, GJActionCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x232380, Thiscall, GJBaseGameLayer, controlEventLink, int, int, GJActionCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, controlGradientTrigger, GradientTriggerObject*, GJActionCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21e190, Thiscall, GJBaseGameLayer, controlTriggersInGroup, int, GJActionCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21e720, Thiscall, GJBaseGameLayer, controlTriggersWithControlID, int, GJActionCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, countCollectedUserCoins, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20b820, Thiscall, GJBaseGameLayer, createBackground, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20bc60, Thiscall, GJBaseGameLayer, createGroundLayer, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20bae0, Thiscall, GJBaseGameLayer, createMiddleground, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, createNewKeyframeAnim, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2405f0, Thiscall, GJBaseGameLayer, createParticle, int, char const*, int, cocos2d::tCCPositionType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20b310, Thiscall, GJBaseGameLayer, createPlayer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x218370, Thiscall, GJBaseGameLayer, createPlayerCollisionBlock, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20ec90, Thiscall, GJBaseGameLayer, createTextLayers, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x211620, Thiscall, GJBaseGameLayer, damagingObjectsInRect, cocos2d::CCRect, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x216090, Thiscall, GJBaseGameLayer, destroyObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, enterDualMode, GameObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23f670, Thiscall, GJBaseGameLayer, exitStaticCamera, bool, bool, float, int, float, bool, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, flipFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x212b00, Thiscall, GJBaseGameLayer, flipGravity, PlayerObject*, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x246a00, Thiscall, GJBaseGameLayer, flipObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x231ff0, Thiscall, GJBaseGameLayer, gameEventTriggered, GJGameEvent, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20ea40, Thiscall, GJBaseGameLayer, generateEnterEasingBuffer, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, generateEnterEasingBuffers, EnterEffectObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, generatePickupAnimRandVal, GameObject*, float&, float&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21dfb0, Thiscall, GJBaseGameLayer, generateSpawnRemap, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x224e60, Thiscall, GJBaseGameLayer, generateTargetGroups, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x231590, Thiscall, GJBaseGameLayer, generateVisibilityGroups, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getActiveOrderSpawnObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x228070, Thiscall, GJBaseGameLayer, getAreaObjectValue, EnterEffectInstance*, GameObject*, cocos2d::CCPoint&, bool&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getBumpMod, PlayerObject*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getCameraEdgeValue, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getCapacityString, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getCenterGroupObject, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getCustomEnterEffects, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x222f80, Thiscall, GJBaseGameLayer, getEasedAreaValue, GameObject*, EnterEffectInstance*, float, bool, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getEnterEasingKey, int, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getEnterEasingValue, float, int, float, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x229670, Thiscall, GJBaseGameLayer, getFollowSpeedVal, GameObject*, int, int, float, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getGroundHeight, PlayerObject*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20c890, Thiscall, GJBaseGameLayer, getGroundHeightForMode, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21eed0, Thiscall, GJBaseGameLayer, getGroup, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getGroupParent, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getGroupParentsString, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22ea60, Thiscall, GJBaseGameLayer, getItemValue, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20e2b0, Thiscall, GJBaseGameLayer, getMaxPortalY, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23c430, Thiscall, GJBaseGameLayer, getMinDistance, cocos2d::CCPoint, cocos2d::CCArray*, float, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20e1d0, Thiscall, GJBaseGameLayer, getMinPortalY, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x232060, Thiscall, GJBaseGameLayer, getModifiedDelta, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getMoveTargetDelta, EffectGameObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getCameraEdgeValue, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getCapacityString, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getCenterGroupObject, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getCustomEnterEffects, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x228260, Thiscall, GJBaseGameLayer, getEasedAreaValue, GameObject*, EnterEffectInstance*, float, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getEnterEasingKey, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getEnterEasingValue, float, int, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22e950, Thiscall, GJBaseGameLayer, getFollowSpeedVal, GameObject*, int, int, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getGroundHeight, PlayerObject*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x211d50, Thiscall, GJBaseGameLayer, getGroundHeightForMode, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x224280, Thiscall, GJBaseGameLayer, getGroup, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getGroupParent, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getGroupParentsString, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2341c0, Thiscall, GJBaseGameLayer, getItemValue, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x213770, Thiscall, GJBaseGameLayer, getMaxPortalY, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2429c0, Thiscall, GJBaseGameLayer, getMinDistance, cocos2d::CCPoint, cocos2d::CCArray*, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x213690, Thiscall, GJBaseGameLayer, getMinPortalY, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2377b0, Thiscall, GJBaseGameLayer, getModifiedDelta, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getMoveTargetDelta, EffectGameObject*, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getOptimizedGroup, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getOtherPlayer, PlayerObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getParticleKey, int, char const*, int, cocos2d::tCCPositionType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getParticleKey2, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getPlayerButtonID, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getPlayTimerFullSeconds, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getPlayTimerMilli, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getPortalTarget, TeleportPortalObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getPortalTargetPos, TeleportPortalObject*, GameObject*, PlayerObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getRecordString, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getRotateCommandTargets, EnhancedTriggerObject*, GameObject*&, GameObject*&, GameObject*&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x213dc0, Thiscall, GJBaseGameLayer, getSavedPosition, int, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getScaledGroundHeight, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getSingleGroupObject, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getSpecialKey, int, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getOtherPlayer, PlayerObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2403c0, Thiscall, GJBaseGameLayer, getParticleKey, int, char const*, int, cocos2d::tCCPositionType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x240540, Thiscall, GJBaseGameLayer, getParticleKey2, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getPlayerButtonID, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getPlayTimerFullSeconds, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getPlayTimerMilli, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getPortalTarget, TeleportPortalObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getPortalTargetPos, TeleportPortalObject*, GameObject*, PlayerObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getRecordExtra, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23a2f0, Thiscall, GJBaseGameLayer, getRecordString, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getRotateCommandTargets, EnhancedTriggerObject*, GameObject*&, GameObject*&, GameObject*&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2192a0, Thiscall, GJBaseGameLayer, getSavedPosition, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getScaledGroundHeight, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getSingleGroupObject, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getSpecialKey, int, bool, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getStaticGroup, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getStickyGroup, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getTargetFlyCameraY, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getTargetGroup, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, getTargetGroupOrigin, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, gravBumpPlayer, PlayerObject*, EffectGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21f7b0, Thiscall, GJBaseGameLayer, groupStickyObjects, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22e190, Thiscall, GJBaseGameLayer, handleButton, bool, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, hasItem, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x211220, Thiscall, GJBaseGameLayer, hasUniqueCoin, EffectGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2078e0, Thiscall, GJBaseGameLayer, increaseBatchNodeCapacity, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getTargetFlyCameraY, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getTargetGroup, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, getTargetGroupOrigin, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, gravBumpPlayer, PlayerObject*, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x224b60, Thiscall, GJBaseGameLayer, groupStickyObjects, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2338e0, Thiscall, GJBaseGameLayer, handleButton, bool, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, hasItem, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x216700, Thiscall, GJBaseGameLayer, hasUniqueCoin, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20cc20, Thiscall, GJBaseGameLayer, increaseBatchNodeCapacity, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, isFlipping, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, isPlayer2Button, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, lightningFlash, cocos2d::CCPoint, cocos2d::ccColor3B)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x240770, Thiscall, GJBaseGameLayer, lightningFlash, cocos2d::CCPoint, cocos2d::CCPoint, cocos2d::ccColor3B, float, float, int, bool, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21f4b0, Thiscall, GJBaseGameLayer, loadGroupParentsFromString, GameObject*, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x234770, Thiscall, GJBaseGameLayer, loadLevelSettings, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x230000, Thiscall, GJBaseGameLayer, loadStartPosObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2301a0, Thiscall, GJBaseGameLayer, loadUpToPosition, float, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, maxZOrderForShaderZ, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, minZOrderForShaderZ, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, modifyGroupPhysics, AdvancedFollowEditObject*, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, modifyObjectPhysics, AdvancedFollowEditObject*, GameObjectPhysics&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2257d0, Thiscall, GJBaseGameLayer, moveAreaObject, GameObject*, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, isPlayer2Button, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, lightningFlash, cocos2d::CCPoint, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x246d00, Thiscall, GJBaseGameLayer, lightningFlash, cocos2d::CCPoint, cocos2d::CCPoint, cocos2d::ccColor3B, float, float, int, bool, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x224860, Thiscall, GJBaseGameLayer, loadGroupParentsFromString, GameObject*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23ad00, Thiscall, GJBaseGameLayer, loadLevelSettings, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x235760, Thiscall, GJBaseGameLayer, loadStartPosObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x235900, Thiscall, GJBaseGameLayer, loadUpToPosition, float, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2237b0, Thiscall, GJBaseGameLayer, maxZOrderForShaderZ, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x223700, Thiscall, GJBaseGameLayer, minZOrderForShaderZ, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22ee00, Thiscall, GJBaseGameLayer, modifyGroupPhysics, AdvancedFollowEditObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, modifyObjectPhysics, AdvancedFollowEditObject*, GameObjectPhysics&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22aab0, Thiscall, GJBaseGameLayer, moveAreaObject, GameObject*, float, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, moveCameraToPos, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, moveObject, GameObject*, double, double, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x228a70, Thiscall, GJBaseGameLayer, moveObjects, cocos2d::CCArray*, double, double, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, moveObjectsSilent, int, double, double)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22c060, Thiscall, GJBaseGameLayer, moveObjectToStaticGroup, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, objectIntersectsCircle, GameObject*, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22ce10, Thiscall, GJBaseGameLayer, objectTypeToGameEvent, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22b740, Thiscall, GJBaseGameLayer, optimizeMoveGroups, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23f7e0, Thiscall, GJBaseGameLayer, orderSpawnObjects, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x209e30, Thiscall, GJBaseGameLayer, parentForZLayer, int, bool, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x231d60, Thiscall, GJBaseGameLayer, pauseAudio, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, performMathOperation, double, double, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, performMathRounding, double, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x210cd0, Thiscall, GJBaseGameLayer, pickupItem, EffectGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, playAnimationCommand, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20c930, Thiscall, GJBaseGameLayer, playerCircleCollision, PlayerObject*, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, playerIntersectsCircle, PlayerObject*, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, playerTouchedObject, PlayerObject*, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x212960, Thiscall, GJBaseGameLayer, playerTouchedRing, PlayerObject*, RingObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x212a70, Thiscall, GJBaseGameLayer, playerTouchedTrigger, PlayerObject*, EffectGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, playerWasTouchingObject, PlayerObject*, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20da30, Thiscall, GJBaseGameLayer, playerWillSwitchMode, PlayerObject*, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2119a0, Thiscall, GJBaseGameLayer, playExitDualEffect, PlayerObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, playFlashEffect, float, int, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, playKeyframeAnimation, KeyframeAnimTriggerObject*, gd::vector<int> const&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, playSpeedParticle, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21e1a0, Thiscall, GJBaseGameLayer, positionForShaderTarget, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x220d90, Thiscall, GJBaseGameLayer, positionUIObjects, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2142d0, Thiscall, GJBaseGameLayer, prepareSavePositionObjects, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, prepareTransformParent, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, preResumeGame, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, preUpdateVisibility, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23d3e0, Thiscall, GJBaseGameLayer, processActivatedAudioTriggers, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22a020, Thiscall, GJBaseGameLayer, processAdvancedFollowAction, AdvancedFollowInstance&, bool, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x229e00, Thiscall, GJBaseGameLayer, processAdvancedFollowActions, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x223ce0, Thiscall, GJBaseGameLayer, processAreaActions, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x223100, Thiscall, GJBaseGameLayer, processAreaEffects, gd::vector<EnterEffectInstance>*, GJAreaActionType, float, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, processAreaFadeGroupAction, cocos2d::CCArray*, EnterEffectInstance*, cocos2d::CCPoint, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2251f0, Thiscall, GJBaseGameLayer, processAreaMoveGroupAction, cocos2d::CCArray*, EnterEffectInstance*, cocos2d::CCPoint, int, int, int, int, int, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x224ab0, Thiscall, GJBaseGameLayer, processAreaRotateGroupAction, cocos2d::CCArray*, EnterEffectInstance*, cocos2d::CCPoint, int, int, int, int, int, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2258c0, Thiscall, GJBaseGameLayer, processAreaTintGroupAction, cocos2d::CCArray*, EnterEffectInstance*, cocos2d::CCPoint, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x223f40, Thiscall, GJBaseGameLayer, processAreaTransformGroupAction, cocos2d::CCArray*, EnterEffectInstance*, cocos2d::CCPoint, int, int, int, int, int, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, processAreaVisualActions, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, moveObject, GameObject*, double, double, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22dd50, Thiscall, GJBaseGameLayer, moveObjects, cocos2d::CCArray*, double, double, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, moveObjectsSilent, int, double, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x231410, Thiscall, GJBaseGameLayer, moveObjectToStaticGroup, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, objectIntersectsCircle, GameObject*, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x232560, Thiscall, GJBaseGameLayer, objectTypeToGameEvent, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x230a20, Thiscall, GJBaseGameLayer, optimizeMoveGroups, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x245d70, Thiscall, GJBaseGameLayer, orderSpawnObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20f160, Thiscall, GJBaseGameLayer, parentForZLayer, int, bool, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2374b0, Thiscall, GJBaseGameLayer, pauseAudio, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, performMathOperation, double, double, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, performMathRounding, double, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2161b0, Thiscall, GJBaseGameLayer, pickupItem, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, playAnimationCommand, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x211df0, Thiscall, GJBaseGameLayer, playerCircleCollision, PlayerObject*, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, playerIntersectsCircle, PlayerObject*, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, playerTouchedObject, PlayerObject*, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x217e40, Thiscall, GJBaseGameLayer, playerTouchedRing, PlayerObject*, RingObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x217f50, Thiscall, GJBaseGameLayer, playerTouchedTrigger, PlayerObject*, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, playerWasTouchingObject, PlayerObject*, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x212ef0, Thiscall, GJBaseGameLayer, playerWillSwitchMode, PlayerObject*, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x216e80, Thiscall, GJBaseGameLayer, playExitDualEffect, PlayerObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, playFlashEffect, float, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x217bc0, Thiscall, GJBaseGameLayer, playKeyframeAnimation, KeyframeAnimTriggerObject*, gd::vector<int> const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, playSpeedParticle, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x223550, Thiscall, GJBaseGameLayer, positionForShaderTarget, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x226070, Thiscall, GJBaseGameLayer, positionUIObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2197b0, Thiscall, GJBaseGameLayer, prepareSavePositionObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, prepareTransformParent, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, preResumeGame, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x236200, Thiscall, GJBaseGameLayer, preUpdateVisibility, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x243970, Thiscall, GJBaseGameLayer, processActivatedAudioTriggers, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22f300, Thiscall, GJBaseGameLayer, processAdvancedFollowAction, AdvancedFollowInstance&, bool, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22f0e0, Thiscall, GJBaseGameLayer, processAdvancedFollowActions, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x228fc0, Thiscall, GJBaseGameLayer, processAreaActions, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2283e0, Thiscall, GJBaseGameLayer, processAreaEffects, gd::vector<EnterEffectInstance>*, GJAreaActionType, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, processAreaFadeGroupAction, cocos2d::CCArray*, EnterEffectInstance*, cocos2d::CCPoint, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22a4d0, Thiscall, GJBaseGameLayer, processAreaMoveGroupAction, cocos2d::CCArray*, EnterEffectInstance*, cocos2d::CCPoint, int, int, int, int, int, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x229d90, Thiscall, GJBaseGameLayer, processAreaRotateGroupAction, cocos2d::CCArray*, EnterEffectInstance*, cocos2d::CCPoint, int, int, int, int, int, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22aba0, Thiscall, GJBaseGameLayer, processAreaTintGroupAction, cocos2d::CCArray*, EnterEffectInstance*, cocos2d::CCPoint, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x229220, Thiscall, GJBaseGameLayer, processAreaTransformGroupAction, cocos2d::CCArray*, EnterEffectInstance*, cocos2d::CCPoint, int, int, int, int, int, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, processAreaVisualActions, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, processCameraObject, GameObject*, PlayerObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x234170, Thiscall, GJBaseGameLayer, processCommands, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x228fa0, Thiscall, GJBaseGameLayer, processDynamicObjectActions, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22b2a0, Thiscall, GJBaseGameLayer, processFollowActions, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x210db0, Thiscall, GJBaseGameLayer, processItems, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2282d0, Thiscall, GJBaseGameLayer, processMoveActions, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2262f0, Thiscall, GJBaseGameLayer, processMoveActionsStep, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21e9a0, Thiscall, GJBaseGameLayer, processOptionsTrigger, GameOptionsTrigger*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x228bf0, Thiscall, GJBaseGameLayer, processPlayerFollowActions, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x235550, Thiscall, GJBaseGameLayer, processQueuedAudioTriggers, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22c7f0, Thiscall, GJBaseGameLayer, processQueuedButtons, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x226510, Thiscall, GJBaseGameLayer, processRotationActions, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23b480, Thiscall, GJBaseGameLayer, processSFXObjects, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, processSFXState, SFXTriggerState*, SFXTriggerState*, int, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, processSongState, int, float, float, int, float, float, gd::vector<SongTriggerState>*, SongTriggerGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, processStateObjects, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2273a0, Thiscall, GJBaseGameLayer, processTransformActions, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, queueButton, int, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, reAddToStickyGroup, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, recordAction, int, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, rectIntersectsCircle, cocos2d::CCRect, cocos2d::CCPoint, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22fe50, Thiscall, GJBaseGameLayer, refreshCounterLabels, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22e580, Thiscall, GJBaseGameLayer, refreshKeyframeAnims, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, regenerateEnterEasingBuffers, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, registerSpawnRemap, gd::vector<ChanceObject>&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, registerStateObject, EffectGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, removeBackground, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, removeCustomEnterEffects, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, removeFromGroupParents, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21ed10, Thiscall, GJBaseGameLayer, removeFromGroups, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, removeFromStickyGroup, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, removeGroundLayer, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21f3e0, Thiscall, GJBaseGameLayer, removeGroupParent, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, removeKeyframe, KeyframeGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, removeMiddleground, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x221a80, Thiscall, GJBaseGameLayer, removeObjectFromSection, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, removePlayer2, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, removeTemporaryParticles, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, reorderObjectSection, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, reparentObject, cocos2d::CCNode*, cocos2d::CCNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x209060, Thiscall, GJBaseGameLayer, resetActiveEnterEffects, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x222950, Thiscall, GJBaseGameLayer, resetAreaObjectValues, GameObject*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x231fc0, Thiscall, GJBaseGameLayer, resetAudio, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x239570, Thiscall, GJBaseGameLayer, resetCamera, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21bbf0, Thiscall, GJBaseGameLayer, resetGradientLayers, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, resetGroupCounters, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x234ab0, Thiscall, GJBaseGameLayer, resetLevelVariables, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, resetMoveOptimizedValue, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20cbf0, Thiscall, GJBaseGameLayer, resetPlayer, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, resetSongTriggerValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23f890, Thiscall, GJBaseGameLayer, resetSpawnChannelIndex, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x239850, Thiscall, GJBaseGameLayer, resetStaticCamera, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, resetStoppedAreaObjects, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, restoreAllUIObjects, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, restoreDefaultGameplayOffsetX, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, restoreDefaultGameplayOffsetY, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, restoreRemap, EffectGameObject*, gd::unordered_map<int, int>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x231eb0, Thiscall, GJBaseGameLayer, resumeAudio, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, rotateAreaObjects, GameObject*, cocos2d::CCArray*, float, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, rotateObject, GameObject*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x226ec0, Thiscall, GJBaseGameLayer, rotateObjects, cocos2d::CCArray*, float, cocos2d::CCPoint, cocos2d::CCPoint, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21f2d0, Thiscall, GJBaseGameLayer, setGroupParent, GameObject*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x239c60, Thiscall, GJBaseGameLayer, processCommands, float, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22e280, Thiscall, GJBaseGameLayer, processDynamicObjectActions, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x230580, Thiscall, GJBaseGameLayer, processFollowActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x216290, Thiscall, GJBaseGameLayer, processItems, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22d5b0, Thiscall, GJBaseGameLayer, processMoveActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22b5d0, Thiscall, GJBaseGameLayer, processMoveActionsStep, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x223d50, Thiscall, GJBaseGameLayer, processOptionsTrigger, GameOptionsTrigger*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22ded0, Thiscall, GJBaseGameLayer, processPlayerFollowActions, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23bae0, Thiscall, GJBaseGameLayer, processQueuedAudioTriggers, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x231d10, Thiscall, GJBaseGameLayer, processQueuedButtons, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, processReplayCheckpoint, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22b7f0, Thiscall, GJBaseGameLayer, processRotationActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x241a10, Thiscall, GJBaseGameLayer, processSFXObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x244e10, Thiscall, GJBaseGameLayer, processSFXState, SFXTriggerState*, SFXTriggerState*, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x245350, Thiscall, GJBaseGameLayer, processSongState, int, float, float, int, float, float, gd::vector<SongTriggerState>*, SongTriggerGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, processStateObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22c680, Thiscall, GJBaseGameLayer, processTransformActions, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, queueButton, int, bool, bool, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, queueTimeWarp, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, reAddToStickyGroup, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, recordAction, int, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, rectIntersectsCircle, cocos2d::CCRect, cocos2d::CCPoint, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2355b0, Thiscall, GJBaseGameLayer, refreshCounterLabels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x233ce0, Thiscall, GJBaseGameLayer, refreshKeyframeAnims, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, regenerateEnterEasingBuffers, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, registerSpawnRemap, gd::vector<ChanceObject>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, registerStateObject, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, removeBackground, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, removeCustomEnterEffects, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, removeFromGroupParents, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2240c0, Thiscall, GJBaseGameLayer, removeFromGroups, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, removeFromStickyGroup, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, removeGroundLayer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x224790, Thiscall, GJBaseGameLayer, removeGroupParent, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, removeKeyframe, KeyframeGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, removeMiddleground, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x226d60, Thiscall, GJBaseGameLayer, removeObjectFromSection, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, removePlayer2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x231ba0, Thiscall, GJBaseGameLayer, removeReleasedButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, removeTemporaryParticles, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, reorderObjectSection, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, reparentObject, cocos2d::CCNode*, cocos2d::CCNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20e390, Thiscall, GJBaseGameLayer, resetActiveEnterEffects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x227c30, Thiscall, GJBaseGameLayer, resetAreaObjectValues, GameObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x237710, Thiscall, GJBaseGameLayer, resetAudio, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23fb00, Thiscall, GJBaseGameLayer, resetCamera, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x220fa0, Thiscall, GJBaseGameLayer, resetGradientLayers, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, resetGroupCounters, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23b040, Thiscall, GJBaseGameLayer, resetLevelVariables, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, resetMoveOptimizedValue, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2120b0, Thiscall, GJBaseGameLayer, resetPlayer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x239e20, Thiscall, GJBaseGameLayer, resetRecord, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, resetRecordFull, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, resetSongTriggerValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x245e20, Thiscall, GJBaseGameLayer, resetSpawnChannelIndex, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23fde0, Thiscall, GJBaseGameLayer, resetStaticCamera, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, resetStoppedAreaObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, restoreAllUIObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, restoreDefaultGameplayOffsetX, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, restoreDefaultGameplayOffsetY, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21cfa0, Thiscall, GJBaseGameLayer, restoreRemap, EffectGameObject*, gd::unordered_map<int, int>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x237600, Thiscall, GJBaseGameLayer, resumeAudio, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22a100, Thiscall, GJBaseGameLayer, rotateAreaObjects, GameObject*, cocos2d::CCArray*, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22c100, Thiscall, GJBaseGameLayer, rotateObject, GameObject*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22c1a0, Thiscall, GJBaseGameLayer, rotateObjects, cocos2d::CCArray*, float, cocos2d::CCPoint, cocos2d::CCPoint, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x224680, Thiscall, GJBaseGameLayer, setGroupParent, GameObject*, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, setStartPosObject, StartPosObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x203760, Thiscall, GJBaseGameLayer, setupLayers, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20cd60, Thiscall, GJBaseGameLayer, setupLevelStart, LevelSettingsObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x234360, Thiscall, GJBaseGameLayer, setupReplay, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2356c0, Thiscall, GJBaseGameLayer, shakeCamera, float, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x205d10, Thiscall, GJBaseGameLayer, shouldExitHackedLevel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, sortAllGroupsX, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21ef40, Thiscall, GJBaseGameLayer, sortGroups, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x221cc0, Thiscall, GJBaseGameLayer, sortSectionVector, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21f650, Thiscall, GJBaseGameLayer, sortStickyGroups, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, spawnGroupTriggered, int, float, bool, gd::vector<int> const&, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, spawnObjectsInOrder, cocos2d::CCArray*, double, gd::vector<int> const&, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x239d50, Thiscall, GJBaseGameLayer, spawnParticle, char const*, int, cocos2d::tCCPositionType, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, spawnParticleTrigger, int, cocos2d::CCPoint, float, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, spawnParticleTrigger, SpawnParticleGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, spawnPlayer2, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21e250, Thiscall, GJBaseGameLayer, speedForShaderTarget, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20bda0, Thiscall, GJBaseGameLayer, staticObjectsInRect, cocos2d::CCRect, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, stopAllGroundActions, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, stopCameraShake, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, stopCustomEnterEffect, EnterEffectObject*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, stopCustomEnterEffect, EnterEffectObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, stopSFXTrigger, SFXTriggerGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, swapBackground, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, swapGround, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, swapMiddleground, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x208aa0, Thiscall, GJBaseGameLayer, setupLayers, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x212220, Thiscall, GJBaseGameLayer, setupLevelStart, LevelSettingsObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, setupReplay, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23bc50, Thiscall, GJBaseGameLayer, shakeCamera, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20b050, Thiscall, GJBaseGameLayer, shouldExitHackedLevel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, shouldUseSubstepForButton, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, sortAllGroupsX, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2242f0, Thiscall, GJBaseGameLayer, sortGroups, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x226fa0, Thiscall, GJBaseGameLayer, sortSectionVector, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x224a00, Thiscall, GJBaseGameLayer, sortStickyGroups, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, spawnGroupTriggered, int, float, bool, gd::vector<int> const&, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21ae00, Thiscall, GJBaseGameLayer, spawnObjectsInOrder, cocos2d::CCArray*, double, gd::vector<int> const&, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2402e0, Thiscall, GJBaseGameLayer, spawnParticle, char const*, int, cocos2d::tCCPositionType, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, spawnParticleTrigger, SpawnParticleGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23feb0, Thiscall, GJBaseGameLayer, spawnParticleTrigger, int, cocos2d::CCPoint, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, spawnPlayer2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x223600, Thiscall, GJBaseGameLayer, speedForShaderTarget, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x211260, Thiscall, GJBaseGameLayer, staticObjectsInRect, cocos2d::CCRect, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, stopAllGroundActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, stopCameraShake, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, stopCustomEnterEffect, EnterEffectObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20e760, Thiscall, GJBaseGameLayer, stopCustomEnterEffect, EnterEffectObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, stopSFXTrigger, SFXTriggerGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, swapBackground, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, swapGround, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, swapMiddleground, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, switchToFlyMode, PlayerObject*, GameObject*, bool, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20d760, Thiscall, GJBaseGameLayer, switchToRobotMode, PlayerObject*, GameObject*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20d940, Thiscall, GJBaseGameLayer, switchToRollMode, PlayerObject*, GameObject*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20d850, Thiscall, GJBaseGameLayer, switchToSpiderMode, PlayerObject*, GameObject*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x234a10, Thiscall, GJBaseGameLayer, syncBGTextures, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20aa80, Thiscall, GJBaseGameLayer, teleportPlayer, TeleportPortalObject*, PlayerObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, testInstantCountTrigger, int, int, int, bool, int, gd::vector<int> const&, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x242550, Thiscall, GJBaseGameLayer, toggleAudioVisualizer, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2113f0, Thiscall, GJBaseGameLayer, toggleDualMode, GameObject*, bool, PlayerObject*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x240240, Thiscall, GJBaseGameLayer, toggleFlipped, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21e810, Thiscall, GJBaseGameLayer, toggleGroup, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x212c20, Thiscall, GJBaseGameLayer, switchToRobotMode, PlayerObject*, GameObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x212e00, Thiscall, GJBaseGameLayer, switchToRollMode, PlayerObject*, GameObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x212d10, Thiscall, GJBaseGameLayer, switchToSpiderMode, PlayerObject*, GameObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23afa0, Thiscall, GJBaseGameLayer, syncBGTextures, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20fdb0, Thiscall, GJBaseGameLayer, teleportPlayer, TeleportPortalObject*, PlayerObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, testInstantCountTrigger, int, int, int, bool, int, gd::vector<int> const&, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x248ae0, Thiscall, GJBaseGameLayer, toggleAudioVisualizer, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2168d0, Thiscall, GJBaseGameLayer, toggleDualMode, GameObject*, bool, PlayerObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2467d0, Thiscall, GJBaseGameLayer, toggleFlipped, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x223bc0, Thiscall, GJBaseGameLayer, toggleGroup, int, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, toggleLockPlayer, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, togglePlayerStreakBlend, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, togglePlayerVisibility, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, togglePlayerStreakBlend, bool, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, togglePlayerVisibility, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, transformAreaObjects, GameObject*, cocos2d::CCArray*, float, float, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, triggerAdvancedFollowCommand, AdvancedFollowTriggerObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2297e0, Thiscall, GJBaseGameLayer, triggerAdvancedFollowEditCommand, AdvancedFollowEditObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x221ee0, Thiscall, GJBaseGameLayer, triggerAreaEffect, EnterEffectObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, triggerAreaEffectAnimation, EnterEffectObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, triggerDynamicMoveCommand, EffectGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, triggerDynamicRotateCommand, EnhancedTriggerObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21a3a0, Thiscall, GJBaseGameLayer, triggerGradientCommand, GradientTriggerObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, triggerGravityChange, EffectGameObject*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x219690, Thiscall, GJBaseGameLayer, triggerMoveCommand, EffectGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, triggerRotateCommand, EnhancedTriggerObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21bc80, Thiscall, GJBaseGameLayer, triggerShaderCommand, ShaderGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21a110, Thiscall, GJBaseGameLayer, triggerTransformCommand, TransformTriggerGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, tryGetGroupParent, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21f170, Thiscall, GJBaseGameLayer, tryGetMainObject, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21f1e0, Thiscall, GJBaseGameLayer, tryGetObject, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, tryResumeAudio, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, unclaimParticle, char const*, cocos2d::CCParticleSystemQuad*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21f8d0, Thiscall, GJBaseGameLayer, ungroupStickyObjects, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, unlinkAllEvents, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateActiveEnterEffect, EnterEffectObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateAllObjectSection, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x222bd0, Thiscall, GJBaseGameLayer, updateAreaObjectLastValues, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2422f0, Thiscall, GJBaseGameLayer, updateAudioVisualizer, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateBGArtSpeed, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x235760, Thiscall, GJBaseGameLayer, updateCamera, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x237ec0, Thiscall, GJBaseGameLayer, updateCameraBGArt, cocos2d::CCPoint, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateCameraEdge, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, togglePlayerVisibility, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x229720, Thiscall, GJBaseGameLayer, transformAreaObjects, GameObject*, cocos2d::CCArray*, float, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, triggerAdvancedFollowCommand, AdvancedFollowTriggerObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22eac0, Thiscall, GJBaseGameLayer, triggerAdvancedFollowEditCommand, AdvancedFollowEditObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2271c0, Thiscall, GJBaseGameLayer, triggerAreaEffect, EnterEffectObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, triggerAreaEffectAnimation, EnterEffectObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, triggerDynamicMoveCommand, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21f2a0, Thiscall, GJBaseGameLayer, triggerDynamicRotateCommand, EnhancedTriggerObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21f750, Thiscall, GJBaseGameLayer, triggerGradientCommand, GradientTriggerObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, triggerGravityChange, EffectGameObject*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21ea40, Thiscall, GJBaseGameLayer, triggerMoveCommand, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, triggerRotateCommand, EnhancedTriggerObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x221030, Thiscall, GJBaseGameLayer, triggerShaderCommand, ShaderGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21f4c0, Thiscall, GJBaseGameLayer, triggerTransformCommand, TransformTriggerGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, tryGetGroupParent, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x224520, Thiscall, GJBaseGameLayer, tryGetMainObject, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x224590, Thiscall, GJBaseGameLayer, tryGetObject, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, tryResumeAudio, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x240be0, Thiscall, GJBaseGameLayer, unclaimParticle, char const*, cocos2d::CCParticleSystemQuad*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x224c80, Thiscall, GJBaseGameLayer, ungroupStickyObjects, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, unlinkAllEvents, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateActiveEnterEffect, EnterEffectObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateAllObjectSection, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x227eb0, Thiscall, GJBaseGameLayer, updateAreaObjectLastValues, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x248880, Thiscall, GJBaseGameLayer, updateAudioVisualizer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateBGArtSpeed, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23bcf0, Thiscall, GJBaseGameLayer, updateCamera, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23e450, Thiscall, GJBaseGameLayer, updateCameraBGArt, cocos2d::CCPoint, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateCameraEdge, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateCameraMode, EffectGameObject*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x230810, Thiscall, GJBaseGameLayer, updateCameraOffsetX, float, float, int, float, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2308b0, Thiscall, GJBaseGameLayer, updateCameraOffsetY, float, float, int, float, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateCollisionBlocks, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22e760, Thiscall, GJBaseGameLayer, updateCounters, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20dcc0, Thiscall, GJBaseGameLayer, updateDualGround, PlayerObject*, int, bool, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x209630, Thiscall, GJBaseGameLayer, updateEnterEffects, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateExtendedCollision, GameObject*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21e4a0, Thiscall, GJBaseGameLayer, updateExtraGameLayers, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateGameplayOffsetX, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateGameplayOffsetY, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21a830, Thiscall, GJBaseGameLayer, updateGradientLayers, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateGroundShadows, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x240130, Thiscall, GJBaseGameLayer, updateGuideArt, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateInternalCamOffsetX, float, float, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateInternalCamOffsetY, float, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22e4b0, Thiscall, GJBaseGameLayer, updateKeyframeOrder, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateLayerCapacity, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateLegacyLayerCapacity, int, int, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x207150, Thiscall, GJBaseGameLayer, updateLevelColors, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x234930, Thiscall, GJBaseGameLayer, updateMaxGameplayY, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateMGArtSpeed, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x230950, Thiscall, GJBaseGameLayer, updateMGOffsetY, float, float, int, float, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateOBB2, cocos2d::CCRect)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateParticles, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x233bd0, Thiscall, GJBaseGameLayer, updatePlatformerTime, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updatePlayerCollisionBlocks, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23bd90, Thiscall, GJBaseGameLayer, updateProximityVolumeEffects, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateQueuedLabels, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateReplay, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateSavePositionObjects, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21cf00, Thiscall, GJBaseGameLayer, updateShaderLayer, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x208c00, Thiscall, GJBaseGameLayer, updateSpecialGroupData, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2338f0, Thiscall, GJBaseGameLayer, updateSpecialLabels, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x238ca0, Thiscall, GJBaseGameLayer, updateStaticCameraPos, cocos2d::CCPoint, bool, bool, bool, float, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2388b0, Thiscall, GJBaseGameLayer, updateStaticCameraPosToGroup, int, bool, bool, bool, float, float, int, float, bool, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJBaseGameLayer, updateTimeMod, float, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x22fae0, Thiscall, GJBaseGameLayer, updateTimerLabels, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x230590, Thiscall, GJBaseGameLayer, updateZoom, float, float, int, float, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x241d30, Thiscall, GJBaseGameLayer, visitWithColorFlash, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23c060, Thiscall, GJBaseGameLayer, volumeForProximityEffect, SFXTriggerInstance&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x235f70, Thiscall, GJBaseGameLayer, updateCameraOffsetX, float, float, int, float, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x236010, Thiscall, GJBaseGameLayer, updateCameraOffsetY, float, float, int, float, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2187d0, Thiscall, GJBaseGameLayer, updateCollisionBlocks, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x233ec0, Thiscall, GJBaseGameLayer, updateCounters, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x213180, Thiscall, GJBaseGameLayer, updateDualGround, PlayerObject*, int, bool, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20e960, Thiscall, GJBaseGameLayer, updateEnterEffects, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateExtendedCollision, GameObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x223850, Thiscall, GJBaseGameLayer, updateExtraGameLayers, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateGameplayOffsetX, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateGameplayOffsetY, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x21fbe0, Thiscall, GJBaseGameLayer, updateGradientLayers, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20bd60, Thiscall, GJBaseGameLayer, updateGroundShadows, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2466c0, Thiscall, GJBaseGameLayer, updateGuideArt, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateInternalCamOffsetX, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateInternalCamOffsetY, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x233c10, Thiscall, GJBaseGameLayer, updateKeyframeOrder, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20cd00, Thiscall, GJBaseGameLayer, updateLayerCapacity, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateLegacyLayerCapacity, int, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20c490, Thiscall, GJBaseGameLayer, updateLevelColors, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23aec0, Thiscall, GJBaseGameLayer, updateMaxGameplayY, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateMGArtSpeed, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2360b0, Thiscall, GJBaseGameLayer, updateMGOffsetY, float, float, int, float, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateOBB2, cocos2d::CCRect)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x241340, Thiscall, GJBaseGameLayer, updateParticles, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2396c0, Thiscall, GJBaseGameLayer, updatePlatformerTime, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2185a0, Thiscall, GJBaseGameLayer, updatePlayerCollisionBlocks, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x242320, Thiscall, GJBaseGameLayer, updateProximityVolumeEffects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateQueuedLabels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateReplay, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateSavePositionObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2222b0, Thiscall, GJBaseGameLayer, updateShaderLayer, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x20df30, Thiscall, GJBaseGameLayer, updateSpecialGroupData, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2393e0, Thiscall, GJBaseGameLayer, updateSpecialLabels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23f230, Thiscall, GJBaseGameLayer, updateStaticCameraPos, cocos2d::CCPoint, bool, bool, bool, float, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x23ee40, Thiscall, GJBaseGameLayer, updateStaticCameraPosToGroup, int, bool, bool, bool, float, float, int, float, bool, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, updateTimeMod, float, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x235240, Thiscall, GJBaseGameLayer, updateTimerLabels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x235cf0, Thiscall, GJBaseGameLayer, updateZoom, float, float, int, float, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2482c0, Thiscall, GJBaseGameLayer, visitWithColorFlash, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2425f0, Thiscall, GJBaseGameLayer, volumeForProximityEffect, SFXTriggerInstance&)
 		}
 	};
 }

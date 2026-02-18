@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_setOpacity
 		#define GEODE_STATICS_setOpacity
 		GEODE_AS_STATIC_FUNCTION(setOpacity) 
@@ -90,9 +85,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(stateSensitiveOff) 
 	#endif
 
-	#ifndef GEODE_STATICS_getTargetColorIndex
-		#define GEODE_STATICS_getTargetColorIndex
-		GEODE_AS_STATIC_FUNCTION(getTargetColorIndex) 
+	#ifndef GEODE_STATICS_canSpawnTriggers
+		#define GEODE_STATICS_canSpawnTriggers
+		GEODE_AS_STATIC_FUNCTION(canSpawnTriggers) 
+	#endif
+
+	#ifndef GEODE_STATICS_hasSpawnTargetID
+		#define GEODE_STATICS_hasSpawnTargetID
+		GEODE_AS_STATIC_FUNCTION(hasSpawnTargetID) 
 	#endif
 
 	#ifndef GEODE_STATICS_init
@@ -103,11 +103,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_playTriggerEffect
 		#define GEODE_STATICS_playTriggerEffect
 		GEODE_AS_STATIC_FUNCTION(playTriggerEffect) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetSpawnTrigger
-		#define GEODE_STATICS_resetSpawnTrigger
-		GEODE_AS_STATIC_FUNCTION(resetSpawnTrigger) 
 	#endif
 
 	#ifndef GEODE_STATICS_triggerEffectFinished
@@ -221,9 +216,19 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(stateSensitiveOff) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_canSpawnTriggers
+		#define GEODE_CONCEPT_CHECK_canSpawnTriggers
+		GEODE_CONCEPT_FUNCTION_CHECK(canSpawnTriggers) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_getTargetColorIndex
 		#define GEODE_CONCEPT_CHECK_getTargetColorIndex
 		GEODE_CONCEPT_FUNCTION_CHECK(getTargetColorIndex) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_hasSpawnTargetID
+		#define GEODE_CONCEPT_CHECK_hasSpawnTargetID
+		GEODE_CONCEPT_FUNCTION_CHECK(hasSpawnTargetID) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_init
@@ -280,35 +285,37 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x47d040, Thiscall, EffectGameObject, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EffectGameObject, create, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48d790, Thiscall, EffectGameObject, setOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48ffb0, Thiscall, EffectGameObject, firstSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48ffd0, Thiscall, EffectGameObject, customSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48d7d0, Thiscall, EffectGameObject, triggerObject, GJBaseGameLayer*, int, gd::vector<int> const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x490230, Thiscall, EffectGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4932b0, Thiscall, EffectGameObject, getSaveString, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48d210, Thiscall, EffectGameObject, setRScaleX, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48d260, Thiscall, EffectGameObject, setRScaleY, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48ff90, Thiscall, EffectGameObject, triggerActivated, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48fd80, Thiscall, EffectGameObject, restoreObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48ff50, Thiscall, EffectGameObject, spawnXPosition, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x493160, Thiscall, EffectGameObject, canReverse, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x495720, Thiscall, EffectGameObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EffectGameObject, create, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a5ef0, Thiscall, EffectGameObject, setOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a87b0, Thiscall, EffectGameObject, firstSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a87e0, Thiscall, EffectGameObject, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a5f30, Thiscall, EffectGameObject, triggerObject, GJBaseGameLayer*, int, gd::vector<int> const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a8ad0, Thiscall, EffectGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4abc20, Thiscall, EffectGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a58f0, Thiscall, EffectGameObject, setRScaleX, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a5940, Thiscall, EffectGameObject, setRScaleY, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a8790, Thiscall, EffectGameObject, triggerActivated, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a8580, Thiscall, EffectGameObject, restoreObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a8750, Thiscall, EffectGameObject, spawnXPosition, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4aba40, Thiscall, EffectGameObject, canReverse, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EffectGameObject, isSpecialSpawnObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x493240, Thiscall, EffectGameObject, canBeOrdered, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47d2b0, Thiscall, EffectGameObject, getObjectLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47d2c0, Thiscall, EffectGameObject, setObjectLabel, cocos2d::CCLabelBMFont*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48fcd0, Thiscall, EffectGameObject, stateSensitiveOff, GJBaseGameLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EffectGameObject, getTargetColorIndex, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48d1a0, Thiscall, EffectGameObject, init, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48d2b0, Thiscall, EffectGameObject, playTriggerEffect, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EffectGameObject, resetSpawnTrigger, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4abbb0, Thiscall, EffectGameObject, canBeOrdered, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x495990, Thiscall, EffectGameObject, getObjectLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4959a0, Thiscall, EffectGameObject, setObjectLabel, cocos2d::CCLabelBMFont*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a84d0, Thiscall, EffectGameObject, stateSensitiveOff, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4abb20, Thiscall, EffectGameObject, canSpawnTriggers, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EffectGameObject, getTargetColorIndex, )
+            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(EffectGameObject, hasSpawnTargetID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a5880, Thiscall, EffectGameObject, init, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a5990, Thiscall, EffectGameObject, playTriggerEffect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EffectGameObject, resetSpawnTrigger, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EffectGameObject, setTargetID, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(EffectGameObject, setTargetID2, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48d780, Thiscall, EffectGameObject, triggerEffectFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48fe30, Thiscall, EffectGameObject, updateInteractiveHover, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48fdb0, Thiscall, EffectGameObject, updateSpecialColor, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x493010, Thiscall, EffectGameObject, updateSpeedModType, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a5ee0, Thiscall, EffectGameObject, triggerEffectFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a8630, Thiscall, EffectGameObject, updateInteractiveHover, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a85b0, Thiscall, EffectGameObject, updateSpecialColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ab8f0, Thiscall, EffectGameObject, updateSpeedModType, )
 		}
 	};
 }

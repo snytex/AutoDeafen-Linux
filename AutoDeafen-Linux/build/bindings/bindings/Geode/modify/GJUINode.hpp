@@ -15,24 +15,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(draw) 
 	#endif
 
-	#ifndef GEODE_STATICS_activeRangeTouchTest
-		#define GEODE_STATICS_activeRangeTouchTest
-		GEODE_AS_STATIC_FUNCTION(activeRangeTouchTest) 
-	#endif
-
 	#ifndef GEODE_STATICS_activeTouchTest
 		#define GEODE_STATICS_activeTouchTest
 		GEODE_AS_STATIC_FUNCTION(activeTouchTest) 
-	#endif
-
-	#ifndef GEODE_STATICS_getButtonScale
-		#define GEODE_STATICS_getButtonScale
-		GEODE_AS_STATIC_FUNCTION(getButtonScale) 
-	#endif
-
-	#ifndef GEODE_STATICS_getOpacity
-		#define GEODE_STATICS_getOpacity
-		GEODE_AS_STATIC_FUNCTION(getOpacity) 
 	#endif
 
 	#ifndef GEODE_STATICS_init
@@ -40,34 +25,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_loadFromConfig
-		#define GEODE_STATICS_loadFromConfig
-		GEODE_AS_STATIC_FUNCTION(loadFromConfig) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetState
-		#define GEODE_STATICS_resetState
-		GEODE_AS_STATIC_FUNCTION(resetState) 
-	#endif
-
 	#ifndef GEODE_STATICS_saveToConfig
 		#define GEODE_STATICS_saveToConfig
 		GEODE_AS_STATIC_FUNCTION(saveToConfig) 
 	#endif
 
-	#ifndef GEODE_STATICS_setOpacity
-		#define GEODE_STATICS_setOpacity
-		GEODE_AS_STATIC_FUNCTION(setOpacity) 
-	#endif
-
 	#ifndef GEODE_STATICS_toggleHighlight
 		#define GEODE_STATICS_toggleHighlight
 		GEODE_AS_STATIC_FUNCTION(toggleHighlight) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleModeB
-		#define GEODE_STATICS_toggleModeB
-		GEODE_AS_STATIC_FUNCTION(toggleModeB) 
 	#endif
 
 	#ifndef GEODE_STATICS_touchEnded
@@ -90,34 +55,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateButtonPositions) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateButtonScale
-		#define GEODE_STATICS_updateButtonScale
-		GEODE_AS_STATIC_FUNCTION(updateButtonScale) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateDeadzone
-		#define GEODE_STATICS_updateDeadzone
-		GEODE_AS_STATIC_FUNCTION(updateDeadzone) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateDragRadius
-		#define GEODE_STATICS_updateDragRadius
-		GEODE_AS_STATIC_FUNCTION(updateDragRadius) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateHeight
 		#define GEODE_STATICS_updateHeight
 		GEODE_AS_STATIC_FUNCTION(updateHeight) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateRangePos
-		#define GEODE_STATICS_updateRangePos
-		GEODE_AS_STATIC_FUNCTION(updateRangePos) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateSize
-		#define GEODE_STATICS_updateSize
-		GEODE_AS_STATIC_FUNCTION(updateSize) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateWidth
@@ -260,31 +200,31 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b5d30, Default, GJUINode, create, UIButtonConfig&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b6870, Thiscall, GJUINode, draw, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJUINode, activeRangeTouchTest, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b6540, Thiscall, GJUINode, activeTouchTest, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJUINode, getButtonScale, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJUINode, getOpacity, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ceab0, Default, GJUINode, create, UIButtonConfig&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cf5f0, Thiscall, GJUINode, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUINode, activeRangeTouchTest, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cf2c0, Thiscall, GJUINode, activeTouchTest, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUINode, getButtonScale, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUINode, getOpacity, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUINode, highlightButton, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b5e10, Thiscall, GJUINode, init, UIButtonConfig&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJUINode, loadFromConfig, UIButtonConfig&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJUINode, resetState, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b60c0, Thiscall, GJUINode, saveToConfig, UIButtonConfig&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJUINode, setOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b67e0, Thiscall, GJUINode, toggleHighlight, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJUINode, toggleModeB, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b6720, Thiscall, GJUINode, touchEnded, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b6430, Thiscall, GJUINode, touchTest, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b6170, Thiscall, GJUINode, updateButtonFrames, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b6330, Thiscall, GJUINode, updateButtonPositions, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJUINode, updateButtonScale, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJUINode, updateDeadzone, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJUINode, updateDragRadius, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b62c0, Thiscall, GJUINode, updateHeight, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJUINode, updateRangePos, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJUINode, updateSize, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b6250, Thiscall, GJUINode, updateWidth, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ceb90, Thiscall, GJUINode, init, UIButtonConfig&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUINode, loadFromConfig, UIButtonConfig&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUINode, resetState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cee40, Thiscall, GJUINode, saveToConfig, UIButtonConfig&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUINode, setOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cf560, Thiscall, GJUINode, toggleHighlight, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUINode, toggleModeB, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cf4a0, Thiscall, GJUINode, touchEnded, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cf1b0, Thiscall, GJUINode, touchTest, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ceef0, Thiscall, GJUINode, updateButtonFrames, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cf0b0, Thiscall, GJUINode, updateButtonPositions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUINode, updateButtonScale, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUINode, updateDeadzone, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUINode, updateDragRadius, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cf040, Thiscall, GJUINode, updateHeight, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUINode, updateRangePos, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJUINode, updateSize, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cefd0, Thiscall, GJUINode, updateWidth, float)
 		}
 	};
 }

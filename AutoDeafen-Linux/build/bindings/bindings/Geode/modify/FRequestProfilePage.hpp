@@ -125,16 +125,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(untoggleAll) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateLevelsLabel
-		#define GEODE_STATICS_updateLevelsLabel
-		GEODE_AS_STATIC_FUNCTION(updateLevelsLabel) 
-	#endif
-
-	#ifndef GEODE_STATICS_updatePageArrows
-		#define GEODE_STATICS_updatePageArrows
-		GEODE_AS_STATIC_FUNCTION(updatePageArrows) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -275,32 +265,32 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13bc90, Default, FRequestProfilePage, create, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, FRequestProfilePage, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13d290, Thiscall, FRequestProfilePage, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13d070, Thiscall, FRequestProfilePage, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13d2a0, Thiscall, FRequestProfilePage, onClosePopup, UploadActionPopup*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13d2f0, Thiscall, FRequestProfilePage, uploadActionFinished, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13d460, Thiscall, FRequestProfilePage, uploadActionFailed, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13dbd0, Thiscall, FRequestProfilePage, loadFRequestsFinished, cocos2d::CCArray*, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13dc50, Thiscall, FRequestProfilePage, loadFRequestsFailed, char const*, GJErrorCode)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13dcf0, Thiscall, FRequestProfilePage, setupPageInfo, gd::string, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13dcd0, Thiscall, FRequestProfilePage, forceReloadRequests, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13ce00, Thiscall, FRequestProfilePage, deleteSelected, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13be30, Thiscall, FRequestProfilePage, init, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13d500, Thiscall, FRequestProfilePage, isCorrect, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13d630, Thiscall, FRequestProfilePage, loadPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13d130, Thiscall, FRequestProfilePage, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13cb10, Thiscall, FRequestProfilePage, onDeleteSelected, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13de80, Thiscall, FRequestProfilePage, onNextPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13de90, Thiscall, FRequestProfilePage, onPrevPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13d0a0, Thiscall, FRequestProfilePage, onSentRequests, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13c930, Thiscall, FRequestProfilePage, onToggleAllObjects, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13ca10, Thiscall, FRequestProfilePage, onUpdate, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13da30, Thiscall, FRequestProfilePage, setupCommentsBrowser, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13d1f0, Thiscall, FRequestProfilePage, untoggleAll, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(FRequestProfilePage, updateLevelsLabel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(FRequestProfilePage, updatePageArrows, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13d8d0, Default, FRequestProfilePage, create, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, FRequestProfilePage, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13eed0, Thiscall, FRequestProfilePage, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13ecb0, Thiscall, FRequestProfilePage, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13eee0, Thiscall, FRequestProfilePage, onClosePopup, UploadActionPopup*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13ef30, Thiscall, FRequestProfilePage, uploadActionFinished, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13f0a0, Thiscall, FRequestProfilePage, uploadActionFailed, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13f810, Thiscall, FRequestProfilePage, loadFRequestsFinished, cocos2d::CCArray*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13f890, Thiscall, FRequestProfilePage, loadFRequestsFailed, char const*, GJErrorCode)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13f930, Thiscall, FRequestProfilePage, setupPageInfo, gd::string, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13f910, Thiscall, FRequestProfilePage, forceReloadRequests, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13ea40, Thiscall, FRequestProfilePage, deleteSelected, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13da70, Thiscall, FRequestProfilePage, init, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13f140, Thiscall, FRequestProfilePage, isCorrect, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13f270, Thiscall, FRequestProfilePage, loadPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13ed70, Thiscall, FRequestProfilePage, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13e750, Thiscall, FRequestProfilePage, onDeleteSelected, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13fac0, Thiscall, FRequestProfilePage, onNextPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13fad0, Thiscall, FRequestProfilePage, onPrevPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13ece0, Thiscall, FRequestProfilePage, onSentRequests, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13e570, Thiscall, FRequestProfilePage, onToggleAllObjects, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13e650, Thiscall, FRequestProfilePage, onUpdate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13f670, Thiscall, FRequestProfilePage, setupCommentsBrowser, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13ee30, Thiscall, FRequestProfilePage, untoggleAll, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FRequestProfilePage, updateLevelsLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FRequestProfilePage, updatePageArrows, )
 		}
 	};
 }

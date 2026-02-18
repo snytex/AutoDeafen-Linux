@@ -5,6 +5,16 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
+	#ifndef GEODE_STATICS_purgePoolManager
+		#define GEODE_STATICS_purgePoolManager
+		GEODE_AS_STATIC_FUNCTION(purgePoolManager) 
+	#endif
+
+	#ifndef GEODE_STATICS_sharedPoolManager
+		#define GEODE_STATICS_sharedPoolManager
+		GEODE_AS_STATIC_FUNCTION(sharedPoolManager) 
+	#endif
+
 	#ifndef GEODE_STATICS_addObject
 		#define GEODE_STATICS_addObject
 		GEODE_AS_STATIC_FUNCTION(addObject) 
@@ -25,11 +35,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(pop) 
 	#endif
 
-	#ifndef GEODE_STATICS_purgePoolManager
-		#define GEODE_STATICS_purgePoolManager
-		GEODE_AS_STATIC_FUNCTION(purgePoolManager) 
-	#endif
-
 	#ifndef GEODE_STATICS_push
 		#define GEODE_STATICS_push
 		GEODE_AS_STATIC_FUNCTION(push) 
@@ -40,12 +45,17 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(removeObject) 
 	#endif
 
-	#ifndef GEODE_STATICS_sharedPoolManager
-		#define GEODE_STATICS_sharedPoolManager
-		GEODE_AS_STATIC_FUNCTION(sharedPoolManager) 
+    
+	#ifndef GEODE_CONCEPT_CHECK_purgePoolManager
+		#define GEODE_CONCEPT_CHECK_purgePoolManager
+		GEODE_CONCEPT_FUNCTION_CHECK(purgePoolManager) 
 	#endif
 
-    
+	#ifndef GEODE_CONCEPT_CHECK_sharedPoolManager
+		#define GEODE_CONCEPT_CHECK_sharedPoolManager
+		GEODE_CONCEPT_FUNCTION_CHECK(sharedPoolManager) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_addObject
 		#define GEODE_CONCEPT_CHECK_addObject
 		GEODE_CONCEPT_FUNCTION_CHECK(addObject) 
@@ -66,11 +76,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(pop) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_purgePoolManager
-		#define GEODE_CONCEPT_CHECK_purgePoolManager
-		GEODE_CONCEPT_FUNCTION_CHECK(purgePoolManager) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_push
 		#define GEODE_CONCEPT_CHECK_push
 		GEODE_CONCEPT_FUNCTION_CHECK(push) 
@@ -79,11 +84,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_removeObject
 		#define GEODE_CONCEPT_CHECK_removeObject
 		GEODE_CONCEPT_FUNCTION_CHECK(removeObject) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_sharedPoolManager
-		#define GEODE_CONCEPT_CHECK_sharedPoolManager
-		GEODE_CONCEPT_FUNCTION_CHECK(sharedPoolManager) 
 	#endif
 
 
@@ -95,14 +95,16 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCPoolManager@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCPoolManager, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCPoolManager@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCPoolManager)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCPoolManager::purgePoolManager)), Default, cocos2d::CCPoolManager, purgePoolManager, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCPoolManager::sharedPoolManager)), Default, cocos2d::CCPoolManager, sharedPoolManager, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*>::func(&cocos2d::CCPoolManager::addObject)), Thiscall, cocos2d::CCPoolManager, addObject, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCPoolManager::finalize)), Thiscall, cocos2d::CCPoolManager, finalize, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCPoolManager::getCurReleasePool)), Thiscall, cocos2d::CCPoolManager, getCurReleasePool, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCPoolManager::pop)), Thiscall, cocos2d::CCPoolManager, pop, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCPoolManager::purgePoolManager)), Default, cocos2d::CCPoolManager, purgePoolManager, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCPoolManager::push)), Thiscall, cocos2d::CCPoolManager, push, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*>::func(&cocos2d::CCPoolManager::removeObject)), Thiscall, cocos2d::CCPoolManager, removeObject, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCPoolManager::sharedPoolManager)), Default, cocos2d::CCPoolManager, sharedPoolManager, )
 		}
 	};
 }

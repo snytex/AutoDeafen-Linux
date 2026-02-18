@@ -45,9 +45,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ef5a0, Default, SetupAdvFollowEditPhysicsPopup, create, AdvancedFollowEditObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f0440, Thiscall, SetupAdvFollowEditPhysicsPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ef6b0, Thiscall, SetupAdvFollowEditPhysicsPopup, init, AdvancedFollowEditObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x407220, Default, SetupAdvFollowEditPhysicsPopup, create, AdvancedFollowEditObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4080c0, Thiscall, SetupAdvFollowEditPhysicsPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x407330, Thiscall, SetupAdvFollowEditPhysicsPopup, init, AdvancedFollowEditObject*, cocos2d::CCArray*)
 		}
 	};
 }

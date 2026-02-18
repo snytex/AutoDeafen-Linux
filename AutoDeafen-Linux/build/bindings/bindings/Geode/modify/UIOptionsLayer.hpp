@@ -150,20 +150,20 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2995e0, Default, UIOptionsLayer, create, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29c640, Thiscall, UIOptionsLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29c790, Thiscall, UIOptionsLayer, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29c8c0, Thiscall, UIOptionsLayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71210, Thiscall, UIOptionsLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b1a0, Thiscall, UIOptionsLayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29b720, Thiscall, UIOptionsLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29bb20, Thiscall, UIOptionsLayer, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29c2a0, Thiscall, UIOptionsLayer, getValue, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a0ca0, Default, UIOptionsLayer, create, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a3d00, Thiscall, UIOptionsLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a3e50, Thiscall, UIOptionsLayer, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a3f80, Thiscall, UIOptionsLayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71240, Thiscall, UIOptionsLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b7d0, Thiscall, UIOptionsLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a2de0, Thiscall, UIOptionsLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a31e0, Thiscall, UIOptionsLayer, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a3960, Thiscall, UIOptionsLayer, getValue, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UIOptionsLayer, getNode, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x299720, Thiscall, UIOptionsLayer, init, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29ba10, Thiscall, UIOptionsLayer, onReset, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29b5f0, Thiscall, UIOptionsLayer, onSaveLoad, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29b430, Thiscall, UIOptionsLayer, toggleUIGroup, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a0de0, Thiscall, UIOptionsLayer, init, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a30d0, Thiscall, UIOptionsLayer, onReset, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a2cb0, Thiscall, UIOptionsLayer, onSaveLoad, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a2af0, Thiscall, UIOptionsLayer, toggleUIGroup, int)
 		}
 	};
 }

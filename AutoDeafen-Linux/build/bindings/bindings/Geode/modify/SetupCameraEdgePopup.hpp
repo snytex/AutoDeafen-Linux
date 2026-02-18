@@ -115,16 +115,16 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3faea0, Default, SetupCameraEdgePopup, create, CameraTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fbd10, Thiscall, SetupCameraEdgePopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fc200, Thiscall, SetupCameraEdgePopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fbfc0, Thiscall, SetupCameraEdgePopup, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fafd0, Thiscall, SetupCameraEdgePopup, init, CameraTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fbe10, Thiscall, SetupCameraEdgePopup, onCameraEdge, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fbf70, Thiscall, SetupCameraEdgePopup, onTargetIDArrow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fbf40, Thiscall, SetupCameraEdgePopup, onUnlockEdge, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fc130, Thiscall, SetupCameraEdgePopup, updateTargetID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fc0b0, Thiscall, SetupCameraEdgePopup, updateTextInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x412b60, Default, SetupCameraEdgePopup, create, CameraTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4139d0, Thiscall, SetupCameraEdgePopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413ec0, Thiscall, SetupCameraEdgePopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413c80, Thiscall, SetupCameraEdgePopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x412c90, Thiscall, SetupCameraEdgePopup, init, CameraTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413ad0, Thiscall, SetupCameraEdgePopup, onCameraEdge, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413c30, Thiscall, SetupCameraEdgePopup, onTargetIDArrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413c00, Thiscall, SetupCameraEdgePopup, onUnlockEdge, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413df0, Thiscall, SetupCameraEdgePopup, updateTargetID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413d70, Thiscall, SetupCameraEdgePopup, updateTextInputLabel, )
 		}
 	};
 }

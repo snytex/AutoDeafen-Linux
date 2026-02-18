@@ -67,11 +67,11 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, float>::func(&cocos2d::CCRotateTo::create)), Default, cocos2d::CCRotateTo, create, float, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, float, float>::func(&cocos2d::CCRotateTo::create)), Default, cocos2d::CCRotateTo, create, float, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, float>::func(&cocos2d::CCRotateTo::initWithDuration)), Thiscall, cocos2d::CCRotateTo, initWithDuration, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, float, float>::func(&cocos2d::CCRotateTo::initWithDuration)), Thiscall, cocos2d::CCRotateTo, initWithDuration, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float, float, float>::func(&cocos2d::CCRotateTo::initWithDuration)), Thiscall, cocos2d::CCRotateTo, initWithDuration, float, float, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCZone*>::func(&cocos2d::CCRotateTo::copyWithZone)), Thiscall, cocos2d::CCRotateTo, copyWithZone, cocos2d::CCZone*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCRotateTo::update)), Thiscall, cocos2d::CCRotateTo, update, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCNode*>::func(&cocos2d::CCRotateTo::startWithTarget)), Thiscall, cocos2d::CCRotateTo, startWithTarget, cocos2d::CCNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, float>::func(&cocos2d::CCRotateTo::initWithDuration)), Thiscall, cocos2d::CCRotateTo, initWithDuration, float, float)
 		}
 	};
 }

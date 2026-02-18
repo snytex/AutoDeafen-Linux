@@ -14,67 +14,95 @@ public:
     static constexpr auto CLASS_NAME = "AdToolbox";
 
     /**
+     * @note[short] MacOS (ARM): 0xb309c
+     * @note[short] MacOS (Intel): 0xcb8e0
      * @note[short] Android
      */
-    TodoReturn cacheInterstitial();
+    static void cacheInterstitial();
 
     /**
+     * @note[short] MacOS (ARM): 0xb30ac
+     * @note[short] MacOS (Intel): 0xcb910
      * @note[short] Android
      */
-    TodoReturn cacheRewardedVideo();
+    static void cacheRewardedVideo();
 
     /**
+     * @note[short] MacOS (ARM): 0xb3094
+     * @note[short] MacOS (Intel): 0xcb8c0
      * @note[short] Android
      */
-    TodoReturn disableBanner();
+    static void disableBanner();
 
     /**
+     * @note[short] MacOS (ARM): 0xb3090
+     * @note[short] MacOS (Intel): 0xcb8b0
      * @note[short] Android
      */
-    TodoReturn enableBanner();
+    static void enableBanner();
 
     /**
+     * @note[short] MacOS (ARM): 0xb308c
+     * @note[short] MacOS (Intel): 0xcb8a0
      * @note[short] Android
      */
-    TodoReturn enableBannerNoRefresh();
+    static void enableBannerNoRefresh();
 
     /**
+     * @note[short] MacOS (ARM): 0xb30a0
+     * @note[short] MacOS (Intel): 0xcb8f0
      * @note[short] Android
      */
-    TodoReturn hasCachedInterstitial();
+    static bool hasCachedInterstitial();
 
     /**
+     * @note[short] MacOS (ARM): 0xb30b0
+     * @note[short] MacOS (Intel): 0xcb920
      * @note[short] Android
      */
-    TodoReturn hasCachedRewardedVideo();
+    static bool hasCachedRewardedVideo();
 
     /**
+     * @note[short] MacOS (ARM): 0xb30bc
+     * @note[short] MacOS (Intel): 0xcb940
      * @note[short] Android
      */
-    bool isShowingAd();
+    static bool isShowingAd();
 
     /**
+     * @note[short] MacOS (ARM): 0xb3088
+     * @note[short] MacOS (Intel): 0xcb890
      * @note[short] Android
      */
-    void queueRefreshBanner();
+    static void queueRefreshBanner();
 
     /**
+     * @note[short] MacOS (ARM): 0xb3084
+     * @note[short] MacOS (Intel): 0xcb880
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2f8ce0
      * @note[short] Android
      */
-    void setupAds();
+    static void setupAds();
 
     /**
+     * @note[short] MacOS (ARM): 0xb30b8
+     * @note[short] MacOS (Intel): 0xcb930
      * @note[short] Android
      */
-    void showDebug();
+    static void showDebug();
 
     /**
+     * @note[short] MacOS (ARM): 0xb3098
+     * @note[short] MacOS (Intel): 0xcb8d0
      * @note[short] Android
      */
-    void showInterstitial();
+    static void showInterstitial();
 
     /**
+     * @note[short] MacOS (ARM): 0xb30a8
+     * @note[short] MacOS (Intel): 0xcb900
      * @note[short] Android
      */
-    void showRewardedVideo();
+    static void showRewardedVideo();
 };

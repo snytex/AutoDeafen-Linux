@@ -35,6 +35,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCTransitionRotoZoom@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCTransitionRotoZoom, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCTransitionRotoZoom@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCTransitionRotoZoom)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, cocos2d::CCScene*>::func(&cocos2d::CCTransitionRotoZoom::create)), Default, cocos2d::CCTransitionRotoZoom, create, float, cocos2d::CCScene*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCTransitionRotoZoom::onEnter)), Thiscall, cocos2d::CCTransitionRotoZoom, onEnter, )
 		}

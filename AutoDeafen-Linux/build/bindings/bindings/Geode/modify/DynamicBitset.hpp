@@ -25,7 +25,7 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38deb0, Thiscall, DynamicBitset, resize, size_t)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a4d00, Thiscall, DynamicBitset, resize, size_t)
 		}
 	};
 }

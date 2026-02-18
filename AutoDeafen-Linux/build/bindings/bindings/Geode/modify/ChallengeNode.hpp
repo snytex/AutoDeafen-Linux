@@ -15,11 +15,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onClaimReward) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateTimeLabel
-		#define GEODE_STATICS_updateTimeLabel
-		GEODE_AS_STATIC_FUNCTION(updateTimeLabel) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -51,9 +46,9 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ChallengeNode, create, GJChallengeItem*, ChallengesPage*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x86ce0, Thiscall, ChallengeNode, init, GJChallengeItem*, ChallengesPage*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x87d30, Thiscall, ChallengeNode, onClaimReward, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ChallengeNode, updateTimeLabel, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x86d30, Thiscall, ChallengeNode, init, GJChallengeItem*, ChallengesPage*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x87d80, Thiscall, ChallengeNode, onClaimReward, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ChallengeNode, updateTimeLabel, gd::string)
 		}
 	};
 }

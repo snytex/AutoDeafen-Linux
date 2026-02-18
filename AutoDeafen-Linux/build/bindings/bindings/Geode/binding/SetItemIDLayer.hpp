@@ -16,47 +16,64 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetItemIDLayer, SetupTriggerPopup)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static SetItemIDLayer* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+     SetItemIDLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x8f4a0
-     * @note[short] MacOS (Intel): 0x9c7f0
-     * @note[short] Windows: 0x3e9ed0
-     * @note[short] iOS: 0x4122e8
+     * @note[short] MacOS (ARM): 0x8cbf4
+     * @note[short] MacOS (Intel): 0x9bf70
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x419bdc
+     * @note[short] Android
+     */
+    static SetItemIDLayer* create(EffectGameObject* object, cocos2d::CCArray* objects);
+
+    /**
+     * @note[short] MacOS (ARM): 0x8d66c
+     * @note[short] MacOS (Intel): 0x9cba0
+     * @note[short] Windows: 0x401b50
+     * @note[short] iOS: 0x41a4bc
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x8f3ac
-     * @note[short] MacOS (Intel): 0x9c700
-     * @note[short] Windows: 0x3e9de0
-     * @note[short] iOS: 0x4121f4
+     * @note[short] MacOS (ARM): 0x8d588
+     * @note[short] MacOS (Intel): 0x9cab0
+     * @note[short] Windows: 0x401a60
+     * @note[short] iOS: 0x41a3c8
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x8f2a4
-     * @note[short] MacOS (Intel): 0x9c5e0
-     * @note[short] Windows: 0x3e9c40
-     * @note[short] iOS: 0x4120ec
+     * @note[short] MacOS (ARM): 0x8d480
+     * @note[short] MacOS (Intel): 0x9c990
+     * @note[short] Windows: 0x4018c0
+     * @note[short] iOS: 0x41a2c0
      * @note[short] Android
      */
     virtual void onCustomToggleTriggerValue(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x8eba0
-     * @note[short] MacOS (Intel): 0x9bdd0
-     * @note[short] Windows: 0x3e94e0
-     * @note[short] iOS: 0x411ae0
+     * @note[short] MacOS (ARM): 0x8cd7c
+     * @note[short] MacOS (Intel): 0x9c1a0
+     * @note[short] Windows: 0x401160
+     * @note[short] iOS: 0x419cb4
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
+     * @note[short] MacOS (ARM): 0x8d61c
+     * @note[short] MacOS (Intel): 0x9cb50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x41a46c
      * @note[short] Android
      */
     void updateEditorLabel();

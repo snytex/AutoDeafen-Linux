@@ -95,14 +95,14 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42b000, Default, SetupSequenceTriggerPopup, create, SequenceTriggerGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42c340, Thiscall, SetupSequenceTriggerPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42b130, Thiscall, SetupSequenceTriggerPopup, init, SequenceTriggerGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42c990, Thiscall, SetupSequenceTriggerPopup, onAddChance, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42cad0, Thiscall, SetupSequenceTriggerPopup, onChangeOrder, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42cbb0, Thiscall, SetupSequenceTriggerPopup, onDeleteSelected, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42c910, Thiscall, SetupSequenceTriggerPopup, onSelect, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42c430, Thiscall, SetupSequenceTriggerPopup, updateGroupIDButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x443310, Default, SetupSequenceTriggerPopup, create, SequenceTriggerGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x444650, Thiscall, SetupSequenceTriggerPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x443440, Thiscall, SetupSequenceTriggerPopup, init, SequenceTriggerGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x444ca0, Thiscall, SetupSequenceTriggerPopup, onAddChance, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x444de0, Thiscall, SetupSequenceTriggerPopup, onChangeOrder, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x444ec0, Thiscall, SetupSequenceTriggerPopup, onDeleteSelected, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x444c20, Thiscall, SetupSequenceTriggerPopup, onSelect, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x444740, Thiscall, SetupSequenceTriggerPopup, updateGroupIDButtons, )
 		}
 	};
 }

@@ -30,7 +30,7 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd1da0, Default, DialogObject, create, gd::string, gd::string, int, float, bool, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xd32d0, Default, DialogObject, create, gd::string, gd::string, int, float, bool, cocos2d::ccColor3B)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DialogObject, init, gd::string, gd::string, int, float, bool, cocos2d::ccColor3B)
 		}
 	};

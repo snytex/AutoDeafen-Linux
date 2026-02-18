@@ -40,16 +40,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(textInputReturn) 
 	#endif
 
-	#ifndef GEODE_STATICS_createToggleButton
-		#define GEODE_STATICS_createToggleButton
-		GEODE_AS_STATIC_FUNCTION(createToggleButton) 
-	#endif
-
-	#ifndef GEODE_STATICS_determineStartValues
-		#define GEODE_STATICS_determineStartValues
-		GEODE_AS_STATIC_FUNCTION(determineStartValues) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -185,23 +175,23 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8a8d0, Default, CollisionBlockPopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8bb20, Thiscall, CollisionBlockPopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8ba30, Thiscall, CollisionBlockPopup, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b790, Thiscall, CollisionBlockPopup, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b7a0, Thiscall, CollisionBlockPopup, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b5c0, Thiscall, CollisionBlockPopup, textInputShouldOffset, CCTextInputNode*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b620, Thiscall, CollisionBlockPopup, textInputReturn, CCTextInputNode*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CollisionBlockPopup, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CollisionBlockPopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8a9f0, Thiscall, CollisionBlockPopup, init, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8ba80, Thiscall, CollisionBlockPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b550, Thiscall, CollisionBlockPopup, onDynamicBlock, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b600, Thiscall, CollisionBlockPopup, onItemIDArrow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b650, Thiscall, CollisionBlockPopup, onNextItemID, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b890, Thiscall, CollisionBlockPopup, updateEditorLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b990, Thiscall, CollisionBlockPopup, updateItemID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b910, Thiscall, CollisionBlockPopup, updateTextInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8a920, Default, CollisionBlockPopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8bbe0, Thiscall, CollisionBlockPopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8baf0, Thiscall, CollisionBlockPopup, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b850, Thiscall, CollisionBlockPopup, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b860, Thiscall, CollisionBlockPopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b600, Thiscall, CollisionBlockPopup, textInputShouldOffset, CCTextInputNode*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b660, Thiscall, CollisionBlockPopup, textInputReturn, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CollisionBlockPopup, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CollisionBlockPopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8aa40, Thiscall, CollisionBlockPopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8bb40, Thiscall, CollisionBlockPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b5a0, Thiscall, CollisionBlockPopup, onDynamicBlock, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b650, Thiscall, CollisionBlockPopup, onItemIDArrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b6a0, Thiscall, CollisionBlockPopup, onNextItemID, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b950, Thiscall, CollisionBlockPopup, updateEditorLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8ba50, Thiscall, CollisionBlockPopup, updateItemID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b9d0, Thiscall, CollisionBlockPopup, updateTextInputLabel, )
 		}
 	};
 }

@@ -17,30 +17,37 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupArtSwitchPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x459210
+     * @note[short] MacOS (ARM): 0x4d12b8
+     * @note[short] MacOS (Intel): 0x585680
+     * @note[short] Windows: 0x471780
+     * @note[short] iOS: 0x410cf0
      * @note[short] Android
      */
-    static SetupArtSwitchPopup* create(ArtTriggerGameObject* p0, cocos2d::CCArray* p1, int p2);
+    static SetupArtSwitchPopup* create(ArtTriggerGameObject* object, cocos2d::CCArray* objects, int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c38e4
-     * @note[short] MacOS (Intel): 0x56ee90
-     * @note[short] Windows: 0x459ed0
-     * @note[short] iOS: 0x4092dc
+     * @note[short] MacOS (ARM): 0x4d1a80
+     * @note[short] MacOS (Intel): 0x585f20
+     * @note[short] Windows: 0x472440
+     * @note[short] iOS: 0x4112f4
      * @note[short] Android
      */
-    virtual void selectArtClosed(SelectArtLayer* p0);
+    virtual void selectArtClosed(SelectArtLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c32b0
-     * @note[short] MacOS (Intel): 0x56e840
-     * @note[short] Windows: 0x4594d0
+     * @note[short] MacOS (ARM): 0x4d1458
+     * @note[short] MacOS (Intel): 0x5858e0
+     * @note[short] Windows: 0x471a40
+     * @note[short] iOS: 0x410de0
      * @note[short] Android
      */
-    bool init(ArtTriggerGameObject* p0, cocos2d::CCArray* p1, int p2);
+    bool init(ArtTriggerGameObject* object, cocos2d::CCArray* objects, int id);
 
     /**
-     * @note[short] Windows: 0x459e80
+     * @note[short] MacOS (ARM): 0x4d1a38
+     * @note[short] MacOS (Intel): 0x585ed0
+     * @note[short] Windows: 0x4723f0
+     * @note[short] iOS: 0x4112ac
      * @note[short] Android
      */
     void onArt(cocos2d::CCObject* sender);

@@ -20,16 +20,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getCompressedSaveString) 
 	#endif
 
-	#ifndef GEODE_STATICS_getSaveString
-		#define GEODE_STATICS_getSaveString
-		GEODE_AS_STATIC_FUNCTION(getSaveString) 
-	#endif
-
-	#ifndef GEODE_STATICS_load
-		#define GEODE_STATICS_load
-		GEODE_AS_STATIC_FUNCTION(load) 
-	#endif
-
 	#ifndef GEODE_STATICS_loadDataFromFile
 		#define GEODE_STATICS_loadDataFromFile
 		GEODE_AS_STATIC_FUNCTION(loadDataFromFile) 
@@ -40,29 +30,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(loadFromCompressedString) 
 	#endif
 
-	#ifndef GEODE_STATICS_loadFromString
-		#define GEODE_STATICS_loadFromString
-		GEODE_AS_STATIC_FUNCTION(loadFromString) 
-	#endif
-
 	#ifndef GEODE_STATICS_save
 		#define GEODE_STATICS_save
 		GEODE_AS_STATIC_FUNCTION(save) 
-	#endif
-
-	#ifndef GEODE_STATICS_saveData
-		#define GEODE_STATICS_saveData
-		GEODE_AS_STATIC_FUNCTION(saveData) 
-	#endif
-
-	#ifndef GEODE_STATICS_saveGMTo
-		#define GEODE_STATICS_saveGMTo
-		GEODE_AS_STATIC_FUNCTION(saveGMTo) 
-	#endif
-
-	#ifndef GEODE_STATICS_tryLoadData
-		#define GEODE_STATICS_tryLoadData
-		GEODE_AS_STATIC_FUNCTION(tryLoadData) 
 	#endif
 
     
@@ -150,21 +120,22 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6a7c0, Thiscall, GManager, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6a7d0, Thiscall, GManager, setup, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x51640, Thiscall, GManager, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6a7f0, Thiscall, GManager, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6a800, Thiscall, GManager, setup, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GManager, encodeDataTo, DS_Dictionary*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GManager, dataLoaded, DS_Dictionary*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GManager, firstLoad, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GManager, getCompressedSaveString, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GManager, getSaveString, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GManager, load, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6aa90, Thiscall, GManager, loadDataFromFile, gd::string const&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GManager, loadFromCompressedString, gd::string&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GManager, loadFromString, gd::string&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6a9a0, Thiscall, GManager, save, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GManager, saveData, DS_Dictionary*, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GManager, saveGMTo, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GManager, tryLoadData, DS_Dictionary*, gd::string const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6a820, Thiscall, GManager, getCompressedSaveString, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GManager, getSaveString, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GManager, load, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6aac0, Thiscall, GManager, loadDataFromFile, gd::string const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6a8f0, Thiscall, GManager, loadFromCompressedString, gd::string&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GManager, loadFromString, gd::string&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6a9d0, Thiscall, GManager, save, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GManager, saveData, DS_Dictionary*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GManager, saveGMTo, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GManager, tryLoadData, DS_Dictionary*, gd::string const&)
 		}
 	};
 }

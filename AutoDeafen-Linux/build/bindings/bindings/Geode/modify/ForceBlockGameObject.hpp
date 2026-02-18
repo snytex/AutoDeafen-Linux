@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_customObjectSetup
 		#define GEODE_STATICS_customObjectSetup
 		GEODE_AS_STATIC_FUNCTION(customObjectSetup) 
@@ -23,11 +18,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_calculateForceToTarget
 		#define GEODE_STATICS_calculateForceToTarget
 		GEODE_AS_STATIC_FUNCTION(calculateForceToTarget) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
     
@@ -65,11 +55,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ForceBlockGameObject, create, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a91e0, Thiscall, ForceBlockGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a8e00, Thiscall, ForceBlockGameObject, getSaveString, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a9370, Thiscall, ForceBlockGameObject, calculateForceToTarget, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ForceBlockGameObject, init, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ForceBlockGameObject, create, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c1d30, Thiscall, ForceBlockGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c1950, Thiscall, ForceBlockGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4c1ec0, Thiscall, ForceBlockGameObject, calculateForceToTarget, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ForceBlockGameObject, init, char const*)
 		}
 	};
 }

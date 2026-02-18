@@ -106,14 +106,14 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SongOptionsLayer, create, CustomSongDelegate*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc4920, Thiscall, SongOptionsLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3880, Thiscall, SongOptionsLayer, init, CustomSongDelegate*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc47b0, Thiscall, SongOptionsLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc42a0, Thiscall, SongOptionsLayer, onFadeIn, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc42f0, Thiscall, SongOptionsLayer, onFadeOut, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc4650, Thiscall, SongOptionsLayer, onInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc4390, Thiscall, SongOptionsLayer, onPlayback, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc4340, Thiscall, SongOptionsLayer, onSongPersistent, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc5640, Thiscall, SongOptionsLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc45a0, Thiscall, SongOptionsLayer, init, CustomSongDelegate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc54d0, Thiscall, SongOptionsLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc4fc0, Thiscall, SongOptionsLayer, onFadeIn, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc5010, Thiscall, SongOptionsLayer, onFadeOut, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc5370, Thiscall, SongOptionsLayer, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc50b0, Thiscall, SongOptionsLayer, onPlayback, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc5060, Thiscall, SongOptionsLayer, onSongPersistent, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SongOptionsLayer, updatePlaybackBtn, )
 		}
 	};

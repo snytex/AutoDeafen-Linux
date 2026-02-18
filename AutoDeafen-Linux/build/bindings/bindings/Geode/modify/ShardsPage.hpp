@@ -25,11 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(show) 
 	#endif
 
-	#ifndef GEODE_STATICS_FLAlert_Clicked
-		#define GEODE_STATICS_FLAlert_Clicked
-		GEODE_AS_STATIC_FUNCTION(FLAlert_Clicked) 
-	#endif
-
 	#ifndef GEODE_STATICS_goToPage
 		#define GEODE_STATICS_goToPage
 		GEODE_AS_STATIC_FUNCTION(goToPage) 
@@ -111,15 +106,15 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ShardsPage, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x471620, Thiscall, ShardsPage, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, ShardsPage, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, ShardsPage, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867a0, Thiscall, ShardsPage, show, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ShardsPage, FLAlert_Clicked, FLAlertLayer*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ShardsPage, goToPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84620, Thiscall, ShardsPage, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x474610, Thiscall, ShardsPage, onIconInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x474650, Thiscall, ShardsPage, onSwitchPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x489b00, Thiscall, ShardsPage, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, ShardsPage, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, ShardsPage, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867f0, Thiscall, ShardsPage, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ShardsPage, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48cb70, Thiscall, ShardsPage, goToPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, ShardsPage, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48caf0, Thiscall, ShardsPage, onIconInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x48cb30, Thiscall, ShardsPage, onSwitchPage, cocos2d::CCObject*)
 		}
 	};
 }

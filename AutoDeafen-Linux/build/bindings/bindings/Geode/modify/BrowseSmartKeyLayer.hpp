@@ -10,21 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onBack) 
 	#endif
 
-	#ifndef GEODE_STATICS_addChanceToSelected
-		#define GEODE_STATICS_addChanceToSelected
-		GEODE_AS_STATIC_FUNCTION(addChanceToSelected) 
-	#endif
-
-	#ifndef GEODE_STATICS_createTemplateObjects
-		#define GEODE_STATICS_createTemplateObjects
-		GEODE_AS_STATIC_FUNCTION(createTemplateObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_deletedSelectedItems
-		#define GEODE_STATICS_deletedSelectedItems
-		GEODE_AS_STATIC_FUNCTION(deletedSelectedItems) 
-	#endif
-
 	#ifndef GEODE_STATICS_getAllSelectedBlocks
 		#define GEODE_STATICS_getAllSelectedBlocks
 		GEODE_AS_STATIC_FUNCTION(getAllSelectedBlocks) 
@@ -111,15 +96,15 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BrowseSmartKeyLayer, create, GJSmartTemplate*, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4441b0, Thiscall, BrowseSmartKeyLayer, onBack, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(BrowseSmartKeyLayer, addChanceToSelected, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(BrowseSmartKeyLayer, createTemplateObjects, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(BrowseSmartKeyLayer, deletedSelectedItems, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x443ed0, Thiscall, BrowseSmartKeyLayer, getAllSelectedBlocks, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4430d0, Thiscall, BrowseSmartKeyLayer, init, GJSmartTemplate*, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x443ab0, Thiscall, BrowseSmartKeyLayer, onButton, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4440d0, Thiscall, BrowseSmartKeyLayer, onPrefabObject, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x443fa0, Thiscall, BrowseSmartKeyLayer, updateChanceValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45c550, Thiscall, BrowseSmartKeyLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BrowseSmartKeyLayer, addChanceToSelected, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BrowseSmartKeyLayer, createTemplateObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BrowseSmartKeyLayer, deletedSelectedItems, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45c270, Thiscall, BrowseSmartKeyLayer, getAllSelectedBlocks, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45b470, Thiscall, BrowseSmartKeyLayer, init, GJSmartTemplate*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45be50, Thiscall, BrowseSmartKeyLayer, onButton, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45c470, Thiscall, BrowseSmartKeyLayer, onPrefabObject, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45c340, Thiscall, BrowseSmartKeyLayer, updateChanceValues, )
 		}
 	};
 }

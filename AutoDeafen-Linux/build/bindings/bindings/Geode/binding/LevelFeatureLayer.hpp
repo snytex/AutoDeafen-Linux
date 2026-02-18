@@ -16,70 +16,92 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(LevelFeatureLayer, FLAlertLayer)
 
     /**
+     * @note[short] MacOS (ARM): 0x45c50c
+     * @note[short] MacOS (Intel): 0x504bd0
      * @note[short] Android
      */
-    static LevelFeatureLayer* create(int p0);
+    static LevelFeatureLayer* create(int levelID);
 
     /**
-     * @note[short] MacOS (ARM): 0x4530b8
-     * @note[short] MacOS (Intel): 0x4f2260
+     * @note[short] MacOS (ARM): 0x45d0b8
+     * @note[short] MacOS (Intel): 0x5057f0
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x45260c
-     * @note[short] MacOS (Intel): 0x4f1770
+     * @note[short] MacOS (ARM): 0x45c614
+     * @note[short] MacOS (Intel): 0x504d10
      * @note[short] Android
      */
-    bool init(int p0);
+    bool init(int levelID);
 
     /**
+     * @note[short] MacOS (ARM): 0x45cd78
+     * @note[short] MacOS (Intel): 0x5054c0
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x45ce68
+     * @note[short] MacOS (Intel): 0x5055a0
      * @note[short] Android
      */
     void onDown(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x45cf14
+     * @note[short] MacOS (Intel): 0x505650
      * @note[short] Android
      */
     void onDown2(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x45d00c
+     * @note[short] MacOS (Intel): 0x505750
      * @note[short] Android
      */
     void onRemoveValues(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x45ce14
+     * @note[short] MacOS (Intel): 0x505550
      * @note[short] Android
      */
     void onSetEpicOnly(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x45cdb4
+     * @note[short] MacOS (Intel): 0x5054f0
      * @note[short] Android
      */
     void onSetFeatured(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x45d060
+     * @note[short] MacOS (Intel): 0x5057a0
      * @note[short] Android
      */
     void onToggleEpic(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x45cec0
+     * @note[short] MacOS (Intel): 0x505600
      * @note[short] Android
      */
     void onUp(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x45cf6c
+     * @note[short] MacOS (Intel): 0x5056b0
      * @note[short] Android
      */
     void onUp2(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x45cfc0
+     * @note[short] MacOS (Intel): 0x505700
      * @note[short] Android
      */
     void updateStars();

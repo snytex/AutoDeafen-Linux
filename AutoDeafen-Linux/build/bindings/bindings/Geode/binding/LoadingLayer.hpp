@@ -15,63 +15,85 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(LoadingLayer, cocos2d::CCLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x31e254
-     * @note[short] MacOS (Intel): 0x38f480
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static LoadingLayer* create(bool p0);
+     LoadingLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x31e17c
-     * @note[short] MacOS (Intel): 0x38f380
-     * @note[short] Windows: 0x3194f0
-     * @note[short] Android
+     * @note[short] MacOS (ARM): 0x328258
+     * @note[short] MacOS (Intel): 0x3a3690
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1d6e70
+     * @note[short] Android: Rebinded
      */
-    static cocos2d::CCScene* scene(bool p0);
+     ~LoadingLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x31ea9c
-     * @note[short] MacOS (Intel): 0x38fcf0
-     * @note[short] Windows: 0x31a930
-     * @note[short] iOS: 0x1d7514
+     * @note[short] MacOS (ARM): 0x3271fc
+     * @note[short] MacOS (Intel): 0x3a25b0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1d5f40
+     * @note[short] Android
+     */
+    static LoadingLayer* create(bool refresh);
+
+    /**
+     * @note[short] MacOS (ARM): 0x327124
+     * @note[short] MacOS (Intel): 0x3a24b0
+     * @note[short] Windows: 0x32e3b0
+     * @note[short] iOS: 0x1d5efc
+     * @note[short] Android
+     */
+    static cocos2d::CCScene* scene(bool refresh);
+
+    /**
+     * @note[short] MacOS (ARM): 0x327a3c
+     * @note[short] MacOS (Intel): 0x3a2e00
+     * @note[short] Windows: 0x32f7f0
+     * @note[short] iOS: 0x1d66c8
      * @note[short] Android
      */
     const char* getLoadingString();
 
     /**
-     * @note[short] MacOS (ARM): 0x31e314
-     * @note[short] MacOS (Intel): 0x38f560
-     * @note[short] Windows: 0x319600
-     * @note[short] iOS: 0x1d6e44
+     * @note[short] MacOS (ARM): 0x3272bc
+     * @note[short] MacOS (Intel): 0x3a2690
+     * @note[short] Windows: 0x32e4c0
+     * @note[short] iOS: 0x1d5ff4
      * @note[short] Android
      */
-    bool init(bool p0);
+    bool init(bool refresh);
 
     /**
-     * @note[short] MacOS (ARM): 0x31eb80
-     * @note[short] MacOS (Intel): 0x38fdb0
-     * @note[short] Windows: 0x319ea0
-     * @note[short] iOS: 0x1d75f0
+     * @note[short] MacOS (ARM): 0x327b18
+     * @note[short] MacOS (Intel): 0x3a2ec0
+     * @note[short] Windows: 0x32ed60
+     * @note[short] iOS: 0x1d67a4
      * @note[short] Android
      */
     void loadAssets();
 
     /**
-     * @note[short] MacOS (ARM): 0x31f290
-     * @note[short] MacOS (Intel): 0x390550
+     * @note[short] MacOS (ARM): 0x328224
+     * @note[short] MacOS (Intel): 0x3a3660
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1d7c84
+     * @note[short] iOS: 0x1d6e3c
      * @note[short] Android
      */
     void loadingFinished();
 
     /**
-     * @note[short] MacOS (ARM): 0x31eb14
-     * @note[short] MacOS (Intel): 0x38fd50
-     * @note[short] Windows: 0x319e20
+     * @note[short] MacOS (ARM): 0x327aac
+     * @note[short] MacOS (Intel): 0x3a2e60
+     * @note[short] Windows: 0x32ece0
+     * @note[short] iOS: 0x1d6738
      * @note[short] Android
      */
-    void updateProgress(int p0);
+    void updateProgress(int progress);
     bool m_unknown;
     bool m_unknown2;
     int m_loadStep;

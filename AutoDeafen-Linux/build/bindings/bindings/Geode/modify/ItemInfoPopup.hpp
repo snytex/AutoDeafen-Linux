@@ -25,11 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_isUnlockedByDefault
-		#define GEODE_STATICS_isUnlockedByDefault
-		GEODE_AS_STATIC_FUNCTION(isUnlockedByDefault) 
-	#endif
-
 	#ifndef GEODE_STATICS_onClose
 		#define GEODE_STATICS_onClose
 		GEODE_AS_STATIC_FUNCTION(onClose) 
@@ -85,13 +80,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x273e30, Default, ItemInfoPopup, create, int, UnlockType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x275ef0, Default, ItemInfoPopup, nameForUnlockType, int, UnlockType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, ItemInfoPopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x273f20, Thiscall, ItemInfoPopup, init, int, UnlockType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ItemInfoPopup, isUnlockedByDefault, int, UnlockType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ItemInfoPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x275ec0, Thiscall, ItemInfoPopup, onCredit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27b7b0, Default, ItemInfoPopup, create, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27d820, Default, ItemInfoPopup, nameForUnlockType, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, ItemInfoPopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27b8a0, Thiscall, ItemInfoPopup, init, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ItemInfoPopup, isUnlockedByDefault, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, ItemInfoPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27d7f0, Thiscall, ItemInfoPopup, onCredit, cocos2d::CCObject*)
 		}
 	};
 }

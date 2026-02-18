@@ -35,8 +35,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431070, Default, SetupSFXEditPopup, create, SFXTriggerGameObject*, cocos2d::CCArray*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431190, Thiscall, SetupSFXEditPopup, init, SFXTriggerGameObject*, cocos2d::CCArray*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449410, Default, SetupSFXEditPopup, create, SFXTriggerGameObject*, cocos2d::CCArray*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449530, Thiscall, SetupSFXEditPopup, init, SFXTriggerGameObject*, cocos2d::CCArray*, bool)
 		}
 	};
 }

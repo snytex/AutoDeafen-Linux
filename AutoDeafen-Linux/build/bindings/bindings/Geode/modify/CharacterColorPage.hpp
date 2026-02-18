@@ -30,11 +30,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(activeColorForMode) 
 	#endif
 
-	#ifndef GEODE_STATICS_checkColor
-		#define GEODE_STATICS_checkColor
-		GEODE_AS_STATIC_FUNCTION(checkColor) 
-	#endif
-
 	#ifndef GEODE_STATICS_colorForIndex
 		#define GEODE_STATICS_colorForIndex
 		GEODE_AS_STATIC_FUNCTION(colorForIndex) 
@@ -43,16 +38,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_createColorMenu
 		#define GEODE_STATICS_createColorMenu
 		GEODE_AS_STATIC_FUNCTION(createColorMenu) 
-	#endif
-
-	#ifndef GEODE_STATICS_FLAlert_Clicked
-		#define GEODE_STATICS_FLAlert_Clicked
-		GEODE_AS_STATIC_FUNCTION(FLAlert_Clicked) 
-	#endif
-
-	#ifndef GEODE_STATICS_offsetForIndex
-		#define GEODE_STATICS_offsetForIndex
-		GEODE_AS_STATIC_FUNCTION(offsetForIndex) 
 	#endif
 
 	#ifndef GEODE_STATICS_onClose
@@ -73,11 +58,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_toggleGlow
 		#define GEODE_STATICS_toggleGlow
 		GEODE_AS_STATIC_FUNCTION(toggleGlow) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleGlowItems
-		#define GEODE_STATICS_toggleGlowItems
-		GEODE_AS_STATIC_FUNCTION(toggleGlowItems) 
 	#endif
 
 	#ifndef GEODE_STATICS_toggleShip
@@ -201,24 +181,24 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CharacterColorPage, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x87f30, Thiscall, CharacterColorPage, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, CharacterColorPage, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8a7a0, Thiscall, CharacterColorPage, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867a0, Thiscall, CharacterColorPage, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x89440, Thiscall, CharacterColorPage, activeColorForMode, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CharacterColorPage, checkColor, int, UnlockType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8a050, Thiscall, CharacterColorPage, colorForIndex, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x88e50, Thiscall, CharacterColorPage, createColorMenu, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CharacterColorPage, FLAlert_Clicked, FLAlertLayer*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CharacterColorPage, offsetForIndex, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8a760, Thiscall, CharacterColorPage, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x89550, Thiscall, CharacterColorPage, onMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x89d60, Thiscall, CharacterColorPage, onPlayerColor, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x88da0, Thiscall, CharacterColorPage, toggleGlow, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CharacterColorPage, toggleGlowItems, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x88c80, Thiscall, CharacterColorPage, toggleShip, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x897f0, Thiscall, CharacterColorPage, updateColorMode, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8a540, Thiscall, CharacterColorPage, updateIconColors, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x87f80, Thiscall, CharacterColorPage, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, CharacterColorPage, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8a7f0, Thiscall, CharacterColorPage, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867f0, Thiscall, CharacterColorPage, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x89490, Thiscall, CharacterColorPage, activeColorForMode, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CharacterColorPage, checkColor, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8a0a0, Thiscall, CharacterColorPage, colorForIndex, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x88ea0, Thiscall, CharacterColorPage, createColorMenu, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CharacterColorPage, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CharacterColorPage, offsetForIndex, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8a7b0, Thiscall, CharacterColorPage, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x895a0, Thiscall, CharacterColorPage, onMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x89db0, Thiscall, CharacterColorPage, onPlayerColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x88df0, Thiscall, CharacterColorPage, toggleGlow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CharacterColorPage, toggleGlowItems, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x88cd0, Thiscall, CharacterColorPage, toggleShip, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x89840, Thiscall, CharacterColorPage, updateColorMode, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8a590, Thiscall, CharacterColorPage, updateIconColors, )
 		}
 	};
 }

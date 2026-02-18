@@ -14,9 +14,12 @@ public:
     static constexpr auto CLASS_NAME = "DynamicBitset";
 
     /**
-     * @note[short] Windows: 0x38deb0
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: 0x3a4d00
+     * @note[short] iOS: 0x123ad4
+     * @note[short] Android: Out of line
      */
-    void resize(size_t p0);
+    void resize(size_t size);
     gd::vector<unsigned int> m_bits;
 };

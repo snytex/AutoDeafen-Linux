@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_registerWithTouchDispatcher
 		#define GEODE_STATICS_registerWithTouchDispatcher
 		GEODE_AS_STATIC_FUNCTION(registerWithTouchDispatcher) 
@@ -45,24 +40,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onInfo) 
 	#endif
 
-	#ifndef GEODE_STATICS_onPage
-		#define GEODE_STATICS_onPage
-		GEODE_AS_STATIC_FUNCTION(onPage) 
-	#endif
-
 	#ifndef GEODE_STATICS_setupList
 		#define GEODE_STATICS_setupList
 		GEODE_AS_STATIC_FUNCTION(setupList) 
-	#endif
-
-	#ifndef GEODE_STATICS_trySetupAudioBrowser
-		#define GEODE_STATICS_trySetupAudioBrowser
-		GEODE_AS_STATIC_FUNCTION(trySetupAudioBrowser) 
-	#endif
-
-	#ifndef GEODE_STATICS_updatePageLabel
-		#define GEODE_STATICS_updatePageLabel
-		GEODE_AS_STATIC_FUNCTION(updatePageLabel) 
 	#endif
 
     
@@ -150,21 +130,21 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AudioAssetsBrowser, create, gd::vector<int>&, gd::vector<int>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, AudioAssetsBrowser, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, AudioAssetsBrowser, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x83cd0, Thiscall, AudioAssetsBrowser, musicActionFinished, GJMusicAction)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x83d50, Thiscall, AudioAssetsBrowser, musicActionFailed, GJMusicAction)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AudioAssetsBrowser, create, gd::vector<int>&, gd::vector<int>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, AudioAssetsBrowser, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, AudioAssetsBrowser, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x83d20, Thiscall, AudioAssetsBrowser, musicActionFinished, GJMusicAction)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x83da0, Thiscall, AudioAssetsBrowser, musicActionFailed, GJMusicAction)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AudioAssetsBrowser, cellPerformedAction, TableViewCell*, int, CellAction, cocos2d::CCNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AudioAssetsBrowser, getSelectedCellIdx, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AudioAssetsBrowser, getCellDelegateType, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x83760, Thiscall, AudioAssetsBrowser, init, gd::vector<int>&, gd::vector<int>&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AudioAssetsBrowser, onClose, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AudioAssetsBrowser, onInfo, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AudioAssetsBrowser, onPage, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AudioAssetsBrowser, setupList, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AudioAssetsBrowser, trySetupAudioBrowser, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AudioAssetsBrowser, updatePageLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x837b0, Thiscall, AudioAssetsBrowser, init, gd::vector<int>&, gd::vector<int>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, AudioAssetsBrowser, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x83fc0, Thiscall, AudioAssetsBrowser, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AudioAssetsBrowser, onPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x83de0, Thiscall, AudioAssetsBrowser, setupList, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AudioAssetsBrowser, trySetupAudioBrowser, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AudioAssetsBrowser, updatePageLabel, )
 		}
 	};
 }

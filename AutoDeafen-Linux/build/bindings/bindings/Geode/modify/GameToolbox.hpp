@@ -20,39 +20,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(alignItemsHorisontally) 
 	#endif
 
-	#ifndef GEODE_STATICS_alignItemsVertically
-		#define GEODE_STATICS_alignItemsVertically
-		GEODE_AS_STATIC_FUNCTION(alignItemsVertically) 
-	#endif
-
 	#ifndef GEODE_STATICS_bounceTime
 		#define GEODE_STATICS_bounceTime
 		GEODE_AS_STATIC_FUNCTION(bounceTime) 
 	#endif
 
-	#ifndef GEODE_STATICS_colorToSepia
-		#define GEODE_STATICS_colorToSepia
-		GEODE_AS_STATIC_FUNCTION(colorToSepia) 
-	#endif
-
-	#ifndef GEODE_STATICS_contentScaleClipRect
-		#define GEODE_STATICS_contentScaleClipRect
-		GEODE_AS_STATIC_FUNCTION(contentScaleClipRect) 
-	#endif
-
-	#ifndef GEODE_STATICS_createHashString
-		#define GEODE_STATICS_createHashString
-		GEODE_AS_STATIC_FUNCTION(createHashString) 
-	#endif
-
 	#ifndef GEODE_STATICS_createToggleButton
 		#define GEODE_STATICS_createToggleButton
 		GEODE_AS_STATIC_FUNCTION(createToggleButton) 
-	#endif
-
-	#ifndef GEODE_STATICS_doWeHaveInternet
-		#define GEODE_STATICS_doWeHaveInternet
-		GEODE_AS_STATIC_FUNCTION(doWeHaveInternet) 
 	#endif
 
 	#ifndef GEODE_STATICS_easeToText
@@ -65,39 +40,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(gen_random) 
 	#endif
 
-	#ifndef GEODE_STATICS_getDropActionWDelay
-		#define GEODE_STATICS_getDropActionWDelay
-		GEODE_AS_STATIC_FUNCTION(getDropActionWDelay) 
-	#endif
-
-	#ifndef GEODE_STATICS_getDropActionWEnd
-		#define GEODE_STATICS_getDropActionWEnd
-		GEODE_AS_STATIC_FUNCTION(getDropActionWEnd) 
-	#endif
-
-	#ifndef GEODE_STATICS_getEasedAction
-		#define GEODE_STATICS_getEasedAction
-		GEODE_AS_STATIC_FUNCTION(getEasedAction) 
-	#endif
-
 	#ifndef GEODE_STATICS_getEasedValue
 		#define GEODE_STATICS_getEasedValue
 		GEODE_AS_STATIC_FUNCTION(getEasedValue) 
-	#endif
-
-	#ifndef GEODE_STATICS_getInvertedEasing
-		#define GEODE_STATICS_getInvertedEasing
-		GEODE_AS_STATIC_FUNCTION(getInvertedEasing) 
-	#endif
-
-	#ifndef GEODE_STATICS_getLargestMergedIntDicts
-		#define GEODE_STATICS_getLargestMergedIntDicts
-		GEODE_AS_STATIC_FUNCTION(getLargestMergedIntDicts) 
-	#endif
-
-	#ifndef GEODE_STATICS_getMultipliedHSV
-		#define GEODE_STATICS_getMultipliedHSV
-		GEODE_AS_STATIC_FUNCTION(getMultipliedHSV) 
 	#endif
 
 	#ifndef GEODE_STATICS_getRelativeOffset
@@ -130,16 +75,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(intToString) 
 	#endif
 
-	#ifndef GEODE_STATICS_isIOS
-		#define GEODE_STATICS_isIOS
-		GEODE_AS_STATIC_FUNCTION(isIOS) 
-	#endif
-
-	#ifndef GEODE_STATICS_isRateEasing
-		#define GEODE_STATICS_isRateEasing
-		GEODE_AS_STATIC_FUNCTION(isRateEasing) 
-	#endif
-
 	#ifndef GEODE_STATICS_mergeDictsSaveLargestInt
 		#define GEODE_STATICS_mergeDictsSaveLargestInt
 		GEODE_AS_STATIC_FUNCTION(mergeDictsSaveLargestInt) 
@@ -153,16 +88,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_msToTimeString
 		#define GEODE_STATICS_msToTimeString
 		GEODE_AS_STATIC_FUNCTION(msToTimeString) 
-	#endif
-
-	#ifndef GEODE_STATICS_multipliedColorValue
-		#define GEODE_STATICS_multipliedColorValue
-		GEODE_AS_STATIC_FUNCTION(multipliedColorValue) 
-	#endif
-
-	#ifndef GEODE_STATICS_openAppPage
-		#define GEODE_STATICS_openAppPage
-		GEODE_AS_STATIC_FUNCTION(openAppPage) 
 	#endif
 
 	#ifndef GEODE_STATICS_openRateURL
@@ -185,29 +110,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(pointsToString) 
 	#endif
 
-	#ifndef GEODE_STATICS_postClipVisit
-		#define GEODE_STATICS_postClipVisit
-		GEODE_AS_STATIC_FUNCTION(postClipVisit) 
-	#endif
-
 	#ifndef GEODE_STATICS_preVisitWithClippingRect
 		#define GEODE_STATICS_preVisitWithClippingRect
 		GEODE_AS_STATIC_FUNCTION(preVisitWithClippingRect) 
 	#endif
 
-	#ifndef GEODE_STATICS_preVisitWithClipRect
-		#define GEODE_STATICS_preVisitWithClipRect
-		GEODE_AS_STATIC_FUNCTION(preVisitWithClipRect) 
-	#endif
-
 	#ifndef GEODE_STATICS_saveParticleToString
 		#define GEODE_STATICS_saveParticleToString
 		GEODE_AS_STATIC_FUNCTION(saveParticleToString) 
-	#endif
-
-	#ifndef GEODE_STATICS_saveStringToFile
-		#define GEODE_STATICS_saveStringToFile
-		GEODE_AS_STATIC_FUNCTION(saveStringToFile) 
 	#endif
 
 	#ifndef GEODE_STATICS_stringFromHSV
@@ -223,11 +133,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_stringSetupToMap
 		#define GEODE_STATICS_stringSetupToMap
 		GEODE_AS_STATIC_FUNCTION(stringSetupToMap) 
-	#endif
-
-	#ifndef GEODE_STATICS_strongColor
-		#define GEODE_STATICS_strongColor
-		GEODE_AS_STATIC_FUNCTION(strongColor) 
 	#endif
 
 	#ifndef GEODE_STATICS_timestampToHumanReadable
@@ -515,61 +420,61 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x65010, Default, GameToolbox, addBackButton, cocos2d::CCLayer*, cocos2d::CCMenuItem*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x650f0, Default, GameToolbox, addRThumbScrollButton, cocos2d::CCLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x64110, Default, GameToolbox, alignItemsHorisontally, cocos2d::CCArray*, float, cocos2d::CCPoint, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, alignItemsVertically, cocos2d::CCArray*, float, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, bounceTime, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, colorToSepia, cocos2d::ccColor3B, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, contentScaleClipRect, cocos2d::CCRect&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, createHashString, gd::string const&, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x65040, Default, GameToolbox, addBackButton, cocos2d::CCLayer*, cocos2d::CCMenuItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x65120, Default, GameToolbox, addRThumbScrollButton, cocos2d::CCLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x64140, Default, GameToolbox, alignItemsHorisontally, cocos2d::CCArray*, float, cocos2d::CCPoint, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, alignItemsVertically, cocos2d::CCArray*, float, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x68ac0, Default, GameToolbox, bounceTime, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, colorToSepia, cocos2d::ccColor3B, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, contentScaleClipRect, cocos2d::CCRect&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, createHashString, gd::string const&, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x64670, Default, GameToolbox, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint, cocos2d::CCNode*, cocos2d::CCNode*, float, float, float, cocos2d::CCPoint, char const*, bool, int, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, doWeHaveInternet, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x68570, Default, GameToolbox, easeToText, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x646a0, Default, GameToolbox, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint, cocos2d::CCNode*, cocos2d::CCNode*, float, float, float, cocos2d::CCPoint, char const*, bool, int, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, doWeHaveInternet, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x685a0, Default, GameToolbox, easeToText, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, fast_rand, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, fast_rand_0_1, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, fast_rand_minus1_1, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, fast_srand, uint64_t)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, gen_random, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, getDropActionWDelay, float, float, float, cocos2d::CCNode*, cocos2d::SEL_CallFunc)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, getDropActionWEnd, float, float, float, cocos2d::CCAction*, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, getEasedAction, cocos2d::CCActionInterval*, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x68b40, Default, GameToolbox, getEasedValue, float, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x66070, Default, GameToolbox, gen_random, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, getDropActionWDelay, float, float, float, cocos2d::CCNode*, cocos2d::SEL_CallFunc)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, getDropActionWEnd, float, float, float, cocos2d::CCAction*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, getEasedAction, cocos2d::CCActionInterval*, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x68b70, Default, GameToolbox, getEasedValue, float, int, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, getfast_srand, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, getInvertedEasing, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, getLargestMergedIntDicts, cocos2d::CCDictionary*, cocos2d::CCDictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, getMultipliedHSV, cocos2d::ccHSVValue const&, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x64970, Default, GameToolbox, getRelativeOffset, GameObject*, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x64310, Default, GameToolbox, getResponse, cocos2d::extension::CCHttpResponse*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x65e20, Default, GameToolbox, getTimeString, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x654e0, Default, GameToolbox, hsvFromString, gd::string const&, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x69120, Default, GameToolbox, intToShortString, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x69060, Default, GameToolbox, intToString, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, isIOS, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, isRateEasing, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, mergeDictsSaveLargestInt, cocos2d::CCDictionary*, cocos2d::CCDictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, mergeDictsSkipConflict, cocos2d::CCDictionary*, cocos2d::CCDictionary*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x69630, Default, GameToolbox, msToTimeString, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, multipliedColorValue, cocos2d::ccColor3B, cocos2d::ccColor3B, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, openAppPage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, getInvertedEasing, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, getLargestMergedIntDicts, cocos2d::CCDictionary*, cocos2d::CCDictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, getMultipliedHSV, cocos2d::ccHSVValue const&, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x649a0, Default, GameToolbox, getRelativeOffset, GameObject*, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x64340, Default, GameToolbox, getResponse, cocos2d::extension::CCHttpResponse*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x65e50, Default, GameToolbox, getTimeString, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x65510, Default, GameToolbox, hsvFromString, gd::string const&, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x69150, Default, GameToolbox, intToShortString, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x69090, Default, GameToolbox, intToString, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, isIOS, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, isRateEasing, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x64ba0, Default, GameToolbox, mergeDictsSaveLargestInt, cocos2d::CCDictionary*, cocos2d::CCDictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x64e00, Default, GameToolbox, mergeDictsSkipConflict, cocos2d::CCDictionary*, cocos2d::CCDictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x69660, Default, GameToolbox, msToTimeString, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, multipliedColorValue, cocos2d::ccColor3B, cocos2d::ccColor3B, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, openAppPage, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, openRateURL, gd::string, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, particleFromString, gd::string const&, cocos2d::CCParticleSystemQuad*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x68000, Default, GameToolbox, particleFromStruct, cocos2d::ParticleStruct const&, cocos2d::CCParticleSystemQuad*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x67540, Default, GameToolbox, particleStringToStruct, gd::string const&, cocos2d::ParticleStruct&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x69760, Default, GameToolbox, pointsToString, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, postClipVisit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x645c0, Default, GameToolbox, preVisitWithClippingRect, cocos2d::CCNode*, cocos2d::CCRect)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, preVisitWithClipRect, cocos2d::CCRect)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x662d0, Default, GameToolbox, saveParticleToString, cocos2d::CCParticleSystemQuad*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, saveStringToFile, gd::string const&, gd::string const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x656f0, Default, GameToolbox, stringFromHSV, cocos2d::ccHSVValue, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x65c30, Default, GameToolbox, stringSetupToDict, gd::string const&, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x65890, Default, GameToolbox, stringSetupToMap, gd::string const&, char const*, gd::map<gd::string, gd::string>&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, strongColor, cocos2d::ccColor3B)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, timestampToHumanReadable, long)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x65290, Default, GameToolbox, transformColor, cocos2d::ccColor3B const&, cocos2d::ccHSVValue)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameToolbox, transformColor, cocos2d::ccColor3B const&, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x68030, Default, GameToolbox, particleFromStruct, cocos2d::ParticleStruct const&, cocos2d::CCParticleSystemQuad*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x67570, Default, GameToolbox, particleStringToStruct, gd::string const&, cocos2d::ParticleStruct&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x69790, Default, GameToolbox, pointsToString, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, postClipVisit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x645f0, Default, GameToolbox, preVisitWithClippingRect, cocos2d::CCNode*, cocos2d::CCRect)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, preVisitWithClipRect, cocos2d::CCRect)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x66300, Default, GameToolbox, saveParticleToString, cocos2d::CCParticleSystemQuad*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, saveStringToFile, gd::string const&, gd::string const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x65720, Default, GameToolbox, stringFromHSV, cocos2d::ccHSVValue, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x65c60, Default, GameToolbox, stringSetupToDict, gd::string const&, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x658c0, Default, GameToolbox, stringSetupToMap, gd::string const&, char const*, gd::map<gd::string, gd::string>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, strongColor, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x692f0, Default, GameToolbox, timestampToHumanReadable, time_t)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x652c0, Default, GameToolbox, transformColor, cocos2d::ccColor3B const&, cocos2d::ccHSVValue)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameToolbox, transformColor, cocos2d::ccColor3B const&, float, float, float)
 		}
 	};
 }

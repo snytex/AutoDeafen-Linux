@@ -15,46 +15,46 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(PlayerFireBoostSprite, cocos2d::CCSprite)
 
     /**
-     * @note[short] MacOS (ARM): 0x36c2a4
-     * @note[short] MacOS (Intel): 0x3ea580
-     * @note[short] Windows: 0x38cf30
-     * @note[short] iOS: 0x219854
+     * @note[short] MacOS (ARM): 0x374aa4
+     * @note[short] MacOS (Intel): 0x3fc290
+     * @note[short] Windows: 0x3a3d80
+     * @note[short] iOS: 0x218c4c
      * @note[short] Android
      */
     static PlayerFireBoostSprite* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x388cac
-     * @note[short] MacOS (Intel): 0x40b6c0
-     * @note[short] Windows: 0x38cfd0
-     * @note[short] iOS: 0x22e9e0
+     * @note[short] MacOS (ARM): 0x3920f0
+     * @note[short] MacOS (Intel): 0x41db60
+     * @note[short] Windows: 0x3a3e20
+     * @note[short] iOS: 0x22ea80
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x384370
-     * @note[short] MacOS (Intel): 0x4066d0
+     * @note[short] MacOS (ARM): 0x38cebc
+     * @note[short] MacOS (Intel): 0x417db0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x22b19c
+     * @note[short] iOS: 0x22a8dc
      * @note[short] Android
      */
     void animateFireIn();
 
     /**
-     * @note[short] MacOS (ARM): 0x3843f0
-     * @note[short] MacOS (Intel): 0x406740
+     * @note[short] MacOS (ARM): 0x38cf3c
+     * @note[short] MacOS (Intel): 0x417e20
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x22b214
+     * @note[short] iOS: 0x22a954
      * @note[short] Android
      */
     void animateFireOut();
 
     /**
-     * @note[short] MacOS (ARM): 0x384094
-     * @note[short] MacOS (Intel): 0x4063f0
-     * @note[short] Windows: 0x38d030
-     * @note[short] iOS: 0x22af54
+     * @note[short] MacOS (ARM): 0x38cbec
+     * @note[short] MacOS (Intel): 0x417ad0
+     * @note[short] Windows: 0x3a3e80
+     * @note[short] iOS: 0x22a694
      * @note[short] Android
      */
     void loopFireAnimation();

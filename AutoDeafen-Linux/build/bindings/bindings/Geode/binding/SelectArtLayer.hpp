@@ -16,55 +16,64 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SelectArtLayer, FLAlertLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x2095fc
-     * @note[short] MacOS (Intel): 0x25d1d0
-     * @note[short] Windows: 0x30d600
+     * @note[short] MacOS (ARM): 0x2120dc
+     * @note[short] MacOS (Intel): 0x26f170
+     * @note[short] Windows: 0x322190
+     * @note[short] iOS: 0x17c024
      * @note[short] Android
      */
-    static SelectArtLayer* create(SelectArtType p0, int p1);
+    static SelectArtLayer* create(SelectArtType type, int index);
 
     /**
-     * @note[short] MacOS (ARM): 0x20a7c0
-     * @note[short] MacOS (Intel): 0x25e610
-     * @note[short] Windows: 0x30e530
-     * @note[short] iOS: 0x18056c
+     * @note[short] MacOS (ARM): 0x213294
+     * @note[short] MacOS (Intel): 0x2705b0
+     * @note[short] Windows: 0x3230c0
+     * @note[short] iOS: 0x17cea8
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x209c2c
-     * @note[short] MacOS (Intel): 0x25da00
-     * @note[short] Windows: 0x30d710
+     * @note[short] MacOS (ARM): 0x21270c
+     * @note[short] MacOS (Intel): 0x26f9a0
+     * @note[short] Windows: 0x3222a0
+     * @note[short] iOS: 0x17c3d8
      * @note[short] Android
      */
-    bool init(SelectArtType p0, int p1);
+    bool init(SelectArtType type, int index);
 
     /**
+     * @note[short] MacOS (ARM): 0x21318c
+     * @note[short] MacOS (Intel): 0x2704a0
+     * @note[short] Windows: 0x323070
+     * @note[short] iOS: 0x17cda0
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x20a718
-     * @note[short] MacOS (Intel): 0x25e550
-     * @note[short] Windows: 0x30e420
+     * @note[short] MacOS (ARM): 0x2131ec
+     * @note[short] MacOS (Intel): 0x2704f0
+     * @note[short] Windows: 0x322fb0
+     * @note[short] iOS: 0x17ce00
      * @note[short] Android
      */
     void onSelectCustom(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x20a5d0
-     * @note[short] MacOS (Intel): 0x25e430
-     * @note[short] Windows: 0x30e360
+     * @note[short] MacOS (ARM): 0x2130a4
+     * @note[short] MacOS (Intel): 0x2703d0
+     * @note[short] Windows: 0x322ef0
+     * @note[short] iOS: 0x17ccd0
      * @note[short] Android
      */
     void selectArt(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x209728
-     * @note[short] MacOS (Intel): 0x25d340
+     * @note[short] MacOS (ARM): 0x212208
+     * @note[short] MacOS (Intel): 0x26f2e0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x17c104
      * @note[short] Android
      */
     void updateSelectedCustom(int idx);

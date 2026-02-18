@@ -45,11 +45,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addCustomAnimationFrame) 
 	#endif
 
-	#ifndef GEODE_STATICS_addDuplicateLastFrame
-		#define GEODE_STATICS_addDuplicateLastFrame
-		GEODE_AS_STATIC_FUNCTION(addDuplicateLastFrame) 
-	#endif
-
 	#ifndef GEODE_STATICS_addGameAnimation
 		#define GEODE_STATICS_addGameAnimation
 		GEODE_AS_STATIC_FUNCTION(addGameAnimation) 
@@ -65,24 +60,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addNewCustomObject) 
 	#endif
 
-	#ifndef GEODE_STATICS_addToGJLog
-		#define GEODE_STATICS_addToGJLog
-		GEODE_AS_STATIC_FUNCTION(addToGJLog) 
-	#endif
-
-	#ifndef GEODE_STATICS_applicationDidEnterBackground
-		#define GEODE_STATICS_applicationDidEnterBackground
-		GEODE_AS_STATIC_FUNCTION(applicationDidEnterBackground) 
-	#endif
-
 	#ifndef GEODE_STATICS_applicationWillEnterForeground
 		#define GEODE_STATICS_applicationWillEnterForeground
 		GEODE_AS_STATIC_FUNCTION(applicationWillEnterForeground) 
-	#endif
-
-	#ifndef GEODE_STATICS_calculateBaseKeyForIcons
-		#define GEODE_STATICS_calculateBaseKeyForIcons
-		GEODE_AS_STATIC_FUNCTION(calculateBaseKeyForIcons) 
 	#endif
 
 	#ifndef GEODE_STATICS_canShowRewardedVideo
@@ -100,24 +80,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(checkUsedIcons) 
 	#endif
 
-	#ifndef GEODE_STATICS_claimItemsResponse
-		#define GEODE_STATICS_claimItemsResponse
-		GEODE_AS_STATIC_FUNCTION(claimItemsResponse) 
-	#endif
-
-	#ifndef GEODE_STATICS_clearGJLog
-		#define GEODE_STATICS_clearGJLog
-		GEODE_AS_STATIC_FUNCTION(clearGJLog) 
-	#endif
-
 	#ifndef GEODE_STATICS_colorForIdx
 		#define GEODE_STATICS_colorForIdx
 		GEODE_AS_STATIC_FUNCTION(colorForIdx) 
-	#endif
-
-	#ifndef GEODE_STATICS_colorForPos
-		#define GEODE_STATICS_colorForPos
-		GEODE_AS_STATIC_FUNCTION(colorForPos) 
 	#endif
 
 	#ifndef GEODE_STATICS_colorKey
@@ -135,29 +100,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(countForType) 
 	#endif
 
-	#ifndef GEODE_STATICS_defaultFrameForAnimation
-		#define GEODE_STATICS_defaultFrameForAnimation
-		GEODE_AS_STATIC_FUNCTION(defaultFrameForAnimation) 
-	#endif
-
-	#ifndef GEODE_STATICS_defaultYOffsetForBG2
-		#define GEODE_STATICS_defaultYOffsetForBG2
-		GEODE_AS_STATIC_FUNCTION(defaultYOffsetForBG2) 
-	#endif
-
-	#ifndef GEODE_STATICS_doQuickSave
-		#define GEODE_STATICS_doQuickSave
-		GEODE_AS_STATIC_FUNCTION(doQuickSave) 
-	#endif
-
 	#ifndef GEODE_STATICS_dpadConfigToString
 		#define GEODE_STATICS_dpadConfigToString
 		GEODE_AS_STATIC_FUNCTION(dpadConfigToString) 
-	#endif
-
-	#ifndef GEODE_STATICS_eventUnlockFeature
-		#define GEODE_STATICS_eventUnlockFeature
-		GEODE_AS_STATIC_FUNCTION(eventUnlockFeature) 
 	#endif
 
 	#ifndef GEODE_STATICS_fadeInMenuMusic
@@ -210,49 +155,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(finishedLoadingMGAsync2) 
 	#endif
 
-	#ifndef GEODE_STATICS_followTwitch
-		#define GEODE_STATICS_followTwitch
-		GEODE_AS_STATIC_FUNCTION(followTwitch) 
-	#endif
-
-	#ifndef GEODE_STATICS_followTwitter
-		#define GEODE_STATICS_followTwitter
-		GEODE_AS_STATIC_FUNCTION(followTwitter) 
-	#endif
-
-	#ifndef GEODE_STATICS_framesForAnimation
-		#define GEODE_STATICS_framesForAnimation
-		GEODE_AS_STATIC_FUNCTION(framesForAnimation) 
-	#endif
-
-	#ifndef GEODE_STATICS_frameTimeForAnimation
-		#define GEODE_STATICS_frameTimeForAnimation
-		GEODE_AS_STATIC_FUNCTION(frameTimeForAnimation) 
-	#endif
-
 	#ifndef GEODE_STATICS_generateSecretNumber
 		#define GEODE_STATICS_generateSecretNumber
 		GEODE_AS_STATIC_FUNCTION(generateSecretNumber) 
 	#endif
 
-	#ifndef GEODE_STATICS_getFontFile
-		#define GEODE_STATICS_getFontFile
-		GEODE_AS_STATIC_FUNCTION(getFontFile) 
-	#endif
-
-	#ifndef GEODE_STATICS_getFontTexture
-		#define GEODE_STATICS_getFontTexture
-		GEODE_AS_STATIC_FUNCTION(getFontTexture) 
-	#endif
-
 	#ifndef GEODE_STATICS_getGameVariable
 		#define GEODE_STATICS_getGameVariable
 		GEODE_AS_STATIC_FUNCTION(getGameVariable) 
-	#endif
-
-	#ifndef GEODE_STATICS_getGTexture
-		#define GEODE_STATICS_getGTexture
-		GEODE_AS_STATIC_FUNCTION(getGTexture) 
 	#endif
 
 	#ifndef GEODE_STATICS_getIntGameVariable
@@ -265,31 +175,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getMenuMusicFile) 
 	#endif
 
-	#ifndef GEODE_STATICS_getMGTexture
-		#define GEODE_STATICS_getMGTexture
-		GEODE_AS_STATIC_FUNCTION(getMGTexture) 
-	#endif
-
-	#ifndef GEODE_STATICS_getNextUniqueObjectKey
-		#define GEODE_STATICS_getNextUniqueObjectKey
-		GEODE_AS_STATIC_FUNCTION(getNextUniqueObjectKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getNextUsedKey
-		#define GEODE_STATICS_getNextUsedKey
-		GEODE_AS_STATIC_FUNCTION(getNextUsedKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_getOrderedCustomObjectKeys
-		#define GEODE_STATICS_getOrderedCustomObjectKeys
-		GEODE_AS_STATIC_FUNCTION(getOrderedCustomObjectKeys) 
-	#endif
-
-	#ifndef GEODE_STATICS_getPracticeMusicFile
-		#define GEODE_STATICS_getPracticeMusicFile
-		GEODE_AS_STATIC_FUNCTION(getPracticeMusicFile) 
-	#endif
-
 	#ifndef GEODE_STATICS_getUGV
 		#define GEODE_STATICS_getUGV
 		GEODE_AS_STATIC_FUNCTION(getUGV) 
@@ -298,16 +183,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getUnlockForAchievement
 		#define GEODE_STATICS_getUnlockForAchievement
 		GEODE_AS_STATIC_FUNCTION(getUnlockForAchievement) 
-	#endif
-
-	#ifndef GEODE_STATICS_groundHasSecondaryColor
-		#define GEODE_STATICS_groundHasSecondaryColor
-		GEODE_AS_STATIC_FUNCTION(groundHasSecondaryColor) 
-	#endif
-
-	#ifndef GEODE_STATICS_iconAndTypeForKey
-		#define GEODE_STATICS_iconAndTypeForKey
-		GEODE_AS_STATIC_FUNCTION(iconAndTypeForKey) 
 	#endif
 
 	#ifndef GEODE_STATICS_iconKey
@@ -325,49 +200,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(isColorUnlocked) 
 	#endif
 
-	#ifndef GEODE_STATICS_isIconLoaded
-		#define GEODE_STATICS_isIconLoaded
-		GEODE_AS_STATIC_FUNCTION(isIconLoaded) 
-	#endif
-
 	#ifndef GEODE_STATICS_isIconUnlocked
 		#define GEODE_STATICS_isIconUnlocked
 		GEODE_AS_STATIC_FUNCTION(isIconUnlocked) 
 	#endif
 
-	#ifndef GEODE_STATICS_itemPurchased
-		#define GEODE_STATICS_itemPurchased
-		GEODE_AS_STATIC_FUNCTION(itemPurchased) 
-	#endif
-
-	#ifndef GEODE_STATICS_joinDiscord
-		#define GEODE_STATICS_joinDiscord
-		GEODE_AS_STATIC_FUNCTION(joinDiscord) 
-	#endif
-
-	#ifndef GEODE_STATICS_joinReddit
-		#define GEODE_STATICS_joinReddit
-		GEODE_AS_STATIC_FUNCTION(joinReddit) 
-	#endif
-
-	#ifndef GEODE_STATICS_levelIsPremium
-		#define GEODE_STATICS_levelIsPremium
-		GEODE_AS_STATIC_FUNCTION(levelIsPremium) 
-	#endif
-
-	#ifndef GEODE_STATICS_likeFacebook
-		#define GEODE_STATICS_likeFacebook
-		GEODE_AS_STATIC_FUNCTION(likeFacebook) 
-	#endif
-
 	#ifndef GEODE_STATICS_loadBackground
 		#define GEODE_STATICS_loadBackground
 		GEODE_AS_STATIC_FUNCTION(loadBackground) 
-	#endif
-
-	#ifndef GEODE_STATICS_loadBackgroundAsync
-		#define GEODE_STATICS_loadBackgroundAsync
-		GEODE_AS_STATIC_FUNCTION(loadBackgroundAsync) 
 	#endif
 
 	#ifndef GEODE_STATICS_loadDpadFromString
@@ -390,11 +230,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(loadGround) 
 	#endif
 
-	#ifndef GEODE_STATICS_loadGroundAsync
-		#define GEODE_STATICS_loadGroundAsync
-		GEODE_AS_STATIC_FUNCTION(loadGroundAsync) 
-	#endif
-
 	#ifndef GEODE_STATICS_loadIcon
 		#define GEODE_STATICS_loadIcon
 		GEODE_AS_STATIC_FUNCTION(loadIcon) 
@@ -410,34 +245,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(loadMiddleground) 
 	#endif
 
-	#ifndef GEODE_STATICS_loadMiddlegroundAsync
-		#define GEODE_STATICS_loadMiddlegroundAsync
-		GEODE_AS_STATIC_FUNCTION(loadMiddlegroundAsync) 
-	#endif
-
-	#ifndef GEODE_STATICS_loadVideoSettings
-		#define GEODE_STATICS_loadVideoSettings
-		GEODE_AS_STATIC_FUNCTION(loadVideoSettings) 
-	#endif
-
-	#ifndef GEODE_STATICS_lockColor
-		#define GEODE_STATICS_lockColor
-		GEODE_AS_STATIC_FUNCTION(lockColor) 
-	#endif
-
-	#ifndef GEODE_STATICS_lockIcon
-		#define GEODE_STATICS_lockIcon
-		GEODE_AS_STATIC_FUNCTION(lockIcon) 
-	#endif
-
 	#ifndef GEODE_STATICS_logLoadedIconInfo
 		#define GEODE_STATICS_logLoadedIconInfo
 		GEODE_AS_STATIC_FUNCTION(logLoadedIconInfo) 
-	#endif
-
-	#ifndef GEODE_STATICS_openEditorGuide
-		#define GEODE_STATICS_openEditorGuide
-		GEODE_AS_STATIC_FUNCTION(openEditorGuide) 
 	#endif
 
 	#ifndef GEODE_STATICS_playMenuMusic
@@ -453,21 +263,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_prepareDPadSettings
 		#define GEODE_STATICS_prepareDPadSettings
 		GEODE_AS_STATIC_FUNCTION(prepareDPadSettings) 
-	#endif
-
-	#ifndef GEODE_STATICS_printGJLog
-		#define GEODE_STATICS_printGJLog
-		GEODE_AS_STATIC_FUNCTION(printGJLog) 
-	#endif
-
-	#ifndef GEODE_STATICS_queueReloadMenu
-		#define GEODE_STATICS_queueReloadMenu
-		GEODE_AS_STATIC_FUNCTION(queueReloadMenu) 
-	#endif
-
-	#ifndef GEODE_STATICS_rateGame
-		#define GEODE_STATICS_rateGame
-		GEODE_AS_STATIC_FUNCTION(rateGame) 
 	#endif
 
 	#ifndef GEODE_STATICS_recountUserStats
@@ -505,16 +300,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(reloadMenu) 
 	#endif
 
-	#ifndef GEODE_STATICS_removeCustomObject
-		#define GEODE_STATICS_removeCustomObject
-		GEODE_AS_STATIC_FUNCTION(removeCustomObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeIconDelegate
-		#define GEODE_STATICS_removeIconDelegate
-		GEODE_AS_STATIC_FUNCTION(removeIconDelegate) 
-	#endif
-
 	#ifndef GEODE_STATICS_reorderKey
 		#define GEODE_STATICS_reorderKey
 		GEODE_AS_STATIC_FUNCTION(reorderKey) 
@@ -535,11 +320,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(resetAchievement) 
 	#endif
 
-	#ifndef GEODE_STATICS_resetAdTimer
-		#define GEODE_STATICS_resetAdTimer
-		GEODE_AS_STATIC_FUNCTION(resetAdTimer) 
-	#endif
-
 	#ifndef GEODE_STATICS_resetAllIcons
 		#define GEODE_STATICS_resetAllIcons
 		GEODE_AS_STATIC_FUNCTION(resetAllIcons) 
@@ -550,24 +330,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(resetCoinUnlocks) 
 	#endif
 
-	#ifndef GEODE_STATICS_resetDPadSettings
-		#define GEODE_STATICS_resetDPadSettings
-		GEODE_AS_STATIC_FUNCTION(resetDPadSettings) 
-	#endif
-
 	#ifndef GEODE_STATICS_resolutionForKey
 		#define GEODE_STATICS_resolutionForKey
 		GEODE_AS_STATIC_FUNCTION(resolutionForKey) 
-	#endif
-
-	#ifndef GEODE_STATICS_resumeAudio
-		#define GEODE_STATICS_resumeAudio
-		GEODE_AS_STATIC_FUNCTION(resumeAudio) 
-	#endif
-
-	#ifndef GEODE_STATICS_resumeAudioDelayed
-		#define GEODE_STATICS_resumeAudioDelayed
-		GEODE_AS_STATIC_FUNCTION(resumeAudioDelayed) 
 	#endif
 
 	#ifndef GEODE_STATICS_returnToLastScene
@@ -610,19 +375,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(setGameVariable) 
 	#endif
 
-	#ifndef GEODE_STATICS_setHasRatingPower
-		#define GEODE_STATICS_setHasRatingPower
-		GEODE_AS_STATIC_FUNCTION(setHasRatingPower) 
-	#endif
-
 	#ifndef GEODE_STATICS_setIntGameVariable
 		#define GEODE_STATICS_setIntGameVariable
 		GEODE_AS_STATIC_FUNCTION(setIntGameVariable) 
-	#endif
-
-	#ifndef GEODE_STATICS_setPlayerUserID
-		#define GEODE_STATICS_setPlayerUserID
-		GEODE_AS_STATIC_FUNCTION(setPlayerUserID) 
 	#endif
 
 	#ifndef GEODE_STATICS_setUGV
@@ -640,59 +395,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(sheetNameForIcon) 
 	#endif
 
-	#ifndef GEODE_STATICS_shortenAdTimer
-		#define GEODE_STATICS_shortenAdTimer
-		GEODE_AS_STATIC_FUNCTION(shortenAdTimer) 
-	#endif
-
-	#ifndef GEODE_STATICS_shouldShowInterstitial
-		#define GEODE_STATICS_shouldShowInterstitial
-		GEODE_AS_STATIC_FUNCTION(shouldShowInterstitial) 
-	#endif
-
-	#ifndef GEODE_STATICS_showInterstitial
-		#define GEODE_STATICS_showInterstitial
-		GEODE_AS_STATIC_FUNCTION(showInterstitial) 
-	#endif
-
-	#ifndef GEODE_STATICS_showInterstitialForced
-		#define GEODE_STATICS_showInterstitialForced
-		GEODE_AS_STATIC_FUNCTION(showInterstitialForced) 
-	#endif
-
-	#ifndef GEODE_STATICS_showMainMenuAd
-		#define GEODE_STATICS_showMainMenuAd
-		GEODE_AS_STATIC_FUNCTION(showMainMenuAd) 
-	#endif
-
-	#ifndef GEODE_STATICS_startUpdate
-		#define GEODE_STATICS_startUpdate
-		GEODE_AS_STATIC_FUNCTION(startUpdate) 
-	#endif
-
 	#ifndef GEODE_STATICS_stringForCustomObject
 		#define GEODE_STATICS_stringForCustomObject
 		GEODE_AS_STATIC_FUNCTION(stringForCustomObject) 
 	#endif
 
-	#ifndef GEODE_STATICS_subYouTube
-		#define GEODE_STATICS_subYouTube
-		GEODE_AS_STATIC_FUNCTION(subYouTube) 
-	#endif
-
 	#ifndef GEODE_STATICS_switchCustomObjects
 		#define GEODE_STATICS_switchCustomObjects
 		GEODE_AS_STATIC_FUNCTION(switchCustomObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_switchScreenMode
-		#define GEODE_STATICS_switchScreenMode
-		GEODE_AS_STATIC_FUNCTION(switchScreenMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_syncPlatformAchievements
-		#define GEODE_STATICS_syncPlatformAchievements
-		GEODE_AS_STATIC_FUNCTION(syncPlatformAchievements) 
 	#endif
 
 	#ifndef GEODE_STATICS_toggleGameVariable
@@ -705,16 +415,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(tryCacheAd) 
 	#endif
 
-	#ifndef GEODE_STATICS_tryShowInterstitial
-		#define GEODE_STATICS_tryShowInterstitial
-		GEODE_AS_STATIC_FUNCTION(tryShowInterstitial) 
-	#endif
-
-	#ifndef GEODE_STATICS_unloadBackground
-		#define GEODE_STATICS_unloadBackground
-		GEODE_AS_STATIC_FUNCTION(unloadBackground) 
-	#endif
-
 	#ifndef GEODE_STATICS_unloadIcon
 		#define GEODE_STATICS_unloadIcon
 		GEODE_AS_STATIC_FUNCTION(unloadIcon) 
@@ -723,21 +423,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_unloadIcons
 		#define GEODE_STATICS_unloadIcons
 		GEODE_AS_STATIC_FUNCTION(unloadIcons) 
-	#endif
-
-	#ifndef GEODE_STATICS_unlockColor
-		#define GEODE_STATICS_unlockColor
-		GEODE_AS_STATIC_FUNCTION(unlockColor) 
-	#endif
-
-	#ifndef GEODE_STATICS_unlockedPremium
-		#define GEODE_STATICS_unlockedPremium
-		GEODE_AS_STATIC_FUNCTION(unlockedPremium) 
-	#endif
-
-	#ifndef GEODE_STATICS_unlockIcon
-		#define GEODE_STATICS_unlockIcon
-		GEODE_AS_STATIC_FUNCTION(unlockIcon) 
 	#endif
 
 	#ifndef GEODE_STATICS_unlockTypeToIconType
@@ -750,39 +435,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateCustomFPS) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateMusic
-		#define GEODE_STATICS_updateMusic
-		GEODE_AS_STATIC_FUNCTION(updateMusic) 
-	#endif
-
-	#ifndef GEODE_STATICS_verifyAchievementUnlocks
-		#define GEODE_STATICS_verifyAchievementUnlocks
-		GEODE_AS_STATIC_FUNCTION(verifyAchievementUnlocks) 
-	#endif
-
 	#ifndef GEODE_STATICS_verifyCoinUnlocks
 		#define GEODE_STATICS_verifyCoinUnlocks
 		GEODE_AS_STATIC_FUNCTION(verifyCoinUnlocks) 
-	#endif
-
-	#ifndef GEODE_STATICS_verifyStarUnlocks
-		#define GEODE_STATICS_verifyStarUnlocks
-		GEODE_AS_STATIC_FUNCTION(verifyStarUnlocks) 
-	#endif
-
-	#ifndef GEODE_STATICS_verifySyncedCoins
-		#define GEODE_STATICS_verifySyncedCoins
-		GEODE_AS_STATIC_FUNCTION(verifySyncedCoins) 
-	#endif
-
-	#ifndef GEODE_STATICS_videoAdHidden
-		#define GEODE_STATICS_videoAdHidden
-		GEODE_AS_STATIC_FUNCTION(videoAdHidden) 
-	#endif
-
-	#ifndef GEODE_STATICS_videoAdShowed
-		#define GEODE_STATICS_videoAdShowed
-		GEODE_AS_STATIC_FUNCTION(videoAdShowed) 
 	#endif
 
     
@@ -929,11 +584,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_defaultFrameForAnimation
 		#define GEODE_CONCEPT_CHECK_defaultFrameForAnimation
 		GEODE_CONCEPT_FUNCTION_CHECK(defaultFrameForAnimation) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_defaultYOffsetForBG2
-		#define GEODE_CONCEPT_CHECK_defaultYOffsetForBG2
-		GEODE_CONCEPT_FUNCTION_CHECK(defaultYOffsetForBG2) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_didExitPlayscene
@@ -1796,70 +1446,69 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, get, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x178480, Default, GameManager, sharedState, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x186c40, Thiscall, GameManager, update, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1784d0, Thiscall, GameManager, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x186050, Thiscall, GameManager, encodeDataTo, DS_Dictionary*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x183b40, Thiscall, GameManager, dataLoaded, DS_Dictionary*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x185750, Thiscall, GameManager, firstLoad, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17b4a0, Default, GameManager, sharedState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x189bc0, Thiscall, GameManager, update, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17b4f0, Thiscall, GameManager, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x188fb0, Thiscall, GameManager, encodeDataTo, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x186a90, Thiscall, GameManager, dataLoaded, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1886b0, Thiscall, GameManager, firstLoad, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, accountStatusChanged, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17ea70, Thiscall, GameManager, activeIconForType, IconType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, addCustomAnimationFrame, int, int, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, addDuplicateLastFrame, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, addGameAnimation, int, int, float, gd::string, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x181a90, Thiscall, GameManager, activeIconForType, IconType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1aeb60, Thiscall, GameManager, addCustomAnimationFrame, int, int, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, addDuplicateLastFrame, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ae9f0, Thiscall, GameManager, addGameAnimation, int, int, float, gd::string, gd::string, int)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, addIconDelegate, cocos2d::CCObject*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1807d0, Thiscall, GameManager, addNewCustomObject, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, addToGJLog, cocos2d::CCString*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, applicationDidEnterBackground, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x186cd0, Thiscall, GameManager, applicationWillEnterForeground, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, calculateBaseKeyForIcons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1837f0, Thiscall, GameManager, addNewCustomObject, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, addToGJLog, cocos2d::CCString*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, applicationDidEnterBackground, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x189c50, Thiscall, GameManager, applicationWillEnterForeground, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, calculateBaseKeyForIcons, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, canShowRewardedVideo, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, checkSteamAchievementUnlock, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1811b0, Thiscall, GameManager, checkUsedIcons, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, claimItemsResponse, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, clearGJLog, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17e330, Thiscall, GameManager, colorForIdx, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, colorForPos, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x179790, Thiscall, GameManager, colorKey, int, UnlockType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17a1d0, Thiscall, GameManager, completedAchievement, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17ebe0, Thiscall, GameManager, countForType, IconType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, defaultFrameForAnimation, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, defaultYOffsetForBG2, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17e1c0, Thiscall, GameManager, checkSteamAchievementUnlock, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1841d0, Thiscall, GameManager, checkUsedIcons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, claimItemsResponse, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, clearGJLog, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x181350, Thiscall, GameManager, colorForIdx, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, colorForPos, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17c7b0, Thiscall, GameManager, colorKey, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17d1f0, Thiscall, GameManager, completedAchievement, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x181c00, Thiscall, GameManager, countForType, IconType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, defaultFrameForAnimation, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, didExitPlayscene, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, doQuickSave, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x183540, Thiscall, GameManager, dpadConfigToString, UIButtonConfig&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, eventUnlockFeature, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x178a90, Thiscall, GameManager, fadeInMenuMusic, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x178b80, Thiscall, GameManager, fadeInMusic, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, finishedLoadingBGAsync, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, finishedLoadingGAsync, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, finishedLoadingGAsync1, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, finishedLoadingGAsync2, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, doQuickSave, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x186490, Thiscall, GameManager, dpadConfigToString, UIButtonConfig&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, eventUnlockFeature, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17bab0, Thiscall, GameManager, fadeInMenuMusic, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17bba0, Thiscall, GameManager, fadeInMusic, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x182950, Thiscall, GameManager, finishedLoadingBGAsync, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x182df0, Thiscall, GameManager, finishedLoadingGAsync, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x182d70, Thiscall, GameManager, finishedLoadingGAsync1, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x182db0, Thiscall, GameManager, finishedLoadingGAsync2, cocos2d::CCObject*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, finishedLoadingIconAsync, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, finishedLoadingMGAsync, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, finishedLoadingMGAsync1, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, finishedLoadingMGAsync2, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, followTwitch, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, followTwitter, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, framesForAnimation, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, frameTimeForAnimation, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, generateSecretNumber, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x182b90, Thiscall, GameManager, finishedLoadingMGAsync, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x182b10, Thiscall, GameManager, finishedLoadingMGAsync1, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x182b50, Thiscall, GameManager, finishedLoadingMGAsync2, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, followTwitch, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, followTwitter, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, framesForAnimation, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, frameTimeForAnimation, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x185cf0, Thiscall, GameManager, generateSecretNumber, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getBGTexture, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getEditorLayer, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, getFontFile, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, getFontTexture, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getFontFile, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getFontTexture, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getGameLayer, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1800f0, Thiscall, GameManager, getGameVariable, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x183110, Thiscall, GameManager, getGameVariable, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getGameVariableDefault, const char*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, getGTexture, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getGTexture, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getIconRequestID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1806f0, Thiscall, GameManager, getIntGameVariable, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x183710, Thiscall, GameManager, getIntGameVariable, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getIntGameVariableDefault, const char*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x178700, Thiscall, GameManager, getMenuMusicFile, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, getMGTexture, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, getNextUniqueObjectKey, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, getNextUsedKey, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, getOrderedCustomObjectKeys, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17b720, Thiscall, GameManager, getMenuMusicFile, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getMGTexture, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getNextUniqueObjectKey, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getNextUsedKey, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getOrderedCustomObjectKeys, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getPlayerBall, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getPlayerBird, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getPlayerColor, )
@@ -1877,76 +1526,76 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getPlayerStreak, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getPlayerSwing, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getPlayLayer, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, getPracticeMusicFile, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x180480, Thiscall, GameManager, getUGV, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x179980, Thiscall, GameManager, getUnlockForAchievement, gd::string, int&, UnlockType&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, groundHasSecondaryColor, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, iconAndTypeForKey, int, int&, int&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1792b0, Thiscall, GameManager, iconKey, int, IconType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1795c0, Thiscall, GameManager, iconTypeToUnlockType, IconType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1798c0, Thiscall, GameManager, isColorUnlocked, int, UnlockType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, isIconLoaded, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1794e0, Thiscall, GameManager, isIconUnlocked, int, IconType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, itemPurchased, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, joinDiscord, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, joinReddit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, getPracticeMusicFile, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1834a0, Thiscall, GameManager, getUGV, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17c9a0, Thiscall, GameManager, getUnlockForAchievement, gd::string, int&, UnlockType&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, groundHasSecondaryColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, iconAndTypeForKey, int, int&, int&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17c2d0, Thiscall, GameManager, iconKey, int, IconType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17c5e0, Thiscall, GameManager, iconTypeToUnlockType, IconType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17c8e0, Thiscall, GameManager, isColorUnlocked, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, isIconLoaded, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17c500, Thiscall, GameManager, isIconUnlocked, int, IconType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, itemPurchased, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, joinDiscord, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, joinReddit, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, keyForIcon, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, levelIsPremium, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, likeFacebook, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17f880, Thiscall, GameManager, loadBackground, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, loadBackgroundAsync, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, levelIsPremium, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, likeFacebook, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1828a0, Thiscall, GameManager, loadBackground, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, loadBackgroundAsync, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, loadDeathEffect, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, loadDpadFromString, UIButtonConfig&, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, loadDPadLayout, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, loadFont, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17fc30, Thiscall, GameManager, loadGround, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, loadGroundAsync, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17ecf0, Thiscall, GameManager, loadIcon, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x186780, Thiscall, GameManager, loadDpadFromString, UIButtonConfig&, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1861e0, Thiscall, GameManager, loadDPadLayout, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1827f0, Thiscall, GameManager, loadFont, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x182c50, Thiscall, GameManager, loadGround, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, loadGroundAsync, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x181d10, Thiscall, GameManager, loadIcon, int, int, int)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, loadIconAsync, int, int, int, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17f9e0, Thiscall, GameManager, loadMiddleground, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, loadMiddlegroundAsync, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, loadVideoSettings, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, lockColor, int, UnlockType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, lockIcon, int, IconType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x182a00, Thiscall, GameManager, loadMiddleground, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, loadMiddlegroundAsync, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, loadVideoSettings, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, lockColor, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, lockIcon, int, IconType)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, logLoadedIconInfo, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, openEditorGuide, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x178810, Thiscall, GameManager, playMenuMusic, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x178ca0, Thiscall, GameManager, playSFXTrigger, SFXTriggerGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x183aa0, Thiscall, GameManager, prepareDPadSettings, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, printGJLog, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, queueReloadMenu, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, rateGame, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x181ba0, Thiscall, GameManager, recountUserStats, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x187490, Thiscall, GameManager, reloadAll, bool, bool, bool, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, openEditorGuide, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17b830, Thiscall, GameManager, playMenuMusic, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17bcc0, Thiscall, GameManager, playSFXTrigger, SFXTriggerGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1869f0, Thiscall, GameManager, prepareDPadSettings, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, printGJLog, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, queueReloadMenu, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, rateGame, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x184bc0, Thiscall, GameManager, recountUserStats, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, reloadAll, bool, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x187540, Thiscall, GameManager, reloadAllStep2, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, reloadAllStep3, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, reloadAllStep4, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x187850, Thiscall, GameManager, reloadAllStep5, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x187460, Thiscall, GameManager, reloadMenu, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, removeCustomObject, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, removeIconDelegate, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, reorderKey, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17afd0, Thiscall, GameManager, reportAchievementWithID, char const*, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17a5f0, Thiscall, GameManager, reportPercentageForLevel, int, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17a390, Thiscall, GameManager, resetAchievement, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, resetAdTimer, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, resetAllIcons, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, resetCoinUnlocks, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, resetDPadSettings, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x187890, Thiscall, GameManager, resolutionForKey, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, resumeAudio, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, resumeAudioDelayed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x187030, Thiscall, GameManager, returnToLastScene, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18a410, Thiscall, GameManager, reloadAll, bool, bool, bool, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18a4c0, Thiscall, GameManager, reloadAllStep2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18a620, Thiscall, GameManager, reloadAllStep3, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18a730, Thiscall, GameManager, reloadAllStep4, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18a7d0, Thiscall, GameManager, reloadAllStep5, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18a3e0, Thiscall, GameManager, reloadMenu, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, removeCustomObject, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, removeIconDelegate, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x183ac0, Thiscall, GameManager, reorderKey, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17dff0, Thiscall, GameManager, reportAchievementWithID, char const*, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17d610, Thiscall, GameManager, reportPercentageForLevel, int, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17d3b0, Thiscall, GameManager, resetAchievement, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, resetAdTimer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x183ea0, Thiscall, GameManager, resetAllIcons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x180b70, Thiscall, GameManager, resetCoinUnlocks, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, resetDPadSettings, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18a810, Thiscall, GameManager, resolutionForKey, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, resumeAudio, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, resumeAudioDelayed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x189fb0, Thiscall, GameManager, returnToLastScene, GJGameLevel*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, rewardedVideoAdFinished, int)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, rewardedVideoHidden, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, rewardedVideoHiddenDelayed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1873e0, Thiscall, GameManager, safePopScene, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18a360, Thiscall, GameManager, safePopScene, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, saveAdTimer, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, saveDPadLayout, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17fe90, Thiscall, GameManager, setGameVariable, char const*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, setHasRatingPower, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1805f0, Thiscall, GameManager, setIntGameVariable, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x185e20, Thiscall, GameManager, saveDPadLayout, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x182eb0, Thiscall, GameManager, setGameVariable, char const*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, setHasRatingPower, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x183610, Thiscall, GameManager, setIntGameVariable, char const*, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, setPlayerBall, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, setPlayerBird, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, setPlayerColor, int)
@@ -1963,39 +1612,39 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, setPlayerSpider, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, setPlayerStreak, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, setPlayerSwing, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, setPlayerUserID, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x180320, Thiscall, GameManager, setUGV, char const*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a8870, Thiscall, GameManager, setupGameAnimations, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17f470, Thiscall, GameManager, sheetNameForIcon, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, shortenAdTimer, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, shouldShowInterstitial, int, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, showInterstitial, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, showInterstitialForced, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, showMainMenuAd, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, startUpdate, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x180950, Thiscall, GameManager, stringForCustomObject, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, subYouTube, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, switchCustomObjects, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, switchScreenMode, bool, bool, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, syncPlatformAchievements, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x180270, Thiscall, GameManager, toggleGameVariable, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, setPlayerUserID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x183340, Thiscall, GameManager, setUGV, char const*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1ab7f0, Thiscall, GameManager, setupGameAnimations, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x182490, Thiscall, GameManager, sheetNameForIcon, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, shortenAdTimer, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, shouldShowInterstitial, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, showInterstitial, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, showInterstitialForced, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, showMainMenuAd, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, startUpdate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x183970, Thiscall, GameManager, stringForCustomObject, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, subYouTube, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x183bc0, Thiscall, GameManager, switchCustomObjects, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, switchScreenMode, bool, bool, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, syncPlatformAchievements, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x183290, Thiscall, GameManager, toggleGameVariable, char const*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, tryCacheAd, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, tryShowInterstitial, int, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, unloadBackground, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17f050, Thiscall, GameManager, unloadIcon, int, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17f310, Thiscall, GameManager, unloadIcons, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, unlockColor, int, UnlockType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, unlockedPremium, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, unlockIcon, int, IconType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1796e0, Thiscall, GameManager, unlockTypeToIconType, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x187cc0, Thiscall, GameManager, updateCustomFPS, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, updateMusic, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, verifyAchievementUnlocks, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17b580, Thiscall, GameManager, verifyCoinUnlocks, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, verifyStarUnlocks, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, verifySyncedCoins, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, videoAdHidden, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameManager, videoAdShowed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, tryShowInterstitial, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, unloadBackground, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x182070, Thiscall, GameManager, unloadIcon, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x182330, Thiscall, GameManager, unloadIcons, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, unlockColor, int, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, unlockedPremium, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, unlockIcon, int, IconType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17c700, Thiscall, GameManager, unlockTypeToIconType, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18ac40, Thiscall, GameManager, updateCustomFPS, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, updateMusic, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, verifyAchievementUnlocks, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x17e5a0, Thiscall, GameManager, verifyCoinUnlocks, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, verifyStarUnlocks, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, verifySyncedCoins, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, videoAdHidden, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameManager, videoAdShowed, )
 		}
 	};
 }

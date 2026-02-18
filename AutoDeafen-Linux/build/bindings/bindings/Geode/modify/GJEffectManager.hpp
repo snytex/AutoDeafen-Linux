@@ -15,31 +15,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_activeColorForIndex
-		#define GEODE_STATICS_activeColorForIndex
-		GEODE_AS_STATIC_FUNCTION(activeColorForIndex) 
-	#endif
-
-	#ifndef GEODE_STATICS_activeOpacityForIndex
-		#define GEODE_STATICS_activeOpacityForIndex
-		GEODE_AS_STATIC_FUNCTION(activeOpacityForIndex) 
-	#endif
-
-	#ifndef GEODE_STATICS_addAllInheritedColorActions
-		#define GEODE_STATICS_addAllInheritedColorActions
-		GEODE_AS_STATIC_FUNCTION(addAllInheritedColorActions) 
-	#endif
-
-	#ifndef GEODE_STATICS_addCountToItem
-		#define GEODE_STATICS_addCountToItem
-		GEODE_AS_STATIC_FUNCTION(addCountToItem) 
-	#endif
-
-	#ifndef GEODE_STATICS_addMoveCalculation
-		#define GEODE_STATICS_addMoveCalculation
-		GEODE_AS_STATIC_FUNCTION(addMoveCalculation) 
-	#endif
-
 	#ifndef GEODE_STATICS_calculateBaseActiveColors
 		#define GEODE_STATICS_calculateBaseActiveColors
 		GEODE_AS_STATIC_FUNCTION(calculateBaseActiveColors) 
@@ -55,29 +30,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(calculateLightBGColor) 
 	#endif
 
-	#ifndef GEODE_STATICS_checkCollision
-		#define GEODE_STATICS_checkCollision
-		GEODE_AS_STATIC_FUNCTION(checkCollision) 
-	#endif
-
-	#ifndef GEODE_STATICS_colorActionChanged
-		#define GEODE_STATICS_colorActionChanged
-		GEODE_AS_STATIC_FUNCTION(colorActionChanged) 
-	#endif
-
-	#ifndef GEODE_STATICS_colorForEffect
-		#define GEODE_STATICS_colorForEffect
-		GEODE_AS_STATIC_FUNCTION(colorForEffect) 
-	#endif
-
 	#ifndef GEODE_STATICS_colorForGroupID
 		#define GEODE_STATICS_colorForGroupID
 		GEODE_AS_STATIC_FUNCTION(colorForGroupID) 
-	#endif
-
-	#ifndef GEODE_STATICS_colorForIndex
-		#define GEODE_STATICS_colorForIndex
-		GEODE_AS_STATIC_FUNCTION(colorForIndex) 
 	#endif
 
 	#ifndef GEODE_STATICS_colorForPulseEffect
@@ -125,19 +80,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createRotateCommand) 
 	#endif
 
-	#ifndef GEODE_STATICS_createTransformCommand
-		#define GEODE_STATICS_createTransformCommand
-		GEODE_AS_STATIC_FUNCTION(createTransformCommand) 
-	#endif
-
 	#ifndef GEODE_STATICS_getAllColorActions
 		#define GEODE_STATICS_getAllColorActions
 		GEODE_AS_STATIC_FUNCTION(getAllColorActions) 
-	#endif
-
-	#ifndef GEODE_STATICS_getAllColorSprites
-		#define GEODE_STATICS_getAllColorSprites
-		GEODE_AS_STATIC_FUNCTION(getAllColorSprites) 
 	#endif
 
 	#ifndef GEODE_STATICS_getColorAction
@@ -155,11 +100,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getLoadedMoveOffset) 
 	#endif
 
-	#ifndef GEODE_STATICS_getMixedColor
-		#define GEODE_STATICS_getMixedColor
-		GEODE_AS_STATIC_FUNCTION(getMixedColor) 
-	#endif
-
 	#ifndef GEODE_STATICS_getMoveCommandNode
 		#define GEODE_STATICS_getMoveCommandNode
 		GEODE_AS_STATIC_FUNCTION(getMoveCommandNode) 
@@ -170,14 +110,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getMoveCommandObject) 
 	#endif
 
-	#ifndef GEODE_STATICS_getOpacityActionForGroup
-		#define GEODE_STATICS_getOpacityActionForGroup
-		GEODE_AS_STATIC_FUNCTION(getOpacityActionForGroup) 
+	#ifndef GEODE_STATICS_getPersistentState
+		#define GEODE_STATICS_getPersistentState
+		GEODE_AS_STATIC_FUNCTION(getPersistentState) 
 	#endif
 
-	#ifndef GEODE_STATICS_getSaveString
-		#define GEODE_STATICS_getSaveString
-		GEODE_AS_STATIC_FUNCTION(getSaveString) 
+	#ifndef GEODE_STATICS_getPersistentStateString
+		#define GEODE_STATICS_getPersistentStateString
+		GEODE_AS_STATIC_FUNCTION(getPersistentStateString) 
 	#endif
 
 	#ifndef GEODE_STATICS_getTempGroupCommand
@@ -190,49 +130,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(handleObjectCollision) 
 	#endif
 
-	#ifndef GEODE_STATICS_hasActiveDualTouch
-		#define GEODE_STATICS_hasActiveDualTouch
-		GEODE_AS_STATIC_FUNCTION(hasActiveDualTouch) 
-	#endif
-
-	#ifndef GEODE_STATICS_hasBeenTriggered
-		#define GEODE_STATICS_hasBeenTriggered
-		GEODE_AS_STATIC_FUNCTION(hasBeenTriggered) 
-	#endif
-
-	#ifndef GEODE_STATICS_hasPulseEffectForGroupID
-		#define GEODE_STATICS_hasPulseEffectForGroupID
-		GEODE_AS_STATIC_FUNCTION(hasPulseEffectForGroupID) 
-	#endif
-
-	#ifndef GEODE_STATICS_isGroupEnabled
-		#define GEODE_STATICS_isGroupEnabled
-		GEODE_AS_STATIC_FUNCTION(isGroupEnabled) 
-	#endif
-
-	#ifndef GEODE_STATICS_keyForGroupIDColor
-		#define GEODE_STATICS_keyForGroupIDColor
-		GEODE_AS_STATIC_FUNCTION(keyForGroupIDColor) 
-	#endif
-
 	#ifndef GEODE_STATICS_loadFromState
 		#define GEODE_STATICS_loadFromState
 		GEODE_AS_STATIC_FUNCTION(loadFromState) 
 	#endif
 
-	#ifndef GEODE_STATICS_objectsCollided
-		#define GEODE_STATICS_objectsCollided
-		GEODE_AS_STATIC_FUNCTION(objectsCollided) 
-	#endif
-
-	#ifndef GEODE_STATICS_onRewardedVideo
-		#define GEODE_STATICS_onRewardedVideo
-		GEODE_AS_STATIC_FUNCTION(onRewardedVideo) 
-	#endif
-
-	#ifndef GEODE_STATICS_opacityForIndex
-		#define GEODE_STATICS_opacityForIndex
-		GEODE_AS_STATIC_FUNCTION(opacityForIndex) 
+	#ifndef GEODE_STATICS_loadPersistentStateString
+		#define GEODE_STATICS_loadPersistentStateString
+		GEODE_AS_STATIC_FUNCTION(loadPersistentStateString) 
 	#endif
 
 	#ifndef GEODE_STATICS_opacityModForGroup
@@ -240,19 +145,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(opacityModForGroup) 
 	#endif
 
-	#ifndef GEODE_STATICS_pauseTimer
-		#define GEODE_STATICS_pauseTimer
-		GEODE_AS_STATIC_FUNCTION(pauseTimer) 
-	#endif
-
 	#ifndef GEODE_STATICS_playerButton
 		#define GEODE_STATICS_playerButton
 		GEODE_AS_STATIC_FUNCTION(playerButton) 
-	#endif
-
-	#ifndef GEODE_STATICS_playerDied
-		#define GEODE_STATICS_playerDied
-		GEODE_AS_STATIC_FUNCTION(playerDied) 
 	#endif
 
 	#ifndef GEODE_STATICS_postCollisionCheck
@@ -263,11 +158,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_postMoveActions
 		#define GEODE_STATICS_postMoveActions
 		GEODE_AS_STATIC_FUNCTION(postMoveActions) 
-	#endif
-
-	#ifndef GEODE_STATICS_preCollisionCheck
-		#define GEODE_STATICS_preCollisionCheck
-		GEODE_AS_STATIC_FUNCTION(preCollisionCheck) 
 	#endif
 
 	#ifndef GEODE_STATICS_prepareMoveActions
@@ -290,16 +180,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(processInheritedColors) 
 	#endif
 
-	#ifndef GEODE_STATICS_processMoveCalculations
-		#define GEODE_STATICS_processMoveCalculations
-		GEODE_AS_STATIC_FUNCTION(processMoveCalculations) 
-	#endif
-
-	#ifndef GEODE_STATICS_processPulseActions
-		#define GEODE_STATICS_processPulseActions
-		GEODE_AS_STATIC_FUNCTION(processPulseActions) 
-	#endif
-
 	#ifndef GEODE_STATICS_registerCollisionTrigger
 		#define GEODE_STATICS_registerCollisionTrigger
 		GEODE_AS_STATIC_FUNCTION(registerCollisionTrigger) 
@@ -308,26 +188,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_registerRotationCommand
 		#define GEODE_STATICS_registerRotationCommand
 		GEODE_AS_STATIC_FUNCTION(registerRotationCommand) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeAllPulseActions
-		#define GEODE_STATICS_removeAllPulseActions
-		GEODE_AS_STATIC_FUNCTION(removeAllPulseActions) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeColorAction
-		#define GEODE_STATICS_removeColorAction
-		GEODE_AS_STATIC_FUNCTION(removeColorAction) 
-	#endif
-
-	#ifndef GEODE_STATICS_removePersistentFromAllItems
-		#define GEODE_STATICS_removePersistentFromAllItems
-		GEODE_AS_STATIC_FUNCTION(removePersistentFromAllItems) 
-	#endif
-
-	#ifndef GEODE_STATICS_removePersistentFromAllTimers
-		#define GEODE_STATICS_removePersistentFromAllTimers
-		GEODE_AS_STATIC_FUNCTION(removePersistentFromAllTimers) 
 	#endif
 
 	#ifndef GEODE_STATICS_removeTriggeredID
@@ -345,39 +205,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(resetEffects) 
 	#endif
 
-	#ifndef GEODE_STATICS_resetMoveActions
-		#define GEODE_STATICS_resetMoveActions
-		GEODE_AS_STATIC_FUNCTION(resetMoveActions) 
-	#endif
-
 	#ifndef GEODE_STATICS_resetTempGroupCommands
 		#define GEODE_STATICS_resetTempGroupCommands
 		GEODE_AS_STATIC_FUNCTION(resetTempGroupCommands) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetToggledGroups
-		#define GEODE_STATICS_resetToggledGroups
-		GEODE_AS_STATIC_FUNCTION(resetToggledGroups) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetTriggeredIDs
-		#define GEODE_STATICS_resetTriggeredIDs
-		GEODE_AS_STATIC_FUNCTION(resetTriggeredIDs) 
-	#endif
-
-	#ifndef GEODE_STATICS_resumeTimer
-		#define GEODE_STATICS_resumeTimer
-		GEODE_AS_STATIC_FUNCTION(resumeTimer) 
-	#endif
-
-	#ifndef GEODE_STATICS_runCountTrigger
-		#define GEODE_STATICS_runCountTrigger
-		GEODE_AS_STATIC_FUNCTION(runCountTrigger) 
-	#endif
-
-	#ifndef GEODE_STATICS_runDeathTrigger
-		#define GEODE_STATICS_runDeathTrigger
-		GEODE_AS_STATIC_FUNCTION(runDeathTrigger) 
 	#endif
 
 	#ifndef GEODE_STATICS_runOpacityActionOnGroup
@@ -390,21 +220,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(runPulseEffect) 
 	#endif
 
-	#ifndef GEODE_STATICS_runTimerTrigger
-		#define GEODE_STATICS_runTimerTrigger
-		GEODE_AS_STATIC_FUNCTION(runTimerTrigger) 
-	#endif
-
-	#ifndef GEODE_STATICS_runTouchTriggerCommand
-		#define GEODE_STATICS_runTouchTriggerCommand
-		GEODE_AS_STATIC_FUNCTION(runTouchTriggerCommand) 
-	#endif
-
-	#ifndef GEODE_STATICS_saveCompletedMove
-		#define GEODE_STATICS_saveCompletedMove
-		GEODE_AS_STATIC_FUNCTION(saveCompletedMove) 
-	#endif
-
 	#ifndef GEODE_STATICS_saveToState
 		#define GEODE_STATICS_saveToState
 		GEODE_AS_STATIC_FUNCTION(saveToState) 
@@ -415,29 +230,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(setColorAction) 
 	#endif
 
-	#ifndef GEODE_STATICS_setFollowing
-		#define GEODE_STATICS_setFollowing
-		GEODE_AS_STATIC_FUNCTION(setFollowing) 
-	#endif
-
 	#ifndef GEODE_STATICS_setupFromString
 		#define GEODE_STATICS_setupFromString
 		GEODE_AS_STATIC_FUNCTION(setupFromString) 
 	#endif
 
-	#ifndef GEODE_STATICS_shouldBlend
-		#define GEODE_STATICS_shouldBlend
-		GEODE_AS_STATIC_FUNCTION(shouldBlend) 
-	#endif
-
 	#ifndef GEODE_STATICS_spawnGroup
 		#define GEODE_STATICS_spawnGroup
 		GEODE_AS_STATIC_FUNCTION(spawnGroup) 
-	#endif
-
-	#ifndef GEODE_STATICS_spawnObject
-		#define GEODE_STATICS_spawnObject
-		GEODE_AS_STATIC_FUNCTION(spawnObject) 
 	#endif
 
 	#ifndef GEODE_STATICS_startTimer
@@ -460,49 +260,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(timerExists) 
 	#endif
 
-	#ifndef GEODE_STATICS_toggleGroup
-		#define GEODE_STATICS_toggleGroup
-		GEODE_AS_STATIC_FUNCTION(toggleGroup) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleItemPersistent
-		#define GEODE_STATICS_toggleItemPersistent
-		GEODE_AS_STATIC_FUNCTION(toggleItemPersistent) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleTimerPersistent
-		#define GEODE_STATICS_toggleTimerPersistent
-		GEODE_AS_STATIC_FUNCTION(toggleTimerPersistent) 
-	#endif
-
 	#ifndef GEODE_STATICS_transferPersistentItems
 		#define GEODE_STATICS_transferPersistentItems
 		GEODE_AS_STATIC_FUNCTION(transferPersistentItems) 
-	#endif
-
-	#ifndef GEODE_STATICS_traverseInheritanceChain
-		#define GEODE_STATICS_traverseInheritanceChain
-		GEODE_AS_STATIC_FUNCTION(traverseInheritanceChain) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateActiveOpacityEffects
-		#define GEODE_STATICS_updateActiveOpacityEffects
-		GEODE_AS_STATIC_FUNCTION(updateActiveOpacityEffects) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateColorAction
-		#define GEODE_STATICS_updateColorAction
-		GEODE_AS_STATIC_FUNCTION(updateColorAction) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateColorEffects
-		#define GEODE_STATICS_updateColorEffects
-		GEODE_AS_STATIC_FUNCTION(updateColorEffects) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateColors
-		#define GEODE_STATICS_updateColors
-		GEODE_AS_STATIC_FUNCTION(updateColors) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateCountForItem
@@ -513,16 +273,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateEffects
 		#define GEODE_STATICS_updateEffects
 		GEODE_AS_STATIC_FUNCTION(updateEffects) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateOpacityAction
-		#define GEODE_STATICS_updateOpacityAction
-		GEODE_AS_STATIC_FUNCTION(updateOpacityAction) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateOpacityEffects
-		#define GEODE_STATICS_updateOpacityEffects
-		GEODE_AS_STATIC_FUNCTION(updateOpacityEffects) 
 	#endif
 
 	#ifndef GEODE_STATICS_updatePulseEffects
@@ -545,11 +295,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateTimers) 
 	#endif
 
-	#ifndef GEODE_STATICS_wasFollowing
-		#define GEODE_STATICS_wasFollowing
-		GEODE_AS_STATIC_FUNCTION(wasFollowing) 
-	#endif
-
 	#ifndef GEODE_STATICS_wouldCreateLoop
 		#define GEODE_STATICS_wouldCreateLoop
 		GEODE_AS_STATIC_FUNCTION(wouldCreateLoop) 
@@ -559,6 +304,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getMixedColor
+		#define GEODE_CONCEPT_CHECK_getMixedColor
+		GEODE_CONCEPT_FUNCTION_CHECK(getMixedColor) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_init
@@ -711,11 +461,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(getLoadedMoveOffset) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_getMixedColor
-		#define GEODE_CONCEPT_CHECK_getMixedColor
-		GEODE_CONCEPT_FUNCTION_CHECK(getMixedColor) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_getMoveCommandNode
 		#define GEODE_CONCEPT_CHECK_getMoveCommandNode
 		GEODE_CONCEPT_FUNCTION_CHECK(getMoveCommandNode) 
@@ -729,6 +474,16 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_getOpacityActionForGroup
 		#define GEODE_CONCEPT_CHECK_getOpacityActionForGroup
 		GEODE_CONCEPT_FUNCTION_CHECK(getOpacityActionForGroup) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getPersistentState
+		#define GEODE_CONCEPT_CHECK_getPersistentState
+		GEODE_CONCEPT_FUNCTION_CHECK(getPersistentState) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getPersistentStateString
+		#define GEODE_CONCEPT_CHECK_getPersistentStateString
+		GEODE_CONCEPT_FUNCTION_CHECK(getPersistentStateString) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_getSaveString
@@ -766,6 +521,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(isGroupEnabled) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_itemWasUsed
+		#define GEODE_CONCEPT_CHECK_itemWasUsed
+		GEODE_CONCEPT_FUNCTION_CHECK(itemWasUsed) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_keyForGroupIDColor
 		#define GEODE_CONCEPT_CHECK_keyForGroupIDColor
 		GEODE_CONCEPT_FUNCTION_CHECK(keyForGroupIDColor) 
@@ -776,14 +536,14 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(loadFromState) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_loadPersistentStateString
+		#define GEODE_CONCEPT_CHECK_loadPersistentStateString
+		GEODE_CONCEPT_FUNCTION_CHECK(loadPersistentStateString) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_objectsCollided
 		#define GEODE_CONCEPT_CHECK_objectsCollided
 		GEODE_CONCEPT_FUNCTION_CHECK(objectsCollided) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_onRewardedVideo
-		#define GEODE_CONCEPT_CHECK_onRewardedVideo
-		GEODE_CONCEPT_FUNCTION_CHECK(onRewardedVideo) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_opacityForIndex
@@ -921,6 +681,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(resetTriggeredIDs) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_resetUsedItemState
+		#define GEODE_CONCEPT_CHECK_resetUsedItemState
+		GEODE_CONCEPT_FUNCTION_CHECK(resetUsedItemState) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_resumeTimer
 		#define GEODE_CONCEPT_CHECK_resumeTimer
 		GEODE_CONCEPT_FUNCTION_CHECK(resumeTimer) 
@@ -1014,6 +779,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_timerExists
 		#define GEODE_CONCEPT_CHECK_timerExists
 		GEODE_CONCEPT_FUNCTION_CHECK(timerExists) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_timerWasUsed
+		#define GEODE_CONCEPT_CHECK_timerWasUsed
+		GEODE_CONCEPT_FUNCTION_CHECK(timerWasUsed) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_toggleGroup
@@ -1125,118 +895,123 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2538f0, Default, GJEffectManager, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x253950, Thiscall, GJEffectManager, init, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, activeColorForIndex, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, activeOpacityForIndex, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, addAllInheritedColorActions, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, addCountToItem, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, addMoveCalculation, CCMoveCNode*, cocos2d::CCPoint, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, calculateBaseActiveColors, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, calculateInheritedColor, int, ColorAction*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, calculateLightBGColor, cocos2d::ccColor3B)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, checkCollision, int const&, int const&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, colorActionChanged, ColorAction*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25ac80, Default, GJEffectManager, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, getMixedColor, cocos2d::ccColor3B, cocos2d::ccColor3B, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25ace0, Thiscall, GJEffectManager, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, activeColorForIndex, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, activeOpacityForIndex, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, addAllInheritedColorActions, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, addCountToItem, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, addMoveCalculation, CCMoveCNode*, cocos2d::CCPoint, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25b460, Thiscall, GJEffectManager, calculateBaseActiveColors, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25b840, Thiscall, GJEffectManager, calculateInheritedColor, int, ColorAction*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2639f0, Thiscall, GJEffectManager, calculateLightBGColor, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, checkCollision, int const&, int const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, colorActionChanged, ColorAction*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, colorExists, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, colorForEffect, cocos2d::ccColor3B, cocos2d::ccHSVValue)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25a780, Thiscall, GJEffectManager, colorForGroupID, int, cocos2d::ccColor3B const&, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, colorForIndex, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25a3d0, Thiscall, GJEffectManager, colorForPulseEffect, cocos2d::ccColor3B const&, PulseEffectAction*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, controlActionsForControlID, int, GJActionCommand)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, controlActionsForTrigger, EffectGameObject*, GJActionCommand)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25b060, Thiscall, GJEffectManager, countForItem, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, createFollowCommand, float, float, float, int, int, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, createKeyframeCommand, int, cocos2d::CCArray*, GameObject*, int, int, bool, float, float, float, float, float, float, gd::vector<int> const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x255370, Thiscall, GJEffectManager, createMoveCommand, cocos2d::CCPoint, int, float, int, float, bool, bool, bool, bool, float, float, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, createPlayerFollowCommand, float, float, int, float, float, int, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, createRotateCommand, float, float, int, int, int, float, bool, bool, bool, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, createTransformCommand, double, double, double, double, bool, float, int, int, int, float, bool, bool, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, getAllColorActions, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, getAllColorSprites, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x254870, Thiscall, GJEffectManager, getColorAction, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x254930, Thiscall, GJEffectManager, getColorSprite, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, getLoadedMoveOffset, gd::unordered_map<int, std::pair<double, double>>&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, getMixedColor, cocos2d::ccColor3B, cocos2d::ccColor3B, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, getMoveCommandNode, GroupCommandObject2*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, getMoveCommandObject, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, getOpacityActionForGroup, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, getSaveString, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, getTempGroupCommand, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, handleObjectCollision, bool, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, hasActiveDualTouch, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, hasBeenTriggered, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, hasPulseEffectForGroupID, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, isGroupEnabled, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, keyForGroupIDColor, int, cocos2d::ccColor3B const&, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25cb40, Thiscall, GJEffectManager, loadFromState, EffectManagerState&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, objectsCollided, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, onRewardedVideo, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, opacityForIndex, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, opacityModForGroup, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, pauseTimer, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25ae00, Thiscall, GJEffectManager, playerButton, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, playerDied, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x254f50, Thiscall, GJEffectManager, postCollisionCheck, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x259470, Thiscall, GJEffectManager, postMoveActions, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, preCollisionCheck, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x258060, Thiscall, GJEffectManager, prepareMoveActions, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x253fb0, Thiscall, GJEffectManager, processColors, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, processCopyColorPulseActions, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x254190, Thiscall, GJEffectManager, processInheritedColors, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, processMoveCalculations, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, processPulseActions, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, registerCollisionTrigger, int, int, int, bool, bool, gd::vector<int> const&, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, registerRotationCommand, GroupCommandObject2*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, removeAllPulseActions, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, removeColorAction, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, removePersistentFromAllItems, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, removePersistentFromAllTimers, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, removeTriggeredID, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x253d10, Thiscall, GJEffectManager, reset, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x254c90, Thiscall, GJEffectManager, resetEffects, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, resetMoveActions, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, resetTempGroupCommands, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, resetToggledGroups, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, resetTriggeredIDs, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, resumeTimer, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, runCountTrigger, int, int, bool, int, bool, gd::vector<int> const&, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, runDeathTrigger, int, bool, gd::vector<int> const&, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, runOpacityActionOnGroup, int, float, float, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2598b0, Thiscall, GJEffectManager, runPulseEffect, int, bool, float, float, float, PulseEffectType, cocos2d::ccColor3B, cocos2d::ccHSVValue, int, bool, bool, bool, bool, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, runTimerTrigger, int, double, bool, int, gd::vector<int> const&, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, runTouchTriggerCommand, int, bool, TouchTriggerType, TouchTriggerControl, bool, gd::vector<int> const&, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, saveCompletedMove, int, double, double)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25c520, Thiscall, GJEffectManager, saveToState, EffectManagerState&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x254a90, Thiscall, GJEffectManager, setColorAction, ColorAction*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, setFollowing, int, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25c290, Thiscall, GJEffectManager, setupFromString, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, shouldBlend, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25a920, Thiscall, GJEffectManager, spawnGroup, int, float, bool, gd::vector<int> const&, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, spawnObject, GameObject*, float, gd::vector<int> const&, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25b5f0, Thiscall, GJEffectManager, startTimer, int, double, double, bool, bool, bool, float, bool, int, gd::vector<int> const&, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25ac60, Thiscall, GJEffectManager, storeTriggeredID, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25bfd0, Thiscall, GJEffectManager, timeForItem, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, timerExists, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, toggleGroup, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, toggleItemPersistent, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, toggleTimerPersistent, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, transferPersistentItems, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, traverseInheritanceChain, InheritanceNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, colorForEffect, cocos2d::ccColor3B, cocos2d::ccHSVValue)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x261b10, Thiscall, GJEffectManager, colorForGroupID, int, cocos2d::ccColor3B const&, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, colorForIndex, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x261760, Thiscall, GJEffectManager, colorForPulseEffect, cocos2d::ccColor3B const&, PulseEffectAction*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25da50, Thiscall, GJEffectManager, controlActionsForControlID, int, GJActionCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25e3b0, Thiscall, GJEffectManager, controlActionsForTrigger, EffectGameObject*, GJActionCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2623f0, Thiscall, GJEffectManager, countForItem, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25cae0, Thiscall, GJEffectManager, createFollowCommand, float, float, float, int, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25cd10, Thiscall, GJEffectManager, createKeyframeCommand, int, cocos2d::CCArray*, GameObject*, int, int, bool, float, float, float, float, float, float, gd::vector<int> const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25c700, Thiscall, GJEffectManager, createMoveCommand, cocos2d::CCPoint, int, float, int, float, bool, bool, bool, bool, float, float, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25cbf0, Thiscall, GJEffectManager, createPlayerFollowCommand, float, float, int, float, float, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25c9b0, Thiscall, GJEffectManager, createRotateCommand, float, float, int, int, int, float, bool, bool, bool, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, createTransformCommand, double, double, double, double, bool, float, int, int, int, float, bool, bool, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25b2d0, Thiscall, GJEffectManager, getAllColorActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, getAllColorSprites, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25bc00, Thiscall, GJEffectManager, getColorAction, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25bcc0, Thiscall, GJEffectManager, getColorSprite, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x260950, Thiscall, GJEffectManager, getLoadedMoveOffset, gd::unordered_map<int, std::pair<double, double>>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25efd0, Thiscall, GJEffectManager, getMoveCommandNode, GroupCommandObject2*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25eed0, Thiscall, GJEffectManager, getMoveCommandObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, getOpacityActionForGroup, int)
+            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, getPersistentState, gd::unordered_map<int, int>&, gd::unordered_map<int, TimerItem>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x262900, Thiscall, GJEffectManager, getPersistentStateString, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, getSaveString, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25f270, Thiscall, GJEffectManager, getTempGroupCommand, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25c540, Thiscall, GJEffectManager, handleObjectCollision, bool, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, hasActiveDualTouch, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, hasBeenTriggered, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, hasPulseEffectForGroupID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, isGroupEnabled, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, itemWasUsed, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, keyForGroupIDColor, int, cocos2d::ccColor3B const&, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2644a0, Thiscall, GJEffectManager, loadFromState, EffectManagerState&)
+            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, loadPersistentStateString, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, objectsCollided, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, opacityForIndex, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x260b80, Thiscall, GJEffectManager, opacityModForGroup, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, pauseTimer, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x262190, Thiscall, GJEffectManager, playerButton, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, playerDied, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25c2e0, Thiscall, GJEffectManager, postCollisionCheck, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x260800, Thiscall, GJEffectManager, postMoveActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, preCollisionCheck, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25f3f0, Thiscall, GJEffectManager, prepareMoveActions, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25b340, Thiscall, GJEffectManager, processColors, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x261510, Thiscall, GJEffectManager, processCopyColorPulseActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25b520, Thiscall, GJEffectManager, processInheritedColors, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, processMoveCalculations, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, processPulseActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25c430, Thiscall, GJEffectManager, registerCollisionTrigger, int, int, int, bool, bool, gd::vector<int> const&, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25f170, Thiscall, GJEffectManager, registerRotationCommand, GroupCommandObject2*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, removeAllPulseActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, removeColorAction, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, removePersistentFromAllItems, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, removePersistentFromAllTimers, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2620e0, Thiscall, GJEffectManager, removeTriggeredID, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25b0a0, Thiscall, GJEffectManager, reset, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25c020, Thiscall, GJEffectManager, resetEffects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, resetMoveActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25f300, Thiscall, GJEffectManager, resetTempGroupCommands, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, resetToggledGroups, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, resetTriggeredIDs, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, resetUsedItemState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, resumeTimer, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, runCountTrigger, int, int, bool, int, bool, gd::vector<int> const&, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, runDeathTrigger, int, bool, gd::vector<int> const&, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x260a70, Thiscall, GJEffectManager, runOpacityActionOnGroup, int, float, float, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x260c40, Thiscall, GJEffectManager, runPulseEffect, int, bool, float, float, float, PulseEffectType, cocos2d::ccColor3B, cocos2d::ccHSVValue, int, bool, bool, bool, bool, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, runTimerTrigger, int, double, bool, int, gd::vector<int> const&, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, runTouchTriggerCommand, int, bool, TouchTriggerType, TouchTriggerControl, bool, gd::vector<int> const&, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, saveCompletedMove, int, double, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x263e80, Thiscall, GJEffectManager, saveToState, EffectManagerState&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25be20, Thiscall, GJEffectManager, setColorAction, ColorAction*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, setFollowing, int, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x263bf0, Thiscall, GJEffectManager, setupFromString, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, shouldBlend, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x261cb0, Thiscall, GJEffectManager, spawnGroup, int, float, bool, gd::vector<int> const&, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, spawnObject, GameObject*, float, gd::vector<int> const&, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x262f50, Thiscall, GJEffectManager, startTimer, int, double, double, bool, bool, bool, float, bool, int, gd::vector<int> const&, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x261ff0, Thiscall, GJEffectManager, storeTriggeredID, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x263930, Thiscall, GJEffectManager, timeForItem, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x263110, Thiscall, GJEffectManager, timerExists, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, timerWasUsed, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, toggleGroup, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, toggleItemPersistent, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, toggleTimerPersistent, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x262ed0, Thiscall, GJEffectManager, transferPersistentItems, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, traverseInheritanceChain, InheritanceNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, tryGetMoveCommandNode, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, updateActiveOpacityEffects, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, updateColorAction, ColorAction*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, updateColorEffects, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, updateColors, cocos2d::ccColor3B, cocos2d::ccColor3B)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25b120, Thiscall, GJEffectManager, updateCountForItem, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x254b10, Thiscall, GJEffectManager, updateEffects, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, updateOpacityAction, OpacityEffectAction*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, updateOpacityEffects, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x259e30, Thiscall, GJEffectManager, updatePulseEffects, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25aa10, Thiscall, GJEffectManager, updateSpawnTriggers, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25b850, Thiscall, GJEffectManager, updateTimer, int, double)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25b9e0, Thiscall, GJEffectManager, updateTimers, float, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, wasFollowing, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJEffectManager, wouldCreateLoop, InheritanceNode*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, updateActiveOpacityEffects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, updateColorAction, ColorAction*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, updateColorEffects, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, updateColors, cocos2d::ccColor3B, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2624b0, Thiscall, GJEffectManager, updateCountForItem, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25bea0, Thiscall, GJEffectManager, updateEffects, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, updateOpacityAction, OpacityEffectAction*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, updateOpacityEffects, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2611c0, Thiscall, GJEffectManager, updatePulseEffects, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x261da0, Thiscall, GJEffectManager, updateSpawnTriggers, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2631b0, Thiscall, GJEffectManager, updateTimer, int, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x263340, Thiscall, GJEffectManager, updateTimers, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJEffectManager, wasFollowing, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x25bbe0, Thiscall, GJEffectManager, wouldCreateLoop, InheritanceNode*, int)
 		}
 	};
 }

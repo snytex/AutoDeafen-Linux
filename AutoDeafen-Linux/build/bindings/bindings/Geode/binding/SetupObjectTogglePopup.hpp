@@ -16,38 +16,38 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupObjectTogglePopup, SetupTriggerPopup)
 
     /**
-     * @note[short] MacOS (ARM): 0x2f5348
-     * @note[short] MacOS (Intel): 0x3624f0
-     * @note[short] Windows: 0x411b70
-     * @note[short] iOS: 0x1a5e38
+     * @note[short] MacOS (ARM): 0x2ff384
+     * @note[short] MacOS (Intel): 0x375ad0
+     * @note[short] Windows: 0x4298f0
+     * @note[short] iOS: 0x1a2bd8
      * @note[short] Android
      */
-    static SetupObjectTogglePopup* create(EffectGameObject* p0, cocos2d::CCArray* p1, bool p2);
+    static SetupObjectTogglePopup* create(EffectGameObject* object, cocos2d::CCArray* objects, bool platformer);
 
     /**
-     * @note[short] MacOS (ARM): 0x2f5e64
-     * @note[short] MacOS (Intel): 0x3631a0
-     * @note[short] Windows: 0x40c730
-     * @note[short] iOS: 0x1a66f8
+     * @note[short] MacOS (ARM): 0x2ffea0
+     * @note[short] MacOS (Intel): 0x376820
+     * @note[short] Windows: 0x4244b0
+     * @note[short] iOS: 0x1a3494
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2f5dec
-     * @note[short] MacOS (Intel): 0x363120
-     * @note[short] Windows: 0x4125e0
-     * @note[short] iOS: 0x1a6688
+     * @note[short] MacOS (ARM): 0x2ffe28
+     * @note[short] MacOS (Intel): 0x3767a0
+     * @note[short] Windows: 0x42a360
+     * @note[short] iOS: 0x1a3424
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x2f54d8
-     * @note[short] MacOS (Intel): 0x362720
-     * @note[short] Windows: 0x411c90
-     * @note[short] iOS: 0x1a5f18
+     * @note[short] MacOS (ARM): 0x2ff514
+     * @note[short] MacOS (Intel): 0x375d00
+     * @note[short] Windows: 0x429a10
+     * @note[short] iOS: 0x1a2cb8
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1, bool p2);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects, bool platformer);
 };

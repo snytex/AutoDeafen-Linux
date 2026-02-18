@@ -16,33 +16,49 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupOptionsTriggerPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): 0x511fdc
+     * @note[short] MacOS (Intel): 0x5e7980
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x413f88
+     * @note[short] Android: Out of line
      */
-    static SetupOptionsTriggerPopup* create(GameOptionsTrigger* p0, cocos2d::CCArray* p1);
+     SetupOptionsTriggerPopup();
 
     /**
-     * @note[short] MacOS (ARM): 0x503958
-     * @note[short] MacOS (Intel): 0x5cf620
-     * @note[short] Windows: 0x41e720
-     * @note[short] iOS: 0x40be4c
+     * @note[short] MacOS (ARM): 0x51149c
+     * @note[short] MacOS (Intel): 0x5e6d30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x4135f8
+     * @note[short] Android
+     */
+    static SetupOptionsTriggerPopup* create(GameOptionsTrigger* object, cocos2d::CCArray* objects);
+
+    /**
+     * @note[short] MacOS (ARM): 0x511f28
+     * @note[short] MacOS (Intel): 0x5e78d0
+     * @note[short] Windows: 0x436940
+     * @note[short] iOS: 0x413ed4
      * @note[short] Android
      */
     virtual void onCustomToggleTriggerValue(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x41e4c0
+     * @note[short] MacOS (ARM): 0x511cf4
+     * @note[short] MacOS (Intel): 0x5e7680
+     * @note[short] Windows: 0x4366e0
+     * @note[short] iOS: 0x413cac
      * @note[short] Android: Rebinded
      */
-    void addOption(int p0, gd::string p1);
+    void addOption(int property, gd::string label);
 
     /**
-     * @note[short] MacOS (ARM): 0x502f58
-     * @note[short] MacOS (Intel): 0x5ceaf0
-     * @note[short] Windows: 0x41dcc0
-     * @note[short] iOS: 0x40b5ec
+     * @note[short] MacOS (ARM): 0x511530
+     * @note[short] MacOS (Intel): 0x5e6da0
+     * @note[short] Windows: 0x435ee0
+     * @note[short] iOS: 0x41367c
      * @note[short] Android
      */
-    bool init(GameOptionsTrigger* p0, cocos2d::CCArray* p1);
+    bool init(GameOptionsTrigger* object, cocos2d::CCArray* objects);
     cocos2d::CCPoint m_togglePosition;
     int m_togglePage;
 };

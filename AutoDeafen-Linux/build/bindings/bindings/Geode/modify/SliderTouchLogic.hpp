@@ -76,10 +76,10 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SliderTouchLogic, create, cocos2d::CCNode*, cocos2d::SEL_MenuHandler, char const*, char const*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x714b0, Thiscall, SliderTouchLogic, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x715a0, Thiscall, SliderTouchLogic, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71560, Thiscall, SliderTouchLogic, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x716d0, Thiscall, SliderTouchLogic, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x714e0, Thiscall, SliderTouchLogic, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x715d0, Thiscall, SliderTouchLogic, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71590, Thiscall, SliderTouchLogic, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71700, Thiscall, SliderTouchLogic, registerWithTouchDispatcher, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SliderTouchLogic, init, cocos2d::CCNode*, cocos2d::SEL_MenuHandler, char const*, char const*, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SliderTouchLogic, setMaxOffset, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SliderTouchLogic, setRotated, bool)

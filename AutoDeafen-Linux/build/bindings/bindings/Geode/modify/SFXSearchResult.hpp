@@ -60,10 +60,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x331fa0, Default, SFXSearchResult, create, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x332020, Thiscall, SFXSearchResult, updateObjects, AudioSortType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x347cc0, Default, SFXSearchResult, create, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x347d40, Thiscall, SFXSearchResult, updateObjects, AudioSortType)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SFXSearchResult, getActiveFolder, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x332580, Thiscall, SFXSearchResult, getSelectedPage, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3482a0, Thiscall, SFXSearchResult, getSelectedPage, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SFXSearchResult, init, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SFXSearchResult, setActiveFolder, SFXFolderObject*)
 		}

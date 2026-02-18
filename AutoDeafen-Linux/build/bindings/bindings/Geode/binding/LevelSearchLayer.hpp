@@ -18,314 +18,400 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(LevelSearchLayer, cocos2d::CCLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x53d2e0
-     * @note[short] MacOS (Intel): 0x610ff0
-     * @note[short] iOS: 0x54d78
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static LevelSearchLayer* create(int p0);
+     LevelSearchLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x53d1e8
-     * @note[short] MacOS (Intel): 0x610eb0
-     * @note[short] Windows: 0x2f75f0
-     * @note[short] iOS: 0x54d2c
-     * @note[short] Android
+     * @note[short] MacOS (ARM): 0x54a8c8
+     * @note[short] MacOS (Intel): 0x6274d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x51224
+     * @note[short] Android: Rebinded
      */
-    static cocos2d::CCScene* scene(int p0);
+     ~LevelSearchLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x542290
-     * @note[short] MacOS (Intel): 0x615fa0
-     * @note[short] Windows: 0x2fdcc0
-     * @note[short] iOS: 0x588e4
+     * @note[short] MacOS (ARM): 0x54abf0
+     * @note[short] MacOS (Intel): 0x627970
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x51330
+     * @note[short] Android
+     */
+    static LevelSearchLayer* create(int type);
+
+    /**
+     * @note[short] MacOS (ARM): 0x54aaf8
+     * @note[short] MacOS (Intel): 0x627830
+     * @note[short] Windows: 0x30c040
+     * @note[short] iOS: 0x512e4
+     * @note[short] Android
+     */
+    static cocos2d::CCScene* scene(int type);
+
+    /**
+     * @note[short] MacOS (ARM): 0x54fc7c
+     * @note[short] MacOS (Intel): 0x62c9b0
+     * @note[short] Windows: 0x312870
+     * @note[short] iOS: 0x5518c
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x5417d0
-     * @note[short] MacOS (Intel): 0x6154f0
-     * @note[short] Windows: 0x2fad00
-     * @note[short] iOS: 0x58198
+     * @note[short] MacOS (ARM): 0x54f208
+     * @note[short] MacOS (Intel): 0x62bf90
+     * @note[short] Windows: 0x30f7f0
+     * @note[short] iOS: 0x54a40
      * @note[short] Android
      */
-    virtual void textInputOpened(CCTextInputNode* p0);
+    virtual void textInputOpened(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x5418b0
-     * @note[short] MacOS (Intel): 0x6155c0
-     * @note[short] Windows: 0x2fae50
-     * @note[short] iOS: 0x58284
+     * @note[short] MacOS (ARM): 0x54f2e8
+     * @note[short] MacOS (Intel): 0x62c060
+     * @note[short] Windows: 0x30f940
+     * @note[short] iOS: 0x54b2c
      * @note[short] Android
      */
-    virtual void textInputClosed(CCTextInputNode* p0);
+    virtual void textInputClosed(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x5419c0
-     * @note[short] MacOS (Intel): 0x615690
-     * @note[short] Windows: 0x2fae50
-     * @note[short] iOS: 0x58304
+     * @note[short] MacOS (ARM): 0x54f3f8
+     * @note[short] MacOS (Intel): 0x62c130
+     * @note[short] Windows: 0x30f940
+     * @note[short] iOS: 0x54bac
      * @note[short] Android
      */
-    virtual void textChanged(CCTextInputNode* p0);
+    virtual void textChanged(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x541738
-     * @note[short] MacOS (Intel): 0x615480
-     * @note[short] Windows: 0x2facc0
-     * @note[short] iOS: 0x58100
+     * @note[short] MacOS (ARM): 0x54f170
+     * @note[short] MacOS (Intel): 0x62bf10
+     * @note[short] Windows: 0x30f7b0
+     * @note[short] iOS: 0x549a8
      * @note[short] Android
      */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x541280
-     * @note[short] MacOS (Intel): 0x614f70
-     * @note[short] Windows: 0x2f97f0
-     * @note[short] iOS: 0x57db8
+     * @note[short] MacOS (ARM): 0x54ecbc
+     * @note[short] MacOS (Intel): 0x62ba00
+     * @note[short] Windows: 0x30e2e0
+     * @note[short] iOS: 0x54660
      * @note[short] Android
      */
-    virtual void demonFilterSelectClosed(int p0);
+    virtual void demonFilterSelectClosed(int filter);
 
     /**
+     * @note[short] MacOS (ARM): 0x54fa24
+     * @note[short] MacOS (Intel): 0x62c790
+     * @note[short] Windows: 0x311e90
+     * @note[short] iOS: 0x5507c
      * @note[short] Android
      */
-    bool checkDiff(int p0);
+    bool checkDiff(int diff);
 
     /**
+     * @note[short] MacOS (ARM): 0x54fb3c
+     * @note[short] MacOS (Intel): 0x62c890
+     * @note[short] Windows: 0x312450
+     * @note[short] iOS: 0x55104
      * @note[short] Android
      */
-    bool checkTime(int p0);
+    bool checkTime(int time);
 
     /**
-     * @note[short] MacOS (ARM): 0x54146c
-     * @note[short] MacOS (Intel): 0x6151b0
-     * @note[short] Windows: 0x2f9ca0
+     * @note[short] MacOS (ARM): 0x54eea8
+     * @note[short] MacOS (Intel): 0x62bc40
+     * @note[short] Windows: 0x30e790
+     * @note[short] iOS: 0x547f4
      * @note[short] Android
      */
     void clearFilters();
 
     /**
-     * @note[short] MacOS (ARM): 0x53f9d8
-     * @note[short] MacOS (Intel): 0x6136c0
+     * @note[short] MacOS (ARM): 0x54d408
+     * @note[short] MacOS (Intel): 0x62a120
+     * @note[short] Windows: 0x30e670
+     * @note[short] iOS: 0x53090
      * @note[short] Android
      */
-    void confirmClearFilters(cocos2d::CCObject* p0);
-	inline char const* getDiffKey(int diff) {
-        return cocos2d::CCString::createWithFormat("D%i", diff)->getCString();
-    }
+    void confirmClearFilters(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x14b660
+     * @note[short] MacOS (ARM): 0x54eb90
+     * @note[short] MacOS (Intel): 0x62b890
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    char const* getDiffKey(int diff);
+
+    /**
+     * @note[short] MacOS (ARM): 0x54f968
+     * @note[short] MacOS (Intel): 0x62c6d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x54fc0
      * @note[short] Android
      */
     gd::string getLevelLenKey();
 
     /**
-     * @note[short] MacOS (ARM): 0x541e38
-     * @note[short] MacOS (Intel): 0x615b40
+     * @note[short] MacOS (ARM): 0x54f870
+     * @note[short] MacOS (Intel): 0x62c5e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x54ec8
      * @note[short] Android
      */
     gd::string getSearchDiffKey();
 
     /**
-     * @note[short] MacOS (ARM): 0x541ae4
-     * @note[short] MacOS (Intel): 0x615780
-     * @note[short] Windows: 0x2fb290
-     * @note[short] iOS: 0x58384
+     * @note[short] MacOS (ARM): 0x54f51c
+     * @note[short] MacOS (Intel): 0x62c220
+     * @note[short] Windows: 0x30fd80
+     * @note[short] iOS: 0x54c2c
      * @note[short] Android: Rebinded
      */
-    GJSearchObject* getSearchObject(SearchType p0, gd::string p1);
-	inline char const* getTimeKey(int time) {
-        return cocos2d::CCString::createWithFormat("T%i", time)->getCString();
-    }
+    GJSearchObject* getSearchObject(SearchType type, gd::string query);
 
     /**
-     * @note[short] MacOS (ARM): 0x53d3b8
-     * @note[short] MacOS (Intel): 0x611100
-     * @note[short] Windows: 0x2f7740
-     * @note[short] iOS: 0x54e44
+     * @note[short] MacOS (ARM): 0x54fc54
+     * @note[short] MacOS (Intel): 0x62c990
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(int p0);
+    char const* getTimeKey(int time);
 
     /**
-     * @note[short] MacOS (ARM): 0x540dc8
-     * @note[short] MacOS (Intel): 0x614a90
-     * @note[short] Windows: 0x2fd040
-     * @note[short] iOS: 0x57a90
+     * @note[short] MacOS (ARM): 0x54acc8
+     * @note[short] MacOS (Intel): 0x627a80
+     * @note[short] Windows: 0x30c190
+     * @note[short] iOS: 0x513fc
+     * @note[short] Android
+     */
+    bool init(int type);
+
+    /**
+     * @note[short] MacOS (ARM): 0x54e824
+     * @note[short] MacOS (Intel): 0x62b530
+     * @note[short] Windows: 0x311bf0
+     * @note[short] iOS: 0x54340
      * @note[short] Android
      */
     void onBack(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x540128
-     * @note[short] MacOS (Intel): 0x613e40
-     * @note[short] Windows: 0x2fd000
+     * @note[short] MacOS (ARM): 0x54db3c
+     * @note[short] MacOS (Intel): 0x62a890
+     * @note[short] Windows: 0x311bb0
+     * @note[short] iOS: 0x53728
      * @note[short] Android
      */
     void onClearFreeSearch(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x54f508
+     * @note[short] MacOS (Intel): 0x62c200
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x2fcac0
+     * @note[short] MacOS (ARM): 0x54df7c
+     * @note[short] MacOS (Intel): 0x62acb0
+     * @note[short] Windows: 0x3115b0
+     * @note[short] iOS: 0x53cd8
      * @note[short] Android
      */
     void onFollowed(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x2fca00
+     * @note[short] MacOS (ARM): 0x54dfe8
+     * @note[short] MacOS (Intel): 0x62ad20
+     * @note[short] Windows: 0x3114f0
+     * @note[short] iOS: 0x53d7c
      * @note[short] Android
      */
     void onFriends(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x2fc940
+     * @note[short] MacOS (ARM): 0x54df10
+     * @note[short] MacOS (Intel): 0x62ac40
+     * @note[short] Windows: 0x311430
+     * @note[short] iOS: 0x53c34
      * @note[short] Android
      */
     void onLatestStars(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x2fc7c0
+     * @note[short] MacOS (ARM): 0x54dea4
+     * @note[short] MacOS (Intel): 0x62abd0
+     * @note[short] Windows: 0x3112b0
+     * @note[short] iOS: 0x53b90
      * @note[short] Android
      */
     void onMagic(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x53fab8
-     * @note[short] MacOS (Intel): 0x6137a0
-     * @note[short] Windows: 0x2f9a80
+     * @note[short] MacOS (ARM): 0x54d4e8
+     * @note[short] MacOS (Intel): 0x62a200
+     * @note[short] Windows: 0x30e570
+     * @note[short] iOS: 0x53144
      * @note[short] Android
      */
     void onMoreOptions(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x2fc4c0
+     * @note[short] MacOS (ARM): 0x54dc88
+     * @note[short] MacOS (Intel): 0x62a9a0
+     * @note[short] Windows: 0x310fb0
+     * @note[short] iOS: 0x5385c
      * @note[short] Android
      */
     void onMostDownloaded(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x2fc580
+     * @note[short] MacOS (ARM): 0x54dcf4
+     * @note[short] MacOS (Intel): 0x62aa10
+     * @note[short] Windows: 0x311070
+     * @note[short] iOS: 0x53900
      * @note[short] Android
      */
     void onMostLikes(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x540424
-     * @note[short] MacOS (Intel): 0x614110
-     * @note[short] Windows: 0x2fc880
-     * @note[short] iOS: 0x572dc
+     * @note[short] MacOS (ARM): 0x54de38
+     * @note[short] MacOS (Intel): 0x62ab60
+     * @note[short] Windows: 0x311370
+     * @note[short] iOS: 0x53aec
      * @note[short] Android
      */
     void onMostRecent(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x53fe68
-     * @note[short] MacOS (Intel): 0x613ba0
-     * @note[short] Windows: 0x2fcb80
-     * @note[short] iOS: 0x56c98
+     * @note[short] MacOS (ARM): 0x54d87c
+     * @note[short] MacOS (Intel): 0x62a5f0
+     * @note[short] Windows: 0x311730
+     * @note[short] iOS: 0x534a8
      * @note[short] Android
      */
     void onSearch(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x53fad4
-     * @note[short] MacOS (Intel): 0x6137c0
-     * @note[short] Windows: 0x2f9a30
+     * @note[short] MacOS (ARM): 0x54d504
+     * @note[short] MacOS (Intel): 0x62a220
+     * @note[short] Windows: 0x30e520
+     * @note[short] iOS: 0x53160
      * @note[short] Android
      */
     void onSearchMode(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x53fff0
-     * @note[short] MacOS (Intel): 0x613d10
-     * @note[short] Windows: 0x2fcdc0
-     * @note[short] iOS: 0x56ddc
+     * @note[short] MacOS (ARM): 0x54da04
+     * @note[short] MacOS (Intel): 0x62a760
+     * @note[short] Windows: 0x311970
+     * @note[short] iOS: 0x535ec
      * @note[short] Android
      */
     void onSearchUser(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x540b44
-     * @note[short] MacOS (Intel): 0x614830
-     * @note[short] Windows: 0x2f9690
+     * @note[short] MacOS (ARM): 0x54e5b0
+     * @note[short] MacOS (Intel): 0x62b2e0
+     * @note[short] Windows: 0x30e180
+     * @note[short] iOS: 0x54150
      * @note[short] Android
      */
     void onSpecialDemon(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x54e054
+     * @note[short] MacOS (Intel): 0x62ad90
+     * @note[short] Windows: 0x311670
+     * @note[short] iOS: 0x53e20
      * @note[short] Android
      */
     void onStarAward(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x54034c
-     * @note[short] MacOS (Intel): 0x614030
-     * @note[short] Windows: 0x2fc640
-     * @note[short] iOS: 0x57194
+     * @note[short] MacOS (ARM): 0x54dd60
+     * @note[short] MacOS (Intel): 0x62aa80
+     * @note[short] Windows: 0x311130
+     * @note[short] iOS: 0x539a4
      * @note[short] Android
      */
     void onSuggested(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x2fc700
+     * @note[short] MacOS (ARM): 0x54ddcc
+     * @note[short] MacOS (Intel): 0x62aaf0
+     * @note[short] Windows: 0x3111f0
+     * @note[short] iOS: 0x53a48
      * @note[short] Android
      */
     void onTrending(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x540640
-     * @note[short] MacOS (Intel): 0x614340
-     * @note[short] Windows: 0x2fd3c0
-     * @note[short] iOS: 0x57610
+     * @note[short] MacOS (ARM): 0x54e0c0
+     * @note[short] MacOS (Intel): 0x62ae00
+     * @note[short] Windows: 0x311f70
+     * @note[short] iOS: 0x53ec4
      * @note[short] Android
      */
-    void toggleDifficulty(cocos2d::CCObject* p0);
+    void toggleDifficulty(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x540e20
-     * @note[short] MacOS (Intel): 0x614ae0
-     * @note[short] Windows: 0x2fd720
-     * @note[short] iOS: 0x57ae8
+     * @note[short] MacOS (ARM): 0x54e87c
+     * @note[short] MacOS (Intel): 0x62b580
+     * @note[short] Windows: 0x3122d0
+     * @note[short] iOS: 0x54398
      * @note[short] Android
      */
-    void toggleDifficultyNum(int p0, bool p1);
+    void toggleDifficultyNum(int diff, bool enabled);
 
     /**
-     * @note[short] MacOS (ARM): 0x540d30
-     * @note[short] MacOS (Intel): 0x614a10
-     * @note[short] Windows: 0x2fd0b0
-     * @note[short] iOS: 0x579f8
+     * @note[short] MacOS (ARM): 0x54e790
+     * @note[short] MacOS (Intel): 0x62b4b0
+     * @note[short] Windows: 0x311c60
+     * @note[short] iOS: 0x542ac
      * @note[short] Android
      */
-    void toggleStar(cocos2d::CCObject* p0);
+    void toggleStar(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x54e5ec
+     * @note[short] MacOS (Intel): 0x62b320
+     * @note[short] Windows: 0x312530
+     * @note[short] iOS: 0x5418c
      * @note[short] Android
      */
-    void toggleTime(cocos2d::CCObject* p0);
+    void toggleTime(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x540fb4
-     * @note[short] MacOS (Intel): 0x614c70
-     * @note[short] Windows: 0x2fdb30
-     * @note[short] iOS: 0x57bec
+     * @note[short] MacOS (ARM): 0x54ea00
+     * @note[short] MacOS (Intel): 0x62b700
+     * @note[short] Windows: 0x3126e0
+     * @note[short] iOS: 0x54498
      * @note[short] Android
      */
-    void toggleTimeNum(int p0, bool p1);
+    void toggleTimeNum(int time, bool enabled);
 
     /**
-     * @note[short] Windows: 0x2faf20
+     * @note[short] MacOS (ARM): 0x54d548
+     * @note[short] MacOS (Intel): 0x62a270
+     * @note[short] Windows: 0x30fa10
+     * @note[short] iOS: 0x532b4
      * @note[short] Android
      */
-    void updateSearchLabel(char const* p0);
+    void updateSearchLabel(char const* label);
     int m_type;
     CCTextInputNode* m_searchInput;
     cocos2d::CCSprite* m_starsSprite;

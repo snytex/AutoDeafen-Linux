@@ -65,11 +65,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getThreadMessage) 
 	#endif
 
-	#ifndef GEODE_STATICS_nodeWithTag
-		#define GEODE_STATICS_nodeWithTag
-		GEODE_AS_STATIC_FUNCTION(nodeWithTag) 
-	#endif
-
 	#ifndef GEODE_STATICS_onBack
 		#define GEODE_STATICS_onBack
 		GEODE_AS_STATIC_FUNCTION(onBack) 
@@ -93,11 +88,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_playCoinEffect
 		#define GEODE_STATICS_playCoinEffect
 		GEODE_AS_STATIC_FUNCTION(playCoinEffect) 
-	#endif
-
-	#ifndef GEODE_STATICS_selectAThread
-		#define GEODE_STATICS_selectAThread
-		GEODE_AS_STATIC_FUNCTION(selectAThread) 
 	#endif
 
 	#ifndef GEODE_STATICS_showCompletedLevel
@@ -256,30 +246,30 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer2, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cadf0, Default, SecretLayer2, scene, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3caf70, Thiscall, SecretLayer2, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d25a0, Thiscall, SecretLayer2, onExit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d2590, Thiscall, SecretLayer2, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cfa10, Thiscall, SecretLayer2, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cfb60, Thiscall, SecretLayer2, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cfb60, Thiscall, SecretLayer2, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e2160, Default, SecretLayer2, scene, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e22e0, Thiscall, SecretLayer2, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e9910, Thiscall, SecretLayer2, onExit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e9900, Thiscall, SecretLayer2, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e6d80, Thiscall, SecretLayer2, textInputOpened, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e6ed0, Thiscall, SecretLayer2, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e6ed0, Thiscall, SecretLayer2, textChanged, CCTextInputNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer2, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cd250, Thiscall, SecretLayer2, dialogClosed, DialogLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d0880, Thiscall, SecretLayer2, getBasicMessage, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d13e0, Thiscall, SecretLayer2, getErrorMessage, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cffb0, Thiscall, SecretLayer2, getMessage, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d0190, Thiscall, SecretLayer2, getThreadMessage, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer2, nodeWithTag, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d24e0, Thiscall, SecretLayer2, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cd5a0, Thiscall, SecretLayer2, onDoor, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cd2f0, Thiscall, SecretLayer2, onSecretLevel, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cdf00, Thiscall, SecretLayer2, onSubmit, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d2060, Thiscall, SecretLayer2, playCoinEffect, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SecretLayer2, selectAThread, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cc5a0, Thiscall, SecretLayer2, showCompletedLevel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cc430, Thiscall, SecretLayer2, showSecretLevel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cff20, Thiscall, SecretLayer2, updateMessageLabel, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cfc30, Thiscall, SecretLayer2, updateSearchLabel, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e45c0, Thiscall, SecretLayer2, dialogClosed, DialogLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e7bf0, Thiscall, SecretLayer2, getBasicMessage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e8750, Thiscall, SecretLayer2, getErrorMessage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e7320, Thiscall, SecretLayer2, getMessage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e7500, Thiscall, SecretLayer2, getThreadMessage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer2, nodeWithTag, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e9850, Thiscall, SecretLayer2, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e4910, Thiscall, SecretLayer2, onDoor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e4660, Thiscall, SecretLayer2, onSecretLevel, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e5270, Thiscall, SecretLayer2, onSubmit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e93d0, Thiscall, SecretLayer2, playCoinEffect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SecretLayer2, selectAThread, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e3910, Thiscall, SecretLayer2, showCompletedLevel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e37a0, Thiscall, SecretLayer2, showSecretLevel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e7290, Thiscall, SecretLayer2, updateMessageLabel, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e6fa0, Thiscall, SecretLayer2, updateSearchLabel, char const*)
 		}
 	};
 }

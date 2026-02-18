@@ -10,11 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
-	#ifndef GEODE_STATICS_initWithDuration
-		#define GEODE_STATICS_initWithDuration
-		GEODE_AS_STATIC_FUNCTION(initWithDuration) 
-	#endif
-
 	#ifndef GEODE_STATICS_copyWithZone
 		#define GEODE_STATICS_copyWithZone
 		GEODE_AS_STATIC_FUNCTION(copyWithZone) 
@@ -35,15 +30,15 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(reverse) 
 	#endif
 
+	#ifndef GEODE_STATICS_initWithDuration
+		#define GEODE_STATICS_initWithDuration
+		GEODE_AS_STATIC_FUNCTION(initWithDuration) 
+	#endif
+
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_initWithDuration
-		#define GEODE_CONCEPT_CHECK_initWithDuration
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithDuration) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_copyWithZone
@@ -66,6 +61,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(reverse) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_initWithDuration
+		#define GEODE_CONCEPT_CHECK_initWithDuration
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithDuration) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::CCJumpBy> : ModifyBase<ModifyDerive<Der, cocos2d::CCJumpBy>> {
@@ -76,11 +76,11 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, cocos2d::CCPoint const&, float, unsigned int>::func(&cocos2d::CCJumpBy::create)), Default, cocos2d::CCJumpBy, create, float, cocos2d::CCPoint const&, float, unsigned int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, cocos2d::CCPoint const&, float, unsigned int>::func(&cocos2d::CCJumpBy::initWithDuration)), Thiscall, cocos2d::CCJumpBy, initWithDuration, float, cocos2d::CCPoint const&, float, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCZone*>::func(&cocos2d::CCJumpBy::copyWithZone)), Thiscall, cocos2d::CCJumpBy, copyWithZone, cocos2d::CCZone*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCJumpBy::update)), Thiscall, cocos2d::CCJumpBy, update, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCNode*>::func(&cocos2d::CCJumpBy::startWithTarget)), Thiscall, cocos2d::CCJumpBy, startWithTarget, cocos2d::CCNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCJumpBy::reverse)), Thiscall, cocos2d::CCJumpBy, reverse, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float, cocos2d::CCPoint const&, float, unsigned int>::func(&cocos2d::CCJumpBy::initWithDuration)), Thiscall, cocos2d::CCJumpBy, initWithDuration, float, cocos2d::CCPoint const&, float, unsigned int)
 		}
 	};
 }

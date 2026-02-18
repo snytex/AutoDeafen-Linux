@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void songIDChanged(int p0);
+    virtual void songIDChanged(int id);
 
     /**
      * @note[short] MacOS (ARM): Out of line

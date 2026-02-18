@@ -16,139 +16,181 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(GJFollowCommandLayer, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x268d00
+     * @note[short] MacOS (ARM): 0x26fcf4
+     * @note[short] MacOS (Intel): 0x2d5080
+     * @note[short] Windows: 0x2705e0
+     * @note[short] iOS: 0x136244
      * @note[short] Android
      */
-    static GJFollowCommandLayer* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static GJFollowCommandLayer* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x267ae4
-     * @note[short] MacOS (Intel): 0x2c39d0
-     * @note[short] Windows: 0x26a130
-     * @note[short] iOS: 0x13a72c
+     * @note[short] MacOS (ARM): 0x27178c
+     * @note[short] MacOS (Intel): 0x2d6ce0
+     * @note[short] Windows: 0x271a10
+     * @note[short] iOS: 0x137720
      * @note[short] Android
      */
     virtual void determineStartValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x268494
-     * @note[short] MacOS (Intel): 0x2c45a0
-     * @note[short] Windows: 0x26b1a0
-     * @note[short] iOS: 0x13aed4
+     * @note[short] MacOS (ARM): 0x2720fc
+     * @note[short] MacOS (Intel): 0x2d7950
+     * @note[short] Windows: 0x272a80
+     * @note[short] iOS: 0x137ecc
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x268044
-     * @note[short] MacOS (Intel): 0x2c3fe0
-     * @note[short] Windows: 0x26a850
-     * @note[short] iOS: 0x13ac1c
+     * @note[short] MacOS (ARM): 0x271ce4
+     * @note[short] MacOS (Intel): 0x2d73a0
+     * @note[short] Windows: 0x272130
+     * @note[short] iOS: 0x137c0c
      * @note[short] Android
      */
-    virtual void textChanged(CCTextInputNode* p0);
+    virtual void textChanged(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x2661e4
-     * @note[short] MacOS (Intel): 0x2c1fb0
-     * @note[short] Windows: 0x268e30
-     * @note[short] iOS: 0x139368
+     * @note[short] MacOS (ARM): 0x26fe84
+     * @note[short] MacOS (Intel): 0x2d52c0
+     * @note[short] Windows: 0x270710
+     * @note[short] iOS: 0x136324
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x267498
-     * @note[short] MacOS (Intel): 0x2c33a0
-     * @note[short] Windows: 0x26a790
-     * @note[short] iOS: 0x13a3b8
+     * @note[short] MacOS (ARM): 0x271170
+     * @note[short] MacOS (Intel): 0x2d66d0
+     * @note[short] Windows: 0x272070
+     * @note[short] iOS: 0x1373ac
      * @note[short] Android
      */
     void onUpdateGroupID(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x267554
-     * @note[short] MacOS (Intel): 0x2c3460
-     * @note[short] Windows: 0x26a7f0
-     * @note[short] iOS: 0x13a420
+     * @note[short] MacOS (ARM): 0x27122c
+     * @note[short] MacOS (Intel): 0x2d6790
+     * @note[short] Windows: 0x2720d0
+     * @note[short] iOS: 0x137414
      * @note[short] Android
      */
     void onUpdateGroupID2(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x26a440
+     * @note[short] MacOS (ARM): 0x270e5c
+     * @note[short] MacOS (Intel): 0x2d6380
+     * @note[short] Windows: 0x271d20
+     * @note[short] iOS: 0x137214
      * @note[short] Android
      */
     void sliderChanged(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x26a5d0
+     * @note[short] MacOS (ARM): 0x271050
+     * @note[short] MacOS (Intel): 0x2d6570
+     * @note[short] Windows: 0x271eb0
+     * @note[short] iOS: 0x13732c
      * @note[short] Android
      */
     void sliderXModChanged(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x26a610
+     * @note[short] MacOS (ARM): 0x2710e0
+     * @note[short] MacOS (Intel): 0x2d6620
+     * @note[short] Windows: 0x271ef0
+     * @note[short] iOS: 0x13736c
      * @note[short] Android
      */
     void sliderYModChanged(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x26b120
+     * @note[short] MacOS (ARM): 0x271a94
+     * @note[short] MacOS (Intel): 0x2d70e0
+     * @note[short] Windows: 0x272a00
+     * @note[short] iOS: 0x1379d4
      * @note[short] Android
      */
     void updateDuration();
 
     /**
-     * @note[short] Windows: 0x26a500
+     * @note[short] MacOS (ARM): 0x270eec
+     * @note[short] MacOS (Intel): 0x2d6420
+     * @note[short] Windows: 0x271de0
+     * @note[short] iOS: 0x137254
      * @note[short] Android
      */
-    void updateDurLabel(bool p0);
+    void updateDurLabel(bool decimals);
 
     /**
-     * @note[short] Windows: 0x26ae80
+     * @note[short] MacOS (ARM): 0x271be4
+     * @note[short] MacOS (Intel): 0x2d7260
+     * @note[short] Windows: 0x272760
+     * @note[short] iOS: 0x137b0c
      * @note[short] Android
      */
     void updateTargetGroupID();
 
     /**
-     * @note[short] Windows: 0x26af50
+     * @note[short] MacOS (ARM): 0x271c64
+     * @note[short] MacOS (Intel): 0x2d7300
+     * @note[short] Windows: 0x272830
+     * @note[short] iOS: 0x137b8c
      * @note[short] Android
      */
     void updateTargetGroupID2();
 
     /**
-     * @note[short] Windows: 0x26ad60
+     * @note[short] MacOS (ARM): 0x2712d4
+     * @note[short] MacOS (Intel): 0x2d6840
+     * @note[short] Windows: 0x272640
+     * @note[short] iOS: 0x137470
      * @note[short] Android
      */
     void updateTextInputLabel();
 
     /**
-     * @note[short] Windows: 0x26adf0
+     * @note[short] MacOS (ARM): 0x2713f4
+     * @note[short] MacOS (Intel): 0x2d6960
+     * @note[short] Windows: 0x2726d0
+     * @note[short] iOS: 0x137518
      * @note[short] Android
      */
     void updateTextInputLabel2();
 
     /**
-     * @note[short] Windows: 0x26b020
+     * @note[short] MacOS (ARM): 0x271b04
+     * @note[short] MacOS (Intel): 0x2d7160
+     * @note[short] Windows: 0x272900
+     * @note[short] iOS: 0x137a3c
      * @note[short] Android
      */
     void updateXMod();
 
     /**
-     * @note[short] Windows: 0x26a650
+     * @note[short] MacOS (ARM): 0x271514
+     * @note[short] MacOS (Intel): 0x2d6a80
+     * @note[short] Windows: 0x271f30
+     * @note[short] iOS: 0x1375c0
      * @note[short] Android
      */
     void updateXModLabel();
 
     /**
-     * @note[short] Windows: 0x26b0a0
+     * @note[short] MacOS (ARM): 0x271b74
+     * @note[short] MacOS (Intel): 0x2d71e0
+     * @note[short] Windows: 0x272980
+     * @note[short] iOS: 0x137aa4
      * @note[short] Android
      */
     void updateYMod();
 
     /**
-     * @note[short] Windows: 0x26a6f0
+     * @note[short] MacOS (ARM): 0x271650
+     * @note[short] MacOS (Intel): 0x2d6bb0
+     * @note[short] Windows: 0x271fd0
+     * @note[short] iOS: 0x137670
      * @note[short] Android
      */
     void updateYModLabel();

@@ -20,24 +20,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addComment) 
 	#endif
 
-	#ifndef GEODE_STATICS_addDLToActive
-		#define GEODE_STATICS_addDLToActive
-		GEODE_AS_STATIC_FUNCTION(addDLToActive) 
-	#endif
-
 	#ifndef GEODE_STATICS_createAndAddComment
 		#define GEODE_STATICS_createAndAddComment
 		GEODE_AS_STATIC_FUNCTION(createAndAddComment) 
-	#endif
-
-	#ifndef GEODE_STATICS_dataLoaded
-		#define GEODE_STATICS_dataLoaded
-		GEODE_AS_STATIC_FUNCTION(dataLoaded) 
-	#endif
-
-	#ifndef GEODE_STATICS_encodeDataTo
-		#define GEODE_STATICS_encodeDataTo
-		GEODE_AS_STATIC_FUNCTION(encodeDataTo) 
 	#endif
 
 	#ifndef GEODE_STATICS_exitLobby
@@ -45,24 +30,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(exitLobby) 
 	#endif
 
-	#ifndef GEODE_STATICS_firstSetup
-		#define GEODE_STATICS_firstSetup
-		GEODE_AS_STATIC_FUNCTION(firstSetup) 
-	#endif
-
 	#ifndef GEODE_STATICS_getBasePostString
 		#define GEODE_STATICS_getBasePostString
 		GEODE_AS_STATIC_FUNCTION(getBasePostString) 
-	#endif
-
-	#ifndef GEODE_STATICS_getDLObject
-		#define GEODE_STATICS_getDLObject
-		GEODE_AS_STATIC_FUNCTION(getDLObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_getLastCommentIDForGame
-		#define GEODE_STATICS_getLastCommentIDForGame
-		GEODE_AS_STATIC_FUNCTION(getLastCommentIDForGame) 
 	#endif
 
 	#ifndef GEODE_STATICS_handleIt
@@ -70,29 +40,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(handleIt) 
 	#endif
 
-	#ifndef GEODE_STATICS_handleItDelayed
-		#define GEODE_STATICS_handleItDelayed
-		GEODE_AS_STATIC_FUNCTION(handleItDelayed) 
-	#endif
-
-	#ifndef GEODE_STATICS_handleItND
-		#define GEODE_STATICS_handleItND
-		GEODE_AS_STATIC_FUNCTION(handleItND) 
-	#endif
-
-	#ifndef GEODE_STATICS_isDLActive
-		#define GEODE_STATICS_isDLActive
-		GEODE_AS_STATIC_FUNCTION(isDLActive) 
-	#endif
-
 	#ifndef GEODE_STATICS_joinLobby
 		#define GEODE_STATICS_joinLobby
 		GEODE_AS_STATIC_FUNCTION(joinLobby) 
-	#endif
-
-	#ifndef GEODE_STATICS_onExitLobbyCompleted
-		#define GEODE_STATICS_onExitLobbyCompleted
-		GEODE_AS_STATIC_FUNCTION(onExitLobbyCompleted) 
 	#endif
 
 	#ifndef GEODE_STATICS_onJoinLobbyCompleted
@@ -103,11 +53,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onProcessHttpRequestCompleted
 		#define GEODE_STATICS_onProcessHttpRequestCompleted
 		GEODE_AS_STATIC_FUNCTION(onProcessHttpRequestCompleted) 
-	#endif
-
-	#ifndef GEODE_STATICS_onUploadCommentCompleted
-		#define GEODE_STATICS_onUploadCommentCompleted
-		GEODE_AS_STATIC_FUNCTION(onUploadCommentCompleted) 
 	#endif
 
 	#ifndef GEODE_STATICS_ProcessHttpRequest
@@ -255,31 +200,31 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27acc0, Default, GJMultiplayerManager, sharedState, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27b410, Thiscall, GJMultiplayerManager, init, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, addComment, gd::string, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, addDLToActive, char const*, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, addDLToActive, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, createAndAddComment, gd::string, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, dataLoaded, DS_Dictionary*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, encodeDataTo, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2825f0, Default, GJMultiplayerManager, sharedState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x282d40, Thiscall, GJMultiplayerManager, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x283d10, Thiscall, GJMultiplayerManager, addComment, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMultiplayerManager, addDLToActive, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMultiplayerManager, addDLToActive, char const*, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x283b30, Thiscall, GJMultiplayerManager, createAndAddComment, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMultiplayerManager, dataLoaded, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMultiplayerManager, encodeDataTo, DS_Dictionary*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, exitLobby, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, firstSetup, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, getBasePostString, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, getDLObject, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, getLastCommentIDForGame, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, handleIt, bool, gd::string, gd::string, GJHttpType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, handleItDelayed, bool, gd::string, gd::string, GJHttpType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, handleItND, cocos2d::CCNode*, void*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, isDLActive, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMultiplayerManager, firstSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x283ed0, Thiscall, GJMultiplayerManager, getBasePostString, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMultiplayerManager, getDLObject, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMultiplayerManager, getLastCommentIDForGame, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x282ab0, Thiscall, GJMultiplayerManager, handleIt, bool, gd::string, gd::string, GJHttpType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMultiplayerManager, handleItDelayed, bool, gd::string, gd::string, GJHttpType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMultiplayerManager, handleItND, cocos2d::CCNode*, void*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMultiplayerManager, isDLActive, char const*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, joinLobby, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, onExitLobbyCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, onJoinLobbyCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, onProcessHttpRequestCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, onUploadCommentCompleted, gd::string, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, ProcessHttpRequest, gd::string, gd::string, gd::string, GJHttpType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, removeDLFromActive, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMultiplayerManager, uploadComment, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMultiplayerManager, onExitLobbyCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x282e70, Thiscall, GJMultiplayerManager, onJoinLobbyCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2829b0, Thiscall, GJMultiplayerManager, onProcessHttpRequestCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMultiplayerManager, onUploadCommentCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2826a0, Thiscall, GJMultiplayerManager, ProcessHttpRequest, gd::string, gd::string, gd::string, GJHttpType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x282dc0, Thiscall, GJMultiplayerManager, removeDLFromActive, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2835d0, Thiscall, GJMultiplayerManager, uploadComment, gd::string, int)
 		}
 	};
 }

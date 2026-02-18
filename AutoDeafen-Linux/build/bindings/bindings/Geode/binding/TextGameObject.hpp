@@ -16,60 +16,76 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(TextGameObject, GameObject)
 
     /**
-     * @note[short] Windows: 0x1a4530
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static TextGameObject* create(cocos2d::CCTexture2D* p0);
+     TextGameObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x4ef584
-     * @note[short] MacOS (Intel): 0x5b92a0
-     * @note[short] Windows: 0x1a49c0
-     * @note[short] iOS: 0x264288
+     * @note[short] MacOS (ARM): 0x4e636c
+     * @note[short] MacOS (Intel): 0x5a1df0
+     * @note[short] Windows: 0x1a74b0
+     * @note[short] iOS: 0x2549c4
+     * @note[short] Android
+     */
+    static TextGameObject* create(cocos2d::CCTexture2D* texture);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4fe1c0
+     * @note[short] MacOS (Intel): 0x5d1a50
+     * @note[short] Windows: 0x1a7940
+     * @note[short] iOS: 0x265128
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x4ef6f0
-     * @note[short] MacOS (Intel): 0x5b93d0
-     * @note[short] Windows: 0x1a4b80
-     * @note[short] iOS: 0x2643c8
+     * @note[short] MacOS (ARM): 0x4fe32c
+     * @note[short] MacOS (Intel): 0x5d1b80
+     * @note[short] Windows: 0x1a7b00
+     * @note[short] iOS: 0x265268
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x4ef2d0
-     * @note[short] MacOS (Intel): 0x5b9020
-     * @note[short] Windows: 0x1a4610
-     * @note[short] iOS: 0x263fd0
+     * @note[short] MacOS (ARM): 0x4fdf14
+     * @note[short] MacOS (Intel): 0x5d17d0
+     * @note[short] Windows: 0x1a7590
+     * @note[short] iOS: 0x264e80
      * @note[short] Android
      */
-    virtual void updateTextKerning(int p0);
+    virtual void updateTextKerning(int kerning);
 
     /**
-     * @note[short] MacOS (ARM): 0x4efef4
-     * @note[short] MacOS (Intel): 0x5b9d90
-     * @note[short] Windows: 0x1886d0
-     * @note[short] iOS: 0x264718
+     * @note[short] MacOS (ARM): 0x4feb14
+     * @note[short] MacOS (Intel): 0x5d2570
+     * @note[short] Windows: 0x18b650
+     * @note[short] iOS: 0x2655b8
      * @note[short] Android
      */
     virtual int getTextKerning();
 
     /**
+     * @note[short] MacOS (ARM): 0x4fdee0
+     * @note[short] MacOS (Intel): 0x5d17a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(cocos2d::CCTexture2D* p0);
+    bool init(cocos2d::CCTexture2D* texture);
 
     /**
-     * @note[short] MacOS (ARM): 0x4ef2d8
-     * @note[short] MacOS (Intel): 0x5b9030
-     * @note[short] Windows: 0x1a4620
-     * @note[short] iOS: 0x263fd8
+     * @note[short] MacOS (ARM): 0x4fdf1c
+     * @note[short] MacOS (Intel): 0x5d17e0
+     * @note[short] Windows: 0x1a75a0
+     * @note[short] iOS: 0x264e88
      * @note[short] Android: Rebinded
      */
-    void updateTextObject(gd::string p0, bool p1);
+    void updateTextObject(gd::string text, bool defaultFont);
     gd::string m_text;
     int m_kerning;
 };

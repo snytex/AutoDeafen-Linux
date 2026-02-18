@@ -56,7 +56,7 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*, cocos2d::SEL_CallFuncN>::func(&cocos2d::CCCallFuncN::create)), Default, cocos2d::CCCallFuncN, create, cocos2d::CCObject*, cocos2d::SEL_CallFuncN)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*, cocos2d::SEL_CallFuncN>::func(&cocos2d::CCCallFuncN::initWithTarget)), Thiscall, cocos2d::CCCallFuncN, initWithTarget, cocos2d::CCObject*, cocos2d::SEL_CallFuncN)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCObject*, cocos2d::SEL_CallFuncN>::func(&cocos2d::CCCallFuncN::initWithTarget)), Thiscall, cocos2d::CCCallFuncN, initWithTarget, cocos2d::CCObject*, cocos2d::SEL_CallFuncN)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCZone*>::func(&cocos2d::CCCallFuncN::copyWithZone)), Thiscall, cocos2d::CCCallFuncN, copyWithZone, cocos2d::CCZone*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCCallFuncN::execute)), Thiscall, cocos2d::CCCallFuncN, execute, )
 		}

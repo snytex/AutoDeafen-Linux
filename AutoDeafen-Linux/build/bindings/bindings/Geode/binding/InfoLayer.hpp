@@ -19,317 +19,346 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(InfoLayer, FLAlertLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x6ab724
-     * @note[short] MacOS (Intel): 0x798c50
-     * @note[short] Windows: 0x2b3200
-     * @note[short] iOS: 0x34f230
+     * @note[short] MacOS (ARM): 0x6b47d0
+     * @note[short] MacOS (Intel): 0x7ae1d0
+     * @note[short] Windows: 0x2ba8d0
+     * @note[short] iOS: 0x34f890
      * @note[short] Android
      */
-    static InfoLayer* create(GJGameLevel* p0, GJUserScore* p1, GJLevelList* p2);
+    static InfoLayer* create(GJGameLevel* level, GJUserScore* score, GJLevelList* list);
 
     /**
-     * @note[short] MacOS (ARM): 0x6af438
-     * @note[short] MacOS (Intel): 0x79ce80
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x3524c0
+     * @note[short] MacOS (ARM): 0x6b84ac
+     * @note[short] MacOS (Intel): 0x7b23d0
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x352b38
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x6af34c
-     * @note[short] MacOS (Intel): 0x79cd70
-     * @note[short] Windows: 0x2b6b40
-     * @note[short] iOS: 0x3524b4
+     * @note[short] MacOS (ARM): 0x6b83c0
+     * @note[short] MacOS (Intel): 0x7b22c0
+     * @note[short] Windows: 0x2be210
+     * @note[short] iOS: 0x352b2c
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x6b0218
-     * @note[short] MacOS (Intel): 0x79dd40
-     * @note[short] Windows: 0x2b7fd0
-     * @note[short] iOS: 0x352ce8
+     * @note[short] MacOS (ARM): 0x6b931c
+     * @note[short] MacOS (Intel): 0x7b3250
+     * @note[short] Windows: 0x2bf6a0
+     * @note[short] iOS: 0x353354
      * @note[short] Android
      */
     virtual void show();
 
     /**
-     * @note[short] MacOS (ARM): 0x6af588
-     * @note[short] MacOS (Intel): 0x79cff0
-     * @note[short] Windows: 0x2b7480
-     * @note[short] iOS: 0x352548
+     * @note[short] MacOS (ARM): 0x6b85ec
+     * @note[short] MacOS (Intel): 0x7b2530
+     * @note[short] Windows: 0x2beb50
+     * @note[short] iOS: 0x352bc0
      * @note[short] Android
      */
-    virtual void loadCommentsFinished(cocos2d::CCArray* p0, char const* p1);
+    virtual void loadCommentsFinished(cocos2d::CCArray* comments, char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x6af66c
-     * @note[short] MacOS (Intel): 0x79d0c0
-     * @note[short] Windows: 0x2b74f0
-     * @note[short] iOS: 0x3525b8
+     * @note[short] MacOS (ARM): 0x6b86d0
+     * @note[short] MacOS (Intel): 0x7b2600
+     * @note[short] Windows: 0x2bebc0
+     * @note[short] iOS: 0x352c30
      * @note[short] Android
      */
-    virtual void loadCommentsFailed(char const* p0);
+    virtual void loadCommentsFailed(char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x6af718
-     * @note[short] MacOS (Intel): 0x79d160
-     * @note[short] Windows: 0x2b7540
-     * @note[short] iOS: 0x352614
+     * @note[short] MacOS (ARM): 0x6b877c
+     * @note[short] MacOS (Intel): 0x7b26a0
+     * @note[short] Windows: 0x2bec10
+     * @note[short] iOS: 0x352c8c
      * @note[short] Android: Rebinded
      */
-    virtual void setupPageInfo(gd::string p0, char const* p1);
+    virtual void setupPageInfo(gd::string info, char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x6afe38
-     * @note[short] MacOS (Intel): 0x79d8f0
-     * @note[short] Windows: 0x2b7880
-     * @note[short] iOS: 0x352a18
+     * @note[short] MacOS (ARM): 0x6b8f44
+     * @note[short] MacOS (Intel): 0x7b2e00
+     * @note[short] Windows: 0x2bef50
+     * @note[short] iOS: 0x353084
      * @note[short] Android
      */
-    virtual void commentUploadFinished(int p0);
+    virtual void commentUploadFinished(int parentID);
 
     /**
-     * @note[short] MacOS (ARM): 0x6aff50
-     * @note[short] MacOS (Intel): 0x79da40
-     * @note[short] Windows: 0x2b7950
-     * @note[short] iOS: 0x352aa8
+     * @note[short] MacOS (ARM): 0x6b9050
+     * @note[short] MacOS (Intel): 0x7b2f50
+     * @note[short] Windows: 0x2bf020
+     * @note[short] iOS: 0x353114
      * @note[short] Android
      */
-    virtual void commentUploadFailed(int p0, CommentError p1);
+    virtual void commentUploadFailed(int parentID, CommentError errorType);
 
     /**
-     * @note[short] MacOS (ARM): 0x6afcb0
-     * @note[short] MacOS (Intel): 0x79d750
-     * @note[short] Windows: 0x2b7730
-     * @note[short] iOS: 0x35294c
+     * @note[short] MacOS (ARM): 0x6b8dd4
+     * @note[short] MacOS (Intel): 0x7b2c70
+     * @note[short] Windows: 0x2bee00
+     * @note[short] iOS: 0x352fc4
      * @note[short] Android
      */
     virtual void updateUserScoreFinished();
 
     /**
-     * @note[short] MacOS (ARM): 0x6af108
-     * @note[short] MacOS (Intel): 0x79cb10
-     * @note[short] Windows: 0x2b5ce0
-     * @note[short] iOS: 0x3523c0
+     * @note[short] MacOS (ARM): 0x6b8188
+     * @note[short] MacOS (Intel): 0x7b2070
+     * @note[short] Windows: 0x2bd3b0
+     * @note[short] iOS: 0x352a38
      * @note[short] Android
      */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x6add08
-     * @note[short] MacOS (Intel): 0x79b630
-     * @note[short] Windows: 0x2b5780
-     * @note[short] iOS: 0x3513b8
+     * @note[short] MacOS (ARM): 0x6b6dac
+     * @note[short] MacOS (Intel): 0x7b0bb0
+     * @note[short] Windows: 0x2bce50
+     * @note[short] iOS: 0x351a34
      * @note[short] Android
      */
-    void confirmReport(cocos2d::CCObject* p0);
+    void confirmReport(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x6b7fe8
+     * @note[short] MacOS (Intel): 0x7b1ee0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     int getAccountID();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x6b704c
+     * @note[short] MacOS (Intel): 0x7b0e40
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] Android
      */
     int getID();
 
     /**
+     * @note[short] MacOS (ARM): 0x6b7fa8
+     * @note[short] MacOS (Intel): 0x7b1e90
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     int getRealID();
 
     /**
-     * @note[short] Windows: 0x2b52e0
+     * @note[short] MacOS (ARM): 0x6b7124
+     * @note[short] MacOS (Intel): 0x7b0f50
+     * @note[short] Windows: 0x2bc9b0
+     * @note[short] iOS: 0x351c8c
      * @note[short] Android
      */
-    TodoReturn getSpriteButton(char const* p0, cocos2d::SEL_MenuHandler p1, cocos2d::CCMenu* p2, float p3, cocos2d::CCPoint p4);
+    CCMenuItemSpriteExtra* getSpriteButton(char const* frame, cocos2d::SEL_MenuHandler selector, cocos2d::CCMenu* menu, float scale, cocos2d::CCPoint position);
 
     /**
-     * @note[short] MacOS (ARM): 0x6ab874
-     * @note[short] MacOS (Intel): 0x798e00
-     * @note[short] Windows: 0x2b33a0
-     * @note[short] iOS: 0x34f334
+     * @note[short] MacOS (ARM): 0x6b4920
+     * @note[short] MacOS (Intel): 0x7ae380
+     * @note[short] Windows: 0x2baa70
+     * @note[short] iOS: 0x34f994
      * @note[short] Android
      */
-    bool init(GJGameLevel* p0, GJUserScore* p1, GJLevelList* p2);
+    bool init(GJGameLevel* level, GJUserScore* score, GJLevelList* list);
 
     /**
+     * @note[short] MacOS (ARM): 0x6b84e4
+     * @note[short] MacOS (Intel): 0x7b2410
+     * @note[short] Windows: 0x2be220
+     * @note[short] iOS: 0x352b70
      * @note[short] Android
      */
-    bool isCorrect(char const* p0);
+    bool isCorrect(char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x6ae3e8
-     * @note[short] MacOS (Intel): 0x79bd10
-     * @note[short] Windows: 0x2b6c80
-     * @note[short] iOS: 0x3518ac
+     * @note[short] MacOS (ARM): 0x6b7480
+     * @note[short] MacOS (Intel): 0x7b1290
+     * @note[short] Windows: 0x2be350
+     * @note[short] iOS: 0x351f28
      * @note[short] Android
      */
-    void loadPage(int p0, bool p1);
+    void loadPage(int page, bool noSetup);
 
     /**
-     * @note[short] MacOS (ARM): 0x6adff8
-     * @note[short] MacOS (Intel): 0x79b910
-     * @note[short] Windows: 0x2b6ac0
-     * @note[short] iOS: 0x35157c
+     * @note[short] MacOS (ARM): 0x6b7090
+     * @note[short] MacOS (Intel): 0x7b0e90
+     * @note[short] Windows: 0x2be190
+     * @note[short] iOS: 0x351bf8
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x6ad908
-     * @note[short] MacOS (Intel): 0x79b1e0
-     * @note[short] Windows: 0x2b5f20
-     * @note[short] iOS: 0x3510a0
+     * @note[short] MacOS (ARM): 0x6b69a8
+     * @note[short] MacOS (Intel): 0x7b0760
+     * @note[short] Windows: 0x2bd5f0
+     * @note[short] iOS: 0x351720
      * @note[short] Android
      */
     void onComment(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x6aef98
-     * @note[short] MacOS (Intel): 0x79c9c0
-     * @note[short] Windows: 0x2b5ba0
-     * @note[short] iOS: 0x352274
+     * @note[short] MacOS (ARM): 0x6b8018
+     * @note[short] MacOS (Intel): 0x7b1f20
+     * @note[short] Windows: 0x2bd270
+     * @note[short] iOS: 0x3528ec
      * @note[short] Android
      */
     void onCopyLevelID(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x6ae3dc
-     * @note[short] MacOS (Intel): 0x79bd00
-     * @note[short] Windows: 0x2b64d0
-     * @note[short] iOS: 0x3518a0
+     * @note[short] MacOS (ARM): 0x6b7474
+     * @note[short] MacOS (Intel): 0x7b1280
+     * @note[short] Windows: 0x2bdba0
+     * @note[short] iOS: 0x351f1c
      * @note[short] Android
      */
     void onGetComments(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x6ae924
-     * @note[short] MacOS (Intel): 0x79c2f0
-     * @note[short] Windows: 0x2b64e0
-     * @note[short] iOS: 0x351d4c
+     * @note[short] MacOS (ARM): 0x6b79b0
+     * @note[short] MacOS (Intel): 0x7b1860
+     * @note[short] Windows: 0x2bdbb0
+     * @note[short] iOS: 0x3523c8
      * @note[short] Android
      */
     void onLevelInfo(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x6ad570
-     * @note[short] MacOS (Intel): 0x79ae40
-     * @note[short] Windows: 0x2b5e00
-     * @note[short] iOS: 0x350d94
+     * @note[short] MacOS (ARM): 0x6b6620
+     * @note[short] MacOS (Intel): 0x7b03c0
+     * @note[short] Windows: 0x2bd4d0
+     * @note[short] iOS: 0x351418
      * @note[short] Android
      */
     void onMore(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x6ae07c
-     * @note[short] MacOS (Intel): 0x79b9b0
-     * @note[short] Windows: 0x2b7860
-     * @note[short] iOS: 0x351600
+     * @note[short] MacOS (ARM): 0x6b7114
+     * @note[short] MacOS (Intel): 0x7b0f30
+     * @note[short] Windows: 0x2bef30
+     * @note[short] iOS: 0x351c7c
      * @note[short] Android
      */
     void onNextPage(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x6ad7c8
-     * @note[short] MacOS (Intel): 0x79b090
-     * @note[short] Windows: 0x2b5e60
-     * @note[short] iOS: 0x350fe0
+     * @note[short] MacOS (ARM): 0x6b6874
+     * @note[short] MacOS (Intel): 0x7b0610
+     * @note[short] Windows: 0x2bd530
+     * @note[short] iOS: 0x351660
      * @note[short] Android
      */
     void onOriginal(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x6ae06c
-     * @note[short] MacOS (Intel): 0x79b990
-     * @note[short] Windows: 0x2b7870
-     * @note[short] iOS: 0x3515f0
+     * @note[short] MacOS (ARM): 0x6b7104
+     * @note[short] MacOS (Intel): 0x7b0f10
+     * @note[short] Windows: 0x2bef40
+     * @note[short] iOS: 0x351c6c
      * @note[short] Android
      */
     void onPrevPage(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x6aee78
-     * @note[short] MacOS (Intel): 0x79c870
-     * @note[short] Windows: 0x2b5620
-     * @note[short] iOS: 0x3521c4
+     * @note[short] MacOS (ARM): 0x6b7ef8
+     * @note[short] MacOS (Intel): 0x7b1dd0
+     * @note[short] Windows: 0x2bccf0
+     * @note[short] iOS: 0x35283c
      * @note[short] Android
      */
     void onRefreshComments(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x6b828c
+     * @note[short] MacOS (Intel): 0x7b2170
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void onSimilar(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x2b7bf0
+     * @note[short] MacOS (ARM): 0x6b915c
+     * @note[short] MacOS (Intel): 0x7b3070
+     * @note[short] Windows: 0x2bf2c0
+     * @note[short] iOS: 0x3531e8
      * @note[short] Android
      */
-    TodoReturn reloadWindow();
+    void reloadWindow();
 
     /**
-     * @note[short] MacOS (ARM): 0x6ae750
-     * @note[short] MacOS (Intel): 0x79c0e0
-     * @note[short] Windows: 0x2b71f0
-     * @note[short] iOS: 0x351b78
+     * @note[short] MacOS (ARM): 0x6b77dc
+     * @note[short] MacOS (Intel): 0x7b1650
+     * @note[short] Windows: 0x2be8c0
+     * @note[short] iOS: 0x3521f4
      * @note[short] Android
      */
-    void setupCommentsBrowser(cocos2d::CCArray* p0);
+    void setupCommentsBrowser(cocos2d::CCArray* comments);
 
     /**
-     * @note[short] MacOS (ARM): 0x6ad5cc
-     * @note[short] MacOS (Intel): 0x79ae90
-     * @note[short] Windows: 0x2b5420
-     * @note[short] iOS: 0x350de8
+     * @note[short] MacOS (ARM): 0x6b6678
+     * @note[short] MacOS (Intel): 0x7b0410
+     * @note[short] Windows: 0x2bcaf0
+     * @note[short] iOS: 0x351468
      * @note[short] Android
      */
     void setupLevelInfo();
 
     /**
-     * @note[short] MacOS (ARM): 0x6ae170
-     * @note[short] MacOS (Intel): 0x79bab0
-     * @note[short] Windows: 0x2b7e10
-     * @note[short] iOS: 0x3516f4
+     * @note[short] MacOS (ARM): 0x6b7208
+     * @note[short] MacOS (Intel): 0x7b1030
+     * @note[short] Windows: 0x2bf4e0
+     * @note[short] iOS: 0x351d70
      * @note[short] Android
      */
     void toggleCommentMode(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x6ae250
-     * @note[short] MacOS (Intel): 0x79bb90
-     * @note[short] Windows: 0x2b7aa0
-     * @note[short] iOS: 0x351750
+     * @note[short] MacOS (ARM): 0x6b72e8
+     * @note[short] MacOS (Intel): 0x7b1110
+     * @note[short] Windows: 0x2bf170
+     * @note[short] iOS: 0x351dcc
      * @note[short] Android
      */
     void toggleExtendedMode(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x6ae280
-     * @note[short] MacOS (Intel): 0x79bbc0
-     * @note[short] Windows: 0x2b7b00
-     * @note[short] iOS: 0x351780
+     * @note[short] MacOS (ARM): 0x6b7318
+     * @note[short] MacOS (Intel): 0x7b1140
+     * @note[short] Windows: 0x2bf1d0
+     * @note[short] iOS: 0x351dfc
      * @note[short] Android
      */
     void toggleSmallCommentMode(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x2b7ed0
+     * @note[short] MacOS (ARM): 0x6b73d0
+     * @note[short] MacOS (Intel): 0x7b11d0
+     * @note[short] Windows: 0x2bf5a0
+     * @note[short] iOS: 0x351e78
      * @note[short] Android
      */
-    TodoReturn updateCommentModeButtons();
+    void updateCommentModeButtons();
 
     /**
+     * @note[short] MacOS (ARM): 0x6b8d64
+     * @note[short] MacOS (Intel): 0x7b2bf0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x352f54
      * @note[short] Android
      */
-    TodoReturn updateLevelsLabel();
+    void updateLevelsLabel();
     GJGameLevel* m_level;
     GJUserScore* m_score;
     GJLevelList* m_levelList;

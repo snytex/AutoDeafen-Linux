@@ -80,12 +80,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30d600, Default, SelectArtLayer, create, SelectArtType, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30e530, Thiscall, SelectArtLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30d710, Thiscall, SelectArtLayer, init, SelectArtType, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SelectArtLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30e420, Thiscall, SelectArtLayer, onSelectCustom, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30e360, Thiscall, SelectArtLayer, selectArt, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x322190, Default, SelectArtLayer, create, SelectArtType, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3230c0, Thiscall, SelectArtLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3222a0, Thiscall, SelectArtLayer, init, SelectArtType, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x323070, Thiscall, SelectArtLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x322fb0, Thiscall, SelectArtLayer, onSelectCustom, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x322ef0, Thiscall, SelectArtLayer, selectArt, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SelectArtLayer, updateSelectedCustom, int)
 		}
 	};

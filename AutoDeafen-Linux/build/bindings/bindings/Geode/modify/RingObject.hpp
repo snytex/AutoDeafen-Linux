@@ -55,11 +55,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(powerOnObject) 
 	#endif
 
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
 	#ifndef GEODE_STATICS_spawnCircle
 		#define GEODE_STATICS_spawnCircle
 		GEODE_AS_STATIC_FUNCTION(spawnCircle) 
@@ -135,18 +130,18 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x489570, Default, RingObject, create, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4898f0, Thiscall, RingObject, setScale, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38c9f0, Thiscall, RingObject, setRotation, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4898d0, Thiscall, RingObject, resetObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4899b0, Thiscall, RingObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x489ad0, Thiscall, RingObject, getSaveString, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x489920, Thiscall, RingObject, setRScale, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x489620, Thiscall, RingObject, triggerActivated, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4899a0, Thiscall, RingObject, shouldDrawEditorHitbox, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x489630, Thiscall, RingObject, powerOnObject, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(RingObject, init, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4896d0, Thiscall, RingObject, spawnCircle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1c50, Default, RingObject, create, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1fd0, Thiscall, RingObject, setScale, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3840, Thiscall, RingObject, setRotation, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1fb0, Thiscall, RingObject, resetObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a2090, Thiscall, RingObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a21b0, Thiscall, RingObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a2000, Thiscall, RingObject, setRScale, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1d00, Thiscall, RingObject, triggerActivated, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a2080, Thiscall, RingObject, shouldDrawEditorHitbox, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1d10, Thiscall, RingObject, powerOnObject, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RingObject, init, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1db0, Thiscall, RingObject, spawnCircle, )
 		}
 	};
 }

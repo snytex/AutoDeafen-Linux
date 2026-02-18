@@ -16,15 +16,29 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(EditGameObjectPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static EditGameObjectPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1, bool p2);
+     EditGameObjectPopup();
 
     /**
-     * @note[short] MacOS (ARM): 0x23facc
-     * @note[short] MacOS (Intel): 0x297b50
-     * @note[short] Windows: 0x2938e0
+     * @note[short] MacOS (ARM): 0x249aa0
+     * @note[short] MacOS (Intel): 0x2ab0e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2dd7a4
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1, bool p2);
+    static EditGameObjectPopup* create(EffectGameObject* object, cocos2d::CCArray* objects, bool platformer);
+
+    /**
+     * @note[short] MacOS (ARM): 0x249c30
+     * @note[short] MacOS (Intel): 0x2ab310
+     * @note[short] Windows: 0x29af40
+     * @note[short] iOS: 0x2dd884
+     * @note[short] Android
+     */
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects, bool platformer);
 };

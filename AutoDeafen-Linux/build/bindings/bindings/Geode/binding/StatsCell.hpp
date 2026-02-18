@@ -16,47 +16,56 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(StatsCell, TableViewCell)
 
     /**
+     * @note[short] MacOS (ARM): 0x1f9214
+     * @note[short] MacOS (Intel): 0x252e40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-     StatsCell(char const* p0, float p1, float p2);
+     StatsCell(char const* identifier, float width, float height);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f05d8
-     * @note[short] MacOS (Intel): 0x240e40
+     * @note[short] MacOS (ARM): 0x1f9254
+     * @note[short] MacOS (Intel): 0x252eb0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x112528
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x10f8c8
+     * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x1f1224
-     * @note[short] MacOS (Intel): 0x241930
-     * @note[short] Windows: 0xad710
-     * @note[short] iOS: 0x112c98
+     * @note[short] MacOS (ARM): 0x1f9e50
+     * @note[short] MacOS (Intel): 0x253980
+     * @note[short] Windows: 0xade20
+     * @note[short] iOS: 0x110038
      * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): 0x1f05e0
-     * @note[short] MacOS (Intel): 0x240e50
+     * @note[short] MacOS (ARM): 0x1f925c
+     * @note[short] MacOS (Intel): 0x252ec0
+     * @note[short] Windows: 0xb3010
+     * @note[short] iOS: 0x10f8d0
      * @note[short] Android
      */
-    TodoReturn getTitleFromKey(char const* p0);
+    const char* getTitleFromKey(char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x1e50c0
-     * @note[short] MacOS (Intel): 0x235030
-     * @note[short] Windows: 0xb2630
-     * @note[short] iOS: 0x107ea4
+     * @note[short] MacOS (ARM): 0x1ed8fc
+     * @note[short] MacOS (Intel): 0x246aa0
+     * @note[short] Windows: 0xb2db0
+     * @note[short] iOS: 0x104e88
      * @note[short] Android
      */
-    void loadFromObject(StatsObject* p0);
+    void loadFromObject(StatsObject* object);
 
     /**
-     * @note[short] iOS: 0x10819c
+     * @note[short] MacOS (ARM): 0x1edc00
+     * @note[short] MacOS (Intel): 0x246d50
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x105180
      * @note[short] Android
      */
-    void updateBGColor(int p0);
+    void updateBGColor(int index);
 };

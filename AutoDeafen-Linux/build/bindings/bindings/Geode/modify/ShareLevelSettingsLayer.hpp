@@ -81,12 +81,12 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ShareLevelSettingsLayer, create, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4799c0, Thiscall, ShareLevelSettingsLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x478c00, Thiscall, ShareLevelSettingsLayer, init, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x479940, Thiscall, ShareLevelSettingsLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x479620, Thiscall, ShareLevelSettingsLayer, onUnlisted, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ShareLevelSettingsLayer, onUnlistedFriendsOnly, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ShareLevelSettingsLayer, updateSettingsState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x491ea0, Thiscall, ShareLevelSettingsLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4910e0, Thiscall, ShareLevelSettingsLayer, init, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x491e20, Thiscall, ShareLevelSettingsLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x491b00, Thiscall, ShareLevelSettingsLayer, onUnlisted, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x491d20, Thiscall, ShareLevelSettingsLayer, onUnlistedFriendsOnly, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x491d40, Thiscall, ShareLevelSettingsLayer, updateSettingsState, )
 		}
 	};
 }

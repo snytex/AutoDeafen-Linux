@@ -61,12 +61,12 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GauntletSprite, create, GauntletType, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f4fe0, Thiscall, GauntletSprite, addLockedSprite, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f84f0, Thiscall, GauntletSprite, addLockedSprite, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GauntletSprite, addNormalSprite, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GauntletSprite, colorForType, GauntletType)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GauntletSprite, init, GauntletType, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GauntletSprite, luminanceForType, GauntletType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f5310, Thiscall, GauntletSprite, toggleLockedSprite, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f87f0, Thiscall, GauntletSprite, toggleLockedSprite, bool)
 		}
 	};
 }

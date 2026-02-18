@@ -55,10 +55,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f0510, Default, SetupAdvFollowRetargetPopup, create, AdvancedFollowEditObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ed950, Thiscall, SetupAdvFollowRetargetPopup, updateDefaultTriggerValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f0c60, Thiscall, SetupAdvFollowRetargetPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f0620, Thiscall, SetupAdvFollowRetargetPopup, init, AdvancedFollowEditObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x408190, Default, SetupAdvFollowRetargetPopup, create, AdvancedFollowEditObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4055d0, Thiscall, SetupAdvFollowRetargetPopup, updateDefaultTriggerValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4088e0, Thiscall, SetupAdvFollowRetargetPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4082a0, Thiscall, SetupAdvFollowRetargetPopup, init, AdvancedFollowEditObject*, cocos2d::CCArray*)
 		}
 	};
 }

@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_customObjectSetup
 		#define GEODE_STATICS_customObjectSetup
 		GEODE_AS_STATIC_FUNCTION(customObjectSetup) 
@@ -18,21 +13,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_getSaveString
 		#define GEODE_STATICS_getSaveString
 		GEODE_AS_STATIC_FUNCTION(getSaveString) 
-	#endif
-
-	#ifndef GEODE_STATICS_getSFXRefID
-		#define GEODE_STATICS_getSFXRefID
-		GEODE_AS_STATIC_FUNCTION(getSFXRefID) 
-	#endif
-
-	#ifndef GEODE_STATICS_getUniqueSFXID
-		#define GEODE_STATICS_getUniqueSFXID
-		GEODE_AS_STATIC_FUNCTION(getUniqueSFXID) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
     
@@ -75,12 +55,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SFXTriggerGameObject, create, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49efd0, Thiscall, SFXTriggerGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x49da70, Thiscall, SFXTriggerGameObject, getSaveString, GJBaseGameLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SFXTriggerGameObject, getSFXRefID, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SFXTriggerGameObject, getUniqueSFXID, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SFXTriggerGameObject, init, char const*)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x496310, Thiscall, SFXTriggerGameObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SFXTriggerGameObject, create, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b7b20, Thiscall, SFXTriggerGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b65c0, Thiscall, SFXTriggerGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SFXTriggerGameObject, getSFXRefID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SFXTriggerGameObject, getUniqueSFXID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SFXTriggerGameObject, init, char const*)
 		}
 	};
 }

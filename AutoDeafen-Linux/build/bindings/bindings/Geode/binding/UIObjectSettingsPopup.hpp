@@ -16,25 +16,29 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(UIObjectSettingsPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x451310
+     * @note[short] MacOS (ARM): 0x4c96f0
+     * @note[short] MacOS (Intel): 0x57cc30
+     * @note[short] Windows: 0x469880
+     * @note[short] iOS: 0x40aa6c
      * @note[short] Android
      */
-    static UIObjectSettingsPopup* create(UISettingsGameObject* p0, cocos2d::CCArray* p1);
+    static UIObjectSettingsPopup* create(UISettingsGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4bc2fc
-     * @note[short] MacOS (Intel): 0x566bc0
-     * @note[short] Windows: 0x451f60
-     * @note[short] iOS: 0x403440
+     * @note[short] MacOS (ARM): 0x4ca2bc
+     * @note[short] MacOS (Intel): 0x57da70
+     * @note[short] Windows: 0x46a4d0
+     * @note[short] iOS: 0x40b488
      * @note[short] Android
      */
     virtual void onCustomToggleTriggerValue(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4bb8b4
-     * @note[short] MacOS (Intel): 0x565f70
-     * @note[short] Windows: 0x451420
+     * @note[short] MacOS (ARM): 0x4c9878
+     * @note[short] MacOS (Intel): 0x57ce60
+     * @note[short] Windows: 0x469990
+     * @note[short] iOS: 0x40ab44
      * @note[short] Android
      */
-    bool init(UISettingsGameObject* p0, cocos2d::CCArray* p1);
+    bool init(UISettingsGameObject* object, cocos2d::CCArray* objects);
 };

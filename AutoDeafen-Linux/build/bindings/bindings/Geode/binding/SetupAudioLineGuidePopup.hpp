@@ -17,33 +17,46 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupAudioLineGuidePopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static SetupAudioLineGuidePopup* create(AudioLineGuideGameObject* p0, cocos2d::CCArray* p1);
+     SetupAudioLineGuidePopup();
 
     /**
-     * @note[short] MacOS (ARM): 0x4c21ac
-     * @note[short] MacOS (Intel): 0x56d390
-     * @note[short] Windows: 0x4581a0
-     * @note[short] iOS: 0x408070
+     * @note[short] MacOS (ARM): 0x4cfb28
+     * @note[short] MacOS (Intel): 0x583a80
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x40f9b0
      * @note[short] Android
      */
-    virtual void selectSettingClosed(SelectSettingLayer* p0);
+    static SetupAudioLineGuidePopup* create(AudioLineGuideGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c1b08
-     * @note[short] MacOS (Intel): 0x56cbf0
-     * @note[short] Windows: 0x457a40
-     * @note[short] iOS: 0x407a7c
+     * @note[short] MacOS (ARM): 0x4d0360
+     * @note[short] MacOS (Intel): 0x584450
+     * @note[short] Windows: 0x470710
+     * @note[short] iOS: 0x410088
      * @note[short] Android
      */
-    bool init(AudioLineGuideGameObject* p0, cocos2d::CCArray* p1);
+    virtual void selectSettingClosed(SelectSettingLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c2164
-     * @note[short] MacOS (Intel): 0x56d340
-     * @note[short] Windows: 0x458150
-     * @note[short] iOS: 0x408028
+     * @note[short] MacOS (ARM): 0x4cfcbc
+     * @note[short] MacOS (Intel): 0x583cd0
+     * @note[short] Windows: 0x46ffb0
+     * @note[short] iOS: 0x40fa94
+     * @note[short] Android
+     */
+    bool init(AudioLineGuideGameObject* object, cocos2d::CCArray* objects);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4d0318
+     * @note[short] MacOS (Intel): 0x584400
+     * @note[short] Windows: 0x4706c0
+     * @note[short] iOS: 0x410040
      * @note[short] Android
      */
     void onSpeed(cocos2d::CCObject* sender);

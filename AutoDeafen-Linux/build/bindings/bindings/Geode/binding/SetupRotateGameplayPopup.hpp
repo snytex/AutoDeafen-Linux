@@ -16,33 +16,47 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupRotateGameplayPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static SetupRotateGameplayPopup* create(RotateGameplayGameObject* p0, cocos2d::CCArray* p1);
+     SetupRotateGameplayPopup();
 
     /**
-     * @note[short] MacOS (ARM): 0x696a70
-     * @note[short] MacOS (Intel): 0x782510
-     * @note[short] Windows: 0x429c50
-     * @note[short] iOS: 0x1a2178
+     * @note[short] MacOS (ARM): 0x69f7b4
+     * @note[short] MacOS (Intel): 0x797800
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x19e628
+     * @note[short] Android
+     */
+    static SetupRotateGameplayPopup* create(RotateGameplayGameObject* object, cocos2d::CCArray* objects);
+
+    /**
+     * @note[short] MacOS (ARM): 0x6a0218
+     * @note[short] MacOS (Intel): 0x798480
+     * @note[short] Windows: 0x441f20
+     * @note[short] iOS: 0x19eed4
      * @note[short] Android
      */
     virtual void onPlusButton(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x696aa8
-     * @note[short] MacOS (Intel): 0x782550
-     * @note[short] Windows: 0x429cc0
-     * @note[short] iOS: 0x1a21b0
+     * @note[short] MacOS (ARM): 0x6a02b4
+     * @note[short] MacOS (Intel): 0x798530
+     * @note[short] Windows: 0x441fd0
+     * @note[short] iOS: 0x19ef48
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x696194
-     * @note[short] MacOS (Intel): 0x781a90
-     * @note[short] Windows: 0x429280
+     * @note[short] MacOS (ARM): 0x69f93c
+     * @note[short] MacOS (Intel): 0x797a30
+     * @note[short] Windows: 0x441550
+     * @note[short] iOS: 0x19e700
      * @note[short] Android
      */
-    bool init(RotateGameplayGameObject* p0, cocos2d::CCArray* p1);
+    bool init(RotateGameplayGameObject* object, cocos2d::CCArray* objects);
 };

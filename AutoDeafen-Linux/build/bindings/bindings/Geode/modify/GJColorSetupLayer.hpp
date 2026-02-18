@@ -115,16 +115,16 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x24ef80, Default, GJColorSetupLayer, create, LevelSettingsObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x24fda0, Thiscall, GJColorSetupLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x24fcd0, Thiscall, GJColorSetupLayer, colorSelectClosed, cocos2d::CCNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x24f0c0, Thiscall, GJColorSetupLayer, init, LevelSettingsObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x24fd50, Thiscall, GJColorSetupLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x24fc00, Thiscall, GJColorSetupLayer, onColor, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x24fbb0, Thiscall, GJColorSetupLayer, onPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x24fce0, Thiscall, GJColorSetupLayer, showPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x24fa40, Thiscall, GJColorSetupLayer, updateSpriteColor, ColorChannelSprite*, cocos2d::CCLabelBMFont*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x24f920, Thiscall, GJColorSetupLayer, updateSpriteColors, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x255f50, Default, GJColorSetupLayer, create, LevelSettingsObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x256d70, Thiscall, GJColorSetupLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x256ca0, Thiscall, GJColorSetupLayer, colorSelectClosed, cocos2d::CCNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x256090, Thiscall, GJColorSetupLayer, init, LevelSettingsObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x256d20, Thiscall, GJColorSetupLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x256bd0, Thiscall, GJColorSetupLayer, onColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x256b80, Thiscall, GJColorSetupLayer, onPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x256cb0, Thiscall, GJColorSetupLayer, showPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x256a10, Thiscall, GJColorSetupLayer, updateSpriteColor, ColorChannelSprite*, cocos2d::CCLabelBMFont*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2568f0, Thiscall, GJColorSetupLayer, updateSpriteColors, )
 		}
 	};
 }

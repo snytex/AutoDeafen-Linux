@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_setupList
 		#define GEODE_STATICS_setupList
 		GEODE_AS_STATIC_FUNCTION(setupList) 
@@ -40,19 +35,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(loadCell) 
 	#endif
 
-	#ifndef GEODE_STATICS_addObjectToList
-		#define GEODE_STATICS_addObjectToList
-		GEODE_AS_STATIC_FUNCTION(addObjectToList) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
-	#ifndef GEODE_STATICS_lockList
-		#define GEODE_STATICS_lockList
-		GEODE_AS_STATIC_FUNCTION(lockList) 
 	#endif
 
     
@@ -145,23 +130,24 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(BoomListView, create, cocos2d::CCArray*, TableViewCellDelegate*, float, float, int, BoomListType, float)
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x3bf80, Thiscall, BoomListView)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomListView, create, cocos2d::CCArray*, TableViewCellDelegate*, float, float, int, BoomListType, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomListView, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c350, Thiscall, BoomListView, setupList, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c390, Thiscall, BoomListView, setupList, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomListView, TableViewWillDisplayCellForRowAtIndexPath, CCIndexPath&, TableViewCell*, TableView*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c3e0, Thiscall, BoomListView, cellHeightForRowAtIndexPath, CCIndexPath&, TableView*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c420, Thiscall, BoomListView, cellHeightForRowAtIndexPath, CCIndexPath&, TableView*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomListView, didSelectRowAtIndexPath, CCIndexPath&, TableView*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c3f0, Thiscall, BoomListView, numberOfRowsInSection, unsigned int, TableView*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c430, Thiscall, BoomListView, numberOfRowsInSection, unsigned int, TableView*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomListView, numberOfSectionsInTableView, TableView*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c410, Thiscall, BoomListView, cellForRowAtIndexPath, CCIndexPath&, TableView*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c450, Thiscall, BoomListView, cellForRowAtIndexPath, CCIndexPath&, TableView*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomListView, TableViewCommitCellEditingStyleForRowAtIndexPath, TableView*, TableViewCellEditingStyle, CCIndexPath&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomListView, TableViewWillReloadCellForRowAtIndexPath, CCIndexPath&, TableViewCell*, TableView*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c4a0, Thiscall, BoomListView, getListCell, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c610, Thiscall, BoomListView, loadCell, TableViewCell*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(BoomListView, addObjectToList, cocos2d::CCNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bfe0, Thiscall, BoomListView, init, cocos2d::CCArray*, TableViewCellDelegate*, float, float, int, BoomListType, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c4e0, Thiscall, BoomListView, getListCell, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c650, Thiscall, BoomListView, loadCell, TableViewCell*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomListView, addObjectToList, cocos2d::CCNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomListView, init, cocos2d::CCArray*, BoomListType, float, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(BoomListView, lockList, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c020, Thiscall, BoomListView, init, cocos2d::CCArray*, TableViewCellDelegate*, float, float, int, BoomListType, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BoomListView, lockList, bool)
 		}
 	};
 }

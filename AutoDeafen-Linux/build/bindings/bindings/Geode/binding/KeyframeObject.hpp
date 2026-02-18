@@ -15,10 +15,13 @@ public:
     static constexpr auto CLASS_NAME = "KeyframeObject";
 
     /**
-     * @note[short] Windows: 0x2b9730
+     * @note[short] MacOS (ARM): 0xe9684
+     * @note[short] MacOS (Intel): 0x10d6c0
+     * @note[short] Windows: 0x2c0e00
+     * @note[short] iOS: 0x213f7c
      * @note[short] Android: Rebinded
      */
-    void setupSpline(gd::vector<KeyframeObject*>& p0);
+    void setupSpline(gd::vector<KeyframeObject*>& objects);
     double m_unk000;
     int m_unk008;
     float m_unk00c;

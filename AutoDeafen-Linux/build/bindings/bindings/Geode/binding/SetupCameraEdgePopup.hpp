@@ -16,85 +16,91 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupCameraEdgePopup, SetupTriggerPopup)
 
     /**
-     * @note[short] MacOS (ARM): 0x4c5330
-     * @note[short] MacOS (Intel): 0x570e20
-     * @note[short] Windows: 0x3faea0
-     * @note[short] iOS: 0x239aa0
+     * @note[short] MacOS (ARM): 0x4d34c0
+     * @note[short] MacOS (Intel): 0x587e80
+     * @note[short] Windows: 0x412b60
+     * @note[short] iOS: 0x239d5c
      * @note[short] Android
      */
-    static SetupCameraEdgePopup* create(CameraTriggerGameObject* p0, cocos2d::CCArray* p1);
+    static SetupCameraEdgePopup* create(CameraTriggerGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c63b8
-     * @note[short] MacOS (Intel): 0x5720f0
-     * @note[short] Windows: 0x3fbd10
-     * @note[short] iOS: 0x23a898
+     * @note[short] MacOS (ARM): 0x4d453c
+     * @note[short] MacOS (Intel): 0x589120
+     * @note[short] Windows: 0x4139d0
+     * @note[short] iOS: 0x23ab54
      * @note[short] Android
      */
     virtual void determineStartValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x4c6600
-     * @note[short] MacOS (Intel): 0x572390
-     * @note[short] Windows: 0x3fc200
-     * @note[short] iOS: 0x23aa70
+     * @note[short] MacOS (ARM): 0x4d4774
+     * @note[short] MacOS (Intel): 0x5893c0
+     * @note[short] Windows: 0x413ec0
+     * @note[short] iOS: 0x23ad2c
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c6518
-     * @note[short] MacOS (Intel): 0x572280
-     * @note[short] Windows: 0x3fbfc0
-     * @note[short] iOS: 0x23a9f0
+     * @note[short] MacOS (ARM): 0x4d469c
+     * @note[short] MacOS (Intel): 0x5892b0
+     * @note[short] Windows: 0x413c80
+     * @note[short] iOS: 0x23acac
      * @note[short] Android
      */
-    virtual void textChanged(CCTextInputNode* p0);
+    virtual void textChanged(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c54c0
-     * @note[short] MacOS (Intel): 0x571060
-     * @note[short] Windows: 0x3fafd0
-     * @note[short] iOS: 0x239b84
+     * @note[short] MacOS (ARM): 0x4d3650
+     * @note[short] MacOS (Intel): 0x5880c0
+     * @note[short] Windows: 0x412c90
+     * @note[short] iOS: 0x239e40
      * @note[short] Android
      */
-    bool init(CameraTriggerGameObject* p0, cocos2d::CCArray* p1);
+    bool init(CameraTriggerGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c624c
-     * @note[short] MacOS (Intel): 0x571f20
-     * @note[short] Windows: 0x3fbe10
-     * @note[short] iOS: 0x23a778
+     * @note[short] MacOS (ARM): 0x4d43d0
+     * @note[short] MacOS (Intel): 0x588f50
+     * @note[short] Windows: 0x413ad0
+     * @note[short] iOS: 0x23aa34
      * @note[short] Android
      */
     void onCameraEdge(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c6094
-     * @note[short] MacOS (Intel): 0x571d40
-     * @note[short] Windows: 0x3fbf70
-     * @note[short] iOS: 0x23a694
+     * @note[short] MacOS (ARM): 0x4d4224
+     * @note[short] MacOS (Intel): 0x588d80
+     * @note[short] Windows: 0x413c30
+     * @note[short] iOS: 0x23a950
      * @note[short] Android
      */
     void onTargetIDArrow(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c633c
-     * @note[short] MacOS (Intel): 0x572050
-     * @note[short] Windows: 0x3fbf40
-     * @note[short] iOS: 0x23a868
+     * @note[short] MacOS (ARM): 0x4d44c0
+     * @note[short] MacOS (Intel): 0x589080
+     * @note[short] Windows: 0x413c00
+     * @note[short] iOS: 0x23ab24
      * @note[short] Android
      */
     void onUnlockEdge(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x3fc130
+     * @note[short] MacOS (ARM): 0x4d4618
+     * @note[short] MacOS (Intel): 0x589210
+     * @note[short] Windows: 0x413df0
+     * @note[short] iOS: 0x23ac28
      * @note[short] Android
      */
     void updateTargetID();
 
     /**
-     * @note[short] Windows: 0x3fc0b0
+     * @note[short] MacOS (ARM): 0x4d42cc
+     * @note[short] MacOS (Intel): 0x588e40
+     * @note[short] Windows: 0x413d70
+     * @note[short] iOS: 0x23a9a4
      * @note[short] Android
      */
     void updateTextInputLabel();

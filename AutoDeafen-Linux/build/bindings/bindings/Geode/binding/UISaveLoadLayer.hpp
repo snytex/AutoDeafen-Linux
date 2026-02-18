@@ -25,31 +25,37 @@ public:
      UISaveLoadLayer();
 
     /**
+     * @note[short] MacOS (ARM): 0x25203c
+     * @note[short] MacOS (Intel): 0x2b4430
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x2e3f78
      * @note[short] Android
      */
-    static UISaveLoadLayer* create(UIOptionsLayer* p0);
+    static UISaveLoadLayer* create(UIOptionsLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x248bb8
-     * @note[short] MacOS (Intel): 0x2a1cf0
-     * @note[short] Windows: 0x29c940
+     * @note[short] MacOS (ARM): 0x252cc8
+     * @note[short] MacOS (Intel): 0x2b51c0
+     * @note[short] Windows: 0x2a4000
+     * @note[short] iOS: 0x2e4784
      * @note[short] Android
      */
-    bool init(UIOptionsLayer* p0);
+    bool init(UIOptionsLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x2494ec
-     * @note[short] MacOS (Intel): 0x2a25d0
-     * @note[short] Windows: 0x29d120
+     * @note[short] MacOS (ARM): 0x2535f0
+     * @note[short] MacOS (Intel): 0x2b5ad0
+     * @note[short] Windows: 0x2a47e0
+     * @note[short] iOS: 0x2e4ce0
      * @note[short] Android
      */
     void onLoad(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2492ac
-     * @note[short] MacOS (Intel): 0x2a23a0
-     * @note[short] Windows: 0x29ce90
+     * @note[short] MacOS (ARM): 0x2533bc
+     * @note[short] MacOS (Intel): 0x2b58a0
+     * @note[short] Windows: 0x2a4550
+     * @note[short] iOS: 0x2e4b20
      * @note[short] Android
      */
     void onSave(cocos2d::CCObject* sender);

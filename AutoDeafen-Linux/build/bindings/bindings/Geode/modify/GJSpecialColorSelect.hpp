@@ -20,16 +20,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(keyBackClicked) 
 	#endif
 
-	#ifndef GEODE_STATICS_getButtonByTag
-		#define GEODE_STATICS_getButtonByTag
-		GEODE_AS_STATIC_FUNCTION(getButtonByTag) 
-	#endif
-
-	#ifndef GEODE_STATICS_highlightSelected
-		#define GEODE_STATICS_highlightSelected
-		GEODE_AS_STATIC_FUNCTION(highlightSelected) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -95,14 +85,14 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b0670, Default, GJSpecialColorSelect, create, int, GJSpecialColorSelectDelegate*, ColorSelectType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b13c0, Default, GJSpecialColorSelect, textForColorIdx, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b1370, Thiscall, GJSpecialColorSelect, keyBackClicked, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJSpecialColorSelect, getButtonByTag, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJSpecialColorSelect, highlightSelected, ButtonSprite*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b0780, Thiscall, GJSpecialColorSelect, init, int, GJSpecialColorSelectDelegate*, ColorSelectType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b1320, Thiscall, GJSpecialColorSelect, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b1240, Thiscall, GJSpecialColorSelect, onSelectColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7d30, Default, GJSpecialColorSelect, create, int, GJSpecialColorSelectDelegate*, ColorSelectType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b8a80, Default, GJSpecialColorSelect, textForColorIdx, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b8a30, Thiscall, GJSpecialColorSelect, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSpecialColorSelect, getButtonByTag, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSpecialColorSelect, highlightSelected, ButtonSprite*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7e40, Thiscall, GJSpecialColorSelect, init, int, GJSpecialColorSelectDelegate*, ColorSelectType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b89e0, Thiscall, GJSpecialColorSelect, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b8900, Thiscall, GJSpecialColorSelect, onSelectColor, cocos2d::CCObject*)
 		}
 	};
 }

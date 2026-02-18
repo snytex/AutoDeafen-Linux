@@ -30,11 +30,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(baseSetup) 
 	#endif
 
-	#ifndef GEODE_STATICS_createDots
-		#define GEODE_STATICS_createDots
-		GEODE_AS_STATIC_FUNCTION(createDots) 
-	#endif
-
 	#ifndef GEODE_STATICS_createPrefab
 		#define GEODE_STATICS_createPrefab
 		GEODE_AS_STATIC_FUNCTION(createPrefab) 
@@ -55,19 +50,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onClick) 
 	#endif
 
-	#ifndef GEODE_STATICS_onClose
-		#define GEODE_STATICS_onClose
-		GEODE_AS_STATIC_FUNCTION(onClose) 
-	#endif
-
 	#ifndef GEODE_STATICS_onTemplateObject
 		#define GEODE_STATICS_onTemplateObject
 		GEODE_AS_STATIC_FUNCTION(onTemplateObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateDots
-		#define GEODE_STATICS_updateDots
-		GEODE_AS_STATIC_FUNCTION(updateDots) 
 	#endif
 
     
@@ -150,22 +135,22 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x43e390, Thiscall, BrowseSmartTemplateLayer, )
-			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x441980, Thiscall, BrowseSmartTemplateLayer)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x456730, Thiscall, BrowseSmartTemplateLayer, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x459d20, Thiscall, BrowseSmartTemplateLayer)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BrowseSmartTemplateLayer, create, GJSmartTemplate*, SmartBrowseFilter)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x443040, Thiscall, BrowseSmartTemplateLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x443060, Thiscall, BrowseSmartTemplateLayer, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4424b0, Thiscall, BrowseSmartTemplateLayer, addObjectToPage, cocos2d::CCObject*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4420b0, Thiscall, BrowseSmartTemplateLayer, addPrefabMenuItem, SmartPrefabResult, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x442540, Thiscall, BrowseSmartTemplateLayer, baseSetup, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(BrowseSmartTemplateLayer, createDots, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x442c60, Thiscall, BrowseSmartTemplateLayer, createPrefab, gd::string, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x442af0, Thiscall, BrowseSmartTemplateLayer, goToPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x441a40, Thiscall, BrowseSmartTemplateLayer, init, GJSmartTemplate*, SmartBrowseFilter)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x442ff0, Thiscall, BrowseSmartTemplateLayer, onClick, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(BrowseSmartTemplateLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x442d30, Thiscall, BrowseSmartTemplateLayer, onTemplateObject, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(BrowseSmartTemplateLayer, updateDots, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45b3e0, Thiscall, BrowseSmartTemplateLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45b400, Thiscall, BrowseSmartTemplateLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45a850, Thiscall, BrowseSmartTemplateLayer, addObjectToPage, cocos2d::CCObject*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45a450, Thiscall, BrowseSmartTemplateLayer, addPrefabMenuItem, SmartPrefabResult, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45a8e0, Thiscall, BrowseSmartTemplateLayer, baseSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BrowseSmartTemplateLayer, createDots, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45b000, Thiscall, BrowseSmartTemplateLayer, createPrefab, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45ae90, Thiscall, BrowseSmartTemplateLayer, goToPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x459de0, Thiscall, BrowseSmartTemplateLayer, init, GJSmartTemplate*, SmartBrowseFilter)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45b390, Thiscall, BrowseSmartTemplateLayer, onClick, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BrowseSmartTemplateLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45b0d0, Thiscall, BrowseSmartTemplateLayer, onTemplateObject, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(BrowseSmartTemplateLayer, updateDots, )
 		}
 	};
 }

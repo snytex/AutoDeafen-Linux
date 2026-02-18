@@ -16,113 +16,156 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(KeybindingsLayer, FLAlertLayer)
 
     /**
-     * @note[short] Windows: 0x2b81d0
+     * @note[short] MacOS (ARM): 0x52ffd4
+     * @note[short] MacOS (Intel): 0x609d50
+     * @note[short] Windows: 0x2bf8a0
      * @note[short] Android
      */
     static KeybindingsLayer* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x5220ec
-     * @note[short] MacOS (Intel): 0x5f25f0
-     * @note[short] Windows: 0x2b82c0
+     * @note[short] MacOS (ARM): 0x5300d8
+     * @note[short] MacOS (Intel): 0x609e90
+     * @note[short] Windows: 0x2bf990
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x523ab4
-     * @note[short] MacOS (Intel): 0x5f3fc0
-     * @note[short] Windows: 0x84650
+     * @note[short] MacOS (ARM): 0x531a48
+     * @note[short] MacOS (Intel): 0x60b800
+     * @note[short] Windows: 0x846a0
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] Windows: 0x2b8bd0
+     * @note[short] MacOS (ARM): 0x5309b4
+     * @note[short] MacOS (Intel): 0x60a740
+     * @note[short] Windows: 0x2c02a0
      * @note[short] Android
      */
-    cocos2d::CCLabelBMFont* addKeyPair(char const* p0, char const* p1);
+    cocos2d::CCLabelBMFont* addKeyPair(char const* action, char const* key);
 
     /**
-     * @note[short] Windows: 0x2b8f80
+     * @note[short] MacOS (ARM): 0x531488
+     * @note[short] MacOS (Intel): 0x60b280
+     * @note[short] Windows: 0x2c0650
      * @note[short] Android
      */
-    int countForPage(int p0);
+    int countForPage(int page);
 
     /**
-     * @note[short] Windows: 0x2b9220
+     * @note[short] MacOS (ARM): 0x530cd0
+     * @note[short] MacOS (Intel): 0x60aa70
+     * @note[short] Windows: 0x2c08f0
      * @note[short] Android
      */
-    void goToPage(int p0);
+    void goToPage(int page);
 
     /**
+     * @note[short] MacOS (ARM): 0x531358
+     * @note[short] MacOS (Intel): 0x60b160
+     * @note[short] Windows: Out of line
      * @note[short] Android
      */
-    void incrementCountForPage(int p0);
+    void incrementCountForPage(int page);
 
     /**
+     * @note[short] MacOS (ARM): 0x5317dc
+     * @note[short] MacOS (Intel): 0x60b5c0
+     * @note[short] Windows: Out of line
      * @note[short] Android
      */
-    const char* infoKey(int p0);
+    const char* infoKey(int index);
 
     /**
-     * @note[short] Windows: 0x2b9050
+     * @note[short] MacOS (ARM): 0x5310e0
+     * @note[short] MacOS (Intel): 0x60aee0
+     * @note[short] Windows: 0x2c0720
      * @note[short] Android
      */
-    cocos2d::CCLayer* layerForPage(int p0);
+    cocos2d::CCLayer* layerForPage(int page);
 
     /**
+     * @note[short] MacOS (ARM): 0x5317b4
+     * @note[short] MacOS (Intel): 0x60b5a0
+     * @note[short] Windows: Out of line
      * @note[short] Android
      */
-    const char* layerKey(int p0);
+    const char* layerKey(int page);
 
     /**
+     * @note[short] MacOS (ARM): 0x5312cc
+     * @note[short] MacOS (Intel): 0x60b0d0
+     * @note[short] Windows: Out of line
      * @note[short] Android
      */
-    cocos2d::CCPoint nextPosition(int p0);
+    cocos2d::CCPoint nextPosition(int page);
 
     /**
+     * @note[short] MacOS (ARM): 0x53178c
+     * @note[short] MacOS (Intel): 0x60b580
+     * @note[short] Windows: Out of line
      * @note[short] Android
      */
-    const char* objectKey(int p0);
+    const char* objectKey(int page);
 
     /**
+     * @note[short] MacOS (ARM): 0x5315c8
+     * @note[short] MacOS (Intel): 0x60b3a0
+     * @note[short] Windows: Out of line
      * @note[short] Android
      */
-    cocos2d::CCArray* objectsForPage(int p0);
+    cocos2d::CCArray* objectsForPage(int page);
 
     /**
-     * @note[short] Windows: 0x84620
+     * @note[short] MacOS (ARM): 0x530c7c
+     * @note[short] MacOS (Intel): 0x60aa00
+     * @note[short] Windows: 0x84670
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x53186c
+     * @note[short] MacOS (Intel): 0x60b630
+     * @note[short] Windows: Out of line
      * @note[short] Android
      */
     void onInfo(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x2b9200
+     * @note[short] MacOS (ARM): 0x530cc4
+     * @note[short] MacOS (Intel): 0x60aa50
+     * @note[short] Windows: 0x2c08d0
      * @note[short] Android
      */
     void onNextPage(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x2b9210
+     * @note[short] MacOS (ARM): 0x530cb8
+     * @note[short] MacOS (Intel): 0x60aa30
+     * @note[short] Windows: 0x2c08e0
      * @note[short] Android
      */
     void onPrevPage(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x531804
+     * @note[short] MacOS (Intel): 0x60b5e0
+     * @note[short] Windows: Out of line
      * @note[short] Android
      */
     void onToggle(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x5315a0
+     * @note[short] MacOS (Intel): 0x60b380
+     * @note[short] Windows: Out of line
      * @note[short] Android
      */
-    const char* pageKey(int p0);
+    const char* pageKey(int page);
     int m_page;
     int m_keyCount;
     int m_maxPage;

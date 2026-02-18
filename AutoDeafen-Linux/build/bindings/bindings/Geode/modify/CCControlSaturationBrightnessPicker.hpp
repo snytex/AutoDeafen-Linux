@@ -5,14 +5,9 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_checkSliderPosition
-		#define GEODE_STATICS_checkSliderPosition
-		GEODE_AS_STATIC_FUNCTION(checkSliderPosition) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateSliderPosition
-		#define GEODE_STATICS_updateSliderPosition
-		GEODE_AS_STATIC_FUNCTION(updateSliderPosition) 
+	#ifndef GEODE_STATICS_create
+		#define GEODE_STATICS_create
+		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
 	#ifndef GEODE_STATICS_ccTouchBegan
@@ -45,15 +40,25 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateDraggerWithHSV) 
 	#endif
 
-    
-	#ifndef GEODE_CONCEPT_CHECK_checkSliderPosition
-		#define GEODE_CONCEPT_CHECK_checkSliderPosition
-		GEODE_CONCEPT_FUNCTION_CHECK(checkSliderPosition) 
+	#ifndef GEODE_STATICS_registerWithTouchDispatcher
+		#define GEODE_STATICS_registerWithTouchDispatcher
+		GEODE_AS_STATIC_FUNCTION(registerWithTouchDispatcher) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_updateSliderPosition
-		#define GEODE_CONCEPT_CHECK_updateSliderPosition
-		GEODE_CONCEPT_FUNCTION_CHECK(updateSliderPosition) 
+	#ifndef GEODE_STATICS_checkSliderPosition
+		#define GEODE_STATICS_checkSliderPosition
+		GEODE_AS_STATIC_FUNCTION(checkSliderPosition) 
+	#endif
+
+	#ifndef GEODE_STATICS_updateSliderPosition
+		#define GEODE_STATICS_updateSliderPosition
+		GEODE_AS_STATIC_FUNCTION(updateSliderPosition) 
+	#endif
+
+    
+	#ifndef GEODE_CONCEPT_CHECK_create
+		#define GEODE_CONCEPT_CHECK_create
+		GEODE_CONCEPT_FUNCTION_CHECK(create) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_ccTouchBegan
@@ -86,6 +91,21 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(updateDraggerWithHSV) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_registerWithTouchDispatcher
+		#define GEODE_CONCEPT_CHECK_registerWithTouchDispatcher
+		GEODE_CONCEPT_FUNCTION_CHECK(registerWithTouchDispatcher) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_checkSliderPosition
+		#define GEODE_CONCEPT_CHECK_checkSliderPosition
+		GEODE_CONCEPT_FUNCTION_CHECK(checkSliderPosition) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_updateSliderPosition
+		#define GEODE_CONCEPT_CHECK_updateSliderPosition
+		GEODE_CONCEPT_FUNCTION_CHECK(updateSliderPosition) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::extension::CCControlSaturationBrightnessPicker> : ModifyBase<ModifyDerive<Der, cocos2d::extension::CCControlSaturationBrightnessPicker>> {
@@ -97,14 +117,16 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getExtensions(), "??0CCControlSaturationBrightnessPicker@extension@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::extension::CCControlSaturationBrightnessPicker, )
 			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getExtensions(), "??1CCControlSaturationBrightnessPicker@extension@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::extension::CCControlSaturationBrightnessPicker)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint>::func(&cocos2d::extension::CCControlSaturationBrightnessPicker::checkSliderPosition)), Thiscall, cocos2d::extension::CCControlSaturationBrightnessPicker, checkSliderPosition, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint>::func(&cocos2d::extension::CCControlSaturationBrightnessPicker::updateSliderPosition)), Thiscall, cocos2d::extension::CCControlSaturationBrightnessPicker, updateSliderPosition, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCNode*, cocos2d::CCPoint>::func(&cocos2d::extension::CCControlSaturationBrightnessPicker::create)), Default, cocos2d::extension::CCControlSaturationBrightnessPicker, create, cocos2d::CCNode*, cocos2d::CCPoint)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCTouch*, cocos2d::CCEvent*>::func(&cocos2d::extension::CCControlSaturationBrightnessPicker::ccTouchBegan)), Thiscall, cocos2d::extension::CCControlSaturationBrightnessPicker, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCTouch*, cocos2d::CCEvent*>::func(&cocos2d::extension::CCControlSaturationBrightnessPicker::ccTouchMoved)), Thiscall, cocos2d::extension::CCControlSaturationBrightnessPicker, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<bool>::func(&cocos2d::extension::CCControlSaturationBrightnessPicker::setEnabled)), Thiscall, cocos2d::extension::CCControlSaturationBrightnessPicker, setEnabled, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCNode*, cocos2d::CCPoint>::func(&cocos2d::extension::CCControlSaturationBrightnessPicker::initWithTargetAndPos)), Thiscall, cocos2d::extension::CCControlSaturationBrightnessPicker, initWithTargetAndPos, cocos2d::CCNode*, cocos2d::CCPoint)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::extension::HSV>::func(&cocos2d::extension::CCControlSaturationBrightnessPicker::updateWithHSV)), Thiscall, cocos2d::extension::CCControlSaturationBrightnessPicker, updateWithHSV, cocos2d::extension::HSV)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::extension::HSV>::func(&cocos2d::extension::CCControlSaturationBrightnessPicker::updateDraggerWithHSV)), Thiscall, cocos2d::extension::CCControlSaturationBrightnessPicker, updateDraggerWithHSV, cocos2d::extension::HSV)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::extension::CCControlSaturationBrightnessPicker::registerWithTouchDispatcher)), Thiscall, cocos2d::extension::CCControlSaturationBrightnessPicker, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint>::func(&cocos2d::extension::CCControlSaturationBrightnessPicker::checkSliderPosition)), Thiscall, cocos2d::extension::CCControlSaturationBrightnessPicker, checkSliderPosition, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint>::func(&cocos2d::extension::CCControlSaturationBrightnessPicker::updateSliderPosition)), Thiscall, cocos2d::extension::CCControlSaturationBrightnessPicker, updateSliderPosition, cocos2d::CCPoint)
 		}
 	};
 }

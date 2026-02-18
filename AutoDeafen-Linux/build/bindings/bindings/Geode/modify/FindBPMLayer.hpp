@@ -35,16 +35,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(recordingDidStop) 
 	#endif
 
-	#ifndef GEODE_STATICS_calculateBPM
-		#define GEODE_STATICS_calculateBPM
-		GEODE_AS_STATIC_FUNCTION(calculateBPM) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -100,15 +90,15 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b280, Default, FindBPMLayer, create, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b870, Thiscall, FindBPMLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b6e0, Thiscall, FindBPMLayer, playMusic, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b780, Thiscall, FindBPMLayer, registerTouch, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b8b0, Default, FindBPMLayer, create, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9bea0, Thiscall, FindBPMLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9bd10, Thiscall, FindBPMLayer, playMusic, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9bdb0, Thiscall, FindBPMLayer, registerTouch, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FindBPMLayer, onInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b4a0, Thiscall, FindBPMLayer, onRecord, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b660, Thiscall, FindBPMLayer, recordingDidStop, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(FindBPMLayer, calculateBPM, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(FindBPMLayer, init, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9bad0, Thiscall, FindBPMLayer, onRecord, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9bc90, Thiscall, FindBPMLayer, recordingDidStop, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FindBPMLayer, calculateBPM, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FindBPMLayer, init, int)
 		}
 	};
 }

@@ -40,11 +40,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(setupPageInfo) 
 	#endif
 
-	#ifndef GEODE_STATICS_isCorrect
-		#define GEODE_STATICS_isCorrect
-		GEODE_AS_STATIC_FUNCTION(isCorrect) 
-	#endif
-
 	#ifndef GEODE_STATICS_loadPage
 		#define GEODE_STATICS_loadPage
 		GEODE_AS_STATIC_FUNCTION(loadPage) 
@@ -68,11 +63,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_setupLeaderboard
 		#define GEODE_STATICS_setupLeaderboard
 		GEODE_AS_STATIC_FUNCTION(setupLeaderboard) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateLevelsLabel
-		#define GEODE_STATICS_updateLevelsLabel
-		GEODE_AS_STATIC_FUNCTION(updateLevelsLabel) 
 	#endif
 
     
@@ -161,20 +151,20 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TopArtistsLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b2030, Thiscall, TopArtistsLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, TopArtistsLayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, TopArtistsLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867a0, Thiscall, TopArtistsLayer, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b27d0, Thiscall, TopArtistsLayer, loadListFinished, cocos2d::CCArray*, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b2830, Thiscall, TopArtistsLayer, loadListFailed, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b2990, Thiscall, TopArtistsLayer, setupPageInfo, gd::string, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TopArtistsLayer, isCorrect, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b2b70, Thiscall, TopArtistsLayer, loadPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84620, Thiscall, TopArtistsLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b2fe0, Thiscall, TopArtistsLayer, onNextPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b2ff0, Thiscall, TopArtistsLayer, onPrevPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b2840, Thiscall, TopArtistsLayer, setupLeaderboard, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TopArtistsLayer, updateLevelsLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cac10, Thiscall, TopArtistsLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, TopArtistsLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, TopArtistsLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867f0, Thiscall, TopArtistsLayer, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cb3b0, Thiscall, TopArtistsLayer, loadListFinished, cocos2d::CCArray*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cb410, Thiscall, TopArtistsLayer, loadListFailed, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cb570, Thiscall, TopArtistsLayer, setupPageInfo, gd::string, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TopArtistsLayer, isCorrect, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cb750, Thiscall, TopArtistsLayer, loadPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, TopArtistsLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cbbc0, Thiscall, TopArtistsLayer, onNextPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cbbd0, Thiscall, TopArtistsLayer, onPrevPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cb420, Thiscall, TopArtistsLayer, setupLeaderboard, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TopArtistsLayer, updateLevelsLabel, )
 		}
 	};
 }

@@ -16,6 +16,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(loadSongInfoFailed) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_downloadSongStarted
+		#define GEODE_CONCEPT_CHECK_downloadSongStarted
+		GEODE_CONCEPT_FUNCTION_CHECK(downloadSongStarted) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_downloadSongFinished
 		#define GEODE_CONCEPT_CHECK_downloadSongFinished
 		GEODE_CONCEPT_FUNCTION_CHECK(downloadSongFinished) 
@@ -62,6 +67,7 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadDelegate, loadSongInfoFinished, SongInfoObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadDelegate, loadSongInfoFailed, int, GJSongError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadDelegate, downloadSongStarted, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadDelegate, downloadSongFinished, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadDelegate, downloadSongFailed, int, GJSongError)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadDelegate, songStateChanged, )

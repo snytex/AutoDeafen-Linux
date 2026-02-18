@@ -25,16 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(tweenValue) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateTweenAction
-		#define GEODE_STATICS_updateTweenAction
-		GEODE_AS_STATIC_FUNCTION(updateTweenAction) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateTweenActions
-		#define GEODE_STATICS_updateTweenActions
-		GEODE_AS_STATIC_FUNCTION(updateTweenActions) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_controlTweenAction
 		#define GEODE_CONCEPT_CHECK_controlTweenAction
@@ -80,13 +70,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameState, controlTweenAction, int, int, GJActionCommand)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x200400, Thiscall, GJGameState, getGameObjectPhysics, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x200290, Thiscall, GJGameState, processStateTriggers, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x205460, Thiscall, GJGameState, controlTweenAction, int, int, GJActionCommand)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x205660, Thiscall, GJGameState, getGameObjectPhysics, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2054f0, Thiscall, GJGameState, processStateTriggers, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameState, stopTweenAction, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x200140, Thiscall, GJGameState, tweenValue, float, float, int, float, int, float, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameState, updateTweenAction, float, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJGameState, updateTweenActions, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2053a0, Thiscall, GJGameState, tweenValue, float, float, int, float, int, float, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameState, updateTweenAction, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJGameState, updateTweenActions, float)
 		}
 	};
 }

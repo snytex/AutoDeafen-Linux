@@ -40,16 +40,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(finishTouch) 
 	#endif
 
-	#ifndef GEODE_STATICS_setAngle
-		#define GEODE_STATICS_setAngle
-		GEODE_AS_STATIC_FUNCTION(setAngle) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateSliderPosition
-		#define GEODE_STATICS_updateSliderPosition
-		GEODE_AS_STATIC_FUNCTION(updateSliderPosition) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -111,15 +101,15 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRotationControl, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1277e0, Thiscall, GJRotationControl, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x127c40, Thiscall, GJRotationControl, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x127980, Thiscall, GJRotationControl, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x127a80, Thiscall, GJRotationControl, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x127c20, Thiscall, GJRotationControl, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71210, Thiscall, GJRotationControl, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x127900, Thiscall, GJRotationControl, finishTouch, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJRotationControl, setAngle, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJRotationControl, updateSliderPosition, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x129590, Thiscall, GJRotationControl, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1299f0, Thiscall, GJRotationControl, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x129730, Thiscall, GJRotationControl, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x129830, Thiscall, GJRotationControl, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1299d0, Thiscall, GJRotationControl, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71240, Thiscall, GJRotationControl, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1296b0, Thiscall, GJRotationControl, finishTouch, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRotationControl, setAngle, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRotationControl, updateSliderPosition, cocos2d::CCPoint)
 		}
 	};
 }

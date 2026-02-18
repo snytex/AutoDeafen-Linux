@@ -10,16 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
-	#ifndef GEODE_STATICS_createWithActions
-		#define GEODE_STATICS_createWithActions
-		GEODE_AS_STATIC_FUNCTION(createWithActions) 
-	#endif
-
-	#ifndef GEODE_STATICS_createWithObject
-		#define GEODE_STATICS_createWithObject
-		GEODE_AS_STATIC_FUNCTION(createWithObject) 
-	#endif
-
 	#ifndef GEODE_STATICS_keyBackClicked
 		#define GEODE_STATICS_keyBackClicked
 		GEODE_AS_STATIC_FUNCTION(keyBackClicked) 
@@ -33,26 +23,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_closeColorSelect
 		#define GEODE_STATICS_closeColorSelect
 		GEODE_AS_STATIC_FUNCTION(closeColorSelect) 
-	#endif
-
-	#ifndef GEODE_STATICS_colorValueChanged
-		#define GEODE_STATICS_colorValueChanged
-		GEODE_AS_STATIC_FUNCTION(colorValueChanged) 
-	#endif
-
-	#ifndef GEODE_STATICS_createToggleButton
-		#define GEODE_STATICS_createToggleButton
-		GEODE_AS_STATIC_FUNCTION(createToggleButton) 
-	#endif
-
-	#ifndef GEODE_STATICS_determineStartValues
-		#define GEODE_STATICS_determineStartValues
-		GEODE_AS_STATIC_FUNCTION(determineStartValues) 
-	#endif
-
-	#ifndef GEODE_STATICS_getColorValue
-		#define GEODE_STATICS_getColorValue
-		GEODE_AS_STATIC_FUNCTION(getColorValue) 
 	#endif
 
 	#ifndef GEODE_STATICS_init
@@ -83,16 +53,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateColorLabel
 		#define GEODE_STATICS_updateColorLabel
 		GEODE_AS_STATIC_FUNCTION(updateColorLabel) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateColorValue
-		#define GEODE_STATICS_updateColorValue
-		GEODE_AS_STATIC_FUNCTION(updateColorValue) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateOpacity
-		#define GEODE_STATICS_updateOpacity
-		GEODE_AS_STATIC_FUNCTION(updateOpacity) 
 	#endif
 
     
@@ -205,26 +165,26 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8bc50, Default, ColorSelectLiveOverlay, create, ColorAction*, ColorAction*, EffectGameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectLiveOverlay, createWithActions, ColorAction*, ColorAction*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectLiveOverlay, createWithObject, EffectGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8d1b0, Thiscall, ColorSelectLiveOverlay, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8ba30, Thiscall, ColorSelectLiveOverlay, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8d020, Thiscall, ColorSelectLiveOverlay, closeColorSelect, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectLiveOverlay, colorValueChanged, cocos2d::ccColor3B)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectLiveOverlay, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectLiveOverlay, determineStartValues, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectLiveOverlay, getColorValue, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8bda0, Thiscall, ColorSelectLiveOverlay, init, ColorAction*, ColorAction*, EffectGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8d070, Thiscall, ColorSelectLiveOverlay, onSelectTab, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8d200, Thiscall, ColorSelectLiveOverlay, selectColor, cocos2d::ccColor3B)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8cd30, Thiscall, ColorSelectLiveOverlay, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8bd10, Default, ColorSelectLiveOverlay, create, ColorAction*, ColorAction*, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectLiveOverlay, createWithActions, ColorAction*, ColorAction*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectLiveOverlay, createWithObject, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8d270, Thiscall, ColorSelectLiveOverlay, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8baf0, Thiscall, ColorSelectLiveOverlay, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8d0e0, Thiscall, ColorSelectLiveOverlay, closeColorSelect, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectLiveOverlay, colorValueChanged, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectLiveOverlay, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectLiveOverlay, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectLiveOverlay, getColorValue, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8be60, Thiscall, ColorSelectLiveOverlay, init, ColorAction*, ColorAction*, EffectGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8d130, Thiscall, ColorSelectLiveOverlay, onSelectTab, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8d2c0, Thiscall, ColorSelectLiveOverlay, selectColor, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8cdf0, Thiscall, ColorSelectLiveOverlay, sliderChanged, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectLiveOverlay, textChanged, CCTextInputNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectLiveOverlay, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8d640, Thiscall, ColorSelectLiveOverlay, toggleControls, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8d480, Thiscall, ColorSelectLiveOverlay, updateColorLabel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectLiveOverlay, updateColorValue, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectLiveOverlay, updateOpacity, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8d700, Thiscall, ColorSelectLiveOverlay, toggleControls, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8d540, Thiscall, ColorSelectLiveOverlay, updateColorLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectLiveOverlay, updateColorValue, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectLiveOverlay, updateOpacity, )
 		}
 	};
 }

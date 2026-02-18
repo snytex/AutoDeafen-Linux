@@ -46,8 +46,8 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DungeonBarsSprite, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d8470, Thiscall, DungeonBarsSprite, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3d84f0, Thiscall, DungeonBarsSprite, visit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ef7e0, Thiscall, DungeonBarsSprite, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ef860, Thiscall, DungeonBarsSprite, visit, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(DungeonBarsSprite, animateOutBars, )
 		}
 	};

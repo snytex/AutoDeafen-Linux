@@ -15,79 +15,19 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createWithFontDefinition) 
 	#endif
 
-	#ifndef GEODE_STATICS_initWithString
-		#define GEODE_STATICS_initWithString
-		GEODE_AS_STATIC_FUNCTION(initWithString) 
+	#ifndef GEODE_STATICS_init
+		#define GEODE_STATICS_init
+		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_initWithStringAndTextDefinition
-		#define GEODE_STATICS_initWithStringAndTextDefinition
-		GEODE_AS_STATIC_FUNCTION(initWithStringAndTextDefinition) 
+	#ifndef GEODE_STATICS_setString
+		#define GEODE_STATICS_setString
+		GEODE_AS_STATIC_FUNCTION(setString) 
 	#endif
 
-	#ifndef GEODE_STATICS_getDimensions
-		#define GEODE_STATICS_getDimensions
-		GEODE_AS_STATIC_FUNCTION(getDimensions) 
-	#endif
-
-	#ifndef GEODE_STATICS_getFontName
-		#define GEODE_STATICS_getFontName
-		GEODE_AS_STATIC_FUNCTION(getFontName) 
-	#endif
-
-	#ifndef GEODE_STATICS_getFontSize
-		#define GEODE_STATICS_getFontSize
-		GEODE_AS_STATIC_FUNCTION(getFontSize) 
-	#endif
-
-	#ifndef GEODE_STATICS_getHorizontalAlignment
-		#define GEODE_STATICS_getHorizontalAlignment
-		GEODE_AS_STATIC_FUNCTION(getHorizontalAlignment) 
-	#endif
-
-	#ifndef GEODE_STATICS_getTextDefinition
-		#define GEODE_STATICS_getTextDefinition
-		GEODE_AS_STATIC_FUNCTION(getTextDefinition) 
-	#endif
-
-	#ifndef GEODE_STATICS_getVerticalAlignment
-		#define GEODE_STATICS_getVerticalAlignment
-		GEODE_AS_STATIC_FUNCTION(getVerticalAlignment) 
-	#endif
-
-	#ifndef GEODE_STATICS_setDimensions
-		#define GEODE_STATICS_setDimensions
-		GEODE_AS_STATIC_FUNCTION(setDimensions) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFontFillColor
-		#define GEODE_STATICS_setFontFillColor
-		GEODE_AS_STATIC_FUNCTION(setFontFillColor) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFontName
-		#define GEODE_STATICS_setFontName
-		GEODE_AS_STATIC_FUNCTION(setFontName) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFontSize
-		#define GEODE_STATICS_setFontSize
-		GEODE_AS_STATIC_FUNCTION(setFontSize) 
-	#endif
-
-	#ifndef GEODE_STATICS_setHorizontalAlignment
-		#define GEODE_STATICS_setHorizontalAlignment
-		GEODE_AS_STATIC_FUNCTION(setHorizontalAlignment) 
-	#endif
-
-	#ifndef GEODE_STATICS_setTextDefinition
-		#define GEODE_STATICS_setTextDefinition
-		GEODE_AS_STATIC_FUNCTION(setTextDefinition) 
-	#endif
-
-	#ifndef GEODE_STATICS_setVerticalAlignment
-		#define GEODE_STATICS_setVerticalAlignment
-		GEODE_AS_STATIC_FUNCTION(setVerticalAlignment) 
+	#ifndef GEODE_STATICS_getString
+		#define GEODE_STATICS_getString
+		GEODE_AS_STATIC_FUNCTION(getString) 
 	#endif
 
 	#ifndef GEODE_STATICS__prepareTextDefinition
@@ -125,24 +65,44 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(enableStroke) 
 	#endif
 
+	#ifndef GEODE_STATICS_getFontName
+		#define GEODE_STATICS_getFontName
+		GEODE_AS_STATIC_FUNCTION(getFontName) 
+	#endif
+
+	#ifndef GEODE_STATICS_getTextDefinition
+		#define GEODE_STATICS_getTextDefinition
+		GEODE_AS_STATIC_FUNCTION(getTextDefinition) 
+	#endif
+
+	#ifndef GEODE_STATICS_initWithString
+		#define GEODE_STATICS_initWithString
+		GEODE_AS_STATIC_FUNCTION(initWithString) 
+	#endif
+
+	#ifndef GEODE_STATICS_initWithStringAndTextDefinition
+		#define GEODE_STATICS_initWithStringAndTextDefinition
+		GEODE_AS_STATIC_FUNCTION(initWithStringAndTextDefinition) 
+	#endif
+
+	#ifndef GEODE_STATICS_setFontFillColor
+		#define GEODE_STATICS_setFontFillColor
+		GEODE_AS_STATIC_FUNCTION(setFontFillColor) 
+	#endif
+
+	#ifndef GEODE_STATICS_setFontName
+		#define GEODE_STATICS_setFontName
+		GEODE_AS_STATIC_FUNCTION(setFontName) 
+	#endif
+
+	#ifndef GEODE_STATICS_setTextDefinition
+		#define GEODE_STATICS_setTextDefinition
+		GEODE_AS_STATIC_FUNCTION(setTextDefinition) 
+	#endif
+
 	#ifndef GEODE_STATICS_updateTexture
 		#define GEODE_STATICS_updateTexture
 		GEODE_AS_STATIC_FUNCTION(updateTexture) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
-	#ifndef GEODE_STATICS_setString
-		#define GEODE_STATICS_setString
-		GEODE_AS_STATIC_FUNCTION(setString) 
-	#endif
-
-	#ifndef GEODE_STATICS_getString
-		#define GEODE_STATICS_getString
-		GEODE_AS_STATIC_FUNCTION(getString) 
 	#endif
 
     
@@ -156,79 +116,19 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(createWithFontDefinition) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_initWithString
-		#define GEODE_CONCEPT_CHECK_initWithString
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithString) 
+	#ifndef GEODE_CONCEPT_CHECK_init
+		#define GEODE_CONCEPT_CHECK_init
+		GEODE_CONCEPT_FUNCTION_CHECK(init) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_initWithStringAndTextDefinition
-		#define GEODE_CONCEPT_CHECK_initWithStringAndTextDefinition
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithStringAndTextDefinition) 
+	#ifndef GEODE_CONCEPT_CHECK_setString
+		#define GEODE_CONCEPT_CHECK_setString
+		GEODE_CONCEPT_FUNCTION_CHECK(setString) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_getDimensions
-		#define GEODE_CONCEPT_CHECK_getDimensions
-		GEODE_CONCEPT_FUNCTION_CHECK(getDimensions) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getFontName
-		#define GEODE_CONCEPT_CHECK_getFontName
-		GEODE_CONCEPT_FUNCTION_CHECK(getFontName) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getFontSize
-		#define GEODE_CONCEPT_CHECK_getFontSize
-		GEODE_CONCEPT_FUNCTION_CHECK(getFontSize) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getHorizontalAlignment
-		#define GEODE_CONCEPT_CHECK_getHorizontalAlignment
-		GEODE_CONCEPT_FUNCTION_CHECK(getHorizontalAlignment) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getTextDefinition
-		#define GEODE_CONCEPT_CHECK_getTextDefinition
-		GEODE_CONCEPT_FUNCTION_CHECK(getTextDefinition) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getVerticalAlignment
-		#define GEODE_CONCEPT_CHECK_getVerticalAlignment
-		GEODE_CONCEPT_FUNCTION_CHECK(getVerticalAlignment) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setDimensions
-		#define GEODE_CONCEPT_CHECK_setDimensions
-		GEODE_CONCEPT_FUNCTION_CHECK(setDimensions) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setFontFillColor
-		#define GEODE_CONCEPT_CHECK_setFontFillColor
-		GEODE_CONCEPT_FUNCTION_CHECK(setFontFillColor) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setFontName
-		#define GEODE_CONCEPT_CHECK_setFontName
-		GEODE_CONCEPT_FUNCTION_CHECK(setFontName) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setFontSize
-		#define GEODE_CONCEPT_CHECK_setFontSize
-		GEODE_CONCEPT_FUNCTION_CHECK(setFontSize) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setHorizontalAlignment
-		#define GEODE_CONCEPT_CHECK_setHorizontalAlignment
-		GEODE_CONCEPT_FUNCTION_CHECK(setHorizontalAlignment) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setTextDefinition
-		#define GEODE_CONCEPT_CHECK_setTextDefinition
-		GEODE_CONCEPT_FUNCTION_CHECK(setTextDefinition) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setVerticalAlignment
-		#define GEODE_CONCEPT_CHECK_setVerticalAlignment
-		GEODE_CONCEPT_FUNCTION_CHECK(setVerticalAlignment) 
+	#ifndef GEODE_CONCEPT_CHECK_getString
+		#define GEODE_CONCEPT_CHECK_getString
+		GEODE_CONCEPT_FUNCTION_CHECK(getString) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK__prepareTextDefinition
@@ -266,24 +166,44 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(enableStroke) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_getFontName
+		#define GEODE_CONCEPT_CHECK_getFontName
+		GEODE_CONCEPT_FUNCTION_CHECK(getFontName) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getTextDefinition
+		#define GEODE_CONCEPT_CHECK_getTextDefinition
+		GEODE_CONCEPT_FUNCTION_CHECK(getTextDefinition) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_initWithString
+		#define GEODE_CONCEPT_CHECK_initWithString
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithString) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_initWithStringAndTextDefinition
+		#define GEODE_CONCEPT_CHECK_initWithStringAndTextDefinition
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithStringAndTextDefinition) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setFontFillColor
+		#define GEODE_CONCEPT_CHECK_setFontFillColor
+		GEODE_CONCEPT_FUNCTION_CHECK(setFontFillColor) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setFontName
+		#define GEODE_CONCEPT_CHECK_setFontName
+		GEODE_CONCEPT_FUNCTION_CHECK(setFontName) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setTextDefinition
+		#define GEODE_CONCEPT_CHECK_setTextDefinition
+		GEODE_CONCEPT_FUNCTION_CHECK(setTextDefinition) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_updateTexture
 		#define GEODE_CONCEPT_CHECK_updateTexture
 		GEODE_CONCEPT_FUNCTION_CHECK(updateTexture) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_init
-		#define GEODE_CONCEPT_CHECK_init
-		GEODE_CONCEPT_FUNCTION_CHECK(init) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setString
-		#define GEODE_CONCEPT_CHECK_setString
-		GEODE_CONCEPT_FUNCTION_CHECK(setString) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getString
-		#define GEODE_CONCEPT_CHECK_getString
-		GEODE_CONCEPT_FUNCTION_CHECK(getString) 
 	#endif
 
 
@@ -295,41 +215,33 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCLabelTTF@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCLabelTTF, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCLabelTTF@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCLabelTTF)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelTTF::create)), Default, cocos2d::CCLabelTTF, create, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*, float>::func(&cocos2d::CCLabelTTF::create)), Default, cocos2d::CCLabelTTF, create, char const*, char const*, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment>::func(&cocos2d::CCLabelTTF::create)), Default, cocos2d::CCLabelTTF, create, char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment, cocos2d::CCVerticalTextAlignment>::func(&cocos2d::CCLabelTTF::create)), Default, cocos2d::CCLabelTTF, create, char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment, cocos2d::CCVerticalTextAlignment)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelTTF::create)), Default, cocos2d::CCLabelTTF, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, cocos2d::_ccFontDefinition&>::func(&cocos2d::CCLabelTTF::createWithFontDefinition)), Default, cocos2d::CCLabelTTF, createWithFontDefinition, char const*, cocos2d::_ccFontDefinition&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*, float>::func(&cocos2d::CCLabelTTF::initWithString)), Thiscall, cocos2d::CCLabelTTF, initWithString, char const*, char const*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment>::func(&cocos2d::CCLabelTTF::initWithString)), Thiscall, cocos2d::CCLabelTTF, initWithString, char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment, cocos2d::CCVerticalTextAlignment>::func(&cocos2d::CCLabelTTF::initWithString)), Thiscall, cocos2d::CCLabelTTF, initWithString, char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment, cocos2d::CCVerticalTextAlignment)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, cocos2d::_ccFontDefinition&>::func(&cocos2d::CCLabelTTF::initWithStringAndTextDefinition)), Thiscall, cocos2d::CCLabelTTF, initWithStringAndTextDefinition, char const*, cocos2d::_ccFontDefinition&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelTTF::getDimensions)), Thiscall, cocos2d::CCLabelTTF, getDimensions, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelTTF::getFontName)), Thiscall, cocos2d::CCLabelTTF, getFontName, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelTTF::getFontSize)), Thiscall, cocos2d::CCLabelTTF, getFontSize, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelTTF::getHorizontalAlignment)), Thiscall, cocos2d::CCLabelTTF, getHorizontalAlignment, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelTTF::getTextDefinition)), Thiscall, cocos2d::CCLabelTTF, getTextDefinition, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelTTF::getVerticalAlignment)), Thiscall, cocos2d::CCLabelTTF, getVerticalAlignment, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCSize const&>::func(&cocos2d::CCLabelTTF::setDimensions)), Thiscall, cocos2d::CCLabelTTF, setDimensions, cocos2d::CCSize const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::_ccColor3B const&, bool>::func(&cocos2d::CCLabelTTF::setFontFillColor)), Thiscall, cocos2d::CCLabelTTF, setFontFillColor, cocos2d::_ccColor3B const&, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCLabelTTF::setFontName)), Thiscall, cocos2d::CCLabelTTF, setFontName, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCLabelTTF::setFontSize)), Thiscall, cocos2d::CCLabelTTF, setFontSize, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTextAlignment>::func(&cocos2d::CCLabelTTF::setHorizontalAlignment)), Thiscall, cocos2d::CCLabelTTF, setHorizontalAlignment, cocos2d::CCTextAlignment)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::_ccFontDefinition*>::func(&cocos2d::CCLabelTTF::setTextDefinition)), Thiscall, cocos2d::CCLabelTTF, setTextDefinition, cocos2d::_ccFontDefinition*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCVerticalTextAlignment>::func(&cocos2d::CCLabelTTF::setVerticalAlignment)), Thiscall, cocos2d::CCLabelTTF, setVerticalAlignment, cocos2d::CCVerticalTextAlignment)
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCLabelTTF@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCLabelTTF, )
-			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCLabelTTF@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCLabelTTF)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, cocos2d::ccFontDefinition&>::func(&cocos2d::CCLabelTTF::createWithFontDefinition)), Default, cocos2d::CCLabelTTF, createWithFontDefinition, char const*, cocos2d::ccFontDefinition&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLabelTTF::init)), Thiscall, cocos2d::CCLabelTTF, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<char const*>::func(&cocos2d::CCLabelTTF::setString)), Thiscall, cocos2d::CCLabelTTF, setString, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLabelTTF::getString)), Thiscall, cocos2d::CCLabelTTF, getString, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCLabelTTF::_prepareTextDefinition)), Thiscall, cocos2d::CCLabelTTF, _prepareTextDefinition, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::_ccFontDefinition&, bool>::func(&cocos2d::CCLabelTTF::_updateWithTextDefinition)), Thiscall, cocos2d::CCLabelTTF, _updateWithTextDefinition, cocos2d::_ccFontDefinition&, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::ccFontDefinition&, bool>::func(&cocos2d::CCLabelTTF::_updateWithTextDefinition)), Thiscall, cocos2d::CCLabelTTF, _updateWithTextDefinition, cocos2d::ccFontDefinition&, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelTTF::description)), Thiscall, cocos2d::CCLabelTTF, description, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCLabelTTF::disableShadow)), Thiscall, cocos2d::CCLabelTTF, disableShadow, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCLabelTTF::disableStroke)), Thiscall, cocos2d::CCLabelTTF, disableStroke, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCSize const&, float, float, bool>::func(&cocos2d::CCLabelTTF::enableShadow)), Thiscall, cocos2d::CCLabelTTF, enableShadow, cocos2d::CCSize const&, float, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::_ccColor3B const&, float, bool>::func(&cocos2d::CCLabelTTF::enableStroke)), Thiscall, cocos2d::CCLabelTTF, enableStroke, cocos2d::_ccColor3B const&, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::ccColor3B const&, float, bool>::func(&cocos2d::CCLabelTTF::enableStroke)), Thiscall, cocos2d::CCLabelTTF, enableStroke, cocos2d::ccColor3B const&, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelTTF::getFontName)), Thiscall, cocos2d::CCLabelTTF, getFontName, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelTTF::getTextDefinition)), Thiscall, cocos2d::CCLabelTTF, getTextDefinition, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*, float>::func(&cocos2d::CCLabelTTF::initWithString)), Thiscall, cocos2d::CCLabelTTF, initWithString, char const*, char const*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment>::func(&cocos2d::CCLabelTTF::initWithString)), Thiscall, cocos2d::CCLabelTTF, initWithString, char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment, cocos2d::CCVerticalTextAlignment>::func(&cocos2d::CCLabelTTF::initWithString)), Thiscall, cocos2d::CCLabelTTF, initWithString, char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment, cocos2d::CCVerticalTextAlignment)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, cocos2d::ccFontDefinition&>::func(&cocos2d::CCLabelTTF::initWithStringAndTextDefinition)), Thiscall, cocos2d::CCLabelTTF, initWithStringAndTextDefinition, char const*, cocos2d::ccFontDefinition&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::ccColor3B const&, bool>::func(&cocos2d::CCLabelTTF::setFontFillColor)), Thiscall, cocos2d::CCLabelTTF, setFontFillColor, cocos2d::ccColor3B const&, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCLabelTTF::setFontName)), Thiscall, cocos2d::CCLabelTTF, setFontName, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::ccFontDefinition*>::func(&cocos2d::CCLabelTTF::setTextDefinition)), Thiscall, cocos2d::CCLabelTTF, setTextDefinition, cocos2d::ccFontDefinition*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLabelTTF::updateTexture)), Thiscall, cocos2d::CCLabelTTF, updateTexture, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLabelTTF::init)), Thiscall, cocos2d::CCLabelTTF, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<char const*>::func(&cocos2d::CCLabelTTF::setString)), Thiscall, cocos2d::CCLabelTTF, setString, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLabelTTF::getString)), Thiscall, cocos2d::CCLabelTTF, getString, )
 		}
 	};
 }

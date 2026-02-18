@@ -16,85 +16,118 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(MusicSearchResult, cocos2d::CCObject)
 
     /**
-     * @note[short] Windows: 0x326990
-     * @note[short] Android: Rebinded
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: 0x33b880
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
      MusicSearchResult();
 
     /**
-     * @note[short] MacOS (ARM): 0x4d3d64
-     * @note[short] MacOS (Intel): 0x581300
+     * @note[short] MacOS (ARM): 0x4e2920
+     * @note[short] MacOS (Intel): 0x599040
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x15c600
+     * @note[short] Android: Rebinded
+     */
+     ~MusicSearchResult();
+
+    /**
+     * @note[short] MacOS (ARM): 0x4e2a54
+     * @note[short] MacOS (Intel): 0x599160
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x15c66c
      * @note[short] Android
      */
     static MusicSearchResult* create(GJSongType songType);
 
     /**
-     * @note[short] MacOS (ARM): 0x4d4740
-     * @note[short] MacOS (Intel): 0x582030
-     * @note[short] Windows: 0x331610
-     * @note[short] iOS: 0x15ff50
+     * @note[short] MacOS (ARM): 0x4e3438
+     * @note[short] MacOS (Intel): 0x599e80
+     * @note[short] Windows: 0x347330
+     * @note[short] iOS: 0x15caa4
      * @note[short] Android
      */
-    virtual void updateObjects(AudioSortType p0);
+    virtual void updateObjects(AudioSortType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x4d4710
-     * @note[short] MacOS (Intel): 0x581fd0
-     * @note[short] Windows: 0x331600
-     * @note[short] iOS: 0x15ff20
+     * @note[short] MacOS (ARM): 0x4e3408
+     * @note[short] MacOS (Intel): 0x599e20
+     * @note[short] Windows: 0x347320
+     * @note[short] iOS: 0x15ca74
      * @note[short] Android
      */
-    virtual void stateChanged(OptionsObject* p0);
+    virtual void stateChanged(OptionsObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x4d41c8
-     * @note[short] MacOS (Intel): 0x5818b0
+     * @note[short] MacOS (ARM): 0x4e2ebc
+     * @note[short] MacOS (Intel): 0x599710
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x15c888
      * @note[short] Android
      */
-    cocos2d::CCArray* applyArtistFilters(cocos2d::CCArray* p0);
+    cocos2d::CCArray* applyArtistFilters(cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4d4004
-     * @note[short] MacOS (Intel): 0x581670
-     * @note[short] Windows: 0x331530
+     * @note[short] MacOS (ARM): 0x4e2cf4
+     * @note[short] MacOS (Intel): 0x5994d0
+     * @note[short] Windows: 0x347250
+     * @note[short] iOS: 0x15c7e8
      * @note[short] Android
      */
-    cocos2d::CCArray* applyTagFilters(cocos2d::CCArray* p0);
+    cocos2d::CCArray* applyTagFilters(cocos2d::CCArray* objects);
 
     /**
+     * @note[short] MacOS (ARM): 0x4e2be4
+     * @note[short] MacOS (Intel): 0x599360
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x15c764
      * @note[short] Android
      */
     void createArtistFilterObjects();
 
     /**
+     * @note[short] MacOS (ARM): 0x4e2ad4
+     * @note[short] MacOS (Intel): 0x5991f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x15c6e0
      * @note[short] Android
      */
     void createTagFilterObjects();
 
     /**
-     * @note[short] MacOS (ARM): 0x4d49d8
-     * @note[short] MacOS (Intel): 0x582340
-     * @note[short] Windows: 0x331b60
+     * @note[short] MacOS (ARM): 0x4e36d0
+     * @note[short] MacOS (Intel): 0x59a1a0
+     * @note[short] Windows: 0x347880
+     * @note[short] iOS: 0x15cbf8
      * @note[short] Android: Rebinded
      */
-    cocos2d::CCArray* getFilesMatchingSearch(cocos2d::CCArray* p0, gd::string p1);
+    cocos2d::CCArray* getFilesMatchingSearch(cocos2d::CCArray* objects, gd::string query);
 
     /**
-     * @note[short] MacOS (ARM): 0x4d3dd8
-     * @note[short] MacOS (Intel): 0x581380
+     * @note[short] MacOS (ARM): 0x4e2ac8
+     * @note[short] MacOS (Intel): 0x5991e0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     bool init(GJSongType songType);
 
     /**
+     * @note[short] MacOS (ARM): 0x4e3068
+     * @note[short] MacOS (Intel): 0x599950
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x15c978
      * @note[short] Android
      */
-    void updateFutureCount(cocos2d::CCArray* p0, cocos2d::CCArray* p1);
+    void updateFutureCount(cocos2d::CCArray* objects, cocos2d::CCArray* allObjects);
 
     /**
+     * @note[short] MacOS (ARM): 0x4e3428
+     * @note[short] MacOS (Intel): 0x599e60
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x15ca94
      * @note[short] Android
      */
     void updateObjects();

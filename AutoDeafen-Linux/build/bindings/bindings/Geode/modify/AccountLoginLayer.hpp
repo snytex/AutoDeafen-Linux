@@ -55,16 +55,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createTextLabel) 
 	#endif
 
-	#ifndef GEODE_STATICS_disableNodes
-		#define GEODE_STATICS_disableNodes
-		GEODE_AS_STATIC_FUNCTION(disableNodes) 
-	#endif
-
-	#ifndef GEODE_STATICS_hideLoadingUI
-		#define GEODE_STATICS_hideLoadingUI
-		GEODE_AS_STATIC_FUNCTION(hideLoadingUI) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -93,16 +83,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_resetLabel
 		#define GEODE_STATICS_resetLabel
 		GEODE_AS_STATIC_FUNCTION(resetLabel) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetLabels
-		#define GEODE_STATICS_resetLabels
-		GEODE_AS_STATIC_FUNCTION(resetLabels) 
-	#endif
-
-	#ifndef GEODE_STATICS_showLoadingUI
-		#define GEODE_STATICS_showLoadingUI
-		GEODE_AS_STATIC_FUNCTION(showLoadingUI) 
 	#endif
 
 	#ifndef GEODE_STATICS_toggleUI
@@ -245,30 +225,30 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b730, Default, AccountLoginLayer, create, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, AccountLoginLayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7cfa0, Thiscall, AccountLoginLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7cb50, Thiscall, AccountLoginLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b770, Default, AccountLoginLayer, create, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, AccountLoginLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7cff0, Thiscall, AccountLoginLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7cba0, Thiscall, AccountLoginLayer, FLAlert_Clicked, FLAlertLayer*, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountLoginLayer, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7d070, Thiscall, AccountLoginLayer, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7d0c0, Thiscall, AccountLoginLayer, textInputClosed, CCTextInputNode*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountLoginLayer, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7c740, Thiscall, AccountLoginLayer, loginAccountFinished, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7c990, Thiscall, AccountLoginLayer, loginAccountFailed, AccountError)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountLoginLayer, createTextBackground, cocos2d::CCPoint, char const*, cocos2d::CCSize)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountLoginLayer, createTextInput, cocos2d::CCPoint, cocos2d::CCSize, char const*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountLoginLayer, createTextLabel, cocos2d::CCPoint, char const*, cocos2d::CCSize)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountLoginLayer, disableNodes, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountLoginLayer, hideLoadingUI, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b8d0, Thiscall, AccountLoginLayer, init, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7cf50, Thiscall, AccountLoginLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7c490, Thiscall, AccountLoginLayer, onForgotPassword, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7c470, Thiscall, AccountLoginLayer, onForgotUser, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7cbc0, Thiscall, AccountLoginLayer, onSubmit, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountLoginLayer, resetLabel, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountLoginLayer, resetLabels, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountLoginLayer, showLoadingUI, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7d000, Thiscall, AccountLoginLayer, toggleUI, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7c9d0, Thiscall, AccountLoginLayer, updateLabel, AccountError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7c790, Thiscall, AccountLoginLayer, loginAccountFinished, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7c9e0, Thiscall, AccountLoginLayer, loginAccountFailed, AccountError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7c500, Thiscall, AccountLoginLayer, createTextBackground, cocos2d::CCPoint, char const*, cocos2d::CCSize)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7c6a0, Thiscall, AccountLoginLayer, createTextInput, cocos2d::CCPoint, cocos2d::CCSize, char const*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7c5c0, Thiscall, AccountLoginLayer, createTextLabel, cocos2d::CCPoint, char const*, cocos2d::CCSize)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountLoginLayer, disableNodes, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountLoginLayer, hideLoadingUI, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b910, Thiscall, AccountLoginLayer, init, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7cfa0, Thiscall, AccountLoginLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7c4e0, Thiscall, AccountLoginLayer, onForgotPassword, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7c4c0, Thiscall, AccountLoginLayer, onForgotUser, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7cc10, Thiscall, AccountLoginLayer, onSubmit, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7cb20, Thiscall, AccountLoginLayer, resetLabel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountLoginLayer, resetLabels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountLoginLayer, showLoadingUI, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7d050, Thiscall, AccountLoginLayer, toggleUI, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7ca20, Thiscall, AccountLoginLayer, updateLabel, AccountError)
 		}
 	};
 }

@@ -17,44 +17,46 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetFolderPopup, SetIDPopup)
 
     /**
-     * @note[short] MacOS (ARM): 0x241e80
-     * @note[short] MacOS (Intel): 0x29a410
-     * @note[short] Windows: 0x294e90
-     * @note[short] iOS: 0x2deb0c
+     * @note[short] MacOS (ARM): 0x24bf9c
+     * @note[short] MacOS (Intel): 0x2adba0
+     * @note[short] Windows: 0x29c4f0
+     * @note[short] iOS: 0x2dee20
      * @note[short] Android: Rebinded
      */
     static SetFolderPopup* create(int value, bool isCreated, gd::string title);
 
     /**
-     * @note[short] MacOS (ARM): 0x24249c
-     * @note[short] MacOS (Intel): 0x29aa90
-     * @note[short] Windows: 0x295250
-     * @note[short] iOS: 0x2deffc
+     * @note[short] MacOS (ARM): 0x24c5c8
+     * @note[short] MacOS (Intel): 0x2ae220
+     * @note[short] Windows: 0x29c8b0
+     * @note[short] iOS: 0x2df310
      * @note[short] Android
      */
     virtual void valueChanged();
 
     /**
-     * @note[short] MacOS (ARM): 0x242914
-     * @note[short] MacOS (Intel): 0x29af60
-     * @note[short] Windows: 0x295590
-     * @note[short] iOS: 0x2df330
+     * @note[short] MacOS (ARM): 0x24ca34
+     * @note[short] MacOS (Intel): 0x2ae6e0
+     * @note[short] Windows: 0x29cbf0
+     * @note[short] iOS: 0x2df644
      * @note[short] Android: Rebinded
      */
-    virtual void setTextPopupClosed(SetTextPopup* p0, gd::string p1);
+    virtual void setTextPopupClosed(SetTextPopup* popup, gd::string text);
 
     /**
-     * @note[short] MacOS (ARM): 0x24202c
-     * @note[short] MacOS (Intel): 0x29a610
-     * @note[short] Windows: 0x294fd0
+     * @note[short] MacOS (ARM): 0x24c150
+     * @note[short] MacOS (Intel): 0x2adda0
+     * @note[short] Windows: 0x29c630
+     * @note[short] iOS: 0x2def08
      * @note[short] Android: Rebinded
      */
     bool init(int value, bool isCreated, gd::string title);
 
     /**
-     * @note[short] MacOS (ARM): 0x24229c
-     * @note[short] MacOS (Intel): 0x29a8a0
-     * @note[short] Windows: 0x295390
+     * @note[short] MacOS (ARM): 0x24c3c4
+     * @note[short] MacOS (Intel): 0x2ae030
+     * @note[short] Windows: 0x29c9f0
+     * @note[short] iOS: 0x2df174
      * @note[short] Android
      */
     void onSetFolderName(cocos2d::CCObject* sender);

@@ -140,19 +140,19 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42ee10, Default, SetupSFXPopup, create, SFXTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4301c0, Thiscall, SetupSFXPopup, pageChanged, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x430230, Thiscall, SetupSFXPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x430af0, Thiscall, SetupSFXPopup, onPlusButton, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4309e0, Thiscall, SetupSFXPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x447120, Default, SetupSFXPopup, create, SFXTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4484d0, Thiscall, SetupSFXPopup, pageChanged, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x448540, Thiscall, SetupSFXPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x448e00, Thiscall, SetupSFXPopup, onPlusButton, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x448cf0, Thiscall, SetupSFXPopup, valueDidChange, int, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupSFXPopup, sfxObjectSelected, SFXInfoObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x430920, Thiscall, SetupSFXPopup, getActiveSFXID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x430930, Thiscall, SetupSFXPopup, overridePlaySFX, SFXInfoObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x431050, Thiscall, SetupSFXPopup, sfxBrowserClosed, SFXBrowser*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4305f0, Thiscall, SetupSFXPopup, createSFXWidget, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42ef60, Thiscall, SetupSFXPopup, init, SFXTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x430e70, Thiscall, SetupSFXPopup, onBrowseSFX, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x430570, Thiscall, SetupSFXPopup, updateLength, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x448c30, Thiscall, SetupSFXPopup, getActiveSFXID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x448c40, Thiscall, SetupSFXPopup, overridePlaySFX, SFXInfoObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4493f0, Thiscall, SetupSFXPopup, sfxBrowserClosed, SFXBrowser*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x448900, Thiscall, SetupSFXPopup, createSFXWidget, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x447270, Thiscall, SetupSFXPopup, init, SFXTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x449210, Thiscall, SetupSFXPopup, onBrowseSFX, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x448880, Thiscall, SetupSFXPopup, updateLength, )
 		}
 	};
 }

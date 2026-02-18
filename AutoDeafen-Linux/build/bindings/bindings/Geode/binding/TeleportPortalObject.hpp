@@ -16,133 +16,154 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(TeleportPortalObject, RingObject)
 
     /**
-     * @note[short] MacOS (ARM): 0x16da24
-     * @note[short] MacOS (Intel): 0x1ac900
-     * @note[short] Windows: 0x499670
-     * @note[short] iOS: 0x38052c
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x399ac4
+     * @note[short] Android: Out of line
      */
-    static TeleportPortalObject* create(char const* p0, bool p1);
+     TeleportPortalObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x16dd84
-     * @note[short] MacOS (Intel): 0x1acca0
-     * @note[short] Windows: 0x499850
-     * @note[short] iOS: 0x380764
+     * @note[short] MacOS (ARM): 0x1765dc
+     * @note[short] MacOS (Intel): 0x1bdb40
+     * @note[short] Windows: 0x4b21c0
+     * @note[short] iOS: 0x38785c
      * @note[short] Android
      */
-    virtual void setPosition(cocos2d::CCPoint const& p0);
+    static TeleportPortalObject* create(char const* frame, bool trigger);
 
     /**
-     * @note[short] MacOS (ARM): 0x16de2c
-     * @note[short] MacOS (Intel): 0x1acd50
-     * @note[short] Windows: 0x4999d0
-     * @note[short] iOS: 0x38080c
+     * @note[short] MacOS (ARM): 0x17693c
+     * @note[short] MacOS (Intel): 0x1bdee0
+     * @note[short] Windows: 0x4b23a0
+     * @note[short] iOS: 0x387a98
      * @note[short] Android
      */
-    virtual void setRotation(float p0);
+    virtual void setPosition(cocos2d::CCPoint const& position);
 
     /**
-     * @note[short] MacOS (ARM): 0x16dbec
-     * @note[short] MacOS (Intel): 0x1acb00
-     * @note[short] Windows: 0x499790
-     * @note[short] iOS: 0x3805d8
+     * @note[short] MacOS (ARM): 0x1769e8
+     * @note[short] MacOS (Intel): 0x1bdf90
+     * @note[short] Windows: 0x4b2520
+     * @note[short] iOS: 0x387b44
      * @note[short] Android
      */
-    virtual void setStartPos(cocos2d::CCPoint p0);
+    virtual void setRotation(float rotation);
 
     /**
-     * @note[short] MacOS (ARM): 0x16fd10
-     * @note[short] MacOS (Intel): 0x1af440
-     * @note[short] Windows: 0x49a500
-     * @note[short] iOS: 0x381168
+     * @note[short] MacOS (ARM): 0x1767a0
+     * @note[short] MacOS (Intel): 0x1bdd40
+     * @note[short] Windows: 0x4b22e0
+     * @note[short] iOS: 0x387908
+     * @note[short] Android
+     */
+    virtual void setStartPos(cocos2d::CCPoint position);
+
+    /**
+     * @note[short] MacOS (ARM): 0x178878
+     * @note[short] MacOS (Intel): 0x1c0740
+     * @note[short] Windows: 0x4b3050
+     * @note[short] iOS: 0x3884d4
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x16df90
-     * @note[short] MacOS (Intel): 0x1acea0
-     * @note[short] Windows: 0x499bc0
-     * @note[short] iOS: 0x380960
+     * @note[short] MacOS (ARM): 0x176b4c
+     * @note[short] MacOS (Intel): 0x1be0e0
+     * @note[short] Windows: 0x4b2710
+     * @note[short] iOS: 0x387ca4
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x16dea8
-     * @note[short] MacOS (Intel): 0x1acde0
-     * @note[short] Windows: 0x499a80
-     * @note[short] iOS: 0x380888
+     * @note[short] MacOS (ARM): 0x176a68
+     * @note[short] MacOS (Intel): 0x1be020
+     * @note[short] Windows: 0x4b25d0
+     * @note[short] iOS: 0x387bc4
      * @note[short] Android
      */
-    virtual int addToGroup(int p0);
+    virtual int addToGroup(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x16df2c
-     * @note[short] MacOS (Intel): 0x1ace40
-     * @note[short] Windows: 0x499b30
-     * @note[short] iOS: 0x3808fc
+     * @note[short] MacOS (ARM): 0x176ae4
+     * @note[short] MacOS (Intel): 0x1be080
+     * @note[short] Windows: 0x4b2680
+     * @note[short] iOS: 0x387c3c
      * @note[short] Android
      */
-    virtual void removeFromGroup(int p0);
+    virtual void removeFromGroup(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x16de9c
-     * @note[short] MacOS (Intel): 0x1acdb0
-     * @note[short] Windows: 0x38c9f0
-     * @note[short] iOS: 0x38087c
+     * @note[short] MacOS (ARM): 0x176a5c
+     * @note[short] MacOS (Intel): 0x1bdff0
+     * @note[short] Windows: 0x3a3840
+     * @note[short] iOS: 0x387bb8
      * @note[short] Android
      */
-    virtual void setRotation2(float p0);
+    virtual void setRotation2(float rotation);
 
     /**
-     * @note[short] MacOS (ARM): 0x16dea0
-     * @note[short] MacOS (Intel): 0x1acdc0
-     * @note[short] Windows: 0x499a60
-     * @note[short] iOS: 0x380880
+     * @note[short] MacOS (ARM): 0x176a60
+     * @note[short] MacOS (Intel): 0x1be000
+     * @note[short] Windows: 0x4b25b0
+     * @note[short] iOS: 0x387bbc
      * @note[short] Android
      */
-    virtual void addToGroup2(int p0);
+    virtual void addToGroup2(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x16dea4
-     * @note[short] MacOS (Intel): 0x1acdd0
-     * @note[short] Windows: 0x499a70
-     * @note[short] iOS: 0x380884
+     * @note[short] MacOS (ARM): 0x176a64
+     * @note[short] MacOS (Intel): 0x1be010
+     * @note[short] Windows: 0x4b25c0
+     * @note[short] iOS: 0x387bc0
      * @note[short] Android
      */
-    virtual void removeFromGroup2(int p0);
+    virtual void removeFromGroup2(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x16dcb0
-     * @note[short] MacOS (Intel): 0x1acbd0
-     * @note[short] Windows: 0x4998f0
-     * @note[short] iOS: 0x38069c
+     * @note[short] MacOS (ARM): 0x176868
+     * @note[short] MacOS (Intel): 0x1bde10
+     * @note[short] Windows: 0x4b2440
+     * @note[short] iOS: 0x3879d0
      * @note[short] Android
      */
-    float getTeleportXOff(cocos2d::CCNode* p0);
+    float getTeleportXOff(cocos2d::CCNode* parent);
 
     /**
+     * @note[short] MacOS (ARM): 0x176710
+     * @note[short] MacOS (Intel): 0x1bdca0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(char const* p0, bool p1);
+    bool init(char const* frame, bool trigger);
 
     /**
+     * @note[short] MacOS (ARM): 0x17679c
+     * @note[short] MacOS (Intel): 0x1bdd30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void setPositionOverride(cocos2d::CCPoint p0);
+    void setPositionOverride(cocos2d::CCPoint position);
 
     /**
+     * @note[short] MacOS (ARM): 0x176764
+     * @note[short] MacOS (Intel): 0x1bdd00
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void setStartPosOverride(cocos2d::CCPoint p0);
+    void setStartPosOverride(cocos2d::CCPoint position);
     TeleportPortalObject* m_orangePortal;
     bool m_isYellowPortal;
     float m_teleportYOffset;
     bool m_teleportEase;
     bool m_staticForceEnabled;
-    int m_staticForce;
+    float m_staticForce;
     bool m_redirectForceEnabled;
     float m_redirectForceMod;
     float m_redirectForceMin;

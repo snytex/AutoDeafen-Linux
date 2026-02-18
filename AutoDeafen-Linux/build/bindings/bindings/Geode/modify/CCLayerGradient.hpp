@@ -10,24 +10,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
-	#ifndef GEODE_STATICS_getShouldPremultiply
-		#define GEODE_STATICS_getShouldPremultiply
-		GEODE_AS_STATIC_FUNCTION(getShouldPremultiply) 
-	#endif
-
-	#ifndef GEODE_STATICS_setShouldPremultiply
-		#define GEODE_STATICS_setShouldPremultiply
-		GEODE_AS_STATIC_FUNCTION(setShouldPremultiply) 
-	#endif
-
-	#ifndef GEODE_STATICS_setValues
-		#define GEODE_STATICS_setValues
-		GEODE_AS_STATIC_FUNCTION(setValues) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
+	#endif
+
+	#ifndef GEODE_STATICS_visit
+		#define GEODE_STATICS_visit
+		GEODE_AS_STATIC_FUNCTION(visit) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateColor
@@ -100,30 +90,25 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(isCompressedInterpolation) 
 	#endif
 
+	#ifndef GEODE_STATICS_setValues
+		#define GEODE_STATICS_setValues
+		GEODE_AS_STATIC_FUNCTION(setValues) 
+	#endif
+
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_getShouldPremultiply
-		#define GEODE_CONCEPT_CHECK_getShouldPremultiply
-		GEODE_CONCEPT_FUNCTION_CHECK(getShouldPremultiply) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setShouldPremultiply
-		#define GEODE_CONCEPT_CHECK_setShouldPremultiply
-		GEODE_CONCEPT_FUNCTION_CHECK(setShouldPremultiply) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setValues
-		#define GEODE_CONCEPT_CHECK_setValues
-		GEODE_CONCEPT_FUNCTION_CHECK(setValues) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_init
 		#define GEODE_CONCEPT_CHECK_init
 		GEODE_CONCEPT_FUNCTION_CHECK(init) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_visit
+		#define GEODE_CONCEPT_CHECK_visit
+		GEODE_CONCEPT_FUNCTION_CHECK(visit) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_updateColor
@@ -196,6 +181,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(isCompressedInterpolation) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_setValues
+		#define GEODE_CONCEPT_CHECK_setValues
+		GEODE_CONCEPT_FUNCTION_CHECK(setValues) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::CCLayerGradient> : ModifyBase<ModifyDerive<Der, cocos2d::CCLayerGradient>> {
@@ -205,20 +195,18 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::_ccColor4B const&, cocos2d::_ccColor4B const&>::func(&cocos2d::CCLayerGradient::create)), Default, cocos2d::CCLayerGradient, create, cocos2d::_ccColor4B const&, cocos2d::_ccColor4B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::_ccColor4B const&, cocos2d::_ccColor4B const&, cocos2d::CCPoint const&>::func(&cocos2d::CCLayerGradient::create)), Default, cocos2d::CCLayerGradient, create, cocos2d::_ccColor4B const&, cocos2d::_ccColor4B const&, cocos2d::CCPoint const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLayerGradient::create)), Default, cocos2d::CCLayerGradient, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCLayerGradient::getShouldPremultiply)), Thiscall, cocos2d::CCLayerGradient, getShouldPremultiply, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCLayerGradient::setShouldPremultiply)), Thiscall, cocos2d::CCLayerGradient, setShouldPremultiply, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::_ccColor3B const&, unsigned char, cocos2d::_ccColor3B const&, unsigned char, cocos2d::CCPoint const&>::func(&cocos2d::CCLayerGradient::setValues)), Thiscall, cocos2d::CCLayerGradient, setValues, cocos2d::_ccColor3B const&, unsigned char, cocos2d::_ccColor3B const&, unsigned char, cocos2d::CCPoint const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::ccColor4B const&, cocos2d::ccColor4B const&>::func(&cocos2d::CCLayerGradient::create)), Default, cocos2d::CCLayerGradient, create, cocos2d::ccColor4B const&, cocos2d::ccColor4B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::ccColor4B const&, cocos2d::ccColor4B const&, cocos2d::CCPoint const&>::func(&cocos2d::CCLayerGradient::create)), Default, cocos2d::CCLayerGradient, create, cocos2d::ccColor4B const&, cocos2d::ccColor4B const&, cocos2d::CCPoint const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLayerGradient::init)), Thiscall, cocos2d::CCLayerGradient, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLayerGradient::visit)), Thiscall, cocos2d::CCLayerGradient, visit, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLayerGradient::updateColor)), Thiscall, cocos2d::CCLayerGradient, updateColor, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccColor4B const&, cocos2d::_ccColor4B const&>::func(&cocos2d::CCLayerGradient::initWithColor)), Thiscall, cocos2d::CCLayerGradient, initWithColor, cocos2d::_ccColor4B const&, cocos2d::_ccColor4B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccColor4B const&, cocos2d::_ccColor4B const&, cocos2d::CCPoint const&>::func(&cocos2d::CCLayerGradient::initWithColor)), Thiscall, cocos2d::CCLayerGradient, initWithColor, cocos2d::_ccColor4B const&, cocos2d::_ccColor4B const&, cocos2d::CCPoint const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccColor4B const&, cocos2d::ccColor4B const&>::func(&cocos2d::CCLayerGradient::initWithColor)), Thiscall, cocos2d::CCLayerGradient, initWithColor, cocos2d::ccColor4B const&, cocos2d::ccColor4B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccColor4B const&, cocos2d::ccColor4B const&, cocos2d::CCPoint const&>::func(&cocos2d::CCLayerGradient::initWithColor)), Thiscall, cocos2d::CCLayerGradient, initWithColor, cocos2d::ccColor4B const&, cocos2d::ccColor4B const&, cocos2d::CCPoint const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLayerGradient::getStartColor)), Thiscall, cocos2d::CCLayerGradient, getStartColor, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccColor3B const&>::func(&cocos2d::CCLayerGradient::setStartColor)), Thiscall, cocos2d::CCLayerGradient, setStartColor, cocos2d::_ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccColor3B const&>::func(&cocos2d::CCLayerGradient::setStartColor)), Thiscall, cocos2d::CCLayerGradient, setStartColor, cocos2d::ccColor3B const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLayerGradient::getEndColor)), Thiscall, cocos2d::CCLayerGradient, getEndColor, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccColor3B const&>::func(&cocos2d::CCLayerGradient::setEndColor)), Thiscall, cocos2d::CCLayerGradient, setEndColor, cocos2d::_ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccColor3B const&>::func(&cocos2d::CCLayerGradient::setEndColor)), Thiscall, cocos2d::CCLayerGradient, setEndColor, cocos2d::ccColor3B const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLayerGradient::getStartOpacity)), Thiscall, cocos2d::CCLayerGradient, getStartOpacity, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<unsigned char>::func(&cocos2d::CCLayerGradient::setStartOpacity)), Thiscall, cocos2d::CCLayerGradient, setStartOpacity, unsigned char)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLayerGradient::getEndOpacity)), Thiscall, cocos2d::CCLayerGradient, getEndOpacity, )
@@ -227,6 +215,7 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCPoint const&>::func(&cocos2d::CCLayerGradient::setVector)), Thiscall, cocos2d::CCLayerGradient, setVector, cocos2d::CCPoint const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<bool>::func(&cocos2d::CCLayerGradient::setCompressedInterpolation)), Thiscall, cocos2d::CCLayerGradient, setCompressedInterpolation, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCLayerGradient::isCompressedInterpolation)), Thiscall, cocos2d::CCLayerGradient, isCompressedInterpolation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::ccColor3B const&, unsigned char, cocos2d::ccColor3B const&, unsigned char, cocos2d::CCPoint const&>::func(&cocos2d::CCLayerGradient::setValues)), Thiscall, cocos2d::CCLayerGradient, setValues, cocos2d::ccColor3B const&, unsigned char, cocos2d::ccColor3B const&, unsigned char, cocos2d::CCPoint const&)
 		}
 	};
 }

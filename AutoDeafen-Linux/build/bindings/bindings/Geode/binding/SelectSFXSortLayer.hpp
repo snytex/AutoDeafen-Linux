@@ -25,39 +25,46 @@ public:
      SelectSFXSortLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x3a7640
-     * @note[short] MacOS (Intel): 0x42c860
+     * @note[short] MacOS (ARM): 0x3b1f00
+     * @note[short] MacOS (Intel): 0x4407d0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x16a518
      * @note[short] Android
      */
     static SelectSFXSortLayer* create(AudioSortType sortType);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a84bc
-     * @note[short] MacOS (Intel): 0x42d760
-     * @note[short] Windows: 0x84650
-     * @note[short] iOS: 0x16e780
+     * @note[short] MacOS (ARM): 0x3b2d58
+     * @note[short] MacOS (Intel): 0x4416b0
+     * @note[short] Windows: 0x846a0
+     * @note[short] iOS: 0x16b068
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x3a7f78
-     * @note[short] MacOS (Intel): 0x42d250
-     * @note[short] Windows: 0x468b50
+     * @note[short] MacOS (ARM): 0x3b2838
+     * @note[short] MacOS (Intel): 0x4411b0
+     * @note[short] Windows: 0x481030
+     * @note[short] iOS: 0x16ab4c
      * @note[short] Android
      */
-    bool init(AudioSortType p0);
+    bool init(AudioSortType sortType);
 
     /**
+     * @note[short] MacOS (ARM): 0x3b2cb0
+     * @note[short] MacOS (Intel): 0x441620
+     * @note[short] Windows: 0x84670
+     * @note[short] iOS: 0x16afc0
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x3a8450
-     * @note[short] MacOS (Intel): 0x42d700
-     * @note[short] Windows: 0x4691d0
+     * @note[short] MacOS (ARM): 0x3b2cec
+     * @note[short] MacOS (Intel): 0x441650
+     * @note[short] Windows: 0x4816b0
+     * @note[short] iOS: 0x16affc
      * @note[short] Android
      */
     void onSelect(cocos2d::CCObject* sender);

@@ -65,6 +65,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onInfo) 
 	#endif
 
+	#ifndef GEODE_STATICS_onStat
+		#define GEODE_STATICS_onStat
+		GEODE_AS_STATIC_FUNCTION(onStat) 
+	#endif
+
 	#ifndef GEODE_STATICS_onTop
 		#define GEODE_STATICS_onTop
 		GEODE_AS_STATIC_FUNCTION(onTop) 
@@ -171,6 +176,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(onInfo) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_onStat
+		#define GEODE_CONCEPT_CHECK_onStat
+		GEODE_CONCEPT_FUNCTION_CHECK(onStat) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_onTop
 		#define GEODE_CONCEPT_CHECK_onTop
 		GEODE_CONCEPT_FUNCTION_CHECK(onTop) 
@@ -215,27 +225,28 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LeaderboardsLayer, create, LeaderboardState)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LeaderboardsLayer, scene, LeaderboardState)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bbf50, Thiscall, LeaderboardsLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bbea0, Thiscall, LeaderboardsLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bb1f0, Thiscall, LeaderboardsLayer, updateUserScoreFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bb210, Thiscall, LeaderboardsLayer, updateUserScoreFailed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bb220, Thiscall, LeaderboardsLayer, loadLeaderboardFinished, cocos2d::CCArray*, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bb2b0, Thiscall, LeaderboardsLayer, loadLeaderboardFailed, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b9cd0, Thiscall, LeaderboardsLayer, init, LeaderboardState)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LeaderboardsLayer, isCorrect, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bbed0, Thiscall, LeaderboardsLayer, onBack, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LeaderboardsLayer, onCreators, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LeaderboardsLayer, onGlobal, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LeaderboardsLayer, onInfo, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LeaderboardsLayer, onTop, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LeaderboardsLayer, onWeek, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bac80, Thiscall, LeaderboardsLayer, refreshTabs, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2badb0, Thiscall, LeaderboardsLayer, selectLeaderboard, LeaderboardState)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bab20, Thiscall, LeaderboardsLayer, setupLevelBrowser, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LeaderboardsLayer, setupTabs, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2bb000, Thiscall, LeaderboardsLayer, toggleTabButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LeaderboardsLayer, create, LeaderboardType, LeaderboardStat)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LeaderboardsLayer, scene, LeaderboardType, LeaderboardStat)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c4150, Thiscall, LeaderboardsLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c40a0, Thiscall, LeaderboardsLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c3830, Thiscall, LeaderboardsLayer, updateUserScoreFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c3860, Thiscall, LeaderboardsLayer, updateUserScoreFailed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c3870, Thiscall, LeaderboardsLayer, loadLeaderboardFinished, cocos2d::CCArray*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c3930, Thiscall, LeaderboardsLayer, loadLeaderboardFailed, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c13c0, Thiscall, LeaderboardsLayer, init, LeaderboardType, LeaderboardStat)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c3a50, Thiscall, LeaderboardsLayer, isCorrect, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c40d0, Thiscall, LeaderboardsLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c3240, Thiscall, LeaderboardsLayer, onCreators, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c3220, Thiscall, LeaderboardsLayer, onGlobal, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c3ba0, Thiscall, LeaderboardsLayer, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c31b0, Thiscall, LeaderboardsLayer, onStat, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c31e0, Thiscall, LeaderboardsLayer, onTop, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c3200, Thiscall, LeaderboardsLayer, onWeek, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c3100, Thiscall, LeaderboardsLayer, refreshTabs, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c3260, Thiscall, LeaderboardsLayer, selectLeaderboard, LeaderboardType, LeaderboardStat)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c2fa0, Thiscall, LeaderboardsLayer, setupLevelBrowser, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c2660, Thiscall, LeaderboardsLayer, setupTabs, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c35a0, Thiscall, LeaderboardsLayer, toggleTabButtons, )
 		}
 	};
 }

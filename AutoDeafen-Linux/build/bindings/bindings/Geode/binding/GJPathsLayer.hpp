@@ -17,84 +17,91 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(GJPathsLayer, FLAlertLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x28446c
-     * @note[short] MacOS (Intel): 0x2e9ed0
-     * @note[short] Windows: 0x27d1d0
+     * @note[short] MacOS (ARM): 0x28f2a0
+     * @note[short] MacOS (Intel): 0x2fe240
+     * @note[short] Windows: 0x284b00
+     * @note[short] iOS: 0x3b7f00
      * @note[short] Android
      */
     static GJPathsLayer* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x2842bc
-     * @note[short] MacOS (Intel): 0x2e9d30
-     * @note[short] Windows: 0x27cf60
-     * @note[short] iOS: 0x3b068c
+     * @note[short] MacOS (ARM): 0x28f090
+     * @note[short] MacOS (Intel): 0x2fe060
+     * @note[short] Windows: 0x284890
+     * @note[short] iOS: 0x3b7e98
      * @note[short] Android
      */
-    static gd::string nameForPath(int p0);
+    static gd::string nameForPath(int path);
 
     /**
-     * @note[short] MacOS (ARM): 0x28456c
-     * @note[short] MacOS (Intel): 0x2ea020
-     * @note[short] Windows: 0x27d2d0
-     * @note[short] iOS: 0x3b07ac
+     * @note[short] MacOS (ARM): 0x28f3a0
+     * @note[short] MacOS (Intel): 0x2fe390
+     * @note[short] Windows: 0x284c00
+     * @note[short] iOS: 0x3b7fb8
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x284c94
-     * @note[short] MacOS (Intel): 0x2ea730
-     * @note[short] Windows: 0x27d830
-     * @note[short] iOS: 0x3b0e34
+     * @note[short] MacOS (ARM): 0x28fac0
+     * @note[short] MacOS (Intel): 0x2feab0
+     * @note[short] Windows: 0x285160
+     * @note[short] iOS: 0x3b8630
      * @note[short] Android
      */
     virtual void onExit();
 
     /**
-     * @note[short] MacOS (ARM): 0x285028
-     * @note[short] MacOS (Intel): 0x2eab50
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x3b1024
+     * @note[short] MacOS (ARM): 0x28fe58
+     * @note[short] MacOS (Intel): 0x2feed0
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x3b8824
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x284f58
-     * @note[short] MacOS (Intel): 0x2eaa80
-     * @note[short] Windows: 0x27db20
-     * @note[short] iOS: 0x3b1018
+     * @note[short] MacOS (ARM): 0x28fd88
+     * @note[short] MacOS (Intel): 0x2fee00
+     * @note[short] Windows: 0x285450
+     * @note[short] iOS: 0x3b8818
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x285060
-     * @note[short] MacOS (Intel): 0x2eab90
-     * @note[short] Windows: 0x867a0
-     * @note[short] iOS: 0x3b105c
+     * @note[short] MacOS (ARM): 0x28fe90
+     * @note[short] MacOS (Intel): 0x2fef10
+     * @note[short] Windows: 0x867f0
+     * @note[short] iOS: 0x3b885c
      * @note[short] Android
      */
     virtual void show();
 
     /**
-     * @note[short] MacOS (ARM): 0x284ce4
-     * @note[short] MacOS (Intel): 0x2ea780
+     * @note[short] MacOS (ARM): 0x28fb14
+     * @note[short] MacOS (Intel): 0x2feb00
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void darkenButtons(bool p0);
+    void darkenButtons(bool darken);
 
     /**
-     * @note[short] Windows: 0x27dac0
+     * @note[short] MacOS (ARM): 0x28f8a0
+     * @note[short] MacOS (Intel): 0x2fe8b0
+     * @note[short] Windows: 0x2853f0
+     * @note[short] iOS: 0x3b841c
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x284c04
-     * @note[short] MacOS (Intel): 0x2ea6b0
-     * @note[short] Windows: 0x27d880
+     * @note[short] MacOS (ARM): 0x28fa34
+     * @note[short] MacOS (Intel): 0x2fea30
+     * @note[short] Windows: 0x2851b0
+     * @note[short] iOS: 0x3b85a4
      * @note[short] Android
      */
     void onPath(cocos2d::CCObject* sender);

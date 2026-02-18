@@ -18,168 +18,172 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(AnimatedGameObject, EnhancedGameObject)
 
     /**
-     * @note[short] Windows: Out of line
-     * @note[short] Android: Rebinded
-     */
-     AnimatedGameObject();
-
-    /**
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
+     AnimatedGameObject();
+
+    /**
+     * @note[short] MacOS (ARM): 0x16fd60
+     * @note[short] MacOS (Intel): 0x1b6150
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3830cc
+     * @note[short] Android: Rebinded
+     */
      ~AnimatedGameObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x167618
-     * @note[short] MacOS (Intel): 0x1a5410
+     * @note[short] MacOS (ARM): 0x1724f0
+     * @note[short] MacOS (Intel): 0x1b8c80
+     * @note[short] Windows: 0x4a5380
+     * @note[short] iOS: 0x384e84
+     * @note[short] Android
+     */
+    static gd::string animationForID(int type, int id);
+
+    /**
+     * @note[short] MacOS (ARM): 0x16fedc
+     * @note[short] MacOS (Intel): 0x1b6300
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x37bfe0
+     * @note[short] iOS: 0x383150
      * @note[short] Android
      */
     static AnimatedGameObject* create(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x168658
-     * @note[short] MacOS (Intel): 0x1a64b0
-     * @note[short] Windows: 0x48b5e0
-     * @note[short] iOS: 0x37cdc0
+     * @note[short] MacOS (ARM): 0x17285c
+     * @note[short] MacOS (Intel): 0x1b8f20
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    virtual void setOpacity(unsigned char p0);
+    static float getTweenTime(int type, int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x16a064
-     * @note[short] MacOS (Intel): 0x1a80d0
-     * @note[short] Windows: 0x48d150
-     * @note[short] iOS: 0x37de10
+     * @note[short] MacOS (ARM): 0x170f18
+     * @note[short] MacOS (Intel): 0x1b73a0
+     * @note[short] Windows: 0x4a3cc0
+     * @note[short] iOS: 0x383f28
      * @note[short] Android
      */
-    virtual void setChildColor(cocos2d::ccColor3B const& p0);
+    virtual void setOpacity(unsigned char opacity);
 
     /**
-     * @note[short] MacOS (ARM): 0x16a004
-     * @note[short] MacOS (Intel): 0x1a8060
-     * @note[short] Windows: 0x48cc50
-     * @note[short] iOS: 0x37ddb8
+     * @note[short] MacOS (ARM): 0x1728d0
+     * @note[short] MacOS (Intel): 0x1b8fa0
+     * @note[short] Windows: 0x4a5830
+     * @note[short] iOS: 0x384f50
+     * @note[short] Android
+     */
+    virtual void setChildColor(cocos2d::ccColor3B const& color);
+
+    /**
+     * @note[short] MacOS (ARM): 0x17286c
+     * @note[short] MacOS (Intel): 0x1b8f30
+     * @note[short] Windows: 0x4a5330
+     * @note[short] iOS: 0x384ef4
      * @note[short] Android
      */
     virtual void resetObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x16855c
-     * @note[short] MacOS (Intel): 0x1a63a0
-     * @note[short] Windows: 0x48b430
-     * @note[short] iOS: 0x37cce0
+     * @note[short] MacOS (ARM): 0x170e2c
+     * @note[short] MacOS (Intel): 0x1b7290
+     * @note[short] Windows: 0x4a3b10
+     * @note[short] iOS: 0x383e48
      * @note[short] Android
      */
     virtual void activateObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x1685a0
-     * @note[short] MacOS (Intel): 0x1a63e0
-     * @note[short] Windows: 0x48b500
-     * @note[short] iOS: 0x37cd24
+     * @note[short] MacOS (ARM): 0x170e70
+     * @note[short] MacOS (Intel): 0x1b72d0
+     * @note[short] Windows: 0x4a3be0
+     * @note[short] iOS: 0x383e8c
      * @note[short] Android
      */
-    virtual void deactivateObject(bool p0);
+    virtual void deactivateObject(bool deactivate);
 
     /**
-     * @note[short] MacOS (ARM): 0x168724
-     * @note[short] MacOS (Intel): 0x1a6590
-     * @note[short] Windows: 0x48b6b0
-     * @note[short] iOS: 0x37ce8c
+     * @note[short] MacOS (ARM): 0x170fe4
+     * @note[short] MacOS (Intel): 0x1b7480
+     * @note[short] Windows: 0x4a3d90
+     * @note[short] iOS: 0x383ff4
      * @note[short] Android
      */
-    virtual void setObjectColor(cocos2d::ccColor3B const& p0);
+    virtual void setObjectColor(cocos2d::ccColor3B const& color);
 
     /**
-     * @note[short] MacOS (ARM): 0x168758
-     * @note[short] MacOS (Intel): 0x1a65c0
-     * @note[short] Windows: 0x48b6f0
-     * @note[short] iOS: 0x37cec0
+     * @note[short] MacOS (ARM): 0x171018
+     * @note[short] MacOS (Intel): 0x1b74b0
+     * @note[short] Windows: 0x4a3dd0
+     * @note[short] iOS: 0x384028
      * @note[short] Android
      */
-    virtual void animationFinished(char const* p0);
+    virtual void animationFinished(char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x169858
-     * @note[short] MacOS (Intel): 0x1a7930
-     * @note[short] Windows: 0x48c9d0
-     * @note[short] iOS: 0x37d924
+     * @note[short] MacOS (ARM): 0x172054
+     * @note[short] MacOS (Intel): 0x1b87e0
+     * @note[short] Windows: 0x4a50b0
+     * @note[short] iOS: 0x384a64
      * @note[short] Android: Rebinded
      */
-    virtual void displayFrameChanged(cocos2d::CCObject* p0, gd::string p1);
+    virtual void displayFrameChanged(cocos2d::CCObject* sprite, gd::string frameName);
 
     /**
-     * @note[short] MacOS (ARM): 0x169d08
-     * @note[short] MacOS (Intel): 0x1a7df0
-     * @note[short] Windows: 0x48cca0
-     * @note[short] iOS: 0x37dd48
+     * @note[short] MacOS (ARM): 0x170000
+     * @note[short] MacOS (Intel): 0x1b6450
+     * @note[short] Windows: 0x4a2a40
+     * @note[short] iOS: 0x383214
      * @note[short] Android
      */
-    static gd::string animationForID(int p0, int p1);
+    bool init(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x169ff4
-     * @note[short] MacOS (Intel): 0x1a8050
+     * @note[short] MacOS (ARM): 0x172374
+     * @note[short] MacOS (Intel): 0x1b8b20
+     * @note[short] Windows: 0x4a5200
+     * @note[short] iOS: 0x384d20
+     * @note[short] Android
+     */
+    void playAnimation(int type);
+
+    /**
+     * @note[short] MacOS (ARM): 0x17019c
+     * @note[short] MacOS (Intel): 0x1b65f0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
+     * @note[short] iOS: 0x3833b0
      * @note[short] Android
      */
-    static float getTweenTime(int p0, int p1);
+    void setupAnimatedSize(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x16773c
-     * @note[short] MacOS (Intel): 0x1a5560
-     * @note[short] Windows: 0x48a360
-     * @note[short] iOS: 0x37c0a4
-     * @note[short] Android
-     */
-    bool init(int p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x169b90
-     * @note[short] MacOS (Intel): 0x1a7c90
-     * @note[short] Windows: 0x48cb20
-     * @note[short] iOS: 0x37dbe8
-     * @note[short] Android
-     */
-    void playAnimation(int p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x1678d8
-     * @note[short] MacOS (Intel): 0x1a5700
-     * @note[short] iOS: 0x37c240
-     * @note[short] Android
-     */
-    void setupAnimatedSize(int p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x167a68
-     * @note[short] MacOS (Intel): 0x1a58c0
-     * @note[short] Windows: 0x48a8f0
-     * @note[short] iOS: 0x37c3e4
+     * @note[short] MacOS (ARM): 0x17032c
+     * @note[short] MacOS (Intel): 0x1b67b0
+     * @note[short] Windows: 0x4a2fd0
+     * @note[short] iOS: 0x383540
      * @note[short] Android
      */
     void setupChildSprites();
 
     /**
-     * @note[short] MacOS (ARM): 0x16834c
-     * @note[short] MacOS (Intel): 0x1a6160
+     * @note[short] MacOS (ARM): 0x170c14
+     * @note[short] MacOS (Intel): 0x1b7050
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x37cadc
+     * @note[short] iOS: 0x383c3c
      * @note[short] Android
      */
     void updateChildSpriteColor(cocos2d::ccColor3B color);
 
     /**
-     * @note[short] MacOS (ARM): 0x1683cc
-     * @note[short] MacOS (Intel): 0x1a61e0
-     * @note[short] Windows: 0x48b1c0
-     * @note[short] iOS: 0x37cb5c
+     * @note[short] MacOS (ARM): 0x170c94
+     * @note[short] MacOS (Intel): 0x1b70d0
+     * @note[short] Windows: 0x4a38a0
+     * @note[short] iOS: 0x383cbc
      * @note[short] Android
      */
     void updateObjectAnimation();

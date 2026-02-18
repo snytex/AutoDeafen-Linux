@@ -16,120 +16,130 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(UIOptionsLayer, SetupTriggerPopup)
 
     /**
-     * @note[short] MacOS (ARM): 0x245c94
-     * @note[short] MacOS (Intel): 0x29e540
-     * @note[short] Windows: 0x2995e0
-     * @note[short] iOS: 0x2e1d1c
+     * @note[short] MacOS (ARM): 0x24fda4
+     * @note[short] MacOS (Intel): 0x2b1c00
+     * @note[short] Windows: 0x2a0ca0
+     * @note[short] iOS: 0x2e2040
      * @note[short] Android
      */
-    static UIOptionsLayer* create(bool p0);
+    static UIOptionsLayer* create(bool dual);
 
     /**
-     * @note[short] MacOS (ARM): 0x248680
-     * @note[short] MacOS (Intel): 0x2a17c0
-     * @note[short] Windows: 0x29c640
-     * @note[short] iOS: 0x2e4038
+     * @note[short] MacOS (ARM): 0x25278c
+     * @note[short] MacOS (Intel): 0x2b4db0
+     * @note[short] Windows: 0x2a3d00
+     * @note[short] iOS: 0x2e44d0
      * @note[short] Android
      */
-    virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual bool ccTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x248840
-     * @note[short] MacOS (Intel): 0x2a1990
-     * @note[short] Windows: 0x29c790
-     * @note[short] iOS: 0x2e41cc
+     * @note[short] MacOS (ARM): 0x252950
+     * @note[short] MacOS (Intel): 0x2b4ef0
+     * @note[short] Windows: 0x2a3e50
+     * @note[short] iOS: 0x2e4604
      * @note[short] Android
      */
-    virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchMoved(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x248a2c
-     * @note[short] MacOS (Intel): 0x2a1b30
-     * @note[short] Windows: 0x29c8c0
-     * @note[short] iOS: 0x2e4314
+     * @note[short] MacOS (ARM): 0x252b3c
+     * @note[short] MacOS (Intel): 0x2b5000
+     * @note[short] Windows: 0x2a3f80
+     * @note[short] iOS: 0x2e46ec
      * @note[short] Android
      */
-    virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchEnded(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x248b64
-     * @note[short] MacOS (Intel): 0x2a1c70
-     * @note[short] Windows: 0x71210
-     * @note[short] iOS: 0x2e43ac
+     * @note[short] MacOS (ARM): 0x252c74
+     * @note[short] MacOS (Intel): 0x2b5140
+     * @note[short] Windows: 0x71240
+     * @note[short] iOS: 0x2e4730
      * @note[short] Android
      */
-    virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchCancelled(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x248b80
-     * @note[short] MacOS (Intel): 0x2a1cb0
-     * @note[short] Windows: 0x9b1a0
-     * @note[short] iOS: 0x2e43c8
+     * @note[short] MacOS (ARM): 0x252c90
+     * @note[short] MacOS (Intel): 0x2b5180
+     * @note[short] Windows: 0x9b7d0
+     * @note[short] iOS: 0x2e474c
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x248060
-     * @note[short] MacOS (Intel): 0x2a1040
-     * @note[short] Windows: 0x29b720
-     * @note[short] iOS: 0x2e3ba4
+     * @note[short] MacOS (ARM): 0x2521b8
+     * @note[short] MacOS (Intel): 0x2b4660
+     * @note[short] Windows: 0x2a2de0
+     * @note[short] iOS: 0x2e4048
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2481b0
-     * @note[short] MacOS (Intel): 0x2a11d0
-     * @note[short] Windows: 0x29bb20
-     * @note[short] iOS: 0x2e3cf4
+     * @note[short] MacOS (ARM): 0x252308
+     * @note[short] MacOS (Intel): 0x2b47f0
+     * @note[short] Windows: 0x2a31e0
+     * @note[short] iOS: 0x2e4198
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x248414
-     * @note[short] MacOS (Intel): 0x2a14e0
-     * @note[short] Windows: 0x29c2a0
-     * @note[short] iOS: 0x2e3ecc
+     * @note[short] MacOS (ARM): 0x252568
+     * @note[short] MacOS (Intel): 0x2b4b10
+     * @note[short] Windows: 0x2a3960
+     * @note[short] iOS: 0x2e4370
      * @note[short] Android
      */
-    virtual float getValue(int p0);
+    virtual float getValue(int tag);
 
     /**
+     * @note[short] MacOS (ARM): 0x25276c
+     * @note[short] MacOS (Intel): 0x2b4d90
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    GJUINode* getNode(int p0);
+    GJUINode* getNode(int type);
 
     /**
-     * @note[short] MacOS (ARM): 0x24645c
-     * @note[short] MacOS (Intel): 0x29ef50
-     * @note[short] Windows: 0x299720
-     * @note[short] iOS: 0x2e22a4
+     * @note[short] MacOS (ARM): 0x2505c8
+     * @note[short] MacOS (Intel): 0x2b2620
+     * @note[short] Windows: 0x2a0de0
+     * @note[short] iOS: 0x2e274c
      * @note[short] Android
      */
-    bool init(bool p0);
+    bool init(bool dual);
 
     /**
-     * @note[short] Windows: 0x29ba10
+     * @note[short] MacOS (ARM): 0x251e40
+     * @note[short] MacOS (Intel): 0x2b4270
+     * @note[short] Windows: 0x2a30d0
+     * @note[short] iOS: 0x2e3da0
      * @note[short] Android
      */
     void onReset(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x29b5f0
+     * @note[short] MacOS (ARM): 0x251eb0
+     * @note[short] MacOS (Intel): 0x2b42e0
+     * @note[short] Windows: 0x2a2cb0
+     * @note[short] iOS: 0x2e3e10
      * @note[short] Android
      */
     void onSaveLoad(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x247d74
-     * @note[short] MacOS (Intel): 0x2a0ce0
-     * @note[short] Windows: 0x29b430
+     * @note[short] MacOS (ARM): 0x251ecc
+     * @note[short] MacOS (Intel): 0x2b4300
+     * @note[short] Windows: 0x2a2af0
+     * @note[short] iOS: 0x2e3e2c
      * @note[short] Android
      */
-    void toggleUIGroup(int p0);
+    void toggleUIGroup(int group);
     bool m_dual;
     GJUINode* m_uiNode1;
     GJUINode* m_uiNode2;

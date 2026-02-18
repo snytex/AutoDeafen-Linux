@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void loadCommentsFinished(cocos2d::CCArray* p0, char const* p1);
+    virtual void loadCommentsFinished(cocos2d::CCArray* comments, char const* key);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,7 +29,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void loadCommentsFailed(char const* p0);
+    virtual void loadCommentsFailed(char const* key);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -47,5 +47,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void setupPageInfo(gd::string p0, char const* p1);
+    virtual void setupPageInfo(gd::string info, char const* key);
 };

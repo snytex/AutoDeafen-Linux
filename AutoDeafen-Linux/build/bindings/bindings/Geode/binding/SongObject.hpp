@@ -15,22 +15,28 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(SongObject, cocos2d::CCObject)
 
     /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
-     * @note[short] Android: Rebinded
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
      SongObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x1f12d0
-     * @note[short] MacOS (Intel): 0x241a00
+     * @note[short] MacOS (ARM): 0x1f9efc
+     * @note[short] MacOS (Intel): 0x253a50
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x112d44
+     * @note[short] iOS: 0x1100e4
      * @note[short] Android
      */
     static SongObject* create(int audioID);
 
     /**
+     * @note[short] MacOS (ARM): 0x1f9f68
+     * @note[short] MacOS (Intel): 0x253ac0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     bool init(int audioID);

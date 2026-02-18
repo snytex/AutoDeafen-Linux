@@ -85,13 +85,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4524d0, Default, SetupItemEditTriggerPopup, create, ItemTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x454ce0, Thiscall, SetupItemEditTriggerPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x454a40, Thiscall, SetupItemEditTriggerPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4525f0, Thiscall, SetupItemEditTriggerPopup, init, ItemTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4537e0, Thiscall, SetupItemEditTriggerPopup, onOpButton, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x453eb0, Thiscall, SetupItemEditTriggerPopup, updateFormulaLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x453c50, Thiscall, SetupItemEditTriggerPopup, updateOpButton, CCMenuItemSpriteExtra*, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46aa40, Default, SetupItemEditTriggerPopup, create, ItemTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46d250, Thiscall, SetupItemEditTriggerPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46cfb0, Thiscall, SetupItemEditTriggerPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46ab60, Thiscall, SetupItemEditTriggerPopup, init, ItemTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46bd50, Thiscall, SetupItemEditTriggerPopup, onOpButton, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46c420, Thiscall, SetupItemEditTriggerPopup, updateFormulaLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46c1c0, Thiscall, SetupItemEditTriggerPopup, updateOpButton, CCMenuItemSpriteExtra*, int, int)
 		}
 	};
 }

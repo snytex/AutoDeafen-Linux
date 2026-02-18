@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -58,11 +53,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_resetCheckpoint
 		#define GEODE_STATICS_resetCheckpoint
 		GEODE_AS_STATIC_FUNCTION(resetCheckpoint) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateCheckpointSpriteVisibility
-		#define GEODE_STATICS_updateCheckpointSpriteVisibility
-		GEODE_AS_STATIC_FUNCTION(updateCheckpointSpriteVisibility) 
 	#endif
 
     
@@ -135,18 +125,18 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CheckpointGameObject, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1240, Thiscall, CheckpointGameObject, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1680, Thiscall, CheckpointGameObject, setupCustomSprites, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a2470, Thiscall, CheckpointGameObject, resetObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a12c0, Thiscall, CheckpointGameObject, triggerObject, GJBaseGameLayer*, int, gd::vector<int> const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a2340, Thiscall, CheckpointGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a2070, Thiscall, CheckpointGameObject, getSaveString, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a12e0, Thiscall, CheckpointGameObject, triggerActivated, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a2680, Thiscall, CheckpointGameObject, restoreObject, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a1d20, Thiscall, CheckpointGameObject, updateSyncedAnimation, float, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a24f0, Thiscall, CheckpointGameObject, resetCheckpoint, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CheckpointGameObject, updateCheckpointSpriteVisibility, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CheckpointGameObject, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b9d90, Thiscall, CheckpointGameObject, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ba1d0, Thiscall, CheckpointGameObject, setupCustomSprites, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4bafc0, Thiscall, CheckpointGameObject, resetObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b9e10, Thiscall, CheckpointGameObject, triggerObject, GJBaseGameLayer*, int, gd::vector<int> const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4bae90, Thiscall, CheckpointGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4babc0, Thiscall, CheckpointGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b9e30, Thiscall, CheckpointGameObject, triggerActivated, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4bb1d0, Thiscall, CheckpointGameObject, restoreObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ba870, Thiscall, CheckpointGameObject, updateSyncedAnimation, float, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4bb040, Thiscall, CheckpointGameObject, resetCheckpoint, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CheckpointGameObject, updateCheckpointSpriteVisibility, )
 		}
 	};
 }

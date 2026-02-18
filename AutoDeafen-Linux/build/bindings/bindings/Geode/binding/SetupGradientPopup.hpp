@@ -19,123 +19,133 @@ public:
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
+     * @note[short] iOS: 0x3438b4
      * @note[short] Android: Out of line
      */
      SetupGradientPopup();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x51ac40
+     * @note[short] MacOS (Intel): 0x5f11c0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x342454
+     * @note[short] Android: Rebinded
      */
      ~SetupGradientPopup();
 
     /**
-     * @note[short] MacOS (ARM): 0x50d1d0
-     * @note[short] MacOS (Intel): 0x5d9de0
+     * @note[short] MacOS (ARM): 0x51aed4
+     * @note[short] MacOS (Intel): 0x5f15c0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x342510
      * @note[short] Android
      */
-    static SetupGradientPopup* create(GradientTriggerObject* p0, cocos2d::CCArray* p1);
+    static SetupGradientPopup* create(GradientTriggerObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x50e9cc
-     * @note[short] MacOS (Intel): 0x5db910
-     * @note[short] Windows: 0x409e70
-     * @note[short] iOS: 0x343010
+     * @note[short] MacOS (ARM): 0x51c6c0
+     * @note[short] MacOS (Intel): 0x5f30a0
+     * @note[short] Windows: 0x421b80
+     * @note[short] iOS: 0x343620
      * @note[short] Android
      */
     virtual void determineStartValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x50eafc
-     * @note[short] MacOS (Intel): 0x5dba30
-     * @note[short] Windows: 0x409f80
-     * @note[short] iOS: 0x343120
+     * @note[short] MacOS (ARM): 0x51c7f0
+     * @note[short] MacOS (Intel): 0x5f31c0
+     * @note[short] Windows: 0x421c90
+     * @note[short] iOS: 0x343730
      * @note[short] Android
      */
     virtual void onPlusButton(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x50eb58
-     * @note[short] MacOS (Intel): 0x5dba80
-     * @note[short] Windows: 0x40a000
-     * @note[short] iOS: 0x34317c
+     * @note[short] MacOS (ARM): 0x51c8a4
+     * @note[short] MacOS (Intel): 0x5f3280
+     * @note[short] Windows: 0x421d50
+     * @note[short] iOS: 0x3437bc
      * @note[short] Android
      */
-    virtual void updateToggleItem(int p0, bool p1);
+    virtual void updateToggleItem(int value, bool toggled);
 
     /**
-     * @note[short] MacOS (ARM): 0x50ed10
-     * @note[short] MacOS (Intel): 0x5dbc40
-     * @note[short] Windows: 0x40a410
-     * @note[short] iOS: 0x343234
+     * @note[short] MacOS (ARM): 0x51ca54
+     * @note[short] MacOS (Intel): 0x5f3440
+     * @note[short] Windows: 0x422160
+     * @note[short] iOS: 0x343874
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x50d368
-     * @note[short] MacOS (Intel): 0x5da040
-     * @note[short] Windows: 0x408d10
-     * @note[short] iOS: 0x341f78
+     * @note[short] MacOS (ARM): 0x51b06c
+     * @note[short] MacOS (Intel): 0x5f1820
+     * @note[short] Windows: 0x420a20
+     * @note[short] iOS: 0x342594
      * @note[short] Android
      */
-    bool init(GradientTriggerObject* p0, cocos2d::CCArray* p1);
+    bool init(GradientTriggerObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x50e720
-     * @note[short] MacOS (Intel): 0x5db640
-     * @note[short] Windows: 0x40a2c0
+     * @note[short] MacOS (ARM): 0x51c414
+     * @note[short] MacOS (Intel): 0x5f2dd0
+     * @note[short] Windows: 0x422010
+     * @note[short] iOS: 0x3434b8
      * @note[short] Android
      */
     void onBlending(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x50e850
-     * @note[short] MacOS (Intel): 0x5db760
-     * @note[short] Windows: 0x40a1a0
+     * @note[short] MacOS (ARM): 0x51c544
+     * @note[short] MacOS (Intel): 0x5f2ef0
+     * @note[short] Windows: 0x421ef0
+     * @note[short] iOS: 0x343514
      * @note[short] Android
      */
     void onZLayer(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x50ec70
-     * @note[short] MacOS (Intel): 0x5dbba0
+     * @note[short] MacOS (ARM): 0x51c9b4
+     * @note[short] MacOS (Intel): 0x5f33a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void sliderChanged(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x50eca0
-     * @note[short] MacOS (Intel): 0x5dbbc0
+     * @note[short] MacOS (ARM): 0x51c9e4
+     * @note[short] MacOS (Intel): 0x5f33c0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x34380c
      * @note[short] Android
      */
     void updateBlending();
 
     /**
-     * @note[short] MacOS (ARM): 0x50e66c
-     * @note[short] MacOS (Intel): 0x5db5b0
-     * @note[short] Windows: 0x40a380
+     * @note[short] MacOS (ARM): 0x51c360
+     * @note[short] MacOS (Intel): 0x5f2d40
+     * @note[short] Windows: 0x4220d0
+     * @note[short] iOS: 0x343408
      * @note[short] Android
      */
     void updateBlendingLabel();
 
     /**
-     * @note[short] MacOS (ARM): 0x50e564
-     * @note[short] MacOS (Intel): 0x5db4a0
-     * @note[short] Windows: 0x40a090
+     * @note[short] MacOS (ARM): 0x51c260
+     * @note[short] MacOS (Intel): 0x5f2c30
+     * @note[short] Windows: 0x421de0
+     * @note[short] iOS: 0x343310
      * @note[short] Android
      */
-    void updateGradientLabels(bool p0);
+    void updateGradientLabels(bool vertex);
 
     /**
-     * @note[short] MacOS (ARM): 0x50e93c
-     * @note[short] MacOS (Intel): 0x5db870
-     * @note[short] Windows: 0x40a230
+     * @note[short] MacOS (ARM): 0x51c630
+     * @note[short] MacOS (Intel): 0x5f3000
+     * @note[short] Windows: 0x421f80
+     * @note[short] iOS: 0x343590
      * @note[short] Android
      */
     void updateZLayerButtons();

@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void levelDeleteFinished(int p0);
+    virtual void levelDeleteFinished(int id);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,5 +29,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void levelDeleteFailed(int p0);
+    virtual void levelDeleteFailed(int id);
 };

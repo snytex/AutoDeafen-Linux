@@ -26,139 +26,145 @@ public:
      LevelSelectLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x39a698
-     * @note[short] MacOS (Intel): 0x41f070
+     * @note[short] MacOS (ARM): 0x3a3fe4
+     * @note[short] MacOS (Intel): 0x431b10
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3f97fc
+     * @note[short] iOS: 0x401898
      * @note[short] Android
      */
     static LevelSelectLayer* create(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x39a5b0
-     * @note[short] MacOS (Intel): 0x41ef50
-     * @note[short] Windows: 0x303710
-     * @note[short] iOS: 0x3f97b0
+     * @note[short] MacOS (ARM): 0x3a3efc
+     * @note[short] MacOS (Intel): 0x4319f0
+     * @note[short] Windows: 0x3182c0
+     * @note[short] iOS: 0x40184c
      * @note[short] Android
      */
-    static cocos2d::CCScene* scene(int p0);
+    static cocos2d::CCScene* scene(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x39d1bc
-     * @note[short] MacOS (Intel): 0x421c50
-     * @note[short] Windows: 0x304ed0
-     * @note[short] iOS: 0x3fb7b0
+     * @note[short] MacOS (ARM): 0x3a6ad4
+     * @note[short] MacOS (Intel): 0x4346e0
+     * @note[short] Windows: 0x319a80
+     * @note[short] iOS: 0x403824
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x39d250
-     * @note[short] MacOS (Intel): 0x421cf0
-     * @note[short] Windows: 0x304f20
-     * @note[short] iOS: 0x3fb7bc
+     * @note[short] MacOS (ARM): 0x3a6b68
+     * @note[short] MacOS (Intel): 0x434780
+     * @note[short] Windows: 0x319ad0
+     * @note[short] iOS: 0x403830
      * @note[short] Android
      */
-    virtual void keyDown(cocos2d::enumKeyCodes p0);
+    virtual void keyDown(cocos2d::enumKeyCodes key, double timestamp);
 
     /**
-     * @note[short] MacOS (ARM): 0x39b4a8
-     * @note[short] MacOS (Intel): 0x41ffe0
-     * @note[short] Windows: 0x304650
-     * @note[short] iOS: 0x3fa324
+     * @note[short] MacOS (ARM): 0x3a4de4
+     * @note[short] MacOS (Intel): 0x432a80
+     * @note[short] Windows: 0x319200
+     * @note[short] iOS: 0x4023b4
      * @note[short] Android
      */
-    virtual void updatePageWithObject(cocos2d::CCObject* p0, cocos2d::CCObject* p1);
+    virtual void updatePageWithObject(cocos2d::CCObject* layer, cocos2d::CCObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x39cd34
-     * @note[short] MacOS (Intel): 0x4217c0
-     * @note[short] Windows: 0x3046c0
-     * @note[short] iOS: 0x3fb4a4
+     * @note[short] MacOS (ARM): 0x3a664c
+     * @note[short] MacOS (Intel): 0x434240
+     * @note[short] Windows: 0x319270
+     * @note[short] iOS: 0x403518
      * @note[short] Android
      */
-    virtual void scrollLayerMoved(cocos2d::CCPoint p0);
+    virtual void scrollLayerMoved(cocos2d::CCPoint position);
 
     /**
-     * @note[short] MacOS (ARM): 0x39d12c
-     * @note[short] MacOS (Intel): 0x421bd0
-     * @note[short] Windows: 0x3049e0
-     * @note[short] iOS: 0x3fb724
+     * @note[short] MacOS (ARM): 0x3a6a44
+     * @note[short] MacOS (Intel): 0x434660
+     * @note[short] Windows: 0x319590
+     * @note[short] iOS: 0x403798
      * @note[short] Android
      */
     cocos2d::ccColor3B colorForPage(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x39ce88
-     * @note[short] MacOS (Intel): 0x421930
-     * @note[short] iOS: 0x3fb5f4
+     * @note[short] MacOS (ARM): 0x3a67a0
+     * @note[short] MacOS (Intel): 0x4343b0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x403668
      * @note[short] Android
      */
-    cocos2d::ccColor3B getColorValue(int p0, int p1, float p2);
+    cocos2d::ccColor3B getColorValue(int page1, int page2, float progress);
 
     /**
-     * @note[short] MacOS (ARM): 0x39a760
-     * @note[short] MacOS (Intel): 0x41f160
-     * @note[short] Windows: 0x303840
-     * @note[short] iOS: 0x3f98b8
+     * @note[short] MacOS (ARM): 0x3a40ac
+     * @note[short] MacOS (Intel): 0x431c00
+     * @note[short] Windows: 0x3183f0
+     * @note[short] iOS: 0x401954
      * @note[short] Android
      */
     bool init(int page);
 
     /**
-     * @note[short] MacOS (ARM): 0x39b424
-     * @note[short] MacOS (Intel): 0x41ff50
-     * @note[short] Windows: 0x304e80
-     * @note[short] iOS: 0x3fa2c0
+     * @note[short] MacOS (ARM): 0x3a4d60
+     * @note[short] MacOS (Intel): 0x4329f0
+     * @note[short] Windows: 0x319a30
+     * @note[short] iOS: 0x402350
      * @note[short] Android
      */
     void onBack(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x39b36c
-     * @note[short] MacOS (Intel): 0x41fea0
-     * @note[short] Windows: 0x304600
-     * @note[short] iOS: 0x3fa208
+     * @note[short] MacOS (ARM): 0x3a4ca8
+     * @note[short] MacOS (Intel): 0x432940
+     * @note[short] Windows: 0x3191b0
+     * @note[short] iOS: 0x402298
      * @note[short] Android
      */
     void onDownload(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x39b46c
-     * @note[short] MacOS (Intel): 0x41ffa0
-     * @note[short] Windows: 0x305000
-     * @note[short] iOS: 0x3fa308
+     * @note[short] MacOS (ARM): 0x3a4da8
+     * @note[short] MacOS (Intel): 0x432a40
+     * @note[short] Windows: 0x319bb0
+     * @note[short] iOS: 0x402398
      * @note[short] Android
      */
     void onInfo(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x39b3f4
-     * @note[short] MacOS (Intel): 0x41ff20
-     * @note[short] Windows: 0x304d80
-     * @note[short] iOS: 0x3fa290
+     * @note[short] MacOS (ARM): 0x3a4d30
+     * @note[short] MacOS (Intel): 0x4329c0
+     * @note[short] Windows: 0x319930
+     * @note[short] iOS: 0x402320
      * @note[short] Android
      */
     void onNext(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x39d328
-     * @note[short] MacOS (Intel): 0x421ea0
-     * @note[short] iOS: 0x3fb884
+     * @note[short] MacOS (ARM): 0x3a6c60
+     * @note[short] MacOS (Intel): 0x434930
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x4038f8
      * @note[short] Android
      */
     void onPlay(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x39b3c4
-     * @note[short] MacOS (Intel): 0x41fef0
-     * @note[short] Windows: 0x304e00
-     * @note[short] iOS: 0x3fa260
+     * @note[short] MacOS (ARM): 0x3a4d00
+     * @note[short] MacOS (Intel): 0x432990
+     * @note[short] Windows: 0x3199b0
+     * @note[short] iOS: 0x4022f0
      * @note[short] Android
      */
     void onPrev(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x3a4dc4
+     * @note[short] MacOS (Intel): 0x432a60
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void tryShowAd();

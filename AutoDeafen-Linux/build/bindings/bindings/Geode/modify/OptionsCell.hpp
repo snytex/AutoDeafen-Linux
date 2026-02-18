@@ -15,11 +15,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onToggleOption) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateBGColor
-		#define GEODE_STATICS_updateBGColor
-		GEODE_AS_STATIC_FUNCTION(updateBGColor) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_loadFromObject
 		#define GEODE_CONCEPT_CHECK_loadFromObject
@@ -45,9 +40,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb49f0, Thiscall, OptionsCell, loadFromObject, OptionsObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4d90, Thiscall, OptionsCell, onToggleOption, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(OptionsCell, updateBGColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb5170, Thiscall, OptionsCell, loadFromObject, OptionsObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb5510, Thiscall, OptionsCell, onToggleOption, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(OptionsCell, updateBGColor, int)
 		}
 	};
 }

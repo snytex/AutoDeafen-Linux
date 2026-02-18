@@ -16,37 +16,58 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(AdvancedFollowTriggerObject, EffectGameObject)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: 0x495bf0
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static AdvancedFollowTriggerObject* create(char const* p0);
+     AdvancedFollowTriggerObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x15ee0c
-     * @note[short] MacOS (Intel): 0x19b5d0
-     * @note[short] Windows: 0x485150
-     * @note[short] iOS: 0x377698
+     * @note[short] MacOS (ARM): 0x160998
+     * @note[short] MacOS (Intel): 0x1a2cf0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x37c91c
+     * @note[short] Android
+     */
+    static AdvancedFollowTriggerObject* create(char const* frame);
+
+    /**
+     * @note[short] MacOS (ARM): 0x167944
+     * @note[short] MacOS (Intel): 0x1ac3f0
+     * @note[short] Windows: 0x49d830
+     * @note[short] iOS: 0x37e8c4
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x157e00
-     * @note[short] MacOS (Intel): 0x192350
-     * @note[short] Windows: 0x482f50
-     * @note[short] iOS: 0x375858
+     * @note[short] MacOS (ARM): 0x160b28
+     * @note[short] MacOS (Intel): 0x1a2ed0
+     * @note[short] Windows: 0x49b630
+     * @note[short] iOS: 0x37ca58
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
+     * @note[short] MacOS (ARM): 0x160af0
+     * @note[short] MacOS (Intel): 0x1a2e90
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x37ca20
      * @note[short] Android
      */
     int getAdvancedFollowID();
 
     /**
+     * @note[short] MacOS (ARM): 0x160aa8
+     * @note[short] MacOS (Intel): 0x1a2e40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(char const* p0);
+    bool init(char const* frame);
     float m_delay;
     float m_delayVariance;
     float m_startSpeed;

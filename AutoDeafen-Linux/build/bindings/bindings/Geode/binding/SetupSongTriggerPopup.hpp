@@ -18,78 +18,100 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupSongTriggerPopup, SetupAudioTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x444470
+     * @note[short] MacOS (ARM): 0x26ded8
+     * @note[short] MacOS (Intel): 0x2d2f10
+     * @note[short] Windows: 0x45c810
+     * @note[short] iOS: 0x1c287c
      * @note[short] Android
      */
-    static SetupSongTriggerPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupSongTriggerPopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x26537c
-     * @note[short] MacOS (Intel): 0x2c0f70
-     * @note[short] Windows: 0x445910
-     * @note[short] iOS: 0x1c4418
+     * @note[short] MacOS (ARM): 0x26f020
+     * @note[short] MacOS (Intel): 0x2d4270
+     * @note[short] Windows: 0x45dcb0
+     * @note[short] iOS: 0x1c3710
      * @note[short] Android
      */
     virtual void pageChanged();
 
     /**
-     * @note[short] MacOS (ARM): 0x265410
-     * @note[short] MacOS (Intel): 0x2c1000
-     * @note[short] Windows: 0x445990
-     * @note[short] iOS: 0x1c44ac
+     * @note[short] MacOS (ARM): 0x26f0b4
+     * @note[short] MacOS (Intel): 0x2d4300
+     * @note[short] Windows: 0x45dd30
+     * @note[short] iOS: 0x1c37a4
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x26527c
-     * @note[short] MacOS (Intel): 0x2c0e70
-     * @note[short] Windows: 0x4457c0
-     * @note[short] iOS: 0x1c4384
+     * @note[short] MacOS (ARM): 0x26ef20
+     * @note[short] MacOS (Intel): 0x2d4170
+     * @note[short] Windows: 0x45db60
+     * @note[short] iOS: 0x1c367c
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x265068
-     * @note[short] MacOS (Intel): 0x2c0c30
-     * @note[short] Windows: 0x445290
-     * @note[short] iOS: 0x1c417c
+     * @note[short] MacOS (ARM): 0x26ed0c
+     * @note[short] MacOS (Intel): 0x2d3f30
+     * @note[short] Windows: 0x45d630
+     * @note[short] iOS: 0x1c3474
      * @note[short] Android
      */
-    virtual void onPlayback(SongInfoObject* p0);
+    virtual void onPlayback(SongInfoObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x2643d0
-     * @note[short] MacOS (Intel): 0x2bfe60
-     * @note[short] Windows: 0x4445b0
+     * @note[short] MacOS (ARM): 0x26e078
+     * @note[short] MacOS (Intel): 0x2d3180
+     * @note[short] Windows: 0x45c950
+     * @note[short] iOS: 0x1c2900
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
+     * @note[short] MacOS (ARM): 0x26ef14
+     * @note[short] MacOS (Intel): 0x2d4150
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void onResetSongTime(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x445630
+     * @note[short] MacOS (ARM): 0x26eab8
+     * @note[short] MacOS (Intel): 0x2d3d00
+     * @note[short] Windows: 0x45d9d0
+     * @note[short] iOS: 0x1c3244
      * @note[short] Android
      */
     void onSavePlaybackPos(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x26ecc8
+     * @note[short] MacOS (Intel): 0x2d3ef0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1c3430
      * @note[short] Android
      */
-    void updateApplyPrepare(bool p0);
+    void updateApplyPrepare(bool hideAll);
 
     /**
-     * @note[short] Windows: 0x445200
+     * @note[short] MacOS (ARM): 0x26ea60
+     * @note[short] MacOS (Intel): 0x2d3cb0
+     * @note[short] Windows: 0x45d5a0
+     * @note[short] iOS: 0x1c31ec
      * @note[short] Android
      */
     void updateLength();
 
     /**
+     * @note[short] MacOS (ARM): 0x26ebec
+     * @note[short] MacOS (Intel): 0x2d3e00
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1c3354
      * @note[short] Android
      */
     void updateSongTimeSlider();

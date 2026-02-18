@@ -110,15 +110,17 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2957d0, Default, SetTextPopup, create, gd::string, gd::string, int, gd::string, gd::string, bool, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x296490, Thiscall, SetTextPopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8ba30, Thiscall, SetTextPopup, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b790, Thiscall, SetTextPopup, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x296280, Thiscall, SetTextPopup, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x295940, Thiscall, SetTextPopup, init, gd::string, gd::string, int, gd::string, gd::string, bool, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x296370, Thiscall, SetTextPopup, onCancel, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x296400, Thiscall, SetTextPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x296220, Thiscall, SetTextPopup, onResetValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x28dca0, Thiscall, SetTextPopup, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x29cd80, Thiscall, SetTextPopup)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29ce30, Default, SetTextPopup, create, gd::string, gd::string, int, gd::string, gd::string, bool, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29daf0, Thiscall, SetTextPopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8baf0, Thiscall, SetTextPopup, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b850, Thiscall, SetTextPopup, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29d8e0, Thiscall, SetTextPopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29cfa0, Thiscall, SetTextPopup, init, gd::string, gd::string, int, gd::string, gd::string, bool, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29d9d0, Thiscall, SetTextPopup, onCancel, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29da60, Thiscall, SetTextPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29d880, Thiscall, SetTextPopup, onResetValue, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetTextPopup, updateTextInputLabel, )
 		}
 	};

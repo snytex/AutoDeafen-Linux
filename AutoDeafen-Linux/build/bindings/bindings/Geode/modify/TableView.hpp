@@ -5,6 +5,16 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
+	#ifndef GEODE_STATICS_onEnter
+		#define GEODE_STATICS_onEnter
+		GEODE_AS_STATIC_FUNCTION(onEnter) 
+	#endif
+
+	#ifndef GEODE_STATICS_onExit
+		#define GEODE_STATICS_onExit
+		GEODE_AS_STATIC_FUNCTION(onExit) 
+	#endif
+
 	#ifndef GEODE_STATICS_ccTouchBegan
 		#define GEODE_STATICS_ccTouchBegan
 		GEODE_AS_STATIC_FUNCTION(ccTouchBegan) 
@@ -35,21 +45,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(scrollWheel) 
 	#endif
 
-	#ifndef GEODE_STATICS_cancelAndStoleTouch
-		#define GEODE_STATICS_cancelAndStoleTouch
-		GEODE_AS_STATIC_FUNCTION(cancelAndStoleTouch) 
-	#endif
-
-	#ifndef GEODE_STATICS_cellForRowAtIndexPath
-		#define GEODE_STATICS_cellForRowAtIndexPath
-		GEODE_AS_STATIC_FUNCTION(cellForRowAtIndexPath) 
-	#endif
-
-	#ifndef GEODE_STATICS_cellForTouch
-		#define GEODE_STATICS_cellForTouch
-		GEODE_AS_STATIC_FUNCTION(cellForTouch) 
-	#endif
-
 	#ifndef GEODE_STATICS_checkBoundaryOfCell
 		#define GEODE_STATICS_checkBoundaryOfCell
 		GEODE_AS_STATIC_FUNCTION(checkBoundaryOfCell) 
@@ -70,19 +65,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(checkLastCell) 
 	#endif
 
-	#ifndef GEODE_STATICS_claimTouch
-		#define GEODE_STATICS_claimTouch
-		GEODE_AS_STATIC_FUNCTION(claimTouch) 
-	#endif
-
 	#ifndef GEODE_STATICS_deleteTableViewCell
 		#define GEODE_STATICS_deleteTableViewCell
 		GEODE_AS_STATIC_FUNCTION(deleteTableViewCell) 
-	#endif
-
-	#ifndef GEODE_STATICS_dequeueReusableCellWithIdentifier
-		#define GEODE_STATICS_dequeueReusableCellWithIdentifier
-		GEODE_AS_STATIC_FUNCTION(dequeueReusableCellWithIdentifier) 
 	#endif
 
 	#ifndef GEODE_STATICS_initTableViewCells
@@ -103,16 +88,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_reloadData
 		#define GEODE_STATICS_reloadData
 		GEODE_AS_STATIC_FUNCTION(reloadData) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeIndexPathFromPathAddedArray
-		#define GEODE_STATICS_removeIndexPathFromPathAddedArray
-		GEODE_AS_STATIC_FUNCTION(removeIndexPathFromPathAddedArray) 
-	#endif
-
-	#ifndef GEODE_STATICS_scrollToIndexPath
-		#define GEODE_STATICS_scrollToIndexPath
-		GEODE_AS_STATIC_FUNCTION(scrollToIndexPath) 
 	#endif
 
 	#ifndef GEODE_STATICS_touchFinish
@@ -281,36 +256,36 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TableView, create, TableViewDelegate*, TableViewDataSource*, TableViewCellDelegate*, cocos2d::CCRect)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TableView, onEnter, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TableView, onExit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x75250, Thiscall, TableView, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x754e0, Thiscall, TableView, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x75400, Thiscall, TableView, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x75460, Thiscall, TableView, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e5a0, Thiscall, TableView, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x75a90, Thiscall, TableView, scrollWheel, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52e20, Thiscall, TableView, onEnter, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x75270, Thiscall, TableView, onExit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x75280, Thiscall, TableView, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x75510, Thiscall, TableView, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x75430, Thiscall, TableView, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x75490, Thiscall, TableView, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3e5f0, Thiscall, TableView, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x75ac0, Thiscall, TableView, scrollWheel, float, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TableView, scrllViewWillBeginDecelerating, CCScrollLayerExt*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TableView, scrollViewDidEndDecelerating, CCScrollLayerExt*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TableView, scrollViewTouchMoving, CCScrollLayerExt*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TableView, scrollViewDidEndMoving, CCScrollLayerExt*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, cancelAndStoleTouch, cocos2d::CCTouch*, cocos2d::CCEvent*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, cellForRowAtIndexPath, CCIndexPath&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, cellForTouch, cocos2d::CCTouch*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, checkBoundaryOfCell, cocos2d::CCPoint&, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, checkBoundaryOfCell, TableViewCell*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, checkBoundaryOfContent, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, checkFirstCell, TableViewCell*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, checkLastCell, TableViewCell*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, claimTouch, cocos2d::CCTouch*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, deleteTableViewCell, TableViewCell*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, dequeueReusableCellWithIdentifier, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TableView, cancelAndStoleTouch, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TableView, cellForRowAtIndexPath, CCIndexPath&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TableView, cellForTouch, cocos2d::CCTouch*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x75ba0, Thiscall, TableView, checkBoundaryOfCell, TableViewCell*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x75cc0, Thiscall, TableView, checkBoundaryOfCell, cocos2d::CCPoint&, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x75dc0, Thiscall, TableView, checkBoundaryOfContent, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x76380, Thiscall, TableView, checkFirstCell, TableViewCell*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x76630, Thiscall, TableView, checkLastCell, TableViewCell*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TableView, claimTouch, cocos2d::CCTouch*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x74a80, Thiscall, TableView, deleteTableViewCell, TableViewCell*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TableView, dequeueReusableCellWithIdentifier, char const*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, initTableViewCells, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, isDuplicateIndexPath, CCIndexPath&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, isDuplicateInVisibleCellArray, CCIndexPath*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x74d00, Thiscall, TableView, reloadData, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, removeIndexPathFromPathAddedArray, CCIndexPath&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, scrollToIndexPath, CCIndexPath&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TableView, touchFinish, cocos2d::CCTouch*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x749e0, Thiscall, TableView, isDuplicateIndexPath, CCIndexPath&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x74950, Thiscall, TableView, isDuplicateInVisibleCellArray, CCIndexPath*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x74d30, Thiscall, TableView, reloadData, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TableView, removeIndexPathFromPathAddedArray, CCIndexPath&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TableView, scrollToIndexPath, CCIndexPath&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x757d0, Thiscall, TableView, touchFinish, cocos2d::CCTouch*)
 		}
 	};
 }

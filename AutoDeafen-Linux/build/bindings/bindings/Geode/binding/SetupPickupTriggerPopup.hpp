@@ -16,42 +16,45 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupPickupTriggerPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x41e7f0
+     * @note[short] MacOS (ARM): 0x4c284
+     * @note[short] MacOS (Intel): 0x58920
+     * @note[short] Windows: 0x436a10
+     * @note[short] iOS: 0x43264
      * @note[short] Android
      */
-    static SetupPickupTriggerPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupPickupTriggerPopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4f578
-     * @note[short] MacOS (Intel): 0x598b0
-     * @note[short] Windows: 0x40c610
-     * @note[short] iOS: 0x47158
+     * @note[short] MacOS (ARM): 0x4cb3c
+     * @note[short] MacOS (Intel): 0x59370
+     * @note[short] Windows: 0x437240
+     * @note[short] iOS: 0x43914
      * @note[short] Android
      */
     virtual void onPlusButton(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4f5b0
-     * @note[short] MacOS (Intel): 0x598f0
-     * @note[short] Windows: 0x41f090
-     * @note[short] iOS: 0x47190
+     * @note[short] MacOS (ARM): 0x4cbd8
+     * @note[short] MacOS (Intel): 0x59420
+     * @note[short] Windows: 0x437360
+     * @note[short] iOS: 0x43988
      * @note[short] Android
      */
     virtual void onCustomToggleTriggerValue(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4ee48
-     * @note[short] MacOS (Intel): 0x59080
-     * @note[short] Windows: 0x41e900
-     * @note[short] iOS: 0x46b80
+     * @note[short] MacOS (ARM): 0x4c40c
+     * @note[short] MacOS (Intel): 0x58b50
+     * @note[short] Windows: 0x436b20
+     * @note[short] iOS: 0x4333c
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4f518
-     * @note[short] MacOS (Intel): 0x59840
-     * @note[short] Windows: 0x41f020
+     * @note[short] MacOS (ARM): 0x4cadc
+     * @note[short] MacOS (Intel): 0x59300
+     * @note[short] Windows: 0x4372f0
      * @note[short] iOS: Out of line
      * @note[short] Android
      */

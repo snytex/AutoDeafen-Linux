@@ -24,16 +24,19 @@ public:
      ColorActionSprite();
 
     /**
+     * @note[short] MacOS (ARM): 0x2738b8
+     * @note[short] MacOS (Intel): 0x2d9260
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xd2b8
      * @note[short] Android
      */
     static ColorActionSprite* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x268d18
-     * @note[short] MacOS (Intel): 0x2c4e30
-     * @note[short] Windows: 0x251ad0
-     * @note[short] iOS: 0x10d8c
+     * @note[short] MacOS (ARM): 0x273964
+     * @note[short] MacOS (Intel): 0x2d9300
+     * @note[short] Windows: 0x258e30
+     * @note[short] iOS: 0xd358
      * @note[short] Android
      */
     virtual bool init();

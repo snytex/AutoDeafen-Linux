@@ -17,130 +17,136 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(RewardUnlockLayer, FLAlertLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x1be624
-     * @note[short] MacOS (Intel): 0x209900
-     * @note[short] Windows: 0x3b6950
-     * @note[short] iOS: 0x1c56d8
+     * @note[short] MacOS (ARM): 0x1c6590
+     * @note[short] MacOS (Intel): 0x21b3e0
+     * @note[short] Windows: 0x3cdcc0
+     * @note[short] iOS: 0x1c49bc
      * @note[short] Android
      */
-    static RewardUnlockLayer* create(int p0, RewardsPage* p1);
+    static RewardUnlockLayer* create(int type, RewardsPage* page);
 
     /**
-     * @note[short] MacOS (ARM): 0x1c25c8
-     * @note[short] MacOS (Intel): 0x20dd60
+     * @note[short] MacOS (ARM): 0x1ca598
+     * @note[short] MacOS (Intel): 0x21f7f0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1c8e14
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x1c80f4
+     * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x1c25a0
-     * @note[short] MacOS (Intel): 0x20dd20
-     * @note[short] Windows: 0x3ba210
-     * @note[short] iOS: 0x1c8dec
+     * @note[short] MacOS (ARM): 0x1ca570
+     * @note[short] MacOS (Intel): 0x21f7b0
+     * @note[short] Windows: 0x3d1580
+     * @note[short] iOS: 0x1c80cc
      * @note[short] Android
      */
-    virtual void currencyWillExit(CurrencyRewardLayer* p0);
+    virtual void currencyWillExit(CurrencyRewardLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bff18
-     * @note[short] MacOS (Intel): 0x20b430
-     * @note[short] Windows: 0x3b7850
-     * @note[short] iOS: 0x1c6a60
+     * @note[short] MacOS (ARM): 0x1c7e78
+     * @note[short] MacOS (Intel): 0x21cee0
+     * @note[short] Windows: 0x3cebc0
+     * @note[short] iOS: 0x1c5d44
      * @note[short] Android
      */
     void connectionTimeout();
 
     /**
-     * @note[short] MacOS (ARM): 0x1bef6c
-     * @note[short] MacOS (Intel): 0x20a3e0
-     * @note[short] Windows: 0x3b6a80
-     * @note[short] iOS: 0x1c5cbc
+     * @note[short] MacOS (ARM): 0x1c6eec
+     * @note[short] MacOS (Intel): 0x21bec0
+     * @note[short] Windows: 0x3cddf0
+     * @note[short] iOS: 0x1c4fac
      * @note[short] Android
      */
-    bool init(int p0, RewardsPage* p1);
+    bool init(int type, RewardsPage* page);
 
     /**
+     * @note[short] MacOS (ARM): 0x1ca56c
+     * @note[short] MacOS (Intel): 0x21f7a0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1c80c8
      * @note[short] Android
      */
-    void labelEnterFinishedO(cocos2d::CCObject* p0);
+    void labelEnterFinishedO(cocos2d::CCObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bfec0
-     * @note[short] MacOS (Intel): 0x20b3d0
-     * @note[short] Windows: 0x3ba220
+     * @note[short] MacOS (ARM): 0x1c7e20
+     * @note[short] MacOS (Intel): 0x21ce80
+     * @note[short] Windows: 0x3d1590
+     * @note[short] iOS: 0x1c5cec
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bfd64
-     * @note[short] MacOS (Intel): 0x20b290
-     * @note[short] Windows: 0x3b78b0
-     * @note[short] iOS: 0x1c68d8
+     * @note[short] MacOS (ARM): 0x1c7cc4
+     * @note[short] MacOS (Intel): 0x21cd40
+     * @note[short] Windows: 0x3cec20
+     * @note[short] iOS: 0x1c5bbc
      * @note[short] Android
      */
     void playDropSound();
 
     /**
-     * @note[short] MacOS (ARM): 0x1c1e58
-     * @note[short] MacOS (Intel): 0x20d5c0
-     * @note[short] iOS: 0x1c86c8
+     * @note[short] MacOS (ARM): 0x1c9e28
+     * @note[short] MacOS (Intel): 0x21f050
+     * @note[short] Windows: 0x3d04f0
+     * @note[short] iOS: 0x1c79a8
      * @note[short] Android
      */
-    void playLabelEffect(int p0, int p1, cocos2d::CCSprite* p2, cocos2d::CCPoint p3, float p4);
+    void playLabelEffect(int count, int type, cocos2d::CCSprite* sprite, cocos2d::CCPoint position, float delay);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bff80
-     * @note[short] MacOS (Intel): 0x20b4a0
-     * @note[short] Windows: 0x3b7a70
-     * @note[short] iOS: 0x1c6ac8
+     * @note[short] MacOS (ARM): 0x1c7edc
+     * @note[short] MacOS (Intel): 0x21cf40
+     * @note[short] Windows: 0x3cede0
+     * @note[short] iOS: 0x1c5da4
      * @note[short] Android
      */
     void playRewardEffect();
 
     /**
-     * @note[short] MacOS (ARM): 0x1be8c8
-     * @note[short] MacOS (Intel): 0x209c10
+     * @note[short] MacOS (ARM): 0x1c683c
+     * @note[short] MacOS (Intel): 0x21b6f0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     bool readyToCollect(GJRewardItem* item);
 
     /**
-     * @note[short] MacOS (ARM): 0x1c2524
-     * @note[short] MacOS (Intel): 0x20dc90
-     * @note[short] Windows: 0x3b9110
-     * @note[short] iOS: 0x1c8d70
+     * @note[short] MacOS (ARM): 0x1ca4f4
+     * @note[short] MacOS (Intel): 0x21f720
+     * @note[short] Windows: 0x3d0480
+     * @note[short] iOS: 0x1c8050
      * @note[short] Android
      */
     void showCloseButton();
 
     /**
-     * @note[short] MacOS (ARM): 0x1be8e8
-     * @note[short] MacOS (Intel): 0x209c30
-     * @note[short] Windows: 0x3b7790
-     * @note[short] iOS: 0x1c58b8
+     * @note[short] MacOS (ARM): 0x1c685c
+     * @note[short] MacOS (Intel): 0x21b710
+     * @note[short] Windows: 0x3ceb00
+     * @note[short] iOS: 0x1c4b9c
      * @note[short] Android
      */
-    bool showCollectReward(GJRewardItem* p0);
+    bool showCollectReward(GJRewardItem* item);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bfdf0
-     * @note[short] MacOS (Intel): 0x20b300
-     * @note[short] Windows: 0x3b7950
-     * @note[short] iOS: 0x1c6948
+     * @note[short] MacOS (ARM): 0x1c7d50
+     * @note[short] MacOS (Intel): 0x21cdb0
+     * @note[short] Windows: 0x3cecc0
+     * @note[short] iOS: 0x1c5c2c
      * @note[short] Android
      */
     void step2();
 
     /**
-     * @note[short] MacOS (ARM): 0x1c1e40
-     * @note[short] MacOS (Intel): 0x20d5a0
-     * @note[short] Windows: 0x3b7a50
-     * @note[short] iOS: 0x1c86b0
+     * @note[short] MacOS (ARM): 0x1c9e0c
+     * @note[short] MacOS (Intel): 0x21f030
+     * @note[short] Windows: 0x3cedc0
+     * @note[short] iOS: 0x1c798c
      * @note[short] Android
      */
     void step3();

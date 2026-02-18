@@ -60,16 +60,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onPrevPage) 
 	#endif
 
-	#ifndef GEODE_STATICS_setupPageInfo
-		#define GEODE_STATICS_setupPageInfo
-		GEODE_AS_STATIC_FUNCTION(setupPageInfo) 
-	#endif
-
-	#ifndef GEODE_STATICS_setupSongBrowser
-		#define GEODE_STATICS_setupSongBrowser
-		GEODE_AS_STATIC_FUNCTION(setupSongBrowser) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -145,19 +135,19 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2afab0, Default, GJSongBrowser, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2afc30, Thiscall, GJSongBrowser, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2afd30, Thiscall, GJSongBrowser, customSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2afc70, Thiscall, GJSongBrowser, exitLayer, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b0470, Thiscall, GJSongBrowser, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b0570, Thiscall, GJSongBrowser, cellPerformedAction, TableViewCell*, int, CellAction, cocos2d::CCNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b05a0, Thiscall, GJSongBrowser, getSelectedCellIdx, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b00b0, Thiscall, GJSongBrowser, loadPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b0360, Thiscall, GJSongBrowser, onDeleteAll, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b0340, Thiscall, GJSongBrowser, onNextPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b0350, Thiscall, GJSongBrowser, onPrevPage, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJSongBrowser, setupPageInfo, int, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJSongBrowser, setupSongBrowser, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7170, Default, GJSongBrowser, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b72f0, Thiscall, GJSongBrowser, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b73f0, Thiscall, GJSongBrowser, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7330, Thiscall, GJSongBrowser, exitLayer, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7b30, Thiscall, GJSongBrowser, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7c30, Thiscall, GJSongBrowser, cellPerformedAction, TableViewCell*, int, CellAction, cocos2d::CCNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7c60, Thiscall, GJSongBrowser, getSelectedCellIdx, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7770, Thiscall, GJSongBrowser, loadPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7a20, Thiscall, GJSongBrowser, onDeleteAll, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7a00, Thiscall, GJSongBrowser, onNextPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b7a10, Thiscall, GJSongBrowser, onPrevPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSongBrowser, setupPageInfo, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSongBrowser, setupSongBrowser, cocos2d::CCArray*)
 		}
 	};
 }

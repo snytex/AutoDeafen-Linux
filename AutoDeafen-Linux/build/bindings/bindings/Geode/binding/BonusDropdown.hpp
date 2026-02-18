@@ -15,18 +15,22 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(BonusDropdown, cocos2d::CCNode)
 
     /**
+     * @note[short] MacOS (ARM): 0x3f8170
+     * @note[short] MacOS (Intel): 0x4933d0
      * @note[short] Android: Rebinded
      */
-    static BonusDropdown* create(gd::string p0, int p1);
+    static BonusDropdown* create(gd::string text, int price);
 
     /**
-     * @note[short] MacOS (ARM): 0x3ee364
-     * @note[short] MacOS (Intel): 0x480290
+     * @note[short] MacOS (ARM): 0x3f8248
+     * @note[short] MacOS (Intel): 0x4934b0
      * @note[short] Android: Rebinded
      */
-    bool init(gd::string p0, int p1);
+    bool init(gd::string text, int price);
 
     /**
+     * @note[short] MacOS (ARM): 0x3f84fc
+     * @note[short] MacOS (Intel): 0x493750
      * @note[short] Android
      */
     void show();

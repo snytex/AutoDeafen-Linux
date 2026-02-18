@@ -16,63 +16,82 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupGameplayOffsetPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static SetupGameplayOffsetPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+     SetupGameplayOffsetPopup();
 
     /**
-     * @note[short] MacOS (ARM): 0x697480
-     * @note[short] MacOS (Intel): 0x783140
-     * @note[short] Windows: 0x42a630
-     * @note[short] iOS: 0x1a29f8
+     * @note[short] MacOS (ARM): 0x6a0314
+     * @note[short] MacOS (Intel): 0x7985f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x19efa4
      * @note[short] Android
      */
-    virtual void updateInputValue(int p0, float& p1);
+    static SetupGameplayOffsetPopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x697468
-     * @note[short] MacOS (Intel): 0x783120
-     * @note[short] Windows: 0x42a610
-     * @note[short] iOS: 0x1a29e0
+     * @note[short] MacOS (ARM): 0x6a0c8c
+     * @note[short] MacOS (Intel): 0x799100
+     * @note[short] Windows: 0x442940
+     * @note[short] iOS: 0x19f790
      * @note[short] Android
      */
-    virtual void updateInputNode(int p0, float p1);
+    virtual void updateInputValue(int tag, float& value);
 
     /**
-     * @note[short] MacOS (ARM): 0x697418
-     * @note[short] MacOS (Intel): 0x7830d0
-     * @note[short] Windows: 0x42a5c0
-     * @note[short] iOS: 0x1a2990
+     * @note[short] MacOS (ARM): 0x6a0c74
+     * @note[short] MacOS (Intel): 0x7990e0
+     * @note[short] Windows: 0x442920
+     * @note[short] iOS: 0x19f778
      * @note[short] Android
      */
-    virtual float triggerValueFromSliderValue(int p0, float p1);
+    virtual void updateInputNode(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x697450
-     * @note[short] MacOS (Intel): 0x783100
-     * @note[short] Windows: 0x42a5f0
-     * @note[short] iOS: 0x1a29c8
+     * @note[short] MacOS (ARM): 0x6a0c24
+     * @note[short] MacOS (Intel): 0x799090
+     * @note[short] Windows: 0x4428d0
+     * @note[short] iOS: 0x19f728
      * @note[short] Android
      */
-    virtual float triggerSliderValueFromValue(int p0, float p1);
+    virtual float triggerValueFromSliderValue(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x697384
-     * @note[short] MacOS (Intel): 0x783030
-     * @note[short] Windows: 0x42a510
-     * @note[short] iOS: 0x1a290c
+     * @note[short] MacOS (ARM): 0x6a0c5c
+     * @note[short] MacOS (Intel): 0x7990c0
+     * @note[short] Windows: 0x442900
+     * @note[short] iOS: 0x19f760
+     * @note[short] Android
+     */
+    virtual float triggerSliderValueFromValue(int tag, float value);
+
+    /**
+     * @note[short] MacOS (ARM): 0x6a0b90
+     * @note[short] MacOS (Intel): 0x798ff0
+     * @note[short] Windows: 0x442820
+     * @note[short] iOS: 0x19f6a4
      * @note[short] Android
      */
     virtual void onCustomToggleTriggerValue(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x696c90
-     * @note[short] MacOS (Intel): 0x782840
+     * @note[short] MacOS (ARM): 0x6a049c
+     * @note[short] MacOS (Intel): 0x798820
+     * @note[short] Windows: 0x442040
+     * @note[short] iOS: 0x19f07c
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
+     * @note[short] MacOS (ARM): 0x6a0b4c
+     * @note[short] MacOS (Intel): 0x798fb0
+     * @note[short] Windows: 0x442770
+     * @note[short] iOS: 0x19f660
      * @note[short] Android
      */
     void onDefaultValues(cocos2d::CCObject* sender);

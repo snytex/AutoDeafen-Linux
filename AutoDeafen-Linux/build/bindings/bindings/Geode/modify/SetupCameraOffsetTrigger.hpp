@@ -50,19 +50,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onTargetMode) 
 	#endif
 
-	#ifndef GEODE_STATICS_posFromSliderValue
-		#define GEODE_STATICS_posFromSliderValue
-		GEODE_AS_STATIC_FUNCTION(posFromSliderValue) 
-	#endif
-
 	#ifndef GEODE_STATICS_sliderChanged
 		#define GEODE_STATICS_sliderChanged
 		GEODE_AS_STATIC_FUNCTION(sliderChanged) 
-	#endif
-
-	#ifndef GEODE_STATICS_sliderValueFromPos
-		#define GEODE_STATICS_sliderValueFromPos
-		GEODE_AS_STATIC_FUNCTION(sliderValueFromPos) 
 	#endif
 
 	#ifndef GEODE_STATICS_sliderXChanged
@@ -85,11 +75,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateDuration) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateDurLabel
-		#define GEODE_STATICS_updateDurLabel
-		GEODE_AS_STATIC_FUNCTION(updateDurLabel) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateEasingLabel
 		#define GEODE_STATICS_updateEasingLabel
 		GEODE_AS_STATIC_FUNCTION(updateEasingLabel) 
@@ -98,16 +83,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateEasingRateLabel
 		#define GEODE_STATICS_updateEasingRateLabel
 		GEODE_AS_STATIC_FUNCTION(updateEasingRateLabel) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateMoveCommandEasing
-		#define GEODE_STATICS_updateMoveCommandEasing
-		GEODE_AS_STATIC_FUNCTION(updateMoveCommandEasing) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateMoveCommandEasingRate
-		#define GEODE_STATICS_updateMoveCommandEasingRate
-		GEODE_AS_STATIC_FUNCTION(updateMoveCommandEasingRate) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateMoveCommandPosX
@@ -265,31 +240,31 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd690, Default, SetupCameraOffsetTrigger, create, CameraTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fe9f0, Thiscall, SetupCameraOffsetTrigger, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ffc80, Thiscall, SetupCameraOffsetTrigger, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ff6f0, Thiscall, SetupCameraOffsetTrigger, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fedf0, Thiscall, SetupCameraOffsetTrigger, valuePopupClosed, ConfigureValuePopup*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd7b0, Thiscall, SetupCameraOffsetTrigger, init, CameraTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ff1b0, Thiscall, SetupCameraOffsetTrigger, onEasing, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fed30, Thiscall, SetupCameraOffsetTrigger, onEasingRate, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ff610, Thiscall, SetupCameraOffsetTrigger, onTargetMode, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupCameraOffsetTrigger, posFromSliderValue, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26a440, Thiscall, SetupCameraOffsetTrigger, sliderChanged, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupCameraOffsetTrigger, sliderValueFromPos, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ff410, Thiscall, SetupCameraOffsetTrigger, sliderXChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ff460, Thiscall, SetupCameraOffsetTrigger, sliderYChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ff0a0, Thiscall, SetupCameraOffsetTrigger, toggleEasingRateVisibility, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x26b120, Thiscall, SetupCameraOffsetTrigger, updateDuration, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupCameraOffsetTrigger, updateDurLabel, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ff270, Thiscall, SetupCameraOffsetTrigger, updateEasingLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3feec0, Thiscall, SetupCameraOffsetTrigger, updateEasingRateLabel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupCameraOffsetTrigger, updateMoveCommandEasing, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupCameraOffsetTrigger, updateMoveCommandEasingRate, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ffaa0, Thiscall, SetupCameraOffsetTrigger, updateMoveCommandPosX, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ffb90, Thiscall, SetupCameraOffsetTrigger, updateMoveCommandPosY, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ff4b0, Thiscall, SetupCameraOffsetTrigger, updateValueXLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ff560, Thiscall, SetupCameraOffsetTrigger, updateValueYLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x415350, Default, SetupCameraOffsetTrigger, create, CameraTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4166b0, Thiscall, SetupCameraOffsetTrigger, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x417950, Thiscall, SetupCameraOffsetTrigger, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4173c0, Thiscall, SetupCameraOffsetTrigger, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x416ac0, Thiscall, SetupCameraOffsetTrigger, valuePopupClosed, ConfigureValuePopup*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x415470, Thiscall, SetupCameraOffsetTrigger, init, CameraTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x416e80, Thiscall, SetupCameraOffsetTrigger, onEasing, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4169f0, Thiscall, SetupCameraOffsetTrigger, onEasingRate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4172e0, Thiscall, SetupCameraOffsetTrigger, onTargetMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupCameraOffsetTrigger, posFromSliderValue, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x271d20, Thiscall, SetupCameraOffsetTrigger, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupCameraOffsetTrigger, sliderValueFromPos, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4170e0, Thiscall, SetupCameraOffsetTrigger, sliderXChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x417130, Thiscall, SetupCameraOffsetTrigger, sliderYChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x416d70, Thiscall, SetupCameraOffsetTrigger, toggleEasingRateVisibility, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x272a00, Thiscall, SetupCameraOffsetTrigger, updateDuration, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupCameraOffsetTrigger, updateDurLabel, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x416f40, Thiscall, SetupCameraOffsetTrigger, updateEasingLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x416b90, Thiscall, SetupCameraOffsetTrigger, updateEasingRateLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupCameraOffsetTrigger, updateMoveCommandEasing, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupCameraOffsetTrigger, updateMoveCommandEasingRate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x417770, Thiscall, SetupCameraOffsetTrigger, updateMoveCommandPosX, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x417860, Thiscall, SetupCameraOffsetTrigger, updateMoveCommandPosY, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x417180, Thiscall, SetupCameraOffsetTrigger, updateValueXLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x417230, Thiscall, SetupCameraOffsetTrigger, updateValueYLabel, )
 		}
 	};
 }

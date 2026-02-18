@@ -135,18 +135,18 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fc360, Default, SetupCameraModePopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fcf30, Thiscall, SetupCameraModePopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x287920, Thiscall, SetupCameraModePopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fc480, Thiscall, SetupCameraModePopup, init, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd1a0, Thiscall, SetupCameraModePopup, onEditCameraSettings, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd0f0, Thiscall, SetupCameraModePopup, onUnboundMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd320, Thiscall, SetupCameraModePopup, sliderChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd430, Thiscall, SetupCameraModePopup, updateCameraEasing, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd3d0, Thiscall, SetupCameraModePopup, updateCameraEasingLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd530, Thiscall, SetupCameraModePopup, updateCameraPadding, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd4c0, Thiscall, SetupCameraModePopup, updateCameraPaddingLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3fd250, Thiscall, SetupCameraModePopup, updateItemVisibility, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x414020, Default, SetupCameraModePopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x414bf0, Thiscall, SetupCameraModePopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28f250, Thiscall, SetupCameraModePopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x414140, Thiscall, SetupCameraModePopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x414e60, Thiscall, SetupCameraModePopup, onEditCameraSettings, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x414db0, Thiscall, SetupCameraModePopup, onUnboundMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x414fe0, Thiscall, SetupCameraModePopup, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4150f0, Thiscall, SetupCameraModePopup, updateCameraEasing, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x415090, Thiscall, SetupCameraModePopup, updateCameraEasingLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4151f0, Thiscall, SetupCameraModePopup, updateCameraPadding, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x415180, Thiscall, SetupCameraModePopup, updateCameraPaddingLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x414f10, Thiscall, SetupCameraModePopup, updateItemVisibility, )
 		}
 	};
 }

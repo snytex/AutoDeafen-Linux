@@ -17,59 +17,76 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(OptionsScrollLayer, FLAlertLayer)
 
     /**
-     * @note[short] Windows: 0x325ca0
+     * @note[short] MacOS (ARM): 0x535704
+     * @note[short] MacOS (Intel): 0x60fd80
+     * @note[short] Windows: 0x33ab70
+     * @note[short] iOS: 0x3c2a44
      * @note[short] Android
      */
-    static OptionsScrollLayer* create(cocos2d::CCArray* p0, bool p1, int p2);
+    static OptionsScrollLayer* create(cocos2d::CCArray* objects, bool recreate, int minimum);
 
     /**
-     * @note[short] MacOS (ARM): 0x5282bc
-     * @note[short] MacOS (Intel): 0x5f90f0
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x3bb598
+     * @note[short] MacOS (ARM): 0x5361dc
+     * @note[short] MacOS (Intel): 0x6109c0
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x3c3044
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x528198
-     * @note[short] MacOS (Intel): 0x5f8fc0
-     * @note[short] Windows: 0x326150
-     * @note[short] iOS: 0x3bb58c
+     * @note[short] MacOS (ARM): 0x5360b8
+     * @note[short] MacOS (Intel): 0x610890
+     * @note[short] Windows: 0x33b020
+     * @note[short] iOS: 0x3c3038
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x5282f4
-     * @note[short] MacOS (Intel): 0x5f9130
-     * @note[short] Windows: 0x326160
-     * @note[short] iOS: 0x3bb5d0
+     * @note[short] MacOS (ARM): 0x536214
+     * @note[short] MacOS (Intel): 0x610a00
+     * @note[short] Windows: 0x33b030
+     * @note[short] iOS: 0x3c307c
      * @note[short] Android
      */
-    virtual bool cellPerformedAction(TableViewCell* p0, int p1, CellAction p2, cocos2d::CCNode* p3);
+    virtual bool cellPerformedAction(TableViewCell* cell, int listType, CellAction action, cocos2d::CCNode* parent);
 
     /**
+     * @note[short] MacOS (ARM): 0x536028
+     * @note[short] MacOS (Intel): 0x610810
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3c2fb0
      * @note[short] Android
      */
-    cocos2d::CCArray* getRelevantObjects(cocos2d::CCArray* p0);
+    cocos2d::CCArray* getRelevantObjects(cocos2d::CCArray* objects);
 
     /**
+     * @note[short] MacOS (ARM): 0x535c98
+     * @note[short] MacOS (Intel): 0x610470
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3c2c84
      * @note[short] Android
      */
-    bool init(cocos2d::CCArray* p0, bool p1, int p2);
+    bool init(cocos2d::CCArray* objects, bool recreate, int minimum);
 
     /**
-     * @note[short] Windows: 0x3260c0
+     * @note[short] MacOS (ARM): 0x535e04
+     * @note[short] MacOS (Intel): 0x6105e0
+     * @note[short] Windows: 0x33af90
+     * @note[short] iOS: 0x3c2dec
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x325ef0
+     * @note[short] MacOS (ARM): 0x535e94
+     * @note[short] MacOS (Intel): 0x610670
+     * @note[short] Windows: 0x33adc0
+     * @note[short] iOS: 0x3c2e7c
      * @note[short] Android
      */
-    void setupList(cocos2d::CCArray* p0);
+    void setupList(cocos2d::CCArray* objects);
     cocos2d::CCArray* m_optionObjects;
     GJCommentListLayer* m_listLayer;
     bool m_recreateList;

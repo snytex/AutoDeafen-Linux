@@ -26,124 +26,145 @@ public:
      TopArtistsLayer();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x29f620
+     * @note[short] MacOS (Intel): 0x310280
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x1a45c4
+     * @note[short] Android: Rebinded
      */
      ~TopArtistsLayer();
 
     /**
+     * @note[short] MacOS (ARM): 0x29f91c
+     * @note[short] MacOS (Intel): 0x310650
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1a4680
      * @note[short] Android
      */
     static TopArtistsLayer* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x294b98
-     * @note[short] MacOS (Intel): 0x2fc850
-     * @note[short] Windows: 0x4b2030
-     * @note[short] iOS: 0x1a79b8
+     * @note[short] MacOS (ARM): 0x29fa24
+     * @note[short] MacOS (Intel): 0x3107b0
+     * @note[short] Windows: 0x4cac10
+     * @note[short] iOS: 0x1a4740
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x2954d8
-     * @note[short] MacOS (Intel): 0x2fd200
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x1a8200
+     * @note[short] MacOS (ARM): 0x2a034c
+     * @note[short] MacOS (Intel): 0x311150
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x1a4f88
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x29545c
-     * @note[short] MacOS (Intel): 0x2fd190
-     * @note[short] Windows: 0x84650
-     * @note[short] iOS: 0x1a8184
+     * @note[short] MacOS (ARM): 0x2a02d0
+     * @note[short] MacOS (Intel): 0x3110e0
+     * @note[short] Windows: 0x846a0
+     * @note[short] iOS: 0x1a4f0c
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x295fb0
-     * @note[short] MacOS (Intel): 0x2fdd70
-     * @note[short] Windows: 0x867a0
-     * @note[short] iOS: 0x1a8844
+     * @note[short] MacOS (ARM): 0x2a0eb8
+     * @note[short] MacOS (Intel): 0x311c90
+     * @note[short] Windows: 0x867f0
+     * @note[short] iOS: 0x1a55cc
      * @note[short] Android
      */
     virtual void show();
 
     /**
-     * @note[short] MacOS (ARM): 0x295518
-     * @note[short] MacOS (Intel): 0x2fd250
-     * @note[short] Windows: 0x4b27d0
-     * @note[short] iOS: 0x1a8238
+     * @note[short] MacOS (ARM): 0x2a038c
+     * @note[short] MacOS (Intel): 0x3111a0
+     * @note[short] Windows: 0x4cb3b0
+     * @note[short] iOS: 0x1a4fc0
      * @note[short] Android
      */
-    virtual void loadListFinished(cocos2d::CCArray* p0, char const* p1);
+    virtual void loadListFinished(cocos2d::CCArray* objects, char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x2955dc
-     * @note[short] MacOS (Intel): 0x2fd310
-     * @note[short] Windows: 0x4b2830
-     * @note[short] iOS: 0x1a829c
+     * @note[short] MacOS (ARM): 0x2a0450
+     * @note[short] MacOS (Intel): 0x311260
+     * @note[short] Windows: 0x4cb410
+     * @note[short] iOS: 0x1a5024
      * @note[short] Android
      */
-    virtual void loadListFailed(char const* p0);
+    virtual void loadListFailed(char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x295604
-     * @note[short] MacOS (Intel): 0x2fd350
-     * @note[short] Windows: 0x4b2990
-     * @note[short] iOS: 0x1a82c4
+     * @note[short] MacOS (ARM): 0x2a0478
+     * @note[short] MacOS (Intel): 0x3112a0
+     * @note[short] Windows: 0x4cb570
+     * @note[short] iOS: 0x1a504c
      * @note[short] Android: Rebinded
      */
-    virtual void setupPageInfo(gd::string p0, char const* p1);
+    virtual void setupPageInfo(gd::string info, char const* key);
 
     /**
+     * @note[short] MacOS (ARM): 0x2a0384
+     * @note[short] MacOS (Intel): 0x311190
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool isCorrect(char const* p0);
+    bool isCorrect(char const* key);
 
     /**
-     * @note[short] MacOS (ARM): 0x295bc0
-     * @note[short] MacOS (Intel): 0x2fd970
-     * @note[short] Windows: 0x4b2b70
+     * @note[short] MacOS (ARM): 0x2a0aec
+     * @note[short] MacOS (Intel): 0x3118a0
+     * @note[short] Windows: 0x4cb750
+     * @note[short] iOS: 0x1a5388
      * @note[short] Android
      */
-    void loadPage(int p0);
+    void loadPage(int page);
 
     /**
-     * @note[short] Windows: 0x84620
+     * @note[short] MacOS (ARM): 0x2a0150
+     * @note[short] MacOS (Intel): 0x310f30
+     * @note[short] Windows: 0x84670
+     * @note[short] iOS: 0x1a4d8c
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x4b2fe0
+     * @note[short] MacOS (ARM): 0x2a0198
+     * @note[short] MacOS (Intel): 0x310f80
+     * @note[short] Windows: 0x4cbbc0
+     * @note[short] iOS: 0x1a4dd4
      * @note[short] Android
      */
     void onNextPage(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x4b2ff0
+     * @note[short] MacOS (ARM): 0x2a018c
+     * @note[short] MacOS (Intel): 0x310f60
+     * @note[short] Windows: 0x4cbbd0
+     * @note[short] iOS: 0x1a4dc8
      * @note[short] Android
      */
     void onPrevPage(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x295330
-     * @note[short] MacOS (Intel): 0x2fd050
-     * @note[short] Windows: 0x4b2840
-     * @note[short] iOS: 0x1a8058
+     * @note[short] MacOS (ARM): 0x2a01a4
+     * @note[short] MacOS (Intel): 0x310fa0
+     * @note[short] Windows: 0x4cb420
+     * @note[short] iOS: 0x1a4de0
      * @note[short] Android
      */
-    void setupLeaderboard(cocos2d::CCArray* p0);
+    void setupLeaderboard(cocos2d::CCArray* artists);
 
     /**
+     * @note[short] MacOS (ARM): 0x2a0a64
+     * @note[short] MacOS (Intel): 0x311800
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1a5300
      * @note[short] Android
      */
     void updateLevelsLabel();

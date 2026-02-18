@@ -5,6 +5,11 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
+	#ifndef GEODE_STATICS_copyFile
+		#define GEODE_STATICS_copyFile
+		GEODE_AS_STATIC_FUNCTION(copyFile) 
+	#endif
+
 	#ifndef GEODE_STATICS_addBoolValuesToMapForKey
 		#define GEODE_STATICS_addBoolValuesToMapForKey
 		GEODE_AS_STATIC_FUNCTION(addBoolValuesToMapForKey) 
@@ -23,11 +28,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_cleanStringWhiteSpace
 		#define GEODE_STATICS_cleanStringWhiteSpace
 		GEODE_AS_STATIC_FUNCTION(cleanStringWhiteSpace) 
-	#endif
-
-	#ifndef GEODE_STATICS_copyFile
-		#define GEODE_STATICS_copyFile
-		GEODE_AS_STATIC_FUNCTION(copyFile) 
 	#endif
 
 	#ifndef GEODE_STATICS_decodeObjectForKey
@@ -266,6 +266,11 @@ namespace geode::modifier {
 	#endif
 
     
+	#ifndef GEODE_CONCEPT_CHECK_copyFile
+		#define GEODE_CONCEPT_CHECK_copyFile
+		GEODE_CONCEPT_FUNCTION_CHECK(copyFile) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_addBoolValuesToMapForKey
 		#define GEODE_CONCEPT_CHECK_addBoolValuesToMapForKey
 		GEODE_CONCEPT_FUNCTION_CHECK(addBoolValuesToMapForKey) 
@@ -284,11 +289,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_cleanStringWhiteSpace
 		#define GEODE_CONCEPT_CHECK_cleanStringWhiteSpace
 		GEODE_CONCEPT_FUNCTION_CHECK(cleanStringWhiteSpace) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_copyFile
-		#define GEODE_CONCEPT_CHECK_copyFile
-		GEODE_CONCEPT_FUNCTION_CHECK(copyFile) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_decodeObjectForKey
@@ -536,11 +536,11 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0DS_Dictionary@@QEAA@XZ")), Thiscall, DS_Dictionary, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*>::func(&DS_Dictionary::copyFile)), Default, DS_Dictionary, copyFile, char const*, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<gd::map<gd::string, bool>&, char const*, bool>::func(&DS_Dictionary::addBoolValuesToMapForKey)), Thiscall, DS_Dictionary, addBoolValuesToMapForKey, gd::map<gd::string, bool>&, char const*, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<gd::map<gd::string, bool>&, char const*, bool>::func(&DS_Dictionary::addBoolValuesToMapForKeySpecial)), Thiscall, DS_Dictionary, addBoolValuesToMapForKeySpecial, gd::map<gd::string, bool>&, char const*, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&DS_Dictionary::checkCompatibility)), Thiscall, DS_Dictionary, checkCompatibility, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<gd::string const&>::func(&DS_Dictionary::cleanStringWhiteSpace)), Thiscall, DS_Dictionary, cleanStringWhiteSpace, gd::string const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*>::func(&DS_Dictionary::copyFile)), Default, DS_Dictionary, copyFile, char const*, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, bool, int>::func(&DS_Dictionary::decodeObjectForKey)), Thiscall, DS_Dictionary, decodeObjectForKey, char const*, bool, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&DS_Dictionary::getAllKeys)), Thiscall, DS_Dictionary, getAllKeys, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, bool>::func(&DS_Dictionary::getArrayForKey)), Thiscall, DS_Dictionary, getArrayForKey, char const*, bool)
@@ -564,14 +564,14 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<gd::string const&>::func(&DS_Dictionary::loadRootSubDictFromString)), Thiscall, DS_Dictionary, loadRootSubDictFromString, gd::string const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<gd::string const&, cocos2d::CCRect&>::func(&DS_Dictionary::rectFromString)), Thiscall, DS_Dictionary, rectFromString, gd::string const&, cocos2d::CCRect&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&DS_Dictionary::removeAllKeys)), Thiscall, DS_Dictionary, removeAllKeys, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int>::func(&DS_Dictionary::removeKey)), Thiscall, DS_Dictionary, removeKey, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&DS_Dictionary::removeKey)), Thiscall, DS_Dictionary, removeKey, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int>::func(&DS_Dictionary::removeKey)), Thiscall, DS_Dictionary, removeKey, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&DS_Dictionary::saveRootSubDictToCompressedFile)), Thiscall, DS_Dictionary, saveRootSubDictToCompressedFile, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&DS_Dictionary::saveRootSubDictToFile)), Thiscall, DS_Dictionary, saveRootSubDictToFile, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&DS_Dictionary::saveRootSubDictToString)), Thiscall, DS_Dictionary, saveRootSubDictToString, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, cocos2d::CCArray*>::func(&DS_Dictionary::setArrayForKey)), Thiscall, DS_Dictionary, setArrayForKey, char const*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, bool, bool>::func(&DS_Dictionary::setBoolForKey)), Thiscall, DS_Dictionary, setBoolForKey, char const*, bool, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, bool>::func(&DS_Dictionary::setBoolForKey)), Thiscall, DS_Dictionary, setBoolForKey, char const*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, bool, bool>::func(&DS_Dictionary::setBoolForKey)), Thiscall, DS_Dictionary, setBoolForKey, char const*, bool, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, gd::map<gd::string, bool>&>::func(&DS_Dictionary::setBoolMapForKey)), Thiscall, DS_Dictionary, setBoolMapForKey, char const*, gd::map<gd::string, bool>&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, cocos2d::CCDictionary*>::func(&DS_Dictionary::setDictForKey)), Thiscall, DS_Dictionary, setDictForKey, char const*, cocos2d::CCDictionary*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, float>::func(&DS_Dictionary::setFloatForKey)), Thiscall, DS_Dictionary, setFloatForKey, char const*, float)

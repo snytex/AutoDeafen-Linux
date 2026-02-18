@@ -45,9 +45,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x297150, Default, FMODLevelVisualizer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2971d0, Thiscall, FMODLevelVisualizer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x297690, Thiscall, FMODLevelVisualizer, updateVisualizer, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29e7b0, Default, FMODLevelVisualizer, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29e830, Thiscall, FMODLevelVisualizer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29ecf0, Thiscall, FMODLevelVisualizer, updateVisualizer, float, float, float)
 		}
 	};
 }

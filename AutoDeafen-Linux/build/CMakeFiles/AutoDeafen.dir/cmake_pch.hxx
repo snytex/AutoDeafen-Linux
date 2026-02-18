@@ -2,7 +2,7 @@
 
 #pragma GCC system_header
 #ifdef __cplusplus
-#include "/home/snytex/Dokumente/Geode/loader/include/Geode/DefaultInclude.hpp"
-#include "/home/snytex/Dokumente/Geode/loader/include/Geode/Geode.hpp"
-#include "/home/snytex/Dokumente/Geode/loader/include/Geode/Bindings.hpp"
+#include "/home/snytex/Projekte/Geode/loader/include/Geode/DefaultInclude.hpp"
+#include "/home/snytex/Projekte/Geode/loader/include/Geode/Geode.hpp"
+#include "/home/snytex/Projekte/Geode/loader/include/Geode/Bindings.hpp"
 #endif // __cplusplus

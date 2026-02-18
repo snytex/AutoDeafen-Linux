@@ -16,15 +16,29 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupAreaRotateTriggerPopup, SetupAreaMoveTriggerPopup)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static SetupAreaRotateTriggerPopup* create(EnterEffectObject* p0, cocos2d::CCArray* p1);
+     SetupAreaRotateTriggerPopup();
 
     /**
-     * @note[short] MacOS (ARM): 0x4297c8
-     * @note[short] MacOS (Intel): 0x4c2f00
-     * @note[short] Windows: 0x3f6ce0
+     * @note[short] MacOS (ARM): 0x433a48
+     * @note[short] MacOS (Intel): 0x4d6270
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x36bd0
      * @note[short] Android
      */
-    bool init(EnterEffectObject* p0, cocos2d::CCArray* p1);
+    static SetupAreaRotateTriggerPopup* create(EnterEffectObject* object, cocos2d::CCArray* objects);
+
+    /**
+     * @note[short] MacOS (ARM): 0x433bd4
+     * @note[short] MacOS (Intel): 0x4d64b0
+     * @note[short] Windows: 0x40e9a0
+     * @note[short] iOS: 0x36cb0
+     * @note[short] Android
+     */
+    bool init(EnterEffectObject* object, cocos2d::CCArray* objects);
 };

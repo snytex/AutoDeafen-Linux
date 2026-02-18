@@ -35,29 +35,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_onResetSongTime
-		#define GEODE_STATICS_onResetSongTime
-		GEODE_AS_STATIC_FUNCTION(onResetSongTime) 
-	#endif
-
 	#ifndef GEODE_STATICS_onSavePlaybackPos
 		#define GEODE_STATICS_onSavePlaybackPos
 		GEODE_AS_STATIC_FUNCTION(onSavePlaybackPos) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateApplyPrepare
-		#define GEODE_STATICS_updateApplyPrepare
-		GEODE_AS_STATIC_FUNCTION(updateApplyPrepare) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateLength
 		#define GEODE_STATICS_updateLength
 		GEODE_AS_STATIC_FUNCTION(updateLength) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateSongTimeSlider
-		#define GEODE_STATICS_updateSongTimeSlider
-		GEODE_AS_STATIC_FUNCTION(updateSongTimeSlider) 
 	#endif
 
     
@@ -125,17 +110,17 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x444470, Default, SetupSongTriggerPopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x445910, Thiscall, SetupSongTriggerPopup, pageChanged, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x445990, Thiscall, SetupSongTriggerPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4457c0, Thiscall, SetupSongTriggerPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x445290, Thiscall, SetupSongTriggerPopup, onPlayback, SongInfoObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4445b0, Thiscall, SetupSongTriggerPopup, init, EffectGameObject*, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupSongTriggerPopup, onResetSongTime, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x445630, Thiscall, SetupSongTriggerPopup, onSavePlaybackPos, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupSongTriggerPopup, updateApplyPrepare, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x445200, Thiscall, SetupSongTriggerPopup, updateLength, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupSongTriggerPopup, updateSongTimeSlider, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45c810, Default, SetupSongTriggerPopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45dcb0, Thiscall, SetupSongTriggerPopup, pageChanged, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45dd30, Thiscall, SetupSongTriggerPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45db60, Thiscall, SetupSongTriggerPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45d630, Thiscall, SetupSongTriggerPopup, onPlayback, SongInfoObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45c950, Thiscall, SetupSongTriggerPopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupSongTriggerPopup, onResetSongTime, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45d9d0, Thiscall, SetupSongTriggerPopup, onSavePlaybackPos, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupSongTriggerPopup, updateApplyPrepare, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45d5a0, Thiscall, SetupSongTriggerPopup, updateLength, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupSongTriggerPopup, updateSongTimeSlider, )
 		}
 	};
 }

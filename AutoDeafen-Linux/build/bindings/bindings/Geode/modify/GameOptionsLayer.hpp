@@ -86,13 +86,13 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameOptionsLayer, create, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2978e0, Thiscall, GameOptionsLayer, setupOptions, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x298ed0, Thiscall, GameOptionsLayer, didToggle, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29ef40, Thiscall, GameOptionsLayer, setupOptions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a0560, Thiscall, GameOptionsLayer, didToggle, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameOptionsLayer, init, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x298be0, Thiscall, GameOptionsLayer, onPracticeMusicSync, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x298d60, Thiscall, GameOptionsLayer, onUIOptions, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x298d80, Thiscall, GameOptionsLayer, onUIPOptions, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x298380, Thiscall, GameOptionsLayer, showPracticeMusicSyncUnlockInfo, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a0270, Thiscall, GameOptionsLayer, onPracticeMusicSync, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a03f0, Thiscall, GameOptionsLayer, onUIOptions, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a0410, Thiscall, GameOptionsLayer, onUIPOptions, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29fa10, Thiscall, GameOptionsLayer, showPracticeMusicSyncUnlockInfo, )
 		}
 	};
 }

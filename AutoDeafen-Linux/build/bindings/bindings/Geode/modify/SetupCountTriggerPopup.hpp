@@ -175,22 +175,22 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4031a0, Default, SetupCountTriggerPopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x404390, Thiscall, SetupCountTriggerPopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x404b30, Thiscall, SetupCountTriggerPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x404650, Thiscall, SetupCountTriggerPopup, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4032e0, Thiscall, SetupCountTriggerPopup, init, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x401660, Thiscall, SetupCountTriggerPopup, onEnableGroup, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4045c0, Thiscall, SetupCountTriggerPopup, onItemIDArrow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4044f0, Thiscall, SetupCountTriggerPopup, onMultiActivate, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x404580, Thiscall, SetupCountTriggerPopup, onTargetCountArrow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x404610, Thiscall, SetupCountTriggerPopup, onTargetIDArrow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x401eb0, Thiscall, SetupCountTriggerPopup, updateCountTextInputLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x401f30, Thiscall, SetupCountTriggerPopup, updateItemID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4048d0, Thiscall, SetupCountTriggerPopup, updateItemIDInputLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x404aa0, Thiscall, SetupCountTriggerPopup, updateTargetCount, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4049d0, Thiscall, SetupCountTriggerPopup, updateTargetID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x404950, Thiscall, SetupCountTriggerPopup, updateTargetIDInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41ae70, Default, SetupCountTriggerPopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c060, Thiscall, SetupCountTriggerPopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c800, Thiscall, SetupCountTriggerPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c320, Thiscall, SetupCountTriggerPopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41afb0, Thiscall, SetupCountTriggerPopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x419330, Thiscall, SetupCountTriggerPopup, onEnableGroup, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c290, Thiscall, SetupCountTriggerPopup, onItemIDArrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c1c0, Thiscall, SetupCountTriggerPopup, onMultiActivate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c250, Thiscall, SetupCountTriggerPopup, onTargetCountArrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c2e0, Thiscall, SetupCountTriggerPopup, onTargetIDArrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x419b80, Thiscall, SetupCountTriggerPopup, updateCountTextInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x419c00, Thiscall, SetupCountTriggerPopup, updateItemID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c5a0, Thiscall, SetupCountTriggerPopup, updateItemIDInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c770, Thiscall, SetupCountTriggerPopup, updateTargetCount, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c6a0, Thiscall, SetupCountTriggerPopup, updateTargetID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c620, Thiscall, SetupCountTriggerPopup, updateTargetIDInputLabel, )
 		}
 	};
 }

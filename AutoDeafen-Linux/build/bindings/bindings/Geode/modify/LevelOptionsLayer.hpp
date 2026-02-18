@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_valueDidChange
 		#define GEODE_STATICS_valueDidChange
 		GEODE_AS_STATIC_FUNCTION(valueDidChange) 
@@ -85,13 +80,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LevelOptionsLayer, create, LevelSettingsObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30fb80, Thiscall, LevelOptionsLayer, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30fba0, Thiscall, LevelOptionsLayer, getValue, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30f4e0, Thiscall, LevelOptionsLayer, setupOptions, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30fbc0, Thiscall, LevelOptionsLayer, didToggle, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30f470, Thiscall, LevelOptionsLayer, init, LevelSettingsObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x30f9a0, Thiscall, LevelOptionsLayer, onSettings, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LevelOptionsLayer, create, LevelSettingsObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x324710, Thiscall, LevelOptionsLayer, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x324730, Thiscall, LevelOptionsLayer, getValue, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x324070, Thiscall, LevelOptionsLayer, setupOptions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x324750, Thiscall, LevelOptionsLayer, didToggle, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x324000, Thiscall, LevelOptionsLayer, init, LevelSettingsObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x324530, Thiscall, LevelOptionsLayer, onSettings, cocos2d::CCObject*)
 		}
 	};
 }

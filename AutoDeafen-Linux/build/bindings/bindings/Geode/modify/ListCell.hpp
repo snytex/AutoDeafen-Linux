@@ -41,7 +41,7 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ListCell, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c6f0, Thiscall, ListCell, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c730, Thiscall, ListCell, draw, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ListCell, loadFromObject, cocos2d::CCObject*, int, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ListCell, updateBGColor, int)
 		}

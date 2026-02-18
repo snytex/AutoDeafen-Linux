@@ -155,6 +155,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCIMEDispatcher@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCIMEDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCIMEDispatcher@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCIMEDispatcher)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCIMEDispatcher::sharedDispatcher)), Default, cocos2d::CCIMEDispatcher, sharedDispatcher, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCIMEDelegate*>::func(&cocos2d::CCIMEDispatcher::addDelegate)), Thiscall, cocos2d::CCIMEDispatcher, addDelegate, cocos2d::CCIMEDelegate*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCIMEDelegate*>::func(&cocos2d::CCIMEDispatcher::attachDelegateWithIME)), Thiscall, cocos2d::CCIMEDispatcher, attachDelegateWithIME, cocos2d::CCIMEDelegate*)
@@ -164,8 +166,8 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, int, cocos2d::enumKeyCodes>::func(&cocos2d::CCIMEDispatcher::dispatchInsertText)), Thiscall, cocos2d::CCIMEDispatcher, dispatchInsertText, char const*, int, cocos2d::enumKeyCodes)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCIMEKeyboardNotificationInfo&>::func(&cocos2d::CCIMEDispatcher::dispatchKeyboardDidHide)), Thiscall, cocos2d::CCIMEDispatcher, dispatchKeyboardDidHide, cocos2d::CCIMEKeyboardNotificationInfo&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCIMEKeyboardNotificationInfo&>::func(&cocos2d::CCIMEDispatcher::dispatchKeyboardDidShow)), Thiscall, cocos2d::CCIMEDispatcher, dispatchKeyboardDidShow, cocos2d::CCIMEKeyboardNotificationInfo&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCIMEKeyboardNotificationInfo&>::func(&cocos2d::CCIMEDispatcher::dispatchKeyboardWillHide)), Thiscall, cocos2d::CCIMEDispatcher, dispatchKeyboardWillHide, cocos2d::CCIMEKeyboardNotificationInfo&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCIMEDispatcher::dispatchKeyboardWillHide)), Thiscall, cocos2d::CCIMEDispatcher, dispatchKeyboardWillHide, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCIMEKeyboardNotificationInfo&>::func(&cocos2d::CCIMEDispatcher::dispatchKeyboardWillHide)), Thiscall, cocos2d::CCIMEDispatcher, dispatchKeyboardWillHide, cocos2d::CCIMEKeyboardNotificationInfo&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCIMEKeyboardNotificationInfo&>::func(&cocos2d::CCIMEDispatcher::dispatchKeyboardWillShow)), Thiscall, cocos2d::CCIMEDispatcher, dispatchKeyboardWillShow, cocos2d::CCIMEKeyboardNotificationInfo&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCIMEDispatcher::getContentText)), Thiscall, cocos2d::CCIMEDispatcher, getContentText, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCIMEDispatcher::hasDelegate)), Thiscall, cocos2d::CCIMEDispatcher, hasDelegate, )

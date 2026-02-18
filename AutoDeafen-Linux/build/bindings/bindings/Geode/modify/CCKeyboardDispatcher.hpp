@@ -10,36 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(convertKeyCode) 
 	#endif
 
-	#ifndef GEODE_STATICS_getAltKeyPressed
-		#define GEODE_STATICS_getAltKeyPressed
-		GEODE_AS_STATIC_FUNCTION(getAltKeyPressed) 
-	#endif
-
-	#ifndef GEODE_STATICS_getBlockRepeat
-		#define GEODE_STATICS_getBlockRepeat
-		GEODE_AS_STATIC_FUNCTION(getBlockRepeat) 
-	#endif
-
-	#ifndef GEODE_STATICS_getCommandKeyPressed
-		#define GEODE_STATICS_getCommandKeyPressed
-		GEODE_AS_STATIC_FUNCTION(getCommandKeyPressed) 
-	#endif
-
-	#ifndef GEODE_STATICS_getControlKeyPressed
-		#define GEODE_STATICS_getControlKeyPressed
-		GEODE_AS_STATIC_FUNCTION(getControlKeyPressed) 
-	#endif
-
-	#ifndef GEODE_STATICS_getShiftKeyPressed
-		#define GEODE_STATICS_getShiftKeyPressed
-		GEODE_AS_STATIC_FUNCTION(getShiftKeyPressed) 
-	#endif
-
-	#ifndef GEODE_STATICS_setBlockRepeat
-		#define GEODE_STATICS_setBlockRepeat
-		GEODE_AS_STATIC_FUNCTION(setBlockRepeat) 
-	#endif
-
 	#ifndef GEODE_STATICS_addDelegate
 		#define GEODE_STATICS_addDelegate
 		GEODE_AS_STATIC_FUNCTION(addDelegate) 
@@ -79,36 +49,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_convertKeyCode
 		#define GEODE_CONCEPT_CHECK_convertKeyCode
 		GEODE_CONCEPT_FUNCTION_CHECK(convertKeyCode) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getAltKeyPressed
-		#define GEODE_CONCEPT_CHECK_getAltKeyPressed
-		GEODE_CONCEPT_FUNCTION_CHECK(getAltKeyPressed) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getBlockRepeat
-		#define GEODE_CONCEPT_CHECK_getBlockRepeat
-		GEODE_CONCEPT_FUNCTION_CHECK(getBlockRepeat) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getCommandKeyPressed
-		#define GEODE_CONCEPT_CHECK_getCommandKeyPressed
-		GEODE_CONCEPT_FUNCTION_CHECK(getCommandKeyPressed) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getControlKeyPressed
-		#define GEODE_CONCEPT_CHECK_getControlKeyPressed
-		GEODE_CONCEPT_FUNCTION_CHECK(getControlKeyPressed) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getShiftKeyPressed
-		#define GEODE_CONCEPT_CHECK_getShiftKeyPressed
-		GEODE_CONCEPT_FUNCTION_CHECK(getShiftKeyPressed) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setBlockRepeat
-		#define GEODE_CONCEPT_CHECK_setBlockRepeat
-		GEODE_CONCEPT_FUNCTION_CHECK(setBlockRepeat) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_addDelegate
@@ -155,15 +95,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCKeyboardDispatcher@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCKeyboardDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCKeyboardDispatcher@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCKeyboardDispatcher)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::enumKeyCodes>::func(&cocos2d::CCKeyboardDispatcher::convertKeyCode)), Default, cocos2d::CCKeyboardDispatcher, convertKeyCode, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCKeyboardDispatcher::getAltKeyPressed)), Thiscall, cocos2d::CCKeyboardDispatcher, getAltKeyPressed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCKeyboardDispatcher::getBlockRepeat)), Thiscall, cocos2d::CCKeyboardDispatcher, getBlockRepeat, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCKeyboardDispatcher::getCommandKeyPressed)), Thiscall, cocos2d::CCKeyboardDispatcher, getCommandKeyPressed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCKeyboardDispatcher::getControlKeyPressed)), Thiscall, cocos2d::CCKeyboardDispatcher, getControlKeyPressed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCKeyboardDispatcher::getShiftKeyPressed)), Thiscall, cocos2d::CCKeyboardDispatcher, getShiftKeyPressed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCKeyboardDispatcher::setBlockRepeat)), Thiscall, cocos2d::CCKeyboardDispatcher, setBlockRepeat, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCKeyboardDelegate*>::func(&cocos2d::CCKeyboardDispatcher::addDelegate)), Thiscall, cocos2d::CCKeyboardDispatcher, addDelegate, cocos2d::CCKeyboardDelegate*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::enumKeyCodes, bool, bool>::func(&cocos2d::CCKeyboardDispatcher::dispatchKeyboardMSG)), Thiscall, cocos2d::CCKeyboardDispatcher, dispatchKeyboardMSG, cocos2d::enumKeyCodes, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::enumKeyCodes, bool, bool, double>::func(&cocos2d::CCKeyboardDispatcher::dispatchKeyboardMSG)), Thiscall, cocos2d::CCKeyboardDispatcher, dispatchKeyboardMSG, cocos2d::enumKeyCodes, bool, bool, double)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCKeyboardDelegate*>::func(&cocos2d::CCKeyboardDispatcher::forceAddDelegate)), Thiscall, cocos2d::CCKeyboardDispatcher, forceAddDelegate, cocos2d::CCKeyboardDelegate*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCKeyboardDelegate*>::func(&cocos2d::CCKeyboardDispatcher::forceRemoveDelegate)), Thiscall, cocos2d::CCKeyboardDispatcher, forceRemoveDelegate, cocos2d::CCKeyboardDelegate*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::enumKeyCodes>::func(&cocos2d::CCKeyboardDispatcher::keyToString)), Thiscall, cocos2d::CCKeyboardDispatcher, keyToString, cocos2d::enumKeyCodes)

@@ -17,17 +17,17 @@ public:
     /**
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
-     * @note[short] Windows: 0x456a0
+     * @note[short] Windows: 0x45710
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
      CCSpritePlus();
 
     /**
-     * @note[short] MacOS (ARM): 0x3ddc34
-     * @note[short] MacOS (Intel): 0x46e9b0
-     * @note[short] Windows: 0x47cc0
-     * @note[short] iOS: 0x1b9b34
+     * @note[short] MacOS (ARM): 0x3e79bc
+     * @note[short] MacOS (Intel): 0x481910
+     * @note[short] Windows: 0x47d30
+     * @note[short] iOS: 0x1b7b5c
      * @note[short] Android: Rebinded
      */
      ~CCSpritePlus();
@@ -37,10 +37,10 @@ Creates a sprite by a given sprite frame
 
  @param frame the frame to give to the specific sprite
 
- @return CCSpritePlus object and returns null if initialization fa     * @note[short] MacOS (ARM): 0x3ddd1c
-     * @note[short] MacOS (Intel): 0x46ead0
+ @return CCSpritePlus object and returns null if initialization fa     * @note[short] MacOS (ARM): 0x3e7aa4
+     * @note[short] MacOS (Intel): 0x481a30
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1b9b98
+     * @note[short] iOS: 0x1b7bc0
      * @note[short] Android
      */
     static CCSpritePlus* createWithSpriteFrame(cocos2d::CCSpriteFrame* frame);
@@ -50,10 +50,10 @@ Creates a sprite by a given sprite's frame name
 
  @param frame the frame or filename to give to the specific sprite
 
- @return CCSpritePlus object and returns null if initialization fa     * @note[short] MacOS (ARM): 0x3dddcc
-     * @note[short] MacOS (Intel): 0x46eb70
-     * @note[short] Windows: 0x47d10
-     * @note[short] iOS: 0x1b9c3c
+ @return CCSpritePlus object and returns null if initialization fa     * @note[short] MacOS (ARM): 0x3e7b54
+     * @note[short] MacOS (Intel): 0x481ad0
+     * @note[short] Windows: 0x47d80
+     * @note[short] iOS: 0x1b7c64
      * @note[short] Android
      */
     static CCSpritePlus* createWithSpriteFrameName(char const* frame);
@@ -61,89 +61,89 @@ Creates a sprite by a given sprite's frame name
     /**
 Sets X's scale on itself and it's followers
 
- @param fScaleX the scale of X to      * @note[short] MacOS (ARM): 0x3de1dc
-     * @note[short] MacOS (Intel): 0x46f000
-     * @note[short] Windows: 0x481d0
-     * @note[short] iOS: 0x1b9fb4
+ @param scaleX the scale of X to      * @note[short] MacOS (ARM): 0x3e7f84
+     * @note[short] MacOS (Intel): 0x481f60
+     * @note[short] Windows: 0x48240
+     * @note[short] iOS: 0x1b7ffc
      * @note[short] Android
      */
-    virtual void setScaleX(float fScaleX);
+    virtual void setScaleX(float scaleX);
 
     /**
 Sets Y's scale on itself and it's followers
 
- @param fScaleY the scale of Y to      * @note[short] MacOS (ARM): 0x3de258
-     * @note[short] MacOS (Intel): 0x46f080
-     * @note[short] Windows: 0x48250
-     * @note[short] iOS: 0x1ba030
+ @param scaleY the scale of Y to      * @note[short] MacOS (ARM): 0x3e8008
+     * @note[short] MacOS (Intel): 0x481fe0
+     * @note[short] Windows: 0x482c0
+     * @note[short] iOS: 0x1b8080
      * @note[short] Android
      */
-    virtual void setScaleY(float fScaleY);
+    virtual void setScaleY(float scaleY);
 
     /**
 Sets the Scale of itself and it's followers
 
- @param fScale the scale value to      * @note[short] MacOS (ARM): 0x3de2d4
-     * @note[short] MacOS (Intel): 0x46f100
-     * @note[short] Windows: 0x482e0
-     * @note[short] iOS: 0x1ba0ac
+ @param scale the scale value to      * @note[short] MacOS (ARM): 0x3e808c
+     * @note[short] MacOS (Intel): 0x482060
+     * @note[short] Windows: 0x48350
+     * @note[short] iOS: 0x1b8104
      * @note[short] Android
      */
-    virtual void setScale(float fScale);
+    virtual void setScale(float scale);
 
     /**
 Sets the position where the sprite will be at and it's followers
 
- @param pos the position to place to the sprite and it's follow     * @note[short] MacOS (ARM): 0x3ddeac
-     * @note[short] MacOS (Intel): 0x46ec60
-     * @note[short] Windows: 0x47dd0
-     * @note[short] iOS: 0x1b9c84
+ @param position the position to place to the sprite and it's follow     * @note[short] MacOS (ARM): 0x3e7c34
+     * @note[short] MacOS (Intel): 0x481bc0
+     * @note[short] Windows: 0x47e40
+     * @note[short] iOS: 0x1b7cac
      * @note[short] Android
      */
-    virtual void setPosition(cocos2d::CCPoint const& pos);
+    virtual void setPosition(cocos2d::CCPoint const& position);
 
     /**
 Sets the sprite's given rotation and it's followers
 
- @param fRotation the rotation value to      * @note[short] MacOS (ARM): 0x3ddf20
-     * @note[short] MacOS (Intel): 0x46ece0
-     * @note[short] Windows: 0x47e60
-     * @note[short] iOS: 0x1b9cf8
+ @param rotation the rotation value to      * @note[short] MacOS (ARM): 0x3e7cac
+     * @note[short] MacOS (Intel): 0x481c40
+     * @note[short] Windows: 0x47ed0
+     * @note[short] iOS: 0x1b7d24
      * @note[short] Android
      */
-    virtual void setRotation(float fRotation);
+    virtual void setRotation(float rotation);
 
     /**
 Sets the sprite's given rotation of X and it's followers
 
- @param fRotationX the rotation of X to s     * @note[short] MacOS (ARM): 0x3ddf94
-     * @note[short] MacOS (Intel): 0x46ed60
-     * @note[short] Windows: 0x47ef0
-     * @note[short] iOS: 0x1b9d6c
+ @param rotationX the rotation of X to s     * @note[short] MacOS (ARM): 0x3e7d24
+     * @note[short] MacOS (Intel): 0x481cc0
+     * @note[short] Windows: 0x47f60
+     * @note[short] iOS: 0x1b7d9c
      * @note[short] Android
      */
-    virtual void setRotationX(float fRotationX);
+    virtual void setRotationX(float rotationX);
 
     /**
 Sets the sprite's given rotation of Y and it's followers
 
- @param fRotationY the roation of Y to      * @note[short] MacOS (ARM): 0x3de008
-     * @note[short] MacOS (Intel): 0x46ede0
-     * @note[short] Windows: 0x47f80
-     * @note[short] iOS: 0x1b9de0
+ @param rotationY the rotation of Y to      * @note[short] MacOS (ARM): 0x3e7d9c
+     * @note[short] MacOS (Intel): 0x481d40
+     * @note[short] Windows: 0x47ff0
+     * @note[short] iOS: 0x1b7e14
      * @note[short] Android
      */
-    virtual void setRotationY(float p0);
+    virtual void setRotationY(float rotationY);
 
     /**
 Initalizes the sprite using a texture
 
  @param texture the texture to initalize the sprite with
 
- @return true if initalization succeed     * @note[short] MacOS (ARM): 0x3dde98
-     * @note[short] MacOS (Intel): 0x46ec40
-     * @note[short] Windows: 0x47db0
-     * @note[short] iOS: 0x1b9c70
+ @return true if initalization succeed     * @note[short] MacOS (ARM): 0x3e7c20
+     * @note[short] MacOS (Intel): 0x481ba0
+     * @note[short] Windows: 0x47e20
+     * @note[short] iOS: 0x1b7c98
      * @note[short] Android
      */
     virtual bool initWithTexture(cocos2d::CCTexture2D* texture);
@@ -151,23 +151,23 @@ Initalizes the sprite using a texture
     /**
 Initalizes the sprite with a frame name
 
- @param frame the frame to initalize the sprite with
+ @param frameName the frame to initalize the sprite with
 
- @return true if initalization succee     * @note[short] MacOS (ARM): 0x3dde8c
-     * @note[short] MacOS (Intel): 0x46ec20
-     * @note[short] Windows: 0x47da0
-     * @note[short] iOS: 0x1b9c64
+ @return true if initalization succee     * @note[short] MacOS (ARM): 0x3e7c14
+     * @note[short] MacOS (Intel): 0x481b80
+     * @note[short] Windows: 0x47e10
+     * @note[short] iOS: 0x1b7c8c
      * @note[short] Android
      */
-    virtual bool initWithSpriteFrameName(char const* p0);
+    virtual bool initWithSpriteFrameName(char const* frameName);
 
     /**
 Sets flipX to itself and it's followers
 
- @param flipX the direction that the sprite should be flipped     * @note[short] MacOS (ARM): 0x3de07c
-     * @note[short] MacOS (Intel): 0x46ee60
-     * @note[short] Windows: 0x48010
-     * @note[short] iOS: 0x1b9e54
+ @param flipX the direction that the sprite should be flipped     * @note[short] MacOS (ARM): 0x3e7e14
+     * @note[short] MacOS (Intel): 0x481dc0
+     * @note[short] Windows: 0x48080
+     * @note[short] iOS: 0x1b7e8c
      * @note[short] Android
      */
     virtual void setFlipX(bool flipX);
@@ -175,10 +175,10 @@ Sets flipX to itself and it's followers
     /**
 Sets flipY to itself and it's followers
 
- @param flipY the direction that the sprite should be flipped     * @note[short] MacOS (ARM): 0x3de12c
-     * @note[short] MacOS (Intel): 0x46ef30
-     * @note[short] Windows: 0x480f0
-     * @note[short] iOS: 0x1b9f04
+ @param flipY the direction that the sprite should be flipped     * @note[short] MacOS (ARM): 0x3e7ecc
+     * @note[short] MacOS (Intel): 0x481e90
+     * @note[short] Windows: 0x48160
+     * @note[short] iOS: 0x1b7f44
      * @note[short] Android
      */
     virtual void setFlipY(bool flipY);
@@ -186,10 +186,10 @@ Sets flipY to itself and it's followers
     /**
 Adds a follower to the sprite
 
- @param follower Something that will follow this spr     * @note[short] MacOS (ARM): 0x3de350
-     * @note[short] MacOS (Intel): 0x46f180
+ @param follower Something that will follow this spr     * @note[short] MacOS (ARM): 0x3e8110
+     * @note[short] MacOS (Intel): 0x4820e0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1ba128
+     * @note[short] iOS: 0x1b8188
      * @note[short] Android
      */
     void addFollower(cocos2d::CCNode* follower);
@@ -201,10 +201,10 @@ Attaches a sprite to the sprite. and other way around
 
  it drag along.
 
- @param sprite the sprite to attach to the main sprite and vice ve     * @note[short] MacOS (ARM): 0x3de3ec
-     * @note[short] MacOS (Intel): 0x46f220
+ @param sprite the sprite to attach to the main sprite and vice ve     * @note[short] MacOS (ARM): 0x3e81a8
+     * @note[short] MacOS (Intel): 0x482180
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1ba1a8
+     * @note[short] iOS: 0x1b8208
      * @note[short] Android
      */
     void followSprite(CCSpritePlus* sprite);
@@ -212,10 +212,10 @@ Attaches a sprite to the sprite. and other way around
     /**
 Obtains the first following sprite if it has a follower on hand
 
- @return nullptr if there is no follower avali     * @note[short] MacOS (ARM): 0x3de494
-     * @note[short] MacOS (Intel): 0x46f2c0
+ @return nullptr if there is no follower avali     * @note[short] MacOS (ARM): 0x3e8250
+     * @note[short] MacOS (Intel): 0x482220
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1ba1d0
+     * @note[short] iOS: 0x1b8230
      * @note[short] Android
      */
     CCSpritePlus* getFollower();
@@ -223,19 +223,19 @@ Obtains the first following sprite if it has a follower on hand
     /**
 Removes a specific following sprite from this sprite.
 
- @param sprite follower sprite that will be remov     * @note[short] MacOS (ARM): 0x3de3a4
-     * @note[short] MacOS (Intel): 0x46f1d0
-     * @note[short] Windows: 0x48370
-     * @note[short] iOS: 0x1ba16c
+ @param sprite follower sprite that will be remov     * @note[short] MacOS (ARM): 0x3e8160
+     * @note[short] MacOS (Intel): 0x482130
+     * @note[short] Windows: 0x483e0
+     * @note[short] iOS: 0x1b81cc
      * @note[short] Android
      */
     void removeFollower(cocos2d::CCNode* sprite);
 
     /**
-Stops this child sprite from following it's given par     * @note[short] MacOS (ARM): 0x3de444
-     * @note[short] MacOS (Intel): 0x46f270
+Stops this child sprite from following it's given par     * @note[short] MacOS (ARM): 0x3e8200
+     * @note[short] MacOS (Intel): 0x4821d0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x1ba1bc
+     * @note[short] iOS: 0x1b821c
      * @note[short] Android
      */
     void stopFollow();

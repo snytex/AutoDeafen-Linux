@@ -16,58 +16,73 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(LevelOptionsLayer, GJOptionsLayer)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static LevelOptionsLayer* create(LevelSettingsObject* p0);
+     LevelOptionsLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x20bbd0
-     * @note[short] MacOS (Intel): 0x25fbc0
-     * @note[short] Windows: 0x30fb80
-     * @note[short] iOS: 0x181230
+     * @note[short] MacOS (ARM): 0x2117fc
+     * @note[short] MacOS (Intel): 0x26e720
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x17babc
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    static LevelOptionsLayer* create(LevelSettingsObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x20bbe8
-     * @note[short] MacOS (Intel): 0x25fbe0
-     * @note[short] Windows: 0x30fba0
-     * @note[short] iOS: 0x181248
+     * @note[short] MacOS (ARM): 0x214670
+     * @note[short] MacOS (Intel): 0x271b90
+     * @note[short] Windows: 0x324710
+     * @note[short] iOS: 0x17db68
      * @note[short] Android
      */
-    virtual float getValue(int p0);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x20b58c
-     * @note[short] MacOS (Intel): 0x25f470
-     * @note[short] Windows: 0x30f4e0
-     * @note[short] iOS: 0x180d58
+     * @note[short] MacOS (ARM): 0x214688
+     * @note[short] MacOS (Intel): 0x271bb0
+     * @note[short] Windows: 0x324730
+     * @note[short] iOS: 0x17db80
+     * @note[short] Android
+     */
+    virtual float getValue(int tag);
+
+    /**
+     * @note[short] MacOS (ARM): 0x214044
+     * @note[short] MacOS (Intel): 0x271440
+     * @note[short] Windows: 0x324070
+     * @note[short] iOS: 0x17d690
      * @note[short] Android
      */
     virtual void setupOptions();
 
     /**
-     * @note[short] MacOS (ARM): 0x20bc04
-     * @note[short] MacOS (Intel): 0x25fc00
-     * @note[short] Windows: 0x30fbc0
-     * @note[short] iOS: 0x181264
+     * @note[short] MacOS (ARM): 0x2146a4
+     * @note[short] MacOS (Intel): 0x271bd0
+     * @note[short] Windows: 0x324750
+     * @note[short] iOS: 0x17db9c
      * @note[short] Android
      */
-    virtual void didToggle(int p0);
+    virtual void didToggle(int tag);
 
     /**
-     * @note[short] MacOS (ARM): 0x20b534
-     * @note[short] MacOS (Intel): 0x25f420
-     * @note[short] Windows: 0x30f470
+     * @note[short] MacOS (ARM): 0x213fec
+     * @note[short] MacOS (Intel): 0x2713f0
+     * @note[short] Windows: 0x324000
+     * @note[short] iOS: 0x17d638
      * @note[short] Android
      */
-    bool init(LevelSettingsObject* p0);
+    bool init(LevelSettingsObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x20b9f4
-     * @note[short] MacOS (Intel): 0x25f920
-     * @note[short] Windows: 0x30f9a0
+     * @note[short] MacOS (ARM): 0x214494
+     * @note[short] MacOS (Intel): 0x2718f0
+     * @note[short] Windows: 0x324530
+     * @note[short] iOS: 0x17da5c
      * @note[short] Android
      */
     void onSettings(cocos2d::CCObject* sender);

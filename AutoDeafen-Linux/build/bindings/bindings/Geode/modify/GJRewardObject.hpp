@@ -70,11 +70,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f0880, Default, GJRewardObject, create, SpecialRewardItem, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRewardObject, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f0810, Default, GJRewardObject, createItemUnlock, UnlockType, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f3d50, Default, GJRewardObject, create, SpecialRewardItem, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f3ce0, Default, GJRewardObject, createItemUnlock, UnlockType, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRewardObject, createWithCoder, DS_Dictionary*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f08f0, Thiscall, GJRewardObject, encodeWithCoder, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1f3dc0, Thiscall, GJRewardObject, encodeWithCoder, DS_Dictionary*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRewardObject, canEncode, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRewardObject, dataLoaded, DS_Dictionary*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJRewardObject, init, SpecialRewardItem, int, int)

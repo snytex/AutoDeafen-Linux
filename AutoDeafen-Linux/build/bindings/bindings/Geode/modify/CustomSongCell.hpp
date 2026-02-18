@@ -40,16 +40,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onDelete) 
 	#endif
 
-	#ifndef GEODE_STATICS_shouldReload
-		#define GEODE_STATICS_shouldReload
-		GEODE_AS_STATIC_FUNCTION(shouldReload) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateBGColor
-		#define GEODE_STATICS_updateBGColor
-		GEODE_AS_STATIC_FUNCTION(updateBGColor) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_init
 		#define GEODE_CONCEPT_CHECK_init
@@ -110,17 +100,17 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0xb3e80, Thiscall, CustomSongCell, char const*, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb3f00, Thiscall, CustomSongCell, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xad710, Thiscall, CustomSongCell, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb40d0, Thiscall, CustomSongCell, songIDChanged, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4110, Thiscall, CustomSongCell, getActiveSongID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4130, Thiscall, CustomSongCell, getSongFileName, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0xb4550, Thiscall, CustomSongCell, char const*, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4680, Thiscall, CustomSongCell, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xade20, Thiscall, CustomSongCell, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4850, Thiscall, CustomSongCell, songIDChanged, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4890, Thiscall, CustomSongCell, getActiveSongID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb48b0, Thiscall, CustomSongCell, getSongFileName, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSongCell, getLevelSettings, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb3f10, Thiscall, CustomSongCell, loadFromObject, SongInfoObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSongCell, onDelete, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSongCell, shouldReload, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSongCell, updateBGColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb4690, Thiscall, CustomSongCell, loadFromObject, SongInfoObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb48e0, Thiscall, CustomSongCell, onDelete, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSongCell, shouldReload, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSongCell, updateBGColor, int)
 		}
 	};
 }

@@ -16,16 +16,20 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupTransformPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x44c920
+     * @note[short] MacOS (ARM): 0x467664
+     * @note[short] MacOS (Intel): 0x5108b0
+     * @note[short] Windows: 0x464f30
+     * @note[short] iOS: 0x231898
      * @note[short] Android
      */
-    static SetupTransformPopup* create(TransformTriggerGameObject* p0, cocos2d::CCArray* p1);
+    static SetupTransformPopup* create(TransformTriggerGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x45a9dc
-     * @note[short] MacOS (Intel): 0x4faa20
-     * @note[short] Windows: 0x44ca30
+     * @note[short] MacOS (ARM): 0x4677f0
+     * @note[short] MacOS (Intel): 0x510ae0
+     * @note[short] Windows: 0x465040
+     * @note[short] iOS: 0x231974
      * @note[short] Android
      */
-    bool init(TransformTriggerGameObject* p0, cocos2d::CCArray* p1);
+    bool init(TransformTriggerGameObject* object, cocos2d::CCArray* objects);
 };

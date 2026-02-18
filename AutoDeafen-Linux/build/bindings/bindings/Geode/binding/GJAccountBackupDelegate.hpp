@@ -29,5 +29,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void backupAccountFailed(BackupAccountError p0, int p1);
+    virtual void backupAccountFailed(BackupAccountError errorType, int response);
 };

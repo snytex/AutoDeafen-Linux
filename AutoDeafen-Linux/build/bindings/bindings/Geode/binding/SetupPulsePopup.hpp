@@ -17,284 +17,370 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupPulsePopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x41f250
-     * @note[short] iOS: 0x3abb04
+     * @note[short] MacOS (ARM): 0x32df98
+     * @note[short] MacOS (Intel): 0x3aa030
+     * @note[short] Windows: 0x437520
+     * @note[short] iOS: 0x3b32c4
      * @note[short] Android
      */
-    static SetupPulsePopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupPulsePopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x32a368
-     * @note[short] MacOS (Intel): 0x39ce50
-     * @note[short] Windows: 0x423fa0
-     * @note[short] iOS: 0x3affd0
+     * @note[short] MacOS (ARM): 0x333334
+     * @note[short] MacOS (Intel): 0x3aff50
+     * @note[short] Windows: 0x43c270
+     * @note[short] iOS: 0x3b77bc
      * @note[short] Android
      */
     virtual void show();
 
     /**
-     * @note[short] MacOS (ARM): 0x32924c
-     * @note[short] MacOS (Intel): 0x39ba60
-     * @note[short] Windows: 0x422ef0
-     * @note[short] iOS: 0x3af378
+     * @note[short] MacOS (ARM): 0x3322c4
+     * @note[short] MacOS (Intel): 0x3aeb50
+     * @note[short] Windows: 0x43b1c0
+     * @note[short] iOS: 0x3b6b70
      * @note[short] Android
      */
     virtual void determineStartValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x329c84
-     * @note[short] MacOS (Intel): 0x39c670
-     * @note[short] Windows: 0x423cb0
-     * @note[short] iOS: 0x3afbc8
+     * @note[short] MacOS (ARM): 0x332ce4
+     * @note[short] MacOS (Intel): 0x3af7b0
+     * @note[short] Windows: 0x43bf80
+     * @note[short] iOS: 0x3b73c4
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x32a3c4
-     * @note[short] MacOS (Intel): 0x39ced0
-     * @note[short] Windows: 0x424150
-     * @note[short] iOS: 0x3b002c
+     * @note[short] MacOS (ARM): 0x333390
+     * @note[short] MacOS (Intel): 0x3affd0
+     * @note[short] Windows: 0x43c420
+     * @note[short] iOS: 0x3b7818
      * @note[short] Android
      */
-    virtual void textChanged(CCTextInputNode* p0);
+    virtual void textChanged(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x329e10
-     * @note[short] MacOS (Intel): 0x39c850
-     * @note[short] Windows: 0x423e90
-     * @note[short] iOS: 0x3afce8
+     * @note[short] MacOS (ARM): 0x332e58
+     * @note[short] MacOS (Intel): 0x3af990
+     * @note[short] Windows: 0x43c160
+     * @note[short] iOS: 0x3b74e4
      * @note[short] Android
      */
-    virtual void colorValueChanged(cocos2d::ccColor3B p0);
+    virtual void colorValueChanged(cocos2d::ccColor3B color);
 
     /**
-     * @note[short] MacOS (ARM): 0x32a3bc
-     * @note[short] MacOS (Intel): 0x39ceb0
+     * @note[short] MacOS (ARM): 0x333388
+     * @note[short] MacOS (Intel): 0x3affb0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3b0024
-     * @note[short] Android: Out of line
-     */
-    virtual void textInputOpened(CCTextInputNode* p0);
-
-    /**
-     * @note[short] MacOS (ARM): 0x3296fc
-     * @note[short] MacOS (Intel): 0x39bfa0
-     * @note[short] Windows: 0x423720
-     * @note[short] iOS: 0x3af7cc
+     * @note[short] iOS: 0x3b7810
      * @note[short] Android
      */
-    virtual void colorSelectClosed(GJSpecialColorSelect* p0, int p1);
+    virtual void textInputOpened(CCTextInputNode* node);
 
     /**
+     * @note[short] MacOS (ARM): 0x332778
+     * @note[short] MacOS (Intel): 0x3af100
+     * @note[short] Windows: 0x43b9f0
+     * @note[short] iOS: 0x3b6fc8
+     * @note[short] Android
+     */
+    virtual void colorSelectClosed(GJSpecialColorSelect* select, int id);
+
+    /**
+     * @note[short] MacOS (ARM): 0x332b18
+     * @note[short] MacOS (Intel): 0x3af530
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     cocos2d::ccColor3B getColorValue();
 
     /**
-     * @note[short] MacOS (ARM): 0x3250b8
-     * @note[short] MacOS (Intel): 0x397170
-     * @note[short] Windows: 0x41f430
-     * @note[short] iOS: 0x3abb88
+     * @note[short] MacOS (ARM): 0x32e17c
+     * @note[short] MacOS (Intel): 0x3aa300
+     * @note[short] Windows: 0x437700
+     * @note[short] iOS: 0x3b3348
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] Windows: 0x90d60
+     * @note[short] MacOS (ARM): 0x331be4
+     * @note[short] MacOS (Intel): 0x3ae420
+     * @note[short] Windows: 0x90e20
+     * @note[short] iOS: 0x3b66ec
      * @note[short] Android
      */
     void onCopy(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x423380
+     * @note[short] MacOS (ARM): 0x33192c
+     * @note[short] MacOS (Intel): 0x3ae0a0
+     * @note[short] Windows: 0x43b650
+     * @note[short] iOS: 0x3b6554
      * @note[short] Android
      */
     void onExclusive(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x423410
+     * @note[short] MacOS (ARM): 0x3319a4
+     * @note[short] MacOS (Intel): 0x3ae130
+     * @note[short] Windows: 0x43b6e0
+     * @note[short] iOS: 0x3b65cc
      * @note[short] Android
      */
     void onGroupMainOnly(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x423500
+     * @note[short] MacOS (ARM): 0x331a88
+     * @note[short] MacOS (Intel): 0x3ae260
+     * @note[short] Windows: 0x43b7d0
+     * @note[short] iOS: 0x3b6620
      * @note[short] Android
      */
     void onGroupSecondaryOnly(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x423560
+     * @note[short] MacOS (ARM): 0x331b6c
+     * @note[short] MacOS (Intel): 0x3ae390
+     * @note[short] Windows: 0x43b830
+     * @note[short] iOS: 0x3b6674
      * @note[short] Android
      */
     void onHSVLegacyMode(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x328b68
-     * @note[short] MacOS (Intel): 0x39b340
-     * @note[short] Windows: 0x90de0
+     * @note[short] MacOS (ARM): 0x331c18
+     * @note[short] MacOS (Intel): 0x3ae460
+     * @note[short] Windows: 0x90ea0
+     * @note[short] iOS: 0x3b6720
      * @note[short] Android
      */
     void onPaste(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x328698
-     * @note[short] MacOS (Intel): 0x39ad60
-     * @note[short] Windows: 0x422aa0
-     * @note[short] iOS: 0x3aebc0
+     * @note[short] MacOS (ARM): 0x331748
+     * @note[short] MacOS (Intel): 0x3ade80
+     * @note[short] Windows: 0x43ad70
+     * @note[short] iOS: 0x3b63a8
      * @note[short] Android
      */
     void onSelectPulseMode(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x423680
+     * @note[short] MacOS (ARM): 0x331d4c
+     * @note[short] MacOS (Intel): 0x3ae5a0
+     * @note[short] Windows: 0x43b950
+     * @note[short] iOS: 0x3b67d8
      * @note[short] Android
      */
     void onSelectSpecialColor(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x4236d0
+     * @note[short] MacOS (ARM): 0x3316fc
+     * @note[short] MacOS (Intel): 0x3ade40
+     * @note[short] Windows: 0x43b9a0
+     * @note[short] iOS: 0x3b635c
      * @note[short] Android
      */
     void onSelectSpecialTargetID(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x328320
-     * @note[short] MacOS (Intel): 0x39a9b0
-     * @note[short] Windows: 0x422cd0
-     * @note[short] iOS: 0x3ae920
+     * @note[short] MacOS (ARM): 0x3313e4
+     * @note[short] MacOS (Intel): 0x3adad0
+     * @note[short] Windows: 0x43afa0
+     * @note[short] iOS: 0x3b6108
      * @note[short] Android
      */
     void onSelectTargetMode(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x328bec
-     * @note[short] MacOS (Intel): 0x39b3b0
-     * @note[short] Windows: 0x4240e0
-     * @note[short] iOS: 0x3aef74
+     * @note[short] MacOS (ARM): 0x331c9c
+     * @note[short] MacOS (Intel): 0x3ae4d0
+     * @note[short] Windows: 0x43c3b0
+     * @note[short] iOS: 0x3b676c
      * @note[short] Android
      */
     void onUpdateCopyColor(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x328578
-     * @note[short] MacOS (Intel): 0x39ac30
-     * @note[short] Windows: 0x424050
-     * @note[short] iOS: 0x3aeae4
+     * @note[short] MacOS (ARM): 0x331628
+     * @note[short] MacOS (Intel): 0x3add50
+     * @note[short] Windows: 0x43c320
+     * @note[short] iOS: 0x3b62cc
      * @note[short] Android
      */
     void onUpdateCustomColor(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x331c64
+     * @note[short] MacOS (Intel): 0x3ae4a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void selectColor(cocos2d::ccColor3B p0);
+    void selectColor(cocos2d::ccColor3B color);
 
     /**
-     * @note[short] Windows: 0x4238c0
+     * @note[short] MacOS (ARM): 0x330df0
+     * @note[short] MacOS (Intel): 0x3ad4b0
+     * @note[short] Windows: 0x43bb90
+     * @note[short] iOS: 0x3b5d84
      * @note[short] Android
      */
     void sliderChanged(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x4248f0
+     * @note[short] MacOS (ARM): 0x332fb0
+     * @note[short] MacOS (Intel): 0x3afb30
+     * @note[short] Windows: 0x43cbc0
+     * @note[short] iOS: 0x3b75dc
      * @note[short] Android
      */
     void updateColorLabels();
 
     /**
+     * @note[short] MacOS (ARM): 0x332f2c
+     * @note[short] MacOS (Intel): 0x3afa90
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3b7558
      * @note[short] Android
      */
     void updateColorValue();
 
     /**
-     * @note[short] Windows: 0x424b90
+     * @note[short] MacOS (ARM): 0x332aa4
+     * @note[short] MacOS (Intel): 0x3af490
+     * @note[short] Windows: 0x43ce60
+     * @note[short] iOS: 0x3b7198
      * @note[short] Android
      */
     void updateCopyColor();
 
     /**
-     * @note[short] MacOS (ARM): 0x328f04
-     * @note[short] MacOS (Intel): 0x39b6e0
-     * @note[short] Windows: 0x424d40
+     * @note[short] MacOS (ARM): 0x331f98
+     * @note[short] MacOS (Intel): 0x3ae7e0
+     * @note[short] Windows: 0x43d010
+     * @note[short] iOS: 0x3b6934
      * @note[short] Android
      */
     void updateCopyColorTextInputLabel();
 
     /**
-     * @note[short] Windows: 0x422830
+     * @note[short] MacOS (ARM): 0x330fb8
+     * @note[short] MacOS (Intel): 0x3ad6e0
+     * @note[short] Windows: 0x43ab00
+     * @note[short] iOS: 0x3b5e80
      * @note[short] Android
      */
-    void updateFadeInLabel(bool p0);
+    void updateFadeInLabel(bool decimals);
 
     /**
-     * @note[short] Windows: 0x423b00
+     * @note[short] MacOS (ARM): 0x332b2c
+     * @note[short] MacOS (Intel): 0x3af550
+     * @note[short] Windows: 0x43bdd0
+     * @note[short] iOS: 0x3b720c
      * @note[short] Android
      */
     void updateFadeInTime();
 
     /**
-     * @note[short] Windows: 0x4229d0
+     * @note[short] MacOS (ARM): 0x331280
+     * @note[short] MacOS (Intel): 0x3ad980
+     * @note[short] Windows: 0x43aca0
+     * @note[short] iOS: 0x3b6030
      * @note[short] Android
      */
-    void updateFadeOutLabel(bool p0);
+    void updateFadeOutLabel(bool decimals);
 
     /**
-     * @note[short] Windows: 0x423c20
+     * @note[short] MacOS (ARM): 0x332c04
+     * @note[short] MacOS (Intel): 0x3af670
+     * @note[short] Windows: 0x43bef0
+     * @note[short] iOS: 0x3b72e4
      * @note[short] Android
      */
     void updateFadeOutTime();
 
     /**
-     * @note[short] Windows: 0x423470
+     * @note[short] MacOS (ARM): 0x33270c
+     * @note[short] MacOS (Intel): 0x3af080
+     * @note[short] Windows: 0x43b740
+     * @note[short] iOS: 0x3b6f5c
      * @note[short] Android
      */
     void updateGroupMainOnly();
 
     /**
-     * @note[short] Windows: 0x4235f0
+     * @note[short] MacOS (ARM): 0x3326a0
+     * @note[short] MacOS (Intel): 0x3af000
+     * @note[short] Windows: 0x43b8c0
+     * @note[short] iOS: 0x3b6ef0
      * @note[short] Android
      */
     void updateGroupSecondaryOnly();
 
     /**
-     * @note[short] Windows: 0x422900
+     * @note[short] MacOS (ARM): 0x33111c
+     * @note[short] MacOS (Intel): 0x3ad830
+     * @note[short] Windows: 0x43abd0
+     * @note[short] iOS: 0x3b5f58
      * @note[short] Android
      */
-    void updateHoldLabel(bool p0);
+    void updateHoldLabel(bool decimals);
 
     /**
-     * @note[short] Windows: 0x423b90
+     * @note[short] MacOS (ARM): 0x332b98
+     * @note[short] MacOS (Intel): 0x3af5e0
+     * @note[short] Windows: 0x43be60
+     * @note[short] iOS: 0x3b7278
      * @note[short] Android
      */
     void updateHoldTime();
 
     /**
+     * @note[short] MacOS (ARM): 0x332c70
+     * @note[short] MacOS (Intel): 0x3af700
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3b7350
      * @note[short] Android
      */
     void updateHSVValue();
 
     /**
+     * @note[short] MacOS (ARM): 0x33217c
+     * @note[short] MacOS (Intel): 0x3ae9d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3b6a28
      * @note[short] Android
      */
     void updatePulseMode();
 
     /**
+     * @note[short] MacOS (ARM): 0x332258
+     * @note[short] MacOS (Intel): 0x3aead0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3b6b04
      * @note[short] Android
      */
     void updatePulseTargetType();
 
     /**
-     * @note[short] Windows: 0x424ad0
+     * @note[short] MacOS (ARM): 0x3321e8
+     * @note[short] MacOS (Intel): 0x3aea50
+     * @note[short] Windows: 0x43cda0
+     * @note[short] iOS: 0x3b6a94
      * @note[short] Android
      */
     void updateTargetID();
 
     /**
-     * @note[short] MacOS (ARM): 0x328ce8
-     * @note[short] MacOS (Intel): 0x39b4c0
-     * @note[short] Windows: 0x424c20
+     * @note[short] MacOS (ARM): 0x331d98
+     * @note[short] MacOS (Intel): 0x3ae5e0
+     * @note[short] Windows: 0x43cef0
+     * @note[short] iOS: 0x3b6824
      * @note[short] Android
      */
     void updateTextInputLabel();

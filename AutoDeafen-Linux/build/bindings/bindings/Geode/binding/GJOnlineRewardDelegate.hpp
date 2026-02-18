@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void onlineRewardStatusFinished(gd::string p0);
+    virtual void onlineRewardStatusFinished(gd::string key);
 
     /**
      * @note[short] MacOS (ARM): Out of line

@@ -70,16 +70,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(scrollingEnd) 
 	#endif
 
-	#ifndef GEODE_STATICS_setContentLayerSize
-		#define GEODE_STATICS_setContentLayerSize
-		GEODE_AS_STATIC_FUNCTION(setContentLayerSize) 
-	#endif
-
-	#ifndef GEODE_STATICS_setContentOffset
-		#define GEODE_STATICS_setContentOffset
-		GEODE_AS_STATIC_FUNCTION(setContentOffset) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateIndicators
 		#define GEODE_STATICS_updateIndicators
 		GEODE_AS_STATIC_FUNCTION(updateIndicators) 
@@ -136,6 +126,16 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(doConstraintContent) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_getMaxY
+		#define GEODE_CONCEPT_CHECK_getMaxY
+		GEODE_CONCEPT_FUNCTION_CHECK(getMaxY) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getMinY
+		#define GEODE_CONCEPT_CHECK_getMinY
+		GEODE_CONCEPT_FUNCTION_CHECK(getMinY) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_moveToTop
 		#define GEODE_CONCEPT_CHECK_moveToTop
 		GEODE_CONCEPT_FUNCTION_CHECK(moveToTop) 
@@ -180,24 +180,27 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x46a50, Thiscall, CCScrollLayerExt, cocos2d::CCRect)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47ad0, Thiscall, CCScrollLayerExt, visit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47580, Thiscall, CCScrollLayerExt, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47950, Thiscall, CCScrollLayerExt, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x476a0, Thiscall, CCScrollLayerExt, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47920, Thiscall, CCScrollLayerExt, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47530, Thiscall, CCScrollLayerExt, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47c00, Thiscall, CCScrollLayerExt, preVisitWithClippingRect, cocos2d::CCRect)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47ca0, Thiscall, CCScrollLayerExt, postVisit, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCScrollLayerExt, constraintContent, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCScrollLayerExt, doConstraintContent, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47000, Thiscall, CCScrollLayerExt, moveToTop, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46f60, Thiscall, CCScrollLayerExt, moveToTopWithOffset, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCScrollLayerExt, scrollingEnd, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x46ac0, Thiscall, CCScrollLayerExt, cocos2d::CCRect)
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x47100, Thiscall, CCScrollLayerExt)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47b40, Thiscall, CCScrollLayerExt, visit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475f0, Thiscall, CCScrollLayerExt, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x479c0, Thiscall, CCScrollLayerExt, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47710, Thiscall, CCScrollLayerExt, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47990, Thiscall, CCScrollLayerExt, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x475a0, Thiscall, CCScrollLayerExt, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47c70, Thiscall, CCScrollLayerExt, preVisitWithClippingRect, cocos2d::CCRect)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47d10, Thiscall, CCScrollLayerExt, postVisit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47170, Thiscall, CCScrollLayerExt, constraintContent, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47180, Thiscall, CCScrollLayerExt, doConstraintContent, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCScrollLayerExt, getMaxY, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCScrollLayerExt, getMinY, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47070, Thiscall, CCScrollLayerExt, moveToTop, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46fd0, Thiscall, CCScrollLayerExt, moveToTopWithOffset, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47330, Thiscall, CCScrollLayerExt, scrollingEnd, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCScrollLayerExt, scrollLayer, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCScrollLayerExt, setContentLayerSize, cocos2d::CCSize)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCScrollLayerExt, setContentOffset, cocos2d::CCPoint, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCScrollLayerExt, updateIndicators, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCScrollLayerExt, setContentLayerSize, cocos2d::CCSize)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCScrollLayerExt, setContentOffset, cocos2d::CCPoint, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x47370, Thiscall, CCScrollLayerExt, updateIndicators, float)
 		}
 	};
 }

@@ -16,60 +16,73 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupSequenceTriggerPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x42b000
+     * @note[short] MacOS (ARM): 0x439c70
+     * @note[short] MacOS (Intel): 0x4dd690
+     * @note[short] Windows: 0x443310
+     * @note[short] iOS: 0x1d24b0
      * @note[short] Android
      */
-    static SetupSequenceTriggerPopup* create(SequenceTriggerGameObject* p0);
+    static SetupSequenceTriggerPopup* create(SequenceTriggerGameObject* object);
 
     /**
-     * @note[short] MacOS (ARM): 0x430be8
-     * @note[short] MacOS (Intel): 0x4cb860
-     * @note[short] Windows: 0x42c340
-     * @note[short] iOS: 0x1d4388
+     * @note[short] MacOS (ARM): 0x43b018
+     * @note[short] MacOS (Intel): 0x4dec70
+     * @note[short] Windows: 0x444650
+     * @note[short] iOS: 0x1d35e4
      * @note[short] Android
      */
     virtual void onCustomToggleTriggerValue(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x42f9c4
-     * @note[short] MacOS (Intel): 0x4ca480
-     * @note[short] Windows: 0x42b130
-     * @note[short] iOS: 0x1d32c8
+     * @note[short] MacOS (ARM): 0x439df8
+     * @note[short] MacOS (Intel): 0x4dd8e0
+     * @note[short] Windows: 0x443440
+     * @note[short] iOS: 0x1d2524
      * @note[short] Android
      */
-    bool init(SequenceTriggerGameObject* p0);
+    bool init(SequenceTriggerGameObject* object);
 
     /**
-     * @note[short] Windows: 0x42c990
+     * @note[short] MacOS (ARM): 0x43ab0c
+     * @note[short] MacOS (Intel): 0x4de790
+     * @note[short] Windows: 0x444ca0
+     * @note[short] iOS: 0x1d3110
      * @note[short] Android
      */
     void onAddChance(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x42cad0
+     * @note[short] MacOS (ARM): 0x43ac28
+     * @note[short] MacOS (Intel): 0x4de880
+     * @note[short] Windows: 0x444de0
+     * @note[short] iOS: 0x1d3218
      * @note[short] Android
      */
     void onChangeOrder(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x42cbb0
+     * @note[short] MacOS (ARM): 0x43abdc
+     * @note[short] MacOS (Intel): 0x4de830
+     * @note[short] Windows: 0x444ec0
+     * @note[short] iOS: 0x1d31cc
      * @note[short] Android
      */
     void onDeleteSelected(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x430ccc
-     * @note[short] MacOS (Intel): 0x4cb950
-     * @note[short] Windows: 0x42c910
+     * @note[short] MacOS (ARM): 0x43b0f8
+     * @note[short] MacOS (Intel): 0x4ded70
+     * @note[short] Windows: 0x444c20
+     * @note[short] iOS: 0x1d36b8
      * @note[short] Android
      */
     void onSelect(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x4308b0
-     * @note[short] MacOS (Intel): 0x4cb510
-     * @note[short] Windows: 0x42c430
-     * @note[short] iOS: 0x1d4070
+     * @note[short] MacOS (ARM): 0x43acdc
+     * @note[short] MacOS (Intel): 0x4de920
+     * @note[short] Windows: 0x444740
+     * @note[short] iOS: 0x1d32cc
      * @note[short] Android
      */
     void updateGroupIDButtons();

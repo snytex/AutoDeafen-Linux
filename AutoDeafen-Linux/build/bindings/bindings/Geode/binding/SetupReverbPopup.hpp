@@ -16,41 +16,64 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupReverbPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static SetupReverbPopup* create(SFXTriggerGameObject* p0, cocos2d::CCArray* p1);
+     SetupReverbPopup();
 
     /**
-     * @note[short] MacOS (ARM): 0x40f038
-     * @note[short] MacOS (Intel): 0x4a51d0
-     * @note[short] Windows: 0x42eda0
-     * @note[short] iOS: 0x18304c
+     * @note[short] MacOS (ARM): 0x4188ec
+     * @note[short] MacOS (Intel): 0x4b7ba0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x17f264
+     * @note[short] Android
+     */
+    static SetupReverbPopup* create(SFXTriggerGameObject* object, cocos2d::CCArray* objects);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4191cc
+     * @note[short] MacOS (Intel): 0x4b8520
+     * @note[short] Windows: 0x4470b0
+     * @note[short] iOS: 0x17f9e8
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x40e8e0
-     * @note[short] MacOS (Intel): 0x4a4a70
-     * @note[short] Windows: 0x42e510
+     * @note[short] MacOS (ARM): 0x418a74
+     * @note[short] MacOS (Intel): 0x4b7dd0
+     * @note[short] Windows: 0x446820
+     * @note[short] iOS: 0x17f33c
      * @note[short] Android
      */
-    bool init(SFXTriggerGameObject* p0, cocos2d::CCArray* p1);
+    bool init(SFXTriggerGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] Windows: 0x42ead0
+     * @note[short] MacOS (ARM): 0x41917c
+     * @note[short] MacOS (Intel): 0x4b84c0
+     * @note[short] Windows: 0x446de0
+     * @note[short] iOS: 0x17f998
      * @note[short] Android
      */
     void onPlay(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x42ebc0
+     * @note[short] MacOS (ARM): 0x41902c
+     * @note[short] MacOS (Intel): 0x4b8390
+     * @note[short] Windows: 0x446ed0
+     * @note[short] iOS: 0x17f860
      * @note[short] Android
      */
     void onReverb(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x42ec50
+     * @note[short] MacOS (ARM): 0x4190a8
+     * @note[short] MacOS (Intel): 0x4b8410
+     * @note[short] Windows: 0x446f60
+     * @note[short] iOS: 0x17f8dc
      * @note[short] Android
      */
     void updateReverbLabel();

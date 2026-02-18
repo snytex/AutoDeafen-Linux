@@ -70,11 +70,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ab20, Default, AchievementNotifier, sharedState, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3abd0, Thiscall, AchievementNotifier, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ae40, Thiscall, AchievementNotifier, achievementDisplayFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ac00, Thiscall, AchievementNotifier, notifyAchievement, char const*, char const*, char const*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ace0, Thiscall, AchievementNotifier, showNextAchievement, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ab00, Default, AchievementNotifier, sharedState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3abb0, Thiscall, AchievementNotifier, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ae20, Thiscall, AchievementNotifier, achievementDisplayFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3abe0, Thiscall, AchievementNotifier, notifyAchievement, char const*, char const*, char const*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3acc0, Thiscall, AchievementNotifier, showNextAchievement, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AchievementNotifier, willSwitchToScene, cocos2d::CCScene*)
 		}
 	};

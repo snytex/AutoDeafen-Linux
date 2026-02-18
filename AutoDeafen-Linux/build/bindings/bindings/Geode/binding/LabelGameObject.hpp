@@ -16,148 +16,190 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(LabelGameObject, EffectGameObject)
 
     /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     LabelGameObject();
+
+    /**
+     * @note[short] MacOS (ARM): 0x178db4
+     * @note[short] MacOS (Intel): 0x1c0de0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x38890c
      * @note[short] Android
      */
     static LabelGameObject* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x17033c
-     * @note[short] MacOS (Intel): 0x1afb90
-     * @note[short] Windows: 0x49a900
-     * @note[short] iOS: 0x38166c
+     * @note[short] MacOS (ARM): 0x178e84
+     * @note[short] MacOS (Intel): 0x1c0ed0
+     * @note[short] Windows: 0x4b3450
+     * @note[short] iOS: 0x3889d0
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x170758
-     * @note[short] MacOS (Intel): 0x1affb0
-     * @note[short] Windows: 0x49ac60
-     * @note[short] iOS: 0x38198c
+     * @note[short] MacOS (ARM): 0x179288
+     * @note[short] MacOS (Intel): 0x1c12d0
+     * @note[short] Windows: 0x4b37b0
+     * @note[short] iOS: 0x388cf0
      * @note[short] Android
      */
-    virtual void setOpacity(unsigned char p0);
+    virtual void setOpacity(unsigned char opacity);
 
     /**
-     * @note[short] MacOS (ARM): 0x17036c
-     * @note[short] MacOS (Intel): 0x1afbc0
-     * @note[short] Windows: 0x49a940
-     * @note[short] iOS: 0x38169c
+     * @note[short] MacOS (ARM): 0x178eb4
+     * @note[short] MacOS (Intel): 0x1c0f00
+     * @note[short] Windows: 0x4b3490
+     * @note[short] iOS: 0x388a00
      * @note[short] Android: Rebinded
      */
-    virtual void setupCustomSprites(gd::string p0);
+    virtual void setupCustomSprites(gd::string frameName);
 
     /**
-     * @note[short] MacOS (ARM): 0x170fd0
-     * @note[short] MacOS (Intel): 0x1b0900
-     * @note[short] Windows: 0x49b150
-     * @note[short] iOS: 0x381fec
+     * @note[short] MacOS (ARM): 0x179b04
+     * @note[short] MacOS (Intel): 0x1c1c40
+     * @note[short] Windows: 0x4b3ca0
+     * @note[short] iOS: 0x389354
      * @note[short] Android
      */
-    virtual void addMainSpriteToParent(bool p0);
+    virtual void addMainSpriteToParent(bool reorder);
 
     /**
-     * @note[short] MacOS (ARM): 0x171c8c
-     * @note[short] MacOS (Intel): 0x1b1870
-     * @note[short] Windows: 0x49b570
-     * @note[short] iOS: 0x3823a0
+     * @note[short] MacOS (ARM): 0x17a79c
+     * @note[short] MacOS (Intel): 0x1c2c00
+     * @note[short] Windows: 0x4b40c0
+     * @note[short] iOS: 0x389710
      * @note[short] Android
      */
     virtual void resetObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x170d8c
-     * @note[short] MacOS (Intel): 0x1b0690
-     * @note[short] Windows: 0x49af90
-     * @note[short] iOS: 0x381e24
+     * @note[short] MacOS (ARM): 0x1798c0
+     * @note[short] MacOS (Intel): 0x1c19d0
+     * @note[short] Windows: 0x4b3ae0
+     * @note[short] iOS: 0x38918c
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x171028
-     * @note[short] MacOS (Intel): 0x1b0960
-     * @note[short] Windows: 0x49b1c0
-     * @note[short] iOS: 0x382044
+     * @note[short] MacOS (ARM): 0x179b5c
+     * @note[short] MacOS (Intel): 0x1c1ca0
+     * @note[short] Windows: 0x4b3d10
+     * @note[short] iOS: 0x3893ac
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x170f88
-     * @note[short] MacOS (Intel): 0x1b08b0
-     * @note[short] Windows: 0x49b100
-     * @note[short] iOS: 0x381fa4
+     * @note[short] MacOS (ARM): 0x179abc
+     * @note[short] MacOS (Intel): 0x1c1bf0
+     * @note[short] Windows: 0x4b3c50
+     * @note[short] iOS: 0x38930c
      * @note[short] Android
      */
-    virtual void setObjectColor(cocos2d::ccColor3B const& p0);
+    virtual void setObjectColor(cocos2d::ccColor3B const& color);
 
     /**
-     * @note[short] MacOS (ARM): 0x1707dc
-     * @note[short] MacOS (Intel): 0x1b0030
-     * @note[short] Windows: 0x49ad20
-     * @note[short] iOS: 0x381a10
+     * @note[short] MacOS (ARM): 0x17930c
+     * @note[short] MacOS (Intel): 0x1c1350
+     * @note[short] Windows: 0x4b3870
+     * @note[short] iOS: 0x388d74
      * @note[short] Android
      */
-    virtual void updateTextKerning(int p0);
+    virtual void updateTextKerning(int kerning);
 
     /**
-     * @note[short] MacOS (ARM): 0x199b20
-     * @note[short] MacOS (Intel): 0x1e1d40
-     * @note[short] Windows: 0x47d930
-     * @note[short] iOS: 0x3922d0
+     * @note[short] MacOS (ARM): 0x1a1fa0
+     * @note[short] MacOS (Intel): 0x1f3cb0
+     * @note[short] Windows: 0x496010
+     * @note[short] iOS: 0x39958c
      * @note[short] Android
      */
     virtual int getTextKerning();
 
     /**
-     * @note[short] Windows: 0x49a9e0
+     * @note[short] MacOS (ARM): 0x178fac
+     * @note[short] MacOS (Intel): 0x1c0fc0
+     * @note[short] Windows: 0x4b3530
+     * @note[short] iOS: 0x388ae0
      * @note[short] Android: Rebinded
      */
-    void createLabel(gd::string p0);
+    void createLabel(gd::string text);
 
     /**
+     * @note[short] MacOS (ARM): 0x179254
+     * @note[short] MacOS (Intel): 0x1c12a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x388cbc
      * @note[short] Android: Rebinded
      */
-    void queueUpdateLabel(gd::string p0);
+    void queueUpdateLabel(gd::string text);
 
     /**
-     * @note[short] Windows: 0x49ab80
+     * @note[short] MacOS (ARM): 0x1790bc
+     * @note[short] MacOS (Intel): 0x1c10e0
+     * @note[short] Windows: 0x4b36d0
+     * @note[short] iOS: 0x388bac
      * @note[short] Android
      */
     void removeLabel();
 
     /**
+     * @note[short] MacOS (ARM): 0x17a794
+     * @note[short] MacOS (Intel): 0x1c2bf0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void unlockLabelColor();
 
     /**
+     * @note[short] MacOS (ARM): 0x179724
+     * @note[short] MacOS (Intel): 0x1c1870
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    void updateLabel(float p0);
+    void updateLabel(float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x170ba0
-     * @note[short] MacOS (Intel): 0x1b04c0
-     * @note[short] Windows: 0x49af00
+     * @note[short] MacOS (ARM): 0x1796c4
+     * @note[short] MacOS (Intel): 0x1c1810
+     * @note[short] Windows: 0x4b3a50
+     * @note[short] iOS: 0x389074
      * @note[short] Android: Rebinded
      */
-    void updateLabel(gd::string p0);
+    void updateLabel(gd::string text);
 
     /**
-     * @note[short] Windows: 0x49aca0
+     * @note[short] MacOS (ARM): 0x1791e4
+     * @note[short] MacOS (Intel): 0x1c1220
+     * @note[short] Windows: 0x4b37f0
+     * @note[short] iOS: 0x388c4c
      * @note[short] Android
      */
-    void updateLabelAlign(int p0);
+    void updateLabelAlign(int alignment);
 
     /**
+     * @note[short] MacOS (ARM): 0x1797cc
+     * @note[short] MacOS (Intel): 0x1c1900
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3890c4
      * @note[short] Android
      */
     void updateLabelIfDirty();
 
     /**
-     * @note[short] Windows: 0x49ad40
+     * @note[short] MacOS (ARM): 0x179320
+     * @note[short] MacOS (Intel): 0x1c1370
+     * @note[short] Windows: 0x4b3890
+     * @note[short] iOS: 0x388d88
      * @note[short] Android
      */
     void updatePreviewLabel();

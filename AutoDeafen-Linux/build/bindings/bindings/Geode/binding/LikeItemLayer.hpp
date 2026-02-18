@@ -16,70 +16,73 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(LikeItemLayer, FLAlertLayer)
 
     /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
-     * @note[short] Android: Rebinded
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
      LikeItemLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x513b04
-     * @note[short] MacOS (Intel): 0x5e1410
-     * @note[short] Windows: 0x318ea0
-     * @note[short] iOS: 0x24bbb0
+     * @note[short] MacOS (ARM): 0x5217c4
+     * @note[short] MacOS (Intel): 0x5f8bf0
+     * @note[short] Windows: 0x32dd60
+     * @note[short] iOS: 0x24cabc
      * @note[short] Android
      */
-    static LikeItemLayer* create(LikeItemType p0, int p1, int p2);
+    static LikeItemLayer* create(LikeItemType type, int id, int parentID);
 
     /**
-     * @note[short] MacOS (ARM): 0x514184
-     * @note[short] MacOS (Intel): 0x5e1b00
-     * @note[short] Windows: 0x84650
-     * @note[short] iOS: 0x24c0fc
+     * @note[short] MacOS (ARM): 0x521e4c
+     * @note[short] MacOS (Intel): 0x5f92e0
+     * @note[short] Windows: 0x846a0
+     * @note[short] iOS: 0x24d008
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x513c28
-     * @note[short] MacOS (Intel): 0x5e1580
-     * @note[short] Windows: 0x318fa0
-     * @note[short] iOS: 0x24bc88
+     * @note[short] MacOS (ARM): 0x5218f0
+     * @note[short] MacOS (Intel): 0x5f8d60
+     * @note[short] Windows: 0x32de60
+     * @note[short] iOS: 0x24cb94
      * @note[short] Android
      */
-    bool init(LikeItemType p0, int p1, int p2);
+    bool init(LikeItemType type, int id, int parentID);
 
     /**
-     * @note[short] MacOS (ARM): 0x513fdc
-     * @note[short] MacOS (Intel): 0x5e1950
-     * @note[short] Windows: 0x84620
-     * @note[short] iOS: 0x24c034
+     * @note[short] MacOS (ARM): 0x521ca4
+     * @note[short] MacOS (Intel): 0x5f9130
+     * @note[short] Windows: 0x84670
+     * @note[short] iOS: 0x24cf40
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x514090
-     * @note[short] MacOS (Intel): 0x5e1a00
-     * @note[short] Windows: 0x319380
-     * @note[short] iOS: 0x24c078
+     * @note[short] MacOS (ARM): 0x521d58
+     * @note[short] MacOS (Intel): 0x5f91e0
+     * @note[short] Windows: 0x32e240
+     * @note[short] iOS: 0x24cf84
      * @note[short] Android
      */
     void onDislike(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x514018
-     * @note[short] MacOS (Intel): 0x5e1980
-     * @note[short] Windows: 0x319370
-     * @note[short] iOS: 0x24c070
+     * @note[short] MacOS (ARM): 0x521ce0
+     * @note[short] MacOS (Intel): 0x5f9160
+     * @note[short] Windows: 0x32e230
+     * @note[short] iOS: 0x24cf7c
      * @note[short] Android
      */
     void onLike(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x514108
-     * @note[short] MacOS (Intel): 0x5e1a80
-     * @note[short] Windows: 0x319390
-     * @note[short] iOS: 0x24c080
+     * @note[short] MacOS (ARM): 0x521dd0
+     * @note[short] MacOS (Intel): 0x5f9260
+     * @note[short] Windows: 0x32e250
+     * @note[short] iOS: 0x24cf8c
      * @note[short] Android
      */
     void triggerLike(bool isLiked);

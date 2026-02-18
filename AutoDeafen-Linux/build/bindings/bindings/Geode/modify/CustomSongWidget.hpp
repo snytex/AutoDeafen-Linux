@@ -20,6 +20,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(loadSongInfoFailed) 
 	#endif
 
+	#ifndef GEODE_STATICS_downloadSongStarted
+		#define GEODE_STATICS_downloadSongStarted
+		GEODE_AS_STATIC_FUNCTION(downloadSongStarted) 
+	#endif
+
 	#ifndef GEODE_STATICS_downloadSongFinished
 		#define GEODE_STATICS_downloadSongFinished
 		GEODE_AS_STATIC_FUNCTION(downloadSongFinished) 
@@ -60,11 +65,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(FLAlert_Clicked) 
 	#endif
 
-	#ifndef GEODE_STATICS_addExtraVisuals
-		#define GEODE_STATICS_addExtraVisuals
-		GEODE_AS_STATIC_FUNCTION(addExtraVisuals) 
-	#endif
-
 	#ifndef GEODE_STATICS_deleteSong
 		#define GEODE_STATICS_deleteSong
 		GEODE_AS_STATIC_FUNCTION(deleteSong) 
@@ -78,11 +78,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_downloadAssetFinished
 		#define GEODE_STATICS_downloadAssetFinished
 		GEODE_AS_STATIC_FUNCTION(downloadAssetFinished) 
-	#endif
-
-	#ifndef GEODE_STATICS_downloadFailed
-		#define GEODE_STATICS_downloadFailed
-		GEODE_AS_STATIC_FUNCTION(downloadFailed) 
 	#endif
 
 	#ifndef GEODE_STATICS_getSongInfoIfUnloaded
@@ -155,19 +150,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(startDownload) 
 	#endif
 
-	#ifndef GEODE_STATICS_startMonitorDownload
-		#define GEODE_STATICS_startMonitorDownload
-		GEODE_AS_STATIC_FUNCTION(startMonitorDownload) 
-	#endif
-
 	#ifndef GEODE_STATICS_startMultiAssetDownload
 		#define GEODE_STATICS_startMultiAssetDownload
 		GEODE_AS_STATIC_FUNCTION(startMultiAssetDownload) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleUpdateButton
-		#define GEODE_STATICS_toggleUpdateButton
-		GEODE_AS_STATIC_FUNCTION(toggleUpdateButton) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateDownloadProgress
@@ -205,11 +190,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateWithMultiAssets) 
 	#endif
 
-	#ifndef GEODE_STATICS_verifySongID
-		#define GEODE_STATICS_verifySongID
-		GEODE_AS_STATIC_FUNCTION(verifySongID) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -224,6 +204,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_loadSongInfoFailed
 		#define GEODE_CONCEPT_CHECK_loadSongInfoFailed
 		GEODE_CONCEPT_FUNCTION_CHECK(loadSongInfoFailed) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_downloadSongStarted
+		#define GEODE_CONCEPT_CHECK_downloadSongStarted
+		GEODE_CONCEPT_FUNCTION_CHECK(downloadSongStarted) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_downloadSongFinished
@@ -435,49 +420,50 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc74f0, Default, CustomSongWidget, create, SongInfoObject*, CustomSongDelegate*, bool, bool, bool, bool, bool, bool, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcbd40, Thiscall, CustomSongWidget, loadSongInfoFinished, SongInfoObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcbe90, Thiscall, CustomSongWidget, loadSongInfoFailed, int, GJSongError)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcbf20, Thiscall, CustomSongWidget, downloadSongFinished, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcbfe0, Thiscall, CustomSongWidget, downloadSongFailed, int, GJSongError)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcc060, Thiscall, CustomSongWidget, downloadSFXFinished, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcc080, Thiscall, CustomSongWidget, downloadSFXFailed, int, GJSongError)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcc5c0, Thiscall, CustomSongWidget, musicActionFinished, GJMusicAction)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcc5f0, Thiscall, CustomSongWidget, musicActionFailed, GJMusicAction)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xca5d0, Thiscall, CustomSongWidget, songStateChanged, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcc960, Thiscall, CustomSongWidget, FLAlert_Clicked, FLAlertLayer*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSongWidget, addExtraVisuals, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc9160, Thiscall, CustomSongWidget, deleteSong, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcc4a0, Thiscall, CustomSongWidget, downloadAssetFailed, int, GJAssetType, GJSongError)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcc3e0, Thiscall, CustomSongWidget, downloadAssetFinished, int, GJAssetType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSongWidget, downloadFailed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc9af0, Thiscall, CustomSongWidget, getSongInfoIfUnloaded, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc7700, Thiscall, CustomSongWidget, init, SongInfoObject*, CustomSongDelegate*, bool, bool, bool, bool, bool, bool, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc9bb0, Thiscall, CustomSongWidget, onCancelDownload, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc9040, Thiscall, CustomSongWidget, onDelete, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc9cd0, Thiscall, CustomSongWidget, onDownload, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc9c40, Thiscall, CustomSongWidget, onGetSongInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc8d50, Thiscall, CustomSongWidget, onInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc9360, Thiscall, CustomSongWidget, onMore, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc9fd0, Thiscall, CustomSongWidget, onPlayback, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc9f70, Thiscall, CustomSongWidget, onSelect, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc88c0, Thiscall, CustomSongWidget, positionInfoObjects, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcc240, Thiscall, CustomSongWidget, processNextMultiAsset, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcc710, Thiscall, CustomSongWidget, showError, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc9eb0, Thiscall, CustomSongWidget, startDownload, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSongWidget, startMonitorDownload, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcc0a0, Thiscall, CustomSongWidget, startMultiAssetDownload, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSongWidget, toggleUpdateButton, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xca4a0, Thiscall, CustomSongWidget, updateDownloadProgress, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcc640, Thiscall, CustomSongWidget, updateError, GJSongError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc8230, Default, CustomSongWidget, create, SongInfoObject*, CustomSongDelegate*, bool, bool, bool, bool, bool, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xccc80, Thiscall, CustomSongWidget, loadSongInfoFinished, SongInfoObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcce10, Thiscall, CustomSongWidget, loadSongInfoFailed, int, GJSongError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xccf00, Thiscall, CustomSongWidget, downloadSongStarted, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xccf20, Thiscall, CustomSongWidget, downloadSongFinished, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xccfe0, Thiscall, CustomSongWidget, downloadSongFailed, int, GJSongError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcd060, Thiscall, CustomSongWidget, downloadSFXFinished, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcd080, Thiscall, CustomSongWidget, downloadSFXFailed, int, GJSongError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcd630, Thiscall, CustomSongWidget, musicActionFinished, GJMusicAction)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcd660, Thiscall, CustomSongWidget, musicActionFailed, GJMusicAction)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcb4c0, Thiscall, CustomSongWidget, songStateChanged, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcd9d0, Thiscall, CustomSongWidget, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSongWidget, addExtraVisuals, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xca020, Thiscall, CustomSongWidget, deleteSong, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcd560, Thiscall, CustomSongWidget, downloadAssetFailed, int, GJAssetType, GJSongError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcd4a0, Thiscall, CustomSongWidget, downloadAssetFinished, int, GJAssetType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSongWidget, downloadFailed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xca9e0, Thiscall, CustomSongWidget, getSongInfoIfUnloaded, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc8470, Thiscall, CustomSongWidget, init, SongInfoObject*, CustomSongDelegate*, bool, bool, bool, bool, bool, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcaaa0, Thiscall, CustomSongWidget, onCancelDownload, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc9f00, Thiscall, CustomSongWidget, onDelete, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcabc0, Thiscall, CustomSongWidget, onDownload, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcab30, Thiscall, CustomSongWidget, onGetSongInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc9c10, Thiscall, CustomSongWidget, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xca220, Thiscall, CustomSongWidget, onMore, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcaec0, Thiscall, CustomSongWidget, onPlayback, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcae60, Thiscall, CustomSongWidget, onSelect, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc9630, Thiscall, CustomSongWidget, positionInfoObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcd260, Thiscall, CustomSongWidget, processNextMultiAsset, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcd780, Thiscall, CustomSongWidget, showError, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcada0, Thiscall, CustomSongWidget, startDownload, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSongWidget, startMonitorDownload, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcd0a0, Thiscall, CustomSongWidget, startMultiAssetDownload, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSongWidget, toggleUpdateButton, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcb390, Thiscall, CustomSongWidget, updateDownloadProgress, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcd6b0, Thiscall, CustomSongWidget, updateError, GJSongError)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSongWidget, updateLengthMod, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcb760, Thiscall, CustomSongWidget, updateMultiAssetInfo, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xca3b0, Thiscall, CustomSongWidget, updatePlaybackBtn, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xca550, Thiscall, CustomSongWidget, updateProgressBar, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xca600, Thiscall, CustomSongWidget, updateSongInfo, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcc6a0, Thiscall, CustomSongWidget, updateMultiAssetInfo, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcb2a0, Thiscall, CustomSongWidget, updatePlaybackBtn, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcb440, Thiscall, CustomSongWidget, updateProgressBar, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcb4f0, Thiscall, CustomSongWidget, updateSongInfo, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSongWidget, updateSongObject, SongInfoObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcb410, Thiscall, CustomSongWidget, updateWithMultiAssets, gd::string, gd::string, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSongWidget, verifySongID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xcc350, Thiscall, CustomSongWidget, updateWithMultiAssets, gd::string, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSongWidget, verifySongID, int)
 		}
 	};
 }

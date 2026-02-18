@@ -35,11 +35,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_onClose
-		#define GEODE_STATICS_onClose
-		GEODE_AS_STATIC_FUNCTION(onClose) 
-	#endif
-
 	#ifndef GEODE_STATICS_onResetHSV
 		#define GEODE_STATICS_onResetHSV
 		GEODE_AS_STATIC_FUNCTION(onResetHSV) 
@@ -150,20 +145,20 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x96950, Default, ConfigureHSVWidget, create, cocos2d::ccHSVValue, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x980a0, Default, ConfigureHSVWidget, getHSV, GameObject*, cocos2d::CCArray*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x96a10, Default, ConfigureHSVWidget, create, cocos2d::ccHSVValue, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x98160, Default, ConfigureHSVWidget, getHSV, GameObject*, cocos2d::CCArray*, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ConfigureHSVWidget, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b790, Thiscall, ConfigureHSVWidget, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x97560, Thiscall, ConfigureHSVWidget, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x97300, Thiscall, ConfigureHSVWidget, createTextInputNode, cocos2d::CCPoint, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x96a20, Thiscall, ConfigureHSVWidget, init, cocos2d::ccHSVValue, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ConfigureHSVWidget, onClose, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x97b10, Thiscall, ConfigureHSVWidget, onResetHSV, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ConfigureHSVWidget, onToggleSConst, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ConfigureHSVWidget, onToggleVConst, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ConfigureHSVWidget, sliderChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x97b90, Thiscall, ConfigureHSVWidget, updateLabels, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x97820, Thiscall, ConfigureHSVWidget, updateSliders, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b850, Thiscall, ConfigureHSVWidget, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x97620, Thiscall, ConfigureHSVWidget, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x973c0, Thiscall, ConfigureHSVWidget, createTextInputNode, cocos2d::CCPoint, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x96ae0, Thiscall, ConfigureHSVWidget, init, cocos2d::ccHSVValue, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ConfigureHSVWidget, onClose, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x97bd0, Thiscall, ConfigureHSVWidget, onResetHSV, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x97ad0, Thiscall, ConfigureHSVWidget, onToggleSConst, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x97b50, Thiscall, ConfigureHSVWidget, onToggleVConst, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x979b0, Thiscall, ConfigureHSVWidget, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x97c50, Thiscall, ConfigureHSVWidget, updateLabels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x978e0, Thiscall, ConfigureHSVWidget, updateSliders, )
 		}
 	};
 }

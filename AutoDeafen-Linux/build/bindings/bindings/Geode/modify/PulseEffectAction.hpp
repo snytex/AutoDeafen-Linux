@@ -5,21 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_isFinished
-		#define GEODE_STATICS_isFinished
-		GEODE_AS_STATIC_FUNCTION(isFinished) 
-	#endif
-
-	#ifndef GEODE_STATICS_step
-		#define GEODE_STATICS_step
-		GEODE_AS_STATIC_FUNCTION(step) 
-	#endif
-
-	#ifndef GEODE_STATICS_valueForDelta
-		#define GEODE_STATICS_valueForDelta
-		GEODE_AS_STATIC_FUNCTION(valueForDelta) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_isFinished
 		#define GEODE_CONCEPT_CHECK_isFinished
@@ -45,9 +30,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PulseEffectAction, isFinished, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PulseEffectAction, step, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PulseEffectAction, valueForDelta, float, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PulseEffectAction, isFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PulseEffectAction, step, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PulseEffectAction, valueForDelta, float, float, float, float)
 		}
 	};
 }

@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void numberInputClosed(NumberInputLayer* p0);
+    virtual void numberInputClosed(NumberInputLayer* layer);
 };

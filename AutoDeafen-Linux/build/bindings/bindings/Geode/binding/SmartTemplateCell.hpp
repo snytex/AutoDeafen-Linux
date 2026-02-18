@@ -16,46 +16,57 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SmartTemplateCell, TableViewCell)
 
     /**
+     * @note[short] MacOS (ARM): 0x1fe30c
+     * @note[short] MacOS (Intel): 0x258e70
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-     SmartTemplateCell(char const* p0, float p1, float p2);
+     SmartTemplateCell(char const* identifier, float width, float height);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f57a0
-     * @note[short] MacOS (Intel): 0x246ed0
-     * @note[short] Windows: 0x3c7f0
-     * @note[short] iOS: 0x1158f0
+     * @note[short] MacOS (ARM): 0x1fe350
+     * @note[short] MacOS (Intel): 0x258ee0
+     * @note[short] Windows: 0x3c830
+     * @note[short] iOS: 0x112c50
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x1f585c
-     * @note[short] MacOS (Intel): 0x246fa0
-     * @note[short] Windows: 0xad710
-     * @note[short] iOS: 0x1159a0
+     * @note[short] MacOS (ARM): 0x1fe40c
+     * @note[short] MacOS (Intel): 0x258fb0
+     * @note[short] Windows: 0xade20
+     * @note[short] iOS: 0x112d00
      * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): 0x1eb3d4
-     * @note[short] MacOS (Intel): 0x23b400
-     * @note[short] Windows: 0xbd8c0
+     * @note[short] MacOS (ARM): 0x1f3ff0
+     * @note[short] MacOS (Intel): 0x24d3e0
+     * @note[short] Windows: 0xbe5e0
+     * @note[short] iOS: 0x10b1bc
      * @note[short] Android
      */
-    void loadFromObject(GJSmartTemplate* p0);
+    void loadFromObject(GJSmartTemplate* smartTemplate);
 
     /**
-     * @note[short] Windows: 0xbdda0
+     * @note[short] MacOS (ARM): 0x1fe35c
+     * @note[short] MacOS (Intel): 0x258f00
+     * @note[short] Windows: 0xbeac0
+     * @note[short] iOS: 0x112c5c
      * @note[short] Android
      */
     void onClick(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0xbdcb0
+     * @note[short] MacOS (ARM): 0x1f4304
+     * @note[short] MacOS (Intel): 0x24d720
+     * @note[short] Windows: 0xbe9d0
+     * @note[short] iOS: 0x10b4cc
      * @note[short] Android
      */
-    void updateBGColor(int p0);
+    void updateBGColor(int index);
     GJSmartTemplate* m_smartTemplate;
 };

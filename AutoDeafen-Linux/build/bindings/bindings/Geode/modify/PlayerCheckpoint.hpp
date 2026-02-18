@@ -35,8 +35,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a4210, Default, PlayerCheckpoint, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x77db0, Thiscall, PlayerCheckpoint, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bb010, Default, PlayerCheckpoint, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bb230, Thiscall, PlayerCheckpoint, init, )
 		}
 	};
 }

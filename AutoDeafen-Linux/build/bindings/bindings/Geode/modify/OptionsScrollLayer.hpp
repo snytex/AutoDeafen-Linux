@@ -25,16 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(cellPerformedAction) 
 	#endif
 
-	#ifndef GEODE_STATICS_getRelevantObjects
-		#define GEODE_STATICS_getRelevantObjects
-		GEODE_AS_STATIC_FUNCTION(getRelevantObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
 	#ifndef GEODE_STATICS_onClose
 		#define GEODE_STATICS_onClose
 		GEODE_AS_STATIC_FUNCTION(onClose) 
@@ -95,14 +85,14 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x325ca0, Default, OptionsScrollLayer, create, cocos2d::CCArray*, bool, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, OptionsScrollLayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x326150, Thiscall, OptionsScrollLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x326160, Thiscall, OptionsScrollLayer, cellPerformedAction, TableViewCell*, int, CellAction, cocos2d::CCNode*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(OptionsScrollLayer, getRelevantObjects, cocos2d::CCArray*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(OptionsScrollLayer, init, cocos2d::CCArray*, bool, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3260c0, Thiscall, OptionsScrollLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x325ef0, Thiscall, OptionsScrollLayer, setupList, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33ab70, Default, OptionsScrollLayer, create, cocos2d::CCArray*, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, OptionsScrollLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33b020, Thiscall, OptionsScrollLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33b030, Thiscall, OptionsScrollLayer, cellPerformedAction, TableViewCell*, int, CellAction, cocos2d::CCNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(OptionsScrollLayer, getRelevantObjects, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(OptionsScrollLayer, init, cocos2d::CCArray*, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33af90, Thiscall, OptionsScrollLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33adc0, Thiscall, OptionsScrollLayer, setupList, cocos2d::CCArray*)
 		}
 	};
 }

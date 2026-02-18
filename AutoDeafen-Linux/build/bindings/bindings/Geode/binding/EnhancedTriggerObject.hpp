@@ -16,32 +16,49 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(EnhancedTriggerObject, EffectGameObject)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static EnhancedTriggerObject* create(char const* p0);
+     EnhancedTriggerObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x16d4e8
-     * @note[short] MacOS (Intel): 0x1ac3b0
-     * @note[short] Windows: 0x499340
-     * @note[short] iOS: 0x38017c
+     * @note[short] MacOS (ARM): 0x1756b8
+     * @note[short] MacOS (Intel): 0x1bc9b0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x387148
+     * @note[short] Android
+     */
+    static EnhancedTriggerObject* create(char const* frame);
+
+    /**
+     * @note[short] MacOS (ARM): 0x176090
+     * @note[short] MacOS (Intel): 0x1bd5e0
+     * @note[short] Windows: 0x4b1e90
+     * @note[short] iOS: 0x3874ac
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x16cbf8
-     * @note[short] MacOS (Intel): 0x1ab8c0
-     * @note[short] Windows: 0x499070
-     * @note[short] iOS: 0x37fed8
+     * @note[short] MacOS (ARM): 0x1757cc
+     * @note[short] MacOS (Intel): 0x1bcac0
+     * @note[short] Windows: 0x4b1bc0
+     * @note[short] iOS: 0x387208
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
+     * @note[short] MacOS (ARM): 0x175784
+     * @note[short] MacOS (Intel): 0x1bca70
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(char const* p0);
+    bool init(char const* frame);
     int m_minXID;
     int m_minYID;
     int m_maxXID;

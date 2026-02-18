@@ -20,11 +20,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(didToggle) 
 	#endif
 
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -55,10 +50,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2993c0, Default, GameLevelOptionsLayer, create, GJGameLevel*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x299520, Thiscall, GameLevelOptionsLayer, setupOptions, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2995a0, Thiscall, GameLevelOptionsLayer, didToggle, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GameLevelOptionsLayer, init, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a0a80, Default, GameLevelOptionsLayer, create, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a0be0, Thiscall, GameLevelOptionsLayer, setupOptions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a0c60, Thiscall, GameLevelOptionsLayer, didToggle, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GameLevelOptionsLayer, init, GJGameLevel*)
 		}
 	};
 }

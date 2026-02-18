@@ -15,9 +15,19 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(sharedConfiguration) 
 	#endif
 
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
+	#ifndef GEODE_STATICS_checkForGLExtension
+		#define GEODE_STATICS_checkForGLExtension
+		GEODE_AS_STATIC_FUNCTION(checkForGLExtension) 
+	#endif
+
+	#ifndef GEODE_STATICS_dumpInfo
+		#define GEODE_STATICS_dumpInfo
+		GEODE_AS_STATIC_FUNCTION(dumpInfo) 
+	#endif
+
+	#ifndef GEODE_STATICS_gatherGPUInfo
+		#define GEODE_STATICS_gatherGPUInfo
+		GEODE_AS_STATIC_FUNCTION(gatherGPUInfo) 
 	#endif
 
 	#ifndef GEODE_STATICS_getBool
@@ -55,29 +65,19 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getObject) 
 	#endif
 
-	#ifndef GEODE_STATICS_setObject
-		#define GEODE_STATICS_setObject
-		GEODE_AS_STATIC_FUNCTION(setObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_checkForGLExtension
-		#define GEODE_STATICS_checkForGLExtension
-		GEODE_AS_STATIC_FUNCTION(checkForGLExtension) 
-	#endif
-
-	#ifndef GEODE_STATICS_dumpInfo
-		#define GEODE_STATICS_dumpInfo
-		GEODE_AS_STATIC_FUNCTION(dumpInfo) 
-	#endif
-
-	#ifndef GEODE_STATICS_gatherGPUInfo
-		#define GEODE_STATICS_gatherGPUInfo
-		GEODE_AS_STATIC_FUNCTION(gatherGPUInfo) 
+	#ifndef GEODE_STATICS_init
+		#define GEODE_STATICS_init
+		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
 	#ifndef GEODE_STATICS_loadConfigFile
 		#define GEODE_STATICS_loadConfigFile
 		GEODE_AS_STATIC_FUNCTION(loadConfigFile) 
+	#endif
+
+	#ifndef GEODE_STATICS_setObject
+		#define GEODE_STATICS_setObject
+		GEODE_AS_STATIC_FUNCTION(setObject) 
 	#endif
 
 	#ifndef GEODE_STATICS_supportsBGRA8888
@@ -116,9 +116,19 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(sharedConfiguration) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_init
-		#define GEODE_CONCEPT_CHECK_init
-		GEODE_CONCEPT_FUNCTION_CHECK(init) 
+	#ifndef GEODE_CONCEPT_CHECK_checkForGLExtension
+		#define GEODE_CONCEPT_CHECK_checkForGLExtension
+		GEODE_CONCEPT_FUNCTION_CHECK(checkForGLExtension) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_dumpInfo
+		#define GEODE_CONCEPT_CHECK_dumpInfo
+		GEODE_CONCEPT_FUNCTION_CHECK(dumpInfo) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_gatherGPUInfo
+		#define GEODE_CONCEPT_CHECK_gatherGPUInfo
+		GEODE_CONCEPT_FUNCTION_CHECK(gatherGPUInfo) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_getBool
@@ -156,29 +166,19 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(getObject) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_setObject
-		#define GEODE_CONCEPT_CHECK_setObject
-		GEODE_CONCEPT_FUNCTION_CHECK(setObject) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_checkForGLExtension
-		#define GEODE_CONCEPT_CHECK_checkForGLExtension
-		GEODE_CONCEPT_FUNCTION_CHECK(checkForGLExtension) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_dumpInfo
-		#define GEODE_CONCEPT_CHECK_dumpInfo
-		GEODE_CONCEPT_FUNCTION_CHECK(dumpInfo) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_gatherGPUInfo
-		#define GEODE_CONCEPT_CHECK_gatherGPUInfo
-		GEODE_CONCEPT_FUNCTION_CHECK(gatherGPUInfo) 
+	#ifndef GEODE_CONCEPT_CHECK_init
+		#define GEODE_CONCEPT_CHECK_init
+		GEODE_CONCEPT_FUNCTION_CHECK(init) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_loadConfigFile
 		#define GEODE_CONCEPT_CHECK_loadConfigFile
 		GEODE_CONCEPT_FUNCTION_CHECK(loadConfigFile) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setObject
+		#define GEODE_CONCEPT_CHECK_setObject
+		GEODE_CONCEPT_FUNCTION_CHECK(setObject) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_supportsBGRA8888
@@ -215,9 +215,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCConfiguration@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCConfiguration, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCConfiguration@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCConfiguration)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCConfiguration::purgeConfiguration)), Default, cocos2d::CCConfiguration, purgeConfiguration, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCConfiguration::sharedConfiguration)), Default, cocos2d::CCConfiguration, sharedConfiguration, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCConfiguration::init)), Thiscall, cocos2d::CCConfiguration, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<gd::string const&>::func(&cocos2d::CCConfiguration::checkForGLExtension)), Thiscall, cocos2d::CCConfiguration, checkForGLExtension, gd::string const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCConfiguration::dumpInfo)), Thiscall, cocos2d::CCConfiguration, dumpInfo, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCConfiguration::gatherGPUInfo)), Thiscall, cocos2d::CCConfiguration, gatherGPUInfo, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, bool>::func(&cocos2d::CCConfiguration::getBool)), Thiscall, cocos2d::CCConfiguration, getBool, char const*, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*>::func(&cocos2d::CCConfiguration::getCString)), Thiscall, cocos2d::CCConfiguration, getCString, char const*, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCConfiguration::getMaxModelviewStackDepth)), Thiscall, cocos2d::CCConfiguration, getMaxModelviewStackDepth, )
@@ -225,11 +229,9 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCConfiguration::getMaxTextureUnits)), Thiscall, cocos2d::CCConfiguration, getMaxTextureUnits, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, double>::func(&cocos2d::CCConfiguration::getNumber)), Thiscall, cocos2d::CCConfiguration, getNumber, char const*, double)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCConfiguration::getObject)), Thiscall, cocos2d::CCConfiguration, getObject, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, cocos2d::CCObject*>::func(&cocos2d::CCConfiguration::setObject)), Thiscall, cocos2d::CCConfiguration, setObject, char const*, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<gd::string const&>::func(&cocos2d::CCConfiguration::checkForGLExtension)), Thiscall, cocos2d::CCConfiguration, checkForGLExtension, gd::string const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCConfiguration::dumpInfo)), Thiscall, cocos2d::CCConfiguration, dumpInfo, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCConfiguration::gatherGPUInfo)), Thiscall, cocos2d::CCConfiguration, gatherGPUInfo, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCConfiguration::init)), Thiscall, cocos2d::CCConfiguration, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCConfiguration::loadConfigFile)), Thiscall, cocos2d::CCConfiguration, loadConfigFile, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, cocos2d::CCObject*>::func(&cocos2d::CCConfiguration::setObject)), Thiscall, cocos2d::CCConfiguration, setObject, char const*, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCConfiguration::supportsBGRA8888)), Thiscall, cocos2d::CCConfiguration, supportsBGRA8888, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCConfiguration::supportsDiscardFramebuffer)), Thiscall, cocos2d::CCConfiguration, supportsDiscardFramebuffer, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCConfiguration::supportsNPOT)), Thiscall, cocos2d::CCConfiguration, supportsNPOT, )

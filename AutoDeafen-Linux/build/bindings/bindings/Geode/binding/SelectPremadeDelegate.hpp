@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void selectPremadeClosed(SelectPremadeLayer* p0, int p1);
+    virtual void selectPremadeClosed(SelectPremadeLayer* layer, int type);
 };

@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void downloadMessageFinished(GJUserMessage* p0);
+    virtual void downloadMessageFinished(GJUserMessage* message);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,5 +29,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void downloadMessageFailed(int p0);
+    virtual void downloadMessageFailed(int id);
 };

@@ -16,46 +16,64 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(TriggerControlGameObject, EffectGameObject)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static TriggerControlGameObject* create(char const* p0);
+     TriggerControlGameObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x1965fc
-     * @note[short] MacOS (Intel): 0x1ddd40
-     * @note[short] Windows: 0x4aa7d0
-     * @note[short] iOS: 0x390e54
+     * @note[short] MacOS (ARM): 0x19dffc
+     * @note[short] MacOS (Intel): 0x1eef10
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x397bf0
+     * @note[short] Android
+     */
+    static TriggerControlGameObject* create(char const* frame);
+
+    /**
+     * @note[short] MacOS (ARM): 0x19eb18
+     * @note[short] MacOS (Intel): 0x1efbd0
+     * @note[short] Windows: 0x4c3320
+     * @note[short] iOS: 0x3980f0
      * @note[short] Android: Rebinded
      */
-    virtual void triggerObject(GJBaseGameLayer* p0, int p1, gd::vector<int> const* p2);
+    virtual void triggerObject(GJBaseGameLayer* layer, int uniqueID, gd::vector<int> const* remapKeys);
 
     /**
-     * @note[short] MacOS (ARM): 0x1963a4
-     * @note[short] MacOS (Intel): 0x1ddaf0
-     * @note[short] Windows: 0x4aa6e0
-     * @note[short] iOS: 0x390c9c
+     * @note[short] MacOS (ARM): 0x19e8c0
+     * @note[short] MacOS (Intel): 0x1ef980
+     * @note[short] Windows: 0x4c3230
+     * @note[short] iOS: 0x397f38
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x195c04
-     * @note[short] MacOS (Intel): 0x1dd1f0
-     * @note[short] Windows: 0x4aa480
-     * @note[short] iOS: 0x390a54
+     * @note[short] MacOS (ARM): 0x19e134
+     * @note[short] MacOS (Intel): 0x1ef050
+     * @note[short] Windows: 0x4c2fd0
+     * @note[short] iOS: 0x397cec
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
+     * @note[short] MacOS (ARM): 0x19e0d8
+     * @note[short] MacOS (Intel): 0x1eeff0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x397c90
      * @note[short] Android
      */
-    bool init(char const* p0);
+    bool init(char const* frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x196494
-     * @note[short] MacOS (Intel): 0x1ddbe0
-     * @note[short] Windows: 0x4aa800
+     * @note[short] MacOS (ARM): 0x19e9b0
+     * @note[short] MacOS (Intel): 0x1efa70
+     * @note[short] Windows: 0x4c3350
+     * @note[short] iOS: 0x398014
      * @note[short] Android
      */
     void updateTriggerControlFrame();

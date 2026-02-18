@@ -16,87 +16,112 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupShakePopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x43c850
+     * @note[short] MacOS (ARM): 0x5836fc
+     * @note[short] MacOS (Intel): 0x663ff0
+     * @note[short] Windows: 0x454bf0
+     * @note[short] iOS: 0x3a9018
      * @note[short] Android
      */
-    static SetupShakePopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupShakePopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x576bd0
-     * @note[short] MacOS (Intel): 0x64eeb0
-     * @note[short] Windows: 0x43d6d0
-     * @note[short] iOS: 0x3a292c
+     * @note[short] MacOS (ARM): 0x58473c
+     * @note[short] MacOS (Intel): 0x665100
+     * @note[short] Windows: 0x455a70
+     * @note[short] iOS: 0x3a9c7c
      * @note[short] Android
      */
     virtual void determineStartValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x577234
-     * @note[short] MacOS (Intel): 0x64f590
-     * @note[short] Windows: 0x43e120
-     * @note[short] iOS: 0x3a2e60
+     * @note[short] MacOS (ARM): 0x584d7c
+     * @note[short] MacOS (Intel): 0x665870
+     * @note[short] Windows: 0x4564c0
+     * @note[short] iOS: 0x3aa1a4
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x576f14
-     * @note[short] MacOS (Intel): 0x64f210
-     * @note[short] Windows: 0x43dd60
-     * @note[short] iOS: 0x3a2c1c
+     * @note[short] MacOS (ARM): 0x584a70
+     * @note[short] MacOS (Intel): 0x6654e0
+     * @note[short] Windows: 0x456100
+     * @note[short] iOS: 0x3a9f6c
      * @note[short] Android
      */
-    virtual void textChanged(CCTextInputNode* p0);
+    virtual void textChanged(CCTextInputNode* node);
 
     /**
-     * @note[short] MacOS (ARM): 0x575d0c
-     * @note[short] MacOS (Intel): 0x64df80
-     * @note[short] Windows: 0x43c980
+     * @note[short] MacOS (ARM): 0x583890
+     * @note[short] MacOS (Intel): 0x664240
+     * @note[short] Windows: 0x454d20
+     * @note[short] iOS: 0x3a90fc
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] Windows: 0x43d8a0
+     * @note[short] MacOS (ARM): 0x584138
+     * @note[short] MacOS (Intel): 0x664b20
+     * @note[short] Windows: 0x455c40
+     * @note[short] iOS: 0x3a991c
      * @note[short] Android
      */
     void sliderChanged(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x26b120
+     * @note[short] MacOS (ARM): 0x584920
+     * @note[short] MacOS (Intel): 0x665360
+     * @note[short] Windows: 0x272a00
+     * @note[short] iOS: 0x3a9e34
      * @note[short] Android
      */
     void updateDuration();
 
     /**
-     * @note[short] Windows: 0x26a500
+     * @note[short] MacOS (ARM): 0x584474
+     * @note[short] MacOS (Intel): 0x664e60
+     * @note[short] Windows: 0x271de0
+     * @note[short] iOS: 0x3a9acc
      * @note[short] Android
      */
-    void updateDurLabel(bool p0);
+    void updateDurLabel(bool decimals);
 
     /**
-     * @note[short] Windows: 0x43dce0
+     * @note[short] MacOS (ARM): 0x584990
+     * @note[short] MacOS (Intel): 0x6653e0
+     * @note[short] Windows: 0x456080
+     * @note[short] iOS: 0x3a9e9c
      * @note[short] Android
      */
     void updateInterval();
 
     /**
-     * @note[short] Windows: 0x43dc10
+     * @note[short] MacOS (ARM): 0x5845d8
+     * @note[short] MacOS (Intel): 0x664fb0
+     * @note[short] Windows: 0x455fb0
+     * @note[short] iOS: 0x3a9ba4
      * @note[short] Android
      */
-    void updateIntervalLabel(bool p0);
+    void updateIntervalLabel(bool decimals);
 
     /**
-     * @note[short] Windows: 0x43db90
+     * @note[short] MacOS (ARM): 0x584a00
+     * @note[short] MacOS (Intel): 0x665460
+     * @note[short] Windows: 0x455f30
+     * @note[short] iOS: 0x3a9f04
      * @note[short] Android
      */
     void updateShake();
 
     /**
-     * @note[short] Windows: 0x43dac0
+     * @note[short] MacOS (ARM): 0x584310
+     * @note[short] MacOS (Intel): 0x664d10
+     * @note[short] Windows: 0x455e60
+     * @note[short] iOS: 0x3a99f4
      * @note[short] Android
      */
-    void updateShakeLabel(bool p0);
+    void updateShakeLabel(bool decimals);
     CCTextInputNode* m_durationInput;
     Slider* m_durationSlider;
     float m_duration;

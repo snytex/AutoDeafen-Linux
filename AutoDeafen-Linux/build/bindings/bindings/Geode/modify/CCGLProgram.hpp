@@ -5,6 +5,31 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
+	#ifndef GEODE_STATICS_addAttribute
+		#define GEODE_STATICS_addAttribute
+		GEODE_AS_STATIC_FUNCTION(addAttribute) 
+	#endif
+
+	#ifndef GEODE_STATICS_compileShader
+		#define GEODE_STATICS_compileShader
+		GEODE_AS_STATIC_FUNCTION(compileShader) 
+	#endif
+
+	#ifndef GEODE_STATICS_description
+		#define GEODE_STATICS_description
+		GEODE_AS_STATIC_FUNCTION(description) 
+	#endif
+
+	#ifndef GEODE_STATICS_fragmentShaderLog
+		#define GEODE_STATICS_fragmentShaderLog
+		GEODE_AS_STATIC_FUNCTION(fragmentShaderLog) 
+	#endif
+
+	#ifndef GEODE_STATICS_getUniformLocationForName
+		#define GEODE_STATICS_getUniformLocationForName
+		GEODE_AS_STATIC_FUNCTION(getUniformLocationForName) 
+	#endif
+
 	#ifndef GEODE_STATICS_initWithVertexShaderByteArray
 		#define GEODE_STATICS_initWithVertexShaderByteArray
 		GEODE_AS_STATIC_FUNCTION(initWithVertexShaderByteArray) 
@@ -15,14 +40,24 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(initWithVertexShaderFilename) 
 	#endif
 
-	#ifndef GEODE_STATICS_getProgram
-		#define GEODE_STATICS_getProgram
-		GEODE_AS_STATIC_FUNCTION(getProgram) 
+	#ifndef GEODE_STATICS_link
+		#define GEODE_STATICS_link
+		GEODE_AS_STATIC_FUNCTION(link) 
 	#endif
 
-	#ifndef GEODE_STATICS_getUniformLocationForName
-		#define GEODE_STATICS_getUniformLocationForName
-		GEODE_AS_STATIC_FUNCTION(getUniformLocationForName) 
+	#ifndef GEODE_STATICS_logForOpenGLObject
+		#define GEODE_STATICS_logForOpenGLObject
+		GEODE_AS_STATIC_FUNCTION(logForOpenGLObject) 
+	#endif
+
+	#ifndef GEODE_STATICS_programLog
+		#define GEODE_STATICS_programLog
+		GEODE_AS_STATIC_FUNCTION(programLog) 
+	#endif
+
+	#ifndef GEODE_STATICS_reset
+		#define GEODE_STATICS_reset
+		GEODE_AS_STATIC_FUNCTION(reset) 
 	#endif
 
 	#ifndef GEODE_STATICS_setUniformLocationWith1f
@@ -110,46 +145,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(setUniformsForBuiltins) 
 	#endif
 
-	#ifndef GEODE_STATICS_addAttribute
-		#define GEODE_STATICS_addAttribute
-		GEODE_AS_STATIC_FUNCTION(addAttribute) 
-	#endif
-
-	#ifndef GEODE_STATICS_compileShader
-		#define GEODE_STATICS_compileShader
-		GEODE_AS_STATIC_FUNCTION(compileShader) 
-	#endif
-
-	#ifndef GEODE_STATICS_description
-		#define GEODE_STATICS_description
-		GEODE_AS_STATIC_FUNCTION(description) 
-	#endif
-
-	#ifndef GEODE_STATICS_fragmentShaderLog
-		#define GEODE_STATICS_fragmentShaderLog
-		GEODE_AS_STATIC_FUNCTION(fragmentShaderLog) 
-	#endif
-
-	#ifndef GEODE_STATICS_link
-		#define GEODE_STATICS_link
-		GEODE_AS_STATIC_FUNCTION(link) 
-	#endif
-
-	#ifndef GEODE_STATICS_logForOpenGLObject
-		#define GEODE_STATICS_logForOpenGLObject
-		GEODE_AS_STATIC_FUNCTION(logForOpenGLObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_programLog
-		#define GEODE_STATICS_programLog
-		GEODE_AS_STATIC_FUNCTION(programLog) 
-	#endif
-
-	#ifndef GEODE_STATICS_reset
-		#define GEODE_STATICS_reset
-		GEODE_AS_STATIC_FUNCTION(reset) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateUniformLocation
 		#define GEODE_STATICS_updateUniformLocation
 		GEODE_AS_STATIC_FUNCTION(updateUniformLocation) 
@@ -171,6 +166,31 @@ namespace geode::modifier {
 	#endif
 
     
+	#ifndef GEODE_CONCEPT_CHECK_addAttribute
+		#define GEODE_CONCEPT_CHECK_addAttribute
+		GEODE_CONCEPT_FUNCTION_CHECK(addAttribute) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_compileShader
+		#define GEODE_CONCEPT_CHECK_compileShader
+		GEODE_CONCEPT_FUNCTION_CHECK(compileShader) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_description
+		#define GEODE_CONCEPT_CHECK_description
+		GEODE_CONCEPT_FUNCTION_CHECK(description) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_fragmentShaderLog
+		#define GEODE_CONCEPT_CHECK_fragmentShaderLog
+		GEODE_CONCEPT_FUNCTION_CHECK(fragmentShaderLog) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getUniformLocationForName
+		#define GEODE_CONCEPT_CHECK_getUniformLocationForName
+		GEODE_CONCEPT_FUNCTION_CHECK(getUniformLocationForName) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_initWithVertexShaderByteArray
 		#define GEODE_CONCEPT_CHECK_initWithVertexShaderByteArray
 		GEODE_CONCEPT_FUNCTION_CHECK(initWithVertexShaderByteArray) 
@@ -181,14 +201,24 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(initWithVertexShaderFilename) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_getProgram
-		#define GEODE_CONCEPT_CHECK_getProgram
-		GEODE_CONCEPT_FUNCTION_CHECK(getProgram) 
+	#ifndef GEODE_CONCEPT_CHECK_link
+		#define GEODE_CONCEPT_CHECK_link
+		GEODE_CONCEPT_FUNCTION_CHECK(link) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_getUniformLocationForName
-		#define GEODE_CONCEPT_CHECK_getUniformLocationForName
-		GEODE_CONCEPT_FUNCTION_CHECK(getUniformLocationForName) 
+	#ifndef GEODE_CONCEPT_CHECK_logForOpenGLObject
+		#define GEODE_CONCEPT_CHECK_logForOpenGLObject
+		GEODE_CONCEPT_FUNCTION_CHECK(logForOpenGLObject) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_programLog
+		#define GEODE_CONCEPT_CHECK_programLog
+		GEODE_CONCEPT_FUNCTION_CHECK(programLog) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_reset
+		#define GEODE_CONCEPT_CHECK_reset
+		GEODE_CONCEPT_FUNCTION_CHECK(reset) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_setUniformLocationWith1f
@@ -276,46 +306,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(setUniformsForBuiltins) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_addAttribute
-		#define GEODE_CONCEPT_CHECK_addAttribute
-		GEODE_CONCEPT_FUNCTION_CHECK(addAttribute) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_compileShader
-		#define GEODE_CONCEPT_CHECK_compileShader
-		GEODE_CONCEPT_FUNCTION_CHECK(compileShader) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_description
-		#define GEODE_CONCEPT_CHECK_description
-		GEODE_CONCEPT_FUNCTION_CHECK(description) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_fragmentShaderLog
-		#define GEODE_CONCEPT_CHECK_fragmentShaderLog
-		GEODE_CONCEPT_FUNCTION_CHECK(fragmentShaderLog) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_link
-		#define GEODE_CONCEPT_CHECK_link
-		GEODE_CONCEPT_FUNCTION_CHECK(link) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_logForOpenGLObject
-		#define GEODE_CONCEPT_CHECK_logForOpenGLObject
-		GEODE_CONCEPT_FUNCTION_CHECK(logForOpenGLObject) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_programLog
-		#define GEODE_CONCEPT_CHECK_programLog
-		GEODE_CONCEPT_FUNCTION_CHECK(programLog) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_reset
-		#define GEODE_CONCEPT_CHECK_reset
-		GEODE_CONCEPT_FUNCTION_CHECK(reset) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_updateUniformLocation
 		#define GEODE_CONCEPT_CHECK_updateUniformLocation
 		GEODE_CONCEPT_FUNCTION_CHECK(updateUniformLocation) 
@@ -345,10 +335,19 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCGLProgram@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCGLProgram, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCGLProgram@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCGLProgram)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, unsigned int>::func(&cocos2d::CCGLProgram::addAttribute)), Thiscall, cocos2d::CCGLProgram, addAttribute, char const*, unsigned int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int*, unsigned int, char const*>::func(&cocos2d::CCGLProgram::compileShader)), Thiscall, cocos2d::CCGLProgram, compileShader, unsigned int*, unsigned int, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCGLProgram::description)), Thiscall, cocos2d::CCGLProgram, description, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCGLProgram::fragmentShaderLog)), Thiscall, cocos2d::CCGLProgram, fragmentShaderLog, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCGLProgram::getUniformLocationForName)), Thiscall, cocos2d::CCGLProgram, getUniformLocationForName, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*>::func(&cocos2d::CCGLProgram::initWithVertexShaderByteArray)), Thiscall, cocos2d::CCGLProgram, initWithVertexShaderByteArray, char const*, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*>::func(&cocos2d::CCGLProgram::initWithVertexShaderFilename)), Thiscall, cocos2d::CCGLProgram, initWithVertexShaderFilename, char const*, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCGLProgram::getProgram)), Thiscall, cocos2d::CCGLProgram, getProgram, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCGLProgram::getUniformLocationForName)), Thiscall, cocos2d::CCGLProgram, getUniformLocationForName, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCGLProgram::link)), Thiscall, cocos2d::CCGLProgram, link, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int, GLInfoFunction, GLLogFunction>::func(&cocos2d::CCGLProgram::logForOpenGLObject)), Thiscall, cocos2d::CCGLProgram, logForOpenGLObject, unsigned int, GLInfoFunction, GLLogFunction)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCGLProgram::programLog)), Thiscall, cocos2d::CCGLProgram, programLog, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCGLProgram::reset)), Thiscall, cocos2d::CCGLProgram, reset, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int, float>::func(&cocos2d::CCGLProgram::setUniformLocationWith1f)), Thiscall, cocos2d::CCGLProgram, setUniformLocationWith1f, int, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int, int>::func(&cocos2d::CCGLProgram::setUniformLocationWith1i)), Thiscall, cocos2d::CCGLProgram, setUniformLocationWith1i, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int, float, float>::func(&cocos2d::CCGLProgram::setUniformLocationWith2f)), Thiscall, cocos2d::CCGLProgram, setUniformLocationWith2f, int, float, float)
@@ -366,16 +365,6 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int, float*, unsigned int>::func(&cocos2d::CCGLProgram::setUniformLocationWithMatrix3fv)), Thiscall, cocos2d::CCGLProgram, setUniformLocationWithMatrix3fv, int, float*, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int, float*, unsigned int>::func(&cocos2d::CCGLProgram::setUniformLocationWithMatrix4fv)), Thiscall, cocos2d::CCGLProgram, setUniformLocationWithMatrix4fv, int, float*, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCGLProgram::setUniformsForBuiltins)), Thiscall, cocos2d::CCGLProgram, setUniformsForBuiltins, )
-			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCGLProgram@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCGLProgram)
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCGLProgram@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCGLProgram, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, unsigned int>::func(&cocos2d::CCGLProgram::addAttribute)), Thiscall, cocos2d::CCGLProgram, addAttribute, char const*, unsigned int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int*, unsigned int, char const*>::func(&cocos2d::CCGLProgram::compileShader)), Thiscall, cocos2d::CCGLProgram, compileShader, unsigned int*, unsigned int, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCGLProgram::description)), Thiscall, cocos2d::CCGLProgram, description, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCGLProgram::fragmentShaderLog)), Thiscall, cocos2d::CCGLProgram, fragmentShaderLog, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCGLProgram::link)), Thiscall, cocos2d::CCGLProgram, link, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int, GLInfoFunction, GLLogFunction>::func(&cocos2d::CCGLProgram::logForOpenGLObject)), Thiscall, cocos2d::CCGLProgram, logForOpenGLObject, unsigned int, GLInfoFunction, GLLogFunction)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCGLProgram::programLog)), Thiscall, cocos2d::CCGLProgram, programLog, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCGLProgram::reset)), Thiscall, cocos2d::CCGLProgram, reset, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<int, void*, unsigned int>::func(&cocos2d::CCGLProgram::updateUniformLocation)), Thiscall, cocos2d::CCGLProgram, updateUniformLocation, int, void*, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCGLProgram::updateUniforms)), Thiscall, cocos2d::CCGLProgram, updateUniforms, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCGLProgram::use)), Thiscall, cocos2d::CCGLProgram, use, )

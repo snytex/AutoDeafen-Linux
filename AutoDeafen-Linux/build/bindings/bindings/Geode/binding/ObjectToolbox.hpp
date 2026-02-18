@@ -15,50 +15,57 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(ObjectToolbox, cocos2d::CCNode)
 
     /**
-     * @note[short] MacOS (ARM): 0x57b4a8
-     * @note[short] MacOS (Intel): 0x654080
-     * @note[short] Windows: 0x332f90
-     * @note[short] iOS: 0x276bd8
+     * @note[short] MacOS (ARM): 0x589018
+     * @note[short] MacOS (Intel): 0x66a410
+     * @note[short] Windows: 0x348cb0
+     * @note[short] iOS: 0x277a40
      * @note[short] Android
      */
     static ObjectToolbox* sharedState();
 
     /**
-     * @note[short] MacOS (ARM): 0x57b5d0
-     * @note[short] MacOS (Intel): 0x6541c0
-     * @note[short] Windows: 0x333050
-     * @note[short] iOS: 0x276cbc
+     * @note[short] MacOS (ARM): 0x589140
+     * @note[short] MacOS (Intel): 0x66a550
+     * @note[short] Windows: 0x348d70
+     * @note[short] iOS: 0x277b24
      * @note[short] Android
      */
     virtual bool init();
 
     /**
+     * @note[short] MacOS (ARM): 0x631d60
+     * @note[short] MacOS (Intel): 0x71a390
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn allKeys();
+    cocos2d::CCArray* allKeys();
 
     /**
-     * @note[short] MacOS (ARM): 0x6282d0
-     * @note[short] MacOS (Intel): 0x704100
-     * @note[short] Windows: 0x35ae80
-     * @note[short] iOS: 0x2aa858
+     * @note[short] MacOS (ARM): 0x631e4c
+     * @note[short] MacOS (Intel): 0x71a470
+     * @note[short] Windows: 0x370ba0
+     * @note[short] iOS: 0x2ab6bc
      * @note[short] Android
      */
     float gridNodeSizeForKey(int key);
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
-     * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x2aa804
-     * @note[short] Android: Out of line
+     * @note[short] MacOS (ARM): 0x631d68
+     * @note[short] MacOS (Intel): 0x71a3a0
+     * @note[short] Windows: 0x370b70
+     * @note[short] iOS: 0x2ab668
+     * @note[short] Android
      */
     const char* intKeyToFrame(int key);
 
     /**
-     * @note[short] Windows: 0x35b8a0
+     * @note[short] MacOS (ARM): 0x631f30
+     * @note[short] MacOS (Intel): 0x71de30
+     * @note[short] Windows: 0x3715c0
+     * @note[short] iOS: 0x2aba2c
      * @note[short] Android
      */
-    const char* perspectiveBlockFrame(int p0);
+    const char* perspectiveBlockFrame(int key);
     gd::map<int, gd::string> m_allKeys;
 };

@@ -24,60 +24,66 @@ public:
      GauntletSprite();
 
     /**
-     * @note[short] MacOS (ARM): 0x3115c8
-     * @note[short] MacOS (Intel): 0x381250
+     * @note[short] MacOS (ARM): 0x31a5a8
+     * @note[short] MacOS (Intel): 0x394510
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x233794
+     * @note[short] iOS: 0x2339e0
      * @note[short] Android
      */
-    static GauntletSprite* create(GauntletType gauntletType, bool locked);
+    static GauntletSprite* create(GauntletType type, bool locked);
 
     /**
-     * @note[short] MacOS (ARM): 0x311fe8
-     * @note[short] MacOS (Intel): 0x381b50
-     * @note[short] Windows: 0x1f4fe0
+     * @note[short] MacOS (ARM): 0x31afb8
+     * @note[short] MacOS (Intel): 0x394e20
+     * @note[short] Windows: 0x1f84f0
+     * @note[short] iOS: 0x23404c
      * @note[short] Android
      */
     void addLockedSprite();
 
     /**
-     * @note[short] MacOS (ARM): 0x311eec
-     * @note[short] MacOS (Intel): 0x381a80
+     * @note[short] MacOS (ARM): 0x31aebc
+     * @note[short] MacOS (Intel): 0x394d50
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x233f64
      * @note[short] Android
      */
     void addNormalSprite();
 
     /**
-     * @note[short] MacOS (ARM): 0x312314
-     * @note[short] MacOS (Intel): 0x381e70
+     * @note[short] MacOS (ARM): 0x31b284
+     * @note[short] MacOS (Intel): 0x3950c0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    cocos2d::ccColor3B colorForType(GauntletType gauntletType);
+    cocos2d::ccColor3B colorForType(GauntletType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x311e44
-     * @note[short] MacOS (Intel): 0x381a00
+     * @note[short] MacOS (ARM): 0x31ae28
+     * @note[short] MacOS (Intel): 0x394cc0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x233ee8
      * @note[short] Android
      */
-    bool init(GauntletType gauntletType, bool locked);
+    bool init(GauntletType type, bool locked);
 
     /**
-     * @note[short] MacOS (ARM): 0x3122f4
-     * @note[short] MacOS (Intel): 0x381e40
+     * @note[short] MacOS (ARM): 0x31b264
+     * @note[short] MacOS (Intel): 0x395090
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x23424c
      * @note[short] Android
      */
-    float luminanceForType(GauntletType gauntletType);
+    float luminanceForType(GauntletType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x311d70
-     * @note[short] MacOS (Intel): 0x381930
-     * @note[short] Windows: 0x1f5310
+     * @note[short] MacOS (ARM): 0x31ad54
+     * @note[short] MacOS (Intel): 0x394bf0
+     * @note[short] Windows: 0x1f87f0
+     * @note[short] iOS: 0x233e9c
      * @note[short] Android
      */
-    void toggleLockedSprite(bool p0);
+    void toggleLockedSprite(bool locked);
     GauntletType m_gauntletType;
 };

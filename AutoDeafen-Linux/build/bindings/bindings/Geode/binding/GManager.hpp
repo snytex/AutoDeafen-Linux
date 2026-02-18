@@ -17,113 +17,146 @@ public:
     /**
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
-     * @note[short] Windows: Out of line
+     * @note[short] Windows: 0x51640
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
      GManager();
 
     /**
-     * @note[short] MacOS (ARM): 0x404d70
-     * @note[short] MacOS (Intel): 0x498f00
-     * @note[short] Windows: 0x6a7c0
-     * @note[short] iOS: 0x249774
+     * @note[short] MacOS (ARM): 0x40ecbc
+     * @note[short] MacOS (Intel): 0x4abfe0
+     * @note[short] Windows: 0x6a7f0
+     * @note[short] iOS: 0x24a694
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x404d80
-     * @note[short] MacOS (Intel): 0x498f20
-     * @note[short] Windows: 0x6a7d0
-     * @note[short] iOS: 0x249784
+     * @note[short] MacOS (ARM): 0x40eccc
+     * @note[short] MacOS (Intel): 0x4ac000
+     * @note[short] Windows: 0x6a800
+     * @note[short] iOS: 0x24a6a4
      * @note[short] Android
      */
     virtual void setup();
 
     /**
-     * @note[short] MacOS (ARM): 0x405280
-     * @note[short] MacOS (Intel): 0x499400
+     * @note[short] MacOS (ARM): 0x40f1c8
+     * @note[short] MacOS (Intel): 0x4ac4e0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x249bb8
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x24aad4
+     * @note[short] Android
      */
-    virtual void encodeDataTo(DS_Dictionary* p0);
+    virtual void encodeDataTo(DS_Dictionary* dict);
 
     /**
-     * @note[short] MacOS (ARM): 0x4058bc
-     * @note[short] MacOS (Intel): 0x499ab0
+     * @note[short] MacOS (ARM): 0x40f870
+     * @note[short] MacOS (Intel): 0x4acb70
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x249ffc
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x24af08
+     * @note[short] Android
      */
-    virtual void dataLoaded(DS_Dictionary* p0);
+    virtual void dataLoaded(DS_Dictionary* dict);
 
     /**
-     * @note[short] MacOS (ARM): 0x4058c0
-     * @note[short] MacOS (Intel): 0x499ac0
+     * @note[short] MacOS (ARM): 0x40f874
+     * @note[short] MacOS (Intel): 0x4acb80
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x24a000
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x24af0c
+     * @note[short] Android
      */
     virtual void firstLoad();
 
     /**
+     * @note[short] MacOS (ARM): 0x40ed68
+     * @note[short] MacOS (Intel): 0x4ac0d0
+     * @note[short] Windows: 0x6a820
+     * @note[short] iOS: 0x24a738
      * @note[short] Android
      */
-    TodoReturn getCompressedSaveString();
+    gd::string getCompressedSaveString();
 
     /**
+     * @note[short] MacOS (ARM): 0x40ece4
+     * @note[short] MacOS (Intel): 0x4ac040
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x24a6b4
      * @note[short] Android
      */
-    TodoReturn getSaveString();
+    gd::string getSaveString();
 
     /**
+     * @note[short] MacOS (ARM): 0x40ecdc
+     * @note[short] MacOS (Intel): 0x4ac020
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn load();
+    void load();
 
     /**
-     * @note[short] MacOS (ARM): 0x405284
-     * @note[short] MacOS (Intel): 0x499410
-     * @note[short] Windows: 0x6aa90
+     * @note[short] MacOS (ARM): 0x40f1cc
+     * @note[short] MacOS (Intel): 0x4ac4f0
+     * @note[short] Windows: 0x6aac0
+     * @note[short] iOS: 0x24aad8
      * @note[short] Android: Rebinded
      */
-    void loadDataFromFile(gd::string const& p0);
+    void loadDataFromFile(gd::string const& filename);
 
     /**
+     * @note[short] MacOS (ARM): 0x40ee90
+     * @note[short] MacOS (Intel): 0x4ac1f0
+     * @note[short] Windows: 0x6a8f0
+     * @note[short] iOS: 0x24a850
      * @note[short] Android: Rebinded
      */
-    void loadFromCompressedString(gd::string& p0);
+    void loadFromCompressedString(gd::string& str);
 
     /**
+     * @note[short] MacOS (ARM): 0x40ede4
+     * @note[short] MacOS (Intel): 0x4ac140
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x24a7a4
      * @note[short] Android: Rebinded
      */
-    void loadFromString(gd::string& p0);
+    void loadFromString(gd::string& str);
 
     /**
-     * @note[short] MacOS (ARM): 0x404fe8
-     * @note[short] MacOS (Intel): 0x499190
-     * @note[short] Windows: 0x6a9a0
-     * @note[short] iOS: 0x2499c4
+     * @note[short] MacOS (ARM): 0x40ef34
+     * @note[short] MacOS (Intel): 0x4ac270
+     * @note[short] Windows: 0x6a9d0
+     * @note[short] iOS: 0x24a8e4
      * @note[short] Android
      */
     void save();
 
     /**
+     * @note[short] MacOS (ARM): 0x40f13c
+     * @note[short] MacOS (Intel): 0x4ac470
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x24aa58
      * @note[short] Android: Rebinded
      */
-    TodoReturn saveData(DS_Dictionary* p0, gd::string p1);
+    void saveData(DS_Dictionary* dict, gd::string filename);
 
     /**
+     * @note[short] MacOS (ARM): 0x40efd8
+     * @note[short] MacOS (Intel): 0x4ac310
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x24a978
      * @note[short] Android: Rebinded
      */
-    void saveGMTo(gd::string p0);
+    void saveGMTo(gd::string filename);
 
     /**
+     * @note[short] MacOS (ARM): 0x40f488
+     * @note[short] MacOS (Intel): 0x4ac760
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x24ac68
      * @note[short] Android: Rebinded
      */
-    TodoReturn tryLoadData(DS_Dictionary* p0, gd::string const& p1);
+    bool tryLoadData(DS_Dictionary* dict, gd::string const& filename);
     gd::string m_fileName;
     bool m_setup;
     bool m_saved;

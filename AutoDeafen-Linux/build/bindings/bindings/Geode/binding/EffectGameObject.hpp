@@ -16,238 +16,278 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(EffectGameObject, EnhancedGameObject)
 
     /**
-     * @note[short] MacOS (ARM): 0x199d84
-     * @note[short] MacOS (Intel): 0x1e2030
-     * @note[short] Windows: 0x47d040
-     * @note[short] iOS: 0x3925fc
+     * @note[short] MacOS (ARM): 0x1a2200
+     * @note[short] MacOS (Intel): 0x1f3fa0
+     * @note[short] Windows: 0x495720
+     * @note[short] iOS: 0x3998b0
      * @note[short] Android: Rebinded
      */
      EffectGameObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x16a0d4
-     * @note[short] MacOS (Intel): 0x1a8150
+     * @note[short] MacOS (ARM): 0x172940
+     * @note[short] MacOS (Intel): 0x1b9020
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x384fc0
      * @note[short] Android
      */
-    static EffectGameObject* create(char const* p0);
+    static EffectGameObject* create(char const* frame);
 
     /**
-     * @note[short] MacOS (ARM): 0x16a470
-     * @note[short] MacOS (Intel): 0x1a8550
-     * @note[short] Windows: 0x48d790
-     * @note[short] iOS: 0x37e130
+     * @note[short] MacOS (ARM): 0x172d20
+     * @note[short] MacOS (Intel): 0x1b94d0
+     * @note[short] Windows: 0x4a5ef0
+     * @note[short] iOS: 0x38528c
      * @note[short] Android
      */
-    virtual void setOpacity(unsigned char p0);
+    virtual void setOpacity(unsigned char opacity);
 
     /**
-     * @note[short] MacOS (ARM): 0x16b8dc
-     * @note[short] MacOS (Intel): 0x1aa2d0
-     * @note[short] Windows: 0x48ffb0
-     * @note[short] iOS: 0x37f594
+     * @note[short] MacOS (ARM): 0x174270
+     * @note[short] MacOS (Intel): 0x1bb240
+     * @note[short] Windows: 0x4a87b0
+     * @note[short] iOS: 0x3867e0
      * @note[short] Android
      */
     virtual void firstSetup();
 
     /**
-     * @note[short] MacOS (ARM): 0x14e098
-     * @note[short] MacOS (Intel): 0x186600
-     * @note[short] Windows: 0x48ffd0
-     * @note[short] iOS: 0x370000
+     * @note[short] MacOS (ARM): 0x1572dc
+     * @note[short] MacOS (Intel): 0x196af0
+     * @note[short] Windows: 0x4a87e0
+     * @note[short] iOS: 0x37723c
      * @note[short] Android
      */
     virtual void customSetup();
 
     /**
-     * @note[short] MacOS (ARM): 0x16a4f4
-     * @note[short] MacOS (Intel): 0x1a85d0
-     * @note[short] Windows: 0x48d7d0
-     * @note[short] iOS: 0x37e1b4
+     * @note[short] MacOS (ARM): 0x172da4
+     * @note[short] MacOS (Intel): 0x1b9550
+     * @note[short] Windows: 0x4a5f30
+     * @note[short] iOS: 0x385310
      * @note[short] Android: Rebinded
      */
-    virtual void triggerObject(GJBaseGameLayer* p0, int p1, gd::vector<int> const* p2);
+    virtual void triggerObject(GJBaseGameLayer* layer, int uniqueID, gd::vector<int> const* remapKeys);
 
     /**
-     * @note[short] MacOS (ARM): 0x14f5b0
-     * @note[short] MacOS (Intel): 0x187840
-     * @note[short] Windows: 0x490230
-     * @note[short] iOS: 0x371028
+     * @note[short] MacOS (ARM): 0x1586f8
+     * @note[short] MacOS (Intel): 0x197e80
+     * @note[short] Windows: 0x4a8ad0
+     * @note[short] iOS: 0x378220
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x1463d0
-     * @note[short] MacOS (Intel): 0x17c180
-     * @note[short] Windows: 0x4932b0
-     * @note[short] iOS: 0x36b454
+     * @note[short] MacOS (ARM): 0x14f4f8
+     * @note[short] MacOS (Intel): 0x18c4a0
+     * @note[short] Windows: 0x4abc20
+     * @note[short] iOS: 0x3724f0
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x16a178
-     * @note[short] MacOS (Intel): 0x1a81e0
-     * @note[short] Windows: 0x48d210
-     * @note[short] iOS: 0x37df18
+     * @note[short] MacOS (ARM): 0x1729e4
+     * @note[short] MacOS (Intel): 0x1b90b0
+     * @note[short] Windows: 0x4a58f0
+     * @note[short] iOS: 0x385058
      * @note[short] Android
      */
-    virtual void setRScaleX(float p0);
+    virtual void setRScaleX(float scaleX);
 
     /**
-     * @note[short] MacOS (ARM): 0x16a188
-     * @note[short] MacOS (Intel): 0x1a8200
-     * @note[short] Windows: 0x48d260
-     * @note[short] iOS: 0x37df28
+     * @note[short] MacOS (ARM): 0x1729f4
+     * @note[short] MacOS (Intel): 0x1b90d0
+     * @note[short] Windows: 0x4a5940
+     * @note[short] iOS: 0x385068
      * @note[short] Android
      */
-    virtual void setRScaleY(float p0);
+    virtual void setRScaleY(float scaleY);
 
     /**
-     * @note[short] MacOS (ARM): 0x16b854
-     * @note[short] MacOS (Intel): 0x1aa260
-     * @note[short] Windows: 0x48ff90
-     * @note[short] iOS: 0x37f520
+     * @note[short] MacOS (ARM): 0x1741fc
+     * @note[short] MacOS (Intel): 0x1bb1d0
+     * @note[short] Windows: 0x4a8790
+     * @note[short] iOS: 0x38676c
      * @note[short] Android
      */
-    virtual void triggerActivated(float p0);
+    virtual void triggerActivated(float xPosition);
 
     /**
-     * @note[short] MacOS (ARM): 0x16b604
-     * @note[short] MacOS (Intel): 0x1aa020
-     * @note[short] Windows: 0x48fd80
-     * @note[short] iOS: 0x37f2ec
+     * @note[short] MacOS (ARM): 0x173fb8
+     * @note[short] MacOS (Intel): 0x1baf90
+     * @note[short] Windows: 0x4a8580
+     * @note[short] iOS: 0x386534
      * @note[short] Android
      */
     virtual void restoreObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x16b814
-     * @note[short] MacOS (Intel): 0x1aa220
-     * @note[short] Windows: 0x48ff50
-     * @note[short] iOS: 0x37f4e8
+     * @note[short] MacOS (ARM): 0x1741b8
+     * @note[short] MacOS (Intel): 0x1bb190
+     * @note[short] Windows: 0x4a8750
+     * @note[short] iOS: 0x386730
      * @note[short] Android
      */
     virtual float spawnXPosition();
 
     /**
-     * @note[short] MacOS (ARM): 0x16ba58
-     * @note[short] MacOS (Intel): 0x1aa3b0
-     * @note[short] Windows: 0x493160
-     * @note[short] iOS: 0x37f680
+     * @note[short] MacOS (ARM): 0x1744c8
+     * @note[short] MacOS (Intel): 0x1bb3e0
+     * @note[short] Windows: 0x4aba40
+     * @note[short] iOS: 0x3869a8
      * @note[short] Android
      */
     virtual bool canReverse();
 
     /**
-     * @note[short] MacOS (ARM): 0x16bae4
-     * @note[short] MacOS (Intel): 0x1aa420
+     * @note[short] MacOS (ARM): 0x174554
+     * @note[short] MacOS (Intel): 0x1bb450
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x37f70c
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x386a34
+     * @note[short] Android
      */
     virtual bool isSpecialSpawnObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x16baec
-     * @note[short] MacOS (Intel): 0x1aa430
-     * @note[short] Windows: 0x493240
-     * @note[short] iOS: 0x37f714
+     * @note[short] MacOS (ARM): 0x1746f4
+     * @note[short] MacOS (Intel): 0x1bb5f0
+     * @note[short] Windows: 0x4abbb0
+     * @note[short] iOS: 0x386a3c
      * @note[short] Android
      */
     virtual bool canBeOrdered();
 
     /**
-     * @note[short] MacOS (ARM): 0x199b10
-     * @note[short] MacOS (Intel): 0x1e1d20
-     * @note[short] Windows: 0x47d2b0
-     * @note[short] iOS: 0x3922c0
+     * @note[short] MacOS (ARM): 0x1a1f90
+     * @note[short] MacOS (Intel): 0x1f3c90
+     * @note[short] Windows: 0x495990
+     * @note[short] iOS: 0x39957c
      * @note[short] Android
      */
     virtual cocos2d::CCLabelBMFont* getObjectLabel();
 
     /**
-     * @note[short] MacOS (ARM): 0x199b18
-     * @note[short] MacOS (Intel): 0x1e1d30
-     * @note[short] Windows: 0x47d2c0
-     * @note[short] iOS: 0x3922c8
+     * @note[short] MacOS (ARM): 0x1a1f98
+     * @note[short] MacOS (Intel): 0x1f3ca0
+     * @note[short] Windows: 0x4959a0
+     * @note[short] iOS: 0x399584
      * @note[short] Android
      */
-    virtual void setObjectLabel(cocos2d::CCLabelBMFont* p0);
+    virtual void setObjectLabel(cocos2d::CCLabelBMFont* label);
 
     /**
-     * @note[short] MacOS (ARM): 0x16b578
-     * @note[short] MacOS (Intel): 0x1a9f90
-     * @note[short] Windows: 0x48fcd0
-     * @note[short] iOS: 0x37f260
+     * @note[short] MacOS (ARM): 0x173f2c
+     * @note[short] MacOS (Intel): 0x1baf00
+     * @note[short] Windows: 0x4a84d0
+     * @note[short] iOS: 0x3864a8
      * @note[short] Android
      */
-    virtual void stateSensitiveOff(GJBaseGameLayer* p0);
+    virtual void stateSensitiveOff(GJBaseGameLayer* layer);
 
     /**
+     * @note[short] MacOS (ARM): 0x17429c
+     * @note[short] MacOS (Intel): 0x1bb270
+     * @note[short] Windows: 0x4abb20
+     * @note[short] iOS: 0x38680c
+     * @note[short] Android
+     */
+    bool canSpawnTriggers();
+
+    /**
+     * @note[short] MacOS (ARM): 0x173fcc
+     * @note[short] MacOS (Intel): 0x1bafb0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x386548
      * @note[short] Android
      */
     int getTargetColorIndex();
 
     /**
-     * @note[short] MacOS (ARM): 0x4ec0c4
-     * @note[short] MacOS (Intel): 0x5b37d0
-     * @note[short] Windows: 0x48d1a0
-     * @note[short] iOS: 0x261f48
+     * @note[short] MacOS (ARM): 0x17455c
+     * @note[short] MacOS (Intel): 0x1bb460
      * @note[short] Android
      */
-    bool init(char const* p0);
+    bool hasSpawnTargetID(int id);
 
     /**
-     * @note[short] Windows: 0x48d2b0
+     * @note[short] MacOS (ARM): 0x149850
+     * @note[short] MacOS (Intel): 0x1848f0
+     * @note[short] Windows: 0x4a5880
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    bool init(char const* frame);
+
+    /**
+     * @note[short] MacOS (ARM): 0x172a04
+     * @note[short] MacOS (Intel): 0x1b90f0
+     * @note[short] Windows: 0x4a5990
+     * @note[short] iOS: 0x385078
      * @note[short] Android
      */
     void playTriggerEffect();
 
     /**
+     * @note[short] MacOS (ARM): 0x17423c
+     * @note[short] MacOS (Intel): 0x1bb210
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3867ac
      * @note[short] Android
      */
     void resetSpawnTrigger();
 
     /**
-     * @note[short] MacOS (ARM): 0x157c40
-     * @note[short] MacOS (Intel): 0x192130
+     * @note[short] MacOS (ARM): 0x160968
+     * @note[short] MacOS (Intel): 0x1a2cb0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3756ec
+     * @note[short] iOS: 0x37c8ec
      * @note[short] Android
      */
     void setTargetID(int id);
 
     /**
-     * @note[short] MacOS (ARM): 0x157c58
-     * @note[short] MacOS (Intel): 0x192150
+     * @note[short] MacOS (ARM): 0x160980
+     * @note[short] MacOS (Intel): 0x1a2cd0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x375704
+     * @note[short] iOS: 0x37c904
      * @note[short] Android
      */
     void setTargetID2(int id);
 
     /**
-     * @note[short] Windows: 0x48d780
+     * @note[short] MacOS (ARM): 0x172d18
+     * @note[short] MacOS (Intel): 0x1b94c0
+     * @note[short] Windows: 0x4a5ee0
+     * @note[short] iOS: 0x385284
      * @note[short] Android
      */
     void triggerEffectFinished();
 
     /**
-     * @note[short] Windows: 0x48fe30
+     * @note[short] MacOS (ARM): 0x1740b8
+     * @note[short] MacOS (Intel): 0x1bb080
+     * @note[short] Windows: 0x4a8630
+     * @note[short] iOS: 0x386634
      * @note[short] Android
      */
-    void updateInteractiveHover(float p0);
+    void updateInteractiveHover(float offset);
 
     /**
-     * @note[short] Windows: 0x48fdb0
+     * @note[short] MacOS (ARM): 0x174040
+     * @note[short] MacOS (Intel): 0x1bb020
+     * @note[short] Windows: 0x4a85b0
+     * @note[short] iOS: 0x3865bc
      * @note[short] Android
      */
     void updateSpecialColor();
 
     /**
-     * @note[short] Windows: 0x493010
-     * @note[short] iOS: 0x37f5ac
+     * @note[short] MacOS (ARM): 0x174364
+     * @note[short] MacOS (Intel): 0x1bb320
+     * @note[short] Windows: 0x4ab8f0
+     * @note[short] iOS: 0x3868d4
      * @note[short] Android
      */
     void updateSpeedModType();
@@ -370,4 +410,5 @@ public:
     bool m_ignoreGroupParent;
     bool m_ignoreLinkedObjects;
     bool m_channelChanged;
+    bool m_canSpawnTriggers;
 };

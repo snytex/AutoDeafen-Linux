@@ -16,13 +16,15 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(GJFlyGroundLayer, GJGroundLayer)
 
     /**
+     * @note[short] MacOS (ARM): 0x515a50
+     * @note[short] MacOS (Intel): 0x5ebb10
      * @note[short] Android
      */
     static GJFlyGroundLayer* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x50757c
-     * @note[short] MacOS (Intel): 0x5d3a00
+     * @note[short] MacOS (ARM): 0x515b1c
+     * @note[short] MacOS (Intel): 0x5ebc10
      * @note[short] Android
      */
     virtual bool init();

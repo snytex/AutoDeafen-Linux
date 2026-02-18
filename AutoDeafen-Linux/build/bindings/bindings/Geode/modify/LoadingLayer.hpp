@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_scene
 		#define GEODE_STATICS_scene
 		GEODE_AS_STATIC_FUNCTION(scene) 
@@ -80,13 +75,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LoadingLayer, create, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3194f0, Default, LoadingLayer, scene, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31a930, Thiscall, LoadingLayer, getLoadingString, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x319600, Thiscall, LoadingLayer, init, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x319ea0, Thiscall, LoadingLayer, loadAssets, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LoadingLayer, create, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32e3b0, Default, LoadingLayer, scene, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32f7f0, Thiscall, LoadingLayer, getLoadingString, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32e4c0, Thiscall, LoadingLayer, init, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32ed60, Thiscall, LoadingLayer, loadAssets, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LoadingLayer, loadingFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x319e20, Thiscall, LoadingLayer, updateProgress, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32ece0, Thiscall, LoadingLayer, updateProgress, int)
 		}
 	};
 }

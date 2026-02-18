@@ -85,13 +85,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x454d10, Default, SetupItemCompareTriggerPopup, create, ItemTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x456fe0, Thiscall, SetupItemCompareTriggerPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4564d0, Thiscall, SetupItemCompareTriggerPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x454e30, Thiscall, SetupItemCompareTriggerPopup, init, ItemTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x456100, Thiscall, SetupItemCompareTriggerPopup, onOpButton, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4566d0, Thiscall, SetupItemCompareTriggerPopup, updateFormulaLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4561e0, Thiscall, SetupItemCompareTriggerPopup, updateOpButton, CCMenuItemSpriteExtra*, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46d280, Default, SetupItemCompareTriggerPopup, create, ItemTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46f550, Thiscall, SetupItemCompareTriggerPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46ea40, Thiscall, SetupItemCompareTriggerPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46d3a0, Thiscall, SetupItemCompareTriggerPopup, init, ItemTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46e670, Thiscall, SetupItemCompareTriggerPopup, onOpButton, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46ec40, Thiscall, SetupItemCompareTriggerPopup, updateFormulaLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46e750, Thiscall, SetupItemCompareTriggerPopup, updateOpButton, CCMenuItemSpriteExtra*, int, int)
 		}
 	};
 }

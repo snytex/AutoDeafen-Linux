@@ -25,19 +25,19 @@ public:
      StatsLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x8e198
-     * @note[short] MacOS (Intel): 0x9b220
+     * @note[short] MacOS (ARM): 0x8c384
+     * @note[short] MacOS (Intel): 0x9b5d0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x241ac4
+     * @note[short] iOS: 0x242a64
      * @note[short] Android
      */
     static StatsLayer* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x8e310
-     * @note[short] MacOS (Intel): 0x9b450
-     * @note[short] Windows: 0x4af100
-     * @note[short] iOS: 0x241bac
+     * @note[short] MacOS (ARM): 0x8c4fc
+     * @note[short] MacOS (Intel): 0x9b800
+     * @note[short] Windows: 0x4c7c50
+     * @note[short] iOS: 0x242b4c
      * @note[short] Android
      */
     virtual void customSetup();

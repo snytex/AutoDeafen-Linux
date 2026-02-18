@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_ccTouchBegan
 		#define GEODE_STATICS_ccTouchBegan
 		GEODE_AS_STATIC_FUNCTION(ccTouchBegan) 
@@ -50,31 +45,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(keyUp) 
 	#endif
 
-	#ifndef GEODE_STATICS_disableMenu
-		#define GEODE_STATICS_disableMenu
-		GEODE_AS_STATIC_FUNCTION(disableMenu) 
-	#endif
-
-	#ifndef GEODE_STATICS_doPause
-		#define GEODE_STATICS_doPause
-		GEODE_AS_STATIC_FUNCTION(doPause) 
-	#endif
-
-	#ifndef GEODE_STATICS_editorPlaytest
-		#define GEODE_STATICS_editorPlaytest
-		GEODE_AS_STATIC_FUNCTION(editorPlaytest) 
-	#endif
-
-	#ifndef GEODE_STATICS_enableEditorMode
-		#define GEODE_STATICS_enableEditorMode
-		GEODE_AS_STATIC_FUNCTION(enableEditorMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_enableMenu
-		#define GEODE_STATICS_enableMenu
-		GEODE_AS_STATIC_FUNCTION(enableMenu) 
-	#endif
-
 	#ifndef GEODE_STATICS_handleKeypress
 		#define GEODE_STATICS_handleKeypress
 		GEODE_AS_STATIC_FUNCTION(handleKeypress) 
@@ -83,11 +53,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
-	#ifndef GEODE_STATICS_isJumpButtonPressed
-		#define GEODE_STATICS_isJumpButtonPressed
-		GEODE_AS_STATIC_FUNCTION(isJumpButtonPressed) 
 	#endif
 
 	#ifndef GEODE_STATICS_onCheck
@@ -115,16 +80,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(processUINodeTouch) 
 	#endif
 
-	#ifndef GEODE_STATICS_refreshDpad
-		#define GEODE_STATICS_refreshDpad
-		GEODE_AS_STATIC_FUNCTION(refreshDpad) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetAllButtons
-		#define GEODE_STATICS_resetAllButtons
-		GEODE_AS_STATIC_FUNCTION(resetAllButtons) 
-	#endif
-
 	#ifndef GEODE_STATICS_resetUINodeState
 		#define GEODE_STATICS_resetUINodeState
 		GEODE_AS_STATIC_FUNCTION(resetUINodeState) 
@@ -148,11 +103,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateCheckState
 		#define GEODE_STATICS_updateCheckState
 		GEODE_AS_STATIC_FUNCTION(updateCheckState) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateDualMode
-		#define GEODE_STATICS_updateDualMode
-		GEODE_AS_STATIC_FUNCTION(updateDualMode) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateUINodeVisibility
@@ -335,39 +285,40 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(UILayer, create, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UILayer, create, GJBaseGameLayer*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UILayer, get, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UILayer, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b55a0, Thiscall, UILayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b5730, Thiscall, UILayer, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b5750, Thiscall, UILayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71210, Thiscall, UILayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b1a0, Thiscall, UILayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b5300, Thiscall, UILayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b52e0, Thiscall, UILayer, keyDown, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b52f0, Thiscall, UILayer, keyUp, cocos2d::enumKeyCodes)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(UILayer, disableMenu, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(UILayer, doPause, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(UILayer, editorPlaytest, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(UILayer, enableEditorMode, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(UILayer, enableMenu, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b4c40, Thiscall, UILayer, handleKeypress, cocos2d::enumKeyCodes, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b3f20, Thiscall, UILayer, init, GJBaseGameLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(UILayer, isJumpButtonPressed, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b54d0, Thiscall, UILayer, onCheck, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b5540, Thiscall, UILayer, onDeleteCheck, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b53c0, Thiscall, UILayer, onPause, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b5820, Thiscall, UILayer, processUINodesTouch, GJUITouchEvent, cocos2d::CCTouch*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b58d0, Thiscall, UILayer, processUINodeTouch, GJUITouchEvent, int, cocos2d::CCPoint, GJUINode*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(UILayer, refreshDpad, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(UILayer, resetAllButtons, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b4aa0, Thiscall, UILayer, resetUINodeState, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(UILayer, toggleCheckpointsMenu, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(UILayer, toggleMenuVisibility, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b4a30, Thiscall, UILayer, togglePlatformerMode, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b4840, Thiscall, UILayer, updateCheckState, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(UILayer, updateDualMode, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(UILayer, updateUINodeVisibility, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ce230, Thiscall, UILayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ce420, Thiscall, UILayer, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ce440, Thiscall, UILayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x71240, Thiscall, UILayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b7d0, Thiscall, UILayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cde90, Thiscall, UILayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cde50, Thiscall, UILayer, keyDown, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cde70, Thiscall, UILayer, keyUp, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UILayer, disableMenu, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UILayer, doPause, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UILayer, editorPlaytest, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UILayer, enableEditorMode, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UILayer, enableMenu, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cd830, Thiscall, UILayer, handleKeypress, cocos2d::enumKeyCodes, bool, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ccb00, Thiscall, UILayer, init, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UILayer, isJumpButtonPressed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UILayer, isJumpButtonPressed, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ce060, Thiscall, UILayer, onCheck, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ce0e0, Thiscall, UILayer, onDeleteCheck, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cdf50, Thiscall, UILayer, onPause, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ce520, Thiscall, UILayer, processUINodesTouch, GJUITouchEvent, cocos2d::CCTouch*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ce5f0, Thiscall, UILayer, processUINodeTouch, GJUITouchEvent, int, cocos2d::CCPoint, GJUINode*, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UILayer, refreshDpad, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UILayer, resetAllButtons, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cd6c0, Thiscall, UILayer, resetUINodeState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cded0, Thiscall, UILayer, toggleCheckpointsMenu, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4ce150, Thiscall, UILayer, toggleMenuVisibility, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cd610, Thiscall, UILayer, togglePlatformerMode, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cd420, Thiscall, UILayer, updateCheckState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(UILayer, updateDualMode, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4cd7d0, Thiscall, UILayer, updateUINodeVisibility, bool)
 		}
 	};
 }

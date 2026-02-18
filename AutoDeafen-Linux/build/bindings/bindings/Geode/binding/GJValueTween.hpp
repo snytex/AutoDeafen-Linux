@@ -14,7 +14,10 @@ public:
     static constexpr auto CLASS_NAME = "GJValueTween";
 
     /**
-     * @note[short] Windows: 0x2000b0
+     * @note[short] MacOS (ARM): 0xe9dc4
+     * @note[short] MacOS (Intel): 0x10dfa0
+     * @note[short] Windows: 0x205310
+     * @note[short] iOS: 0x1d9bd4
      * @note[short] Android
      */
     void step(float delta);

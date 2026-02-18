@@ -16,34 +16,38 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupAdvFollowRetargetPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x3f0510
+     * @note[short] MacOS (ARM): 0x29b02c
+     * @note[short] MacOS (Intel): 0x30b5d0
+     * @note[short] Windows: 0x408190
+     * @note[short] iOS: 0x643ac
      * @note[short] Android
      */
-    static SetupAdvFollowRetargetPopup* create(AdvancedFollowEditObject* p0, cocos2d::CCArray* p1);
+    static SetupAdvFollowRetargetPopup* create(AdvancedFollowEditObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x290a24
-     * @note[short] MacOS (Intel): 0x2f7ef0
-     * @note[short] Windows: 0x3ed950
-     * @note[short] iOS: 0x68638
+     * @note[short] MacOS (ARM): 0x29b738
+     * @note[short] MacOS (Intel): 0x30be30
+     * @note[short] Windows: 0x4055d0
+     * @note[short] iOS: 0x64958
      * @note[short] Android
      */
     virtual void updateDefaultTriggerValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x290bc4
-     * @note[short] MacOS (Intel): 0x2f8030
-     * @note[short] Windows: 0x3f0c60
-     * @note[short] iOS: 0x68798
+     * @note[short] MacOS (ARM): 0x29b8d8
+     * @note[short] MacOS (Intel): 0x30bf70
+     * @note[short] Windows: 0x4088e0
+     * @note[short] iOS: 0x64ab8
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x2904a0
-     * @note[short] MacOS (Intel): 0x2f78a0
-     * @note[short] Windows: 0x3f0620
+     * @note[short] MacOS (ARM): 0x29b1b4
+     * @note[short] MacOS (Intel): 0x30b800
+     * @note[short] Windows: 0x4082a0
+     * @note[short] iOS: 0x64484
      * @note[short] Android
      */
-    bool init(AdvancedFollowEditObject* p0, cocos2d::CCArray* p1);
+    bool init(AdvancedFollowEditObject* object, cocos2d::CCArray* objects);
 };

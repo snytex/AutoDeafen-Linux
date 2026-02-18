@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void joinLobbyFinished(int p0);
+    virtual void joinLobbyFinished(int id);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,7 +29,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void joinLobbyFailed(int p0, GJMPErrorCode p1);
+    virtual void joinLobbyFailed(int id, GJMPErrorCode errorType);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -38,7 +38,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void didUploadMPComment(int p0);
+    virtual void didUploadMPComment(int id);
 
     /**
      * @note[short] MacOS (ARM): Out of line

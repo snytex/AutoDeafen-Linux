@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_onCustomToggleTriggerValue
 		#define GEODE_STATICS_onCustomToggleTriggerValue
 		GEODE_AS_STATIC_FUNCTION(onCustomToggleTriggerValue) 
@@ -55,10 +50,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupOptionsTriggerPopup, create, GameOptionsTrigger*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41e720, Thiscall, SetupOptionsTriggerPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41e4c0, Thiscall, SetupOptionsTriggerPopup, addOption, int, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41dcc0, Thiscall, SetupOptionsTriggerPopup, init, GameOptionsTrigger*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupOptionsTriggerPopup, create, GameOptionsTrigger*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x436940, Thiscall, SetupOptionsTriggerPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4366e0, Thiscall, SetupOptionsTriggerPopup, addOption, int, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x435ee0, Thiscall, SetupOptionsTriggerPopup, init, GameOptionsTrigger*, cocos2d::CCArray*)
 		}
 	};
 }

@@ -115,16 +115,16 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4406e0, Default, SetupSmartTemplateLayer, create, GJSmartTemplate*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x441940, Thiscall, SetupSmartTemplateLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4413a0, Thiscall, SetupSmartTemplateLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4416e0, Thiscall, SetupSmartTemplateLayer, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x441480, Thiscall, SetupSmartTemplateLayer, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3110, Thiscall, SetupSmartTemplateLayer, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4407f0, Thiscall, SetupSmartTemplateLayer, init, GJSmartTemplate*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x441840, Thiscall, SetupSmartTemplateLayer, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4411e0, Thiscall, SetupSmartTemplateLayer, onClick, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x441870, Thiscall, SetupSmartTemplateLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x458a80, Default, SetupSmartTemplateLayer, create, GJSmartTemplate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x459ce0, Thiscall, SetupSmartTemplateLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x459740, Thiscall, SetupSmartTemplateLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x459a80, Thiscall, SetupSmartTemplateLayer, textInputOpened, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x459820, Thiscall, SetupSmartTemplateLayer, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc3e30, Thiscall, SetupSmartTemplateLayer, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x458b90, Thiscall, SetupSmartTemplateLayer, init, GJSmartTemplate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x459be0, Thiscall, SetupSmartTemplateLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x459580, Thiscall, SetupSmartTemplateLayer, onClick, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x459c10, Thiscall, SetupSmartTemplateLayer, onClose, cocos2d::CCObject*)
 		}
 	};
 }

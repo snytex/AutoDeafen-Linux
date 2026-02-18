@@ -25,39 +25,40 @@ public:
      GradientTriggerObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x151ee4
-     * @note[short] MacOS (Intel): 0x18ab00
+     * @note[short] MacOS (ARM): 0x15adcc
+     * @note[short] MacOS (Intel): 0x19b420
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x37a7b0
      * @note[short] Android
      */
     static GradientTriggerObject* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x151fc0
-     * @note[short] MacOS (Intel): 0x18abe0
-     * @note[short] Windows: 0x480b40
-     * @note[short] iOS: 0x373678
+     * @note[short] MacOS (ARM): 0x15aea8
+     * @note[short] MacOS (Intel): 0x19b500
+     * @note[short] Windows: 0x499220
+     * @note[short] iOS: 0x37a880
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x1533c4
-     * @note[short] MacOS (Intel): 0x18c520
-     * @note[short] Windows: 0x4811d0
-     * @note[short] iOS: 0x373c10
+     * @note[short] MacOS (ARM): 0x15c254
+     * @note[short] MacOS (Intel): 0x19ceb0
+     * @note[short] Windows: 0x4998b0
+     * @note[short] iOS: 0x37ae24
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x152014
-     * @note[short] MacOS (Intel): 0x18ac40
-     * @note[short] Windows: 0x480bc0
-     * @note[short] iOS: 0x3736cc
+     * @note[short] MacOS (ARM): 0x15aefc
+     * @note[short] MacOS (Intel): 0x19b560
+     * @note[short] Windows: 0x4992a0
+     * @note[short] iOS: 0x37a8d4
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
     int m_blendingLayer;
     int m_blendingMode;
     int m_gradientID;

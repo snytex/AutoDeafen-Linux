@@ -55,11 +55,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(closeColorSelect) 
 	#endif
 
-	#ifndef GEODE_STATICS_getColorValue
-		#define GEODE_STATICS_getColorValue
-		GEODE_AS_STATIC_FUNCTION(getColorValue) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -130,11 +125,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onUpdateCustomColor) 
 	#endif
 
-	#ifndef GEODE_STATICS_selectColor
-		#define GEODE_STATICS_selectColor
-		GEODE_AS_STATIC_FUNCTION(selectColor) 
-	#endif
-
 	#ifndef GEODE_STATICS_sliderChanged
 		#define GEODE_STATICS_sliderChanged
 		GEODE_AS_STATIC_FUNCTION(sliderChanged) 
@@ -143,11 +133,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateColorLabels
 		#define GEODE_STATICS_updateColorLabels
 		GEODE_AS_STATIC_FUNCTION(updateColorLabels) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateColorValue
-		#define GEODE_STATICS_updateColorValue
-		GEODE_AS_STATIC_FUNCTION(updateColorValue) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateCopyColor
@@ -178,11 +163,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateHSVMode
 		#define GEODE_STATICS_updateHSVMode
 		GEODE_AS_STATIC_FUNCTION(updateHSVMode) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateHSVValue
-		#define GEODE_STATICS_updateHSVValue
-		GEODE_AS_STATIC_FUNCTION(updateHSVValue) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateOpacity
@@ -405,48 +385,48 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x926d0, Default, ColorSelectPopup, colorToHex, cocos2d::ccColor3B)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8da30, Default, ColorSelectPopup, create, EffectGameObject*, cocos2d::CCArray*, ColorAction*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectPopup, create, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x92790, Default, ColorSelectPopup, colorToHex, cocos2d::ccColor3B)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectPopup, create, ColorAction*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectPopup, create, cocos2d::ccColor3B)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectPopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x91a60, Default, ColorSelectPopup, hexToColor, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x92ba0, Thiscall, ColorSelectPopup, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90390, Thiscall, ColorSelectPopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x92cd0, Thiscall, ColorSelectPopup, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x91750, Thiscall, ColorSelectPopup, colorValueChanged, cocos2d::ccColor3B)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x93690, Thiscall, ColorSelectPopup, colorSelectClosed, GJSpecialColorSelect*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x91740, Thiscall, ColorSelectPopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x914a0, Thiscall, ColorSelectPopup, closeColorSelect, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectPopup, getColorValue, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8dc20, Thiscall, ColorSelectPopup, init, EffectGameObject*, cocos2d::CCArray*, ColorAction*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90d60, Thiscall, ColorSelectPopup, onCopy, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90b00, Thiscall, ColorSelectPopup, onCopyOpacity, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90e60, Thiscall, ColorSelectPopup, onDefault, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectPopup, onHSVLegacyMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90de0, Thiscall, ColorSelectPopup, onPaste, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectPopup, onPlayerColor1, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectPopup, onPlayerColor2, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectPopup, onSelectSpecialColor, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectPopup, onTintGround, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x93500, Thiscall, ColorSelectPopup, onToggleHSVMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x909b0, Thiscall, ColorSelectPopup, onToggleTintMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x93420, Thiscall, ColorSelectPopup, onUpdateCopyColor, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x92c50, Thiscall, ColorSelectPopup, onUpdateCustomColor, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectPopup, selectColor, cocos2d::ccColor3B)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectPopup, sliderChanged, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectPopup, updateColorLabels, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectPopup, updateColorValue, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x93830, Thiscall, ColorSelectPopup, updateCopyColor, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectPopup, updateCopyColorTextInputLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x93270, Thiscall, ColorSelectPopup, updateCustomColorIdx, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectPopup, updateDuration, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectPopup, updateDurLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x93540, Thiscall, ColorSelectPopup, updateHSVMode, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectPopup, updateHSVValue, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x912b0, Thiscall, ColorSelectPopup, updateOpacity, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x91430, Thiscall, ColorSelectPopup, updateOpacityLabel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ColorSelectPopup, updateTextInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8daf0, Default, ColorSelectPopup, create, EffectGameObject*, cocos2d::CCArray*, ColorAction*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x91b20, Default, ColorSelectPopup, hexToColor, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x92c60, Thiscall, ColorSelectPopup, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90450, Thiscall, ColorSelectPopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x92d90, Thiscall, ColorSelectPopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x91810, Thiscall, ColorSelectPopup, colorValueChanged, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x93750, Thiscall, ColorSelectPopup, colorSelectClosed, GJSpecialColorSelect*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x91800, Thiscall, ColorSelectPopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x91560, Thiscall, ColorSelectPopup, closeColorSelect, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectPopup, getColorValue, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8dce0, Thiscall, ColorSelectPopup, init, EffectGameObject*, cocos2d::CCArray*, ColorAction*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90e20, Thiscall, ColorSelectPopup, onCopy, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90bc0, Thiscall, ColorSelectPopup, onCopyOpacity, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90f20, Thiscall, ColorSelectPopup, onDefault, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90b30, Thiscall, ColorSelectPopup, onHSVLegacyMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90ea0, Thiscall, ColorSelectPopup, onPaste, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90c60, Thiscall, ColorSelectPopup, onPlayerColor1, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90d40, Thiscall, ColorSelectPopup, onPlayerColor2, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x93550, Thiscall, ColorSelectPopup, onSelectSpecialColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x909e0, Thiscall, ColorSelectPopup, onTintGround, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x935c0, Thiscall, ColorSelectPopup, onToggleHSVMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x90a70, Thiscall, ColorSelectPopup, onToggleTintMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x934e0, Thiscall, ColorSelectPopup, onUpdateCopyColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x92d10, Thiscall, ColorSelectPopup, onUpdateCustomColor, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectPopup, selectColor, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x911f0, Thiscall, ColorSelectPopup, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x91940, Thiscall, ColorSelectPopup, updateColorLabels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectPopup, updateColorValue, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x938f0, Thiscall, ColorSelectPopup, updateCopyColor, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x93b60, Thiscall, ColorSelectPopup, updateCopyColorTextInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x93330, Thiscall, ColorSelectPopup, updateCustomColorIdx, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x912e0, Thiscall, ColorSelectPopup, updateDuration, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x91420, Thiscall, ColorSelectPopup, updateDurLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x93600, Thiscall, ColorSelectPopup, updateHSVMode, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ColorSelectPopup, updateHSVValue, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x91370, Thiscall, ColorSelectPopup, updateOpacity, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x914f0, Thiscall, ColorSelectPopup, updateOpacityLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x933d0, Thiscall, ColorSelectPopup, updateTextInputLabel, )
 		}
 	};
 }

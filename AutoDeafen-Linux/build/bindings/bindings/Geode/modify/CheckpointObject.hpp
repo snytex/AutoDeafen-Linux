@@ -10,16 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_getObject
-		#define GEODE_STATICS_getObject
-		GEODE_AS_STATIC_FUNCTION(getObject) 
-	#endif
-
-	#ifndef GEODE_STATICS_setObject
-		#define GEODE_STATICS_setObject
-		GEODE_AS_STATIC_FUNCTION(setObject) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -50,11 +40,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x38e330, Thiscall, CheckpointObject, )
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x3a51c0, Thiscall, CheckpointObject, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CheckpointObject, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x77db0, Thiscall, CheckpointObject, init, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CheckpointObject, getObject, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CheckpointObject, setObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x77de0, Thiscall, CheckpointObject, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CheckpointObject, getObject, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CheckpointObject, setObject, GameObject*)
 		}
 	};
 }

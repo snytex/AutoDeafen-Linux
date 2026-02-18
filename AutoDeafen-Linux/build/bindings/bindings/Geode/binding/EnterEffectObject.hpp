@@ -16,43 +16,64 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(EnterEffectObject, EffectGameObject)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): 0x1a2120
+     * @note[short] MacOS (Intel): 0x1f3e70
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3997d0
+     * @note[short] Android: Rebinded
      */
-    static EnterEffectObject* create(char const* p0);
+     EnterEffectObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x14e030
-     * @note[short] MacOS (Intel): 0x186570
-     * @note[short] Windows: 0x47fbf0
-     * @note[short] iOS: 0x36ffc0
+     * @note[short] MacOS (ARM): 0x14972c
+     * @note[short] MacOS (Intel): 0x1847a0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x370be0
+     * @note[short] Android
+     */
+    static EnterEffectObject* create(char const* frame);
+
+    /**
+     * @note[short] MacOS (ARM): 0x157274
+     * @note[short] MacOS (Intel): 0x196a60
+     * @note[short] Windows: 0x4982d0
+     * @note[short] iOS: 0x3771fc
      * @note[short] Android
      */
     virtual void customSetup();
 
     /**
-     * @note[short] MacOS (ARM): 0x14e368
-     * @note[short] MacOS (Intel): 0x1868b0
-     * @note[short] Windows: 0x47fd50
-     * @note[short] iOS: 0x370254
+     * @note[short] MacOS (ARM): 0x157630
+     * @note[short] MacOS (Intel): 0x196e40
+     * @note[short] Windows: 0x498430
+     * @note[short] iOS: 0x37749c
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x140604
-     * @note[short] MacOS (Intel): 0x174880
-     * @note[short] Windows: 0x47df50
-     * @note[short] iOS: 0x369c38
+     * @note[short] MacOS (ARM): 0x149898
+     * @note[short] MacOS (Intel): 0x184940
+     * @note[short] Windows: 0x496630
+     * @note[short] iOS: 0x370c9c
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
+     * @note[short] MacOS (ARM): 0x1497dc
+     * @note[short] MacOS (Intel): 0x184840
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(char const* p0);
+    bool init(char const* frame);
 
     /**
+     * @note[short] MacOS (ARM): 0x1575f4
+     * @note[short] MacOS (Intel): 0x196dd0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x377460
      * @note[short] Android
      */
     void resetEnterAnimValues();

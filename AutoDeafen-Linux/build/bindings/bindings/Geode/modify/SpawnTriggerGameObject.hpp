@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -30,19 +25,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getSaveString) 
 	#endif
 
-	#ifndef GEODE_STATICS_addRemap
-		#define GEODE_STATICS_addRemap
-		GEODE_AS_STATIC_FUNCTION(addRemap) 
-	#endif
-
 	#ifndef GEODE_STATICS_changeRemap
 		#define GEODE_STATICS_changeRemap
 		GEODE_AS_STATIC_FUNCTION(changeRemap) 
-	#endif
-
-	#ifndef GEODE_STATICS_removeRemap
-		#define GEODE_STATICS_removeRemap
-		GEODE_AS_STATIC_FUNCTION(removeRemap) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateRemapKeys
@@ -86,6 +71,16 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(changeRemap) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_getRemapWithSource
+		#define GEODE_CONCEPT_CHECK_getRemapWithSource
+		GEODE_CONCEPT_FUNCTION_CHECK(getRemapWithSource) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_getRemapWithTarget
+		#define GEODE_CONCEPT_CHECK_getRemapWithTarget
+		GEODE_CONCEPT_FUNCTION_CHECK(getRemapWithTarget) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_removeRemap
 		#define GEODE_CONCEPT_CHECK_removeRemap
 		GEODE_CONCEPT_FUNCTION_CHECK(removeRemap) 
@@ -105,15 +100,17 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SpawnTriggerGameObject, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a0530, Thiscall, SpawnTriggerGameObject, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a06a0, Thiscall, SpawnTriggerGameObject, triggerObject, GJBaseGameLayer*, int, gd::vector<int> const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a0a10, Thiscall, SpawnTriggerGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a0d50, Thiscall, SpawnTriggerGameObject, getSaveString, GJBaseGameLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SpawnTriggerGameObject, addRemap, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SpawnTriggerGameObject, changeRemap, int, int, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SpawnTriggerGameObject, removeRemap, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4a05a0, Thiscall, SpawnTriggerGameObject, updateRemapKeys, gd::vector<int> const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpawnTriggerGameObject, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b9080, Thiscall, SpawnTriggerGameObject, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b91f0, Thiscall, SpawnTriggerGameObject, triggerObject, GJBaseGameLayer*, int, gd::vector<int> const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b9560, Thiscall, SpawnTriggerGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b98a0, Thiscall, SpawnTriggerGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpawnTriggerGameObject, addRemap, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b9310, Thiscall, SpawnTriggerGameObject, changeRemap, int, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpawnTriggerGameObject, getRemapWithSource, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpawnTriggerGameObject, getRemapWithTarget, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SpawnTriggerGameObject, removeRemap, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4b90f0, Thiscall, SpawnTriggerGameObject, updateRemapKeys, gd::vector<int> const&)
 		}
 	};
 }

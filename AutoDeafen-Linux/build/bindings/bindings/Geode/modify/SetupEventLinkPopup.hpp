@@ -20,11 +20,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onSelectEvent) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateEventIDs
-		#define GEODE_STATICS_updateEventIDs
-		GEODE_AS_STATIC_FUNCTION(updateEventIDs) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -55,10 +50,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44d830, Default, SetupEventLinkPopup, create, EventLinkTrigger*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44d940, Thiscall, SetupEventLinkPopup, init, EventLinkTrigger*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44deb0, Thiscall, SetupEventLinkPopup, onSelectEvent, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupEventLinkPopup, updateEventIDs, gd::set<int>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x465e40, Default, SetupEventLinkPopup, create, EventLinkTrigger*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x465f50, Thiscall, SetupEventLinkPopup, init, EventLinkTrigger*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4664c0, Thiscall, SetupEventLinkPopup, onSelectEvent, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupEventLinkPopup, updateEventIDs, gd::set<int>&)
 		}
 	};
 }

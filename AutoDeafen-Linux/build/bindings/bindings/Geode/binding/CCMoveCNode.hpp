@@ -15,27 +15,37 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(CCMoveCNode, cocos2d::CCObject)
 
     /**
-     * @note[short] Windows: Out of line
-     * @note[short] Android: Rebinded
-     */
-     CCMoveCNode();
-
-    /**
-     * @note[short] Windows: Out of line
-     * @note[short] Android
-     */
-    static CCMoveCNode* create();
-
-    /**
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
+     CCMoveCNode();
+
+    /**
+     * @note[short] MacOS (ARM): 0x27d3e4
+     * @note[short] MacOS (Intel): 0x2e47d0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x12900
+     * @note[short] Android
+     */
+    static CCMoveCNode* create();
+
+    /**
+     * @note[short] MacOS (ARM): 0x285fc4
+     * @note[short] MacOS (Intel): 0x2efa80
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
     bool init();
 
     /**
+     * @note[short] MacOS (ARM): 0x285fcc
+     * @note[short] MacOS (Intel): 0x2efa90
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void reset();

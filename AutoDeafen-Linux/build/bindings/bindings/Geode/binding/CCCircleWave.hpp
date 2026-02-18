@@ -15,87 +15,94 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(CCCircleWave, cocos2d::CCNode)
 
     /**
-     * @note[short] MacOS (ARM): 0x134bb4
-     * @note[short] MacOS (Intel): 0x167ae0
-     * @note[short] Windows: 0x42800
-     * @note[short] iOS: 0x16f678
-     * @note[short] Android
-     */
-    static CCCircleWave* create(float startRadius, float endRadius, float duration, bool fadeIn, bool easeOut);
-
-    /**
-     * @note[short] MacOS (ARM): 0x134bac
-     * @note[short] MacOS (Intel): 0x167ad0
+     * @note[short] MacOS (ARM): 0x13e638
+     * @note[short] MacOS (Intel): 0x178460
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x16f670
+     * @note[short] iOS: 0x16bff4
      * @note[short] Android
      */
     static CCCircleWave* create(float startRadius, float endRadius, float duration, bool fadeIn);
 
     /**
-     * @note[short] MacOS (ARM): 0x134e8c
-     * @note[short] MacOS (Intel): 0x167e30
-     * @note[short] Windows: 0x42af0
-     * @note[short] iOS: 0x16f8d0
+     * @note[short] MacOS (ARM): 0x13e640
+     * @note[short] MacOS (Intel): 0x178470
+     * @note[short] Windows: 0x42870
+     * @note[short] iOS: 0x16bffc
      * @note[short] Android
      */
-    virtual void setPosition(cocos2d::CCPoint const& p0);
+    static CCCircleWave* create(float startRadius, float endRadius, float duration, bool fadeIn, bool easeOut);
 
     /**
-     * @note[short] MacOS (ARM): 0x135348
-     * @note[short] MacOS (Intel): 0x1682f0
-     * @note[short] Windows: 0x42f00
-     * @note[short] iOS: 0x16fc40
+     * @note[short] MacOS (ARM): 0x13e914
+     * @note[short] MacOS (Intel): 0x1787c0
+     * @note[short] Windows: 0x42b60
+     * @note[short] iOS: 0x16c254
+     * @note[short] Android
+     */
+    virtual void setPosition(cocos2d::CCPoint const& position);
+
+    /**
+     * @note[short] MacOS (ARM): 0x13edb8
+     * @note[short] MacOS (Intel): 0x178c70
+     * @note[short] Windows: 0x42f70
+     * @note[short] iOS: 0x16c5d4
      * @note[short] Android
      */
     virtual void removeMeAndCleanup();
 
     /**
-     * @note[short] MacOS (ARM): 0x135210
-     * @note[short] MacOS (Intel): 0x1681b0
-     * @note[short] Windows: 0x42dd0
-     * @note[short] iOS: 0x16fb18
+     * @note[short] MacOS (ARM): 0x13ec74
+     * @note[short] MacOS (Intel): 0x178b30
+     * @note[short] Windows: 0x42e40
+     * @note[short] iOS: 0x16c49c
      * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): 0x134f9c
-     * @note[short] MacOS (Intel): 0x167f30
-     * @note[short] Windows: 0x42b70
-     * @note[short] iOS: 0x16f9e0
+     * @note[short] MacOS (ARM): 0x13ea24
+     * @note[short] MacOS (Intel): 0x1788c0
+     * @note[short] Windows: 0x42be0
+     * @note[short] iOS: 0x16c364
      * @note[short] Android
      */
-    virtual void updateTweenAction(float p0, char const* p1);
+    virtual void updateTweenAction(float value, char const* key);
 
     /**
+     * @note[short] MacOS (ARM): 0x13e8d8
+     * @note[short] MacOS (Intel): 0x178760
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn baseSetup(float p0);
+    void baseSetup(float radius);
 
     /**
-     * @note[short] MacOS (ARM): 0x134f0c
-     * @note[short] MacOS (Intel): 0x167ea0
+     * @note[short] MacOS (ARM): 0x13e994
+     * @note[short] MacOS (Intel): 0x178830
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x16c2d4
      * @note[short] Android
      */
-    TodoReturn followObject(cocos2d::CCNode* p0, bool p1);
+    void followObject(cocos2d::CCNode* newTarget, bool staticPosition);
 
     /**
-     * @note[short] MacOS (ARM): 0x134c88
-     * @note[short] MacOS (Intel): 0x167bd0
-     * @note[short] Windows: 0x428b0
-     * @note[short] iOS: 0x16f708
+     * @note[short] MacOS (ARM): 0x13e714
+     * @note[short] MacOS (Intel): 0x178560
+     * @note[short] Windows: 0x42920
+     * @note[short] iOS: 0x16c08c
      * @note[short] Android
      */
     bool init(float startRadius, float endRadius, float duration, bool fadeIn, bool easeOut);
 
     /**
-     * @note[short] MacOS (ARM): 0x134ec0
-     * @note[short] MacOS (Intel): 0x167e60
-     * @note[short] Windows: 0x42b30
+     * @note[short] MacOS (ARM): 0x13e948
+     * @note[short] MacOS (Intel): 0x1787f0
+     * @note[short] Windows: 0x42ba0
+     * @note[short] iOS: 0x16c288
      * @note[short] Android
      */
-    TodoReturn updatePosition(float p0);
+    void updatePosition(float dt);
     cocos2d::CCNode* m_target;
     float m_width;
     float m_radius;

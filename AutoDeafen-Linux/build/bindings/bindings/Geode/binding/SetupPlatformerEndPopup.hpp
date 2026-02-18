@@ -16,16 +16,20 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupPlatformerEndPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x405da0
+     * @note[short] MacOS (ARM): 0x588934
+     * @note[short] MacOS (Intel): 0x669c00
+     * @note[short] Windows: 0x41da70
+     * @note[short] iOS: 0x2addb0
      * @note[short] Android
      */
-    static SetupPlatformerEndPopup* create(EndTriggerGameObject* p0, cocos2d::CCArray* p1);
+    static SetupPlatformerEndPopup* create(EndTriggerGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x57af4c
-     * @note[short] MacOS (Intel): 0x653a80
-     * @note[short] Windows: 0x405eb0
+     * @note[short] MacOS (ARM): 0x588abc
+     * @note[short] MacOS (Intel): 0x669e30
+     * @note[short] Windows: 0x41db80
+     * @note[short] iOS: 0x2ade88
      * @note[short] Android
      */
-    bool init(EndTriggerGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EndTriggerGameObject* object, cocos2d::CCArray* objects);
 };

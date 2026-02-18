@@ -15,42 +15,46 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(AchievementBar, cocos2d::CCNodeRGBA)
 
     /**
-     * @note[short] Windows: 0x80620
-     * @note[short] Android: Rebinded
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-     AchievementBar(unsigned int idk);
+     AchievementBar();
 
     /**
-     * @note[short] MacOS (ARM): 0x52f02c
-     * @note[short] MacOS (Intel): 0x601520
-     * @note[short] iOS: 0x269870
+     * @note[short] MacOS (ARM): 0x53cf08
+     * @note[short] MacOS (Intel): 0x618bd0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x26a70c
      * @note[short] Android
      */
     static AchievementBar* create(char const* title, char const* desc, char const* icon, bool quest);
 
     /**
-     * @note[short] MacOS (ARM): 0x53086c
-     * @note[short] MacOS (Intel): 0x602ea0
-     * @note[short] Windows: 0x81ea0
-     * @note[short] iOS: 0x26ab9c
+     * @note[short] MacOS (ARM): 0x53e7d0
+     * @note[short] MacOS (Intel): 0x61a530
+     * @note[short] Windows: 0x81ef0
+     * @note[short] iOS: 0x26ba38
      * @note[short] Android
      */
-    virtual void setOpacity(unsigned char p0);
+    virtual void setOpacity(unsigned char opacity);
 
     /**
-     * @note[short] MacOS (ARM): 0x52f0fc
-     * @note[short] MacOS (Intel): 0x6015e0
-     * @note[short] Windows: 0x80670
-     * @note[short] iOS: 0x26992c
+     * @note[short] MacOS (ARM): 0x53cfd8
+     * @note[short] MacOS (Intel): 0x618c90
+     * @note[short] Windows: 0x806c0
+     * @note[short] iOS: 0x26a7c8
      * @note[short] Android
      */
     bool init(char const* title, char const* desc, char const* icon, bool quest);
 
     /**
-     * @note[short] MacOS (ARM): 0x53062c
-     * @note[short] MacOS (Intel): 0x602c50
-     * @note[short] Windows: 0x81c20
-     * @note[short] iOS: 0x26a97c
+     * @note[short] MacOS (ARM): 0x53e590
+     * @note[short] MacOS (Intel): 0x61a2e0
+     * @note[short] Windows: 0x81c70
+     * @note[short] iOS: 0x26b818
      * @note[short] Android
      */
     void show();

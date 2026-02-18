@@ -16,15 +16,29 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupDashRingPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static SetupDashRingPopup* create(DashRingObject* p0, cocos2d::CCArray* p1);
+     SetupDashRingPopup();
 
     /**
-     * @note[short] MacOS (ARM): 0x4c4750
-     * @note[short] MacOS (Intel): 0x56ffe0
-     * @note[short] Windows: 0x45ac80
+     * @note[short] MacOS (ARM): 0x4d2760
+     * @note[short] MacOS (Intel): 0x586e30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x411de8
      * @note[short] Android
      */
-    bool init(DashRingObject* p0, cocos2d::CCArray* p1);
+    static SetupDashRingPopup* create(DashRingObject* object, cocos2d::CCArray* objects);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4d28ec
+     * @note[short] MacOS (Intel): 0x587060
+     * @note[short] Windows: 0x4731f0
+     * @note[short] iOS: 0x411ec4
+     * @note[short] Android
+     */
+    bool init(DashRingObject* object, cocos2d::CCArray* objects);
 };

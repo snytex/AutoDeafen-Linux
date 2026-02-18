@@ -55,11 +55,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateDurLabel) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateOpacity
-		#define GEODE_STATICS_updateOpacity
-		GEODE_AS_STATIC_FUNCTION(updateOpacity) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateOpacityLabel
 		#define GEODE_STATICS_updateOpacityLabel
 		GEODE_AS_STATIC_FUNCTION(updateOpacityLabel) 
@@ -155,20 +150,20 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x412730, Default, SetupOpacityPopup, create, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413660, Thiscall, SetupOpacityPopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3f2480, Thiscall, SetupOpacityPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b790, Thiscall, SetupOpacityPopup, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413a50, Thiscall, SetupOpacityPopup, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x412860, Thiscall, SetupOpacityPopup, init, EffectGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4137f0, Thiscall, SetupOpacityPopup, onTargetIDArrow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413840, Thiscall, SetupOpacityPopup, sliderChanged, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413e50, Thiscall, SetupOpacityPopup, updateDuration, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413c90, Thiscall, SetupOpacityPopup, updateDurLabel, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupOpacityPopup, updateOpacity, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413d60, Thiscall, SetupOpacityPopup, updateOpacityLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413ee0, Thiscall, SetupOpacityPopup, updateTargetID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x413dd0, Thiscall, SetupOpacityPopup, updateTextInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42a4b0, Default, SetupOpacityPopup, create, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42b3e0, Thiscall, SetupOpacityPopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40a100, Thiscall, SetupOpacityPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b850, Thiscall, SetupOpacityPopup, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42b7d0, Thiscall, SetupOpacityPopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42a5e0, Thiscall, SetupOpacityPopup, init, EffectGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42b570, Thiscall, SetupOpacityPopup, onTargetIDArrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42b5c0, Thiscall, SetupOpacityPopup, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42bbd0, Thiscall, SetupOpacityPopup, updateDuration, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42ba10, Thiscall, SetupOpacityPopup, updateDurLabel, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetupOpacityPopup, updateOpacity, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42bae0, Thiscall, SetupOpacityPopup, updateOpacityLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42bc60, Thiscall, SetupOpacityPopup, updateTargetID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42bb50, Thiscall, SetupOpacityPopup, updateTextInputLabel, )
 		}
 	};
 }

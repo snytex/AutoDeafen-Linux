@@ -115,16 +115,16 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ea770, Default, SetupAdvFollowPopup, create, AdvancedFollowTriggerObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x287920, Thiscall, SetupAdvFollowPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ed950, Thiscall, SetupAdvFollowPopup, updateDefaultTriggerValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3eda40, Thiscall, SetupAdvFollowPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3edd80, Thiscall, SetupAdvFollowPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ee030, Thiscall, SetupAdvFollowPopup, selectPremadeClosed, SelectPremadeLayer*, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ea890, Thiscall, SetupAdvFollowPopup, init, AdvancedFollowTriggerObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ede30, Thiscall, SetupAdvFollowPopup, onMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3edf00, Thiscall, SetupAdvFollowPopup, onPremade, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ede60, Thiscall, SetupAdvFollowPopup, updateMode, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4023f0, Default, SetupAdvFollowPopup, create, AdvancedFollowTriggerObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28f250, Thiscall, SetupAdvFollowPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4055d0, Thiscall, SetupAdvFollowPopup, updateDefaultTriggerValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4056c0, Thiscall, SetupAdvFollowPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x405a00, Thiscall, SetupAdvFollowPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x405cb0, Thiscall, SetupAdvFollowPopup, selectPremadeClosed, SelectPremadeLayer*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x402510, Thiscall, SetupAdvFollowPopup, init, AdvancedFollowTriggerObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x405ab0, Thiscall, SetupAdvFollowPopup, onMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x405b80, Thiscall, SetupAdvFollowPopup, onPremade, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x405ae0, Thiscall, SetupAdvFollowPopup, updateMode, int)
 		}
 	};
 }

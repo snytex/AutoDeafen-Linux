@@ -24,18 +24,19 @@ public:
      DialogObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x33f4ac
-     * @note[short] MacOS (Intel): 0x3b3d20
-     * @note[short] Windows: 0xd1da0
-     * @note[short] iOS: 0x8a650
+     * @note[short] MacOS (ARM): 0x3482a0
+     * @note[short] MacOS (Intel): 0x3c6c40
+     * @note[short] Windows: 0xd32d0
+     * @note[short] iOS: 0x865b4
      * @note[short] Android: Rebinded
      */
     static DialogObject* create(gd::string character, gd::string text, int characterFrame, float textScale, bool skippable, cocos2d::ccColor3B color);
 
     /**
-     * @note[short] MacOS (ARM): 0x33f664
-     * @note[short] MacOS (Intel): 0x3b3eb0
+     * @note[short] MacOS (ARM): 0x348458
+     * @note[short] MacOS (Intel): 0x3c6dd0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
     bool init(gd::string character, gd::string text, int characterFrame, float textScale, bool skippable, cocos2d::ccColor3B color);

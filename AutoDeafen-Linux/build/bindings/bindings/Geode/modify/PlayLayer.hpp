@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_scene
 		#define GEODE_STATICS_scene
 		GEODE_AS_STATIC_FUNCTION(scene) 
@@ -155,6 +150,16 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(toggleMusicInPractice) 
 	#endif
 
+	#ifndef GEODE_STATICS_processCheckpoints
+		#define GEODE_STATICS_processCheckpoints
+		GEODE_AS_STATIC_FUNCTION(processCheckpoints) 
+	#endif
+
+	#ifndef GEODE_STATICS_resetLevel
+		#define GEODE_STATICS_resetLevel
+		GEODE_AS_STATIC_FUNCTION(resetLevel) 
+	#endif
+
 	#ifndef GEODE_STATICS_currencyWillExit
 		#define GEODE_STATICS_currencyWillExit
 		GEODE_AS_STATIC_FUNCTION(currencyWillExit) 
@@ -175,11 +180,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(addObject) 
 	#endif
 
-	#ifndef GEODE_STATICS_addToGroupOld
-		#define GEODE_STATICS_addToGroupOld
-		GEODE_AS_STATIC_FUNCTION(addToGroupOld) 
-	#endif
-
 	#ifndef GEODE_STATICS_applyCustomEnterEffect
 		#define GEODE_STATICS_applyCustomEnterEffect
 		GEODE_AS_STATIC_FUNCTION(applyCustomEnterEffect) 
@@ -190,24 +190,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(applyEnterEffect) 
 	#endif
 
-	#ifndef GEODE_STATICS_checkpointWithID
-		#define GEODE_STATICS_checkpointWithID
-		GEODE_AS_STATIC_FUNCTION(checkpointWithID) 
-	#endif
-
-	#ifndef GEODE_STATICS_colorObject
-		#define GEODE_STATICS_colorObject
-		GEODE_AS_STATIC_FUNCTION(colorObject) 
-	#endif
-
 	#ifndef GEODE_STATICS_commitJumps
 		#define GEODE_STATICS_commitJumps
 		GEODE_AS_STATIC_FUNCTION(commitJumps) 
-	#endif
-
-	#ifndef GEODE_STATICS_compareStateSnapshot
-		#define GEODE_STATICS_compareStateSnapshot
-		GEODE_AS_STATIC_FUNCTION(compareStateSnapshot) 
 	#endif
 
 	#ifndef GEODE_STATICS_createCheckpoint
@@ -218,11 +203,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_createObjectsFromSetupFinished
 		#define GEODE_STATICS_createObjectsFromSetupFinished
 		GEODE_AS_STATIC_FUNCTION(createObjectsFromSetupFinished) 
-	#endif
-
-	#ifndef GEODE_STATICS_delayedFullReset
-		#define GEODE_STATICS_delayedFullReset
-		GEODE_AS_STATIC_FUNCTION(delayedFullReset) 
 	#endif
 
 	#ifndef GEODE_STATICS_delayedResetLevel
@@ -240,39 +220,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getCurrentPercent) 
 	#endif
 
-	#ifndef GEODE_STATICS_getEndPosition
-		#define GEODE_STATICS_getEndPosition
-		GEODE_AS_STATIC_FUNCTION(getEndPosition) 
-	#endif
-
-	#ifndef GEODE_STATICS_getLastCheckpoint
-		#define GEODE_STATICS_getLastCheckpoint
-		GEODE_AS_STATIC_FUNCTION(getLastCheckpoint) 
-	#endif
-
-	#ifndef GEODE_STATICS_getRelativeMod
-		#define GEODE_STATICS_getRelativeMod
-		GEODE_AS_STATIC_FUNCTION(getRelativeMod) 
-	#endif
-
-	#ifndef GEODE_STATICS_getRelativeModNew
-		#define GEODE_STATICS_getRelativeModNew
-		GEODE_AS_STATIC_FUNCTION(getRelativeModNew) 
-	#endif
-
-	#ifndef GEODE_STATICS_getTempMilliTime
-		#define GEODE_STATICS_getTempMilliTime
-		GEODE_AS_STATIC_FUNCTION(getTempMilliTime) 
-	#endif
-
 	#ifndef GEODE_STATICS_gravityEffectFinished
 		#define GEODE_STATICS_gravityEffectFinished
 		GEODE_AS_STATIC_FUNCTION(gravityEffectFinished) 
-	#endif
-
-	#ifndef GEODE_STATICS_incrementJumps
-		#define GEODE_STATICS_incrementJumps
-		GEODE_AS_STATIC_FUNCTION(incrementJumps) 
 	#endif
 
 	#ifndef GEODE_STATICS_init
@@ -280,19 +230,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_isGameplayActive
-		#define GEODE_STATICS_isGameplayActive
-		GEODE_AS_STATIC_FUNCTION(isGameplayActive) 
-	#endif
-
 	#ifndef GEODE_STATICS_levelComplete
 		#define GEODE_STATICS_levelComplete
 		GEODE_AS_STATIC_FUNCTION(levelComplete) 
-	#endif
-
-	#ifndef GEODE_STATICS_loadActiveSaveObjects
-		#define GEODE_STATICS_loadActiveSaveObjects
-		GEODE_AS_STATIC_FUNCTION(loadActiveSaveObjects) 
 	#endif
 
 	#ifndef GEODE_STATICS_loadDefaultColors
@@ -300,19 +240,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(loadDefaultColors) 
 	#endif
 
-	#ifndef GEODE_STATICS_loadDynamicSaveObjects
-		#define GEODE_STATICS_loadDynamicSaveObjects
-		GEODE_AS_STATIC_FUNCTION(loadDynamicSaveObjects) 
-	#endif
-
 	#ifndef GEODE_STATICS_loadFromCheckpoint
 		#define GEODE_STATICS_loadFromCheckpoint
 		GEODE_AS_STATIC_FUNCTION(loadFromCheckpoint) 
-	#endif
-
-	#ifndef GEODE_STATICS_loadLastCheckpoint
-		#define GEODE_STATICS_loadLastCheckpoint
-		GEODE_AS_STATIC_FUNCTION(loadLastCheckpoint) 
 	#endif
 
 	#ifndef GEODE_STATICS_markCheckpoint
@@ -350,11 +280,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(playPlatformerEndAnimationToPos) 
 	#endif
 
-	#ifndef GEODE_STATICS_playReplay
-		#define GEODE_STATICS_playReplay
-		GEODE_AS_STATIC_FUNCTION(playReplay) 
-	#endif
-
 	#ifndef GEODE_STATICS_prepareCreateObjectsFromSetup
 		#define GEODE_STATICS_prepareCreateObjectsFromSetup
 		GEODE_AS_STATIC_FUNCTION(prepareCreateObjectsFromSetup) 
@@ -385,16 +310,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(removeCheckpoint) 
 	#endif
 
-	#ifndef GEODE_STATICS_removeFromGroupOld
-		#define GEODE_STATICS_removeFromGroupOld
-		GEODE_AS_STATIC_FUNCTION(removeFromGroupOld) 
-	#endif
-
-	#ifndef GEODE_STATICS_resetLevel
-		#define GEODE_STATICS_resetLevel
-		GEODE_AS_STATIC_FUNCTION(resetLevel) 
-	#endif
-
 	#ifndef GEODE_STATICS_resetLevelFromStart
 		#define GEODE_STATICS_resetLevelFromStart
 		GEODE_AS_STATIC_FUNCTION(resetLevelFromStart) 
@@ -420,11 +335,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(saveDynamicSaveObjects) 
 	#endif
 
-	#ifndef GEODE_STATICS_scanActiveSaveObjects
-		#define GEODE_STATICS_scanActiveSaveObjects
-		GEODE_AS_STATIC_FUNCTION(scanActiveSaveObjects) 
-	#endif
-
 	#ifndef GEODE_STATICS_scanDynamicSaveObjects
 		#define GEODE_STATICS_scanDynamicSaveObjects
 		GEODE_AS_STATIC_FUNCTION(scanDynamicSaveObjects) 
@@ -435,19 +345,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(screenFlipObject) 
 	#endif
 
-	#ifndef GEODE_STATICS_setDamageVerifiedIdx
-		#define GEODE_STATICS_setDamageVerifiedIdx
-		GEODE_AS_STATIC_FUNCTION(setDamageVerifiedIdx) 
-	#endif
-
 	#ifndef GEODE_STATICS_setupHasCompleted
 		#define GEODE_STATICS_setupHasCompleted
 		GEODE_AS_STATIC_FUNCTION(setupHasCompleted) 
-	#endif
-
-	#ifndef GEODE_STATICS_shouldBlend
-		#define GEODE_STATICS_shouldBlend
-		GEODE_AS_STATIC_FUNCTION(shouldBlend) 
 	#endif
 
 	#ifndef GEODE_STATICS_showCompleteEffect
@@ -510,39 +410,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(startMusic) 
 	#endif
 
-	#ifndef GEODE_STATICS_startRecording
-		#define GEODE_STATICS_startRecording
-		GEODE_AS_STATIC_FUNCTION(startRecording) 
-	#endif
-
-	#ifndef GEODE_STATICS_startRecordingDelayed
-		#define GEODE_STATICS_startRecordingDelayed
-		GEODE_AS_STATIC_FUNCTION(startRecordingDelayed) 
-	#endif
-
-	#ifndef GEODE_STATICS_stopRecording
-		#define GEODE_STATICS_stopRecording
-		GEODE_AS_STATIC_FUNCTION(stopRecording) 
-	#endif
-
 	#ifndef GEODE_STATICS_storeCheckpoint
 		#define GEODE_STATICS_storeCheckpoint
 		GEODE_AS_STATIC_FUNCTION(storeCheckpoint) 
 	#endif
 
-	#ifndef GEODE_STATICS_takeStateSnapshot
-		#define GEODE_STATICS_takeStateSnapshot
-		GEODE_AS_STATIC_FUNCTION(takeStateSnapshot) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleBGEffectVisibility
-		#define GEODE_STATICS_toggleBGEffectVisibility
-		GEODE_AS_STATIC_FUNCTION(toggleBGEffectVisibility) 
-	#endif
-
-	#ifndef GEODE_STATICS_toggleGhostEffect
-		#define GEODE_STATICS_toggleGhostEffect
-		GEODE_AS_STATIC_FUNCTION(toggleGhostEffect) 
+	#ifndef GEODE_STATICS_toggleDebugDraw
+		#define GEODE_STATICS_toggleDebugDraw
+		GEODE_AS_STATIC_FUNCTION(toggleDebugDraw) 
 	#endif
 
 	#ifndef GEODE_STATICS_togglePracticeMode
@@ -550,19 +425,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(togglePracticeMode) 
 	#endif
 
-	#ifndef GEODE_STATICS_tryStartRecord
-		#define GEODE_STATICS_tryStartRecord
-		GEODE_AS_STATIC_FUNCTION(tryStartRecord) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateAttempts
 		#define GEODE_STATICS_updateAttempts
 		GEODE_AS_STATIC_FUNCTION(updateAttempts) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateEffectPositions
-		#define GEODE_STATICS_updateEffectPositions
-		GEODE_AS_STATIC_FUNCTION(updateEffectPositions) 
+	#ifndef GEODE_STATICS_updateDebugDrawSettings
+		#define GEODE_STATICS_updateDebugDrawSettings
+		GEODE_AS_STATIC_FUNCTION(updateDebugDrawSettings) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateInfoLabel
@@ -578,11 +448,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateProgressbar
 		#define GEODE_STATICS_updateProgressbar
 		GEODE_AS_STATIC_FUNCTION(updateProgressbar) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateScreenRotation
-		#define GEODE_STATICS_updateScreenRotation
-		GEODE_AS_STATIC_FUNCTION(updateScreenRotation) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateTestModeLabel
@@ -759,6 +624,16 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_toggleMusicInPractice
 		#define GEODE_CONCEPT_CHECK_toggleMusicInPractice
 		GEODE_CONCEPT_FUNCTION_CHECK(toggleMusicInPractice) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_processCheckpoints
+		#define GEODE_CONCEPT_CHECK_processCheckpoints
+		GEODE_CONCEPT_FUNCTION_CHECK(processCheckpoints) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_resetLevel
+		#define GEODE_CONCEPT_CHECK_resetLevel
+		GEODE_CONCEPT_FUNCTION_CHECK(resetLevel) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_currencyWillExit
@@ -1016,11 +891,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(removeFromGroupOld) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_resetLevel
-		#define GEODE_CONCEPT_CHECK_resetLevel
-		GEODE_CONCEPT_FUNCTION_CHECK(resetLevel) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_resetLevelFromStart
 		#define GEODE_CONCEPT_CHECK_resetLevelFromStart
 		GEODE_CONCEPT_FUNCTION_CHECK(resetLevelFromStart) 
@@ -1061,11 +931,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(screenFlipObject) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_setDamageVerifiedIdx
-		#define GEODE_CONCEPT_CHECK_setDamageVerifiedIdx
-		GEODE_CONCEPT_FUNCTION_CHECK(setDamageVerifiedIdx) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_setupHasCompleted
 		#define GEODE_CONCEPT_CHECK_setupHasCompleted
 		GEODE_CONCEPT_FUNCTION_CHECK(setupHasCompleted) 
@@ -1074,6 +939,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_shouldBlend
 		#define GEODE_CONCEPT_CHECK_shouldBlend
 		GEODE_CONCEPT_FUNCTION_CHECK(shouldBlend) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_shouldDebugDraw
+		#define GEODE_CONCEPT_CHECK_shouldDebugDraw
+		GEODE_CONCEPT_FUNCTION_CHECK(shouldDebugDraw) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_showCompleteEffect
@@ -1196,6 +1066,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(updateAttempts) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_updateDebugDrawSettings
+		#define GEODE_CONCEPT_CHECK_updateDebugDrawSettings
+		GEODE_CONCEPT_FUNCTION_CHECK(updateDebugDrawSettings) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_updateEffectPositions
 		#define GEODE_CONCEPT_CHECK_updateEffectPositions
 		GEODE_CONCEPT_FUNCTION_CHECK(updateEffectPositions) 
@@ -1235,136 +1110,137 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x38df50, Thiscall, PlayLayer, )
-			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x38e920, Thiscall, PlayLayer)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, create, GJGameLevel*, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x3a4da0, Thiscall, PlayLayer, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x3a57b0, Thiscall, PlayLayer)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, create, GJGameLevel*, bool, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, get, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38ebc0, Default, PlayLayer, scene, GJGameLevel*, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a4190, Thiscall, PlayLayer, onEnterTransitionDidFinish, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a41c0, Thiscall, PlayLayer, onExit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39da60, Thiscall, PlayLayer, postUpdate, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39de30, Thiscall, PlayLayer, checkForEnd, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a5a50, Default, PlayLayer, scene, GJGameLevel*, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3baf90, Thiscall, PlayLayer, onEnterTransitionDidFinish, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bafc0, Thiscall, PlayLayer, onExit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b4ba0, Thiscall, PlayLayer, postUpdate, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b4cf0, Thiscall, PlayLayer, checkForEnd, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, testTime, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39e000, Thiscall, PlayLayer, updateVerifyDamage, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39e0f0, Thiscall, PlayLayer, updateAttemptTime, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3984e0, Thiscall, PlayLayer, updateVisibility, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x399410, Thiscall, PlayLayer, opacityForObject, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39b0c0, Thiscall, PlayLayer, updateColor, cocos2d::ccColor3B&, float, int, bool, float, cocos2d::ccHSVValue&, int, bool, EffectGameObject*, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b4eb0, Thiscall, PlayLayer, updateVerifyDamage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b4f60, Thiscall, PlayLayer, updateAttemptTime, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3af3a0, Thiscall, PlayLayer, updateVisibility, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b02e0, Thiscall, PlayLayer, opacityForObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b1f90, Thiscall, PlayLayer, updateColor, cocos2d::ccColor3B&, float, int, bool, float, cocos2d::ccHSVValue&, int, bool, EffectGameObject*, int, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, activateEndTrigger, int, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x395320, Thiscall, PlayLayer, activatePlatformerEndTrigger, EndTriggerGameObject*, gd::vector<int> const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39c9d0, Thiscall, PlayLayer, toggleGlitter, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39caf0, Thiscall, PlayLayer, destroyPlayer, PlayerObject*, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39c820, Thiscall, PlayLayer, toggleGroundVisibility, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39c8a0, Thiscall, PlayLayer, toggleMGVisibility, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39c8e0, Thiscall, PlayLayer, toggleHideAttempts, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39c6f0, Thiscall, PlayLayer, timeForPos, cocos2d::CCPoint, int, int, bool, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39c780, Thiscall, PlayLayer, posForTime, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39c7e0, Thiscall, PlayLayer, resetSPTriggered, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x394a40, Thiscall, PlayLayer, updateTimeWarp, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39b180, Thiscall, PlayLayer, playGravityEffect, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x399420, Thiscall, PlayLayer, manualUpdateObjectColors, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39e130, Thiscall, PlayLayer, checkpointActivated, CheckpointGameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39bb60, Thiscall, PlayLayer, flipArt, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39b690, Thiscall, PlayLayer, updateTimeLabel, int, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ac2d0, Thiscall, PlayLayer, activatePlatformerEndTrigger, EndTriggerGameObject*, gd::vector<int> const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b38b0, Thiscall, PlayLayer, toggleGlitter, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b39d0, Thiscall, PlayLayer, destroyPlayer, PlayerObject*, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b3700, Thiscall, PlayLayer, toggleGroundVisibility, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b3780, Thiscall, PlayLayer, toggleMGVisibility, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b37c0, Thiscall, PlayLayer, toggleHideAttempts, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b35d0, Thiscall, PlayLayer, timeForPos, cocos2d::CCPoint, int, int, bool, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b3660, Thiscall, PlayLayer, posForTime, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b36c0, Thiscall, PlayLayer, resetSPTriggered, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ab9a0, Thiscall, PlayLayer, updateTimeWarp, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b2050, Thiscall, PlayLayer, playGravityEffect, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b02f0, Thiscall, PlayLayer, manualUpdateObjectColors, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b4fa0, Thiscall, PlayLayer, checkpointActivated, CheckpointGameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b2a30, Thiscall, PlayLayer, flipArt, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b2560, Thiscall, PlayLayer, updateTimeLabel, int, int, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, checkSnapshot, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39b890, Thiscall, PlayLayer, toggleProgressbar, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39c670, Thiscall, PlayLayer, toggleInfoLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a1130, Thiscall, PlayLayer, removeAllCheckpoints, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39ba30, Thiscall, PlayLayer, toggleMusicInPractice, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39d880, Thiscall, PlayLayer, currencyWillExit, CurrencyRewardLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39da40, Thiscall, PlayLayer, circleWaveWillBeRemoved, CCCircleWave*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39d8a0, Thiscall, PlayLayer, dialogClosed, DialogLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b2760, Thiscall, PlayLayer, toggleProgressbar, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b3550, Thiscall, PlayLayer, toggleInfoLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b8040, Thiscall, PlayLayer, removeAllCheckpoints, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b2900, Thiscall, PlayLayer, toggleMusicInPractice, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b4910, Thiscall, PlayLayer, processCheckpoints, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b8eb0, Thiscall, PlayLayer, resetLevel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b4730, Thiscall, PlayLayer, currencyWillExit, CurrencyRewardLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b48f0, Thiscall, PlayLayer, circleWaveWillBeRemoved, CCCircleWave*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b4750, Thiscall, PlayLayer, dialogClosed, DialogLayer*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, addCircle, CCCircleWave*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x396eb0, Thiscall, PlayLayer, addObject, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, addToGroupOld, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x399aa0, Thiscall, PlayLayer, applyCustomEnterEffect, GameObject*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39a790, Thiscall, PlayLayer, applyEnterEffect, GameObject*, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3add70, Thiscall, PlayLayer, addObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, addToGroupOld, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b0970, Thiscall, PlayLayer, applyCustomEnterEffect, GameObject*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b1660, Thiscall, PlayLayer, applyEnterEffect, GameObject*, int, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, canPauseGame, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, checkpointWithID, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, colorObject, int, cocos2d::ccColor3B)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a2eb0, Thiscall, PlayLayer, commitJumps, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, compareStateSnapshot, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39e150, Thiscall, PlayLayer, createCheckpoint, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x396a10, Thiscall, PlayLayer, createObjectsFromSetupFinished, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, delayedFullReset, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a1de0, Thiscall, PlayLayer, delayedResetLevel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a1ce0, Thiscall, PlayLayer, fullReset, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39ca70, Thiscall, PlayLayer, getCurrentPercent, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, checkpointWithID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, colorObject, int, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b9de0, Thiscall, PlayLayer, commitJumps, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, compareStateSnapshot, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b4fc0, Thiscall, PlayLayer, createCheckpoint, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ad8d0, Thiscall, PlayLayer, createObjectsFromSetupFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, delayedFullReset, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b8cf0, Thiscall, PlayLayer, delayedResetLevel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b8bf0, Thiscall, PlayLayer, fullReset, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b3950, Thiscall, PlayLayer, getCurrentPercent, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, getCurrentPercentInt, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, getEndPosition, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, getLastCheckpoint, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, getRelativeMod, cocos2d::CCPoint, float, float, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, getRelativeModNew, cocos2d::CCPoint, float, float, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, getTempMilliTime, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, gravityEffectFinished, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, incrementJumps, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38ec70, Thiscall, PlayLayer, init, GJGameLevel*, bool, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, isGameplayActive, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x390c30, Thiscall, PlayLayer, levelComplete, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, loadActiveSaveObjects, gd::vector<SavedActiveObjectState>&, gd::vector<SavedSpecialObjectState>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39ad80, Thiscall, PlayLayer, loadDefaultColors, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, loadDynamicSaveObjects, gd::vector<SavedObjectStateRef>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a07b0, Thiscall, PlayLayer, loadFromCheckpoint, CheckpointObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, loadLastCheckpoint, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a06e0, Thiscall, PlayLayer, markCheckpoint, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3db0, Thiscall, PlayLayer, onQuit, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x397d10, Thiscall, PlayLayer, optimizeColorGroups, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x397fa0, Thiscall, PlayLayer, optimizeOpacityGroups, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a31f0, Thiscall, PlayLayer, pauseGame, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x394aa0, Thiscall, PlayLayer, playEndAnimationToPos, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x395430, Thiscall, PlayLayer, playPlatformerEndAnimationToPos, cocos2d::CCPoint, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, playReplay, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x395f80, Thiscall, PlayLayer, prepareCreateObjectsFromSetup, gd::string&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3ae0, Thiscall, PlayLayer, prepareMusic, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x396230, Thiscall, PlayLayer, processCreateObjectsFromSetup, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, processLoadedMoveActions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, getEndPosition, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, getLastCheckpoint, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, getRelativeMod, cocos2d::CCPoint, float, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, getRelativeModNew, cocos2d::CCPoint, float, float, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, getTempMilliTime, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b23a0, Thiscall, PlayLayer, gravityEffectFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, incrementJumps, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a5b00, Thiscall, PlayLayer, init, GJGameLevel*, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, isGameplayActive, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a7a80, Thiscall, PlayLayer, levelComplete, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, loadActiveSaveObjects, gd::vector<SavedActiveObjectState>&, gd::vector<SavedSpecialObjectState>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b1c50, Thiscall, PlayLayer, loadDefaultColors, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, loadDynamicSaveObjects, gd::vector<SavedObjectStateRef>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b7640, Thiscall, PlayLayer, loadFromCheckpoint, CheckpointObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, loadLastCheckpoint, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b7570, Thiscall, PlayLayer, markCheckpoint, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3babb0, Thiscall, PlayLayer, onQuit, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3aebd0, Thiscall, PlayLayer, optimizeColorGroups, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3aee60, Thiscall, PlayLayer, optimizeOpacityGroups, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ba0e0, Thiscall, PlayLayer, pauseGame, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3aba00, Thiscall, PlayLayer, playEndAnimationToPos, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ac3e0, Thiscall, PlayLayer, playPlatformerEndAnimationToPos, cocos2d::CCPoint, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, playReplay, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ace40, Thiscall, PlayLayer, prepareCreateObjectsFromSetup, gd::string&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ba8e0, Thiscall, PlayLayer, prepareMusic, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ad0f0, Thiscall, PlayLayer, processCreateObjectsFromSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3af1d0, Thiscall, PlayLayer, processLoadedMoveActions, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, queueCheckpoint, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3fb0, Thiscall, PlayLayer, removeAllObjects, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a0ff0, Thiscall, PlayLayer, removeCheckpoint, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, removeFromGroupOld, GameObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a1f90, Thiscall, PlayLayer, resetLevel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a1df0, Thiscall, PlayLayer, resetLevelFromStart, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a37c0, Thiscall, PlayLayer, resume, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a34b0, Thiscall, PlayLayer, resumeAndRestart, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a1ae0, Thiscall, PlayLayer, saveActiveSaveObjects, gd::vector<SavedActiveObjectState>&, gd::vector<SavedSpecialObjectState>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a17d0, Thiscall, PlayLayer, saveDynamicSaveObjects, gd::vector<SavedObjectStateRef>&)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, scanActiveSaveObjects, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a1180, Thiscall, PlayLayer, scanDynamicSaveObjects, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, screenFlipObject, GameObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, setDamageVerifiedIdx, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x38f9c0, Thiscall, PlayLayer, setupHasCompleted, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, shouldBlend, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x391fd0, Thiscall, PlayLayer, showCompleteEffect, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3919a0, Thiscall, PlayLayer, showCompleteText, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, showEndLayer, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39d8c0, Thiscall, PlayLayer, showHint, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3925f0, Thiscall, PlayLayer, showNewBest, bool, int, int, bool, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3959c0, Thiscall, PlayLayer, showRetryLayer, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, showTwoPlayerGuide, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, spawnCircle, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, spawnFirework, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x390bd0, Thiscall, PlayLayer, startGame, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x390c20, Thiscall, PlayLayer, startGameDelayed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a3c60, Thiscall, PlayLayer, startMusic, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, startRecording, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, startRecordingDelayed, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, stopRecording, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a0610, Thiscall, PlayLayer, storeCheckpoint, CheckpointObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, takeStateSnapshot, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, toggleBGEffectVisibility, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, toggleDebugDraw, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, toggleGhostEffect, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3badb0, Thiscall, PlayLayer, removeAllObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b7f00, Thiscall, PlayLayer, removeCheckpoint, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, removeFromGroupOld, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b8d10, Thiscall, PlayLayer, resetLevelFromStart, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ba640, Thiscall, PlayLayer, resume, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ba3c0, Thiscall, PlayLayer, resumeAndRestart, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b89f0, Thiscall, PlayLayer, saveActiveSaveObjects, gd::vector<SavedActiveObjectState>&, gd::vector<SavedSpecialObjectState>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b86e0, Thiscall, PlayLayer, saveDynamicSaveObjects, gd::vector<SavedObjectStateRef>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, scanActiveSaveObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b8090, Thiscall, PlayLayer, scanDynamicSaveObjects, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b0750, Thiscall, PlayLayer, screenFlipObject, GameObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a66d0, Thiscall, PlayLayer, setupHasCompleted, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, shouldBlend, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, shouldDebugDraw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a8f30, Thiscall, PlayLayer, showCompleteEffect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a8900, Thiscall, PlayLayer, showCompleteText, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ac700, Thiscall, PlayLayer, showEndLayer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b4770, Thiscall, PlayLayer, showHint, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a9550, Thiscall, PlayLayer, showNewBest, bool, int, int, bool, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ac900, Thiscall, PlayLayer, showRetryLayer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3acaa0, Thiscall, PlayLayer, showTwoPlayerGuide, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3abf00, Thiscall, PlayLayer, spawnCircle, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3abff0, Thiscall, PlayLayer, spawnFirework, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a7a20, Thiscall, PlayLayer, startGame, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a7a70, Thiscall, PlayLayer, startGameDelayed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3baa60, Thiscall, PlayLayer, startMusic, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, startRecording, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, startRecordingDelayed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, stopRecording, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b74a0, Thiscall, PlayLayer, storeCheckpoint, CheckpointObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, takeStateSnapshot, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, toggleBGEffectVisibility, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a7900, Thiscall, PlayLayer, toggleDebugDraw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, toggleGhostEffect, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, toggleIgnoreDamage, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a2f20, Thiscall, PlayLayer, togglePracticeMode, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, tryStartRecord, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a2c70, Thiscall, PlayLayer, updateAttempts, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, updateEffectPositions, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39bb90, Thiscall, PlayLayer, updateInfoLabel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, updateInvisibleBlock, GameObject*, float, float, float, float, cocos2d::ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39b4f0, Thiscall, PlayLayer, updateProgressbar, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, updateScreenRotation, int, bool, bool, float, int, float, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x390b40, Thiscall, PlayLayer, updateTestModeLabel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(PlayLayer, updateTimeWarp, EffectGameObject*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b9e50, Thiscall, PlayLayer, togglePracticeMode, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, tryStartRecord, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b9ba0, Thiscall, PlayLayer, updateAttempts, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a7800, Thiscall, PlayLayer, updateDebugDrawSettings, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, updateEffectPositions, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b2a60, Thiscall, PlayLayer, updateInfoLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b03b0, Thiscall, PlayLayer, updateInvisibleBlock, GameObject*, float, float, float, float, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b23c0, Thiscall, PlayLayer, updateProgressbar, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(PlayLayer, updateScreenRotation, int, bool, bool, float, int, float, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a7990, Thiscall, PlayLayer, updateTestModeLabel, )
 		}
 	};
 }

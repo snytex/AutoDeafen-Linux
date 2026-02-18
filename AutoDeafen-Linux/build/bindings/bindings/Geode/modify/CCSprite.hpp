@@ -25,136 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createWithTexture) 
 	#endif
 
-	#ifndef GEODE_STATICS_getAtlasIndex
-		#define GEODE_STATICS_getAtlasIndex
-		GEODE_AS_STATIC_FUNCTION(getAtlasIndex) 
-	#endif
-
-	#ifndef GEODE_STATICS_getBlVertexMod
-		#define GEODE_STATICS_getBlVertexMod
-		GEODE_AS_STATIC_FUNCTION(getBlVertexMod) 
-	#endif
-
-	#ifndef GEODE_STATICS_getBrVertexMod
-		#define GEODE_STATICS_getBrVertexMod
-		GEODE_AS_STATIC_FUNCTION(getBrVertexMod) 
-	#endif
-
-	#ifndef GEODE_STATICS_getDontDraw
-		#define GEODE_STATICS_getDontDraw
-		GEODE_AS_STATIC_FUNCTION(getDontDraw) 
-	#endif
-
-	#ifndef GEODE_STATICS_getOffsetPosition
-		#define GEODE_STATICS_getOffsetPosition
-		GEODE_AS_STATIC_FUNCTION(getOffsetPosition) 
-	#endif
-
-	#ifndef GEODE_STATICS_getQuad
-		#define GEODE_STATICS_getQuad
-		GEODE_AS_STATIC_FUNCTION(getQuad) 
-	#endif
-
-	#ifndef GEODE_STATICS_getTextureAtlas
-		#define GEODE_STATICS_getTextureAtlas
-		GEODE_AS_STATIC_FUNCTION(getTextureAtlas) 
-	#endif
-
-	#ifndef GEODE_STATICS_getTextureRect
-		#define GEODE_STATICS_getTextureRect
-		GEODE_AS_STATIC_FUNCTION(getTextureRect) 
-	#endif
-
-	#ifndef GEODE_STATICS_getTlVertexMod
-		#define GEODE_STATICS_getTlVertexMod
-		GEODE_AS_STATIC_FUNCTION(getTlVertexMod) 
-	#endif
-
-	#ifndef GEODE_STATICS_getTrVertexMod
-		#define GEODE_STATICS_getTrVertexMod
-		GEODE_AS_STATIC_FUNCTION(getTrVertexMod) 
-	#endif
-
-	#ifndef GEODE_STATICS_getUnflippedOffsetPosition
-		#define GEODE_STATICS_getUnflippedOffsetPosition
-		GEODE_AS_STATIC_FUNCTION(getUnflippedOffsetPosition) 
-	#endif
-
-	#ifndef GEODE_STATICS_getUseVertexMod
-		#define GEODE_STATICS_getUseVertexMod
-		GEODE_AS_STATIC_FUNCTION(getUseVertexMod) 
-	#endif
-
-	#ifndef GEODE_STATICS_setAtlasIndex
-		#define GEODE_STATICS_setAtlasIndex
-		GEODE_AS_STATIC_FUNCTION(setAtlasIndex) 
-	#endif
-
-	#ifndef GEODE_STATICS_setBlVertexMod
-		#define GEODE_STATICS_setBlVertexMod
-		GEODE_AS_STATIC_FUNCTION(setBlVertexMod) 
-	#endif
-
-	#ifndef GEODE_STATICS_setBrVertexMod
-		#define GEODE_STATICS_setBrVertexMod
-		GEODE_AS_STATIC_FUNCTION(setBrVertexMod) 
-	#endif
-
-	#ifndef GEODE_STATICS_setDontDraw
-		#define GEODE_STATICS_setDontDraw
-		GEODE_AS_STATIC_FUNCTION(setDontDraw) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFlipX
-		#define GEODE_STATICS_setFlipX
-		GEODE_AS_STATIC_FUNCTION(setFlipX) 
-	#endif
-
-	#ifndef GEODE_STATICS_setFlipY
-		#define GEODE_STATICS_setFlipY
-		GEODE_AS_STATIC_FUNCTION(setFlipY) 
-	#endif
-
-	#ifndef GEODE_STATICS_setTextureAtlas
-		#define GEODE_STATICS_setTextureAtlas
-		GEODE_AS_STATIC_FUNCTION(setTextureAtlas) 
-	#endif
-
-	#ifndef GEODE_STATICS_setTlVertexMod
-		#define GEODE_STATICS_setTlVertexMod
-		GEODE_AS_STATIC_FUNCTION(setTlVertexMod) 
-	#endif
-
-	#ifndef GEODE_STATICS_setTrVertexMod
-		#define GEODE_STATICS_setTrVertexMod
-		GEODE_AS_STATIC_FUNCTION(setTrVertexMod) 
-	#endif
-
-	#ifndef GEODE_STATICS_setUseVertexMod
-		#define GEODE_STATICS_setUseVertexMod
-		GEODE_AS_STATIC_FUNCTION(setUseVertexMod) 
-	#endif
-
-	#ifndef GEODE_STATICS_isFlipX
-		#define GEODE_STATICS_isFlipX
-		GEODE_AS_STATIC_FUNCTION(isFlipX) 
-	#endif
-
-	#ifndef GEODE_STATICS_isFlipY
-		#define GEODE_STATICS_isFlipY
-		GEODE_AS_STATIC_FUNCTION(isFlipY) 
-	#endif
-
-	#ifndef GEODE_STATICS_isTextureRectRotated
-		#define GEODE_STATICS_isTextureRectRotated
-		GEODE_AS_STATIC_FUNCTION(isTextureRectRotated) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateColor
-		#define GEODE_STATICS_updateColor
-		GEODE_AS_STATIC_FUNCTION(updateColor) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -395,6 +265,31 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getTexture) 
 	#endif
 
+	#ifndef GEODE_STATICS_isFlipX
+		#define GEODE_STATICS_isFlipX
+		GEODE_AS_STATIC_FUNCTION(isFlipX) 
+	#endif
+
+	#ifndef GEODE_STATICS_isFlipY
+		#define GEODE_STATICS_isFlipY
+		GEODE_AS_STATIC_FUNCTION(isFlipY) 
+	#endif
+
+	#ifndef GEODE_STATICS_setFlipX
+		#define GEODE_STATICS_setFlipX
+		GEODE_AS_STATIC_FUNCTION(setFlipX) 
+	#endif
+
+	#ifndef GEODE_STATICS_setFlipY
+		#define GEODE_STATICS_setFlipY
+		GEODE_AS_STATIC_FUNCTION(setFlipY) 
+	#endif
+
+	#ifndef GEODE_STATICS_updateColor
+		#define GEODE_STATICS_updateColor
+		GEODE_AS_STATIC_FUNCTION(updateColor) 
+	#endif
+
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -414,136 +309,6 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_createWithTexture
 		#define GEODE_CONCEPT_CHECK_createWithTexture
 		GEODE_CONCEPT_FUNCTION_CHECK(createWithTexture) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getAtlasIndex
-		#define GEODE_CONCEPT_CHECK_getAtlasIndex
-		GEODE_CONCEPT_FUNCTION_CHECK(getAtlasIndex) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getBlVertexMod
-		#define GEODE_CONCEPT_CHECK_getBlVertexMod
-		GEODE_CONCEPT_FUNCTION_CHECK(getBlVertexMod) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getBrVertexMod
-		#define GEODE_CONCEPT_CHECK_getBrVertexMod
-		GEODE_CONCEPT_FUNCTION_CHECK(getBrVertexMod) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getDontDraw
-		#define GEODE_CONCEPT_CHECK_getDontDraw
-		GEODE_CONCEPT_FUNCTION_CHECK(getDontDraw) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getOffsetPosition
-		#define GEODE_CONCEPT_CHECK_getOffsetPosition
-		GEODE_CONCEPT_FUNCTION_CHECK(getOffsetPosition) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getQuad
-		#define GEODE_CONCEPT_CHECK_getQuad
-		GEODE_CONCEPT_FUNCTION_CHECK(getQuad) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getTextureAtlas
-		#define GEODE_CONCEPT_CHECK_getTextureAtlas
-		GEODE_CONCEPT_FUNCTION_CHECK(getTextureAtlas) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getTextureRect
-		#define GEODE_CONCEPT_CHECK_getTextureRect
-		GEODE_CONCEPT_FUNCTION_CHECK(getTextureRect) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getTlVertexMod
-		#define GEODE_CONCEPT_CHECK_getTlVertexMod
-		GEODE_CONCEPT_FUNCTION_CHECK(getTlVertexMod) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getTrVertexMod
-		#define GEODE_CONCEPT_CHECK_getTrVertexMod
-		GEODE_CONCEPT_FUNCTION_CHECK(getTrVertexMod) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getUnflippedOffsetPosition
-		#define GEODE_CONCEPT_CHECK_getUnflippedOffsetPosition
-		GEODE_CONCEPT_FUNCTION_CHECK(getUnflippedOffsetPosition) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getUseVertexMod
-		#define GEODE_CONCEPT_CHECK_getUseVertexMod
-		GEODE_CONCEPT_FUNCTION_CHECK(getUseVertexMod) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setAtlasIndex
-		#define GEODE_CONCEPT_CHECK_setAtlasIndex
-		GEODE_CONCEPT_FUNCTION_CHECK(setAtlasIndex) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setBlVertexMod
-		#define GEODE_CONCEPT_CHECK_setBlVertexMod
-		GEODE_CONCEPT_FUNCTION_CHECK(setBlVertexMod) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setBrVertexMod
-		#define GEODE_CONCEPT_CHECK_setBrVertexMod
-		GEODE_CONCEPT_FUNCTION_CHECK(setBrVertexMod) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setDontDraw
-		#define GEODE_CONCEPT_CHECK_setDontDraw
-		GEODE_CONCEPT_FUNCTION_CHECK(setDontDraw) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setFlipX
-		#define GEODE_CONCEPT_CHECK_setFlipX
-		GEODE_CONCEPT_FUNCTION_CHECK(setFlipX) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setFlipY
-		#define GEODE_CONCEPT_CHECK_setFlipY
-		GEODE_CONCEPT_FUNCTION_CHECK(setFlipY) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setTextureAtlas
-		#define GEODE_CONCEPT_CHECK_setTextureAtlas
-		GEODE_CONCEPT_FUNCTION_CHECK(setTextureAtlas) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setTlVertexMod
-		#define GEODE_CONCEPT_CHECK_setTlVertexMod
-		GEODE_CONCEPT_FUNCTION_CHECK(setTlVertexMod) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setTrVertexMod
-		#define GEODE_CONCEPT_CHECK_setTrVertexMod
-		GEODE_CONCEPT_FUNCTION_CHECK(setTrVertexMod) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setUseVertexMod
-		#define GEODE_CONCEPT_CHECK_setUseVertexMod
-		GEODE_CONCEPT_FUNCTION_CHECK(setUseVertexMod) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_isFlipX
-		#define GEODE_CONCEPT_CHECK_isFlipX
-		GEODE_CONCEPT_FUNCTION_CHECK(isFlipX) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_isFlipY
-		#define GEODE_CONCEPT_CHECK_isFlipY
-		GEODE_CONCEPT_FUNCTION_CHECK(isFlipY) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_isTextureRectRotated
-		#define GEODE_CONCEPT_CHECK_isTextureRectRotated
-		GEODE_CONCEPT_FUNCTION_CHECK(isTextureRectRotated) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_updateColor
-		#define GEODE_CONCEPT_CHECK_updateColor
-		GEODE_CONCEPT_FUNCTION_CHECK(updateColor) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_init
@@ -786,6 +551,31 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(getTexture) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_isFlipX
+		#define GEODE_CONCEPT_CHECK_isFlipX
+		GEODE_CONCEPT_FUNCTION_CHECK(isFlipX) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_isFlipY
+		#define GEODE_CONCEPT_CHECK_isFlipY
+		GEODE_CONCEPT_FUNCTION_CHECK(isFlipY) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setFlipX
+		#define GEODE_CONCEPT_CHECK_setFlipX
+		GEODE_CONCEPT_FUNCTION_CHECK(setFlipX) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setFlipY
+		#define GEODE_CONCEPT_CHECK_setFlipY
+		GEODE_CONCEPT_FUNCTION_CHECK(setFlipY) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_updateColor
+		#define GEODE_CONCEPT_CHECK_updateColor
+		GEODE_CONCEPT_FUNCTION_CHECK(updateColor) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::CCSprite> : ModifyBase<ModifyDerive<Der, cocos2d::CCSprite>> {
@@ -795,41 +585,15 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCSprite@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCSprite, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCSprite@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCSprite)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::create)), Default, cocos2d::CCSprite, create, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCSprite::create)), Default, cocos2d::CCSprite, create, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, cocos2d::CCRect const&>::func(&cocos2d::CCSprite::create)), Default, cocos2d::CCSprite, create, char const*, cocos2d::CCRect const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::create)), Default, cocos2d::CCSprite, create, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCSpriteFrame*>::func(&cocos2d::CCSprite::createWithSpriteFrame)), Default, cocos2d::CCSprite, createWithSpriteFrame, cocos2d::CCSpriteFrame*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCSprite::createWithSpriteFrameName)), Default, cocos2d::CCSprite, createWithSpriteFrameName, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTexture2D*>::func(&cocos2d::CCSprite::createWithTexture)), Default, cocos2d::CCSprite, createWithTexture, cocos2d::CCTexture2D*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTexture2D*, cocos2d::CCRect const&>::func(&cocos2d::CCSprite::createWithTexture)), Default, cocos2d::CCSprite, createWithTexture, cocos2d::CCTexture2D*, cocos2d::CCRect const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::getAtlasIndex)), Thiscall, cocos2d::CCSprite, getAtlasIndex, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::getBlVertexMod)), Thiscall, cocos2d::CCSprite, getBlVertexMod, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::getBrVertexMod)), Thiscall, cocos2d::CCSprite, getBrVertexMod, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::getDontDraw)), Thiscall, cocos2d::CCSprite, getDontDraw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::getOffsetPosition)), Thiscall, cocos2d::CCSprite, getOffsetPosition, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::getQuad)), Thiscall, cocos2d::CCSprite, getQuad, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::getTextureAtlas)), Thiscall, cocos2d::CCSprite, getTextureAtlas, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::getTextureRect)), Thiscall, cocos2d::CCSprite, getTextureRect, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::getTlVertexMod)), Thiscall, cocos2d::CCSprite, getTlVertexMod, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::getTrVertexMod)), Thiscall, cocos2d::CCSprite, getTrVertexMod, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::getUnflippedOffsetPosition)), Thiscall, cocos2d::CCSprite, getUnflippedOffsetPosition, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::getUseVertexMod)), Thiscall, cocos2d::CCSprite, getUseVertexMod, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int>::func(&cocos2d::CCSprite::setAtlasIndex)), Thiscall, cocos2d::CCSprite, setAtlasIndex, unsigned int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCSprite::setBlVertexMod)), Thiscall, cocos2d::CCSprite, setBlVertexMod, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCSprite::setBrVertexMod)), Thiscall, cocos2d::CCSprite, setBrVertexMod, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCSprite::setDontDraw)), Thiscall, cocos2d::CCSprite, setDontDraw, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCSprite::setFlipX)), Thiscall, cocos2d::CCSprite, setFlipX, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCSprite::setFlipY)), Thiscall, cocos2d::CCSprite, setFlipY, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCTextureAtlas*>::func(&cocos2d::CCSprite::setTextureAtlas)), Thiscall, cocos2d::CCSprite, setTextureAtlas, cocos2d::CCTextureAtlas*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCSprite::setTlVertexMod)), Thiscall, cocos2d::CCSprite, setTlVertexMod, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCSprite::setTrVertexMod)), Thiscall, cocos2d::CCSprite, setTrVertexMod, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCSprite::setUseVertexMod)), Thiscall, cocos2d::CCSprite, setUseVertexMod, bool)
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCSprite@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCSprite, )
-			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCSprite@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCSprite)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::isFlipX)), Thiscall, cocos2d::CCSprite, isFlipX, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::isFlipY)), Thiscall, cocos2d::CCSprite, isFlipY, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::isTextureRectRotated)), Thiscall, cocos2d::CCSprite, isTextureRectRotated, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::updateColor)), Thiscall, cocos2d::CCSprite, updateColor, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCSprite::init)), Thiscall, cocos2d::CCSprite, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCSprite::setVertexZ)), Thiscall, cocos2d::CCSprite, setVertexZ, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCSprite::setScaleX)), Thiscall, cocos2d::CCSprite, setScaleX, float)
@@ -860,7 +624,7 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<char const*>::func(&cocos2d::CCSprite::initWithSpriteFrameName)), Thiscall, cocos2d::CCSprite, initWithSpriteFrameName, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<char const*>::func(&cocos2d::CCSprite::initWithFile)), Thiscall, cocos2d::CCSprite, initWithFile, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<char const*, cocos2d::CCRect const&>::func(&cocos2d::CCSprite::initWithFile)), Thiscall, cocos2d::CCSprite, initWithFile, char const*, cocos2d::CCRect const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccColor3B const&>::func(&cocos2d::CCSprite::setChildColor)), Thiscall, cocos2d::CCSprite, setChildColor, cocos2d::_ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccColor3B const&>::func(&cocos2d::CCSprite::setChildColor)), Thiscall, cocos2d::CCSprite, setChildColor, cocos2d::ccColor3B const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<unsigned char>::func(&cocos2d::CCSprite::setChildOpacity)), Thiscall, cocos2d::CCSprite, setChildOpacity, unsigned char)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCSprite::getBatchNode)), Thiscall, cocos2d::CCSprite, getBatchNode, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCSpriteBatchNode*>::func(&cocos2d::CCSprite::setBatchNode)), Thiscall, cocos2d::CCSprite, setBatchNode, cocos2d::CCSpriteBatchNode*)
@@ -878,12 +642,17 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<bool>::func(&cocos2d::CCSprite::setDirtyRecursively)), Thiscall, cocos2d::CCSprite, setDirtyRecursively, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<unsigned char>::func(&cocos2d::CCSprite::setOpacity)), Thiscall, cocos2d::CCSprite, setOpacity, unsigned char)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<unsigned char>::func(&cocos2d::CCSprite::updateDisplayedOpacity)), Thiscall, cocos2d::CCSprite, updateDisplayedOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccColor3B const&>::func(&cocos2d::CCSprite::setColor)), Thiscall, cocos2d::CCSprite, setColor, cocos2d::_ccColor3B const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::_ccColor3B const&>::func(&cocos2d::CCSprite::updateDisplayedColor)), Thiscall, cocos2d::CCSprite, updateDisplayedColor, cocos2d::_ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccColor3B const&>::func(&cocos2d::CCSprite::setColor)), Thiscall, cocos2d::CCSprite, setColor, cocos2d::ccColor3B const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::ccColor3B const&>::func(&cocos2d::CCSprite::updateDisplayedColor)), Thiscall, cocos2d::CCSprite, updateDisplayedColor, cocos2d::ccColor3B const&)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<bool>::func(&cocos2d::CCSprite::setOpacityModifyRGB)), Thiscall, cocos2d::CCSprite, setOpacityModifyRGB, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCSprite::isOpacityModifyRGB)), Thiscall, cocos2d::CCSprite, isOpacityModifyRGB, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCTexture2D*>::func(&cocos2d::CCSprite::setTexture)), Thiscall, cocos2d::CCSprite, setTexture, cocos2d::CCTexture2D*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCSprite::getTexture)), Thiscall, cocos2d::CCSprite, getTexture, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::isFlipX)), Thiscall, cocos2d::CCSprite, isFlipX, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::isFlipY)), Thiscall, cocos2d::CCSprite, isFlipY, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCSprite::setFlipX)), Thiscall, cocos2d::CCSprite, setFlipX, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<bool>::func(&cocos2d::CCSprite::setFlipY)), Thiscall, cocos2d::CCSprite, setFlipY, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSprite::updateColor)), Thiscall, cocos2d::CCSprite, updateColor, )
 		}
 	};
 }

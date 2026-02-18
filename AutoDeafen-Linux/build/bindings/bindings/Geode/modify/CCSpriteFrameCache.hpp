@@ -5,14 +5,14 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
+	#ifndef GEODE_STATICS_purgeSharedSpriteFrameCache
+		#define GEODE_STATICS_purgeSharedSpriteFrameCache
+		GEODE_AS_STATIC_FUNCTION(purgeSharedSpriteFrameCache) 
+	#endif
+
 	#ifndef GEODE_STATICS_sharedSpriteFrameCache
 		#define GEODE_STATICS_sharedSpriteFrameCache
 		GEODE_AS_STATIC_FUNCTION(sharedSpriteFrameCache) 
-	#endif
-
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
 	#ifndef GEODE_STATICS_addSpriteFrame
@@ -28,6 +28,11 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_addSpriteFramesWithFile
 		#define GEODE_STATICS_addSpriteFramesWithFile
 		GEODE_AS_STATIC_FUNCTION(addSpriteFramesWithFile) 
+	#endif
+
+	#ifndef GEODE_STATICS_init
+		#define GEODE_STATICS_init
+		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
 	#ifndef GEODE_STATICS_removeSpriteFrameByName
@@ -66,14 +71,14 @@ namespace geode::modifier {
 	#endif
 
     
+	#ifndef GEODE_CONCEPT_CHECK_purgeSharedSpriteFrameCache
+		#define GEODE_CONCEPT_CHECK_purgeSharedSpriteFrameCache
+		GEODE_CONCEPT_FUNCTION_CHECK(purgeSharedSpriteFrameCache) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_sharedSpriteFrameCache
 		#define GEODE_CONCEPT_CHECK_sharedSpriteFrameCache
 		GEODE_CONCEPT_FUNCTION_CHECK(sharedSpriteFrameCache) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_init
-		#define GEODE_CONCEPT_CHECK_init
-		GEODE_CONCEPT_FUNCTION_CHECK(init) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_addSpriteFrame
@@ -89,6 +94,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_addSpriteFramesWithFile
 		#define GEODE_CONCEPT_CHECK_addSpriteFramesWithFile
 		GEODE_CONCEPT_FUNCTION_CHECK(addSpriteFramesWithFile) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_init
+		#define GEODE_CONCEPT_CHECK_init
+		GEODE_CONCEPT_FUNCTION_CHECK(init) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_removeSpriteFrameByName
@@ -135,13 +145,15 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCSpriteFrameCache@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCSpriteFrameCache)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSpriteFrameCache::purgeSharedSpriteFrameCache)), Default, cocos2d::CCSpriteFrameCache, purgeSharedSpriteFrameCache, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSpriteFrameCache::sharedSpriteFrameCache)), Default, cocos2d::CCSpriteFrameCache, sharedSpriteFrameCache, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSpriteFrameCache::init)), Thiscall, cocos2d::CCSpriteFrameCache, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCSpriteFrame*, char const*>::func(&cocos2d::CCSpriteFrameCache::addSpriteFrame)), Thiscall, cocos2d::CCSpriteFrameCache, addSpriteFrame, cocos2d::CCSpriteFrame*, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCDictionary*, cocos2d::CCTexture2D*>::func(&cocos2d::CCSpriteFrameCache::addSpriteFramesWithDictionary)), Thiscall, cocos2d::CCSpriteFrameCache, addSpriteFramesWithDictionary, cocos2d::CCDictionary*, cocos2d::CCTexture2D*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*>::func(&cocos2d::CCSpriteFrameCache::addSpriteFramesWithFile)), Thiscall, cocos2d::CCSpriteFrameCache, addSpriteFramesWithFile, char const*, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCSpriteFrameCache::addSpriteFramesWithFile)), Thiscall, cocos2d::CCSpriteFrameCache, addSpriteFramesWithFile, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, char const*>::func(&cocos2d::CCSpriteFrameCache::addSpriteFramesWithFile)), Thiscall, cocos2d::CCSpriteFrameCache, addSpriteFramesWithFile, char const*, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*, cocos2d::CCTexture2D*>::func(&cocos2d::CCSpriteFrameCache::addSpriteFramesWithFile)), Thiscall, cocos2d::CCSpriteFrameCache, addSpriteFramesWithFile, char const*, cocos2d::CCTexture2D*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSpriteFrameCache::init)), Thiscall, cocos2d::CCSpriteFrameCache, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCSpriteFrameCache::removeSpriteFrameByName)), Thiscall, cocos2d::CCSpriteFrameCache, removeSpriteFrameByName, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCSpriteFrameCache::removeSpriteFrames)), Thiscall, cocos2d::CCSpriteFrameCache, removeSpriteFrames, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCDictionary*>::func(&cocos2d::CCSpriteFrameCache::removeSpriteFramesFromDictionary)), Thiscall, cocos2d::CCSpriteFrameCache, removeSpriteFramesFromDictionary, cocos2d::CCDictionary*)

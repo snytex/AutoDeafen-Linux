@@ -18,121 +18,136 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(GJPathPage, FLAlertLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x284d30
-     * @note[short] MacOS (Intel): 0x2ea7c0
-     * @note[short] Windows: 0x27db80
+     * @note[short] MacOS (ARM): 0x28fb60
+     * @note[short] MacOS (Intel): 0x2feb40
+     * @note[short] Windows: 0x2854b0
+     * @note[short] iOS: 0x3b8684
      * @note[short] Android
      */
-    static GJPathPage* create(int p0, GJPathsLayer* p1);
+    static GJPathPage* create(int path, GJPathsLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x288950
-     * @note[short] MacOS (Intel): 0x2ee860
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x3b3c68
+     * @note[short] MacOS (ARM): 0x293740
+     * @note[short] MacOS (Intel): 0x302bb0
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x3bb4a0
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x2887ec
-     * @note[short] MacOS (Intel): 0x2ee720
-     * @note[short] Windows: 0x281710
-     * @note[short] iOS: 0x3b3c5c
+     * @note[short] MacOS (ARM): 0x2935fc
+     * @note[short] MacOS (Intel): 0x302a70
+     * @note[short] Windows: 0x289040
+     * @note[short] iOS: 0x3bb494
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x288988
-     * @note[short] MacOS (Intel): 0x2ee8a0
-     * @note[short] Windows: 0x867a0
-     * @note[short] iOS: 0x3b3ca0
+     * @note[short] MacOS (ARM): 0x293778
+     * @note[short] MacOS (Intel): 0x302bf0
+     * @note[short] Windows: 0x867f0
+     * @note[short] iOS: 0x3bb4d8
      * @note[short] Android
      */
     virtual void show();
 
     /**
-     * @note[short] MacOS (ARM): 0x286f08
-     * @note[short] MacOS (Intel): 0x2ecb40
-     * @note[short] Windows: 0x27fb40
-     * @note[short] iOS: 0x3b2b2c
+     * @note[short] MacOS (ARM): 0x291d44
+     * @note[short] MacOS (Intel): 0x300ea0
+     * @note[short] Windows: 0x287470
+     * @note[short] iOS: 0x3ba374
      * @note[short] Android
      */
-    virtual void didPurchaseItem(GJStoreItem* p0);
+    virtual void didPurchaseItem(GJStoreItem* item);
 
     /**
-     * @note[short] MacOS (ARM): 0x285220
-     * @note[short] MacOS (Intel): 0x2eada0
-     * @note[short] Windows: 0x27dcb0
+     * @note[short] MacOS (ARM): 0x290054
+     * @note[short] MacOS (Intel): 0x2ff120
+     * @note[short] Windows: 0x2855e0
+     * @note[short] iOS: 0x3b8a0c
      * @note[short] Android
      */
-    bool init(int p0, GJPathsLayer* p1);
+    bool init(int path, GJPathsLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x286ee0
-     * @note[short] MacOS (Intel): 0x2ecb10
-     * @note[short] Windows: 0x27f8e0
+     * @note[short] MacOS (ARM): 0x291d20
+     * @note[short] MacOS (Intel): 0x300e70
+     * @note[short] Windows: 0x287210
+     * @note[short] iOS: 0x3ba350
      * @note[short] Android
      */
     void onActivatePath(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x281670
+     * @note[short] MacOS (ARM): 0x2919b8
+     * @note[short] MacOS (Intel): 0x300b40
+     * @note[short] Windows: 0x288fa0
+     * @note[short] iOS: 0x3ba0ac
      * @note[short] Android
      */
     void onBack(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x27f950
+     * @note[short] MacOS (ARM): 0x291a58
+     * @note[short] MacOS (Intel): 0x300bd0
+     * @note[short] Windows: 0x287280
+     * @note[short] iOS: 0x3ba14c
      * @note[short] Android
      */
     void onIconInfo(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x286dd4
-     * @note[short] MacOS (Intel): 0x2eca20
-     * @note[short] Windows: 0x27fb50
+     * @note[short] MacOS (ARM): 0x291c10
+     * @note[short] MacOS (Intel): 0x300d80
+     * @note[short] Windows: 0x287480
+     * @note[short] iOS: 0x3ba264
      * @note[short] Android
      */
     void onUnlock(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x286f0c
-     * @note[short] MacOS (Intel): 0x2ecb50
-     * @note[short] Windows: 0x280400
+     * @note[short] MacOS (ARM): 0x291d48
+     * @note[short] MacOS (Intel): 0x300eb0
+     * @note[short] Windows: 0x287d30
+     * @note[short] iOS: 0x3ba378
      * @note[short] Android
      */
     void playUnlockAnimation();
 
     /**
-     * @note[short] MacOS (ARM): 0x2874bc
-     * @note[short] MacOS (Intel): 0x2ed200
-     * @note[short] Windows: 0x27fd30
+     * @note[short] MacOS (ARM): 0x2922f4
+     * @note[short] MacOS (Intel): 0x301560
+     * @note[short] Windows: 0x287660
+     * @note[short] iOS: 0x3ba7a0
      * @note[short] Android
      */
-    void showCantAffordMessage(GJStoreItem* p0);
+    void showCantAffordMessage(GJStoreItem* item);
 
     /**
-     * @note[short] MacOS (ARM): 0x287dd0
-     * @note[short] MacOS (Intel): 0x2edb90
-     * @note[short] Windows: 0x281540
+     * @note[short] MacOS (ARM): 0x292bf0
+     * @note[short] MacOS (Intel): 0x301ef0
+     * @note[short] Windows: 0x288e70
+     * @note[short] iOS: 0x3bae4c
      * @note[short] Android
      */
     void unlockAnimationFinished();
 
     /**
-     * @note[short] MacOS (ARM): 0x287b88
-     * @note[short] MacOS (Intel): 0x2ed8b0
-     * @note[short] Windows: 0x280a50
+     * @note[short] MacOS (ARM): 0x2929a8
+     * @note[short] MacOS (Intel): 0x301c00
+     * @note[short] Windows: 0x288380
+     * @note[short] iOS: 0x3bacf4
      * @note[short] Android
      */
     void unlockAnimationStep2();
 
     /**
-     * @note[short] MacOS (ARM): 0x287f2c
-     * @note[short] MacOS (Intel): 0x2edcf0
-     * @note[short] Windows: 0x280cd0
+     * @note[short] MacOS (ARM): 0x292d48
+     * @note[short] MacOS (Intel): 0x302050
+     * @note[short] Windows: 0x288600
+     * @note[short] iOS: 0x3baed8
      * @note[short] Android
      */
     void unlockAnimationStep3();

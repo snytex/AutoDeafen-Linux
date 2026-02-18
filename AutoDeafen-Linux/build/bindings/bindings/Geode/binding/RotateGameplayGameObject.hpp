@@ -16,47 +16,64 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(RotateGameplayGameObject, EffectGameObject)
 
     /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     RotateGameplayGameObject();
+
+    /**
+     * @note[short] MacOS (ARM): 0x1a0434
+     * @note[short] MacOS (Intel): 0x1f1b30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x398a8c
      * @note[short] Android
      */
     static RotateGameplayGameObject* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x198058
-     * @note[short] MacOS (Intel): 0x1dfcf0
-     * @note[short] Windows: 0x4ab3a0
-     * @note[short] iOS: 0x3918bc
+     * @note[short] MacOS (ARM): 0x1a0514
+     * @note[short] MacOS (Intel): 0x1f1c20
+     * @note[short] Windows: 0x4c3ef0
+     * @note[short] iOS: 0x398b60
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x199834
-     * @note[short] MacOS (Intel): 0x1e1a10
-     * @note[short] Windows: 0x4abcc0
-     * @note[short] iOS: 0x392124
+     * @note[short] MacOS (ARM): 0x1a1cb8
+     * @note[short] MacOS (Intel): 0x1f3980
+     * @note[short] Windows: 0x4c4810
+     * @note[short] iOS: 0x3993e0
      * @note[short] Android
      */
     virtual void updateStartValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x199544
-     * @note[short] MacOS (Intel): 0x1e1690
-     * @note[short] Windows: 0x4aba30
-     * @note[short] iOS: 0x391e68
+     * @note[short] MacOS (ARM): 0x1a19cc
+     * @note[short] MacOS (Intel): 0x1f3610
+     * @note[short] Windows: 0x4c4580
+     * @note[short] iOS: 0x399124
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x1980a8
-     * @note[short] MacOS (Intel): 0x1dfd40
-     * @note[short] Windows: 0x4ab410
-     * @note[short] iOS: 0x39190c
+     * @note[short] MacOS (ARM): 0x1a0564
+     * @note[short] MacOS (Intel): 0x1f1c70
+     * @note[short] Windows: 0x4c3f60
+     * @note[short] iOS: 0x398bb0
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
+     * @note[short] MacOS (ARM): 0x1a1c4c
+     * @note[short] MacOS (Intel): 0x1f3930
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x399384
      * @note[short] Android
      */
     void updateGameplayRotation();

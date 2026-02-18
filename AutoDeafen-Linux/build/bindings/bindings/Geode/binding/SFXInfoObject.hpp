@@ -24,21 +24,28 @@ public:
      SFXInfoObject();
 
     /**
+     * @note[short] MacOS (ARM): 0x4e03bc
+     * @note[short] MacOS (Intel): 0x596460
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x15aa2c
      * @note[short] Android: Rebinded
      */
     static SFXInfoObject* create(int id, gd::string name, int folderID, int size, int duration);
 
     /**
+     * @note[short] MacOS (ARM): 0x4e2664
+     * @note[short] MacOS (Intel): 0x598dc0
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x15c430
      * @note[short] Android
      */
     gd::string getLowerCaseName();
 
     /**
-     * @note[short] MacOS (ARM): 0x4d3920
-     * @note[short] MacOS (Intel): 0x580f10
+     * @note[short] MacOS (ARM): 0x4e2614
+     * @note[short] MacOS (Intel): 0x598d70
      * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
     bool init(int id, gd::string name, int folderID, int size, int duration);

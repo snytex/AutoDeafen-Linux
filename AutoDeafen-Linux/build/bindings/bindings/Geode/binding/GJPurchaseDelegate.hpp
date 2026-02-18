@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void didPurchaseItem(GJStoreItem* p0);
+    virtual void didPurchaseItem(GJStoreItem* item);
 };

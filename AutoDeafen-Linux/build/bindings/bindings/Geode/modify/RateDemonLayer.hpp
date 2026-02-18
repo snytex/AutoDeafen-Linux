@@ -101,14 +101,14 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RateDemonLayer, create, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b22a0, Thiscall, RateDemonLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b2080, Thiscall, RateDemonLayer, uploadActionFinished, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b2110, Thiscall, RateDemonLayer, uploadActionFailed, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b21e0, Thiscall, RateDemonLayer, onClosePopup, UploadActionPopup*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b1790, Thiscall, RateDemonLayer, init, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b2260, Thiscall, RateDemonLayer, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b1ee0, Thiscall, RateDemonLayer, onRate, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b1d60, Thiscall, RateDemonLayer, selectRating, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c9660, Thiscall, RateDemonLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c9440, Thiscall, RateDemonLayer, uploadActionFinished, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c94d0, Thiscall, RateDemonLayer, uploadActionFailed, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c95a0, Thiscall, RateDemonLayer, onClosePopup, UploadActionPopup*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c8b50, Thiscall, RateDemonLayer, init, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c9620, Thiscall, RateDemonLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c92a0, Thiscall, RateDemonLayer, onRate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c9120, Thiscall, RateDemonLayer, selectRating, cocos2d::CCObject*)
 		}
 	};
 }

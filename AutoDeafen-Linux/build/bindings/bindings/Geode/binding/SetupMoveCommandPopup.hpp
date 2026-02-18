@@ -16,79 +16,82 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupMoveCommandPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x278ef0
+     * @note[short] MacOS (ARM): 0x52dbb0
+     * @note[short] MacOS (Intel): 0x607250
+     * @note[short] Windows: 0x280820
+     * @note[short] iOS: 0x273808
      * @note[short] Android
      */
-    static SetupMoveCommandPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static SetupMoveCommandPopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x5211d4
-     * @note[short] MacOS (Intel): 0x5f1410
-     * @note[short] Windows: 0x27a4d0
-     * @note[short] iOS: 0x273cb8
+     * @note[short] MacOS (ARM): 0x52f1c8
+     * @note[short] MacOS (Intel): 0x608ca0
+     * @note[short] Windows: 0x281e00
+     * @note[short] iOS: 0x274b38
      * @note[short] Android
      */
-    virtual void updateInputValue(int p0, float& p1);
+    virtual void updateInputValue(int tag, float& value);
 
     /**
-     * @note[short] MacOS (ARM): 0x5211a8
-     * @note[short] MacOS (Intel): 0x5f13d0
-     * @note[short] Windows: 0x27a4a0
-     * @note[short] iOS: 0x273c8c
+     * @note[short] MacOS (ARM): 0x52f1a0
+     * @note[short] MacOS (Intel): 0x608c70
+     * @note[short] Windows: 0x281dd0
+     * @note[short] iOS: 0x274b10
      * @note[short] Android
      */
-    virtual void updateInputNode(int p0, float p1);
+    virtual void updateInputNode(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x521208
-     * @note[short] MacOS (Intel): 0x5f1450
-     * @note[short] Windows: 0x27a500
-     * @note[short] iOS: 0x273cec
+     * @note[short] MacOS (ARM): 0x52f1f8
+     * @note[short] MacOS (Intel): 0x608cd0
+     * @note[short] Windows: 0x281e30
+     * @note[short] iOS: 0x274b68
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x5210f4
-     * @note[short] MacOS (Intel): 0x5f12f0
-     * @note[short] Windows: 0x27a3e0
-     * @note[short] iOS: 0x273bd8
+     * @note[short] MacOS (ARM): 0x52f0ec
+     * @note[short] MacOS (Intel): 0x608b90
+     * @note[short] Windows: 0x281d10
+     * @note[short] iOS: 0x274a5c
      * @note[short] Android
      */
-    virtual float triggerValueFromSliderValue(int p0, float p1);
+    virtual float triggerValueFromSliderValue(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x521138
-     * @note[short] MacOS (Intel): 0x5f1340
-     * @note[short] Windows: 0x27a430
-     * @note[short] iOS: 0x273c1c
+     * @note[short] MacOS (ARM): 0x52f130
+     * @note[short] MacOS (Intel): 0x608be0
+     * @note[short] Windows: 0x281d60
+     * @note[short] iOS: 0x274aa0
      * @note[short] Android
      */
-    virtual float triggerSliderValueFromValue(int p0, float p1);
+    virtual float triggerSliderValueFromValue(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x5213d8
-     * @note[short] MacOS (Intel): 0x5f1650
-     * @note[short] Windows: 0x27ab70
-     * @note[short] iOS: 0x273eac
+     * @note[short] MacOS (ARM): 0x52f3c0
+     * @note[short] MacOS (Intel): 0x608ee0
+     * @note[short] Windows: 0x2824a0
+     * @note[short] iOS: 0x274d28
      * @note[short] Android
      */
     virtual void onCustomToggleTriggerValue(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x51fd2c
-     * @note[short] MacOS (Intel): 0x5efb70
-     * @note[short] Windows: 0x279010
-     * @note[short] iOS: 0x272a50
+     * @note[short] MacOS (ARM): 0x52dd3c
+     * @note[short] MacOS (Intel): 0x607490
+     * @note[short] Windows: 0x280940
+     * @note[short] iOS: 0x2738e4
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x520f38
-     * @note[short] MacOS (Intel): 0x5f1140
-     * @note[short] Windows: 0x27a9b0
-     * @note[short] iOS: 0x273a1c
+     * @note[short] MacOS (ARM): 0x52ef40
+     * @note[short] MacOS (Intel): 0x6089e0
+     * @note[short] Windows: 0x2822e0
+     * @note[short] iOS: 0x2748b0
      * @note[short] Android
      */
     void updateControlVisibility();

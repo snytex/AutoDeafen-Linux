@@ -5,14 +5,9 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_getTimeScale
-		#define GEODE_STATICS_getTimeScale
-		GEODE_AS_STATIC_FUNCTION(getTimeScale) 
-	#endif
-
-	#ifndef GEODE_STATICS_setTimeScale
-		#define GEODE_STATICS_setTimeScale
-		GEODE_AS_STATIC_FUNCTION(setTimeScale) 
+	#ifndef GEODE_STATICS_update
+		#define GEODE_STATICS_update
+		GEODE_AS_STATIC_FUNCTION(update) 
 	#endif
 
 	#ifndef GEODE_STATICS_appendIn
@@ -110,20 +105,10 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(unscheduleUpdateForTarget) 
 	#endif
 
-	#ifndef GEODE_STATICS_update
-		#define GEODE_STATICS_update
-		GEODE_AS_STATIC_FUNCTION(update) 
-	#endif
-
     
-	#ifndef GEODE_CONCEPT_CHECK_getTimeScale
-		#define GEODE_CONCEPT_CHECK_getTimeScale
-		GEODE_CONCEPT_FUNCTION_CHECK(getTimeScale) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setTimeScale
-		#define GEODE_CONCEPT_CHECK_setTimeScale
-		GEODE_CONCEPT_FUNCTION_CHECK(setTimeScale) 
+	#ifndef GEODE_CONCEPT_CHECK_update
+		#define GEODE_CONCEPT_CHECK_update
+		GEODE_CONCEPT_FUNCTION_CHECK(update) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_appendIn
@@ -221,11 +206,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(unscheduleUpdateForTarget) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_update
-		#define GEODE_CONCEPT_CHECK_update
-		GEODE_CONCEPT_FUNCTION_CHECK(update) 
-	#endif
-
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::CCScheduler> : ModifyBase<ModifyDerive<Der, cocos2d::CCScheduler>> {
@@ -235,9 +215,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCScheduler::getTimeScale)), Thiscall, cocos2d::CCScheduler, getTimeScale, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<float>::func(&cocos2d::CCScheduler::setTimeScale)), Thiscall, cocos2d::CCScheduler, setTimeScale, float)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCScheduler@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCScheduler, )
 			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCScheduler@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCScheduler)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCScheduler::update)), Thiscall, cocos2d::CCScheduler, update, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::_listEntry**, cocos2d::CCObject*, bool>::func(&cocos2d::CCScheduler::appendIn)), Thiscall, cocos2d::CCScheduler, appendIn, cocos2d::_listEntry**, cocos2d::CCObject*, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*>::func(&cocos2d::CCScheduler::isTargetPaused)), Thiscall, cocos2d::CCScheduler, isTargetPaused, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCScheduler::pauseAllTargets)), Thiscall, cocos2d::CCScheduler, pauseAllTargets, )
@@ -249,8 +229,8 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*>::func(&cocos2d::CCScheduler::resumeTarget)), Thiscall, cocos2d::CCScheduler, resumeTarget, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCSet*>::func(&cocos2d::CCScheduler::resumeTargets)), Thiscall, cocos2d::CCScheduler, resumeTargets, cocos2d::CCSet*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int, float, bool>::func(&cocos2d::CCScheduler::scheduleScriptFunc)), Thiscall, cocos2d::CCScheduler, scheduleScriptFunc, unsigned int, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::SEL_SCHEDULE, cocos2d::CCObject*, float, unsigned int, float, bool>::func(&cocos2d::CCScheduler::scheduleSelector)), Thiscall, cocos2d::CCScheduler, scheduleSelector, cocos2d::SEL_SCHEDULE, cocos2d::CCObject*, float, unsigned int, float, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::SEL_SCHEDULE, cocos2d::CCObject*, float, bool>::func(&cocos2d::CCScheduler::scheduleSelector)), Thiscall, cocos2d::CCScheduler, scheduleSelector, cocos2d::SEL_SCHEDULE, cocos2d::CCObject*, float, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::SEL_SCHEDULE, cocos2d::CCObject*, float, unsigned int, float, bool>::func(&cocos2d::CCScheduler::scheduleSelector)), Thiscall, cocos2d::CCScheduler, scheduleSelector, cocos2d::SEL_SCHEDULE, cocos2d::CCObject*, float, unsigned int, float, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*, int, bool>::func(&cocos2d::CCScheduler::scheduleUpdateForTarget)), Thiscall, cocos2d::CCScheduler, scheduleUpdateForTarget, cocos2d::CCObject*, int, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCScheduler::unscheduleAll)), Thiscall, cocos2d::CCScheduler, unscheduleAll, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*>::func(&cocos2d::CCScheduler::unscheduleAllForTarget)), Thiscall, cocos2d::CCScheduler, unscheduleAllForTarget, cocos2d::CCObject*)
@@ -258,7 +238,6 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int>::func(&cocos2d::CCScheduler::unscheduleScriptEntry)), Thiscall, cocos2d::CCScheduler, unscheduleScriptEntry, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::SEL_SCHEDULE, cocos2d::CCObject*>::func(&cocos2d::CCScheduler::unscheduleSelector)), Thiscall, cocos2d::CCScheduler, unscheduleSelector, cocos2d::SEL_SCHEDULE, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject const*>::func(&cocos2d::CCScheduler::unscheduleUpdateForTarget)), Thiscall, cocos2d::CCScheduler, unscheduleUpdateForTarget, cocos2d::CCObject const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::CCScheduler::update)), Thiscall, cocos2d::CCScheduler, update, float)
 		}
 	};
 }

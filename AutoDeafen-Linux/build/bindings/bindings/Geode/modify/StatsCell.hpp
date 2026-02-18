@@ -20,11 +20,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(loadFromObject) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateBGColor
-		#define GEODE_STATICS_updateBGColor
-		GEODE_AS_STATIC_FUNCTION(updateBGColor) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_init
 		#define GEODE_CONCEPT_CHECK_init
@@ -61,10 +56,10 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(StatsCell, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xad710, Thiscall, StatsCell, draw, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(StatsCell, getTitleFromKey, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb2630, Thiscall, StatsCell, loadFromObject, StatsObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(StatsCell, updateBGColor, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xade20, Thiscall, StatsCell, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb3010, Thiscall, StatsCell, getTitleFromKey, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xb2db0, Thiscall, StatsCell, loadFromObject, StatsObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(StatsCell, updateBGColor, int)
 		}
 	};
 }

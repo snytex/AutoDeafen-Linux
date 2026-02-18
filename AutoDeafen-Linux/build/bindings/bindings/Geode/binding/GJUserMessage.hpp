@@ -15,28 +15,37 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJUserMessage, cocos2d::CCNode)
 
     /**
-     * @note[short] MacOS (ARM): 0x4a264c
-     * @note[short] MacOS (Intel): 0x549f70
-     * @note[short] Windows: 0x170ec0
-     * @note[short] iOS: 0xb3540
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     GJUserMessage();
+
+    /**
+     * @note[short] MacOS (ARM): 0x4afbe0
+     * @note[short] MacOS (Intel): 0x5607d0
+     * @note[short] Windows: 0x173ed0
+     * @note[short] iOS: 0xb014c
      * @note[short] Android
      */
     static GJUserMessage* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x490df0
-     * @note[short] MacOS (Intel): 0x537410
-     * @note[short] Windows: 0x170380
-     * @note[short] iOS: 0xa8330
+     * @note[short] MacOS (ARM): 0x49df20
+     * @note[short] MacOS (Intel): 0x54d980
+     * @note[short] Windows: 0x173390
+     * @note[short] iOS: 0xa4c20
      * @note[short] Android
      */
-    static GJUserMessage* create(cocos2d::CCDictionary* p0);
+    static GJUserMessage* create(cocos2d::CCDictionary* dict);
 
     /**
-     * @note[short] MacOS (ARM): 0x4a26e8
-     * @note[short] MacOS (Intel): 0x54a010
-     * @note[short] Windows: 0x77db0
-     * @note[short] iOS: 0xb35d0
+     * @note[short] MacOS (ARM): 0x4afc7c
+     * @note[short] MacOS (Intel): 0x560870
+     * @note[short] Windows: 0x77de0
+     * @note[short] iOS: 0xb01dc
      * @note[short] Android
      */
     virtual bool init();

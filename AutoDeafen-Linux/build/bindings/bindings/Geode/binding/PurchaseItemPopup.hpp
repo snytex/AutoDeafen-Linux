@@ -16,46 +16,46 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(PurchaseItemPopup, FLAlertLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x2a77d0
-     * @note[short] MacOS (Intel): 0x310ed0
-     * @note[short] Windows: 0x2a74d0
-     * @note[short] iOS: 0x14fa80
+     * @note[short] MacOS (ARM): 0x2b2cf8
+     * @note[short] MacOS (Intel): 0x325450
+     * @note[short] Windows: 0x2aeb90
+     * @note[short] iOS: 0x14c384
      * @note[short] Android
      */
-    static PurchaseItemPopup* create(GJStoreItem* p0);
+    static PurchaseItemPopup* create(GJStoreItem* item);
 
     /**
-     * @note[short] MacOS (ARM): 0x2aa32c
-     * @note[short] MacOS (Intel): 0x3140d0
-     * @note[short] Windows: 0x84650
-     * @note[short] iOS: 0x151c10
+     * @note[short] MacOS (ARM): 0x2b5858
+     * @note[short] MacOS (Intel): 0x328610
+     * @note[short] Windows: 0x846a0
+     * @note[short] iOS: 0x14e568
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x2a9818
-     * @note[short] MacOS (Intel): 0x3134b0
-     * @note[short] Windows: 0x2a75c0
-     * @note[short] iOS: 0x151228
+     * @note[short] MacOS (ARM): 0x2b4d4c
+     * @note[short] MacOS (Intel): 0x3279f0
+     * @note[short] Windows: 0x2aec80
+     * @note[short] iOS: 0x14db7c
      * @note[short] Android
      */
-    bool init(GJStoreItem* p0);
+    bool init(GJStoreItem* item);
 
     /**
-     * @note[short] MacOS (ARM): 0x2aa27c
-     * @note[short] MacOS (Intel): 0x314030
-     * @note[short] Windows: 0x84620
-     * @note[short] iOS: 0x151b60
+     * @note[short] MacOS (ARM): 0x2b57a8
+     * @note[short] MacOS (Intel): 0x328570
+     * @note[short] Windows: 0x84670
+     * @note[short] iOS: 0x14e4b8
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x2aa2b8
-     * @note[short] MacOS (Intel): 0x314060
-     * @note[short] Windows: 0x2a8470
-     * @note[short] iOS: 0x151b9c
+     * @note[short] MacOS (ARM): 0x2b57e4
+     * @note[short] MacOS (Intel): 0x3285a0
+     * @note[short] Windows: 0x2afb30
+     * @note[short] iOS: 0x14e4f4
      * @note[short] Android
      */
     void onPurchase(cocos2d::CCObject* sender);

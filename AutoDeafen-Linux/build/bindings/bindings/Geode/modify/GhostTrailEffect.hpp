@@ -65,13 +65,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x69fd0, Default, GhostTrailEffect, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6a0b0, Thiscall, GhostTrailEffect, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6a000, Default, GhostTrailEffect, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6a0e0, Thiscall, GhostTrailEffect, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GhostTrailEffect, draw, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GhostTrailEffect, doBlendAdditive, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GhostTrailEffect, runWithTarget, cocos2d::CCSprite*, float, float, float, float, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GhostTrailEffect, stopTrail, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6a110, Thiscall, GhostTrailEffect, trailSnapshot, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x6a140, Thiscall, GhostTrailEffect, trailSnapshot, float)
 		}
 	};
 }

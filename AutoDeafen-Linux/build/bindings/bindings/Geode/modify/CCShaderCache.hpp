@@ -15,14 +15,14 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(sharedShaderCache) 
 	#endif
 
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
 	#ifndef GEODE_STATICS_addProgram
 		#define GEODE_STATICS_addProgram
 		GEODE_AS_STATIC_FUNCTION(addProgram) 
+	#endif
+
+	#ifndef GEODE_STATICS_init
+		#define GEODE_STATICS_init
+		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
 	#ifndef GEODE_STATICS_loadDefaultShader
@@ -56,14 +56,14 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(sharedShaderCache) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_init
-		#define GEODE_CONCEPT_CHECK_init
-		GEODE_CONCEPT_FUNCTION_CHECK(init) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_addProgram
 		#define GEODE_CONCEPT_CHECK_addProgram
 		GEODE_CONCEPT_FUNCTION_CHECK(addProgram) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_init
+		#define GEODE_CONCEPT_CHECK_init
+		GEODE_CONCEPT_FUNCTION_CHECK(init) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_loadDefaultShader
@@ -95,10 +95,12 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCShaderCache@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCShaderCache, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCShaderCache@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCShaderCache)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCShaderCache::purgeSharedShaderCache)), Default, cocos2d::CCShaderCache, purgeSharedShaderCache, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCShaderCache::sharedShaderCache)), Default, cocos2d::CCShaderCache, sharedShaderCache, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCShaderCache::init)), Thiscall, cocos2d::CCShaderCache, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCGLProgram*, char const*>::func(&cocos2d::CCShaderCache::addProgram)), Thiscall, cocos2d::CCShaderCache, addProgram, cocos2d::CCGLProgram*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCShaderCache::init)), Thiscall, cocos2d::CCShaderCache, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCGLProgram*, int>::func(&cocos2d::CCShaderCache::loadDefaultShader)), Thiscall, cocos2d::CCShaderCache, loadDefaultShader, cocos2d::CCGLProgram*, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCShaderCache::loadDefaultShaders)), Thiscall, cocos2d::CCShaderCache, loadDefaultShaders, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCShaderCache::programForKey)), Thiscall, cocos2d::CCShaderCache, programForKey, char const*)

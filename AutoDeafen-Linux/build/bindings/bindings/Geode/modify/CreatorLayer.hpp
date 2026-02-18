@@ -30,11 +30,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(dialogClosed) 
 	#endif
 
-	#ifndef GEODE_STATICS_canPlayOnlineLevels
-		#define GEODE_STATICS_canPlayOnlineLevels
-		GEODE_AS_STATIC_FUNCTION(canPlayOnlineLevels) 
-	#endif
-
 	#ifndef GEODE_STATICS_checkQuestsStatus
 		#define GEODE_STATICS_checkQuestsStatus
 		GEODE_AS_STATIC_FUNCTION(checkQuestsStatus) 
@@ -63,11 +58,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_onEventLevel
 		#define GEODE_STATICS_onEventLevel
 		GEODE_AS_STATIC_FUNCTION(onEventLevel) 
-	#endif
-
-	#ifndef GEODE_STATICS_onFameLevels
-		#define GEODE_STATICS_onFameLevels
-		GEODE_AS_STATIC_FUNCTION(onFameLevels) 
 	#endif
 
 	#ifndef GEODE_STATICS_onFeaturedLevels
@@ -291,33 +281,33 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreatorLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9b9a0, Default, CreatorLayer, scene, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9bb10, Thiscall, CreatorLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9f2b0, Thiscall, CreatorLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9f1f0, Thiscall, CreatorLayer, sceneWillResume, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9f0d0, Thiscall, CreatorLayer, dialogClosed, DialogLayer*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreatorLayer, canPlayOnlineLevels, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9efb0, Thiscall, CreatorLayer, checkQuestsStatus, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9dbe0, Thiscall, CreatorLayer, onAdventureMap, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9f190, Thiscall, CreatorLayer, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9ddb0, Thiscall, CreatorLayer, onChallenge, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9dd50, Thiscall, CreatorLayer, onDailyLevel, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9dd90, Thiscall, CreatorLayer, onEventLevel, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreatorLayer, onFameLevels, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9d2a0, Thiscall, CreatorLayer, onFeaturedLevels, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9d590, Thiscall, CreatorLayer, onGauntlets, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9d0f0, Thiscall, CreatorLayer, onLeaderboards, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9d4d0, Thiscall, CreatorLayer, onMapPacks, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9d610, Thiscall, CreatorLayer, onMultiplayer, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9cce0, Thiscall, CreatorLayer, onMyLevels, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9d450, Thiscall, CreatorLayer, onOnlineLevels, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9bfd0, Default, CreatorLayer, scene, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9c140, Thiscall, CreatorLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9f9c0, Thiscall, CreatorLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9f860, Thiscall, CreatorLayer, sceneWillResume, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9f740, Thiscall, CreatorLayer, dialogClosed, DialogLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreatorLayer, canPlayOnlineLevels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9f620, Thiscall, CreatorLayer, checkQuestsStatus, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9e250, Thiscall, CreatorLayer, onAdventureMap, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9f800, Thiscall, CreatorLayer, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9e420, Thiscall, CreatorLayer, onChallenge, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9e3c0, Thiscall, CreatorLayer, onDailyLevel, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9e400, Thiscall, CreatorLayer, onEventLevel, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CreatorLayer, onFameLevels, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9d910, Thiscall, CreatorLayer, onFeaturedLevels, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9dc00, Thiscall, CreatorLayer, onGauntlets, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9d720, Thiscall, CreatorLayer, onLeaderboards, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9db40, Thiscall, CreatorLayer, onMapPacks, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9dc80, Thiscall, CreatorLayer, onMultiplayer, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9d310, Thiscall, CreatorLayer, onMyLevels, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9dac0, Thiscall, CreatorLayer, onOnlineLevels, cocos2d::CCObject*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CreatorLayer, onOnlyFullVersion, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9d360, Thiscall, CreatorLayer, onPaths, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9cef0, Thiscall, CreatorLayer, onSavedLevels, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9df20, Thiscall, CreatorLayer, onSecretVault, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9d380, Thiscall, CreatorLayer, onTopLists, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9e730, Thiscall, CreatorLayer, onTreasureRoom, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9dd70, Thiscall, CreatorLayer, onWeeklyLevel, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9d9d0, Thiscall, CreatorLayer, onPaths, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9d520, Thiscall, CreatorLayer, onSavedLevels, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9e590, Thiscall, CreatorLayer, onSecretVault, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9d9f0, Thiscall, CreatorLayer, onTopLists, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9eda0, Thiscall, CreatorLayer, onTreasureRoom, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x9e3e0, Thiscall, CreatorLayer, onWeeklyLevel, cocos2d::CCObject*)
 		}
 	};
 }

@@ -30,11 +30,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(init) 
 	#endif
 
-	#ifndef GEODE_STATICS_useAnimationType
-		#define GEODE_STATICS_useAnimationType
-		GEODE_AS_STATIC_FUNCTION(useAnimationType) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -90,17 +85,17 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x449f0, Thiscall, CCMenuItemSpriteExtra, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44b40, Default, CCMenuItemSpriteExtra, create, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x44a60, Thiscall, CCMenuItemSpriteExtra, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMenuItemSpriteExtra, create, cocos2d::CCNode*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44d40, Thiscall, CCMenuItemSpriteExtra, activate, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44e50, Thiscall, CCMenuItemSpriteExtra, selected, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x45070, Thiscall, CCMenuItemSpriteExtra, unselected, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44be0, Thiscall, CCMenuItemSpriteExtra, init, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44bb0, Default, CCMenuItemSpriteExtra, create, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44db0, Thiscall, CCMenuItemSpriteExtra, activate, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44ec0, Thiscall, CCMenuItemSpriteExtra, selected, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x450e0, Thiscall, CCMenuItemSpriteExtra, unselected, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x44c50, Thiscall, CCMenuItemSpriteExtra, init, cocos2d::CCNode*, cocos2d::CCNode*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMenuItemSpriteExtra, setSizeMult, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMenuItemSpriteExtra, setSprite, cocos2d::CCSprite*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMenuItemSpriteExtra, updateSprite, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCMenuItemSpriteExtra, useAnimationType, MenuAnimationType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMenuItemSpriteExtra, useAnimationType, MenuAnimationType)
 		}
 	};
 }

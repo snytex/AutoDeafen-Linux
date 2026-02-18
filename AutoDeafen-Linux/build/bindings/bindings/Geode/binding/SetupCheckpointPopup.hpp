@@ -16,15 +16,29 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupCheckpointPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static SetupCheckpointPopup* create(CheckpointGameObject* p0, cocos2d::CCArray* p1);
+     SetupCheckpointPopup();
 
     /**
-     * @note[short] MacOS (ARM): 0x4baeb4
-     * @note[short] MacOS (Intel): 0x565360
-     * @note[short] Windows: 0x450a20
+     * @note[short] MacOS (ARM): 0x4c8ce4
+     * @note[short] MacOS (Intel): 0x57c030
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x40a2dc
      * @note[short] Android
      */
-    bool init(CheckpointGameObject* p0, cocos2d::CCArray* p1);
+    static SetupCheckpointPopup* create(CheckpointGameObject* object, cocos2d::CCArray* objects);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4c8e6c
+     * @note[short] MacOS (Intel): 0x57c260
+     * @note[short] Windows: 0x468f90
+     * @note[short] iOS: 0x40a3b4
+     * @note[short] Android
+     */
+    bool init(CheckpointGameObject* object, cocos2d::CCArray* objects);
 };

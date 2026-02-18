@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void sfxObjectSelected(SFXInfoObject* p0);
+    virtual void sfxObjectSelected(SFXInfoObject* object);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -38,5 +38,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual bool overridePlaySFX(SFXInfoObject* p0);
+    virtual bool overridePlaySFX(SFXInfoObject* object);
 };

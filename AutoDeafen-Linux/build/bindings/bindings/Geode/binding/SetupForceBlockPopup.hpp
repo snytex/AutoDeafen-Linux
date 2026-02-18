@@ -16,25 +16,29 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupForceBlockPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x458970
+     * @note[short] MacOS (ARM): 0x4d0ab4
+     * @note[short] MacOS (Intel): 0x584ce0
+     * @note[short] Windows: 0x470ee0
+     * @note[short] iOS: 0x410660
      * @note[short] Android
      */
-    static SetupForceBlockPopup* create(ForceBlockGameObject* p0, cocos2d::CCArray* p1);
+    static SetupForceBlockPopup* create(ForceBlockGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c30bc
-     * @note[short] MacOS (Intel): 0x56e580
-     * @note[short] Windows: 0x4591a0
-     * @note[short] iOS: 0x408c84
+     * @note[short] MacOS (ARM): 0x4d1264
+     * @note[short] MacOS (Intel): 0x585620
+     * @note[short] Windows: 0x471710
+     * @note[short] iOS: 0x410c9c
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c2a88
-     * @note[short] MacOS (Intel): 0x56de60
-     * @note[short] Windows: 0x458a80
+     * @note[short] MacOS (ARM): 0x4d0c3c
+     * @note[short] MacOS (Intel): 0x584f10
+     * @note[short] Windows: 0x470ff0
+     * @note[short] iOS: 0x410738
      * @note[short] Android
      */
-    bool init(ForceBlockGameObject* p0, cocos2d::CCArray* p1);
+    bool init(ForceBlockGameObject* object, cocos2d::CCArray* objects);
 };

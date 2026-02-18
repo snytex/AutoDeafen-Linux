@@ -16,26 +16,28 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(InfoAlertButton, CCMenuItemSpriteExtra)
 
     /**
-     * @note[short] MacOS (ARM): 0x4b57b8
-     * @note[short] MacOS (Intel): 0x55ec10
-     * @note[short] Windows: 0x2b2d80
-     * @note[short] iOS: 0x16e934
+     * @note[short] MacOS (ARM): 0x4c3724
+     * @note[short] MacOS (Intel): 0x575b50
+     * @note[short] Windows: 0x2ba450
+     * @note[short] iOS: 0x16b21c
      * @note[short] Android: Rebinded
      */
     static InfoAlertButton* create(gd::string title, gd::string desc, float spriteScale);
 
     /**
-     * @note[short] MacOS (ARM): 0x4b5a48
-     * @note[short] MacOS (Intel): 0x55ee90
-     * @note[short] Windows: 0x2b2f80
-     * @note[short] iOS: 0x16eb48
+     * @note[short] MacOS (ARM): 0x4c39b4
+     * @note[short] MacOS (Intel): 0x575dd0
+     * @note[short] Windows: 0x2ba650
+     * @note[short] iOS: 0x16b430
      * @note[short] Android
      */
     virtual void activate();
 
     /**
-     * @note[short] MacOS (ARM): 0x4b59a4
-     * @note[short] MacOS (Intel): 0x55edf0
+     * @note[short] MacOS (ARM): 0x4c3910
+     * @note[short] MacOS (Intel): 0x575d30
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x16b38c
      * @note[short] Android: Rebinded
      */
     bool init(gd::string title, gd::string desc, float spriteScale);

@@ -15,26 +15,26 @@ public:
     static constexpr auto CLASS_NAME = "GJShaderState";
 
     /**
-     * @note[short] MacOS (ARM): 0xb43b8
-     * @note[short] MacOS (Intel): 0xcae30
-     * @note[short] Windows: 0x38db00
-     * @note[short] iOS: 0x12ab94
+     * @note[short] MacOS (ARM): 0xb25a4
+     * @note[short] MacOS (Intel): 0xca5b0
+     * @note[short] Windows: 0x3a4950
+     * @note[short] iOS: 0x127924
      * @note[short] Android: Out of line
      */
      GJShaderState();
 
     /**
-     * @note[short] MacOS (ARM): 0x34278c
-     * @note[short] MacOS (Intel): 0x3b73f0
+     * @note[short] MacOS (ARM): 0x34b4f8
+     * @note[short] MacOS (Intel): 0x3ca210
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x26caf4
+     * @note[short] iOS: 0x26d994
      * @note[short] Android
      */
     void reset();
 
     /**
-     * @note[short] MacOS (ARM): 0x3422dc
-     * @note[short] MacOS (Intel): 0x3b6c70
+     * @note[short] MacOS (ARM): 0x34b054
+     * @note[short] MacOS (Intel): 0x3c9b30
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
@@ -42,46 +42,46 @@ public:
     void stopTweenAction(int action);
 
     /**
-     * @note[short] MacOS (ARM): 0x342628
-     * @note[short] MacOS (Intel): 0x3b7210
-     * @note[short] Windows: 0x4696c0
-     * @note[short] iOS: 0x26ca64
+     * @note[short] MacOS (ARM): 0x34b3a4
+     * @note[short] MacOS (Intel): 0x3ca020
+     * @note[short] Windows: 0x481ba0
+     * @note[short] iOS: 0x26d908
      * @note[short] Android
      */
     void timesyncShaderAction(int action);
 
     /**
-     * @note[short] MacOS (ARM): 0x3425f0
-     * @note[short] MacOS (Intel): 0x3b71d0
+     * @note[short] MacOS (ARM): 0x34b36c
+     * @note[short] MacOS (Intel): 0x3c9fe0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x26ca2c
+     * @note[short] iOS: 0x26d8d0
      * @note[short] Android
      */
     void timesyncShaderActions();
 
     /**
-     * @note[short] MacOS (ARM): 0x3421f8
-     * @note[short] MacOS (Intel): 0x3b6b80
+     * @note[short] MacOS (ARM): 0x34af6c
+     * @note[short] MacOS (Intel): 0x3c9a40
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x26c680
+     * @note[short] iOS: 0x26d51c
      * @note[short] Android
      */
     void tweenValue(float fromValue, float toValue, int action, float duration, int easingType, float easingRate);
 
     /**
-     * @note[short] MacOS (ARM): 0x342300
-     * @note[short] MacOS (Intel): 0x3b6c90
-     * @note[short] Windows: 0x469300
-     * @note[short] iOS: 0x26c764
+     * @note[short] MacOS (ARM): 0x34b078
+     * @note[short] MacOS (Intel): 0x3c9b50
+     * @note[short] Windows: 0x4817e0
+     * @note[short] iOS: 0x26d604
      * @note[short] Android
      */
     void updateTweenAction(float value, int actionID);
 
     /**
-     * @note[short] MacOS (ARM): 0x342554
-     * @note[short] MacOS (Intel): 0x3b7130
+     * @note[short] MacOS (ARM): 0x34b2cc
+     * @note[short] MacOS (Intel): 0x3c9f40
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x26c9b8
+     * @note[short] iOS: 0x26d858
      * @note[short] Android
      */
     void updateTweenActions(float tweenValue);

@@ -30,7 +30,7 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a0420, Default, GJSpiderSprite, create, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2a7ae0, Default, GJSpiderSprite, create, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJSpiderSprite, init, int)
 		}
 	};

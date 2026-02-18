@@ -25,7 +25,7 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2b9730, Thiscall, KeyframeObject, setupSpline, gd::vector<KeyframeObject*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2c0e00, Thiscall, KeyframeObject, setupSpline, gd::vector<KeyframeObject*>&)
 		}
 	};
 }

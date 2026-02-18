@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_customSetup
 		#define GEODE_STATICS_customSetup
 		GEODE_AS_STATIC_FUNCTION(customSetup) 
@@ -30,16 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(FLAlert_Clicked) 
 	#endif
 
-	#ifndef GEODE_STATICS_doUnlink
-		#define GEODE_STATICS_doUnlink
-		GEODE_AS_STATIC_FUNCTION(doUnlink) 
-	#endif
-
-	#ifndef GEODE_STATICS_exitLayer
-		#define GEODE_STATICS_exitLayer
-		GEODE_AS_STATIC_FUNCTION(exitLayer) 
-	#endif
-
 	#ifndef GEODE_STATICS_onAccountManagement
 		#define GEODE_STATICS_onAccountManagement
 		GEODE_AS_STATIC_FUNCTION(onAccountManagement) 
@@ -58,11 +43,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updatePage
 		#define GEODE_STATICS_updatePage
 		GEODE_AS_STATIC_FUNCTION(updatePage) 
-	#endif
-
-	#ifndef GEODE_STATICS_verifyUnlink
-		#define GEODE_STATICS_verifyUnlink
-		GEODE_AS_STATIC_FUNCTION(verifyUnlink) 
 	#endif
 
     
@@ -135,18 +115,18 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountHelpLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7f5c0, Thiscall, AccountHelpLayer, customSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x80320, Thiscall, AccountHelpLayer, layerHidden, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7fcc0, Thiscall, AccountHelpLayer, accountStatusChanged, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7ffa0, Thiscall, AccountHelpLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountHelpLayer, doUnlink, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountHelpLayer, exitLayer, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7fa10, Thiscall, AccountHelpLayer, onAccountManagement, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7f9d0, Thiscall, AccountHelpLayer, onReLogin, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7fb20, Thiscall, AccountHelpLayer, onUnlink, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7fcd0, Thiscall, AccountHelpLayer, updatePage, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountHelpLayer, verifyUnlink, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountHelpLayer, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7f610, Thiscall, AccountHelpLayer, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x80370, Thiscall, AccountHelpLayer, layerHidden, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7fd10, Thiscall, AccountHelpLayer, accountStatusChanged, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7fff0, Thiscall, AccountHelpLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountHelpLayer, doUnlink, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountHelpLayer, exitLayer, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7fa60, Thiscall, AccountHelpLayer, onAccountManagement, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7fa20, Thiscall, AccountHelpLayer, onReLogin, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7fb70, Thiscall, AccountHelpLayer, onUnlink, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7fd20, Thiscall, AccountHelpLayer, updatePage, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountHelpLayer, verifyUnlink, )
 		}
 	};
 }

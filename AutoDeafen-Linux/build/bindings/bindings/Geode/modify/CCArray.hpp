@@ -15,16 +15,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(createWithContentsOfFileThreadSafe) 
 	#endif
 
-	#ifndef GEODE_STATICS_initWithArray
-		#define GEODE_STATICS_initWithArray
-		GEODE_AS_STATIC_FUNCTION(initWithArray) 
-	#endif
-
-	#ifndef GEODE_STATICS_initWithObject
-		#define GEODE_STATICS_initWithObject
-		GEODE_AS_STATIC_FUNCTION(initWithObject) 
-	#endif
-
 	#ifndef GEODE_STATICS_addObjectNew
 		#define GEODE_STATICS_addObjectNew
 		GEODE_AS_STATIC_FUNCTION(addObjectNew) 
@@ -58,6 +48,16 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_indexOfObject
 		#define GEODE_STATICS_indexOfObject
 		GEODE_AS_STATIC_FUNCTION(indexOfObject) 
+	#endif
+
+	#ifndef GEODE_STATICS_initWithArray
+		#define GEODE_STATICS_initWithArray
+		GEODE_AS_STATIC_FUNCTION(initWithArray) 
+	#endif
+
+	#ifndef GEODE_STATICS_initWithObject
+		#define GEODE_STATICS_initWithObject
+		GEODE_AS_STATIC_FUNCTION(initWithObject) 
 	#endif
 
 	#ifndef GEODE_STATICS_isEqualToArray
@@ -121,16 +121,6 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(createWithContentsOfFileThreadSafe) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_initWithArray
-		#define GEODE_CONCEPT_CHECK_initWithArray
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithArray) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_initWithObject
-		#define GEODE_CONCEPT_CHECK_initWithObject
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithObject) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_addObjectNew
 		#define GEODE_CONCEPT_CHECK_addObjectNew
 		GEODE_CONCEPT_FUNCTION_CHECK(addObjectNew) 
@@ -164,6 +154,16 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_indexOfObject
 		#define GEODE_CONCEPT_CHECK_indexOfObject
 		GEODE_CONCEPT_FUNCTION_CHECK(indexOfObject) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_initWithArray
+		#define GEODE_CONCEPT_CHECK_initWithArray
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithArray) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_initWithObject
+		#define GEODE_CONCEPT_CHECK_initWithObject
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithObject) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_isEqualToArray
@@ -227,8 +227,6 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCArray::createWithContentsOfFile)), Default, cocos2d::CCArray, createWithContentsOfFile, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<char const*>::func(&cocos2d::CCArray::createWithContentsOfFileThreadSafe)), Default, cocos2d::CCArray, createWithContentsOfFileThreadSafe, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCArray*>::func(&cocos2d::CCArray::initWithArray)), Thiscall, cocos2d::CCArray, initWithArray, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*>::func(&cocos2d::CCArray::initWithObject)), Thiscall, cocos2d::CCArray, initWithObject, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*>::func(&cocos2d::CCArray::addObjectNew)), Thiscall, cocos2d::CCArray, addObjectNew, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCArray::capacity)), Thiscall, cocos2d::CCArray, capacity, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*, cocos2d::CCObject*>::func(&cocos2d::CCArray::exchangeObject)), Thiscall, cocos2d::CCArray, exchangeObject, cocos2d::CCObject*, cocos2d::CCObject*)
@@ -236,6 +234,8 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int>::func(&cocos2d::CCArray::fastRemoveObjectAtIndexChild)), Thiscall, cocos2d::CCArray, fastRemoveObjectAtIndexChild, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<unsigned int>::func(&cocos2d::CCArray::fastRemoveObjectAtIndexNew)), Thiscall, cocos2d::CCArray, fastRemoveObjectAtIndexNew, unsigned int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*>::func(&cocos2d::CCArray::indexOfObject)), Thiscall, cocos2d::CCArray, indexOfObject, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCArray*>::func(&cocos2d::CCArray::initWithArray)), Thiscall, cocos2d::CCArray, initWithArray, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*>::func(&cocos2d::CCArray::initWithObject)), Thiscall, cocos2d::CCArray, initWithObject, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCArray*>::func(&cocos2d::CCArray::isEqualToArray)), Thiscall, cocos2d::CCArray, isEqualToArray, cocos2d::CCArray*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCArray::randomObject)), Thiscall, cocos2d::CCArray, randomObject, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCArray::recreateNewIndexes)), Thiscall, cocos2d::CCArray, recreateNewIndexes, )

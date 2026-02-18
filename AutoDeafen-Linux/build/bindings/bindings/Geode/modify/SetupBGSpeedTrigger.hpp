@@ -35,8 +35,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupBGSpeedTrigger, create, EffectGameObject*, cocos2d::CCArray*, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SetupBGSpeedTrigger, init, EffectGameObject*, cocos2d::CCArray*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4289b0, Default, SetupBGSpeedTrigger, create, EffectGameObject*, cocos2d::CCArray*, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x428ad0, Thiscall, SetupBGSpeedTrigger, init, EffectGameObject*, cocos2d::CCArray*, int)
 		}
 	};
 }

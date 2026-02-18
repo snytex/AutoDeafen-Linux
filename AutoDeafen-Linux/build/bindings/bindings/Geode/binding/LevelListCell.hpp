@@ -16,70 +16,94 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(LevelListCell, TableViewCell)
 
     /**
-     * @note[short] Windows: 0xbdf10
+     * @note[short] MacOS (ARM): 0x1fe728
+     * @note[short] MacOS (Intel): 0x2593f0
+     * @note[short] Windows: 0xbec30
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-     LevelListCell(char const* p0, float p1, float p2);
+     LevelListCell(char const* identifier, float width, float height);
 
     /**
+     * @note[short] MacOS (ARM): 0x1fe4b8
+     * @note[short] MacOS (Intel): 0x259080
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x112dac
+     * @note[short] Android: Rebinded
+     */
+     ~LevelListCell();
+
+    /**
+     * @note[short] MacOS (ARM): 0x1fe68c
+     * @note[short] MacOS (Intel): 0x259320
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    static LevelListCell* create(float p0, float p1);
+    static LevelListCell* create(float width, float height);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f5bc0
-     * @note[short] MacOS (Intel): 0x247460
+     * @note[short] MacOS (ARM): 0x1fe770
+     * @note[short] MacOS (Intel): 0x259470
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x115ae0
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x112e40
+     * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x1f5cd8
-     * @note[short] MacOS (Intel): 0x2475a0
-     * @note[short] Windows: 0xad710
-     * @note[short] iOS: 0x115bf8
+     * @note[short] MacOS (ARM): 0x1fe888
+     * @note[short] MacOS (Intel): 0x2595b0
+     * @note[short] Windows: 0xade20
+     * @note[short] iOS: 0x112f58
      * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): 0x1e3af4
-     * @note[short] MacOS (Intel): 0x233ae0
-     * @note[short] Windows: 0xbdf90
-     * @note[short] iOS: 0x10698c
+     * @note[short] MacOS (ARM): 0x1ec324
+     * @note[short] MacOS (Intel): 0x245550
+     * @note[short] Windows: 0xbecb0
+     * @note[short] iOS: 0x103970
      * @note[short] Android
      */
-    void loadFromList(GJLevelList* p0);
+    void loadFromList(GJLevelList* list);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f5bc8
-     * @note[short] MacOS (Intel): 0x247470
-     * @note[short] Windows: 0xbf3c0
-     * @note[short] iOS: 0x115ae8
+     * @note[short] MacOS (ARM): 0x1fe778
+     * @note[short] MacOS (Intel): 0x259480
+     * @note[short] Windows: 0xc00e0
+     * @note[short] iOS: 0x112e48
      * @note[short] Android
      */
     void onClick(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x1fe878
+     * @note[short] MacOS (Intel): 0x259590
+     * @note[short] Windows: 0xc01f0
+     * @note[short] iOS: 0x112f48
      * @note[short] Android
      */
     void onListInfo(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f5c90
-     * @note[short] MacOS (Intel): 0x247550
-     * @note[short] Windows: 0xbf4f0
+     * @note[short] MacOS (ARM): 0x1fe844
+     * @note[short] MacOS (Intel): 0x259560
+     * @note[short] Windows: 0xc0210
+     * @note[short] iOS: 0x112f14
      * @note[short] Android
      */
     void onViewProfile(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] iOS: 0x107e24
+     * @note[short] MacOS (ARM): 0x1ed87c
+     * @note[short] MacOS (Intel): 0x246a40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x104e08
      * @note[short] Android
      */
-    TodoReturn updateBGColor(int p0);
+    void updateBGColor(int index);
     GJLevelList* m_levelList;
     bool m_addingLevel;
 };

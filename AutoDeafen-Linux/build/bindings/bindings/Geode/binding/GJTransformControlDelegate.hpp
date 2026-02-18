@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void transformScaleXChanged(float p0);
+    virtual void transformScaleXChanged(float scaleX);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,7 +29,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void transformScaleYChanged(float p0);
+    virtual void transformScaleYChanged(float scaleY);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -38,7 +38,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void transformScaleXYChanged(float p0, float p1);
+    virtual void transformScaleXYChanged(float scaleX, float scaleY);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -47,7 +47,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void transformRotationXChanged(float p0);
+    virtual void transformRotationXChanged(float rotationX);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -56,7 +56,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void transformRotationYChanged(float p0);
+    virtual void transformRotationYChanged(float rotationY);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -65,7 +65,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void transformRotationChanged(float p0);
+    virtual void transformRotationChanged(float rotation);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -92,7 +92,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void transformSkewXChanged(float p0);
+    virtual void transformSkewXChanged(float skewX);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -101,7 +101,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void transformSkewYChanged(float p0);
+    virtual void transformSkewYChanged(float skewY);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -137,7 +137,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void anchorPointMoved(cocos2d::CCPoint p0);
+    virtual void anchorPointMoved(cocos2d::CCPoint anchorPoint);
 
     /**
      * @note[short] MacOS (ARM): Out of line

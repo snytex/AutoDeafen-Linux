@@ -25,11 +25,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(show) 
 	#endif
 
-	#ifndef GEODE_STATICS_FLAlert_Clicked
-		#define GEODE_STATICS_FLAlert_Clicked
-		GEODE_AS_STATIC_FUNCTION(FLAlert_Clicked) 
-	#endif
-
 	#ifndef GEODE_STATICS_goToPage
 		#define GEODE_STATICS_goToPage
 		GEODE_AS_STATIC_FUNCTION(goToPage) 
@@ -101,14 +96,14 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CommunityCreditsPage, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x94000, Thiscall, CommunityCreditsPage, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, CommunityCreditsPage, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, CommunityCreditsPage, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x96160, Thiscall, CommunityCreditsPage, show, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CommunityCreditsPage, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x96040, Thiscall, CommunityCreditsPage, goToPage, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CommunityCreditsPage, onClose, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CommunityCreditsPage, onSwitchPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x940c0, Thiscall, CommunityCreditsPage, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, CommunityCreditsPage, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, CommunityCreditsPage, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x96220, Thiscall, CommunityCreditsPage, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CommunityCreditsPage, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x96100, Thiscall, CommunityCreditsPage, goToPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, CommunityCreditsPage, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x960c0, Thiscall, CommunityCreditsPage, onSwitchPage, cocos2d::CCObject*)
 		}
 	};
 }

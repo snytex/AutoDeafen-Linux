@@ -175,22 +175,22 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40a520, Default, SetupInstantCountPopup, create, CountTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40b590, Thiscall, SetupInstantCountPopup, determineStartValues, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x402140, Thiscall, SetupInstantCountPopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40b740, Thiscall, SetupInstantCountPopup, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40a660, Thiscall, SetupInstantCountPopup, init, CountTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40ba90, Thiscall, SetupInstantCountPopup, onCountType, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x401660, Thiscall, SetupInstantCountPopup, onEnableGroup, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x404580, Thiscall, SetupInstantCountPopup, onTargetCountArrow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40b700, Thiscall, SetupInstantCountPopup, onTargetID2Arrow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4045c0, Thiscall, SetupInstantCountPopup, onTargetIDArrow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x401eb0, Thiscall, SetupInstantCountPopup, updateCountTextInputLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x401f30, Thiscall, SetupInstantCountPopup, updateItemID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4048d0, Thiscall, SetupInstantCountPopup, updateItemIDInputLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x404aa0, Thiscall, SetupInstantCountPopup, updateTargetCount, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x40b9c0, Thiscall, SetupInstantCountPopup, updateTargetID, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x404950, Thiscall, SetupInstantCountPopup, updateTargetIDInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x422270, Default, SetupInstantCountPopup, create, CountTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4232e0, Thiscall, SetupInstantCountPopup, determineStartValues, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x419e10, Thiscall, SetupInstantCountPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423490, Thiscall, SetupInstantCountPopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4223b0, Thiscall, SetupInstantCountPopup, init, CountTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4237e0, Thiscall, SetupInstantCountPopup, onCountType, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x419330, Thiscall, SetupInstantCountPopup, onEnableGroup, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c250, Thiscall, SetupInstantCountPopup, onTargetCountArrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423450, Thiscall, SetupInstantCountPopup, onTargetID2Arrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c290, Thiscall, SetupInstantCountPopup, onTargetIDArrow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x419b80, Thiscall, SetupInstantCountPopup, updateCountTextInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x419c00, Thiscall, SetupInstantCountPopup, updateItemID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c5a0, Thiscall, SetupInstantCountPopup, updateItemIDInputLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c770, Thiscall, SetupInstantCountPopup, updateTargetCount, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x423710, Thiscall, SetupInstantCountPopup, updateTargetID, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c620, Thiscall, SetupInstantCountPopup, updateTargetIDInputLabel, )
 		}
 	};
 }

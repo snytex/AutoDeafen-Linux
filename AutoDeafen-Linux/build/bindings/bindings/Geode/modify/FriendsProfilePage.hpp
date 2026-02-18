@@ -135,18 +135,18 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13e010, Default, FriendsProfilePage, create, UserListType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, FriendsProfilePage, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13f0a0, Thiscall, FriendsProfilePage, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13ebd0, Thiscall, FriendsProfilePage, getUserListFinished, cocos2d::CCArray*, UserListType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13ed20, Thiscall, FriendsProfilePage, getUserListFailed, UserListType, GJErrorCode)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b790, Thiscall, FriendsProfilePage, userListChanged, cocos2d::CCArray*, UserListType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13ed90, Thiscall, FriendsProfilePage, forceReloadList, UserListType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13e160, Thiscall, FriendsProfilePage, init, UserListType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13ef50, Thiscall, FriendsProfilePage, onBlocked, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13efe0, Thiscall, FriendsProfilePage, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13ee30, Thiscall, FriendsProfilePage, onUpdate, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13e870, Thiscall, FriendsProfilePage, setupUsersBrowser, cocos2d::CCArray*, UserListType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13fc50, Default, FriendsProfilePage, create, UserListType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, FriendsProfilePage, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x140ce0, Thiscall, FriendsProfilePage, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x140810, Thiscall, FriendsProfilePage, getUserListFinished, cocos2d::CCArray*, UserListType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x140960, Thiscall, FriendsProfilePage, getUserListFailed, UserListType, GJErrorCode)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b850, Thiscall, FriendsProfilePage, userListChanged, cocos2d::CCArray*, UserListType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1409d0, Thiscall, FriendsProfilePage, forceReloadList, UserListType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13fda0, Thiscall, FriendsProfilePage, init, UserListType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x140b90, Thiscall, FriendsProfilePage, onBlocked, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x140c20, Thiscall, FriendsProfilePage, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x140a70, Thiscall, FriendsProfilePage, onUpdate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1404b0, Thiscall, FriendsProfilePage, setupUsersBrowser, cocos2d::CCArray*, UserListType)
 		}
 	};
 }

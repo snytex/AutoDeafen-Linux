@@ -110,11 +110,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(setupList) 
 	#endif
 
-	#ifndef GEODE_STATICS_setupMusicBrowser
-		#define GEODE_STATICS_setupMusicBrowser
-		GEODE_AS_STATIC_FUNCTION(setupMusicBrowser) 
-	#endif
-
 	#ifndef GEODE_STATICS_setupSongControls
 		#define GEODE_STATICS_setupSongControls
 		GEODE_AS_STATIC_FUNCTION(setupSongControls) 
@@ -128,11 +123,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_trySetupMusicBrowser
 		#define GEODE_STATICS_trySetupMusicBrowser
 		GEODE_AS_STATIC_FUNCTION(trySetupMusicBrowser) 
-	#endif
-
-	#ifndef GEODE_STATICS_updatePageLabel
-		#define GEODE_STATICS_updatePageLabel
-		GEODE_AS_STATIC_FUNCTION(updatePageLabel) 
 	#endif
 
     
@@ -275,32 +265,32 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x323840, Default, MusicBrowser, create, int, GJSongType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3245b0, Thiscall, MusicBrowser, update, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, MusicBrowser, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x325c90, Thiscall, MusicBrowser, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x324eb0, Thiscall, MusicBrowser, musicActionFinished, GJMusicAction)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x324f20, Thiscall, MusicBrowser, musicActionFailed, GJMusicAction)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x324bf0, Thiscall, MusicBrowser, sliderEnded, Slider*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x325a00, Thiscall, MusicBrowser, setTextPopupClosed, SetTextPopup*, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x325750, Thiscall, MusicBrowser, cellPerformedAction, TableViewCell*, int, CellAction, cocos2d::CCNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x325780, Thiscall, MusicBrowser, getSelectedCellIdx, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x325ba0, Thiscall, MusicBrowser, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3239f0, Thiscall, MusicBrowser, init, int, GJSongType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x325b10, Thiscall, MusicBrowser, onArtistFilters, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicBrowser, onClearSearch, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x325c00, Thiscall, MusicBrowser, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x325790, Thiscall, MusicBrowser, onPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x324b90, Thiscall, MusicBrowser, onPlaybackControl, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3258b0, Thiscall, MusicBrowser, onSearch, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x325aa0, Thiscall, MusicBrowser, onTagFilters, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicBrowser, onUpdateLibrary, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x325050, Thiscall, MusicBrowser, setupList, MusicSearchResult*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicBrowser, setupMusicBrowser, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3248b0, Thiscall, MusicBrowser, setupSongControls, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicBrowser, sliderChanged, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicBrowser, trySetupMusicBrowser, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicBrowser, updatePageLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x338700, Default, MusicBrowser, create, int, GJSongType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x339480, Thiscall, MusicBrowser, update, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, MusicBrowser, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33ab60, Thiscall, MusicBrowser, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x339d80, Thiscall, MusicBrowser, musicActionFinished, GJMusicAction)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x339df0, Thiscall, MusicBrowser, musicActionFailed, GJMusicAction)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x339ac0, Thiscall, MusicBrowser, sliderEnded, Slider*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33a8d0, Thiscall, MusicBrowser, setTextPopupClosed, SetTextPopup*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33a620, Thiscall, MusicBrowser, cellPerformedAction, TableViewCell*, int, CellAction, cocos2d::CCNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33a650, Thiscall, MusicBrowser, getSelectedCellIdx, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33aa70, Thiscall, MusicBrowser, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3388b0, Thiscall, MusicBrowser, init, int, GJSongType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33a9e0, Thiscall, MusicBrowser, onArtistFilters, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33a710, Thiscall, MusicBrowser, onClearSearch, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33aad0, Thiscall, MusicBrowser, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33a660, Thiscall, MusicBrowser, onPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x339a60, Thiscall, MusicBrowser, onPlaybackControl, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33a780, Thiscall, MusicBrowser, onSearch, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33a970, Thiscall, MusicBrowser, onTagFilters, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x339be0, Thiscall, MusicBrowser, onUpdateLibrary, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x339f20, Thiscall, MusicBrowser, setupList, MusicSearchResult*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicBrowser, setupMusicBrowser, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x339780, Thiscall, MusicBrowser, setupSongControls, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x12a550, Thiscall, MusicBrowser, sliderChanged, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x339c40, Thiscall, MusicBrowser, trySetupMusicBrowser, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicBrowser, updatePageLabel, )
 		}
 	};
 }

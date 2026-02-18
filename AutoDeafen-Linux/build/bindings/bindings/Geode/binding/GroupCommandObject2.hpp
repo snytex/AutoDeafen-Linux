@@ -15,59 +15,112 @@ public:
     static constexpr auto CLASS_NAME = "GroupCommandObject2";
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): 0x447014
+     * @note[short] MacOS (Intel): 0x4ecb30
+     * @note[short] Windows: 0x257690
+     * @note[short] iOS: 0xa9f4
+     * @note[short] Android: Rebinded
      */
-    TodoReturn reset();
+     GroupCommandObject2();
 
     /**
+     * @note[short] MacOS (ARM): 0x447144
+     * @note[short] MacOS (Intel): 0x4ecd00
+     * @note[short] Windows: 0x257700
+     * @note[short] iOS: 0xaa60
      * @note[short] Android
      */
-    TodoReturn resetDelta(bool p0);
+    void reset();
 
     /**
+     * @note[short] MacOS (ARM): 0x447794
+     * @note[short] MacOS (Intel): 0x4ed4f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xaf34
      * @note[short] Android
      */
-    TodoReturn runFollowCommand(double p0, double p1, double p2);
+    void resetDelta(bool intermediate);
 
     /**
+     * @note[short] MacOS (ARM): 0x447718
+     * @note[short] MacOS (Intel): 0x4ed440
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xaebc
      * @note[short] Android
      */
-    TodoReturn runMoveCommand(cocos2d::CCPoint p0, double p1, int p2, double p3, bool p4, bool p5, bool p6, bool p7, double p8, double p9);
+    void runFollowCommand(double xMod, double yMod, double duration);
 
     /**
+     * @note[short] MacOS (ARM): 0x447558
+     * @note[short] MacOS (Intel): 0x4ed1f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xacfc
      * @note[short] Android
      */
-    TodoReturn runPlayerFollowCommand(double p0, double p1, int p2, double p3, double p4);
+    void runMoveCommand(cocos2d::CCPoint offset, double duration, int easingType, double easingRate, bool lockPlayerX, bool lockPlayerY, bool lockCameraX, bool lockCameraY, double moveModX, double moveModY);
 
     /**
+     * @note[short] MacOS (ARM): 0x447748
+     * @note[short] MacOS (Intel): 0x4ed490
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xaeec
      * @note[short] Android
      */
-    TodoReturn runRotateCommand(double p0, double p1, int p2, double p3, bool p4, int p5);
+    void runPlayerFollowCommand(double delay, double speed, int offset, double maxSpeed, double duration);
 
     /**
+     * @note[short] MacOS (ARM): 0x4476a8
+     * @note[short] MacOS (Intel): 0x4ed390
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xae4c
      * @note[short] Android
      */
-    TodoReturn runTransformCommand(double p0, int p1, double p2);
+    void runRotateCommand(double offset, double duration, int easingType, double easingRate, bool lockRotation, int targetType);
 
     /**
+     * @note[short] MacOS (ARM): 0x4476f8
+     * @note[short] MacOS (Intel): 0x4ed400
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xae9c
      * @note[short] Android
      */
-    TodoReturn step(float p0);
+    void runTransformCommand(double duration, int easingType, double easingRate);
 
     /**
+     * @note[short] MacOS (ARM): 0x44722c
+     * @note[short] MacOS (Intel): 0x4ece80
+     * @note[short] Windows: 0x257900
+     * @note[short] iOS: 0xab44
      * @note[short] Android
      */
-    TodoReturn stepTransformCommand(float p0, bool p1, bool p2);
+    void step(float dt);
 
     /**
+     * @note[short] MacOS (ARM): 0x447440
+     * @note[short] MacOS (Intel): 0x4ed0b0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xac9c
      * @note[short] Android
      */
-    TodoReturn updateAction(int p0, float p1);
+    void stepTransformCommand(float dt, bool intermediate, bool skipStep);
 
     /**
+     * @note[short] MacOS (ARM): 0x4472fc
+     * @note[short] MacOS (Intel): 0x4ecf50
+     * @note[short] Windows: 0x2579d0
+     * @note[short] iOS: 0xac0c
      * @note[short] Android
      */
-    TodoReturn updateEffectAction(float p0, int p1);
+    void updateAction(int type, float value);
+
+    /**
+     * @note[short] MacOS (ARM): 0x4477bc
+     * @note[short] MacOS (Intel): 0x4ed540
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xaf5c
+     * @note[short] Android
+     */
+    void updateEffectAction(float value, int type);
     int m_groupCommandUniqueID;
     cocos2d::CCPoint m_moveOffset;
     EasingType m_easingType;
@@ -145,5 +198,5 @@ public:
     float m_gameObjectRotation;
     gd::vector<int> m_remapKeys;
     bool m_someInterpValue2RelatedTrue;
-    float m_unkFloat204;
+    int m_unkInt204;
 };

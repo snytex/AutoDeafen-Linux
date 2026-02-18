@@ -90,11 +90,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateBody) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateCharCountLabel
-		#define GEODE_STATICS_updateCharCountLabel
-		GEODE_AS_STATIC_FUNCTION(updateCharCountLabel) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateSubject
 		#define GEODE_STATICS_updateSubject
 		GEODE_AS_STATIC_FUNCTION(updateSubject) 
@@ -220,27 +215,27 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x291a50, Default, GJWriteMessagePopup, create, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, GJWriteMessagePopup, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2930d0, Thiscall, GJWriteMessagePopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2990b0, Default, GJWriteMessagePopup, create, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, GJWriteMessagePopup, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29a730, Thiscall, GJWriteMessagePopup, keyBackClicked, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJWriteMessagePopup, textInputOpened, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b790, Thiscall, GJWriteMessagePopup, textInputClosed, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2930e0, Thiscall, GJWriteMessagePopup, textChanged, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2936c0, Thiscall, GJWriteMessagePopup, uploadMessageFinished, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x293740, Thiscall, GJWriteMessagePopup, uploadMessageFailed, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2937f0, Thiscall, GJWriteMessagePopup, onClosePopup, UploadActionPopup*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x293890, Thiscall, GJWriteMessagePopup, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b5c0, Thiscall, GJWriteMessagePopup, textInputShouldOffset, CCTextInputNode*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b620, Thiscall, GJWriteMessagePopup, textInputReturn, CCTextInputNode*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x292ef0, Thiscall, GJWriteMessagePopup, closeMessagePopup, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x291be0, Thiscall, GJWriteMessagePopup, init, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x292d50, Thiscall, GJWriteMessagePopup, onClearBody, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x292ee0, Thiscall, GJWriteMessagePopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x292a80, Thiscall, GJWriteMessagePopup, onSend, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2932c0, Thiscall, GJWriteMessagePopup, updateBody, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJWriteMessagePopup, updateCharCountLabel, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x293260, Thiscall, GJWriteMessagePopup, updateSubject, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x293330, Thiscall, GJWriteMessagePopup, updateText, gd::string, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x8b850, Thiscall, GJWriteMessagePopup, textInputClosed, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29a740, Thiscall, GJWriteMessagePopup, textChanged, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29ad20, Thiscall, GJWriteMessagePopup, uploadMessageFinished, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29ada0, Thiscall, GJWriteMessagePopup, uploadMessageFailed, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29ae50, Thiscall, GJWriteMessagePopup, onClosePopup, UploadActionPopup*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29aef0, Thiscall, GJWriteMessagePopup, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b600, Thiscall, GJWriteMessagePopup, textInputShouldOffset, CCTextInputNode*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7b660, Thiscall, GJWriteMessagePopup, textInputReturn, CCTextInputNode*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29a550, Thiscall, GJWriteMessagePopup, closeMessagePopup, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x299240, Thiscall, GJWriteMessagePopup, init, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29a3b0, Thiscall, GJWriteMessagePopup, onClearBody, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29a540, Thiscall, GJWriteMessagePopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29a0e0, Thiscall, GJWriteMessagePopup, onSend, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29a920, Thiscall, GJWriteMessagePopup, updateBody, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJWriteMessagePopup, updateCharCountLabel, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29a8c0, Thiscall, GJWriteMessagePopup, updateSubject, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x29a990, Thiscall, GJWriteMessagePopup, updateText, gd::string, int)
 		}
 	};
 }

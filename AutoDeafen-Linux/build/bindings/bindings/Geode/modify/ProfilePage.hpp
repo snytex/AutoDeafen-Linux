@@ -100,11 +100,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(uploadActionFailed) 
 	#endif
 
-	#ifndef GEODE_STATICS_blockUser
-		#define GEODE_STATICS_blockUser
-		GEODE_AS_STATIC_FUNCTION(blockUser) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -113,11 +108,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_isCorrect
 		#define GEODE_STATICS_isCorrect
 		GEODE_AS_STATIC_FUNCTION(isCorrect) 
-	#endif
-
-	#ifndef GEODE_STATICS_isOnWatchlist
-		#define GEODE_STATICS_isOnWatchlist
-		GEODE_AS_STATIC_FUNCTION(isOnWatchlist) 
 	#endif
 
 	#ifndef GEODE_STATICS_loadPage
@@ -215,34 +205,19 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(onSettings) 
 	#endif
 
+	#ifndef GEODE_STATICS_onSocialPage
+		#define GEODE_STATICS_onSocialPage
+		GEODE_AS_STATIC_FUNCTION(onSocialPage) 
+	#endif
+
 	#ifndef GEODE_STATICS_onStatInfo
 		#define GEODE_STATICS_onStatInfo
 		GEODE_AS_STATIC_FUNCTION(onStatInfo) 
 	#endif
 
-	#ifndef GEODE_STATICS_onTwitch
-		#define GEODE_STATICS_onTwitch
-		GEODE_AS_STATIC_FUNCTION(onTwitch) 
-	#endif
-
-	#ifndef GEODE_STATICS_onTwitter
-		#define GEODE_STATICS_onTwitter
-		GEODE_AS_STATIC_FUNCTION(onTwitter) 
-	#endif
-
 	#ifndef GEODE_STATICS_onUpdate
 		#define GEODE_STATICS_onUpdate
 		GEODE_AS_STATIC_FUNCTION(onUpdate) 
-	#endif
-
-	#ifndef GEODE_STATICS_onYouTube
-		#define GEODE_STATICS_onYouTube
-		GEODE_AS_STATIC_FUNCTION(onYouTube) 
-	#endif
-
-	#ifndef GEODE_STATICS_setupComments
-		#define GEODE_STATICS_setupComments
-		GEODE_AS_STATIC_FUNCTION(setupComments) 
 	#endif
 
 	#ifndef GEODE_STATICS_setupCommentsBrowser
@@ -255,19 +230,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(showNoAccountError) 
 	#endif
 
-	#ifndef GEODE_STATICS_toggleMainPageVisibility
-		#define GEODE_STATICS_toggleMainPageVisibility
-		GEODE_AS_STATIC_FUNCTION(toggleMainPageVisibility) 
-	#endif
-
 	#ifndef GEODE_STATICS_toggleShip
 		#define GEODE_STATICS_toggleShip
 		GEODE_AS_STATIC_FUNCTION(toggleShip) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateLevelsLabel
-		#define GEODE_STATICS_updateLevelsLabel
-		GEODE_AS_STATIC_FUNCTION(updateLevelsLabel) 
 	#endif
 
 	#ifndef GEODE_STATICS_updatePageArrows
@@ -486,29 +451,19 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(onSettings) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_onSocialPage
+		#define GEODE_CONCEPT_CHECK_onSocialPage
+		GEODE_CONCEPT_FUNCTION_CHECK(onSocialPage) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_onStatInfo
 		#define GEODE_CONCEPT_CHECK_onStatInfo
 		GEODE_CONCEPT_FUNCTION_CHECK(onStatInfo) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_onTwitch
-		#define GEODE_CONCEPT_CHECK_onTwitch
-		GEODE_CONCEPT_FUNCTION_CHECK(onTwitch) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_onTwitter
-		#define GEODE_CONCEPT_CHECK_onTwitter
-		GEODE_CONCEPT_FUNCTION_CHECK(onTwitter) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_onUpdate
 		#define GEODE_CONCEPT_CHECK_onUpdate
 		GEODE_CONCEPT_FUNCTION_CHECK(onUpdate) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_onYouTube
-		#define GEODE_CONCEPT_CHECK_onYouTube
-		GEODE_CONCEPT_FUNCTION_CHECK(onYouTube) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_setupComments
@@ -555,60 +510,58 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a7a20, Default, ProfilePage, create, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, ProfilePage, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ae050, Thiscall, ProfilePage, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ae2e0, Thiscall, ProfilePage, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ada20, Thiscall, ProfilePage, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ae1a0, Thiscall, ProfilePage, updateUserScoreFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ae290, Thiscall, ProfilePage, updateUserScoreFailed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3aeb40, Thiscall, ProfilePage, getUserInfoFinished, GJUserScore*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3aec30, Thiscall, ProfilePage, getUserInfoFailed, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3aec80, Thiscall, ProfilePage, userInfoChanged, GJUserScore*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3af270, Thiscall, ProfilePage, loadCommentsFinished, cocos2d::CCArray*, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3af2f0, Thiscall, ProfilePage, loadCommentsFailed, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3af350, Thiscall, ProfilePage, setupPageInfo, gd::string, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3af550, Thiscall, ProfilePage, commentUploadFinished, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3af5a0, Thiscall, ProfilePage, commentUploadFailed, int, CommentError)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3af6c0, Thiscall, ProfilePage, commentDeleteFailed, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3add10, Thiscall, ProfilePage, onClosePopup, UploadActionPopup*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3add60, Thiscall, ProfilePage, uploadActionFinished, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3adf20, Thiscall, ProfilePage, uploadActionFailed, int, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ProfilePage, blockUser, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a7c00, Thiscall, ProfilePage, init, int, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3aed00, Thiscall, ProfilePage, isCorrect, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ProfilePage, isOnWatchlist, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3aee30, Thiscall, ProfilePage, loadPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a9240, Thiscall, ProfilePage, loadPageFromUserInfo, GJUserScore*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ad200, Thiscall, ProfilePage, onBlockUser, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3adfd0, Thiscall, ProfilePage, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3acc50, Thiscall, ProfilePage, onComment, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3acbc0, Thiscall, ProfilePage, onCommentHistory, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ac290, Thiscall, ProfilePage, onCopyName, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ad450, Thiscall, ProfilePage, onFollow, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ace10, Thiscall, ProfilePage, onFriend, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3aeae0, Thiscall, ProfilePage, onFriends, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ProfilePage, onInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3aeab0, Thiscall, ProfilePage, onMessages, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ac8b0, Thiscall, ProfilePage, onMyLevels, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3aca60, Thiscall, ProfilePage, onMyLists, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3af530, Thiscall, ProfilePage, onNextPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3af540, Thiscall, ProfilePage, onPrevPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3aeb10, Thiscall, ProfilePage, onRequests, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3acc00, Thiscall, ProfilePage, onSendMessage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ae900, Thiscall, ProfilePage, onSettings, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ac0c0, Thiscall, ProfilePage, onStatInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ae760, Thiscall, ProfilePage, onTwitch, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ae5d0, Thiscall, ProfilePage, onTwitter, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3a8bb0, Thiscall, ProfilePage, onUpdate, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ae440, Thiscall, ProfilePage, onYouTube, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ProfilePage, setupComments, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3af120, Thiscall, ProfilePage, setupCommentsBrowser, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ae060, Thiscall, ProfilePage, showNoAccountError, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ProfilePage, toggleMainPageVisibility, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3ac010, Thiscall, ProfilePage, toggleShip, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(ProfilePage, updateLevelsLabel, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3af4c0, Thiscall, ProfilePage, updatePageArrows, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3be660, Default, ProfilePage, create, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, ProfilePage, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c5120, Thiscall, ProfilePage, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c53b0, Thiscall, ProfilePage, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c4af0, Thiscall, ProfilePage, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c5270, Thiscall, ProfilePage, updateUserScoreFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c5360, Thiscall, ProfilePage, updateUserScoreFailed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c5ee0, Thiscall, ProfilePage, getUserInfoFinished, GJUserScore*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c5fd0, Thiscall, ProfilePage, getUserInfoFailed, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c6020, Thiscall, ProfilePage, userInfoChanged, GJUserScore*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c6630, Thiscall, ProfilePage, loadCommentsFinished, cocos2d::CCArray*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c66b0, Thiscall, ProfilePage, loadCommentsFailed, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c6710, Thiscall, ProfilePage, setupPageInfo, gd::string, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c6910, Thiscall, ProfilePage, commentUploadFinished, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c6960, Thiscall, ProfilePage, commentUploadFailed, int, CommentError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c6a80, Thiscall, ProfilePage, commentDeleteFailed, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c4de0, Thiscall, ProfilePage, onClosePopup, UploadActionPopup*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c4e30, Thiscall, ProfilePage, uploadActionFinished, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c4ff0, Thiscall, ProfilePage, uploadActionFailed, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ProfilePage, blockUser, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3be840, Thiscall, ProfilePage, init, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c60a0, Thiscall, ProfilePage, isCorrect, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ProfilePage, isOnWatchlist, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c61d0, Thiscall, ProfilePage, loadPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bfe80, Thiscall, ProfilePage, loadPageFromUserInfo, GJUserScore*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c42d0, Thiscall, ProfilePage, onBlockUser, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c50a0, Thiscall, ProfilePage, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c3d20, Thiscall, ProfilePage, onComment, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c3c90, Thiscall, ProfilePage, onCommentHistory, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c32b0, Thiscall, ProfilePage, onCopyName, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c4520, Thiscall, ProfilePage, onFollow, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c3ee0, Thiscall, ProfilePage, onFriend, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c5e80, Thiscall, ProfilePage, onFriends, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c34e0, Thiscall, ProfilePage, onInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c5e50, Thiscall, ProfilePage, onMessages, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c3980, Thiscall, ProfilePage, onMyLevels, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c3b30, Thiscall, ProfilePage, onMyLists, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c68f0, Thiscall, ProfilePage, onNextPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c6900, Thiscall, ProfilePage, onPrevPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c5eb0, Thiscall, ProfilePage, onRequests, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c3cd0, Thiscall, ProfilePage, onSendMessage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c5ce0, Thiscall, ProfilePage, onSettings, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c5510, Thiscall, ProfilePage, onSocialPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c30e0, Thiscall, ProfilePage, onStatInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3bf7f0, Thiscall, ProfilePage, onUpdate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ProfilePage, setupComments, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c64c0, Thiscall, ProfilePage, setupCommentsBrowser, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c5130, Thiscall, ProfilePage, showNoAccountError, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ProfilePage, toggleMainPageVisibility, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c3030, Thiscall, ProfilePage, toggleShip, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(ProfilePage, updateLevelsLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3c6880, Thiscall, ProfilePage, updatePageArrows, )
 		}
 	};
 }

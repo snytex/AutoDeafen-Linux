@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_reset
-		#define GEODE_STATICS_reset
-		GEODE_AS_STATIC_FUNCTION(reset) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -37,7 +32,7 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMoveCNode, create, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMoveCNode, init, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCMoveCNode, reset, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCMoveCNode, reset, )
 		}
 	};
 }

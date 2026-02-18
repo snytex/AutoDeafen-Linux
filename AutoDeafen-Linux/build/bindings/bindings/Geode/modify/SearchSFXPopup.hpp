@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -45,9 +40,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SearchSFXPopup, create, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SearchSFXPopup, init, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(SearchSFXPopup, onSearchFolders, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SearchSFXPopup, create, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x480d20, Thiscall, SearchSFXPopup, init, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x480fe0, Thiscall, SearchSFXPopup, onSearchFolders, cocos2d::CCObject*)
 		}
 	};
 }

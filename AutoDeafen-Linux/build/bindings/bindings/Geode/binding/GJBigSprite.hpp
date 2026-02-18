@@ -15,38 +15,50 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJBigSprite, cocos2d::CCNode)
 
     /**
+     * @note[short] MacOS (ARM): 0x20bf60
+     * @note[short] MacOS (Intel): 0x268680
      * @note[short] Android
      */
     static GJBigSprite* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x204a04
-     * @note[short] MacOS (Intel): 0x257ec0
+     * @note[short] MacOS (ARM): 0x20d524
+     * @note[short] MacOS (Intel): 0x269e40
      * @note[short] Android
      */
     virtual bool init();
 
     /**
+     * @note[short] MacOS (ARM): 0x20d9c4
+     * @note[short] MacOS (Intel): 0x26a3d0
      * @note[short] Android
      */
-    void finishedLoadingSpriteAsync(cocos2d::CCObject* p0);
+    void finishedLoadingSpriteAsync(cocos2d::CCObject* obj);
 
     /**
+     * @note[short] MacOS (ARM): 0x20d934
+     * @note[short] MacOS (Intel): 0x26a350
      * @note[short] Android: Rebinded
      */
-    void loadSpriteAsync(gd::string p0, int p1);
+    void loadSpriteAsync(gd::string filename, int index);
 
     /**
+     * @note[short] MacOS (ARM): 0x20c9d4
+     * @note[short] MacOS (Intel): 0x269180
      * @note[short] Android
      */
     void unloadAll();
 
     /**
+     * @note[short] MacOS (ARM): 0x20d8cc
+     * @note[short] MacOS (Intel): 0x26a2f0
      * @note[short] Android: Rebinded
      */
-    void unloadSprite(gd::string p0, int p1);
+    void unloadSprite(gd::string filename, int index);
 
     /**
+     * @note[short] MacOS (ARM): 0x20bff0
+     * @note[short] MacOS (Intel): 0x268700
      * @note[short] Android
      */
     void updateSpriteVisibility();

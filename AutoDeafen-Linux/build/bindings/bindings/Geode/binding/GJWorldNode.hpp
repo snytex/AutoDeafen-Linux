@@ -15,55 +15,71 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJWorldNode, cocos2d::CCNode)
 
     /**
+     * @note[short] MacOS (ARM): 0x344e84
+     * @note[short] MacOS (Intel): 0x3c3680
      * @note[short] Android
      */
-    static GJWorldNode* create(int p0, WorldSelectLayer* p1);
+    static GJWorldNode* create(int type, WorldSelectLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x33d2d0
-     * @note[short] MacOS (Intel): 0x3b1940
+     * @note[short] MacOS (ARM): 0x346054
+     * @note[short] MacOS (Intel): 0x3c4880
      * @note[short] Android
      */
-    float addDotsToLevel(int p0, bool p1);
+    float addDotsToLevel(int levelID, bool animate);
 
     /**
+     * @note[short] MacOS (ARM): 0x346674
+     * @note[short] MacOS (Intel): 0x3c4ed0
      * @note[short] Android
      */
-    cocos2d::CCPoint dotPositionForLevel(int p0, int p1);
+    cocos2d::CCPoint dotPositionForLevel(int levelID, int index);
 
     /**
-     * @note[short] MacOS (ARM): 0x33c8b8
-     * @note[short] MacOS (Intel): 0x3b0e80
+     * @note[short] MacOS (ARM): 0x345648
+     * @note[short] MacOS (Intel): 0x3c3dd0
      * @note[short] Android
      */
-    bool init(int p0, WorldSelectLayer* p1);
+    bool init(int type, WorldSelectLayer* layer);
 
     /**
+     * @note[short] MacOS (ARM): 0x345fd8
+     * @note[short] MacOS (Intel): 0x3c4800
      * @note[short] Android
      */
     void onLevel(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x346404
+     * @note[short] MacOS (Intel): 0x3c4c40
      * @note[short] Android
      */
     void playStep1();
 
     /**
+     * @note[short] MacOS (ARM): 0x3464fc
+     * @note[short] MacOS (Intel): 0x3c4d40
      * @note[short] Android
      */
     void playStep2();
 
     /**
+     * @note[short] MacOS (ARM): 0x3465c0
+     * @note[short] MacOS (Intel): 0x3c4e00
      * @note[short] Android
      */
     void playStep3();
 
     /**
+     * @note[short] MacOS (ARM): 0x345ec0
+     * @note[short] MacOS (Intel): 0x3c46e0
      * @note[short] Android
      */
-    cocos2d::CCPoint positionForLevelButton(int p0);
+    cocos2d::CCPoint positionForLevelButton(int levelID);
 
     /**
+     * @note[short] MacOS (ARM): 0x3447e0
+     * @note[short] MacOS (Intel): 0x3c3020
      * @note[short] Android
      */
     void unlockActiveItem();

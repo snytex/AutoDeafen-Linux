@@ -35,39 +35,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getAllLevelsInDict) 
 	#endif
 
-	#ifndef GEODE_STATICS_getAllLevelsWithName
-		#define GEODE_STATICS_getAllLevelsWithName
-		GEODE_AS_STATIC_FUNCTION(getAllLevelsWithName) 
-	#endif
-
-	#ifndef GEODE_STATICS_getLevelsInNameGroups
-		#define GEODE_STATICS_getLevelsInNameGroups
-		GEODE_AS_STATIC_FUNCTION(getLevelsInNameGroups) 
-	#endif
-
 	#ifndef GEODE_STATICS_getMainLevelString
 		#define GEODE_STATICS_getMainLevelString
 		GEODE_AS_STATIC_FUNCTION(getMainLevelString) 
-	#endif
-
-	#ifndef GEODE_STATICS_markLevelsAsUnmodified
-		#define GEODE_STATICS_markLevelsAsUnmodified
-		GEODE_AS_STATIC_FUNCTION(markLevelsAsUnmodified) 
-	#endif
-
-	#ifndef GEODE_STATICS_moveLevelToTop
-		#define GEODE_STATICS_moveLevelToTop
-		GEODE_AS_STATIC_FUNCTION(moveLevelToTop) 
-	#endif
-
-	#ifndef GEODE_STATICS_reorderLevels
-		#define GEODE_STATICS_reorderLevels
-		GEODE_AS_STATIC_FUNCTION(reorderLevels) 
-	#endif
-
-	#ifndef GEODE_STATICS_reorderLists
-		#define GEODE_STATICS_reorderLists
-		GEODE_AS_STATIC_FUNCTION(reorderLists) 
 	#endif
 
 	#ifndef GEODE_STATICS_tryLoadMainLevelString
@@ -85,12 +55,12 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateLevelRevision) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateListOrder
-		#define GEODE_STATICS_updateListOrder
-		GEODE_AS_STATIC_FUNCTION(updateListOrder) 
+    
+	#ifndef GEODE_CONCEPT_CHECK_get
+		#define GEODE_CONCEPT_CHECK_get
+		GEODE_CONCEPT_FUNCTION_CHECK(get) 
 	#endif
 
-    
 	#ifndef GEODE_CONCEPT_CHECK_sharedState
 		#define GEODE_CONCEPT_CHECK_sharedState
 		GEODE_CONCEPT_FUNCTION_CHECK(sharedState) 
@@ -195,25 +165,26 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31b070, Default, LocalLevelManager, sharedState, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31b110, Thiscall, LocalLevelManager, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31bae0, Thiscall, LocalLevelManager, encodeDataTo, DS_Dictionary*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31bb40, Thiscall, LocalLevelManager, dataLoaded, DS_Dictionary*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31ba50, Thiscall, LocalLevelManager, firstLoad, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31b4e0, Thiscall, LocalLevelManager, getAllLevelsInDict, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LocalLevelManager, getAllLevelsWithName, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LocalLevelManager, get, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32ff30, Default, LocalLevelManager, sharedState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32ffd0, Thiscall, LocalLevelManager, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3309a0, Thiscall, LocalLevelManager, encodeDataTo, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x330a00, Thiscall, LocalLevelManager, dataLoaded, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x330910, Thiscall, LocalLevelManager, firstLoad, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3303a0, Thiscall, LocalLevelManager, getAllLevelsInDict, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LocalLevelManager, getAllLevelsWithName, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LocalLevelManager, getCreatedLevels, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LocalLevelManager, getCreatedLists, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LocalLevelManager, getLevelsInNameGroups, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31b3d0, Thiscall, LocalLevelManager, getMainLevelString, int)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LocalLevelManager, markLevelsAsUnmodified, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LocalLevelManager, moveLevelToTop, GJGameLevel*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LocalLevelManager, reorderLevels, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LocalLevelManager, reorderLists, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LocalLevelManager, tryLoadMainLevelString, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31b9d0, Thiscall, LocalLevelManager, updateLevelOrder, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x31b640, Thiscall, LocalLevelManager, updateLevelRevision, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(LocalLevelManager, updateListOrder, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LocalLevelManager, getLevelsInNameGroups, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x330290, Thiscall, LocalLevelManager, getMainLevelString, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LocalLevelManager, markLevelsAsUnmodified, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LocalLevelManager, moveLevelToTop, GJGameLevel*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LocalLevelManager, reorderLevels, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LocalLevelManager, reorderLists, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x330010, Thiscall, LocalLevelManager, tryLoadMainLevelString, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x330890, Thiscall, LocalLevelManager, updateLevelOrder, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x330500, Thiscall, LocalLevelManager, updateLevelRevision, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(LocalLevelManager, updateListOrder, )
 		}
 	};
 }

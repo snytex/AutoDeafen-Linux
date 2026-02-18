@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_responseToDict
-		#define GEODE_STATICS_responseToDict
-		GEODE_AS_STATIC_FUNCTION(responseToDict) 
-	#endif
-
 	#ifndef GEODE_STATICS_sharedState
 		#define GEODE_STATICS_sharedState
 		GEODE_AS_STATIC_FUNCTION(sharedState) 
@@ -90,6 +85,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(downloadSongFailed) 
 	#endif
 
+	#ifndef GEODE_STATICS_downloadSongStarted
+		#define GEODE_STATICS_downloadSongStarted
+		GEODE_AS_STATIC_FUNCTION(downloadSongStarted) 
+	#endif
+
 	#ifndef GEODE_STATICS_filterMusicByArtistID
 		#define GEODE_STATICS_filterMusicByArtistID
 		GEODE_AS_STATIC_FUNCTION(filterMusicByArtistID) 
@@ -103,36 +103,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_generateCustomContentURL
 		#define GEODE_STATICS_generateCustomContentURL
 		GEODE_AS_STATIC_FUNCTION(generateCustomContentURL) 
-	#endif
-
-	#ifndef GEODE_STATICS_generateResourceAssetList
-		#define GEODE_STATICS_generateResourceAssetList
-		GEODE_AS_STATIC_FUNCTION(generateResourceAssetList) 
-	#endif
-
-	#ifndef GEODE_STATICS_getAllMusicArtists
-		#define GEODE_STATICS_getAllMusicArtists
-		GEODE_AS_STATIC_FUNCTION(getAllMusicArtists) 
-	#endif
-
-	#ifndef GEODE_STATICS_getAllMusicObjects
-		#define GEODE_STATICS_getAllMusicObjects
-		GEODE_AS_STATIC_FUNCTION(getAllMusicObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_getAllMusicTags
-		#define GEODE_STATICS_getAllMusicTags
-		GEODE_AS_STATIC_FUNCTION(getAllMusicTags) 
-	#endif
-
-	#ifndef GEODE_STATICS_getAllSFXObjects
-		#define GEODE_STATICS_getAllSFXObjects
-		GEODE_AS_STATIC_FUNCTION(getAllSFXObjects) 
-	#endif
-
-	#ifndef GEODE_STATICS_getAllSongs
-		#define GEODE_STATICS_getAllSongs
-		GEODE_AS_STATIC_FUNCTION(getAllSongs) 
 	#endif
 
 	#ifndef GEODE_STATICS_getCustomContentURL
@@ -170,16 +140,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(handleIt) 
 	#endif
 
-	#ifndef GEODE_STATICS_handleItDelayed
-		#define GEODE_STATICS_handleItDelayed
-		GEODE_AS_STATIC_FUNCTION(handleItDelayed) 
-	#endif
-
-	#ifndef GEODE_STATICS_handleItND
-		#define GEODE_STATICS_handleItND
-		GEODE_AS_STATIC_FUNCTION(handleItND) 
-	#endif
-
 	#ifndef GEODE_STATICS_isRunningActionForSongID
 		#define GEODE_STATICS_isRunningActionForSongID
 		GEODE_AS_STATIC_FUNCTION(isRunningActionForSongID) 
@@ -213,11 +173,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_musicActionFinished
 		#define GEODE_STATICS_musicActionFinished
 		GEODE_AS_STATIC_FUNCTION(musicActionFinished) 
-	#endif
-
-	#ifndef GEODE_STATICS_nameForTagID
-		#define GEODE_STATICS_nameForTagID
-		GEODE_AS_STATIC_FUNCTION(nameForTagID) 
 	#endif
 
 	#ifndef GEODE_STATICS_onDownloadMusicLibraryCompleted
@@ -315,6 +270,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(removeMusicDownloadDelegate) 
 	#endif
 
+	#ifndef GEODE_STATICS_responseToDict
+		#define GEODE_STATICS_responseToDict
+		GEODE_AS_STATIC_FUNCTION(responseToDict) 
+	#endif
+
 	#ifndef GEODE_STATICS_showTOS
 		#define GEODE_STATICS_showTOS
 		GEODE_AS_STATIC_FUNCTION(showTOS) 
@@ -336,11 +296,6 @@ namespace geode::modifier {
 	#endif
 
     
-	#ifndef GEODE_CONCEPT_CHECK_responseToDict
-		#define GEODE_CONCEPT_CHECK_responseToDict
-		GEODE_CONCEPT_FUNCTION_CHECK(responseToDict) 
-	#endif
-
 	#ifndef GEODE_CONCEPT_CHECK_sharedState
 		#define GEODE_CONCEPT_CHECK_sharedState
 		GEODE_CONCEPT_FUNCTION_CHECK(sharedState) 
@@ -444,6 +399,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_downloadSongFinished
 		#define GEODE_CONCEPT_CHECK_downloadSongFinished
 		GEODE_CONCEPT_FUNCTION_CHECK(downloadSongFinished) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_downloadSongStarted
+		#define GEODE_CONCEPT_CHECK_downloadSongStarted
+		GEODE_CONCEPT_FUNCTION_CHECK(downloadSongStarted) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_encodeDataTo
@@ -766,6 +726,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(removeMusicDownloadDelegate) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_responseToDict
+		#define GEODE_CONCEPT_CHECK_responseToDict
+		GEODE_CONCEPT_FUNCTION_CHECK(responseToDict) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_showTOS
 		#define GEODE_CONCEPT_CHECK_showTOS
 		GEODE_CONCEPT_FUNCTION_CHECK(showTOS) 
@@ -815,101 +780,102 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x328e50, Default, MusicDownloadManager, responseToDict, gd::string, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3277b0, Default, MusicDownloadManager, sharedState, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x327d90, Thiscall, MusicDownloadManager, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3299f0, Thiscall, MusicDownloadManager, addDLToActive, char const*, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33cc00, Default, MusicDownloadManager, sharedState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33d1e0, Thiscall, MusicDownloadManager, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, addDLToActive, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x327f30, Thiscall, MusicDownloadManager, addMusicDownloadDelegate, MusicDownloadDelegate*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3285f0, Thiscall, MusicDownloadManager, addSongObjectFromString, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33efc0, Thiscall, MusicDownloadManager, addDLToActive, char const*, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33d380, Thiscall, MusicDownloadManager, addMusicDownloadDelegate, MusicDownloadDelegate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33da40, Thiscall, MusicDownloadManager, addSongObjectFromString, gd::string)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, clearSong, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x329160, Thiscall, MusicDownloadManager, clearUnusedSongs, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x328c50, Thiscall, MusicDownloadManager, createArtistsInfo, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3288a0, Thiscall, MusicDownloadManager, createSongsInfo, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32a450, Thiscall, MusicDownloadManager, dataLoaded, DS_Dictionary*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33e6a0, Thiscall, MusicDownloadManager, clearUnusedSongs, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33e190, Thiscall, MusicDownloadManager, createArtistsInfo, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33dde0, Thiscall, MusicDownloadManager, createSongsInfo, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33fa20, Thiscall, MusicDownloadManager, dataLoaded, DS_Dictionary*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, deleteSFX, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, deleteSong, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32ad40, Thiscall, MusicDownloadManager, downloadCustomSong, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32b370, Thiscall, MusicDownloadManager, downloadMusicLibrary, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32ca80, Thiscall, MusicDownloadManager, downloadSFX, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32edf0, Thiscall, MusicDownloadManager, downloadSFXFailed, int, GJSongError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x340310, Thiscall, MusicDownloadManager, downloadCustomSong, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x340940, Thiscall, MusicDownloadManager, downloadMusicLibrary, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x342240, Thiscall, MusicDownloadManager, downloadSFX, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3445b0, Thiscall, MusicDownloadManager, downloadSFXFailed, int, GJSongError)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, downloadSFXFinished, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32d220, Thiscall, MusicDownloadManager, downloadSFXLibrary, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x329460, Thiscall, MusicDownloadManager, downloadSong, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32ed70, Thiscall, MusicDownloadManager, downloadSongFailed, int, GJSongError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3429e0, Thiscall, MusicDownloadManager, downloadSFXLibrary, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33ea20, Thiscall, MusicDownloadManager, downloadSong, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x344530, Thiscall, MusicDownloadManager, downloadSongFailed, int, GJSongError)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, downloadSongFinished, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33e9a0, Thiscall, MusicDownloadManager, downloadSongStarted, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, encodeDataTo, DS_Dictionary*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32c920, Thiscall, MusicDownloadManager, filterMusicByArtistID, int, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32c9d0, Thiscall, MusicDownloadManager, filterMusicByTag, int, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3420e0, Thiscall, MusicDownloadManager, filterMusicByArtistID, int, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x342190, Thiscall, MusicDownloadManager, filterMusicByTag, int, cocos2d::CCArray*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, firstSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32e2e0, Thiscall, MusicDownloadManager, generateCustomContentURL, gd::string)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicDownloadManager, generateResourceAssetList, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicDownloadManager, getAllMusicArtists, OptionsObjectDelegate*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicDownloadManager, getAllMusicObjects, GJSongType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicDownloadManager, getAllMusicTags, OptionsObjectDelegate*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicDownloadManager, getAllSFXObjects, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicDownloadManager, getAllSongs, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32a940, Thiscall, MusicDownloadManager, getCustomContentURL, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x343aa0, Thiscall, MusicDownloadManager, generateCustomContentURL, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, generateResourceAssetList, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, getAllMusicArtists, OptionsObjectDelegate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, getAllMusicObjects, GJSongType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, getAllMusicTags, OptionsObjectDelegate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, getAllSFXObjects, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, getAllSongs, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33ff10, Thiscall, MusicDownloadManager, getCustomContentURL, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x39d70, Thiscall, MusicDownloadManager, getDLObject, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3290a0, Thiscall, MusicDownloadManager, getDownloadedSongs, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33e5e0, Thiscall, MusicDownloadManager, getDownloadedSongs, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, getDownloadProgress, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, getMusicArtistForID, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, getMusicObject, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, getSFXDownloadKey, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, getSFXDownloadProgress, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, getSFXFolderObjectForID, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32e0c0, Thiscall, MusicDownloadManager, getSFXFolderPathForID, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x343880, Thiscall, MusicDownloadManager, getSFXFolderPathForID, int, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, getSFXObject, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, getSongDownloadKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x328180, Thiscall, MusicDownloadManager, getSongInfo, int, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33d5d0, Thiscall, MusicDownloadManager, getSongInfo, int, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, getSongInfoKey, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x329b70, Thiscall, MusicDownloadManager, getSongInfoObject, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33f140, Thiscall, MusicDownloadManager, getSongInfoObject, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, getSongPriority, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x327ca0, Thiscall, MusicDownloadManager, handleIt, bool, gd::string, gd::string, GJHttpType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicDownloadManager, handleItDelayed, bool, gd::string, gd::string, GJHttpType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicDownloadManager, handleItND, cocos2d::CCNode*, void*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33d0f0, Thiscall, MusicDownloadManager, handleIt, bool, gd::string, gd::string, GJHttpType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, handleItDelayed, bool, gd::string, gd::string, GJHttpType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, handleItND, cocos2d::CCNode*, void*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, incrementPriorityForSong, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, isDLActive, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, isMusicLibraryLoaded, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, isResourceSFX, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, isResourceSong, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3280a0, Thiscall, MusicDownloadManager, isRunningActionForSongID, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x329fb0, Thiscall, MusicDownloadManager, isSFXDownloaded, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33d4f0, Thiscall, MusicDownloadManager, isRunningActionForSongID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33f580, Thiscall, MusicDownloadManager, isSFXDownloaded, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, isSFXLibraryLoaded, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x329c80, Thiscall, MusicDownloadManager, isSongDownloaded, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33f250, Thiscall, MusicDownloadManager, isSongDownloaded, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, limitDownloadedSongs, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32ecf0, Thiscall, MusicDownloadManager, loadSongInfoFailed, int, GJSongError)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32ec70, Thiscall, MusicDownloadManager, loadSongInfoFinished, SongInfoObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32eef0, Thiscall, MusicDownloadManager, musicActionFailed, GJMusicAction)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32ee70, Thiscall, MusicDownloadManager, musicActionFinished, GJMusicAction)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MusicDownloadManager, nameForTagID, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32b600, Thiscall, MusicDownloadManager, onDownloadMusicLibraryCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32cce0, Thiscall, MusicDownloadManager, onDownloadSFXCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32d480, Thiscall, MusicDownloadManager, onDownloadSFXLibraryCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x329750, Thiscall, MusicDownloadManager, onDownloadSongCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32abb0, Thiscall, MusicDownloadManager, onGetCustomContentURLCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x328460, Thiscall, MusicDownloadManager, onGetSongInfoCompleted, gd::string, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x327ba0, Thiscall, MusicDownloadManager, onProcessHttpRequestCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32b240, Thiscall, MusicDownloadManager, onTryUpdateMusicLibraryCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32d0e0, Thiscall, MusicDownloadManager, onTryUpdateSFXLibraryCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32b7b0, Thiscall, MusicDownloadManager, parseMusicLibrary, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32d610, Thiscall, MusicDownloadManager, parseSFXLibrary, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32a230, Thiscall, MusicDownloadManager, pathForSFX, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32a0e0, Thiscall, MusicDownloadManager, pathForSFXFolder, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x329f00, Thiscall, MusicDownloadManager, pathForSong, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x329db0, Thiscall, MusicDownloadManager, pathForSongFolder, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x327a80, Thiscall, MusicDownloadManager, ProcessHttpGetRequest, gd::string, gd::string, cocos2d::extension::SEL_HttpResponse, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x327940, Thiscall, MusicDownloadManager, ProcessHttpRequest, gd::string, gd::string, gd::string, GJHttpType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x329ac0, Thiscall, MusicDownloadManager, removeDLFromActive, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x328010, Thiscall, MusicDownloadManager, removeMusicDownloadDelegate, MusicDownloadDelegate*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32a2f0, Thiscall, MusicDownloadManager, showTOS, FLAlertLayerProtocol*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x328120, Thiscall, MusicDownloadManager, songStateChanged, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3444b0, Thiscall, MusicDownloadManager, loadSongInfoFailed, int, GJSongError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x344430, Thiscall, MusicDownloadManager, loadSongInfoFinished, SongInfoObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3446b0, Thiscall, MusicDownloadManager, musicActionFailed, GJMusicAction)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x344630, Thiscall, MusicDownloadManager, musicActionFinished, GJMusicAction)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, nameForTagID, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x340bd0, Thiscall, MusicDownloadManager, onDownloadMusicLibraryCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3424a0, Thiscall, MusicDownloadManager, onDownloadSFXCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x342c40, Thiscall, MusicDownloadManager, onDownloadSFXLibraryCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33ed20, Thiscall, MusicDownloadManager, onDownloadSongCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x340180, Thiscall, MusicDownloadManager, onGetCustomContentURLCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33d8b0, Thiscall, MusicDownloadManager, onGetSongInfoCompleted, gd::string, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33cff0, Thiscall, MusicDownloadManager, onProcessHttpRequestCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x340810, Thiscall, MusicDownloadManager, onTryUpdateMusicLibraryCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3428a0, Thiscall, MusicDownloadManager, onTryUpdateSFXLibraryCompleted, cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x340d80, Thiscall, MusicDownloadManager, parseMusicLibrary, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x342dd0, Thiscall, MusicDownloadManager, parseSFXLibrary, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33f800, Thiscall, MusicDownloadManager, pathForSFX, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33f6b0, Thiscall, MusicDownloadManager, pathForSFXFolder, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33f4d0, Thiscall, MusicDownloadManager, pathForSong, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33f380, Thiscall, MusicDownloadManager, pathForSongFolder, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33ced0, Thiscall, MusicDownloadManager, ProcessHttpGetRequest, gd::string, gd::string, cocos2d::extension::SEL_HttpResponse, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33cd90, Thiscall, MusicDownloadManager, ProcessHttpRequest, gd::string, gd::string, gd::string, GJHttpType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33f090, Thiscall, MusicDownloadManager, removeDLFromActive, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33d460, Thiscall, MusicDownloadManager, removeMusicDownloadDelegate, MusicDownloadDelegate*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33e390, Thiscall, MusicDownloadManager, responseToDict, gd::string, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33f8c0, Thiscall, MusicDownloadManager, showTOS, FLAlertLayerProtocol*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x33d570, Thiscall, MusicDownloadManager, songStateChanged, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, stopDownload, int)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, storeMusicObject, SongInfoObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, storeSFXInfoObject, SFXInfoObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MusicDownloadManager, tryLoadLibraries, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32afb0, Thiscall, MusicDownloadManager, tryUpdateMusicLibrary, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x32ce40, Thiscall, MusicDownloadManager, tryUpdateSFXLibrary, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x340580, Thiscall, MusicDownloadManager, tryUpdateMusicLibrary, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x342600, Thiscall, MusicDownloadManager, tryUpdateSFXLibrary, )
 		}
 	};
 }

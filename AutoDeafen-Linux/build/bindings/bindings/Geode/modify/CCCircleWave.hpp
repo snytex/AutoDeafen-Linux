@@ -30,16 +30,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(updateTweenAction) 
 	#endif
 
-	#ifndef GEODE_STATICS_baseSetup
-		#define GEODE_STATICS_baseSetup
-		GEODE_AS_STATIC_FUNCTION(baseSetup) 
-	#endif
-
-	#ifndef GEODE_STATICS_followObject
-		#define GEODE_STATICS_followObject
-		GEODE_AS_STATIC_FUNCTION(followObject) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -105,16 +95,16 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42800, Default, CCCircleWave, create, float, float, float, bool, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCCircleWave, create, float, float, float, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42af0, Thiscall, CCCircleWave, setPosition, cocos2d::CCPoint const&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42f00, Thiscall, CCCircleWave, removeMeAndCleanup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42dd0, Thiscall, CCCircleWave, draw, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42b70, Thiscall, CCCircleWave, updateTweenAction, float, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCCircleWave, baseSetup, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCCircleWave, followObject, cocos2d::CCNode*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x428b0, Thiscall, CCCircleWave, init, float, float, float, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42b30, Thiscall, CCCircleWave, updatePosition, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42870, Default, CCCircleWave, create, float, float, float, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42b60, Thiscall, CCCircleWave, setPosition, cocos2d::CCPoint const&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42f70, Thiscall, CCCircleWave, removeMeAndCleanup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42e40, Thiscall, CCCircleWave, draw, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42be0, Thiscall, CCCircleWave, updateTweenAction, float, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCCircleWave, baseSetup, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCCircleWave, followObject, cocos2d::CCNode*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42920, Thiscall, CCCircleWave, init, float, float, float, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42ba0, Thiscall, CCCircleWave, updatePosition, float)
 		}
 	};
 }

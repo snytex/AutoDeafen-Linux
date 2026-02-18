@@ -30,16 +30,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(FLAlert_Clicked) 
 	#endif
 
-	#ifndef GEODE_STATICS_deleteSFX
-		#define GEODE_STATICS_deleteSFX
-		GEODE_AS_STATIC_FUNCTION(deleteSFX) 
-	#endif
-
-	#ifndef GEODE_STATICS_downloadFailed
-		#define GEODE_STATICS_downloadFailed
-		GEODE_AS_STATIC_FUNCTION(downloadFailed) 
-	#endif
-
 	#ifndef GEODE_STATICS_hideLoadingArt
 		#define GEODE_STATICS_hideLoadingArt
 		GEODE_AS_STATIC_FUNCTION(hideLoadingArt) 
@@ -80,11 +70,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(showLoadingArt) 
 	#endif
 
-	#ifndef GEODE_STATICS_startDownload
-		#define GEODE_STATICS_startDownload
-		GEODE_AS_STATIC_FUNCTION(startDownload) 
-	#endif
-
 	#ifndef GEODE_STATICS_startMonitorDownload
 		#define GEODE_STATICS_startMonitorDownload
 		GEODE_AS_STATIC_FUNCTION(startMonitorDownload) 
@@ -93,11 +78,6 @@ namespace geode::modifier {
 	#ifndef GEODE_STATICS_updateDownloadProgress
 		#define GEODE_STATICS_updateDownloadProgress
 		GEODE_AS_STATIC_FUNCTION(updateDownloadProgress) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateError
-		#define GEODE_STATICS_updateError
-		GEODE_AS_STATIC_FUNCTION(updateError) 
 	#endif
 
 	#ifndef GEODE_STATICS_updateProgressBar
@@ -245,29 +225,29 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbf920, Default, CustomSFXWidget, create, SFXInfoObject*, CustomSFXDelegate*, bool, bool, bool, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc18e0, Thiscall, CustomSFXWidget, downloadSFXFinished, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc1960, Thiscall, CustomSFXWidget, downloadSFXFailed, int, GJSongError)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc1230, Thiscall, CustomSFXWidget, songStateChanged, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc1a60, Thiscall, CustomSFXWidget, FLAlert_Clicked, FLAlertLayer*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSFXWidget, deleteSFX, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSFXWidget, downloadFailed, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc0bf0, Thiscall, CustomSFXWidget, hideLoadingArt, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xbfa60, Thiscall, CustomSFXWidget, init, SFXInfoObject*, CustomSFXDelegate*, bool, bool, bool, bool, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc0c80, Thiscall, CustomSFXWidget, onCancelDownload, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc0950, Thiscall, CustomSFXWidget, onDelete, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc0d10, Thiscall, CustomSFXWidget, onDownload, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc0ee0, Thiscall, CustomSFXWidget, onPlayback, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc0ec0, Thiscall, CustomSFXWidget, onSelect, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc0a90, Thiscall, CustomSFXWidget, showLoadingArt, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSFXWidget, startDownload, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc0e10, Thiscall, CustomSFXWidget, startMonitorDownload, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc1100, Thiscall, CustomSFXWidget, updateDownloadProgress, float)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CustomSFXWidget, updateError, GJSongError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc0640, Default, CustomSFXWidget, create, SFXInfoObject*, CustomSFXDelegate*, bool, bool, bool, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc2600, Thiscall, CustomSFXWidget, downloadSFXFinished, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc2680, Thiscall, CustomSFXWidget, downloadSFXFailed, int, GJSongError)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc1f50, Thiscall, CustomSFXWidget, songStateChanged, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc2780, Thiscall, CustomSFXWidget, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSFXWidget, deleteSFX, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSFXWidget, downloadFailed, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc1910, Thiscall, CustomSFXWidget, hideLoadingArt, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc0780, Thiscall, CustomSFXWidget, init, SFXInfoObject*, CustomSFXDelegate*, bool, bool, bool, bool, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc19a0, Thiscall, CustomSFXWidget, onCancelDownload, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc1670, Thiscall, CustomSFXWidget, onDelete, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc1a30, Thiscall, CustomSFXWidget, onDownload, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc1c00, Thiscall, CustomSFXWidget, onPlayback, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc1be0, Thiscall, CustomSFXWidget, onSelect, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc17b0, Thiscall, CustomSFXWidget, showLoadingArt, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSFXWidget, startDownload, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc1b30, Thiscall, CustomSFXWidget, startMonitorDownload, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc1e20, Thiscall, CustomSFXWidget, updateDownloadProgress, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSFXWidget, updateError, GJSongError)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSFXWidget, updateLengthMod, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSFXWidget, updatePlaybackBtn, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc11b0, Thiscall, CustomSFXWidget, updateProgressBar, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc1240, Thiscall, CustomSFXWidget, updateSFXInfo, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc1ed0, Thiscall, CustomSFXWidget, updateProgressBar, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0xc1f60, Thiscall, CustomSFXWidget, updateSFXInfo, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSFXWidget, updateSFXObject, SFXInfoObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CustomSFXWidget, verifySFXID, int)
 		}

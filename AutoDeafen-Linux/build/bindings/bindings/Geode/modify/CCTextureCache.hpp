@@ -205,6 +205,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCTextureCache@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCTextureCache, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCTextureCache@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCTextureCache)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCTextureCache::purgeSharedTextureCache)), Default, cocos2d::CCTextureCache, purgeSharedTextureCache, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCTextureCache::reloadAllTextures)), Default, cocos2d::CCTextureCache, reloadAllTextures, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCTextureCache::sharedTextureCache)), Default, cocos2d::CCTextureCache, sharedTextureCache, )

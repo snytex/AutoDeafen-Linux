@@ -17,116 +17,145 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupEnterEffectPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x401728
+     * @note[short] Android: Out of line
      */
-    static SetupEnterEffectPopup* create(EnterEffectObject* p0, cocos2d::CCArray* p1, int p2);
+     SetupEnterEffectPopup();
 
     /**
-     * @note[short] MacOS (ARM): 0x363d00
-     * @note[short] MacOS (Intel): 0x3e1800
-     * @note[short] Windows: 0x408580
-     * @note[short] iOS: 0x3f92a4
+     * @note[short] MacOS (ARM): 0x36a020
+     * @note[short] MacOS (Intel): 0x3f0800
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3ff3c0
+     * @note[short] Android
+     */
+    static SetupEnterEffectPopup* create(EnterEffectObject* object, cocos2d::CCArray* objects, int id);
+
+    /**
+     * @note[short] MacOS (ARM): 0x36c5a0
+     * @note[short] MacOS (Intel): 0x3f3510
+     * @note[short] Windows: 0x420250
+     * @note[short] iOS: 0x40133c
      * @note[short] Android
      */
     virtual void determineStartValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x3640e0
-     * @note[short] MacOS (Intel): 0x3e1c10
-     * @note[short] Windows: 0x408b60
-     * @note[short] iOS: 0x3f94f8
+     * @note[short] MacOS (ARM): 0x36c974
+     * @note[short] MacOS (Intel): 0x3f3940
+     * @note[short] Windows: 0x420870
+     * @note[short] iOS: 0x401590
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x36425c
-     * @note[short] MacOS (Intel): 0x3e1db0
-     * @note[short] Windows: 0x3f63f0
-     * @note[short] iOS: 0x3f9650
+     * @note[short] MacOS (ARM): 0x36caf4
+     * @note[short] MacOS (Intel): 0x3f3ae0
+     * @note[short] Windows: 0x40e0b0
+     * @note[short] iOS: 0x4016ec
      * @note[short] Android
      */
-    virtual void updateInputValue(int p0, float& p1);
+    virtual void updateInputValue(int tag, float& value);
 
     /**
-     * @note[short] MacOS (ARM): 0x364228
-     * @note[short] MacOS (Intel): 0x3e1d80
-     * @note[short] Windows: 0x3f63c0
-     * @note[short] iOS: 0x3f961c
+     * @note[short] MacOS (ARM): 0x36cac0
+     * @note[short] MacOS (Intel): 0x3f3ab0
+     * @note[short] Windows: 0x40e080
+     * @note[short] iOS: 0x4016b8
      * @note[short] Android
      */
-    virtual void updateInputNode(int p0, float p1);
+    virtual void updateInputNode(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x363e70
-     * @note[short] MacOS (Intel): 0x3e19c0
-     * @note[short] Windows: 0x408750
-     * @note[short] iOS: 0x3f9410
+     * @note[short] MacOS (ARM): 0x36c710
+     * @note[short] MacOS (Intel): 0x3f3700
+     * @note[short] Windows: 0x420420
+     * @note[short] iOS: 0x4014a8
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x3641a0
-     * @note[short] MacOS (Intel): 0x3e1d10
-     * @note[short] Windows: 0x3f6360
-     * @note[short] iOS: 0x3f9594
+     * @note[short] MacOS (ARM): 0x36ca38
+     * @note[short] MacOS (Intel): 0x3f3a40
+     * @note[short] Windows: 0x40e020
+     * @note[short] iOS: 0x401630
      * @note[short] Android
      */
-    virtual float triggerValueFromSliderValue(int p0, float p1);
+    virtual float triggerValueFromSliderValue(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x3641f4
-     * @note[short] MacOS (Intel): 0x3e1d50
-     * @note[short] Windows: 0x3f6390
-     * @note[short] iOS: 0x3f95e8
+     * @note[short] MacOS (ARM): 0x36ca8c
+     * @note[short] MacOS (Intel): 0x3f3a80
+     * @note[short] Windows: 0x40e050
+     * @note[short] iOS: 0x401684
      * @note[short] Android
      */
-    virtual float triggerSliderValueFromValue(int p0, float p1);
+    virtual float triggerSliderValueFromValue(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x363f34
-     * @note[short] MacOS (Intel): 0x3e1a90
-     * @note[short] Windows: 0x408a70
-     * @note[short] iOS: 0x3f94cc
+     * @note[short] MacOS (ARM): 0x36c7c8
+     * @note[short] MacOS (Intel): 0x3f37c0
+     * @note[short] Windows: 0x420780
+     * @note[short] iOS: 0x401564
      * @note[short] Android
      */
-    virtual void hsvPopupClosed(HSVWidgetPopup* p0, cocos2d::ccHSVValue p1);
+    virtual void hsvPopupClosed(HSVWidgetPopup* popup, cocos2d::ccHSVValue value);
 
     /**
-     * @note[short] MacOS (ARM): 0x361a0c
-     * @note[short] MacOS (Intel): 0x3deda0
-     * @note[short] Windows: 0x406570
+     * @note[short] MacOS (ARM): 0x36a1cc
+     * @note[short] MacOS (Intel): 0x3f0a70
+     * @note[short] Windows: 0x41e240
+     * @note[short] iOS: 0x3ff44c
      * @note[short] Android
      */
-    bool init(EnterEffectObject* p0, cocos2d::CCArray* p1, int p2);
+    bool init(EnterEffectObject* object, cocos2d::CCArray* objects, int id);
 
     /**
-     * @note[short] Windows: 0x408910
+     * @note[short] MacOS (ARM): 0x36c4cc
+     * @note[short] MacOS (Intel): 0x3f3440
+     * @note[short] Windows: 0x420620
+     * @note[short] iOS: 0x401270
      * @note[short] Android
      */
     void onEnterType(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x4089f0
+     * @note[short] MacOS (ARM): 0x36c22c
+     * @note[short] MacOS (Intel): 0x3f31a0
+     * @note[short] Windows: 0x420700
+     * @note[short] iOS: 0x401028
      * @note[short] Android
      */
     void onHSV(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x4088a0
+     * @note[short] MacOS (ARM): 0x36c394
+     * @note[short] MacOS (Intel): 0x3f32e0
+     * @note[short] Windows: 0x420570
+     * @note[short] iOS: 0x401188
      * @note[short] Android
      */
     void onNextFreeEnterChannel(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x3f5d70
+     * @note[short] MacOS (ARM): 0x36c430
+     * @note[short] MacOS (Intel): 0x3f3390
+     * @note[short] Windows: 0x40d9f0
+     * @note[short] iOS: 0x4011fc
      * @note[short] Android
      */
     void onNextFreeEnterEffectID(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x408a90
+     * @note[short] MacOS (ARM): 0x36c2cc
+     * @note[short] MacOS (Intel): 0x3f3220
+     * @note[short] Windows: 0x4207a0
+     * @note[short] iOS: 0x4010c0
      * @note[short] Android
      */
     void updateHSVButton();

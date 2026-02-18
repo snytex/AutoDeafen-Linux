@@ -65,6 +65,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??0CCKeypadDispatcher@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::CCKeypadDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCKeypadDispatcher@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCKeypadDispatcher)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCKeypadDelegate*>::func(&cocos2d::CCKeypadDispatcher::addDelegate)), Thiscall, cocos2d::CCKeypadDispatcher, addDelegate, cocos2d::CCKeypadDelegate*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::ccKeypadMSGType>::func(&cocos2d::CCKeypadDispatcher::dispatchKeypadMSG)), Thiscall, cocos2d::CCKeypadDispatcher, dispatchKeypadMSG, cocos2d::ccKeypadMSGType)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCKeypadDelegate*>::func(&cocos2d::CCKeypadDispatcher::forceAddDelegate)), Thiscall, cocos2d::CCKeypadDispatcher, forceAddDelegate, cocos2d::CCKeypadDelegate*)

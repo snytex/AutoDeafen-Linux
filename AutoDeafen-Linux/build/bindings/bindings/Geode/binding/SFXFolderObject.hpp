@@ -25,24 +25,30 @@ public:
      SFXFolderObject();
 
     /**
-     * @note[short] MacOS (ARM): Out of line
-     * @note[short] MacOS (Intel): Out of line
+     * @note[short] MacOS (ARM): 0x4e2724
+     * @note[short] MacOS (Intel): 0x598e90
      * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x15c4f0
+     * @note[short] Android: Rebinded
      */
      ~SFXFolderObject();
 
     /**
+     * @note[short] MacOS (ARM): 0x4e04c8
+     * @note[short] MacOS (Intel): 0x596560
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x15ab38
      * @note[short] Android: Rebinded
      */
-    static SFXFolderObject* create(int p0, gd::string p1, int p2);
+    static SFXFolderObject* create(int id, gd::string name, int folderID);
 
     /**
+     * @note[short] MacOS (ARM): 0x4e2864
+     * @note[short] MacOS (Intel): 0x598f90
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x15c544
      * @note[short] Android: Rebinded
      */
-    bool init(int p0, gd::string p1, int p2);
+    bool init(int id, gd::string name, int folderID);
     cocos2d::CCArray* m_sfxObjects;
 };

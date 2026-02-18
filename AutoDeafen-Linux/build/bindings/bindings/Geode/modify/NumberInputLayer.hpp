@@ -96,15 +96,15 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(NumberInputLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3326e0, Thiscall, NumberInputLayer, init, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52d60, Thiscall, NumberInputLayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, NumberInputLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x348400, Thiscall, NumberInputLayer, init, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52dd0, Thiscall, NumberInputLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, NumberInputLayer, keyBackClicked, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(NumberInputLayer, deleteLast, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(NumberInputLayer, inputNumber, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84620, Thiscall, NumberInputLayer, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, NumberInputLayer, onClose, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(NumberInputLayer, onDone, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x332c90, Thiscall, NumberInputLayer, onNumber, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x332e20, Thiscall, NumberInputLayer, updateNumberState, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3489b0, Thiscall, NumberInputLayer, onNumber, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x348b40, Thiscall, NumberInputLayer, updateNumberState, )
 		}
 	};
 }

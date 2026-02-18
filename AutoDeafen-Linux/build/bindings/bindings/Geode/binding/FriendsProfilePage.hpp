@@ -20,107 +20,109 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(FriendsProfilePage, FLAlertLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x56a370
-     * @note[short] MacOS (Intel): 0x641780
-     * @note[short] Windows: 0x13e010
-     * @note[short] iOS: 0x1d9ac0
+     * @note[short] MacOS (ARM): 0x577cd0
+     * @note[short] MacOS (Intel): 0x657a70
+     * @note[short] Windows: 0x13fc50
+     * @note[short] iOS: 0x1d8cb0
      * @note[short] Android
      */
-    static FriendsProfilePage* create(UserListType p0);
+    static FriendsProfilePage* create(UserListType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x56b2b4
-     * @note[short] MacOS (Intel): 0x6427d0
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x1da854
+     * @note[short] MacOS (ARM): 0x578bf8
+     * @note[short] MacOS (Intel): 0x658ab0
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x1d9a34
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x56b2a8
-     * @note[short] MacOS (Intel): 0x6427a0
-     * @note[short] Windows: 0x13f0a0
-     * @note[short] iOS: 0x1da848
+     * @note[short] MacOS (ARM): 0x578bec
+     * @note[short] MacOS (Intel): 0x658a80
+     * @note[short] Windows: 0x140ce0
+     * @note[short] iOS: 0x1d9a28
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x56af2c
-     * @note[short] MacOS (Intel): 0x642420
-     * @note[short] Windows: 0x13ebd0
-     * @note[short] iOS: 0x1da5f0
+     * @note[short] MacOS (ARM): 0x57888c
+     * @note[short] MacOS (Intel): 0x658710
+     * @note[short] Windows: 0x140810
+     * @note[short] iOS: 0x1d97e0
      * @note[short] Android
      */
-    virtual void getUserListFinished(cocos2d::CCArray* p0, UserListType p1);
+    virtual void getUserListFinished(cocos2d::CCArray* scores, UserListType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x56b048
-     * @note[short] MacOS (Intel): 0x642560
-     * @note[short] Windows: 0x13ed20
-     * @note[short] iOS: 0x1da6fc
+     * @note[short] MacOS (ARM): 0x57899c
+     * @note[short] MacOS (Intel): 0x658850
+     * @note[short] Windows: 0x140960
+     * @note[short] iOS: 0x1d98ec
      * @note[short] Android
      */
-    virtual void getUserListFailed(UserListType p0, GJErrorCode p1);
+    virtual void getUserListFailed(UserListType type, GJErrorCode errorType);
 
     /**
-     * @note[short] MacOS (ARM): 0x56b178
-     * @note[short] MacOS (Intel): 0x642670
-     * @note[short] Windows: 0x8b790
-     * @note[short] iOS: 0x1da79c
+     * @note[short] MacOS (ARM): 0x578ac4
+     * @note[short] MacOS (Intel): 0x658950
+     * @note[short] Windows: 0x8b850
+     * @note[short] iOS: 0x1d9984
      * @note[short] Android
      */
-    virtual void userListChanged(cocos2d::CCArray* p0, UserListType p1);
+    virtual void userListChanged(cocos2d::CCArray* scores, UserListType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x56b194
-     * @note[short] MacOS (Intel): 0x6426b0
-     * @note[short] Windows: 0x13ed90
-     * @note[short] iOS: 0x1da7b8
+     * @note[short] MacOS (ARM): 0x578ae0
+     * @note[short] MacOS (Intel): 0x658990
+     * @note[short] Windows: 0x1409d0
+     * @note[short] iOS: 0x1d99a0
      * @note[short] Android
      */
-    virtual void forceReloadList(UserListType p0);
+    virtual void forceReloadList(UserListType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x56a498
-     * @note[short] MacOS (Intel): 0x641910
-     * @note[short] Windows: 0x13e160
-     * @note[short] iOS: 0x1d9ba0
+     * @note[short] MacOS (ARM): 0x577df8
+     * @note[short] MacOS (Intel): 0x657c00
+     * @note[short] Windows: 0x13fda0
+     * @note[short] iOS: 0x1d8d90
      * @note[short] Android
      */
     bool init(UserListType type);
 
     /**
-     * @note[short] MacOS (ARM): 0x56abb8
-     * @note[short] MacOS (Intel): 0x6420b0
-     * @note[short] Windows: 0x13ef50
+     * @note[short] MacOS (ARM): 0x578518
+     * @note[short] MacOS (Intel): 0x658390
+     * @note[short] Windows: 0x140b90
+     * @note[short] iOS: 0x1d94a0
      * @note[short] Android
      */
     void onBlocked(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x56ab00
-     * @note[short] MacOS (Intel): 0x641ff0
-     * @note[short] Windows: 0x13efe0
-     * @note[short] iOS: 0x1da1f8
+     * @note[short] MacOS (ARM): 0x578460
+     * @note[short] MacOS (Intel): 0x6582d0
+     * @note[short] Windows: 0x140c20
+     * @note[short] iOS: 0x1d93e8
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x56ac44
-     * @note[short] MacOS (Intel): 0x642140
-     * @note[short] Windows: 0x13ee30
+     * @note[short] MacOS (ARM): 0x5785a4
+     * @note[short] MacOS (Intel): 0x658420
+     * @note[short] Windows: 0x140a70
+     * @note[short] iOS: 0x1d952c
      * @note[short] Android
      */
     void onUpdate(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x56aca8
-     * @note[short] MacOS (Intel): 0x6421b0
-     * @note[short] Windows: 0x13e870
-     * @note[short] iOS: 0x1da3a0
+     * @note[short] MacOS (ARM): 0x578608
+     * @note[short] MacOS (Intel): 0x658490
+     * @note[short] Windows: 0x1404b0
+     * @note[short] iOS: 0x1d9590
      * @note[short] Android
      */
     void setupUsersBrowser(cocos2d::CCArray* users, UserListType type);

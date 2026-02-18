@@ -15,55 +15,55 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(ColorChannelSprite, cocos2d::CCSprite)
 
     /**
-     * @note[short] MacOS (ARM): 0x2685c0
-     * @note[short] MacOS (Intel): 0x2c46d0
-     * @note[short] Windows: 0x2515d0
-     * @note[short] iOS: 0x106c8
+     * @note[short] MacOS (ARM): 0x273220
+     * @note[short] MacOS (Intel): 0x2d8ba0
+     * @note[short] Windows: 0x258930
+     * @note[short] iOS: 0xccac
      * @note[short] Android
      */
     static ColorChannelSprite* create();
 
     /**
-     * @note[short] MacOS (ARM): 0x268668
-     * @note[short] MacOS (Intel): 0x2c4770
-     * @note[short] Windows: 0x251690
-     * @note[short] iOS: 0x10764
+     * @note[short] MacOS (ARM): 0x2732c8
+     * @note[short] MacOS (Intel): 0x2d8c40
+     * @note[short] Windows: 0x2589f0
+     * @note[short] iOS: 0xcd48
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x26897c
-     * @note[short] MacOS (Intel): 0x2c4aa0
-     * @note[short] Windows: 0x2519c0
-     * @note[short] iOS: 0x10a6c
+     * @note[short] MacOS (ARM): 0x2735c4
+     * @note[short] MacOS (Intel): 0x2d8f70
+     * @note[short] Windows: 0x258d20
+     * @note[short] iOS: 0xd038
      * @note[short] Android
      */
     void updateBlending(bool enabled);
 
     /**
-     * @note[short] MacOS (ARM): 0x268674
-     * @note[short] MacOS (Intel): 0x2c4790
-     * @note[short] Windows: 0x2516b0
-     * @note[short] iOS: 0x10770
+     * @note[short] MacOS (ARM): 0x2732d4
+     * @note[short] MacOS (Intel): 0x2d8c60
+     * @note[short] Windows: 0x258a10
+     * @note[short] iOS: 0xcd54
      * @note[short] Android
      */
     void updateCopyLabel(int channelID, bool copyColorLoop);
 
     /**
-     * @note[short] MacOS (ARM): 0x26881c
-     * @note[short] MacOS (Intel): 0x2c4950
-     * @note[short] Windows: 0x251870
-     * @note[short] iOS: 0x10910
+     * @note[short] MacOS (ARM): 0x27347c
+     * @note[short] MacOS (Intel): 0x2d8e20
+     * @note[short] Windows: 0x258bd0
+     * @note[short] iOS: 0xcef4
      * @note[short] Android
      */
     void updateOpacity(float alpha);
 
     /**
-     * @note[short] MacOS (ARM): 0x268a84
-     * @note[short] MacOS (Intel): 0x2c4bb0
+     * @note[short] MacOS (ARM): 0x2736d0
+     * @note[short] MacOS (Intel): 0x2d9080
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x10b74
+     * @note[short] iOS: 0xd140
      * @note[short] Android
      */
     void updateValues(ColorAction* action);

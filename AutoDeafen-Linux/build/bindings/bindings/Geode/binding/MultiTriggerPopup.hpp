@@ -16,16 +16,20 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(MultiTriggerPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x450f80
+     * @note[short] MacOS (ARM): 0x4c9304
+     * @note[short] MacOS (Intel): 0x57c790
+     * @note[short] Windows: 0x4694f0
+     * @note[short] iOS: 0x40a798
      * @note[short] Android
      */
-    static MultiTriggerPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static MultiTriggerPopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4bb4cc
-     * @note[short] MacOS (Intel): 0x565ad0
-     * @note[short] Windows: 0x451090
+     * @note[short] MacOS (ARM): 0x4c9490
+     * @note[short] MacOS (Intel): 0x57c9c0
+     * @note[short] Windows: 0x469600
+     * @note[short] iOS: 0x40a874
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 };

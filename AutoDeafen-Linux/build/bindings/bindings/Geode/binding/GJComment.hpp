@@ -15,20 +15,46 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_CUTOFF(GJComment, cocos2d::CCNode)
 
     /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+     GJComment();
+
+    /**
+     * @note[short] MacOS (ARM): 0x4b08fc
+     * @note[short] MacOS (Intel): 0x561830
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xb0cc8
+     * @note[short] Android: Rebinded
+     */
+     ~GJComment();
+
+    /**
+     * @note[short] MacOS (ARM): 0x4b09a0
+     * @note[short] MacOS (Intel): 0x5618f0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0xb0d4c
      * @note[short] Android
      */
     static GJComment* create();
 
     /**
+     * @note[short] MacOS (ARM): 0x4a0d2c
+     * @note[short] MacOS (Intel): 0x550a20
+     * @note[short] Windows: 0x1752a0
+     * @note[short] iOS: 0xa689c
      * @note[short] Android
      */
-    static GJComment* create(cocos2d::CCDictionary* p0);
+    static GJComment* create(cocos2d::CCDictionary* dict);
 
     /**
-     * @note[short] MacOS (ARM): 0x4a34d4
-     * @note[short] MacOS (Intel): 0x54b160
-     * @note[short] Windows: 0x172e30
-     * @note[short] iOS: 0xb41fc
+     * @note[short] MacOS (ARM): 0x4b0a58
+     * @note[short] MacOS (Intel): 0x5619d0
+     * @note[short] Windows: 0x175e40
+     * @note[short] iOS: 0xb0e04
      * @note[short] Android
      */
     virtual bool init();
@@ -47,5 +73,6 @@ public:
     cocos2d::ccColor3B m_color;
     bool m_hasLevelID;
     bool m_unkMultiplayerBool;
+    bool m_canDelete;
     GJUserScore* m_userScore;
 };

@@ -16,40 +16,46 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupStaticCameraPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x447580
+     * @note[short] MacOS (ARM): 0x3209f8
+     * @note[short] MacOS (Intel): 0x39b180
+     * @note[short] Windows: 0x45fb90
+     * @note[short] iOS: 0x1d09dc
      * @note[short] Android
      */
-    static SetupStaticCameraPopup* create(CameraTriggerGameObject* p0, cocos2d::CCArray* p1);
+    static SetupStaticCameraPopup* create(CameraTriggerGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x3185bc
-     * @note[short] MacOS (Intel): 0x388d20
-     * @note[short] Windows: 0x448090
-     * @note[short] iOS: 0x1d207c
+     * @note[short] MacOS (ARM): 0x321510
+     * @note[short] MacOS (Intel): 0x39bef0
+     * @note[short] Windows: 0x4606a0
+     * @note[short] iOS: 0x1d12d8
      * @note[short] Android
      */
-    virtual void valueDidChange(int p0, float p1);
+    virtual void valueDidChange(int tag, float value);
 
     /**
-     * @note[short] MacOS (ARM): 0x318650
-     * @note[short] MacOS (Intel): 0x388db0
-     * @note[short] Windows: 0x42a510
-     * @note[short] iOS: 0x1d2094
+     * @note[short] MacOS (ARM): 0x321598
+     * @note[short] MacOS (Intel): 0x39bf80
+     * @note[short] Windows: 0x442820
+     * @note[short] iOS: 0x1d12f0
      * @note[short] Android
      */
     virtual void onCustomToggleTriggerValue(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x317c2c
-     * @note[short] MacOS (Intel): 0x3881c0
-     * @note[short] Windows: 0x447690
-     * @note[short] iOS: 0x1d1858
+     * @note[short] MacOS (ARM): 0x320b80
+     * @note[short] MacOS (Intel): 0x39b3b0
+     * @note[short] Windows: 0x45fca0
+     * @note[short] iOS: 0x1d0ab4
      * @note[short] Android
      */
-    bool init(CameraTriggerGameObject* p0, cocos2d::CCArray* p1);
+    bool init(CameraTriggerGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] Windows: 0x4480b0
+     * @note[short] MacOS (ARM): 0x32149c
+     * @note[short] MacOS (Intel): 0x39be70
+     * @note[short] Windows: 0x4606c0
+     * @note[short] iOS: 0x1d1264
      * @note[short] Android
      */
     void updateState();

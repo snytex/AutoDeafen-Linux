@@ -16,16 +16,20 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SetupCameraGuidePopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x4582a0
+     * @note[short] MacOS (ARM): 0x4d0430
+     * @note[short] MacOS (Intel): 0x584520
+     * @note[short] Windows: 0x470810
+     * @note[short] iOS: 0x410158
      * @note[short] Android
      */
-    static SetupCameraGuidePopup* create(CameraTriggerGameObject* p0, cocos2d::CCArray* p1);
+    static SetupCameraGuidePopup* create(CameraTriggerGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x4c2408
-     * @note[short] MacOS (Intel): 0x56d690
-     * @note[short] Windows: 0x4583b0
+     * @note[short] MacOS (ARM): 0x4d05bc
+     * @note[short] MacOS (Intel): 0x584750
+     * @note[short] Windows: 0x470920
+     * @note[short] iOS: 0x410234
      * @note[short] Android
      */
-    bool init(CameraTriggerGameObject* p0, cocos2d::CCArray* p1);
+    bool init(CameraTriggerGameObject* object, cocos2d::CCArray* objects);
 };

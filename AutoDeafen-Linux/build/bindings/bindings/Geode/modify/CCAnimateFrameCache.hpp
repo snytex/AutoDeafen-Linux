@@ -86,15 +86,15 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCAnimateFrameCache, get, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41450, Default, CCAnimateFrameCache, sharedSpriteFrameCache, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x414c0, Default, CCAnimateFrameCache, sharedSpriteFrameCache, )
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCAnimateFrameCache, addCustomSpriteFramesWithFile, char const*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(CCAnimateFrameCache, addDict, cocos2d::CCDictionary*, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41670, Thiscall, CCAnimateFrameCache, addDict, DS_Dictionary*, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x414e0, Thiscall, CCAnimateFrameCache, addSpriteFramesWithFile, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x416e0, Thiscall, CCAnimateFrameCache, addDict, DS_Dictionary*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCAnimateFrameCache, addDict, cocos2d::CCDictionary*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41550, Thiscall, CCAnimateFrameCache, addSpriteFramesWithFile, char const*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCAnimateFrameCache, init, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCAnimateFrameCache, purgeSharedSpriteFrameCache, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(CCAnimateFrameCache, removeSpriteFrames, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41c40, Thiscall, CCAnimateFrameCache, spriteFrameByName, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x41cb0, Thiscall, CCAnimateFrameCache, spriteFrameByName, char const*)
 		}
 	};
 }

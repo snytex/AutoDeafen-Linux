@@ -55,10 +55,10 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x96410, Default, HSVWidgetPopup, create, cocos2d::ccHSVValue, HSVWidgetDelegate*, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x96940, Thiscall, HSVWidgetPopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x96530, Thiscall, HSVWidgetPopup, init, cocos2d::ccHSVValue, HSVWidgetDelegate*, gd::string)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x96860, Thiscall, HSVWidgetPopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x964d0, Default, HSVWidgetPopup, create, cocos2d::ccHSVValue, HSVWidgetDelegate*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x96a00, Thiscall, HSVWidgetPopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x965f0, Thiscall, HSVWidgetPopup, init, cocos2d::ccHSVValue, HSVWidgetDelegate*, gd::string)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x96920, Thiscall, HSVWidgetPopup, onClose, cocos2d::CCObject*)
 		}
 	};
 }

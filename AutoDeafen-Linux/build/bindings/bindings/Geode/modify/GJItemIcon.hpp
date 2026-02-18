@@ -20,11 +20,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(scaleForType) 
 	#endif
 
-	#ifndef GEODE_STATICS_unlockedColorForType
-		#define GEODE_STATICS_unlockedColorForType
-		GEODE_AS_STATIC_FUNCTION(unlockedColorForType) 
-	#endif
-
 	#ifndef GEODE_STATICS_setOpacity
 		#define GEODE_STATICS_setOpacity
 		GEODE_AS_STATIC_FUNCTION(setOpacity) 
@@ -111,16 +106,16 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJItemIcon, create, UnlockType, int, cocos2d::ccColor3B, cocos2d::ccColor3B, bool, bool, bool, cocos2d::ccColor3B)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x273070, Default, GJItemIcon, createBrowserItem, UnlockType, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x272f40, Default, GJItemIcon, createStoreItem, UnlockType, int, bool, cocos2d::ccColor3B)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x273d90, Default, GJItemIcon, scaleForType, UnlockType)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJItemIcon, unlockedColorForType, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2738a0, Thiscall, GJItemIcon, setOpacity, unsigned char)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x273cb0, Thiscall, GJItemIcon, changeToLockedState, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2739c0, Thiscall, GJItemIcon, darkenStoreItem, cocos2d::ccColor3B)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x273940, Thiscall, GJItemIcon, darkenStoreItem, ShopType)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x273190, Thiscall, GJItemIcon, init, UnlockType, int, cocos2d::ccColor3B, cocos2d::ccColor3B, bool, bool, bool, cocos2d::ccColor3B)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x273bf0, Thiscall, GJItemIcon, toggleEnabledState, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27a9f0, Default, GJItemIcon, createBrowserItem, UnlockType, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27a8c0, Default, GJItemIcon, createStoreItem, UnlockType, int, bool, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27b710, Default, GJItemIcon, scaleForType, UnlockType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJItemIcon, unlockedColorForType, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27b220, Thiscall, GJItemIcon, setOpacity, unsigned char)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27b630, Thiscall, GJItemIcon, changeToLockedState, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27b2c0, Thiscall, GJItemIcon, darkenStoreItem, ShopType)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27b340, Thiscall, GJItemIcon, darkenStoreItem, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27ab10, Thiscall, GJItemIcon, init, UnlockType, int, cocos2d::ccColor3B, cocos2d::ccColor3B, bool, bool, bool, cocos2d::ccColor3B)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27b570, Thiscall, GJItemIcon, toggleEnabledState, bool)
 		}
 	};
 }

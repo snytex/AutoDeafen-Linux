@@ -16,38 +16,58 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(ForceBlockGameObject, EffectGameObject)
 
     /**
-     * @note[short] Android
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
      */
-    static ForceBlockGameObject* create(char const* p0);
+     ForceBlockGameObject();
 
     /**
-     * @note[short] MacOS (ARM): 0x193bfc
-     * @note[short] MacOS (Intel): 0x1dacc0
-     * @note[short] Windows: 0x4a91e0
-     * @note[short] iOS: 0x38f9a8
+     * @note[short] MacOS (ARM): 0x19b35c
+     * @note[short] MacOS (Intel): 0x1eb9e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3967b4
+     * @note[short] Android
+     */
+    static ForceBlockGameObject* create(char const* frame);
+
+    /**
+     * @note[short] MacOS (ARM): 0x19c0c4
+     * @note[short] MacOS (Intel): 0x1ecac0
+     * @note[short] Windows: 0x4c1d30
+     * @note[short] iOS: 0x396c28
      * @note[short] Android: Rebinded
      */
-    virtual void customObjectSetup(gd::vector<gd::string>& p0, gd::vector<void*>& p1);
+    virtual void customObjectSetup(gd::vector<gd::string>& values, gd::vector<void*>& exists);
 
     /**
-     * @note[short] MacOS (ARM): 0x192f78
-     * @note[short] MacOS (Intel): 0x1d9d40
-     * @note[short] Windows: 0x4a8e00
-     * @note[short] iOS: 0x38f600
+     * @note[short] MacOS (ARM): 0x19b474
+     * @note[short] MacOS (Intel): 0x1ebb00
+     * @note[short] Windows: 0x4c1950
+     * @note[short] iOS: 0x396878
      * @note[short] Android
      */
-    virtual gd::string getSaveString(GJBaseGameLayer* p0);
+    virtual gd::string getSaveString(GJBaseGameLayer* layer);
 
     /**
-     * @note[short] Windows: 0x4a9370
+     * @note[short] MacOS (ARM): 0x19c254
+     * @note[short] MacOS (Intel): 0x1ecc90
+     * @note[short] Windows: 0x4c1ec0
+     * @note[short] iOS: 0x396d98
      * @note[short] Android
      */
-    cocos2d::CCPoint calculateForceToTarget(GameObject* p0);
+    cocos2d::CCPoint calculateForceToTarget(GameObject* target);
 
     /**
+     * @note[short] MacOS (ARM): 0x19b42c
+     * @note[short] MacOS (Intel): 0x1ebab0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    bool init(char const* p0);
+    bool init(char const* frame);
     float m_force;
     float m_minForce;
     float m_maxForce;

@@ -16,83 +16,118 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(SongInfoLayer, FLAlertLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x51a5bc
-     * @note[short] MacOS (Intel): 0x5e8d00
-     * @note[short] Windows: 0x47a130
-     * @note[short] iOS: 0x3a033c
-     * @note[short] Android: Rebinded
-     */
-    static SongInfoLayer* create(gd::string p0, gd::string p1, gd::string p2, gd::string p3, gd::string p4, gd::string p5, int p6, gd::string p7, int p8);
-
-    /**
-     * @note[short] MacOS (ARM): 0x51a108
-     * @note[short] MacOS (Intel): 0x5e8700
-     * @note[short] Windows: 0x479f20
-     * @note[short] iOS: 0x39ff80
+     * @note[short] MacOS (ARM): 0x527fb8
+     * @note[short] MacOS (Intel): 0x5fff20
+     * @note[short] Windows: 0x492400
+     * @note[short] iOS: 0x3a7180
      * @note[short] Android
      */
-    static SongInfoLayer* create(int p0);
+    static SongInfoLayer* create(int artistID);
 
     /**
-     * @note[short] MacOS (ARM): 0x51be3c
-     * @note[short] MacOS (Intel): 0x5ea640
-     * @note[short] Windows: 0x84650
-     * @note[short] iOS: 0x3a1940
+     * @note[short] MacOS (ARM): 0x52846c
+     * @note[short] MacOS (Intel): 0x600520
+     * @note[short] Windows: 0x492610
+     * @note[short] iOS: 0x3a753c
+     * @note[short] Android: Rebinded
+     */
+    static SongInfoLayer* create(gd::string songName, gd::string artistName, gd::string songURL, gd::string newgroundsURL, gd::string youtubeURL, gd::string facebookURL, int songID, gd::string songTags, int nongType);
+
+    /**
+     * @note[short] MacOS (ARM): 0x529e78
+     * @note[short] MacOS (Intel): 0x601fc0
+     * @note[short] Windows: 0x846a0
+     * @note[short] iOS: 0x3a8c80
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x51aa04
-     * @note[short] MacOS (Intel): 0x5e9240
-     * @note[short] Windows: 0x47a450
+     * @note[short] MacOS (ARM): 0x5288b4
+     * @note[short] MacOS (Intel): 0x600a60
+     * @note[short] Windows: 0x492930
+     * @note[short] iOS: 0x3a78a4
      * @note[short] Android: Rebinded
      */
-    bool init(gd::string p0, gd::string p1, gd::string p2, gd::string p3, gd::string p4, gd::string p5, int p6, gd::string p7, int p8);
+    bool init(gd::string songName, gd::string artistName, gd::string songURL, gd::string newgroundsURL, gd::string youtubeURL, gd::string facebookURL, int songID, gd::string songTags, int nongType);
 
     /**
+     * @note[short] MacOS (ARM): 0x529944
+     * @note[short] MacOS (Intel): 0x601b50
+     * @note[short] Windows: 0x494500
+     * @note[short] iOS: 0x3a8860
      * @note[short] Android
      */
     void onBPM(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x529908
+     * @note[short] MacOS (Intel): 0x601b20
+     * @note[short] Windows: 0x84670
+     * @note[short] iOS: 0x3a8824
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x52997c
+     * @note[short] MacOS (Intel): 0x601b90
+     * @note[short] Windows: 0x494440
+     * @note[short] iOS: 0x3a8898
      * @note[short] Android
      */
     void onDownload(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x529a60
+     * @note[short] MacOS (Intel): 0x601c50
+     * @note[short] Windows: 0x4944d0
+     * @note[short] iOS: 0x3a8940
      * @note[short] Android
      */
     void onFB(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x529aac
+     * @note[short] MacOS (Intel): 0x601c90
+     * @note[short] Windows: 0x4942b0
+     * @note[short] iOS: 0x3a8978
      * @note[short] Android
      */
     void onMenuMusic(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x5299c8
+     * @note[short] MacOS (Intel): 0x601bd0
+     * @note[short] Windows: 0x494470
+     * @note[short] iOS: 0x3a88d0
      * @note[short] Android
      */
     void onNG(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x529b54
+     * @note[short] MacOS (Intel): 0x601d20
+     * @note[short] Windows: 0x494380
+     * @note[short] iOS: 0x3a8a0c
      * @note[short] Android
      */
     void onPracticeMusic(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x529a14
+     * @note[short] MacOS (Intel): 0x601c10
+     * @note[short] Windows: 0x4944a0
+     * @note[short] iOS: 0x3a8908
      * @note[short] Android
      */
     void onYT(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x51bbd4
-     * @note[short] MacOS (Intel): 0x5ea430
+     * @note[short] MacOS (ARM): 0x529be0
+     * @note[short] MacOS (Intel): 0x601db0
+     * @note[short] Windows: 0x493c50
+     * @note[short] iOS: 0x3a8a8c
      * @note[short] Android
      */
     void showCustomMusicUnlockInfo();

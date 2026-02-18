@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void dialogClosed(DialogLayer* p0);
+    virtual void dialogClosed(DialogLayer* layer);
 };

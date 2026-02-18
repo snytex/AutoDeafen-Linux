@@ -45,9 +45,9 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x451310, Default, UIObjectSettingsPopup, create, UISettingsGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x451f60, Thiscall, UIObjectSettingsPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x451420, Thiscall, UIObjectSettingsPopup, init, UISettingsGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x469880, Default, UIObjectSettingsPopup, create, UISettingsGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46a4d0, Thiscall, UIObjectSettingsPopup, onCustomToggleTriggerValue, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x469990, Thiscall, UIObjectSettingsPopup, init, UISettingsGameObject*, cocos2d::CCArray*)
 		}
 	};
 }

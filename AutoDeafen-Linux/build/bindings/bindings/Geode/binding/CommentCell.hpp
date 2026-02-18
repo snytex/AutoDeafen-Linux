@@ -18,127 +18,163 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(CommentCell, TableViewCell)
 
     /**
-     * @note[short] Windows: 0xb53c0
+     * @note[short] MacOS (ARM): 0x1fac00
+     * @note[short] MacOS (Intel): 0x254d10
+     * @note[short] Windows: 0xb5b40
+     * @note[short] iOS: Out of line
      * @note[short] Android: Rebinded
      */
-     CommentCell(char const* p0, float p1, float p2);
+     CommentCell(char const* identifier, float width, float height);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f202c
-     * @note[short] MacOS (Intel): 0x242d60
-     * @note[short] Windows: 0xb5460
-     * @note[short] iOS: 0x11371c
+     * @note[short] MacOS (ARM): 0x1fa9e4
+     * @note[short] MacOS (Intel): 0x2549e0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x110a18
+     * @note[short] Android: Rebinded
+     */
+     ~CommentCell();
+
+    /**
+     * @note[short] MacOS (ARM): 0x1fac60
+     * @note[short] MacOS (Intel): 0x254db0
+     * @note[short] Windows: 0xb5be0
+     * @note[short] iOS: 0x110abc
      * @note[short] Android
      */
     virtual bool init();
 
     /**
-     * @note[short] MacOS (ARM): 0x1f22f4
-     * @note[short] MacOS (Intel): 0x243070
-     * @note[short] Windows: 0xad710
-     * @note[short] iOS: 0x1139b8
+     * @note[short] MacOS (ARM): 0x1faf24
+     * @note[short] MacOS (Intel): 0x2550c0
+     * @note[short] Windows: 0xade20
+     * @note[short] iOS: 0x110d54
      * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): 0x1f23a0
-     * @note[short] MacOS (Intel): 0x243140
-     * @note[short] Windows: 0xb7750
-     * @note[short] iOS: 0x113a64
+     * @note[short] MacOS (ARM): 0x1fafd0
+     * @note[short] MacOS (Intel): 0x255190
+     * @note[short] Windows: 0xb7f60
+     * @note[short] iOS: 0x110e00
      * @note[short] Android
      */
-    virtual void likedItem(LikeItemType p0, int p1, bool p2);
+    virtual void likedItem(LikeItemType type, int id, bool liked);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f271c
-     * @note[short] MacOS (Intel): 0x2434e0
-     * @note[short] Windows: 0xb79c0
-     * @note[short] iOS: 0x113bdc
+     * @note[short] MacOS (ARM): 0x1fb34c
+     * @note[short] MacOS (Intel): 0x255540
+     * @note[short] Windows: 0xb81d0
+     * @note[short] iOS: 0x110f70
      * @note[short] Android
      */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
+     * @note[short] MacOS (ARM): 0x1fb16c
+     * @note[short] MacOS (Intel): 0x255330
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn incrementDislikes();
+    void incrementDislikes();
 
     /**
+     * @note[short] MacOS (ARM): 0x1fb0b8
+     * @note[short] MacOS (Intel): 0x255280
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn incrementLikes();
+    void incrementLikes();
 
     /**
-     * @note[short] MacOS (ARM): 0x1e5f14
-     * @note[short] MacOS (Intel): 0x235d50
-     * @note[short] Windows: 0xb5480
-     * @note[short] iOS: 0x108cb0
+     * @note[short] MacOS (ARM): 0x1ee754
+     * @note[short] MacOS (Intel): 0x2477c0
+     * @note[short] Windows: 0xb5c00
+     * @note[short] iOS: 0x105c94
      * @note[short] Android
      */
-    void loadFromComment(GJComment* p0);
+    void loadFromComment(GJComment* comment);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f220c
-     * @note[short] MacOS (Intel): 0x242f80
-     * @note[short] Windows: 0xb7850
-     * @note[short] iOS: 0x1138fc
+     * @note[short] MacOS (ARM): 0x1fae3c
+     * @note[short] MacOS (Intel): 0x254fd0
+     * @note[short] Windows: 0xb8060
+     * @note[short] iOS: 0x110c98
      * @note[short] Android
      */
     void onConfirmDelete(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f26a0
-     * @note[short] MacOS (Intel): 0x243450
+     * @note[short] MacOS (ARM): 0x1fb2d8
+     * @note[short] MacOS (Intel): 0x2554b0
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x110f10
      * @note[short] Android
      */
     void onDelete();
 
     /**
-     * @note[short] MacOS (ARM): 0x1f2078
-     * @note[short] MacOS (Intel): 0x242dc0
-     * @note[short] Windows: 0xb7b20
-     * @note[short] iOS: 0x113768
+     * @note[short] MacOS (ARM): 0x1faca8
+     * @note[short] MacOS (Intel): 0x254e10
+     * @note[short] Windows: 0xb8330
+     * @note[short] iOS: 0x110b04
      * @note[short] Android
      */
     void onGoToLevel(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f212c
-     * @note[short] MacOS (Intel): 0x242e90
-     * @note[short] Windows: 0xb75f0
-     * @note[short] iOS: 0x11381c
+     * @note[short] MacOS (ARM): 0x1fad5c
+     * @note[short] MacOS (Intel): 0x254ee0
+     * @note[short] Windows: 0xb7e00
+     * @note[short] iOS: 0x110bb8
      * @note[short] Android
      */
     void onLike(cocos2d::CCObject* sender);
 
     /**
+     * @note[short] MacOS (ARM): 0x1fb338
+     * @note[short] MacOS (Intel): 0x255520
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
-    TodoReturn onUndelete();
+    void onUndelete();
 
     /**
-     * @note[short] MacOS (ARM): 0x1f2120
-     * @note[short] MacOS (Intel): 0x242e70
-     * @note[short] Windows: 0xb7b00
+     * @note[short] MacOS (ARM): 0x1fad50
+     * @note[short] MacOS (Intel): 0x254ec0
+     * @note[short] Windows: 0xb8310
+     * @note[short] iOS: 0x110bac
      * @note[short] Android
      */
     void onUnhide(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1f2044
-     * @note[short] MacOS (Intel): 0x242d90
+     * @note[short] MacOS (ARM): 0x1fac78
+     * @note[short] MacOS (Intel): 0x254de0
+     * @note[short] Windows: 0xb8190
+     * @note[short] iOS: 0x110ad4
      * @note[short] Android
      */
     void onViewProfile(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] iOS: 0x10a674
+     * @note[short] MacOS (ARM): 0x1f0268
+     * @note[short] MacOS (Intel): 0x249640
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x1076cc
      * @note[short] Android
      */
-    void updateBGColor(int p0);
+    void updateBGColor(int index);
 
     /**
+     * @note[short] MacOS (ARM): 0x1fb228
+     * @note[short] MacOS (Intel): 0x255400
+     * @note[short] Windows: 0xb7fa0
+     * @note[short] iOS: 0x110e64
      * @note[short] Android
      */
     void updateLabelValues();
@@ -146,4 +182,6 @@ public:
     cocos2d::CCLabelBMFont* m_likeLabel;
     GJComment* m_comment;
     bool m_accountComment;
+    bool m_unk259;
+    bool m_compactMode;
 };

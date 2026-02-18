@@ -165,21 +165,21 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27db80, Default, GJPathPage, create, int, GJPathsLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, GJPathPage, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x281710, Thiscall, GJPathPage, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867a0, Thiscall, GJPathPage, show, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27fb40, Thiscall, GJPathPage, didPurchaseItem, GJStoreItem*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27dcb0, Thiscall, GJPathPage, init, int, GJPathsLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27f8e0, Thiscall, GJPathPage, onActivatePath, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x281670, Thiscall, GJPathPage, onBack, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27f950, Thiscall, GJPathPage, onIconInfo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27fb50, Thiscall, GJPathPage, onUnlock, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x280400, Thiscall, GJPathPage, playUnlockAnimation, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x27fd30, Thiscall, GJPathPage, showCantAffordMessage, GJStoreItem*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x281540, Thiscall, GJPathPage, unlockAnimationFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x280a50, Thiscall, GJPathPage, unlockAnimationStep2, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x280cd0, Thiscall, GJPathPage, unlockAnimationStep3, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2854b0, Default, GJPathPage, create, int, GJPathsLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, GJPathPage, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x289040, Thiscall, GJPathPage, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x867f0, Thiscall, GJPathPage, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x287470, Thiscall, GJPathPage, didPurchaseItem, GJStoreItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2855e0, Thiscall, GJPathPage, init, int, GJPathsLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x287210, Thiscall, GJPathPage, onActivatePath, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x288fa0, Thiscall, GJPathPage, onBack, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x287280, Thiscall, GJPathPage, onIconInfo, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x287480, Thiscall, GJPathPage, onUnlock, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x287d30, Thiscall, GJPathPage, playUnlockAnimation, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x287660, Thiscall, GJPathPage, showCantAffordMessage, GJStoreItem*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x288e70, Thiscall, GJPathPage, unlockAnimationFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x288380, Thiscall, GJPathPage, unlockAnimationStep2, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x288600, Thiscall, GJPathPage, unlockAnimationStep3, )
 		}
 	};
 }

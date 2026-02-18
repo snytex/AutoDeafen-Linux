@@ -30,11 +30,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(getTextKerning) 
 	#endif
 
-	#ifndef GEODE_STATICS_init
-		#define GEODE_STATICS_init
-		GEODE_AS_STATIC_FUNCTION(init) 
-	#endif
-
 	#ifndef GEODE_STATICS_updateTextObject
 		#define GEODE_STATICS_updateTextObject
 		GEODE_AS_STATIC_FUNCTION(updateTextObject) 
@@ -85,13 +80,13 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4530, Default, TextGameObject, create, cocos2d::CCTexture2D*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a49c0, Thiscall, TextGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4b80, Thiscall, TextGameObject, getSaveString, GJBaseGameLayer*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4610, Thiscall, TextGameObject, updateTextKerning, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1886d0, Thiscall, TextGameObject, getTextKerning, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(TextGameObject, init, cocos2d::CCTexture2D*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a4620, Thiscall, TextGameObject, updateTextObject, gd::string, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a74b0, Default, TextGameObject, create, cocos2d::CCTexture2D*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a7940, Thiscall, TextGameObject, customObjectSetup, gd::vector<gd::string>&, gd::vector<void*>&)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a7b00, Thiscall, TextGameObject, getSaveString, GJBaseGameLayer*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a7590, Thiscall, TextGameObject, updateTextKerning, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x18b650, Thiscall, TextGameObject, getTextKerning, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(TextGameObject, init, cocos2d::CCTexture2D*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x1a75a0, Thiscall, TextGameObject, updateTextObject, gd::string, bool)
 		}
 	};
 }

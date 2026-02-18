@@ -10,6 +10,11 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
+	#ifndef GEODE_STATICS_onEnter
+		#define GEODE_STATICS_onEnter
+		GEODE_AS_STATIC_FUNCTION(onEnter) 
+	#endif
+
 	#ifndef GEODE_STATICS_ccTouchBegan
 		#define GEODE_STATICS_ccTouchBegan
 		GEODE_AS_STATIC_FUNCTION(ccTouchBegan) 
@@ -50,11 +55,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(show) 
 	#endif
 
-	#ifndef GEODE_STATICS_incrementForcePrio
-		#define GEODE_STATICS_incrementForcePrio
-		GEODE_AS_STATIC_FUNCTION(incrementForcePrio) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -74,6 +74,11 @@ namespace geode::modifier {
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_onEnter
+		#define GEODE_CONCEPT_CHECK_onEnter
+		GEODE_CONCEPT_FUNCTION_CHECK(onEnter) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_ccTouchBegan
@@ -145,24 +150,26 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x517e0, Thiscall, FLAlertLayer)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x51940, Default, FLAlertLayer, create, FLAlertLayerProtocol*, char const*, gd::string, char const*, char const*, float, bool, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x51890, Default, FLAlertLayer, create, FLAlertLayerProtocol*, char const*, gd::string, char const*, char const*, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FLAlertLayer, create, FLAlertLayerProtocol*, char const*, gd::string, char const*, char const*)
+			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(base::get() + 0x51720, Thiscall, FLAlertLayer, )
+			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(base::get() + 0x51850, Thiscall, FLAlertLayer)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FLAlertLayer, create, char const*, const gd::string&, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52a00, Thiscall, FLAlertLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52b50, Thiscall, FLAlertLayer, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52aa0, Thiscall, FLAlertLayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52b10, Thiscall, FLAlertLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52d60, Thiscall, FLAlertLayer, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52880, Thiscall, FLAlertLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52800, Thiscall, FLAlertLayer, keyDown, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52b90, Thiscall, FLAlertLayer, show, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(FLAlertLayer, incrementForcePrio, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x51b60, Thiscall, FLAlertLayer, init, FLAlertLayerProtocol*, char const*, gd::string, char const*, char const*, float, bool, float, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x51a50, Thiscall, FLAlertLayer, init, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52940, Thiscall, FLAlertLayer, onBtn1, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x529a0, Thiscall, FLAlertLayer, onBtn2, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FLAlertLayer, create, FLAlertLayerProtocol*, char const*, gd::string, char const*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x51900, Default, FLAlertLayer, create, FLAlertLayerProtocol*, char const*, gd::string, char const*, char const*, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x519b0, Default, FLAlertLayer, create, FLAlertLayerProtocol*, char const*, gd::string, char const*, char const*, float, bool, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52e20, Thiscall, FLAlertLayer, onEnter, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52a70, Thiscall, FLAlertLayer, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52bc0, Thiscall, FLAlertLayer, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52b10, Thiscall, FLAlertLayer, ccTouchEnded, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52b80, Thiscall, FLAlertLayer, ccTouchCancelled, cocos2d::CCTouch*, cocos2d::CCEvent*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52dd0, Thiscall, FLAlertLayer, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x528f0, Thiscall, FLAlertLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52870, Thiscall, FLAlertLayer, keyDown, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52c00, Thiscall, FLAlertLayer, show, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(FLAlertLayer, incrementForcePrio, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x51ac0, Thiscall, FLAlertLayer, init, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x51bd0, Thiscall, FLAlertLayer, init, FLAlertLayerProtocol*, char const*, gd::string, char const*, char const*, float, bool, float, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x529b0, Thiscall, FLAlertLayer, onBtn1, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x52a10, Thiscall, FLAlertLayer, onBtn2, cocos2d::CCObject*)
 		}
 	};
 }

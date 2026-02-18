@@ -17,24 +17,24 @@ public:
     /**
      * @note[short] MacOS (ARM): Out of line
      * @note[short] MacOS (Intel): Out of line
-     * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
+     * @note[short] Windows: 0x7d230
+     * @note[short] iOS: 0x653a4
      * @note[short] Android: Out of line
      */
      GJDropDownLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x503e08
-     * @note[short] MacOS (Intel): 0x5cfc90
-     * @note[short] Windows: Out of line
-     * @note[short] iOS: Out of line
-     * @note[short] Android
+     * @note[short] MacOS (ARM): 0x512178
+     * @note[short] MacOS (Intel): 0x5e7be0
+     * @note[short] Windows: 0x256dd0
+     * @note[short] iOS: 0x3b2144
+     * @note[short] Android: Rebinded
      */
-    static GJDropDownLayer* create(const char* title, float height, bool p2);
+     ~GJDropDownLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x50432c
-     * @note[short] MacOS (Intel): 0x5d01d0
+     * @note[short] MacOS (ARM): 0x5128f8
+     * @note[short] MacOS (Intel): 0x5e8480
      * @note[short] Windows: Out of line
      * @note[short] iOS: Out of line
      * @note[short] Android
@@ -42,175 +42,184 @@ public:
     static GJDropDownLayer* create(const char* title);
 
     /**
-     * @note[short] MacOS (ARM): 0x5046c0
-     * @note[short] MacOS (Intel): 0x5d05d0
-     * @note[short] Windows: 0x426f0
-     * @note[short] iOS: 0x3ab0a0
+     * @note[short] MacOS (ARM): 0x5123d8
+     * @note[short] MacOS (Intel): 0x5e7f40
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android
+     */
+    static GJDropDownLayer* create(const char* title, float height, bool noBack);
+
+    /**
+     * @note[short] MacOS (ARM): 0x512c94
+     * @note[short] MacOS (Intel): 0x5e8870
+     * @note[short] Windows: 0x42760
+     * @note[short] iOS: 0x3b2978
      * @note[short] Android
      */
     virtual void draw();
 
     /**
-     * @note[short] MacOS (ARM): 0x5046fc
-     * @note[short] MacOS (Intel): 0x5d0600
+     * @note[short] MacOS (ARM): 0x512cd0
+     * @note[short] MacOS (Intel): 0x5e88a0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3ab0dc
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x3b29b4
+     * @note[short] Android
      */
-    virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual bool ccTouchBegan(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x50471c
-     * @note[short] MacOS (Intel): 0x5d0660
+     * @note[short] MacOS (ARM): 0x512cf0
+     * @note[short] MacOS (Intel): 0x5e8900
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3ab0fc
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x3b29d4
+     * @note[short] Android
      */
-    virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchMoved(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x50470c
-     * @note[short] MacOS (Intel): 0x5d0620
+     * @note[short] MacOS (ARM): 0x512ce0
+     * @note[short] MacOS (Intel): 0x5e88c0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3ab0ec
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x3b29c4
+     * @note[short] Android
      */
-    virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchEnded(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x504714
-     * @note[short] MacOS (Intel): 0x5d0640
+     * @note[short] MacOS (ARM): 0x512ce8
+     * @note[short] MacOS (Intel): 0x5e88e0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3ab0f4
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x3b29cc
+     * @note[short] Android
      */
-    virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    virtual void ccTouchCancelled(cocos2d::CCTouch* touch, cocos2d::CCEvent* event);
 
     /**
-     * @note[short] MacOS (ARM): 0x5043b0
-     * @note[short] MacOS (Intel): 0x5d0290
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x3aad90
+     * @note[short] MacOS (ARM): 0x51297c
+     * @note[short] MacOS (Intel): 0x5e8540
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x3b2660
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x5043e8
-     * @note[short] MacOS (Intel): 0x5d02d0
-     * @note[short] Windows: 0x250330
-     * @note[short] iOS: 0x3aadc8
+     * @note[short] MacOS (ARM): 0x5129b4
+     * @note[short] MacOS (Intel): 0x5e8580
+     * @note[short] Windows: 0x257300
+     * @note[short] iOS: 0x3b2698
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x50434c
-     * @note[short] MacOS (Intel): 0x5d0210
+     * @note[short] MacOS (ARM): 0x512918
+     * @note[short] MacOS (Intel): 0x5e84c0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3aad2c
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x3b25fc
+     * @note[short] Android
      */
     virtual void customSetup();
 
     /**
-     * @note[short] MacOS (ARM): 0x504378
-     * @note[short] MacOS (Intel): 0x5d0260
-     * @note[short] Windows: 0x425a0
-     * @note[short] iOS: 0x3aad58
+     * @note[short] MacOS (ARM): 0x512944
+     * @note[short] MacOS (Intel): 0x5e8510
+     * @note[short] Windows: 0x42610
+     * @note[short] iOS: 0x3b2628
      * @note[short] Android
      */
     virtual void enterLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x50440c
-     * @note[short] MacOS (Intel): 0x5d0310
-     * @note[short] Windows: 0x250350
-     * @note[short] iOS: 0x3aadec
+     * @note[short] MacOS (ARM): 0x5129d8
+     * @note[short] MacOS (Intel): 0x5e85c0
+     * @note[short] Windows: 0x257320
+     * @note[short] iOS: 0x3b26bc
      * @note[short] Android
      */
-    virtual void exitLayer(cocos2d::CCObject* p0);
+    virtual void exitLayer(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x504458
-     * @note[short] MacOS (Intel): 0x5d0350
-     * @note[short] Windows: 0x250390
-     * @note[short] iOS: 0x3aae38
+     * @note[short] MacOS (ARM): 0x512a24
+     * @note[short] MacOS (Intel): 0x5e8600
+     * @note[short] Windows: 0x257360
+     * @note[short] iOS: 0x3b2708
      * @note[short] Android
      */
-    virtual void showLayer(bool p0);
+    virtual void showLayer(bool instant);
 
     /**
-     * @note[short] MacOS (ARM): 0x50455c
-     * @note[short] MacOS (Intel): 0x5d0460
-     * @note[short] Windows: 0x2504e0
-     * @note[short] iOS: 0x3aaf3c
+     * @note[short] MacOS (ARM): 0x512b28
+     * @note[short] MacOS (Intel): 0x5e8700
+     * @note[short] Windows: 0x2574b0
+     * @note[short] iOS: 0x3b280c
      * @note[short] Android
      */
-    virtual void hideLayer(bool p0);
+    virtual void hideLayer(bool instant);
 
     /**
-     * @note[short] MacOS (ARM): 0x504660
-     * @note[short] MacOS (Intel): 0x5d0570
-     * @note[short] Windows: 0x426a0
-     * @note[short] iOS: 0x3ab040
+     * @note[short] MacOS (ARM): 0x512c30
+     * @note[short] MacOS (Intel): 0x5e8810
+     * @note[short] Windows: 0x42710
+     * @note[short] iOS: 0x3b2914
      * @note[short] Android
      */
     virtual void layerVisible();
 
     /**
-     * @note[short] MacOS (ARM): 0x504670
-     * @note[short] MacOS (Intel): 0x5d0590
-     * @note[short] Windows: 0x250630
-     * @note[short] iOS: 0x3ab050
+     * @note[short] MacOS (ARM): 0x512c40
+     * @note[short] MacOS (Intel): 0x5e8830
+     * @note[short] Windows: 0x257600
+     * @note[short] iOS: 0x3b2924
      * @note[short] Android
      */
     virtual void layerHidden();
 
     /**
-     * @note[short] MacOS (ARM): 0x50465c
-     * @note[short] MacOS (Intel): 0x5d0560
+     * @note[short] MacOS (ARM): 0x512c2c
+     * @note[short] MacOS (Intel): 0x5e8800
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3ab03c
-     * @note[short] Android: Out of line
+     * @note[short] iOS: 0x3b2910
+     * @note[short] Android
      */
     virtual void enterAnimFinished();
 
     /**
-     * @note[short] MacOS (ARM): 0x504350
-     * @note[short] MacOS (Intel): 0x5d0220
-     * @note[short] Windows: 0x2502f0
-     * @note[short] iOS: 0x3aad30
+     * @note[short] MacOS (ARM): 0x51291c
+     * @note[short] MacOS (Intel): 0x5e84d0
+     * @note[short] Windows: 0x2572c0
+     * @note[short] iOS: 0x3b2600
      * @note[short] Android
      */
     virtual void disableUI();
 
     /**
-     * @note[short] MacOS (ARM): 0x504364
-     * @note[short] MacOS (Intel): 0x5d0240
-     * @note[short] Windows: 0x250310
-     * @note[short] iOS: 0x3aad44
+     * @note[short] MacOS (ARM): 0x512930
+     * @note[short] MacOS (Intel): 0x5e84f0
+     * @note[short] Windows: 0x2572e0
+     * @note[short] iOS: 0x3b2614
      * @note[short] Android
      */
     virtual void enableUI();
 
     /**
-     * @note[short] MacOS (ARM): 0x503f2c
-     * @note[short] MacOS (Intel): 0x5cfdd0
-     * @note[short] Windows: 0x24feb0
-     * @note[short] iOS: 0x3aa920
-     * @note[short] Android
-     */
-    bool init(char const* p0, float p1, bool p2);
-
-    /**
-     * @note[short] MacOS (ARM): 0x50433c
-     * @note[short] MacOS (Intel): 0x5d01f0
+     * @note[short] MacOS (ARM): 0x512908
+     * @note[short] MacOS (Intel): 0x5e84a0
      * @note[short] Windows: Out of line
-     * @note[short] iOS: 0x3aad1c
+     * @note[short] iOS: 0x3b25ec
      * @note[short] Android
      */
     bool init(char const* title);
+
+    /**
+     * @note[short] MacOS (ARM): 0x5124fc
+     * @note[short] MacOS (Intel): 0x5e8080
+     * @note[short] Windows: 0x256e80
+     * @note[short] iOS: 0x3b21f4
+     * @note[short] Android
+     */
+    bool init(char const* title, float height, bool noBack);
     cocos2d::CCPoint m_endPosition;
     cocos2d::CCPoint m_startPosition;
     cocos2d::CCMenu* m_buttonMenu;

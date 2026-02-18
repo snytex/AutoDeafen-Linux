@@ -29,5 +29,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void showUnlockPopup(int p0, UnlockType p1);
+    virtual void showUnlockPopup(int id, UnlockType type);
 };

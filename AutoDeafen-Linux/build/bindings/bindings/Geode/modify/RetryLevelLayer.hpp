@@ -5,11 +5,6 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_create
-		#define GEODE_STATICS_create
-		GEODE_AS_STATIC_FUNCTION(create) 
-	#endif
-
 	#ifndef GEODE_STATICS_keyBackClicked
 		#define GEODE_STATICS_keyBackClicked
 		GEODE_AS_STATIC_FUNCTION(keyBackClicked) 
@@ -40,14 +35,9 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(rewardedVideoFinished) 
 	#endif
 
-	#ifndef GEODE_STATICS_getEndText
-		#define GEODE_STATICS_getEndText
-		GEODE_AS_STATIC_FUNCTION(getEndText) 
-	#endif
-
-	#ifndef GEODE_STATICS_onEveryplay
-		#define GEODE_STATICS_onEveryplay
-		GEODE_AS_STATIC_FUNCTION(onEveryplay) 
+	#ifndef GEODE_STATICS_onFullVersion
+		#define GEODE_STATICS_onFullVersion
+		GEODE_AS_STATIC_FUNCTION(onFullVersion) 
 	#endif
 
 	#ifndef GEODE_STATICS_onMenu
@@ -126,6 +116,11 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(onEveryplay) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_onFullVersion
+		#define GEODE_CONCEPT_CHECK_onFullVersion
+		GEODE_CONCEPT_FUNCTION_CHECK(onFullVersion) 
+	#endif
+
 	#ifndef GEODE_CONCEPT_CHECK_onMenu
 		#define GEODE_CONCEPT_CHECK_onMenu
 		GEODE_CONCEPT_FUNCTION_CHECK(onMenu) 
@@ -155,21 +150,22 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(RetryLevelLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b4c40, Thiscall, RetryLevelLayer, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b4ad0, Thiscall, RetryLevelLayer, keyDown, cocos2d::enumKeyCodes)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b3d00, Thiscall, RetryLevelLayer, customSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b48a0, Thiscall, RetryLevelLayer, showLayer, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b49c0, Thiscall, RetryLevelLayer, enterAnimFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b4a00, Thiscall, RetryLevelLayer, rewardedVideoFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RetryLevelLayer, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cbfb0, Thiscall, RetryLevelLayer, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cbe40, Thiscall, RetryLevelLayer, keyDown, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cb060, Thiscall, RetryLevelLayer, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cbc00, Thiscall, RetryLevelLayer, showLayer, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cbd20, Thiscall, RetryLevelLayer, enterAnimFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cbd60, Thiscall, RetryLevelLayer, rewardedVideoFinished, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RetryLevelLayer, shouldOffsetRewardCurrency, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RetryLevelLayer, keyUp, cocos2d::enumKeyCodes)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(RetryLevelLayer, getEndText, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(RetryLevelLayer, onEveryplay, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b4b20, Thiscall, RetryLevelLayer, onMenu, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(RetryLevelLayer, onReplay, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RetryLevelLayer, keyUp, cocos2d::enumKeyCodes, double)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RetryLevelLayer, getEndText, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(RetryLevelLayer, onEveryplay, cocos2d::CCObject*)
+            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(RetryLevelLayer, onFullVersion, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cbe90, Thiscall, RetryLevelLayer, onMenu, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cbd70, Thiscall, RetryLevelLayer, onReplay, cocos2d::CCObject*)
             GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(RetryLevelLayer, onRewardedVideo, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3b4460, Thiscall, RetryLevelLayer, setupLastProgress, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3cb7c0, Thiscall, RetryLevelLayer, setupLastProgress, )
 		}
 	};
 }

@@ -21,209 +21,235 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(MusicBrowser, FLAlertLayer)
 
     /**
-     * @note[short] MacOS (ARM): 0x5257c4
-     * @note[short] MacOS (Intel): 0x5f6280
-     * @note[short] Windows: 0x323840
+     * @note[short] MacOS (ARM): 0x533730
+     * @note[short] MacOS (Intel): 0x60db70
+     * @note[short] Windows: 0x338700
+     * @note[short] iOS: 0x3c0e20
      * @note[short] Android
      */
-    static MusicBrowser* create(int p0, GJSongType p1);
+    static MusicBrowser* create(int songID, GJSongType songType);
 
     /**
-     * @note[short] MacOS (ARM): 0x526b40
-     * @note[short] MacOS (Intel): 0x5f7710
-     * @note[short] Windows: 0x3245b0
-     * @note[short] iOS: 0x3ba55c
+     * @note[short] MacOS (ARM): 0x534a98
+     * @note[short] MacOS (Intel): 0x60eff0
+     * @note[short] Windows: 0x339480
+     * @note[short] iOS: 0x3c2014
      * @note[short] Android
      */
-    virtual void update(float p0);
+    virtual void update(float dt);
 
     /**
-     * @note[short] MacOS (ARM): 0x527afc
-     * @note[short] MacOS (Intel): 0x5f87e0
-     * @note[short] Windows: 0x425d0
-     * @note[short] iOS: 0x3bb0f8
+     * @note[short] MacOS (ARM): 0x535a14
+     * @note[short] MacOS (Intel): 0x6100c0
+     * @note[short] Windows: 0x42640
+     * @note[short] iOS: 0x3c2ba0
      * @note[short] Android
      */
     virtual void registerWithTouchDispatcher();
 
     /**
-     * @note[short] MacOS (ARM): 0x5279e0
-     * @note[short] MacOS (Intel): 0x5f86b0
-     * @note[short] Windows: 0x325c90
-     * @note[short] iOS: 0x3bb0ec
+     * @note[short] MacOS (ARM): 0x5358f8
+     * @note[short] MacOS (Intel): 0x60ff90
+     * @note[short] Windows: 0x33ab60
+     * @note[short] iOS: 0x3c2b94
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x5273e4
-     * @note[short] MacOS (Intel): 0x5f8050
-     * @note[short] Windows: 0x324eb0
-     * @note[short] iOS: 0x3bacc8
+     * @note[short] MacOS (ARM): 0x535318
+     * @note[short] MacOS (Intel): 0x60f930
+     * @note[short] Windows: 0x339d80
+     * @note[short] iOS: 0x3c2774
      * @note[short] Android
      */
-    virtual void musicActionFinished(GJMusicAction p0);
+    virtual void musicActionFinished(GJMusicAction action);
 
     /**
-     * @note[short] MacOS (ARM): 0x5274b4
-     * @note[short] MacOS (Intel): 0x5f8150
-     * @note[short] Windows: 0x324f20
-     * @note[short] iOS: 0x3bacec
+     * @note[short] MacOS (ARM): 0x5353e0
+     * @note[short] MacOS (Intel): 0x60fa30
+     * @note[short] Windows: 0x339df0
+     * @note[short] iOS: 0x3c279c
      * @note[short] Android
      */
-    virtual void musicActionFailed(GJMusicAction p0);
+    virtual void musicActionFailed(GJMusicAction action);
 
     /**
-     * @note[short] MacOS (ARM): 0x526cbc
-     * @note[short] MacOS (Intel): 0x5f7890
-     * @note[short] Windows: 0x324bf0
-     * @note[short] iOS: 0x3ba6d8
+     * @note[short] MacOS (ARM): 0x534c14
+     * @note[short] MacOS (Intel): 0x60f170
+     * @note[short] Windows: 0x339ac0
+     * @note[short] iOS: 0x3c2190
      * @note[short] Android
      */
-    virtual void sliderEnded(Slider* p0);
+    virtual void sliderEnded(Slider* slider);
 
     /**
-     * @note[short] MacOS (ARM): 0x527748
-     * @note[short] MacOS (Intel): 0x5f8400
-     * @note[short] Windows: 0x325a00
-     * @note[short] iOS: 0x3baf44
+     * @note[short] MacOS (ARM): 0x535670
+     * @note[short] MacOS (Intel): 0x60fce0
+     * @note[short] Windows: 0x33a8d0
+     * @note[short] iOS: 0x3c29f4
      * @note[short] Android: Rebinded
      */
-    virtual void setTextPopupClosed(SetTextPopup* p0, gd::string p1);
+    virtual void setTextPopupClosed(SetTextPopup* popup, gd::string text);
 
     /**
-     * @note[short] MacOS (ARM): 0x5276e0
-     * @note[short] MacOS (Intel): 0x5f8380
-     * @note[short] Windows: 0x325750
-     * @note[short] iOS: 0x3baedc
+     * @note[short] MacOS (ARM): 0x535608
+     * @note[short] MacOS (Intel): 0x60fc60
+     * @note[short] Windows: 0x33a620
+     * @note[short] iOS: 0x3c298c
      * @note[short] Android
      */
-    virtual bool cellPerformedAction(TableViewCell* p0, int p1, CellAction p2, cocos2d::CCNode* p3);
+    virtual bool cellPerformedAction(TableViewCell* cell, int listType, CellAction action, cocos2d::CCNode* parent);
 
     /**
-     * @note[short] MacOS (ARM): 0x527738
-     * @note[short] MacOS (Intel): 0x5f83e0
-     * @note[short] Windows: 0x325780
-     * @note[short] iOS: 0x3baf34
+     * @note[short] MacOS (ARM): 0x535660
+     * @note[short] MacOS (Intel): 0x60fcc0
+     * @note[short] Windows: 0x33a650
+     * @note[short] iOS: 0x3c29e4
      * @note[short] Android
      */
     virtual int getSelectedCellIdx();
 
     /**
-     * @note[short] MacOS (ARM): 0x527918
-     * @note[short] MacOS (Intel): 0x5f8610
-     * @note[short] Windows: 0x325ba0
-     * @note[short] iOS: 0x3bb07c
+     * @note[short] MacOS (ARM): 0x535830
+     * @note[short] MacOS (Intel): 0x60fef0
+     * @note[short] Windows: 0x33aa70
+     * @note[short] iOS: 0x3c2b24
      * @note[short] Android
      */
-    virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    virtual void FLAlert_Clicked(FLAlertLayer* layer, bool btn2);
 
     /**
-     * @note[short] MacOS (ARM): 0x525924
-     * @note[short] MacOS (Intel): 0x5f6470
-     * @note[short] Windows: 0x3239f0
+     * @note[short] MacOS (ARM): 0x533890
+     * @note[short] MacOS (Intel): 0x60dd60
+     * @note[short] Windows: 0x3388b0
+     * @note[short] iOS: 0x3c0ea4
      * @note[short] Android
      */
-    bool init(int p0, GJSongType p1);
+    bool init(int songID, GJSongType songType);
 
     /**
-     * @note[short] MacOS (ARM): 0x5267d8
-     * @note[short] MacOS (Intel): 0x5f73a0
-     * @note[short] Windows: 0x325b10
+     * @note[short] MacOS (ARM): 0x534738
+     * @note[short] MacOS (Intel): 0x60ec80
+     * @note[short] Windows: 0x33a9e0
+     * @note[short] iOS: 0x3c1cc8
      * @note[short] Android
      */
     void onArtistFilters(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x52671c
-     * @note[short] MacOS (Intel): 0x5f72e0
+     * @note[short] MacOS (ARM): 0x53468c
+     * @note[short] MacOS (Intel): 0x60ebc0
+     * @note[short] Windows: 0x33a710
+     * @note[short] iOS: 0x3c1c1c
      * @note[short] Android
      */
     void onClearSearch(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] Windows: 0x325c00
+     * @note[short] MacOS (ARM): 0x534360
+     * @note[short] MacOS (Intel): 0x60e900
+     * @note[short] Windows: 0x33aad0
+     * @note[short] iOS: 0x3c1930
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x526478
-     * @note[short] MacOS (Intel): 0x5f70b0
-     * @note[short] Windows: 0x325790
+     * @note[short] MacOS (ARM): 0x5343ec
+     * @note[short] MacOS (Intel): 0x60e990
+     * @note[short] Windows: 0x33a660
+     * @note[short] iOS: 0x3c19bc
      * @note[short] Android
      */
     void onPage(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x526c88
-     * @note[short] MacOS (Intel): 0x5f7860
-     * @note[short] Windows: 0x324b90
+     * @note[short] MacOS (ARM): 0x534be0
+     * @note[short] MacOS (Intel): 0x60f140
+     * @note[short] Windows: 0x339a60
+     * @note[short] iOS: 0x3c215c
      * @note[short] Android
      */
     void onPlaybackControl(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x52657c
-     * @note[short] MacOS (Intel): 0x5f71b0
-     * @note[short] Windows: 0x3258b0
+     * @note[short] MacOS (ARM): 0x5344ec
+     * @note[short] MacOS (Intel): 0x60ea90
+     * @note[short] Windows: 0x33a780
+     * @note[short] iOS: 0x3c1abc
      * @note[short] Android
      */
     void onSearch(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x526770
-     * @note[short] MacOS (Intel): 0x5f7340
-     * @note[short] Windows: 0x325aa0
+     * @note[short] MacOS (ARM): 0x5346d8
+     * @note[short] MacOS (Intel): 0x60ec20
+     * @note[short] Windows: 0x33a970
+     * @note[short] iOS: 0x3c1c68
      * @note[short] Android
      */
     void onTagFilters(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x526518
-     * @note[short] MacOS (Intel): 0x5f7140
+     * @note[short] MacOS (ARM): 0x53448c
+     * @note[short] MacOS (Intel): 0x60ea20
+     * @note[short] Windows: 0x339be0
+     * @note[short] iOS: 0x3c1a5c
      * @note[short] Android
      */
     void onUpdateLibrary(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x526e10
-     * @note[short] MacOS (Intel): 0x5f7a00
-     * @note[short] Windows: 0x325050
+     * @note[short] MacOS (ARM): 0x534d60
+     * @note[short] MacOS (Intel): 0x60f2e0
+     * @note[short] Windows: 0x339f20
+     * @note[short] iOS: 0x3c22a4
      * @note[short] Android
      */
-    void setupList(MusicSearchResult* p0);
+    void setupList(MusicSearchResult* result);
 
     /**
-     * @note[short] MacOS (ARM): 0x526d3c
-     * @note[short] MacOS (Intel): 0x5f7920
+     * @note[short] MacOS (ARM): 0x534c94
+     * @note[short] MacOS (Intel): 0x60f200
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3c2210
      * @note[short] Android
      */
     void setupMusicBrowser();
 
     /**
-     * @note[short] MacOS (ARM): 0x52684c
-     * @note[short] MacOS (Intel): 0x5f7410
-     * @note[short] Windows: 0x3248b0
+     * @note[short] MacOS (ARM): 0x5347a8
+     * @note[short] MacOS (Intel): 0x60ecf0
+     * @note[short] Windows: 0x339780
+     * @note[short] iOS: 0x3c1d34
      * @note[short] Android
      */
     void setupSongControls();
 
     /**
+     * @note[short] MacOS (ARM): 0x534bd8
+     * @note[short] MacOS (Intel): 0x60f130
+     * @note[short] Windows: 0x12a550
+     * @note[short] iOS: 0x3c2154
      * @note[short] Android
      */
     void sliderChanged(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x526ad8
-     * @note[short] MacOS (Intel): 0x5f76a0
+     * @note[short] MacOS (ARM): 0x534a34
+     * @note[short] MacOS (Intel): 0x60ef80
+     * @note[short] Windows: 0x339c40
+     * @note[short] iOS: 0x3c1fb8
      * @note[short] Android
      */
     void trySetupMusicBrowser();
 
     /**
-     * @note[short] MacOS (ARM): 0x5275cc
-     * @note[short] MacOS (Intel): 0x5f8280
+     * @note[short] MacOS (ARM): 0x5354f4
+     * @note[short] MacOS (Intel): 0x60fb60
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x3c2888
      * @note[short] Android
      */
     void updatePageLabel();

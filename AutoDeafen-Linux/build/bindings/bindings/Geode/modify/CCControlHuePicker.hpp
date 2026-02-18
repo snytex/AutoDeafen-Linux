@@ -5,14 +5,9 @@
 using namespace geode::modifier;
 namespace geode::modifier {
     
-	#ifndef GEODE_STATICS_checkSliderPosition
-		#define GEODE_STATICS_checkSliderPosition
-		GEODE_AS_STATIC_FUNCTION(checkSliderPosition) 
-	#endif
-
-	#ifndef GEODE_STATICS_updateSliderPosition
-		#define GEODE_STATICS_updateSliderPosition
-		GEODE_AS_STATIC_FUNCTION(updateSliderPosition) 
+	#ifndef GEODE_STATICS_create
+		#define GEODE_STATICS_create
+		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
 	#ifndef GEODE_STATICS_ccTouchBegan
@@ -45,15 +40,25 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(setHuePercentage) 
 	#endif
 
-    
-	#ifndef GEODE_CONCEPT_CHECK_checkSliderPosition
-		#define GEODE_CONCEPT_CHECK_checkSliderPosition
-		GEODE_CONCEPT_FUNCTION_CHECK(checkSliderPosition) 
+	#ifndef GEODE_STATICS_registerWithTouchDispatcher
+		#define GEODE_STATICS_registerWithTouchDispatcher
+		GEODE_AS_STATIC_FUNCTION(registerWithTouchDispatcher) 
 	#endif
 
-	#ifndef GEODE_CONCEPT_CHECK_updateSliderPosition
-		#define GEODE_CONCEPT_CHECK_updateSliderPosition
-		GEODE_CONCEPT_FUNCTION_CHECK(updateSliderPosition) 
+	#ifndef GEODE_STATICS_checkSliderPosition
+		#define GEODE_STATICS_checkSliderPosition
+		GEODE_AS_STATIC_FUNCTION(checkSliderPosition) 
+	#endif
+
+	#ifndef GEODE_STATICS_updateSliderPosition
+		#define GEODE_STATICS_updateSliderPosition
+		GEODE_AS_STATIC_FUNCTION(updateSliderPosition) 
+	#endif
+
+    
+	#ifndef GEODE_CONCEPT_CHECK_create
+		#define GEODE_CONCEPT_CHECK_create
+		GEODE_CONCEPT_FUNCTION_CHECK(create) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_ccTouchBegan
@@ -86,6 +91,21 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(setHuePercentage) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_registerWithTouchDispatcher
+		#define GEODE_CONCEPT_CHECK_registerWithTouchDispatcher
+		GEODE_CONCEPT_FUNCTION_CHECK(registerWithTouchDispatcher) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_checkSliderPosition
+		#define GEODE_CONCEPT_CHECK_checkSliderPosition
+		GEODE_CONCEPT_FUNCTION_CHECK(checkSliderPosition) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_updateSliderPosition
+		#define GEODE_CONCEPT_CHECK_updateSliderPosition
+		GEODE_CONCEPT_FUNCTION_CHECK(updateSliderPosition) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::extension::CCControlHuePicker> : ModifyBase<ModifyDerive<Der, cocos2d::extension::CCControlHuePicker>> {
@@ -97,14 +117,16 @@ namespace geode::modifier {
 
 			GEODE_APPLY_MODIFY_FOR_CONSTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getExtensions(), "??0CCControlHuePicker@extension@cocos2d@@QEAA@XZ")), Thiscall, cocos2d::extension::CCControlHuePicker, )
 			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getExtensions(), "??1CCControlHuePicker@extension@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::extension::CCControlHuePicker)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint>::func(&cocos2d::extension::CCControlHuePicker::checkSliderPosition)), Thiscall, cocos2d::extension::CCControlHuePicker, checkSliderPosition, cocos2d::CCPoint)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint>::func(&cocos2d::extension::CCControlHuePicker::updateSliderPosition)), Thiscall, cocos2d::extension::CCControlHuePicker, updateSliderPosition, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCNode*, cocos2d::CCPoint>::func(&cocos2d::extension::CCControlHuePicker::create)), Default, cocos2d::extension::CCControlHuePicker, create, cocos2d::CCNode*, cocos2d::CCPoint)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCTouch*, cocos2d::CCEvent*>::func(&cocos2d::extension::CCControlHuePicker::ccTouchBegan)), Thiscall, cocos2d::extension::CCControlHuePicker, ccTouchBegan, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCTouch*, cocos2d::CCEvent*>::func(&cocos2d::extension::CCControlHuePicker::ccTouchMoved)), Thiscall, cocos2d::extension::CCControlHuePicker, ccTouchMoved, cocos2d::CCTouch*, cocos2d::CCEvent*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<bool>::func(&cocos2d::extension::CCControlHuePicker::setEnabled)), Thiscall, cocos2d::extension::CCControlHuePicker, setEnabled, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<cocos2d::CCNode*, cocos2d::CCPoint>::func(&cocos2d::extension::CCControlHuePicker::initWithTargetAndPos)), Thiscall, cocos2d::extension::CCControlHuePicker, initWithTargetAndPos, cocos2d::CCNode*, cocos2d::CCPoint)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::extension::CCControlHuePicker::setHue)), Thiscall, cocos2d::extension::CCControlHuePicker, setHue, float)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<float>::func(&cocos2d::extension::CCControlHuePicker::setHuePercentage)), Thiscall, cocos2d::extension::CCControlHuePicker, setHuePercentage, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::extension::CCControlHuePicker::registerWithTouchDispatcher)), Thiscall, cocos2d::extension::CCControlHuePicker, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint>::func(&cocos2d::extension::CCControlHuePicker::checkSliderPosition)), Thiscall, cocos2d::extension::CCControlHuePicker, checkSliderPosition, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCPoint>::func(&cocos2d::extension::CCControlHuePicker::updateSliderPosition)), Thiscall, cocos2d::extension::CCControlHuePicker, updateSliderPosition, cocos2d::CCPoint)
 		}
 	};
 }

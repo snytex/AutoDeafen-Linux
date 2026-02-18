@@ -125,16 +125,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(untoggleAll) 
 	#endif
 
-	#ifndef GEODE_STATICS_updateLevelsLabel
-		#define GEODE_STATICS_updateLevelsLabel
-		GEODE_AS_STATIC_FUNCTION(updateLevelsLabel) 
-	#endif
-
-	#ifndef GEODE_STATICS_updatePageArrows
-		#define GEODE_STATICS_updatePageArrows
-		GEODE_AS_STATIC_FUNCTION(updatePageArrows) 
-	#endif
-
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
@@ -275,32 +265,32 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3216b0, Default, MessagesProfilePage, create, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x425d0, Thiscall, MessagesProfilePage, registerWithTouchDispatcher, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x322cb0, Thiscall, MessagesProfilePage, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x322a50, Thiscall, MessagesProfilePage, FLAlert_Clicked, FLAlertLayer*, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13d2a0, Thiscall, MessagesProfilePage, onClosePopup, UploadActionPopup*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x322a80, Thiscall, MessagesProfilePage, uploadActionFinished, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13d460, Thiscall, MessagesProfilePage, uploadActionFailed, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x323300, Thiscall, MessagesProfilePage, loadMessagesFinished, cocos2d::CCArray*, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13dc50, Thiscall, MessagesProfilePage, loadMessagesFailed, char const*, GJErrorCode)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x323450, Thiscall, MessagesProfilePage, forceReloadMessages, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x323470, Thiscall, MessagesProfilePage, setupPageInfo, gd::string, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3227d0, Thiscall, MessagesProfilePage, deleteSelected, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x321850, Thiscall, MessagesProfilePage, init, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MessagesProfilePage, isCorrect, char const*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x322d60, Thiscall, MessagesProfilePage, loadPage, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x322bf0, Thiscall, MessagesProfilePage, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3224e0, Thiscall, MessagesProfilePage, onDeleteSelected, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x323610, Thiscall, MessagesProfilePage, onNextPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x323620, Thiscall, MessagesProfilePage, onPrevPage, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x322450, Thiscall, MessagesProfilePage, onSentMessages, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x322270, Thiscall, MessagesProfilePage, onToggleAllObjects, cocos2d::CCObject*)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MessagesProfilePage, onUpdate, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x323170, Thiscall, MessagesProfilePage, setupCommentsBrowser, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x322cc0, Thiscall, MessagesProfilePage, untoggleAll, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MessagesProfilePage, updateLevelsLabel, )
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(MessagesProfilePage, updatePageArrows, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x336570, Default, MessagesProfilePage, create, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42640, Thiscall, MessagesProfilePage, registerWithTouchDispatcher, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x337b70, Thiscall, MessagesProfilePage, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x337910, Thiscall, MessagesProfilePage, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13eee0, Thiscall, MessagesProfilePage, onClosePopup, UploadActionPopup*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x337940, Thiscall, MessagesProfilePage, uploadActionFinished, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13f0a0, Thiscall, MessagesProfilePage, uploadActionFailed, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3381c0, Thiscall, MessagesProfilePage, loadMessagesFinished, cocos2d::CCArray*, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13f890, Thiscall, MessagesProfilePage, loadMessagesFailed, char const*, GJErrorCode)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x338310, Thiscall, MessagesProfilePage, forceReloadMessages, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x338330, Thiscall, MessagesProfilePage, setupPageInfo, gd::string, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x337690, Thiscall, MessagesProfilePage, deleteSelected, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x336710, Thiscall, MessagesProfilePage, init, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x13f140, Thiscall, MessagesProfilePage, isCorrect, char const*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x337c20, Thiscall, MessagesProfilePage, loadPage, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x337ab0, Thiscall, MessagesProfilePage, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3373a0, Thiscall, MessagesProfilePage, onDeleteSelected, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3384d0, Thiscall, MessagesProfilePage, onNextPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3384e0, Thiscall, MessagesProfilePage, onPrevPage, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x337310, Thiscall, MessagesProfilePage, onSentMessages, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x337130, Thiscall, MessagesProfilePage, onToggleAllObjects, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x337210, Thiscall, MessagesProfilePage, onUpdate, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x338030, Thiscall, MessagesProfilePage, setupCommentsBrowser, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x337b80, Thiscall, MessagesProfilePage, untoggleAll, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MessagesProfilePage, updateLevelsLabel, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(MessagesProfilePage, updatePageArrows, )
 		}
 	};
 }

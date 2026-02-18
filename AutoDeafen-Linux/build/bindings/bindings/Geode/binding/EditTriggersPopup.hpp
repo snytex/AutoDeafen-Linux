@@ -16,35 +16,38 @@ public:
     GEODE_CUSTOM_CONSTRUCTOR_GD(EditTriggersPopup, SetupTriggerPopup)
 
     /**
-     * @note[short] Windows: 0x2874a0
+     * @note[short] MacOS (ARM): 0x23a660
+     * @note[short] MacOS (Intel): 0x29a800
+     * @note[short] Windows: 0x28edd0
+     * @note[short] iOS: 0x2d2464
      * @note[short] Android
      */
-    static EditTriggersPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    static EditTriggersPopup* create(EffectGameObject* object, cocos2d::CCArray* objects);
 
     /**
-     * @note[short] MacOS (ARM): 0x231fb4
-     * @note[short] MacOS (Intel): 0x288da0
-     * @note[short] Windows: 0x287910
-     * @note[short] iOS: 0x2d2e64
+     * @note[short] MacOS (ARM): 0x23aac8
+     * @note[short] MacOS (Intel): 0x29ace0
+     * @note[short] Windows: 0x28f240
+     * @note[short] iOS: 0x2d279c
      * @note[short] Android
      */
     virtual void determineStartValues();
 
     /**
-     * @note[short] MacOS (ARM): 0x231fb8
-     * @note[short] MacOS (Intel): 0x288db0
-     * @note[short] Windows: 0x287920
-     * @note[short] iOS: 0x2d2e68
+     * @note[short] MacOS (ARM): 0x23aacc
+     * @note[short] MacOS (Intel): 0x29acf0
+     * @note[short] Windows: 0x28f250
+     * @note[short] iOS: 0x2d27a0
      * @note[short] Android
      */
     virtual void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x231cd4
-     * @note[short] MacOS (Intel): 0x288ae0
-     * @note[short] Windows: 0x2875b0
-     * @note[short] iOS: 0x2d2c04
+     * @note[short] MacOS (ARM): 0x23a7e8
+     * @note[short] MacOS (Intel): 0x29aa30
+     * @note[short] Windows: 0x28eee0
+     * @note[short] iOS: 0x2d253c
      * @note[short] Android
      */
-    bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    bool init(EffectGameObject* object, cocos2d::CCArray* objects);
 };

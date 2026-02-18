@@ -50,11 +50,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(FLAlert_Clicked) 
 	#endif
 
-	#ifndef GEODE_STATICS_createToggleButton
-		#define GEODE_STATICS_createToggleButton
-		GEODE_AS_STATIC_FUNCTION(createToggleButton) 
-	#endif
-
 	#ifndef GEODE_STATICS_onBackup
 		#define GEODE_STATICS_onBackup
 		GEODE_AS_STATIC_FUNCTION(onBackup) 
@@ -215,29 +210,29 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7d560, Default, AccountLayer, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7d6c0, Thiscall, AccountLayer, customSetup, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7f450, Thiscall, AccountLayer, layerHidden, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7eb30, Thiscall, AccountLayer, backupAccountFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7ece0, Thiscall, AccountLayer, backupAccountFailed, BackupAccountError, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7eff0, Thiscall, AccountLayer, syncAccountFinished, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7f1b0, Thiscall, AccountLayer, syncAccountFailed, BackupAccountError, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7e750, Thiscall, AccountLayer, accountStatusChanged, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7f340, Thiscall, AccountLayer, FLAlert_Clicked, FLAlertLayer*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(AccountLayer, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7d5b0, Default, AccountLayer, create, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7d710, Thiscall, AccountLayer, customSetup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7f4a0, Thiscall, AccountLayer, layerHidden, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7eb80, Thiscall, AccountLayer, backupAccountFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7ed30, Thiscall, AccountLayer, backupAccountFailed, BackupAccountError, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7f040, Thiscall, AccountLayer, syncAccountFinished, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7f200, Thiscall, AccountLayer, syncAccountFailed, BackupAccountError, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7e7a0, Thiscall, AccountLayer, accountStatusChanged, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7f390, Thiscall, AccountLayer, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountLayer, createToggleButton, gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountLayer, doBackup, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountLayer, doSync, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountLayer, exitLayer, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountLayer, hideLoadingUI, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7dfd0, Thiscall, AccountLayer, onBackup, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7e5e0, Thiscall, AccountLayer, onHelp, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7de10, Thiscall, AccountLayer, onLogin, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7e700, Thiscall, AccountLayer, onMore, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7de50, Thiscall, AccountLayer, onRegister, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7e360, Thiscall, AccountLayer, onSync, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7e020, Thiscall, AccountLayer, onBackup, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7e630, Thiscall, AccountLayer, onHelp, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7de60, Thiscall, AccountLayer, onLogin, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7e750, Thiscall, AccountLayer, onMore, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7dea0, Thiscall, AccountLayer, onRegister, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7e3b0, Thiscall, AccountLayer, onSync, cocos2d::CCObject*)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountLayer, showLoadingUI, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(AccountLayer, toggleUI, bool)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7e760, Thiscall, AccountLayer, updatePage, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x7e7b0, Thiscall, AccountLayer, updatePage, bool)
 		}
 	};
 }

@@ -65,11 +65,11 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42e390, Thiscall, SetupAudioTriggerPopup, valueDidChange, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42d3b0, Thiscall, SetupAudioTriggerPopup, addProxVolControls, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42cff0, Thiscall, SetupAudioTriggerPopup, addTimeControls, int, float)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42e240, Thiscall, SetupAudioTriggerPopup, onProxMode, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x42e310, Thiscall, SetupAudioTriggerPopup, updateSpecialGroup, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4466a0, Thiscall, SetupAudioTriggerPopup, valueDidChange, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4456c0, Thiscall, SetupAudioTriggerPopup, addProxVolControls, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x445300, Thiscall, SetupAudioTriggerPopup, addTimeControls, int, float)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x446550, Thiscall, SetupAudioTriggerPopup, onProxMode, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x446620, Thiscall, SetupAudioTriggerPopup, updateSpecialGroup, )
 		}
 	};
 }

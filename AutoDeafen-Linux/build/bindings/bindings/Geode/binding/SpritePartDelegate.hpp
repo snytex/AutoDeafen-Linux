@@ -20,5 +20,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void displayFrameChanged(cocos2d::CCObject* p0, gd::string p1);
+    virtual void displayFrameChanged(cocos2d::CCObject* sprite, gd::string frameName);
 };

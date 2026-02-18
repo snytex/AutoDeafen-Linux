@@ -41,8 +41,8 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(SetLevelOrderPopup, create, int, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f4480, Thiscall, SetLevelOrderPopup, init, int, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2f4750, Thiscall, SetLevelOrderPopup, onOrderButton, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x308ed0, Thiscall, SetLevelOrderPopup, init, int, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x3091a0, Thiscall, SetLevelOrderPopup, onOrderButton, cocos2d::CCObject*)
 		}
 	};
 }

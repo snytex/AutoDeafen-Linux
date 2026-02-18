@@ -20,7 +20,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void loadSongInfoFinished(SongInfoObject* p0);
+    virtual void loadSongInfoFinished(SongInfoObject* object);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -29,7 +29,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void loadSongInfoFailed(int p0, GJSongError p1);
+    virtual void loadSongInfoFailed(int id, GJSongError errorType);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -38,7 +38,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void downloadSongFinished(int p0);
+    virtual void downloadSongStarted(int id);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -47,7 +47,16 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void downloadSongFailed(int p0, GJSongError p1);
+    virtual void downloadSongFinished(int id);
+
+    /**
+     * @note[short] MacOS (ARM): Out of line
+     * @note[short] MacOS (Intel): Out of line
+     * @note[short] Windows: Out of line
+     * @note[short] iOS: Out of line
+     * @note[short] Android: Out of line
+     */
+    virtual void downloadSongFailed(int id, GJSongError errorType);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -65,7 +74,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void downloadSFXFinished(int p0);
+    virtual void downloadSFXFinished(int id);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -74,7 +83,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void downloadSFXFailed(int p0, GJSongError p1);
+    virtual void downloadSFXFailed(int id, GJSongError errorType);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -83,7 +92,7 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void musicActionFinished(GJMusicAction p0);
+    virtual void musicActionFinished(GJMusicAction action);
 
     /**
      * @note[short] MacOS (ARM): Out of line
@@ -92,5 +101,5 @@ public:
      * @note[short] iOS: Out of line
      * @note[short] Android: Out of line
      */
-    virtual void musicActionFailed(GJMusicAction p0);
+    virtual void musicActionFailed(GJMusicAction action);
 };

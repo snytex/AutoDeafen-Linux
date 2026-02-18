@@ -26,66 +26,73 @@ public:
      NCSInfoLayer();
 
     /**
-     * @note[short] MacOS (ARM): 0x1b96c0
-     * @note[short] MacOS (Intel): 0x2044d0
+     * @note[short] MacOS (ARM): 0x1c1650
+     * @note[short] MacOS (Intel): 0x216020
      * @note[short] Windows: Out of line
+     * @note[short] iOS: 0x144ae4
      * @note[short] Android
      */
-    static NCSInfoLayer* create(CustomSongLayer* p0);
+    static NCSInfoLayer* create(CustomSongLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bbda8
-     * @note[short] MacOS (Intel): 0x206d40
-     * @note[short] Windows: 0x84650
-     * @note[short] iOS: 0x14a3ac
+     * @note[short] MacOS (ARM): 0x1c3d2c
+     * @note[short] MacOS (Intel): 0x218860
+     * @note[short] Windows: 0x846a0
+     * @note[short] iOS: 0x146ce4
      * @note[short] Android
      */
     virtual void keyBackClicked();
 
     /**
-     * @note[short] MacOS (ARM): 0x1bb640
-     * @note[short] MacOS (Intel): 0x2065a0
-     * @note[short] Windows: 0xc56c0
+     * @note[short] MacOS (ARM): 0x1c35c4
+     * @note[short] MacOS (Intel): 0x2180d0
+     * @note[short] Windows: 0xc63e0
+     * @note[short] iOS: 0x146608
      * @note[short] Android
      */
-    bool init(CustomSongLayer* p0);
+    bool init(CustomSongLayer* layer);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bb2d0
-     * @note[short] MacOS (Intel): 0x2062a0
-     * @note[short] Windows: 0x84620
+     * @note[short] MacOS (ARM): 0x1c3cf0
+     * @note[short] MacOS (Intel): 0x218830
+     * @note[short] Windows: 0x84670
+     * @note[short] iOS: Out of line
      * @note[short] Android
      */
     void onClose(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bbc9c
-     * @note[short] MacOS (Intel): 0x206c40
-     * @note[short] Windows: 0xc5f10
+     * @note[short] MacOS (ARM): 0x1c3c20
+     * @note[short] MacOS (Intel): 0x218760
+     * @note[short] Windows: 0xc6c30
+     * @note[short] iOS: 0x146c14
      * @note[short] Android
      */
     void onLibrary(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bbd00
-     * @note[short] MacOS (Intel): 0x206cb0
-     * @note[short] Windows: 0xc5eb0
+     * @note[short] MacOS (ARM): 0x1c3c84
+     * @note[short] MacOS (Intel): 0x2187d0
+     * @note[short] Windows: 0xc6bd0
+     * @note[short] iOS: 0x146c78
      * @note[short] Android
      */
     void onNCS(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bbd24
-     * @note[short] MacOS (Intel): 0x206cd0
-     * @note[short] Windows: 0xc5ed0
+     * @note[short] MacOS (ARM): 0x1c3ca8
+     * @note[short] MacOS (Intel): 0x2187f0
+     * @note[short] Windows: 0xc6bf0
+     * @note[short] iOS: 0x146c9c
      * @note[short] Android
      */
     void onNCSIO(cocos2d::CCObject* sender);
 
     /**
-     * @note[short] MacOS (ARM): 0x1bbd48
-     * @note[short] MacOS (Intel): 0x206cf0
-     * @note[short] Windows: 0xc5ef0
+     * @note[short] MacOS (ARM): 0x1c3ccc
+     * @note[short] MacOS (Intel): 0x218810
+     * @note[short] Windows: 0xc6c10
+     * @note[short] iOS: 0x146cc0
      * @note[short] Android
      */
     void onNCSUsage(cocos2d::CCObject* sender);

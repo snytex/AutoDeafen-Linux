@@ -45,11 +45,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(FLAlert_Clicked) 
 	#endif
 
-	#ifndef GEODE_STATICS_blockUser
-		#define GEODE_STATICS_blockUser
-		GEODE_AS_STATIC_FUNCTION(blockUser) 
-	#endif
-
 	#ifndef GEODE_STATICS_init
 		#define GEODE_STATICS_init
 		GEODE_AS_STATIC_FUNCTION(init) 
@@ -165,21 +160,21 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28fd10, Default, GJMessagePopup, create, GJUserMessage*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84650, Thiscall, GJMessagePopup, keyBackClicked, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2914b0, Thiscall, GJMessagePopup, downloadMessageFinished, GJUserMessage*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x291500, Thiscall, GJMessagePopup, downloadMessageFailed, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x291540, Thiscall, GJMessagePopup, uploadActionFinished, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2916d0, Thiscall, GJMessagePopup, uploadActionFailed, int, int)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2917a0, Thiscall, GJMessagePopup, onClosePopup, UploadActionPopup*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x291820, Thiscall, GJMessagePopup, FLAlert_Clicked, FLAlertLayer*, bool)
-            GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_DEFINED(GJMessagePopup, blockUser, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x28fe50, Thiscall, GJMessagePopup, init, GJUserMessage*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x290760, Thiscall, GJMessagePopup, loadFromGJMessage, GJUserMessage*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x291280, Thiscall, GJMessagePopup, onBlock, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84620, Thiscall, GJMessagePopup, onClose, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2910f0, Thiscall, GJMessagePopup, onRemove, cocos2d::CCObject*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x290db0, Thiscall, GJMessagePopup, onReply, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x297370, Default, GJMessagePopup, create, GJUserMessage*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x846a0, Thiscall, GJMessagePopup, keyBackClicked, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x298b10, Thiscall, GJMessagePopup, downloadMessageFinished, GJUserMessage*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x298b60, Thiscall, GJMessagePopup, downloadMessageFailed, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x298ba0, Thiscall, GJMessagePopup, uploadActionFinished, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x298d30, Thiscall, GJMessagePopup, uploadActionFailed, int, int)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x298e00, Thiscall, GJMessagePopup, onClosePopup, UploadActionPopup*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x298e80, Thiscall, GJMessagePopup, FLAlert_Clicked, FLAlertLayer*, bool)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJMessagePopup, blockUser, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2974b0, Thiscall, GJMessagePopup, init, GJUserMessage*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x297dc0, Thiscall, GJMessagePopup, loadFromGJMessage, GJUserMessage*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x2988e0, Thiscall, GJMessagePopup, onBlock, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x84670, Thiscall, GJMessagePopup, onClose, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x298750, Thiscall, GJMessagePopup, onRemove, cocos2d::CCObject*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x298410, Thiscall, GJMessagePopup, onReply, cocos2d::CCObject*)
 		}
 	};
 }

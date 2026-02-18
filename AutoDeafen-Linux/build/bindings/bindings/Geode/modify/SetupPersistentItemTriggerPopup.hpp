@@ -35,8 +35,8 @@ namespace geode::modifier {
         using Derived = Der;
 		void apply() override {
 
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x457390, Default, SetupPersistentItemTriggerPopup, create, ItemTriggerGameObject*, cocos2d::CCArray*)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x4574a0, Thiscall, SetupPersistentItemTriggerPopup, init, ItemTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46f900, Default, SetupPersistentItemTriggerPopup, create, ItemTriggerGameObject*, cocos2d::CCArray*)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(base::get() + 0x46fa10, Thiscall, SetupPersistentItemTriggerPopup, init, ItemTriggerGameObject*, cocos2d::CCArray*)
 		}
 	};
 }

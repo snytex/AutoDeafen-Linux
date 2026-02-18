@@ -10,26 +10,6 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(create) 
 	#endif
 
-	#ifndef GEODE_STATICS_initWithTarget
-		#define GEODE_STATICS_initWithTarget
-		GEODE_AS_STATIC_FUNCTION(initWithTarget) 
-	#endif
-
-	#ifndef GEODE_STATICS_getScriptTapHandler
-		#define GEODE_STATICS_getScriptTapHandler
-		GEODE_AS_STATIC_FUNCTION(getScriptTapHandler) 
-	#endif
-
-	#ifndef GEODE_STATICS_setTarget
-		#define GEODE_STATICS_setTarget
-		GEODE_AS_STATIC_FUNCTION(setTarget) 
-	#endif
-
-	#ifndef GEODE_STATICS_rect
-		#define GEODE_STATICS_rect
-		GEODE_AS_STATIC_FUNCTION(rect) 
-	#endif
-
 	#ifndef GEODE_STATICS_activate
 		#define GEODE_STATICS_activate
 		GEODE_AS_STATIC_FUNCTION(activate) 
@@ -70,30 +50,25 @@ namespace geode::modifier {
 		GEODE_AS_STATIC_FUNCTION(isSelected) 
 	#endif
 
+	#ifndef GEODE_STATICS_initWithTarget
+		#define GEODE_STATICS_initWithTarget
+		GEODE_AS_STATIC_FUNCTION(initWithTarget) 
+	#endif
+
+	#ifndef GEODE_STATICS_rect
+		#define GEODE_STATICS_rect
+		GEODE_AS_STATIC_FUNCTION(rect) 
+	#endif
+
+	#ifndef GEODE_STATICS_setTarget
+		#define GEODE_STATICS_setTarget
+		GEODE_AS_STATIC_FUNCTION(setTarget) 
+	#endif
+
     
 	#ifndef GEODE_CONCEPT_CHECK_create
 		#define GEODE_CONCEPT_CHECK_create
 		GEODE_CONCEPT_FUNCTION_CHECK(create) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_initWithTarget
-		#define GEODE_CONCEPT_CHECK_initWithTarget
-		GEODE_CONCEPT_FUNCTION_CHECK(initWithTarget) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_getScriptTapHandler
-		#define GEODE_CONCEPT_CHECK_getScriptTapHandler
-		GEODE_CONCEPT_FUNCTION_CHECK(getScriptTapHandler) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_setTarget
-		#define GEODE_CONCEPT_CHECK_setTarget
-		GEODE_CONCEPT_FUNCTION_CHECK(setTarget) 
-	#endif
-
-	#ifndef GEODE_CONCEPT_CHECK_rect
-		#define GEODE_CONCEPT_CHECK_rect
-		GEODE_CONCEPT_FUNCTION_CHECK(rect) 
 	#endif
 
 	#ifndef GEODE_CONCEPT_CHECK_activate
@@ -136,6 +111,21 @@ namespace geode::modifier {
 		GEODE_CONCEPT_FUNCTION_CHECK(isSelected) 
 	#endif
 
+	#ifndef GEODE_CONCEPT_CHECK_initWithTarget
+		#define GEODE_CONCEPT_CHECK_initWithTarget
+		GEODE_CONCEPT_FUNCTION_CHECK(initWithTarget) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_rect
+		#define GEODE_CONCEPT_CHECK_rect
+		GEODE_CONCEPT_FUNCTION_CHECK(rect) 
+	#endif
+
+	#ifndef GEODE_CONCEPT_CHECK_setTarget
+		#define GEODE_CONCEPT_CHECK_setTarget
+		GEODE_CONCEPT_FUNCTION_CHECK(setTarget) 
+	#endif
+
 
 	template<class Der>
 	struct ModifyDerive<Der, cocos2d::CCMenuItem> : ModifyBase<ModifyDerive<Der, cocos2d::CCMenuItem>> {
@@ -146,12 +136,8 @@ namespace geode::modifier {
 		void apply() override {
 
 			GEODE_APPLY_MODIFY_FOR_DESTRUCTOR(reinterpret_cast<uintptr_t>(GetProcAddress((HMODULE)base::getCocos(), "??1CCMenuItem@cocos2d@@UEAA@XZ")), Thiscall, cocos2d::CCMenuItem)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*, cocos2d::SEL_MenuHandler>::func(&cocos2d::CCMenuItem::create)), Default, cocos2d::CCMenuItem, create, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCMenuItem::create)), Default, cocos2d::CCMenuItem, create, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*, cocos2d::SEL_MenuHandler>::func(&cocos2d::CCMenuItem::initWithTarget)), Thiscall, cocos2d::CCMenuItem, initWithTarget, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCMenuItem::getScriptTapHandler)), Thiscall, cocos2d::CCMenuItem, getScriptTapHandler, )
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*, cocos2d::SEL_MenuHandler>::func(&cocos2d::CCMenuItem::setTarget)), Thiscall, cocos2d::CCMenuItem, setTarget, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
-			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCMenuItem::rect)), Thiscall, cocos2d::CCMenuItem, rect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*, cocos2d::SEL_MenuHandler>::func(&cocos2d::CCMenuItem::create)), Default, cocos2d::CCMenuItem, create, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCMenuItem::activate)), Thiscall, cocos2d::CCMenuItem, activate, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCMenuItem::selected)), Thiscall, cocos2d::CCMenuItem, selected, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCMenuItem::unselected)), Thiscall, cocos2d::CCMenuItem, unselected, )
@@ -160,6 +146,9 @@ namespace geode::modifier {
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCMenuItem::isEnabled)), Thiscall, cocos2d::CCMenuItem, isEnabled, )
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<bool>::func(&cocos2d::CCMenuItem::setEnabled)), Thiscall, cocos2d::CCMenuItem, setEnabled, bool)
 			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getVirtual(Resolve<>::func(&cocos2d::CCMenuItem::isSelected)), Thiscall, cocos2d::CCMenuItem, isSelected, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*, cocos2d::SEL_MenuHandler>::func(&cocos2d::CCMenuItem::initWithTarget)), Thiscall, cocos2d::CCMenuItem, initWithTarget, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<>::func(&cocos2d::CCMenuItem::rect)), Thiscall, cocos2d::CCMenuItem, rect, )
+			GEODE_APPLY_MODIFY_FOR_FUNCTION(addresser::getNonVirtual(Resolve<cocos2d::CCObject*, cocos2d::SEL_MenuHandler>::func(&cocos2d::CCMenuItem::setTarget)), Thiscall, cocos2d::CCMenuItem, setTarget, cocos2d::CCObject*, cocos2d::SEL_MenuHandler)
 		}
 	};
 }

@@ -7,6 +7,8 @@ It was made to work on Linux systems, which can't use discord hotkeys since they
 
 ### Auto Installation (Recommended)
 
+**Note:** As of right now (20.01.2026), the install.sh file seems to not work for some users. I highly recommend either manually installing Vencord or waiting for a fix
+
 - Go to releases and grab the 'install.sh' file
 - Simply run it and finish the installation
 

@@ -7,8 +7,6 @@ It was made to work on Linux systems, which can't use discord hotkeys since they
 
 ### Auto Installation (Recommended)
 
-**Note:** As of right now (20.01.2026), the install.sh file seems to not work for some users. If you run into any issues I highly recommend either manually installing Vencord or waiting for a fix
-
 - Go to releases and grab the 'install.sh' file
 - Simply run it and finish the installation
 
@@ -21,9 +19,19 @@ It was made to work on Linux systems, which can't use discord hotkeys since they
 
 That should be it and you can now use the Auto-Deafen feature on Linux!
 
-## Video Tutorial (OUTDATED):
+## FAQ
 
-~~https://youtu.be/We8-3v6DGK0~~
+<details>
+  <summary><b>Will you keep updating this mod?</b></summary>
+  <br>
+  Yes, I plan on keeping this mod up-to-date for as long as possible. Since I rely on this for my own setup, maintaining it is a priority for me as much as it is for the community.
+</details>
+
+<details>
+  <summary><b>Why do I need Vencord?</b></summary>
+  <br>
+  Because Discord on Linux (especially via Proton/Wine) handles hotkeys differently, the Vencord plugin acts as the bridge between the Geode mod and your Discord client.
+</details>
 
 ## Credits
 

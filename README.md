@@ -30,7 +30,7 @@ That should be it and you can now use the Auto-Deafen feature on Linux!
 <details>
   <summary><b>Why do I need Vencord?</b></summary>
   <br>
-  Because Discord on Linux (especially via Proton/Wine) handles hotkeys differently, the Vencord plugin acts as the bridge between the Geode mod and your Discord client.
+  Because Discord on Linux (especially on Wayland) handles hotkeys differently, the Vencord plugin acts as the bridge between the Geode mod and your Discord client.
 </details>
 
 ## Credits

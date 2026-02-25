@@ -1,10 +1,10 @@
 {
-    "geode": "5.0.0-beta.2",
+    "geode": "5.0.1",
     "gd": {
         "win": "2.2081"
     },
     "name": "AutoDeafen-Linux",
-    "version": "v1.2.2-beta.1",
+    "version": "v1.2.2",
     "developer": "Snytex",
     "id": "snytex.autodeafen",
     "description": "Forked to make it work on Linux. Original credits go to Lynxdeer",

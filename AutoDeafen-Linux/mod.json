@@ -4,7 +4,7 @@
         "win": "2.2081"
     },
     "name": "AutoDeafen-Linux",
-    "version": "v1.3.0",
+    "version": "v1.1.1",
     "developer": "Snytex",
     "id": "snytex.autodeafen",
     "description": "Forked to make it work on Linux. Original credits go to Lynxdeer",

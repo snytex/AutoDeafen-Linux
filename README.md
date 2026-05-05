@@ -1,4 +1,4 @@
-# AutoDeafen-Linux
+ # AutoDeafen-Linux
 
 This repository was forked from https://github.com/Lynxdeer/AutoDeafen.
 It was made to work on Linux systems, which can't use discord hotkeys since they run through Proton in a sandboxed environment.
@@ -43,3 +43,12 @@ I will not upload this to the official Geode store, as I don't think it would ge
 
 If you still come across any issues while installing, please dm @snytexx on Discord.
 
+## Star History
+
+<a href="https://www.star-history.com/?repos=snytex%2FAutoDeafen-Linux&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=snytex/AutoDeafen-Linux&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=snytex/AutoDeafen-Linux&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=snytex/AutoDeafen-Linux&type=date&legend=top-left" />
+ </picture>
+</a>

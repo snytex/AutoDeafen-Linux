@@ -9,6 +9,14 @@ import { createServer, Server, Socket } from "net";
 
 let server: Server | null = null;
 
+function dispatchToWindows(js: string) {
+    for (const win of BrowserWindow.getAllWindows()) {
+        win.webContents.executeJavaScript(js).catch((err: Error) => {
+            console.error("[GDAutoDeafen] Failed to execute JS:", err);
+        });
+    }
+}
+
 function startServer() {
     if (server) {
         console.log("[GDAutoDeafen] Server already running");
@@ -20,22 +28,32 @@ function startServer() {
 
         socket.on("data", (data: Buffer) => {
             const message = data.toString().trim();
-            console.log("[GDAutoDeafen] Received message:", message);
+            console.log("[GDAutoDeafen] Received:", message);
 
-            if (message === "toggle") {
-                console.log("[GDAutoDeafen] Triggering deafen toggle");
-
-                const windows = BrowserWindow.getAllWindows();
-                for (const win of windows) {
-                    win.webContents.executeJavaScript(`
-                        Vencord.Webpack.Common.FluxDispatcher.dispatch({
-                            type: "AUDIO_TOGGLE_SELF_DEAF"
-                        });
-                        console.log("[GDAutoDeafen] Executed deafen toggle");
-                    `).catch(err => {
-                        console.error("[GDAutoDeafen] Failed to execute toggle:", err);
-                    });
-                }
+            if (message === "deafen") {
+                // Only deafen if Discord is not already deafened.
+                dispatchToWindows(`
+                    (() => {
+                        try {
+                            const store = Vencord.Webpack.findByProps("isSelfDeaf");
+                            if (store?.isSelfDeaf?.()) return;
+                        } catch (e) {}
+                        Vencord.Webpack.Common.FluxDispatcher.dispatch({ type: "AUDIO_TOGGLE_SELF_DEAF" });
+                        console.log("[GDAutoDeafen] Deafened");
+                    })()
+                `);
+            } else if (message === "undeafen") {
+                // Only undeafen if Discord is currently deafened.
+                dispatchToWindows(`
+                    (() => {
+                        try {
+                            const store = Vencord.Webpack.findByProps("isSelfDeaf");
+                            if (!store?.isSelfDeaf?.()) return;
+                        } catch (e) {}
+                        Vencord.Webpack.Common.FluxDispatcher.dispatch({ type: "AUDIO_TOGGLE_SELF_DEAF" });
+                        console.log("[GDAutoDeafen] Undeafened");
+                    })()
+                `);
             }
         });
 
@@ -49,13 +67,13 @@ function startServer() {
     });
 
     server.listen(8787, "127.0.0.1", () => {
-        console.log("[GDAutoDeafen] TCP Server listening on 127.0.0.1:8787");
+        console.log("[GDAutoDeafen] TCP server listening on 127.0.0.1:8787");
     });
 
     server.on("error", (err: Error) => {
         console.error("[GDAutoDeafen] Server error:", err);
-        if ((err as any).code === "EADDRINUSE") {
-            console.error("[GDAutoDeafen] Port 8787 is already in use! Try restarting your system or checking what application is using this port.");
+        if ((err as NodeJS.ErrnoException).code === "EADDRINUSE") {
+            console.error("[GDAutoDeafen] Port 8787 already in use. Restart your system or check what is holding the port.");
         }
     });
 }

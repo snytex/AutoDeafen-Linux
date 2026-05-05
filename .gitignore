@@ -1,0 +1,14 @@
+# Claude Code context files
+CLAUDE.md
+.claude/
+
+update.sh
+
+# Geode build output
+AutoDeafen-Linux/build/
+AutoDeafen-Linux/build-win/
+
+# Compiled artifacts
+*.geode
+*.dll
+*.pdb

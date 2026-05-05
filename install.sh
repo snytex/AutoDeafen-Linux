@@ -118,7 +118,7 @@ git clone https://github.com/snytex/AutoDeafen-Linux.git
 
 print "${BLUE}[+]${NC} Downloading AutoDeafen geode..."
 curl -L -o snytex.autodeafen.geode \
-  "https://github.com/snytex/AutoDeafen-Linux/releases/download/v1.0.1/snytex.autodeafen.geode"
+  "https://github.com/snytex/AutoDeafen-Linux/releases/download/v1.1.0/snytex.autodeafen.geode"
 
 clear
 

@@ -1,6 +1,11 @@
+#include "Geode/ui/Popup.hpp"
+#include "Geode/utils/VersionInfo.hpp"
+#include "Geode/utils/async.hpp"
+#include <Geode/binding/MenuLayer.hpp>
 #include <cstring>
 #include <fstream>
 #include <iostream>
+#include <string>
 #include <vector>
 #include <ws2tcpip.h>
 
@@ -10,17 +15,150 @@
 #include <Geode/binding/CCMenuItemToggler.hpp>
 #include <Geode/binding/GJGameLevel.hpp>
 #include <Geode/cocos/cocoa/CCObject.h>
+#include <Geode/loader/Log.hpp>
 #include <Geode/modify/GManager.hpp>
 #include <Geode/modify/LoadingLayer.hpp>
+#include <Geode/modify/MenuLayer.hpp>
 #include <Geode/modify/PauseLayer.hpp>
 #include <Geode/modify/PlayLayer.hpp>
 #include <Geode/modify/PlayerObject.hpp>
 #include <Geode/ui/GeodeUI.hpp>
-
 #include <Geode/ui/TextInput.hpp>
+#include <Geode/utils/VersionInfo.hpp>
+#include <Geode/utils/web.hpp>
 #include <cocos2d.h>
 
 using namespace geode::prelude;
+
+static async::TaskHolder<web::WebResponse> g_updateTask;
+const bool isDev = false;
+
+class updatePopup : public geode::Popup {
+protected:
+  std::string m_current;
+  std::string m_latest;
+
+  bool init() override {
+    if (!Popup::init(240.0f, 160.0f, "GJ_square02.png"))
+      return false;
+
+    CCPoint topLeftCorner = ccp(0, m_size.height);
+    this->setTitle("Update available!");
+
+    auto menu = CCMenu::create();
+    menu->setPosition({0, 0});
+    m_mainLayer->addChild(menu);
+
+    auto topLabel = CCLabelBMFont::create("AutoDeafen", "goldFont.fnt");
+    topLabel->setAnchorPoint({0.5, 0.5});
+    topLabel->setScale(1.0f);
+    topLabel->setPosition(topLeftCorner + ccp(120, 5));
+
+    auto downloadBtnSprite = ButtonSprite::create("Download");
+    auto downloadBtn = CCMenuItemSpriteExtra::create(
+        downloadBtnSprite, this, menu_selector(updatePopup::onDownload));
+
+    downloadBtn->setPosition(m_size.width / 2, m_size.height / 2 + 10.f);
+    menu->addChild(downloadBtn);
+
+    auto versionText = fmt::format("v{} -> v{}", m_current, m_latest);
+    auto versionLabel =
+        CCLabelBMFont::create(versionText.c_str(), "chatFont.fnt");
+
+    versionLabel->setScale(0.6f);
+    versionLabel->setPosition(m_size.width / 2, m_size.height / 2 - 25.f);
+    versionLabel->setColor({200, 200, 200});
+
+    m_mainLayer->addChild(versionLabel);
+    m_mainLayer->addChild(topLabel);
+
+    return true;
+  }
+
+public:
+  static updatePopup *create(std::string current, std::string latest) {
+    auto ret = new updatePopup();
+    // ret->setTitle("AutoDeafen");
+    ret->m_current = current;
+    ret->m_latest = latest;
+    if (ret && ret->init()) {
+      ret->autorelease();
+      return ret;
+    }
+    CC_SAFE_DELETE(ret);
+    return nullptr;
+  }
+
+  void onDownload(CCObject *) {
+    geode::utils::web::openLinkInBrowser(
+        "https://github.com/snytex/AutoDeafen-Linux");
+  }
+};
+
+bool isUpdated() {
+  log::info("[AUTODEAFEN UPDATE] isUpdate() called");
+
+  auto req = web::WebRequest();
+  std::string url = "https://raw.githubusercontent.com/snytex/AutoDeafen-Linux/"
+                    "refs/heads/master/version.txt";
+
+  log::info("[AUTODEAFEN UPDATE] Spawning web request to: {}", url);
+
+  g_updateTask.spawn(req.get(url), [](web::WebResponse res) {
+    log::info("[AUTODEAFEN UPDATE] Web callback fired");
+    if (!res.ok()) {
+      log::error("[AUTODEAFEN UPDATE] Request failed. Status code: {}",
+                 res.code());
+      return;
+    }
+    log::info("[AUTODEAFEN UPDATE] Request ok, reading body");
+    auto latest = res.string().unwrapOr("");
+    log::info("[AUTODEAFEN UPDATE] Raw response body: '{}'", latest);
+
+    // Strip whitespace/newlines from the fetched version string
+    latest.erase(
+        std::remove_if(latest.begin(), latest.end(),
+                       [](unsigned char c) { return std::isspace(c); }),
+        latest.end());
+
+    // Strip leading 'v' if present, to normalize both sides
+    if (!latest.empty() && latest[0] == 'v')
+      latest = latest.substr(1);
+
+    log::info("[AUTODEAFEN UPDATE] Cleaned latest: '{}'", latest);
+
+    auto current = Mod::get()->getVersion().toNonVString();
+    log::info("[AUTODEAFEN UPDATE] Current mod version: '{}'", current);
+    log::info("[AUTODEAFEN UPDATE] Are they equal? {}", latest == current);
+
+    if (latest.empty()) {
+      log::error("[AUTODEAFEN UPDATE] latest is empty, aborting popup");
+      return;
+    }
+
+    if (latest == current) {
+      log::info("[AUTODEAFEN UPDATE] Already up to date, no popup needed");
+      return;
+    }
+
+    log::info(
+        "[AUTODEAFEN UPDATE] Update needed! Queuing popup on main thread...");
+    Loader::get()->queueInMainThread([latest, current]() {
+      log::info(
+          "[AUTODEAFEN UPDATE] Main thread callback fired, creating popup...");
+      auto popup = updatePopup::create(current, latest);
+      log::info("[AUTODEAFEN UPDATE] Popup created: {}", popup != nullptr);
+      if (popup) {
+        log::info("[AUTODEAFEN UPDATE] Calling popup->show()");
+        popup->show();
+        log::info("[AUTODEAFEN UPDATE] popup->show() returned");
+      }
+    });
+  });
+
+  log::info("[AUTODEAFEN UPDATE] g_updateTask.spawn() returned");
+  return false;
+}
 
 struct AutoDeafenLevel {
   bool enabled = false;
@@ -403,6 +541,7 @@ class $modify(PlayLayer) {
 
 bool currentlyInMenu = false;
 
+// NiekBeats
 class ConfigLayer : public geode::Popup {
 protected:
   CCMenuItemToggler *enabledButton = nullptr;
@@ -484,6 +623,21 @@ protected:
 
   void toggleEnabled(CCObject *sender) {
     currentlyLoadedLevel.enabled = !currentlyLoadedLevel.enabled;
+
+    if (auto playLayer = PlayLayer::get()) {
+      int percent = playLayer->getCurrentPercentInt();
+      log::info("Toggle changed. Current game percent is: {}", percent);
+
+      if (!currentlyLoadedLevel.enabled && isCurrentlyDeafened) {
+        log::info("Trying to undeafen");
+        sendUndeafen();
+      } else if (currentlyLoadedLevel.enabled &&
+                 percent >= currentlyLoadedLevel.percentage) {
+        log::info("Trying to deafen");
+        hasDeafenedThisAttempt = true;
+        sendDeafen();
+      }
+    }
   }
 
   void onClose(CCObject *a) override {
@@ -494,7 +648,7 @@ protected:
         currentlyLoadedLevel.percentage =
             static_cast<short>(std::clamp(val, 0, 100));
       } catch (...) {
-        // Empty or non-numeric input — keep the existing percentage
+        // Empty or non-numeric input. keep the existing percentage
       }
     }
     saveLevel(currentlyLoadedLevel);
@@ -568,5 +722,23 @@ class $modify(PauseLayer) {
   void onSettings(CCObject *sender) {
     if (!currentlyInMenu)
       PauseLayer::onSettings(sender);
+  }
+};
+
+class $modify(UpdateLayer, MenuLayer) {
+  bool init() {
+    log::info("[AUTODEAFEN UPDATE] MenuLayer::init hooked!");
+    if (!MenuLayer::init())
+      return false;
+
+    static bool s_checkedUpdate = false;
+    log::info("[AUTODEAFEN UPDATE] s_checkedUpdate = {}", s_checkedUpdate);
+    if (!s_checkedUpdate) {
+      s_checkedUpdate = true;
+      log::info("[AUTODEAFEN UPDATE] Calling isUpdated() from init...");
+      isUpdated();
+    }
+
+    return true;
   }
 };

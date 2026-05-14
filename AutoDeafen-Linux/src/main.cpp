@@ -14,6 +14,8 @@
 #include <Geode/Geode.hpp>
 #include <Geode/binding/CCMenuItemToggler.hpp>
 #include <Geode/binding/GJGameLevel.hpp>
+#include <Geode/binding/Slider.hpp>
+#include <Geode/binding/SliderThumb.hpp>
 #include <Geode/cocos/cocoa/CCObject.h>
 #include <Geode/loader/Log.hpp>
 #include <Geode/modify/GManager.hpp>
@@ -78,7 +80,6 @@ protected:
 public:
   static updatePopup *create(std::string current, std::string latest) {
     auto ret = new updatePopup();
-    // ret->setTitle("AutoDeafen");
     ret->m_current = current;
     ret->m_latest = latest;
     if (ret && ret->init()) {
@@ -115,13 +116,11 @@ bool isUpdated() {
     auto latest = res.string().unwrapOr("");
     log::info("[AUTODEAFEN UPDATE] Raw response body: '{}'", latest);
 
-    // Strip whitespace/newlines from the fetched version string
     latest.erase(
         std::remove_if(latest.begin(), latest.end(),
                        [](unsigned char c) { return std::isspace(c); }),
         latest.end());
 
-    // Strip leading 'v' if present, to normalize both sides
     if (!latest.empty() && latest[0] == 'v')
       latest = latest.substr(1);
 
@@ -165,9 +164,11 @@ struct AutoDeafenLevel {
   short
       levelType; // 0 = Normal, 1 = Local/Editor, 2 = Daily/Weekly, 3 = gauntlet
   int id = 0;
-  short percentage = 50;
-  AutoDeafenLevel(bool a, short b, int c, short d)
-      : enabled(a), levelType(b), id(c), percentage(d) {}
+  short deafenPercentage = 50;
+  short undeafenPercentage = 100;
+  AutoDeafenLevel(bool a, short b, int c, short d, short e)
+      : enabled(a), levelType(b), id(c), deafenPercentage(d),
+        undeafenPercentage(e) {}
   AutoDeafenLevel() = default;
 };
 
@@ -175,9 +176,10 @@ AutoDeafenLevel currentlyLoadedLevel;
 std::vector<AutoDeafenLevel> loadedAutoDeafenLevels;
 
 bool hasDeafenedThisAttempt = false;
+bool hasUndeafenedViaThreshold = false;
 bool hasDied = false;
-bool isCurrentlyDeafened = false; // tracks our belief of Discord's deafen state
-bool lastConnectionSuccess = false; // for the status indicator in ConfigLayer
+bool isCurrentlyDeafened = false;
+bool lastConnectionSuccess = false;
 
 short getLevelType(GJGameLevel *level) {
   if (level->m_levelType != GJLevelType::Saved)
@@ -194,14 +196,17 @@ void runEmptyDebugs() {
   log::info("{}", "Loaded levels are:");
   for (AutoDeafenLevel level : loadedAutoDeafenLevels) {
     log::info("Id {} of type {} with enabled {} and percentage {}", level.id,
-              level.levelType, level.enabled, level.percentage);
+              level.levelType, level.enabled, level.deafenPercentage);
   }
   log::info("{}", "Currently loaded level is:");
   log::info("Id {} of type {} with enabled {} and percentage {}",
             currentlyLoadedLevel.id, currentlyLoadedLevel.levelType,
-            currentlyLoadedLevel.enabled, currentlyLoadedLevel.percentage);
+            currentlyLoadedLevel.enabled,
+            currentlyLoadedLevel.deafenPercentage);
 }
 
+// Format "ad2": adds undeafenPercentage field. "ad1" is read for backwards
+// compat.
 void saveFile() {
   auto path = Mod::get()->getSaveDir();
   path /= ".autodeafen";
@@ -210,22 +215,24 @@ void saveFile() {
 
   std::ofstream file(path, std::ios::binary);
   if (file.is_open()) {
-    file.write("ad1", sizeof("ad1"));
+    file.write("ad2", sizeof("ad2"));
 
     for (AutoDeafenLevel const &a : loadedAutoDeafenLevels) {
-      if (a.percentage > 100 || a.percentage < 0 || a.levelType > 3 ||
-          a.levelType < 0 || a.id < 0) {
-        log::warn("{}{}{}{}{}"
-                  "Deleted corrupted autodeafen save entry ",
-                  a.id, " with percentage ", a.percentage, " and levelType ",
-                  a.levelType);
+      if (a.deafenPercentage > 100 || a.deafenPercentage < 0 ||
+          a.levelType > 3 || a.levelType < 0 || a.id < 0) {
+        log::warn("Deleted corrupted autodeafen save entry {} percentage {} "
+                  "levelType {}",
+                  a.id, a.deafenPercentage, a.levelType);
         continue;
       }
 
       file.write(reinterpret_cast<const char *>(&a.enabled), sizeof(bool));
       file.write(reinterpret_cast<const char *>(&a.levelType), sizeof(short));
       file.write(reinterpret_cast<const char *>(&a.id), sizeof(int));
-      file.write(reinterpret_cast<const char *>(&a.percentage), sizeof(short));
+      file.write(reinterpret_cast<const char *>(&a.deafenPercentage),
+                 sizeof(short));
+      file.write(reinterpret_cast<const char *>(&a.undeafenPercentage),
+                 sizeof(short));
 
       if (!file) {
         log::error("{}", "An error occurred when writing .autodeafen file.");
@@ -250,10 +257,10 @@ void loadFile() {
     loadedAutoDeafenLevels.clear();
 
     char header[4];
-    file.read(header, sizeof("ad1"));
+    file.read(header, sizeof("ad2"));
 
-    if (strncmp(header, "ad1", 4) == 0) {
-      log::info("Loading autodeafen file version 1.");
+    if (strncmp(header, "ad2", 4) == 0) {
+      log::info("Loading autodeafen file version 2.");
       while (true) {
         AutoDeafenLevel level;
         if (!file.read(reinterpret_cast<char *>(&level.enabled), sizeof(bool)))
@@ -263,7 +270,28 @@ void loadFile() {
           break;
         if (!file.read(reinterpret_cast<char *>(&level.id), sizeof(int)))
           break;
-        if (!file.read(reinterpret_cast<char *>(&level.percentage),
+        if (!file.read(reinterpret_cast<char *>(&level.deafenPercentage),
+                       sizeof(short)))
+          break;
+        if (!file.read(reinterpret_cast<char *>(&level.undeafenPercentage),
+                       sizeof(short)))
+          break;
+        loadedAutoDeafenLevels.push_back(level);
+      }
+    } else if (strncmp(header, "ad1", 4) == 0) {
+      log::info(
+          "Loading autodeafen file version 1 (will upgrade on next save).");
+      while (true) {
+        AutoDeafenLevel level;
+        level.undeafenPercentage = 100;
+        if (!file.read(reinterpret_cast<char *>(&level.enabled), sizeof(bool)))
+          break;
+        if (!file.read(reinterpret_cast<char *>(&level.levelType),
+                       sizeof(short)))
+          break;
+        if (!file.read(reinterpret_cast<char *>(&level.id), sizeof(int)))
+          break;
+        if (!file.read(reinterpret_cast<char *>(&level.deafenPercentage),
                        sizeof(short)))
           break;
         loadedAutoDeafenLevels.push_back(level);
@@ -283,7 +311,8 @@ void saveLevel(AutoDeafenLevel lvl) {
 
   for (auto &level : loadedAutoDeafenLevels) {
     if (level.id == lvl.id && level.levelType == lvl.levelType) {
-      level.percentage = lvl.percentage;
+      level.deafenPercentage = lvl.deafenPercentage;
+      level.undeafenPercentage = lvl.undeafenPercentage;
       level.enabled = lvl.enabled;
       return;
     }
@@ -295,8 +324,8 @@ void saveLevel(AutoDeafenLevel lvl) {
       Mod::get()->getSettingValue<int64_t>("Default Percentage") & 0xFFFF);
 
   if (!(lvl.enabled == enabledByDefault &&
-        lvl.percentage == defaultPercentage) &&
-      lvl.percentage <= 100 && lvl.levelType <= 3 && lvl.id >= 0)
+        lvl.deafenPercentage == defaultPercentage) &&
+      lvl.deafenPercentage <= 100 && lvl.levelType <= 3 && lvl.id >= 0)
     loadedAutoDeafenLevels.push_back(lvl);
 
   if (Mod::get()->getSettingValue<bool>("Additional Debugging")) {
@@ -304,7 +333,6 @@ void saveLevel(AutoDeafenLevel lvl) {
   }
 }
 
-// Sends a message to the Vencord TCP server. Returns true on success.
 bool sendToVencord(const char *msg) {
   WSADATA wsaData;
   if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
@@ -342,7 +370,6 @@ bool sendToVencord(const char *msg) {
   return true;
 }
 
-// Non-blocking connection check for the status indicator.
 bool checkVencordConnection() {
   WSADATA wsaData;
   if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0)
@@ -362,8 +389,7 @@ bool checkVencordConnection() {
   addr.sin_port = htons(8787);
   inet_pton(AF_INET, "127.0.0.1", &addr.sin_addr);
 
-  connect(sock, (sockaddr *)&addr,
-          sizeof(addr)); // returns SOCKET_ERROR / WSAEWOULDBLOCK
+  connect(sock, (sockaddr *)&addr, sizeof(addr));
 
   fd_set writeSet, exceptSet;
   FD_ZERO(&writeSet);
@@ -371,7 +397,7 @@ bool checkVencordConnection() {
   FD_SET(sock, &writeSet);
   FD_SET(sock, &exceptSet);
 
-  timeval tv{0, 150000}; // 150ms timeout
+  timeval tv{0, 150000};
   int result = select(0, nullptr, &writeSet, &exceptSet, &tv);
 
   bool connected =
@@ -382,8 +408,6 @@ bool checkVencordConnection() {
   return connected;
 }
 
-// Only deafens if we are not already deafened and the level has AutoDeafen
-// enabled.
 void sendDeafen() {
   if (!currentlyLoadedLevel.enabled)
     return;
@@ -393,19 +417,16 @@ void sendDeafen() {
     isCurrentlyDeafened = true;
 }
 
-// Only undeafens if we are currently deafened.
-// If TCP fails we reset the state anyway — Vencord wasn't running,
-// so Discord couldn't have been deafened in the first place.
 void sendUndeafen() {
   if (!isCurrentlyDeafened)
     return;
   sendToVencord("undeafen\n");
-  isCurrentlyDeafened = false; // reset regardless of TCP result
+  isCurrentlyDeafened = false;
 }
 
-// Resets all per-level attempt state. Called on PlayLayer::init and resetLevel.
 void resetAttemptState() {
   hasDeafenedThisAttempt = false;
+  hasUndeafenedViaThreshold = false;
   hasDied = false;
 }
 
@@ -457,8 +478,6 @@ class $modify(PlayLayer) {
     if (!PlayLayer::init(level, p1, p2))
       return false;
 
-    // Always reset state when entering a level, regardless of whether the
-    // level is found in the saved list or not.
     resetAttemptState();
     isCurrentlyDeafened = false;
 
@@ -474,11 +493,11 @@ class $modify(PlayLayer) {
       }
     }
 
-    currentlyLoadedLevel = AutoDeafenLevel(
-        Mod::get()->getSettingValue<bool>("Enabled by Default"), levelType, id,
-        static_cast<short>(
-            Mod::get()->getSettingValue<int64_t>("Default Percentage") &
-            0xFFFF));
+    short defaultPct = static_cast<short>(
+        Mod::get()->getSettingValue<int64_t>("Default Percentage") & 0xFFFF);
+    currentlyLoadedLevel =
+        AutoDeafenLevel(Mod::get()->getSettingValue<bool>("Enabled by Default"),
+                        levelType, id, defaultPct, (short)100);
 
     return true;
   }
@@ -486,32 +505,36 @@ class $modify(PlayLayer) {
   void resetLevel() {
     PlayLayer::resetLevel();
     resetAttemptState();
-    // Do NOT reset isCurrentlyDeafened here — playerDestroyed handles
-    // undeafening before resetLevel is called. If somehow we're still deafened
-    // here, the next sendDeafen() check will prevent a double-deafen.
   }
 
   void postUpdate(float p0) {
     PlayLayer::postUpdate(p0);
 
     if (this->m_isPracticeMode &&
-        !Mod::get()->getSettingValue<bool>("Enabled in Practice Mode")) {
+        !Mod::get()->getSettingValue<bool>("Enabled in Practice Mode"))
       return;
-    }
 
     if (!currentlyLoadedLevel.enabled)
       return;
 
     int percent = PlayLayer::getCurrentPercentInt();
-    if (percent >= currentlyLoadedLevel.percentage && percent != 100) {
-      if (!hasDeafenedThisAttempt) {
-        hasDeafenedThisAttempt = true;
-        sendDeafen();
-      }
-    } else if (percent < currentlyLoadedLevel.percentage &&
-               isCurrentlyDeafened) {
-      // Percentage dropped below threshold (e.g. switched to an earlier
-      // startpos)
+
+    if (!hasDeafenedThisAttempt && !hasUndeafenedViaThreshold &&
+        percent >= currentlyLoadedLevel.deafenPercentage && percent != 100) {
+      hasDeafenedThisAttempt = true;
+      sendDeafen();
+    }
+
+    if (hasDeafenedThisAttempt && !hasUndeafenedViaThreshold &&
+        isCurrentlyDeafened && currentlyLoadedLevel.undeafenPercentage < 100 &&
+        percent >= currentlyLoadedLevel.undeafenPercentage) {
+      hasUndeafenedViaThreshold = true;
+      sendUndeafen();
+    }
+
+    // Dropped below deafen threshold (e.g. switched startpos)
+    if (percent < currentlyLoadedLevel.deafenPercentage &&
+        isCurrentlyDeafened && !hasUndeafenedViaThreshold) {
       hasDeafenedThisAttempt = false;
       sendUndeafen();
     }
@@ -541,119 +564,188 @@ class $modify(PlayLayer) {
 
 bool currentlyInMenu = false;
 
-// NiekBeats
 class ConfigLayer : public geode::Popup {
 protected:
-  CCMenuItemToggler *enabledButton = nullptr;
-  TextInput *percentageInput = nullptr;
-  CCLabelBMFont *statusLabel = nullptr;
+  CCMenuItemToggler *m_enabledToggle = nullptr;
+  TextInput *m_deafenInput = nullptr;
+  TextInput *m_undeafenInput = nullptr;
+  Slider *m_deafenSlider = nullptr;
+  Slider *m_undeafenSlider = nullptr;
 
   bool init() override {
-    if (!Popup::init(300.f, 200.f, "GJ_square02.png"))
+    if (!Popup::init(290.f, 240.f, "GJ_square02.png"))
       return false;
 
     this->setKeyboardEnabled(true);
     currentlyInMenu = true;
 
-    CCPoint topLeftCorner = ccp(0, m_size.height);
+    float W = m_size.width;  // 290
+    float H = m_size.height; // 240
+    float cx = W / 2.f;      // 145
 
-    auto topLabel = CCLabelBMFont::create("AutoDeafen", "goldFont.fnt");
-    topLabel->setAnchorPoint({0.5, 0.5});
-    topLabel->setScale(1.0f);
-    topLabel->setPosition(topLeftCorner + ccp(142, 5));
+    // ---- Title ----
+    auto titleLabel = CCLabelBMFont::create("AutoDeafen", "goldFont.fnt");
+    titleLabel->setAnchorPoint({0.5f, 0.5f});
+    titleLabel->setScale(0.9f);
+    titleLabel->setPosition(ccp(cx, H - 16.f));
+    m_mainLayer->addChild(titleLabel);
 
-    auto enabledLabel = CCLabelBMFont::create("Enabled", "bigFont.fnt");
-    enabledLabel->setAnchorPoint({0, 0.5});
-    enabledLabel->setScale(0.7f);
-    enabledLabel->setPosition(topLeftCorner + ccp(60, -60));
+    // ---- Enable toggle button ----
+    auto offSpr = ButtonSprite::create("AutoDeafen: OFF", 180, 0, 0.55f, false,
+                                       "bigFont.fnt", "GJ_button_04.png", 28.f);
+    auto onSpr = ButtonSprite::create("AutoDeafen: ON", 180, 0, 0.55f, false,
+                                      "bigFont.fnt", "GJ_button_01.png", 28.f);
+    m_enabledToggle = CCMenuItemToggler::create(
+        offSpr, onSpr, this, menu_selector(ConfigLayer::onToggleEnabled));
+    m_enabledToggle->setPosition(ccp(cx, H - 55.f));
+    m_enabledToggle->toggle(currentlyLoadedLevel.enabled);
 
-    enabledButton = CCMenuItemToggler::create(
-        CCSprite::createWithSpriteFrameName("GJ_checkOff_001.png"),
-        CCSprite::createWithSpriteFrameName("GJ_checkOn_001.png"), this,
-        menu_selector(ConfigLayer::toggleEnabled));
-    enabledButton->setPosition(enabledLabel->getPosition() + ccp(140, 0));
-    enabledButton->setScale(0.85f);
-    enabledButton->setClickable(true);
-    enabledButton->toggle(currentlyLoadedLevel.enabled);
+    auto btnMenu = CCMenu::create();
+    btnMenu->setPosition({0, 0});
+    btnMenu->addChild(m_enabledToggle);
+    m_mainLayer->addChild(btnMenu);
 
-    percentageInput = TextInput::create(100.f, "%");
-    percentageInput->setFilter("0123456789");
-    percentageInput->setPosition(enabledButton->getPosition() + ccp(0, -40));
-    percentageInput->setScale(0.85f);
-    percentageInput->setMaxCharCount(2);
-    percentageInput->setEnabled(true);
-    percentageInput->setString(std::to_string(currentlyLoadedLevel.percentage));
+    // ---- Deafen section ----
+    float deafenRowY = H - 102.f; // label + input row
+    float deafenSldY = H - 128.f; // slider
 
-    auto percentageLabel = CCLabelBMFont::create("Percent", "bigFont.fnt");
-    percentageLabel->setAnchorPoint({0, 0.5});
-    percentageLabel->setScale(0.7f);
-    percentageLabel->setPosition(topLeftCorner + ccp(60, -100));
+    auto deafenLabel = CCLabelBMFont::create("Deafen at", "bigFont.fnt");
+    deafenLabel->setAnchorPoint({0.f, 0.5f});
+    deafenLabel->setScale(0.48f);
+    deafenLabel->setPosition(ccp(30.f, deafenRowY));
+    m_mainLayer->addChild(deafenLabel);
 
-    // Connection status indicator
+    m_deafenInput = TextInput::create(50.f, "0-100");
+    m_deafenInput->setFilter("0123456789");
+    m_deafenInput->setMaxCharCount(3);
+    m_deafenInput->setString(
+        std::to_string(currentlyLoadedLevel.deafenPercentage));
+    m_deafenInput->setScale(0.72f);
+    m_deafenInput->setPosition(ccp(W - 88.f, deafenRowY));
+    m_deafenInput->setCallback([this](const std::string &text) {
+      try {
+        int val = std::clamp(std::stoi(text), 0, 100);
+        currentlyLoadedLevel.deafenPercentage = (short)val;
+        if (m_deafenSlider)
+          m_deafenSlider->setValue(val / 100.f);
+      } catch (...) {
+      }
+    });
+    m_mainLayer->addChild(m_deafenInput);
+
+    auto pct1 = CCLabelBMFont::create("%", "bigFont.fnt");
+    pct1->setAnchorPoint({0.f, 0.5f});
+    pct1->setScale(0.38f);
+    pct1->setPosition(ccp(W - 60.f, deafenRowY));
+    m_mainLayer->addChild(pct1);
+
+    m_deafenSlider =
+        Slider::create(this, menu_selector(ConfigLayer::onDeafenSlider), 0.8f);
+    m_deafenSlider->setPosition(ccp(cx, deafenSldY));
+    m_deafenSlider->setValue(currentlyLoadedLevel.deafenPercentage / 100.f);
+    m_mainLayer->addChild(m_deafenSlider);
+
+    // ---- Undeafen section ----
+    float undeafenRowY = H - 162.f;
+    float undeafenSldY = H - 188.f;
+
+    auto undeafenLabel = CCLabelBMFont::create("Undeafen at", "bigFont.fnt");
+    undeafenLabel->setAnchorPoint({0.f, 0.5f});
+    undeafenLabel->setScale(0.48f);
+    undeafenLabel->setPosition(ccp(30.f, undeafenRowY));
+    m_mainLayer->addChild(undeafenLabel);
+
+    m_undeafenInput = TextInput::create(50.f, "0-100");
+    m_undeafenInput->setFilter("0123456789");
+    m_undeafenInput->setMaxCharCount(3);
+    m_undeafenInput->setString(
+        std::to_string(currentlyLoadedLevel.undeafenPercentage));
+    m_undeafenInput->setScale(0.72f);
+    m_undeafenInput->setPosition(ccp(W - 88.f, undeafenRowY));
+    m_undeafenInput->setCallback([this](const std::string &text) {
+      try {
+        int val = std::clamp(std::stoi(text), 0, 100);
+        currentlyLoadedLevel.undeafenPercentage = (short)val;
+        if (m_undeafenSlider)
+          m_undeafenSlider->setValue(val / 100.f);
+      } catch (...) {
+      }
+    });
+    m_mainLayer->addChild(m_undeafenInput);
+
+    auto pct2 = CCLabelBMFont::create("%", "bigFont.fnt");
+    pct2->setAnchorPoint({0.f, 0.5f});
+    pct2->setScale(0.38f);
+    pct2->setPosition(ccp(W - 60.f, undeafenRowY));
+    m_mainLayer->addChild(pct2);
+
+    m_undeafenSlider = Slider::create(
+        this, menu_selector(ConfigLayer::onUndeafenSlider), 0.8f);
+    m_undeafenSlider->setPosition(ccp(cx, undeafenSldY));
+    m_undeafenSlider->setValue(currentlyLoadedLevel.undeafenPercentage / 100.f);
+    m_mainLayer->addChild(m_undeafenSlider);
+
+    // ---- Connection status ----
     bool connected = checkVencordConnection();
-    statusLabel = CCLabelBMFont::create(connected ? "Discord: Connected"
-                                                  : "Discord: Disconnected",
-                                        "chatFont.fnt");
+    auto statusLabel = CCLabelBMFont::create(
+        connected ? "Discord: Connected" : "Discord: Disconnected",
+        "chatFont.fnt");
     statusLabel->setAnchorPoint({0.5f, 0.5f});
-    statusLabel->setScale(0.55f);
-    statusLabel->setPosition(ccp(m_size.width / 2.f, 22.f));
-    statusLabel->setColor(connected ? ccc3(0, 220, 80) : ccc3(220, 60, 60));
+    statusLabel->setScale(0.52f);
+    statusLabel->setPosition(ccp(cx, 22.f));
+    statusLabel->setColor(connected ? ccc3(0, 210, 80) : ccc3(210, 60, 60));
+    m_mainLayer->addChild(statusLabel);
 
-    auto menu = CCMenu::create();
-    menu->setPosition({0, 0});
-    menu->addChild(enabledButton);
-    menu->addChild(percentageInput);
-
+    // ---- Version ----
     auto versionLabel = CCLabelBMFont::create(
         fmt::format("{}", Mod::get()->getVersion()).c_str(), "chatFont.fnt");
     versionLabel->setAnchorPoint({1.f, 0.f});
-    versionLabel->setScale(0.4f);
-    versionLabel->setPosition(ccp(m_size.width - 8.f, 8.f));
-    versionLabel->setColor(ccc3(130, 130, 130));
-
-    m_mainLayer->addChild(topLabel);
-    m_mainLayer->addChild(enabledLabel);
-    m_mainLayer->addChild(percentageLabel);
-    m_mainLayer->addChild(statusLabel);
+    versionLabel->setScale(0.38f);
+    versionLabel->setPosition(ccp(W - 8.f, 8.f));
+    versionLabel->setColor(ccc3(120, 120, 120));
     m_mainLayer->addChild(versionLabel);
-    m_mainLayer->addChild(menu);
 
     return true;
   }
 
-  void toggleEnabled(CCObject *sender) {
+  void onToggleEnabled(CCObject *) {
     currentlyLoadedLevel.enabled = !currentlyLoadedLevel.enabled;
 
     if (auto playLayer = PlayLayer::get()) {
       int percent = playLayer->getCurrentPercentInt();
-      log::info("Toggle changed. Current game percent is: {}", percent);
-
       if (!currentlyLoadedLevel.enabled && isCurrentlyDeafened) {
-        log::info("Trying to undeafen");
         sendUndeafen();
       } else if (currentlyLoadedLevel.enabled &&
-                 percent >= currentlyLoadedLevel.percentage) {
-        log::info("Trying to deafen");
+                 percent >= currentlyLoadedLevel.deafenPercentage) {
         hasDeafenedThisAttempt = true;
         sendDeafen();
       }
     }
   }
 
+  void onDeafenSlider(CCObject *sender) {
+    auto thumb = static_cast<SliderThumb *>(sender);
+    int val = (int)std::round(thumb->getValue() * 100.f);
+    val = std::clamp(val, 0, 100);
+    currentlyLoadedLevel.deafenPercentage = (short)val;
+    if (m_deafenInput)
+      m_deafenInput->setString(std::to_string(val));
+  }
+
+  void onUndeafenSlider(CCObject *sender) {
+    auto thumb = static_cast<SliderThumb *>(sender);
+    int val = (int)std::round(thumb->getValue() * 100.f);
+    val = std::clamp(val, 0, 100);
+    currentlyLoadedLevel.undeafenPercentage = (short)val;
+    if (m_undeafenInput)
+      m_undeafenInput->setString(std::to_string(val));
+  }
+
   void onClose(CCObject *a) override {
-    Popup::onClose(a);
-    if (percentageInput != nullptr) {
-      try {
-        int val = std::stoi(percentageInput->getString());
-        currentlyLoadedLevel.percentage =
-            static_cast<short>(std::clamp(val, 0, 100));
-      } catch (...) {
-        // Empty or non-numeric input. keep the existing percentage
-      }
-    }
     saveLevel(currentlyLoadedLevel);
     saveFile();
     currentlyInMenu = false;
+    Popup::onClose(a);
   }
 
   static ConfigLayer *create() {
@@ -692,7 +784,6 @@ class $modify(PauseLayer) {
   }
 
   void onRestart(CCObject *sender) {
-    // Capture before calling original — resetLevel may be called inside.
     bool shouldUndeafen = hasDeafenedThisAttempt;
     if (!currentlyInMenu)
       PauseLayer::onRestart(sender);
@@ -711,7 +802,6 @@ class $modify(PauseLayer) {
   void onQuit(CCObject *sender) {
     if (!currentlyInMenu)
       PauseLayer::onQuit(sender);
-    // PlayLayer::onQuit (hooked above) handles the undeafen.
   }
 
   void onPracticeMode(CCObject *sender) {

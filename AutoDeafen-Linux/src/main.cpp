@@ -135,8 +135,11 @@ bool isUpdated() {
       return;
     }
 
-    if (latest == current) {
-      log::info("[AUTODEAFEN UPDATE] Already up to date, no popup needed");
+    auto latestVer = VersionInfo::parse(latest);
+    auto currentVer = Mod::get()->getVersion();
+    if (!latestVer || !(*latestVer > currentVer)) {
+      log::info("[AUTODEAFEN UPDATE] Already up to date or remote version is "
+                "not newer, no popup needed");
       return;
     }
 

@@ -120,7 +120,8 @@ print "${BLUE}[+]${NC} Downloading AutoDeafen geode..."
 curl -L -o snytex.autodeafen.geode \
   "https://github.com/snytex/AutoDeafen-Linux/releases/download/v1.1.3/snytex.autodeafen.geode"
 
-clear
+# clear <-- This is what caused crashes for lots of people
+clear 2>/dev/null || true
 
 # ------------------------------
 # Install Mod

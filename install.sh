@@ -14,14 +14,8 @@ print() {
   echo -e "$1" >&3
 }
 
-# Some terminals (notably kitty/kitten) make `clear` exit non-zero, which kills
-# the script under `set -e`. Override it so a failed clear can never crash us.
 clear() { command clear 2>/dev/null || true; }
 
-# All output is redirected to /dev/null above, so a failing command otherwise
-# dies silently and the caller only sees a bare exit code (e.g. kitty reporting
-# "/usr/bin/kitten failed with error: exit status 128"). Restore the real
-# stderr and print an actionable message on any error.
 fail() {
   local code=$?
   exec 1>&3 2>&4
@@ -129,10 +123,6 @@ fi
 # ------------------------------
 # Clone repositories
 # ------------------------------
-# Remove any leftover clone targets first. These directories already exist if
-# the user downloaded the whole repo zip (which ships Vencord/ and
-# AutoDeafen-Linux/) instead of just install.sh, or if a previous run was
-# interrupted. A pre-existing, non-empty target makes `git clone` exit 128.
 for d in Vencord AutoDeafen-Linux; do
   if [ -e "$d" ]; then
     print "${YELLOW}[!]${NC} Removing existing '$d' to avoid a clone conflict..."

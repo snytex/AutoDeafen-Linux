@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import { Devs } from "@utils/constants";
 import definePlugin from "@utils/types";
 import { FluxDispatcher } from "@webpack/common";
 
@@ -16,7 +15,7 @@ const Native = VencordNative.pluginHelpers.GDAutoDeafen as {
 export default definePlugin({
     name: "GDAutoDeafen",
     description: "Auto deafen/undeafen based on Geometry Dash signals",
-    authors: [Devs.Nobody],
+    authors: [{ name: "snytex", id: 0n }],
 
     start() {
         try {

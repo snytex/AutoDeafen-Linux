@@ -5,9 +5,17 @@ It was made to work on Linux systems, which can't use discord hotkeys since they
 
 ## Installation
 
-### Auto Installation (Recommended)
+### GUI Installation (Easiest)
 
-- Go to releases and grab the 'install.sh' file
+- Go to releases and grab the `install-gui.sh` file
+- Double-click it (choose "Run"), or run `./install-gui.sh` in a terminal
+- Follow the graphical prompts to pick your Geometry Dash folder and Discord client
+
+Uses zenity (GNOME) or kdialog (KDE); it offers to install zenity if neither is present.
+
+### Auto Installation (Terminal)
+
+- Go to releases and grab the `install.sh` file
 - Simply run it and finish the installation
 
 ### Manual Installation

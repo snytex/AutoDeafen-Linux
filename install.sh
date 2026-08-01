@@ -86,6 +86,22 @@ pkg_name() {
   esac
 }
 
+# Restores discord_desktop_core to its stock contents if another client mod
+# left it patched. Vencord injects into resources/app.asar instead.
+restore_discord_core() {
+  local f found=0
+  shopt -s nullglob
+  for f in "$HOME"/.config/discord{,canary,ptb,development}/[0-9]*/modules/discord_desktop_core*/discord_desktop_core/index.js \
+           "$HOME"/.var/app/com.discordapp.Discord*/config/discord*/[0-9]*/modules/discord_desktop_core*/discord_desktop_core/index.js; do
+    grep -q "core.asar" "$f" 2>/dev/null && continue
+    printf "module.exports = require('./core.asar');\n" > "$f"
+    found=1
+  done
+  shopt -u nullglob
+  [ "$found" = 1 ] && print "${YELLOW}[!]${NC} Removed a leftover Discord client mod patch."
+  return 0
+}
+
 # Install pnpm via npm (most portable cross-distro method)
 install_pnpm() {
   print "${BLUE}[+]${NC} Installing pnpm via npm..."
@@ -280,6 +296,9 @@ select client in "Vesktop" "Discord"; do
     pnpm build
 
     exec 1>&3 2>&4
+    echo -e "${BLUE}[+]${NC} Removing any previous Vencord injection..."
+    sudo pnpm uninject || true
+    restore_discord_core
     sudo pnpm inject
     exec 1>/dev/null 2>&1
 

@@ -139,6 +139,25 @@ on_error() {
 trap on_error ERR
 
 # ------------------------------
+# Discord patch state
+# ------------------------------
+# Restores discord_desktop_core to its stock contents if another client mod
+# left it patched. Vencord injects into resources/app.asar instead.
+restore_discord_core() {
+  local f found=0
+  shopt -s nullglob
+  for f in "$HOME"/.config/discord{,canary,ptb,development}/[0-9]*/modules/discord_desktop_core*/discord_desktop_core/index.js \
+           "$HOME"/.var/app/com.discordapp.Discord*/config/discord*/[0-9]*/modules/discord_desktop_core*/discord_desktop_core/index.js; do
+    grep -q "core.asar" "$f" 2>/dev/null && continue
+    printf "module.exports = require('./core.asar');\n" > "$f"
+    found=1
+  done
+  shopt -u nullglob
+  [[ "$found" == 1 ]] && log "${YELLOW}[!]${NC} Removed a leftover Discord client mod patch."
+  return 0
+}
+
+# ------------------------------
 # Package manager
 # ------------------------------
 detect_pkg_manager() {
@@ -325,7 +344,10 @@ case "$CLIENT" in
     progress_status "Preparing to inject into Discord..."
     killall -9 Discord 2>/dev/null || true
     progress_stop
-    log "${BLUE}[+]${NC} Injecting Vencord into Discord (may ask for your password)..."
+    log "${BLUE}[+]${NC} Removing any previous Vencord injection (may ask for your password)..."
+    sudo pnpm uninject || true
+    restore_discord_core
+    log "${BLUE}[+]${NC} Injecting Vencord into Discord..."
     sudo pnpm inject
     ;;
 esac

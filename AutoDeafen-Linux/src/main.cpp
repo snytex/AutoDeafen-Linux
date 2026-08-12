@@ -6,6 +6,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <memory>
 #include <vector>
 #include <ws2tcpip.h>
 
@@ -411,20 +412,104 @@ bool checkVencordConnection() {
   return connected;
 }
 
+// Attempts to deafen using Equibop own flag first before running Vencord option
+struct EquibopToggleArgs {
+  std::string fallbackMsg;
+};
+DWORD WINAPI equibopToggleThreadProc(LPVOID lpParam) {
+  std::unique_ptr<EquibopToggleArgs> args(
+      static_cast<EquibopToggleArgs *>(lpParam));
+  std::string fallbackMsg = args->fallbackMsg;
+ 
+  log::info("AutoDeafen: Writing equibop_toggle.sh script...");
+
+  // std::ios::binary is critical here to prevent \r\n corruption from Proton
+  std::ofstream scriptFile("equibop_toggle.sh", std::ios::binary);
+  if (scriptFile.is_open()) {
+    scriptFile << "#!/bin/sh\n";
+    // Use flatpak steam first then native version after
+    scriptFile << "flatpak-spawn --host env -u LD_PRELOAD equibop --no-sandbox --toggle-deafen || steam-runtime-launch --host env -u LD_PRELOAD equibop --no-sandbox --toggle-deafen\n";
+    scriptFile.close();
+    log::info("AutoDeafen: Script written successfully.");
+  } else {
+    log::warn("AutoDeafen: failed to write equibop_toggle.sh");
+  }
+ 
+  char cmdLine[] = "Z:\\bin\\sh equibop_toggle.sh";
+
+  STARTUPINFOA si{};
+  si.cb = sizeof(si);
+  PROCESS_INFORMATION pi{};
+ 
+  BOOL launched =
+      CreateProcessA(nullptr, cmdLine, nullptr, nullptr, FALSE,
+                      CREATE_NO_WINDOW, nullptr, nullptr, &si, &pi);
+ 
+  if (!launched) {
+    log::warn("AutoDeafen: CreateProcessA failed to launch Z:\\bin\\sh. (Error {})", GetLastError());
+    sendToVencord(fallbackMsg.c_str());
+    return 0;
+  }
+ 
+  log::info("AutoDeafen: 'equibop_toggle.sh' launched via Z:\\bin\\sh, PID {}", pi.dwProcessId);
+ 
+  DWORD waitResult = WaitForSingleObject(pi.hProcess, 4000);
+  if (waitResult == WAIT_TIMEOUT) {
+    log::warn("AutoDeafen: Script timed out.");
+    sendToVencord(fallbackMsg.c_str());
+  } else if (waitResult == WAIT_FAILED) {
+    log::warn("AutoDeafen: Script wait failed (Error {}).", GetLastError());
+    sendToVencord(fallbackMsg.c_str());
+  } else if (waitResult == WAIT_OBJECT_0) {
+    DWORD exitCode = 1;
+    GetExitCodeProcess(pi.hProcess, &exitCode);
+    log::info("AutoDeafen: Script finished with exit code {}", exitCode);
+    if (exitCode != 0) {
+      log::warn("AutoDeafen: Script returned error {}, falling back to Vencord.", exitCode);
+      sendToVencord(fallbackMsg.c_str());
+    } else {
+      log::info("AutoDeafen: Equibop toggled successfully!");
+    }
+  }
+ 
+  CloseHandle(pi.hProcess);
+  CloseHandle(pi.hThread);
+  return 0;
+}
+
+void triggerEquibopToggle(const char *vencordFallbackMsg) {
+  auto *args = new EquibopToggleArgs{vencordFallbackMsg};
+ 
+  HANDLE hThread = CreateThread(nullptr, 0, equibopToggleThreadProc, args, 0,
+                                 nullptr);
+  if (!hThread) {
+    log::warn("AutoDeafen: failed to create background thread for equibop "
+              "toggle (error {}), sending Vencord socket message as "
+              "fallback.",
+              GetLastError());
+    sendToVencord(vencordFallbackMsg);
+    delete args;
+    return;
+  }
+ 
+  CloseHandle(hThread);
+}
 void sendDeafen() {
   if (!currentlyLoadedLevel.enabled)
     return;
   if (isCurrentlyDeafened)
     return;
-  if (sendToVencord("deafen\n"))
-    isCurrentlyDeafened = true;
+
+  isCurrentlyDeafened = true;
+  triggerEquibopToggle("deafen\n");
 }
 
 void sendUndeafen() {
   if (!isCurrentlyDeafened)
     return;
-  sendToVencord("undeafen\n");
+
   isCurrentlyDeafened = false;
+  triggerEquibopToggle("undeafen\n");
 }
 
 void resetAttemptState() {

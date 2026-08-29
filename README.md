@@ -3,6 +3,8 @@
 This repository was forked from https://github.com/Lynxdeer/AutoDeafen.
 It was made to work on Linux systems, which can't use discord hotkeys since they run through Proton in a sandboxed environment.
 
+**[new]** you can now also join [this tg channel](https://t.me/+_1d8aRB5AANjMWE6) to request features, help or talk about stuff
+
 ## Installation
 
 ### GUI Installation (Easiest)

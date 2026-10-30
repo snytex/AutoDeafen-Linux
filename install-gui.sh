@@ -160,6 +160,11 @@ restore_discord_core() {
 # ------------------------------
 # Package manager
 # ------------------------------
+portage_install() {
+  log "${YELLOW}[!]${NC} Portage builds from source; this can take a long time."
+  sudo emerge --ask=n --noreplace "$@"
+}
+
 detect_pkg_manager() {
   if command -v pacman &>/dev/null; then
     if command -v yay &>/dev/null; then
@@ -175,6 +180,8 @@ detect_pkg_manager() {
     PKG_MANAGER="zypper"; PKG_INSTALL="sudo zypper install -y"
   elif command -v xbps-install &>/dev/null; then
     PKG_MANAGER="xbps"; PKG_INSTALL="sudo xbps-install -y"
+  elif command -v emerge &>/dev/null; then
+    PKG_MANAGER="portage"; PKG_INSTALL="portage_install"
   elif command -v apk &>/dev/null; then
     PKG_MANAGER="apk"; PKG_INSTALL="sudo apk add"
   else
@@ -188,6 +195,16 @@ pkg_name() {
   case "$PKG_MANAGER" in
     xbps) [[ "$pkg" == npm ]] && echo "nodejs" || echo "$pkg" ;;
     apk)  [[ "$pkg" == npm ]] && echo "nodejs npm" || echo "$pkg" ;;
+    portage)
+      case "$pkg" in
+        git)    echo "dev-vcs/git" ;;
+        npm)    echo "net-libs/nodejs" ;;
+        jq)     echo "app-misc/jq" ;;
+        psmisc) echo "sys-process/psmisc" ;;
+        zenity) echo "gnome-extra/zenity" ;;
+        *)      echo "$pkg" ;;
+      esac
+      ;;
     *)    echo "$pkg" ;;
   esac
 }
@@ -224,6 +241,10 @@ for pkg in git npm jq; do
     $PKG_INSTALL $(pkg_name "$pkg")
   fi
 done
+if [[ "$PKG_MANAGER" == "portage" ]] && ! command -v npm &>/dev/null; then
+  ui_error "$APP_TITLE" "npm is still missing after emerging net-libs/nodejs.\n\nGentoo ships npm behind a USE flag. Enable it, then run this installer again:\n\n  echo 'net-libs/nodejs npm' | sudo tee -a /etc/portage/package.use/nodejs\n  sudo emerge --changed-use --deep net-libs/nodejs"
+  exit 1
+fi
 if ! command -v pnpm &>/dev/null; then
   log "${BLUE}[+]${NC} Installing pnpm..."
   sudo npm install -g pnpm

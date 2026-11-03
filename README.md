@@ -3,7 +3,7 @@
 This repository was forked from https://github.com/Lynxdeer/AutoDeafen.
 It was made to work on Linux systems, which can't use discord hotkeys since they run through Proton in a sandboxed environment.
 
-**[new]** you can now also join [this tg channel](https://t.me/+_1d8aRB5AANjMWE6) to request features, help or talk about stuff
+**important note:** this mod only supports Geometry Dash versions up to 2.2081, as Geode is still not fully updated. Although that isn't it. Once geode releases for the latest version, this mod will be fully rewritten from ground up without AI, to improve scaling and bug fixing for this mod.
 
 ## Installation
 

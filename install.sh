@@ -54,6 +54,9 @@ detect_pkg_manager() {
   elif command -v xbps-install &>/dev/null; then
     PKG_MANAGER="xbps"
     PKG_INSTALL="sudo xbps-install -y"
+  elif command -v emerge &>/dev/null; then
+    PKG_MANAGER="portage"
+    PKG_INSTALL="portage_install"
   elif command -v apk &>/dev/null; then
     PKG_MANAGER="apk"
     PKG_INSTALL="sudo apk add"
@@ -62,6 +65,12 @@ detect_pkg_manager() {
     echo -e "${RED}[!]${NC} Unsupported distro: no known package manager found."
     exit 1
   fi
+}
+
+portage_install() {
+  print "${YELLOW}[!]${NC} Portage builds from source; this can take a long time."
+  print "${YELLOW}[!]${NC} Showing emerge output below so you can follow progress."
+  sudo emerge --ask=n --noreplace "$@" >&3 2>&4
 }
 
 # Map package names per distro (pnpm handled separately)
@@ -78,6 +87,15 @@ pkg_name() {
       case "$pkg" in
         npm) echo "nodejs npm" ;;
         *)   echo "$pkg" ;;
+      esac
+      ;;
+    portage)
+      case "$pkg" in
+        git)    echo "dev-vcs/git" ;;
+        npm)    echo "net-libs/nodejs" ;;
+        jq)     echo "app-misc/jq" ;;
+        psmisc) echo "sys-process/psmisc" ;;
+        *)      echo "$pkg" ;;
       esac
       ;;
     *)
@@ -123,6 +141,15 @@ for pkg in "${packages[@]}"; do
     clear
   fi
 done
+
+if [ "$PKG_MANAGER" = "portage" ] && ! command -v npm &>/dev/null; then
+  exec 1>&3 2>&4
+  echo -e "${RED}[!]${NC} npm is still missing after emerging net-libs/nodejs." >&2
+  echo -e "${RED}[!]${NC} Gentoo ships npm behind a USE flag. Enable it, then rerun:" >&2
+  echo -e "${RED}[!]${NC}   echo 'net-libs/nodejs npm' | sudo tee -a /etc/portage/package.use/nodejs" >&2
+  echo -e "${RED}[!]${NC}   sudo emerge --changed-use --deep net-libs/nodejs" >&2
+  exit 1
+fi
 
 # pnpm: install via npm if not present (avoids distro repo gaps)
 if ! command -v pnpm &>/dev/null; then
